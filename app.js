@@ -58,21 +58,45 @@ function countBy(items, fn){
 }
 function normalize(s){ return String(s||'').toLowerCase(); }
 function optionHtml(values){ return values.map(v => `<option value="${esc(v)}">${esc(v)}</option>`).join(''); }
+const typeOptions = [
+  ['', 'All types'],
+  ['hero', 'Hero motion'],
+  ['landing|website|agency|saas|marketing', 'Landing pages'],
+  ['dashboard|analytics|command|ops|console|finance|revenue', 'Dashboards'],
+  ['component|button|card|dock|popover|bento|carousel|form', 'Components'],
+  ['animation|motion|gsap|scroll|transition|marquee', 'Animation systems'],
+  ['3d|glass|particle|space|cosmic|liquid', '3D / glass'],
+  ['onboarding|waitlist|login|signup', 'Onboarding / forms']
+];
+function typeOptionsHtml(){ return typeOptions.map(([value,label]) => `<option value="${esc(value)}">${esc(label)}</option>`).join(''); }
+function typeLabel(value){ return (typeOptions.find(([v]) => v === value) || [value,value])[1]; }
+function matchesFilterGroup(value, hay){ return !value || value.split('|').some(token => hay.includes(normalize(token))); }
 function setupControls(){
   const sources = countBy(posts, sourceOf).map(([k])=>k);
-  const types = countBy(posts, typeOf).map(([k])=>k);
   els.sourceSelect.innerHTML = '<option value="">All sources</option>' + optionHtml(sources);
-  els.typeSelect.innerHTML = '<option value="">All types</option>' + optionHtml(types);
-  const chips = ['hero','animation','dashboard','liquid glass','3D','cards','onboarding','Magic UI'];
-  els.quickChips.innerHTML = chips.map(c => `<button type="button" data-chip="${esc(c)}">${esc(c)}</button>`).join('');
+  els.typeSelect.innerHTML = typeOptionsHtml();
+  renderQuickChips();
+}
+function renderQuickChips(){
+  if(!els.quickChips) return;
+  const chips = [
+    ['Hero motion','hero'],
+    ['Glass / 3D','3D'],
+    ['Dashboards','dashboard'],
+    ['Components','component'],
+    ['Scroll stories','scroll'],
+    ['Magic UI','Magic UI'],
+    ['Onboarding','onboarding']
+  ];
+  els.quickChips.innerHTML = chips.map(([label,value]) => `<button type="button" class="${state.query===value?'active':''}" data-chip="${esc(value)}">${esc(label)}</button>`).join('');
 }
 function applyFilters(){
   const q = normalize(state.query);
   filtered = posts.filter(p => {
     const hay = normalize([p.title, p.sectionType, sourceOf(p), p.author, ...(p.tags||[]), ...(p.aiTools||[])].join(' '));
-    if(q && !hay.includes(q)) return false;
+    if(q && !q.split(/\s+/).every(token => hay.includes(token))) return false;
     if(state.source && sourceOf(p) !== state.source) return false;
-    if(state.type && typeOf(p) !== state.type) return false;
+    if(state.type && !matchesFilterGroup(state.type, hay)) return false;
     if(state.tag && !hay.includes(normalize(state.tag))) return false;
     return true;
   });
@@ -92,6 +116,7 @@ function renderStats(){
   els.scoutList.innerHTML = latest.map(p => `<button type="button" data-open="${esc(p.id)}"><span>${esc(sourceOf(p))}</span><b>${esc(p.title)}</b></button>`).join('');
 }
 function renderFacets(){
+  if(!els.sourceFacet || !els.tagFacet) return;
   const srcCounts = countBy(posts, sourceOf).slice(0, 12);
   els.sourceFacet.innerHTML = srcCounts.map(([name,n]) => `<button type="button" class="${state.source===name?'active':''}" data-source="${esc(name)}"><span>${esc(name)}</span><b>${n}</b></button>`).join('');
   const tagCounts = countBy(posts.flatMap(p => (p.tags||[]).map(t => ({tag:t}))), x => x.tag).slice(0, 22);
@@ -190,12 +215,12 @@ function render(){
   renderStats();
   renderFacets();
   renderHeroLab();
-  renderShowcase();
+  renderQuickChips();
   const promptCount = Object.keys(prompts).length;
   const curatedCount = posts.filter(p => p.promptOnly).length;
   const curatedWithPreview = posts.filter(p => p.promptOnly && hasPreview(p)).length;
   els.count.textContent = `${filtered.length} shown · ${posts.length} cards · ${curatedCount} curated (${curatedWithPreview} with previews) · ${promptCount} local prompts`;
-  const active = [state.query && `search: ${state.query}`, state.source && `source: ${state.source}`, state.type && `type: ${state.type}`, state.tag && `tag: ${state.tag}`, shuffleMode && 'random set'].filter(Boolean);
+  const active = [state.query && `search: ${state.query}`, state.source && `source: ${state.source}`, state.type && `type: ${typeLabel(state.type)}`, state.tag && `tag: ${state.tag}`, shuffleMode && 'random set'].filter(Boolean);
   els.activeFilters.textContent = active.join(' · ');
   els.grid.innerHTML = filtered.length ? filtered.map(card).join('') : `<div class="empty-state"><h3>No matching cards</h3><p>Clear filters or try a broader search like dashboard, hero, animation, or Magic UI.</p></div>`;
   document.querySelectorAll('video').forEach(v=>{ v.addEventListener('mouseenter',()=>v.play().catch(()=>{})); v.addEventListener('mouseleave',()=>{ if(!v.closest('.trend-card,.hero-feature,.hero-reel-card,.spotlight-main,.spotlight-mini,.theatre-card,.lane-card')){ v.pause(); v.currentTime=0; } }); if(v.closest('.trend-card,.hero-feature,.hero-reel-card,.spotlight-main,.spotlight-mini,.theatre-card,.lane-card')) v.play().catch(()=>{}); });

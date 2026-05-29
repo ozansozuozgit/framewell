@@ -10,13 +10,12 @@
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#f7f4ed">
   <link rel="icon" href="assets/ui/favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=17">
+  <link rel="stylesheet" href="styles.css?v=19">
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="#top" aria-label="Framewell motion prompt library"><img src="assets/ui/framewell-mark.svg" alt="Framewell"><span>Framewell</span></a>
     <nav aria-label="Primary navigation">
-      <a href="#showcase">Studies</a>
       <a href="#library">Archive</a>
       <a href="THIRD_PARTY_PROMPTS.md">Sources</a>
     </nav>
@@ -28,8 +27,8 @@
       <div class="hero-backdrop" aria-hidden="true"></div>
       <div class="hero-copy">
         <span class="eyebrow">Framewell index</span>
-        <h1 id="heroTitle">A clean library for motion prompts that actually show their shape.</h1>
-        <p>Curated web, animation, dashboard, and component prompts with previews first — so you can judge the idea before opening the text.</p>
+        <h1 id="heroTitle">Motion prompts you can judge before you copy.</h1>
+        <p>A visual library of web motion, animated interfaces, dashboards, and component ideas — previews first, prompt text second.</p>
         <div class="hero-actions">
           <a class="primary-link" href="#library">Browse previews</a>
           <button id="shuffleButton" type="button">Shuffle the atlas</button>
@@ -52,16 +51,6 @@
       </div>
     </section>
 
-    <section id="showcase" class="showreel-opening" aria-label="Motion studies">
-      <div class="opening-label">
-        <span class="eyebrow">Motion studies</span>
-        <p>Selected prompts with live previews — the fastest way to understand the collection.</p>
-        <div id="theatrePills" class="theatre-pills" aria-label="Showreel filters"></div>
-      </div>
-      <div id="theatreSpotlight" class="showreel-stage"></div>
-      <div id="trendingTrack" class="showreel-strip"></div>
-    </section>
-
     <section id="library" class="library catalog-lab" aria-label="Prompt library">
       <div class="catalog-titlebar">
         <div>
@@ -77,10 +66,6 @@
         <button id="clearFilters" type="button">Clear</button>
       </div>
       <div id="quickChips" class="quick-chips" aria-label="Quick filters"></div>
-      <div class="lens-board" aria-label="Collection lenses">
-        <div class="lens-group"><h3>Sources</h3><div id="sourceFacet" class="facet-list source-lenses"></div></div>
-        <div class="lens-group"><h3>Tags</h3><div id="tagFacet" class="facet-list tag-lenses"></div></div>
-      </div>
       <div class="library-meta"><div id="count"></div><div id="activeFilters"></div></div>
       <div class="library-shell gallery-shell">
         <div id="grid" class="grid atlas-wall" aria-live="polite"><div class="loading-card"></div><div class="loading-card"></div><div class="loading-card"></div></div>
@@ -96,6 +81,6 @@
 
   <dialog id="modal"><button id="closeModal" class="close" type="button" aria-label="Close modal">×</button><div id="modalBody"></div></dialog>
   <footer><span>Framewell motion prompt library</span><a href="#top">Back to top</a><a href="THIRD_PARTY_PROMPTS.md">Third-party sources</a></footer>
-  <script src="app.js?v=17"></script>
+  <script src="app.js?v=19"></script>
 </body>
 </html>
