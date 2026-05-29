@@ -1,6 +1,6 @@
 # Third-party prompt sources
 
-This Lafys-copy prompt collection includes public and open-source prompt material curated from web, Reddit-linked GitHub repos, and X public posts.
+Framewell includes public and open-source prompt material curated from web, Reddit-linked GitHub repos, and X public posts. Source links are kept for provenance; concept-sketch previews are local visual summaries, not source screenshots.
 
 ## MotionSites.ai Prompt Library archive
 Source: https://github.com/aayushsoam/motionsites.ai
@@ -23,7 +23,7 @@ Short public prompt seeds were used as inspiration and expanded locally. Their p
 ## Open CoDesign example prompts
 Source: https://github.com/OpenCoworkAI/open-codesign
 License: MIT
-Selected example prompts and inline SVG thumbnails from the Open CoDesign templates package were curated into local Lafys-style prompt cards.
+Selected example prompts and inline SVG thumbnails from the Open CoDesign templates package were curated into local Framewell prompt cards.
 
 ## Magic UI component patterns
 Source: https://github.com/magicuidesign/magicui

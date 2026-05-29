@@ -4,7 +4,7 @@ Source URL: https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/tem
 
 Design a marketing landing page for a productivity tool called Field Notes, aimed at small product teams. Include a first-viewport hero with headline, subhead, product UI hint, primary CTA, and secondary link; then three benefit sections, a concise testimonial strip, a pricing teaser, and a footer. Use editorial typography, generous whitespace, off-white surfaces, charcoal text, and a deep ochre accent. Make all copy domain-specific and responsive, with no hotlinked stock or placeholder images.
 
-LAFYS-COLLECTION EXPANSION
+FRAMEWELL COLLECTION EXPANSION
 
 Build this as a complete, copy-pasteable frontend artifact, not a tiny component. Use React + Vite or Next.js, TypeScript, Tailwind CSS, and shadcn/ui primitives only where they genuinely improve the result. If a chart, map, product screenshot, avatar, or image is needed, create it with CSS/SVG/inline mock data instead of hotlinking external assets.
 

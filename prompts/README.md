@@ -9,7 +9,7 @@ Paste prompts you copy manually into individual `.txt` files here, preferably na
 Then run:
 
 ```bash
-cd /Users/ozansozuoz/programming-files/lafys-copy
+cd /Users/ozansozuoz/programming-files/framewell
 python3 scripts/build_prompts_json.py
 ```
 

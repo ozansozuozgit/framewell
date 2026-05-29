@@ -4,7 +4,7 @@ Source URL: https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/tem
 
 Design an observability dashboard for an infrastructure team. Include service health grid, latency percentile chart, error-rate sparkline cards, deploy timeline, incident banner, and logs table with severity chips. Use dark terminal-adjacent styling, monospace metadata, clear red/yellow/green status language, realistic service names, responsive overflow handling, and no external chart libraries unless using inline SVG.
 
-LAFYS-COLLECTION EXPANSION
+FRAMEWELL COLLECTION EXPANSION
 
 Build this as a complete, copy-pasteable frontend artifact, not a tiny component. Use React + Vite or Next.js, TypeScript, Tailwind CSS, and shadcn/ui primitives only where they genuinely improve the result. If a chart, map, product screenshot, avatar, or image is needed, create it with CSS/SVG/inline mock data instead of hotlinking external assets.
 

@@ -111,4 +111,4 @@ Source: Reddit r/LLMDevs post pointing to TechNomadCode AI Product Development T
 Reddit: https://www.reddit.com/r/LLMDevs/comments/1k77ubx/just_tested_my_v0_prompt_templates_and_it_works/
 Raw source: https://raw.githubusercontent.com/TechNomadCode/AI-Product-Development-Toolkit/main/v0-Design/v0.dev-visual-generation-prompt.md
 License: MIT. Copyright (c) 2025 Tech Nomad.
-Curated locally for Lafys-copy.
+Curated locally for Framewell.

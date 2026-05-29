@@ -33,4 +33,4 @@ Track, Grow, and Optimize: Watch your money work for you in real time—get insi
 ---
 Source: MotionSites.ai Prompt Library — https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/Wealth_Video_Hero.md
 License: MIT. Copyright (c) 2026 Aayushsoam.
-Curated locally for Lafys-copy.
+Curated locally for Framewell.

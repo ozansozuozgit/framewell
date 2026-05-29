@@ -4,7 +4,7 @@ Source URL: https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/tem
 
 Design a command-center interface for an AI operations tool. Include a top search/command bar, left environment rail, main incident timeline, active runbook panel, model/provider status chips, and a right inspector for selected events. Add empty, selected, and warning states. Use dense professional dark UI, clear hierarchy, monospace metadata, keyboard shortcut hints, responsive collapse behavior, and no fake external links.
 
-LAFYS-COLLECTION EXPANSION
+FRAMEWELL COLLECTION EXPANSION
 
 Build this as a complete, copy-pasteable frontend artifact, not a tiny component. Use React + Vite or Next.js, TypeScript, Tailwind CSS, and shadcn/ui primitives only where they genuinely improve the result. If a chart, map, product screenshot, avatar, or image is needed, create it with CSS/SVG/inline mock data instead of hotlinking external assets.
 

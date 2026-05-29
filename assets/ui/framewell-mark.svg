@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Framewell mark">
   <rect width="64" height="64" rx="16" fill="#171511"/>
   <path d="M18 17h28v30H18z" fill="none" stroke="#F7F4ED" stroke-width="3.5"/>
   <path d="M18 27h28M29 17v30" stroke="#F7F4ED" stroke-width="3.5"/>

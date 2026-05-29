@@ -4,7 +4,7 @@ Source URL: https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/tem
 
 Design an enterprise security page for a SaaS platform. Include compliance overview, data-flow diagram, security controls grid, audit-log screenshot mock, trust center links rendered as buttons, customer assurance FAQ, and contact-security CTA. Use quiet professional styling, dense but scannable information architecture, realistic compliance labels, responsive layout, and no fake external destinations.
 
-LAFYS-COLLECTION EXPANSION
+FRAMEWELL COLLECTION EXPANSION
 
 Build this as a complete, copy-pasteable frontend artifact, not a tiny component. Use React + Vite or Next.js, TypeScript, Tailwind CSS, and shadcn/ui primitives only where they genuinely improve the result. If a chart, map, product screenshot, avatar, or image is needed, create it with CSS/SVG/inline mock data instead of hotlinking external assets.
 

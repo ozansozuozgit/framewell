@@ -1,15 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="v0 visual generation template preview">
-  <rect width="960" height="600" fill="#f7f4ed"/>
-  <rect x="28" y="28" width="904" height="544" rx="30" fill="none" stroke="#191713" stroke-opacity=".10"/>
-  <g opacity=".55"><circle cx="850" cy="90" r="130" fill="#dfe8dc"/><circle cx="790" cy="500" r="170" fill="#dfe8dc" opacity=".45"/></g>
-  <text x="80" y="110" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="24" letter-spacing="5" fill="#191713" opacity=".58">SYSTEM</text>
-  <text x="80" y="198" font-family="Georgia,'Times New Roman',serif" font-size="64" fill="#191713" letter-spacing="-2">v0 visual generation template</text>
-  <text x="82" y="246" font-family="-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="24" fill="#191713" opacity=".62">Layout grammar · tokens · component instructions</text>
-  
-        <rect x="420" y="115" width="360" height="310" rx="18" fill="#fff" stroke="#ded7cc"/>
-        <line x1="455" y1="165" x2="705" y2="165" stroke="#191713" stroke-opacity=".26" stroke-width="10" stroke-linecap="round"/>
-        <line x1="455" y1="210" x2="735" y2="210" stroke="#191713" stroke-opacity=".16" stroke-width="8" stroke-linecap="round"/>
-        <rect x="455" y="255" width="118" height="88" rx="12" fill="#dfe8dc"/>
-        <rect x="595" y="255" width="118" height="88" rx="12" fill="#f3e8cf"/>
-        <rect x="455" y="370" width="250" height="12" rx="6" fill="#191713" opacity=".18"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600">
+<rect width="960" height="600" fill="#f7f4ed"/><rect x="70" y="58" width="820" height="484" rx="22" fill="#fffdfa" stroke="#ded7cc"/><rect x="70" y="58" width="820" height="54" rx="22" fill="#f1ece3"/><circle cx="106" cy="85" r="7" fill="#d9c7a3"/><circle cx="130" cy="85" r="7" fill="#d9c7a3"/><circle cx="154" cy="85" r="7" fill="#d9c7a3"/>
+<text x="110" y="165" fill="#171511" font-family="Georgia,serif" font-size="54">Visual prompt system</text><text x="112" y="210" fill="#777067" font-family="Arial,sans-serif" font-size="22">Structure, tone, layout, states, constraints.</text>
+<g transform="translate(110 255)"><rect width="250" height="170" rx="16" fill="#edf3ec"/><text x="28" y="48" fill="#346538" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="15">01 / STRUCTURE</text><rect x="28" y="74" width="170" height="10" rx="5" fill="#346538" opacity=".22"/><rect x="28" y="98" width="132" height="10" rx="5" fill="#346538" opacity=".16"/></g>
+<g transform="translate(390 255)"><rect width="250" height="170" rx="16" fill="#e1f3fe"/><text x="28" y="48" fill="#1f6c9f" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="15">02 / STYLE</text><rect x="28" y="74" width="160" height="10" rx="5" fill="#1f6c9f" opacity=".22"/><rect x="28" y="98" width="188" height="10" rx="5" fill="#1f6c9f" opacity=".16"/></g>
+<g transform="translate(670 255)"><rect width="110" height="170" rx="16" fill="#fbf3db"/><path d="M35 54h40M35 84h40M35 114h40" stroke="#956400" stroke-width="8" stroke-linecap="round" opacity=".4"/></g>
 </svg>

@@ -34,4 +34,4 @@ The copy should be epic, visionary, and forward-looking. Use terms like "The Fut
 ---
 Source: MotionSites.ai prompt library fork — https://github.com/nomaan5541/motionsites.ai-prompt-library/blob/main/prompts/Zentry_Premium.md
 MIT-style repo; see upstream license if using commercially
-Curated locally for Lafys-copy.
+Curated locally for Framewell.

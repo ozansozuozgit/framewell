@@ -4,7 +4,7 @@ Source URL: https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/tem
 
 Create an interactive particle-field landing section for a data infrastructure company called Vector Loom. Show a dark canvas-like hero with 80-120 tiny particles connected by subtle lines, mouse/keyboard-safe hover attraction, headline, short technical subhead, metric chips, and CTA row. Use CSS/Canvas or SVG with no external libraries, provide reduced-motion fallback, and keep content readable across mobile and desktop.
 
-LAFYS-COLLECTION EXPANSION
+FRAMEWELL COLLECTION EXPANSION
 
 Build this as a complete, copy-pasteable frontend artifact, not a tiny component. Use React + Vite or Next.js, TypeScript, Tailwind CSS, and shadcn/ui primitives only where they genuinely improve the result. If a chart, map, product screenshot, avatar, or image is needed, create it with CSS/SVG/inline mock data instead of hotlinking external assets.
 

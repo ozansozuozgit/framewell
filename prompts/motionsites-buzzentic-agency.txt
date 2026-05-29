@@ -47,4 +47,4 @@ Navigation items should have a subtle white/10 background highlight on hover.
 ---
 Source: MotionSites.ai Prompt Library — https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/Buzzentic_Agency.md
 License: MIT. Copyright (c) 2026 Aayushsoam.
-Curated locally for Lafys-copy.
+Curated locally for Framewell.

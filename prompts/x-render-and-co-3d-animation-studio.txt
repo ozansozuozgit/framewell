@@ -1,7 +1,7 @@
 PUBLIC SEED PROMPT (from X)
 "Build an interactive landing page for a 3D animation studio called 'Render & Co.' Dark background, neon accent colours. Floating 3D geometric shapes in the hero. Three service tiles that animate on hover. Ready to publish."
 
-EXPANDED LAFYS-STYLE PROMPT
+EXPANDED FRAMEWELL-STYLE PROMPT
 
 Build a single-page interactive landing page for a fictional 3D animation studio called Render & Co. The page should feel like a high-end motion studio reel: dark, cinematic, glossy, and energetic without becoming gamer-chaotic.
 
@@ -35,5 +35,5 @@ Make all animations respect prefers-reduced-motion. Keep contrast high. Use CSS 
 
 ---
 Source: public X post seed — https://x.com/i/status/2040140251952189807
-Note: expanded locally into a detailed Lafys-style prompt; not a verbatim full thread unless marked as seed.
-Curated locally for Lafys-copy.
+Note: expanded locally into a detailed Framewell-style prompt; not a verbatim full thread unless marked as seed.
+Curated locally for Framewell.

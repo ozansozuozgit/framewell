@@ -1,14 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="Render &amp; Co. preview">
-  <rect width="960" height="600" fill="#f5f1e8"/>
-  <rect x="28" y="28" width="904" height="544" rx="30" fill="none" stroke="#181611" stroke-opacity=".10"/>
-  <g opacity=".55"><circle cx="850" cy="90" r="130" fill="#e9dcc9"/><circle cx="790" cy="500" r="170" fill="#e9dcc9" opacity=".45"/></g>
-  <text x="80" y="110" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="24" letter-spacing="5" fill="#181611" opacity=".58">3D STUDIO</text>
-  <text x="80" y="198" font-family="Georgia,'Times New Roman',serif" font-size="64" fill="#181611" letter-spacing="-2">Render &amp; Co.</text>
-  <text x="82" y="246" font-family="-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="24" fill="#181611" opacity=".62">Animation studio · objects · depth · soft shadows</text>
-  
-        <ellipse cx="610" cy="405" rx="250" ry="45" fill="#000" opacity=".05"/>
-        <rect x="488" y="180" width="160" height="160" rx="34" fill="#e9dcc9" stroke="#181611" stroke-opacity=".18" transform="rotate(-10 568 260)"/>
-        <circle cx="715" cy="245" r="76" fill="#fff" stroke="#181611" stroke-opacity=".14"/>
-        <path d="M455 390 C560 310 710 320 795 190" fill="none" stroke="#181611" stroke-opacity=".28" stroke-width="2" stroke-dasharray="8 10"/>
-        <circle cx="455" cy="390" r="8" fill="#181611"/><circle cx="795" cy="190" r="8" fill="#181611"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600">
+<rect width="960" height="600" fill="#f5f1e8"/><rect x="72" y="60" width="816" height="480" rx="26" fill="#fffdfa" stroke="#ded7cc"/>
+<text x="112" y="132" fill="#171511" font-family="Georgia,serif" font-size="66">Render &amp; Co.</text><text x="114" y="174" fill="#777067" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="18" letter-spacing="3">3D ANIMATION STUDIO</text>
+<ellipse cx="612" cy="422" rx="246" ry="48" fill="#171511" opacity=".06"/><rect x="418" y="220" width="166" height="166" rx="34" fill="#e9dcc9" stroke="#171511" stroke-opacity=".14" transform="rotate(-12 501 303)"/><circle cx="672" cy="275" r="86" fill="#f7f4ed" stroke="#171511" stroke-opacity=".16"/><path d="M447 421 C520 330 673 360 762 196" fill="none" stroke="#171511" stroke-opacity=".30" stroke-width="3" stroke-dasharray="9 11"/><circle cx="447" cy="421" r="10" fill="#171511"/><circle cx="762" cy="196" r="10" fill="#d8c7a3"/>
+<rect x="112" y="394" width="210" height="46" rx="23" fill="#171511"/><text x="145" y="424" fill="#fffdfa" font-family="Arial,sans-serif" font-size="18" font-weight="700">View showreel</text>
 </svg>

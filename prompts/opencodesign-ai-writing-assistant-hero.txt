@@ -4,7 +4,7 @@ Source URL: https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/tem
 
 Design a hero section for an AI writing assistant called Inkwell. Use a deep navy to violet background, an abstract generated-writing visual built with CSS/SVG on the right, a large editorial headline with animated caret, two-line subhead, primary/secondary CTAs, and a small trust row. Make it responsive, avoid generic feature-card filler, use confident editorial typography, and do not use external stock or placeholder images.
 
-LAFYS-COLLECTION EXPANSION
+FRAMEWELL COLLECTION EXPANSION
 
 Build this as a complete, copy-pasteable frontend artifact, not a tiny component. Use React + Vite or Next.js, TypeScript, Tailwind CSS, and shadcn/ui primitives only where they genuinely improve the result. If a chart, map, product screenshot, avatar, or image is needed, create it with CSS/SVG/inline mock data instead of hotlinking external assets.
 

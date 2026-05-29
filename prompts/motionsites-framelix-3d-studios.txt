@@ -45,4 +45,4 @@ Tailwind config: Add a marquee keyframe and animation (translateX 0 to -50%, 20s
 ---
 Source: MotionSites.ai Prompt Library — https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/Framelix_3D_Studios.md
 License: MIT. Copyright (c) 2026 Aayushsoam.
-Curated locally for Lafys-copy.
+Curated locally for Framewell.

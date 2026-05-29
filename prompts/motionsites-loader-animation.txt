@@ -82,4 +82,4 @@ Timing Summary
 ---
 Source: MotionSites.ai Prompt Library — https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/Loader_Animation.md
 License: MIT. Copyright (c) 2026 Aayushsoam.
-Curated locally for Lafys-copy.
+Curated locally for Framewell.

@@ -4,7 +4,7 @@ Source URL: https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/tem
 
 Design an analytics dashboard for a SaaS revenue team. Include a left rail with five nav items, a top header with date range and segment filters, and a 2x2 grid: MRR trend line chart, pipeline by stage stacked bars, top accounts table, and forecast attainment gauge. Add empty/filter states for at least one card and plausible mock data with realistic labels. Use a dense dark UI, neutral surfaces, teal and amber accents, keyboard-visible controls, and responsive behavior for narrower widths.
 
-LAFYS-COLLECTION EXPANSION
+FRAMEWELL COLLECTION EXPANSION
 
 Build this as a complete, copy-pasteable frontend artifact, not a tiny component. Use React + Vite or Next.js, TypeScript, Tailwind CSS, and shadcn/ui primitives only where they genuinely improve the result. If a chart, map, product screenshot, avatar, or image is needed, create it with CSS/SVG/inline mock data instead of hotlinking external assets.
 

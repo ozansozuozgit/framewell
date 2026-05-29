@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224 64" role="img" aria-label="Framewell">
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="#171511"/>
+  <path d="M18 17h28v30H18z" fill="none" stroke="#F7F4ED" stroke-width="3.5"/>
+  <path d="M18 27h28M29 17v30" stroke="#F7F4ED" stroke-width="3.5"/>
+  <path d="M36 33l10 14-7-1-3 6-4-16z" fill="#D8C7A3" stroke="#171511" stroke-width="1.6" stroke-linejoin="round"/>
+  <text x="78" y="39" fill="#171511" font-family="SF Pro Display, Helvetica Neue, Arial, sans-serif" font-size="26" font-weight="650" letter-spacing="-1.2">Framewell</text>
+</svg>

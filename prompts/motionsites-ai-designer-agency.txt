@@ -104,4 +104,4 @@ Google Fonts: Barlow (400, 500, 600) and Instrument Serif (400 italic) — load 
 ---
 Source: MotionSites.ai Prompt Library — https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/AI_Designer_Agency.md
 License: MIT. Copyright (c) 2026 Aayushsoam.
-Curated locally for Lafys-copy.
+Curated locally for Framewell.

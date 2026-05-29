@@ -4,7 +4,7 @@ Source URL: https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/tem
 
 Design a waitlist page for an AI-native notebook app called Margins. Include succinct product promise, email capture form, invite-code optional field, three concrete use cases, social proof count, privacy note, and submitted-success state. Use intimate editorial styling, subtle paper texture via CSS, polished form states, mobile-first layout, and no external imagery.
 
-LAFYS-COLLECTION EXPANSION
+FRAMEWELL COLLECTION EXPANSION
 
 Build this as a complete, copy-pasteable frontend artifact, not a tiny component. Use React + Vite or Next.js, TypeScript, Tailwind CSS, and shadcn/ui primitives only where they genuinely improve the result. If a chart, map, product screenshot, avatar, or image is needed, create it with CSS/SVG/inline mock data instead of hotlinking external assets.
 

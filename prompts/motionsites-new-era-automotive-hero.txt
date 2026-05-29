@@ -35,4 +35,4 @@ Make the entire section fully responsive. Use Tailwind CSS and React.
 ---
 Source: MotionSites.ai Prompt Library — https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/New_Era_Automotive_Hero.md
 License: MIT. Copyright (c) 2026 Aayushsoam.
-Curated locally for Lafys-copy.
+Curated locally for Framewell.

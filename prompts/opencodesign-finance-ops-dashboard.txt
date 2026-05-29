@@ -4,7 +4,7 @@ Source URL: https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/tem
 
 Design a finance operations dashboard for a CFO team. Include KPI strip, cash runway trend, burn by department stacked bars, invoice aging table, forecast variance card, and approval queue. Add filters for quarter and entity, warning states for overdue invoices, realistic finance mock data, dense professional light/dark hybrid surfaces, and responsive table handling.
 
-LAFYS-COLLECTION EXPANSION
+FRAMEWELL COLLECTION EXPANSION
 
 Build this as a complete, copy-pasteable frontend artifact, not a tiny component. Use React + Vite or Next.js, TypeScript, Tailwind CSS, and shadcn/ui primitives only where they genuinely improve the result. If a chart, map, product screenshot, avatar, or image is needed, create it with CSS/SVG/inline mock data instead of hotlinking external assets.
 

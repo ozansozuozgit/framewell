@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-05-28",
-  "purpose": "Curated expansion of Lafys prompt atlas with free/open UI, motion, dashboard, and landing-page patterns.",
+  "purpose": "Curated expansion of Framewell prompt library with free/open UI, motion, dashboard, and landing-page patterns.",
   "method": "Added local prompt expansions from public/open source component libraries and templates; did not copy source code into prompts; generated local SVG previews.",
   "sources": [
     {

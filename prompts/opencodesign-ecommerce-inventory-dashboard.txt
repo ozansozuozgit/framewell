@@ -4,7 +4,7 @@ Source URL: https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/tem
 
 Design an ecommerce inventory dashboard for an operations manager. Include stock risk KPI strip, warehouse filter, low-stock table, demand forecast line chart, category distribution bars, purchase-order queue, and product detail drawer. Use warm utilitarian styling, realistic SKUs, warning/healthy states, responsive tables, and no placeholder product photos.
 
-LAFYS-COLLECTION EXPANSION
+FRAMEWELL COLLECTION EXPANSION
 
 Build this as a complete, copy-pasteable frontend artifact, not a tiny component. Use React + Vite or Next.js, TypeScript, Tailwind CSS, and shadcn/ui primitives only where they genuinely improve the result. If a chart, map, product screenshot, avatar, or image is needed, create it with CSS/SVG/inline mock data instead of hotlinking external assets.
 

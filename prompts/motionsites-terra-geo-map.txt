@@ -40,4 +40,4 @@ Layout: min-h-screen flex flex-col bg-background, hero content area is flex-1 fl
 ---
 Source: MotionSites.ai Prompt Library — https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/Terra_Geo_Map.md
 License: MIT. Copyright (c) 2026 Aayushsoam.
-Curated locally for Lafys-copy.
+Curated locally for Framewell.

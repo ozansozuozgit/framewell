@@ -4,7 +4,7 @@ Source URL: https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/tem
 
 Design an open-source project homepage for a local-first developer tool called Pocketbase Studio. Include hero with GitHub CTA, install command block, feature matrix, architecture diagram, community stats, roadmap preview, contributor callout, and license note. Use developer-focused density, monospace code surfaces, responsive command block, truthful project-style copy, and no external scripts.
 
-LAFYS-COLLECTION EXPANSION
+FRAMEWELL COLLECTION EXPANSION
 
 Build this as a complete, copy-pasteable frontend artifact, not a tiny component. Use React + Vite or Next.js, TypeScript, Tailwind CSS, and shadcn/ui primitives only where they genuinely improve the result. If a chart, map, product screenshot, avatar, or image is needed, create it with CSS/SVG/inline mock data instead of hotlinking external assets.
 

@@ -1,36 +1,116 @@
-# Lafys local copy
+# Framewell
 
-Local static archive/recreation of the public Lafys homepage captured from https://lafys.com.
+Framewell is a preview-first motion prompt library for website, dashboard, animation, and component ideas. It is designed to be clean enough to browse quickly, but visual enough that each prompt has an obvious shape before you open the text.
 
-Included:
-- `index.html`, `styles.css`, `app.js`: local static UI
-- `assets/`: public logo, avatars, thumbnails, and preview videos/images
-- `data/posts-original.json`: public API response from `/api/posts/list`
-- `data/posts.json`: normalized card metadata used by the local UI
-- `prompts/`: paste prompt `.txt` files here
-- `scripts/add_prompt.py`: save clipboard/stdin prompt into `prompts/` and rebuild `data/prompts.json`
+This repository is a static publishing-ready app: HTML, CSS, vanilla JavaScript, local JSON data, local media assets, and prompt text files.
 
-Not included:
-- stealth/incognito/quota-reset bypasses
-- gated prompts unless you paste them manually
+## What is inside
 
-Run locally:
+- 195 prompt cards
+- 195 local prompt texts
+- 195 preview assets
+- 5 concept-sketch SVG previews for prompts that had no usable source media
+- Provenance notes for third-party/public/open prompt sources
+- A minimal Framewell brand system: mark, favicon, app copy, metadata, and README
+
+## Run locally
 
 ```bash
 cd /Users/ozansozuoz/programming-files/lafys-copy
 python3 -m http.server 4173
-# open http://localhost:4173
 ```
 
-Add a copied prompt from the clipboard:
+Open:
+
+```text
+http://localhost:4173
+```
+
+Or use the package script:
 
 ```bash
-cd /Users/ozansozuoz/programming-files/lafys-copy
-python3 scripts/add_prompt.py synex --from-clipboard
+npm run start
 ```
 
-Or paste via stdin:
+## Project structure
+
+```text
+index.html                  Static app shell
+styles.css                  Visual system and responsive layout
+app.js                      Filtering, modal, preview rendering, copy actions
+data/posts.json             Card metadata used by the UI
+data/prompts.json           Generated prompt lookup
+prompts/*.txt               Source prompt text files
+assets/previews/            Local preview videos/images
+assets/previews/generated/  Concept-sketch previews for prompt-only entries
+assets/thumbnails/          Local thumbnail images
+assets/ui/                  Framewell logo, mark, favicon
+THIRD_PARTY_PROMPTS.md      Source and license/provenance notes
+```
+
+## Add or update prompts
+
+Add prompt text files to `prompts/`, then rebuild the generated JSON:
 
 ```bash
-python3 scripts/add_prompt.py synex < my-prompt.txt
+python3 scripts/build_prompts_json.py
 ```
+
+If adding a new card, update `data/posts.json` with a unique `id` and `slug`. Prefer real preview media. If no source preview exists, create a clean concept-sketch SVG in `assets/previews/generated/` and set `thumbnail` to that path.
+
+## Preview policy
+
+Framewell should not show blank placeholder cards. Every card needs one of:
+
+1. source video/image preview
+2. source thumbnail
+3. clearly designed local concept sketch
+
+Concept sketches are not screenshots. They are visual summaries of the prompt so the archive remains browsable.
+
+## Publishing checklist
+
+Before publishing:
+
+```bash
+node --check app.js
+python3 scripts/build_prompts_json.py
+python3 - <<'PY'
+import json
+from pathlib import Path
+root = Path('.')
+posts = json.loads((root / 'data/posts.json').read_text())
+prompts = json.loads((root / 'data/prompts.json').read_text())
+ids = [p['id'] for p in posts]
+slugs = [p['slug'] for p in posts]
+missing_assets = []
+for p in posts:
+    for key in ['media', 'thumbnail']:
+        value = p.get(key)
+        if value and not value.startswith(('http://', 'https://')) and not (root / value).exists():
+            missing_assets.append((p['slug'], key, value))
+print({
+    'posts': len(posts),
+    'prompts': len(prompts),
+    'with_preview': sum(1 for p in posts if p.get('media') or p.get('thumbnail')),
+    'duplicate_ids': len(ids) - len(set(ids)),
+    'duplicate_slugs': len(slugs) - len(set(slugs)),
+    'missing_assets': len(missing_assets),
+})
+PY
+```
+
+Expected current result:
+
+```text
+posts: 195
+prompts: 195
+with_preview: 195
+duplicate_ids: 0
+duplicate_slugs: 0
+missing_assets: 0
+```
+
+## Provenance
+
+See `THIRD_PARTY_PROMPTS.md`. Framewell keeps source links near each prompt and avoids importing gated/premium private prompt text.

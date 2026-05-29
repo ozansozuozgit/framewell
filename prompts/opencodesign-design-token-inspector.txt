@@ -4,7 +4,7 @@ Source URL: https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/tem
 
 Design a design-token inspector for a product design system. Include token category sidebar, searchable token table, color swatches, typography preview rows, spacing scale visualization, diff badge for changed tokens, and a code export drawer. Show selected token details and empty search state. Use restrained tool UI, clear metadata, accessible contrast, responsive tables, and no external assets.
 
-LAFYS-COLLECTION EXPANSION
+FRAMEWELL COLLECTION EXPANSION
 
 Build this as a complete, copy-pasteable frontend artifact, not a tiny component. Use React + Vite or Next.js, TypeScript, Tailwind CSS, and shadcn/ui primitives only where they genuinely improve the result. If a chart, map, product screenshot, avatar, or image is needed, create it with CSS/SVG/inline mock data instead of hotlinking external assets.
 

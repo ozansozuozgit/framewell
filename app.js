@@ -80,7 +80,7 @@ function applyFilters(){
 }
 function renderStats(){
   const curated = posts.filter(p => p.promptOnly).length;
-  const previews = posts.filter(p => p.promptOnly && hasPreview(p)).length;
+  const previews = posts.filter(hasPreview).length;
   const sources = new Set(posts.map(sourceOf)).size;
   document.getElementById('statTotal').textContent = posts.length;
   document.getElementById('statCurated').textContent = curated;
@@ -101,7 +101,7 @@ function card(p, i){
   const copyLabel = hasPrompt(p) ? 'Copy prompt' : 'Open source';
   const tags = (p.tags||[]).slice(0,2).map(t=>`<span class="tag">${esc(t)}</span>`).join('');
   const tools = (p.aiTools||[]).slice(0,1).map(t=>`<span class="pill">${esc(t)}</span>`).join('');
-  const generated = p.previewGenerated ? '<span class="preview-note">interpreted preview</span>' : '';
+  const generated = p.previewGenerated ? '<span class="preview-note">concept sketch</span>' : '';
   return `<article class="card atlas-card browse-card" data-id="${esc(p.id)}" style="--i:${i%24}">
     <div class="thumb atlas-thumb browse-thumb">${mediaEl(p)}<button class="copy ${hasPrompt(p)?'has-prompt':''}" type="button">${copyLabel}</button>${generated}</div>
     <div class="card-body atlas-card-body browse-card-body"><div class="browse-meta"><span>${esc(sourceOf(p))}</span>${tools}</div><h3>${esc(p.title)}</h3><p>${esc(typeOf(p))}</p><div class="tags">${tags}</div></div>
