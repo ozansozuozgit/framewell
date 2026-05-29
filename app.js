@@ -171,6 +171,17 @@ function renderHeroLab(){
     <div><span>${esc(sourceOf(p))}</span><b>${esc(p.title)}</b></div>
   </article>`).join('');
 }
+let revealObserver;
+function applyReveals(){
+  const items = document.querySelectorAll('.showreel-opening, .director-board, .catalog-lab, .atlas-card, .pattern-lane, .lens-group');
+  if(!('IntersectionObserver' in window)){ items.forEach(el=>el.classList.add('is-visible')); return; }
+  if(!revealObserver){
+    revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+      if(entry.isIntersecting){ entry.target.classList.add('is-visible'); revealObserver.unobserve(entry.target); }
+    }), { threshold: .08, rootMargin: '0px 0px -8% 0px' });
+  }
+  items.forEach(el => { if(!el.classList.contains('is-visible')) revealObserver.observe(el); });
+}
 function render(){
   applyFilters();
   renderStats();
@@ -185,6 +196,7 @@ function render(){
   els.activeFilters.textContent = active.join(' · ');
   els.grid.innerHTML = filtered.length ? filtered.map(card).join('') : `<div class="empty-state"><h3>No matching cards</h3><p>Clear filters or try a broader search like dashboard, hero, animation, or Magic UI.</p></div>`;
   document.querySelectorAll('video').forEach(v=>{ v.addEventListener('mouseenter',()=>v.play().catch(()=>{})); v.addEventListener('mouseleave',()=>{ if(!v.closest('.trend-card,.hero-feature,.hero-reel-card,.spotlight-main,.spotlight-mini,.theatre-card,.lane-card')){ v.pause(); v.currentTime=0; } }); if(v.closest('.trend-card,.hero-feature,.hero-reel-card,.spotlight-main,.spotlight-mini,.theatre-card,.lane-card')) v.play().catch(()=>{}); });
+  applyReveals();
 }
 async function copyPrompt(p){
   const text = getPrompt(p);
