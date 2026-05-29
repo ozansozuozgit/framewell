@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="Luxury tea landing preview">
+  <rect width="960" height="600" fill="#f7f2e7"/>
+  <rect x="28" y="28" width="904" height="544" rx="30" fill="none" stroke="#1c1a13" stroke-opacity=".10"/>
+  <g opacity=".55"><circle cx="850" cy="90" r="130" fill="#dfe7d4"/><circle cx="790" cy="500" r="170" fill="#dfe7d4" opacity=".45"/></g>
+  <text x="80" y="110" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="24" letter-spacing="5" fill="#1c1a13" opacity=".58">SCROLLYTELLING</text>
+  <text x="80" y="198" font-family="Georgia,'Times New Roman',serif" font-size="64" fill="#1c1a13" letter-spacing="-2">Luxury tea landing</text>
+  <text x="82" y="246" font-family="-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="24" fill="#1c1a13" opacity=".62">GSAP scroll · editorial product ritual</text>
+  
+        <path d="M468 178 C562 130 680 134 760 202 C694 236 566 240 468 178Z" fill="#dfe7d4" stroke="#1c1a13" stroke-opacity=".15"/>
+        <path d="M590 218 C532 288 534 383 600 455" fill="none" stroke="#1c1a13" stroke-opacity=".22" stroke-width="3"/>
+        <rect x="430" y="330" width="330" height="95" rx="47" fill="#fff" stroke="#dfd5c4"/>
+        <circle cx="690" cy="378" r="31" fill="#dfe7d4"/>
+        <path d="M725 361 C792 333 828 351 839 396" fill="none" stroke="#1c1a13" stroke-opacity=".25" stroke-width="5" stroke-linecap="round"/>
+</svg>

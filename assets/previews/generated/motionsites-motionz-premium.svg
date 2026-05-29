@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="MotionZ premium landing preview">
+  <rect width="960" height="600" fill="#11121a"/>
+  <rect x="28" y="28" width="904" height="544" rx="30" fill="none" stroke="#f4f1e8" stroke-opacity=".10"/>
+  <g opacity=".55"><circle cx="850" cy="90" r="130" fill="#d8e2ff"/><circle cx="790" cy="500" r="170" fill="#d8e2ff" opacity=".45"/></g>
+  <text x="80" y="110" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="24" letter-spacing="5" fill="#f4f1e8" opacity=".58">GAMING</text>
+  <text x="80" y="198" font-family="Georgia,'Times New Roman',serif" font-size="64" fill="#f4f1e8" letter-spacing="-2">MotionZ premium landing</text>
+  <text x="82" y="246" font-family="-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="24" fill="#f4f1e8" opacity=".62">GSAP bento · cinematic cards · game universe</text>
+  
+        <rect x="395" y="120" width="260" height="170" rx="22" fill="#d8e2ff" opacity=".20" stroke="#d8e2ff"/>
+        <rect x="685" y="160" width="150" height="250" rx="22" fill="#d8e2ff" opacity=".12" stroke="#d8e2ff"/>
+        <rect x="470" y="320" width="260" height="115" rx="22" fill="#fff" opacity=".08" stroke="#d8e2ff"/>
+        <path d="M448 207 C548 93 695 101 776 242" fill="none" stroke="#d8e2ff" stroke-width="3"/>
+        <circle cx="744" cy="232" r="22" fill="#d8e2ff" opacity=".55"/>
+</svg>

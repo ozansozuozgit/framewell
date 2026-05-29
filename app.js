@@ -63,7 +63,7 @@ function setupControls(){
   const types = countBy(posts, typeOf).map(([k])=>k);
   els.sourceSelect.innerHTML = '<option value="">All sources</option>' + optionHtml(sources);
   els.typeSelect.innerHTML = '<option value="">All types</option>' + optionHtml(types);
-  const chips = ['dashboard','landing page','animation','hero','cards','Magic UI','Animata','Cult UI','MotionSites.ai','Tailark'];
+  const chips = ['hero','animation','dashboard','liquid glass','3D','cards','onboarding','Magic UI'];
   els.quickChips.innerHTML = chips.map(c => `<button type="button" data-chip="${esc(c)}">${esc(c)}</button>`).join('');
 }
 function applyFilters(){
@@ -98,15 +98,13 @@ function renderFacets(){
   els.tagFacet.innerHTML = tagCounts.map(([name,n]) => `<button type="button" class="${state.tag===name?'active':''}" data-tag="${esc(name)}"><span>${esc(name)}</span><b>${n}</b></button>`).join('');
 }
 function card(p, i){
-  const copyLabel = hasPrompt(p) ? 'Copy' : 'Open';
-  const tags = (p.tags||[]).slice(0,3).map(t=>`<span class="tag">${esc(t)}</span>`).join('');
-  const tools = (p.aiTools||[]).slice(0,2).map(t=>`<span class="pill">${esc(t)}</span>`).join('');
-  const text = visualText(p).toLowerCase();
-  const motion = /motion|animation|hero|video|scroll|gsap|3d|glass|space|particle|liquid/.test(text);
-  const size = motion && i % 11 === 0 ? 'poster' : motion && i % 7 === 0 ? 'wide' : i % 9 === 0 ? 'tall' : 'tile';
-  return `<article class="card atlas-card ${size}" data-id="${esc(p.id)}" style="--i:${i%24}">
-    <div class="thumb atlas-thumb">${mediaEl(p)}<button class="copy ${hasPrompt(p)?'has-prompt':''}" type="button">${copyLabel}</button><span class="source-chip">${esc(sourceOf(p))}</span></div>
-    <div class="card-body atlas-card-body"><div class="toolrow">${tools}</div><h3>${esc(p.title)}</h3><p>${esc(typeOf(p))}</p><div class="tags">${tags}</div></div>
+  const copyLabel = hasPrompt(p) ? 'Copy prompt' : 'Open source';
+  const tags = (p.tags||[]).slice(0,2).map(t=>`<span class="tag">${esc(t)}</span>`).join('');
+  const tools = (p.aiTools||[]).slice(0,1).map(t=>`<span class="pill">${esc(t)}</span>`).join('');
+  const generated = p.previewGenerated ? '<span class="preview-note">interpreted preview</span>' : '';
+  return `<article class="card atlas-card browse-card" data-id="${esc(p.id)}" style="--i:${i%24}">
+    <div class="thumb atlas-thumb browse-thumb">${mediaEl(p)}<button class="copy ${hasPrompt(p)?'has-prompt':''}" type="button">${copyLabel}</button>${generated}</div>
+    <div class="card-body atlas-card-body browse-card-body"><div class="browse-meta"><span>${esc(sourceOf(p))}</span>${tools}</div><h3>${esc(p.title)}</h3><p>${esc(typeOf(p))}</p><div class="tags">${tags}</div></div>
   </article>`;
 }
 function visualText(p){ return [p.title, typeOf(p), sourceOf(p), ...(p.tags||[]), ...(p.aiTools||[])].join(' '); }

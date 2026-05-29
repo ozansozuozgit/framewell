@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="Premium loader animation preview">
+  <rect width="960" height="600" fill="#0f0f0d"/>
+  <rect x="28" y="28" width="904" height="544" rx="30" fill="none" stroke="#f7f1e6" stroke-opacity=".10"/>
+  <g opacity=".55"><circle cx="850" cy="90" r="130" fill="#d9c7a3"/><circle cx="790" cy="500" r="170" fill="#d9c7a3" opacity=".45"/></g>
+  <text x="80" y="110" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="24" letter-spacing="5" fill="#f7f1e6" opacity=".58">LOADER</text>
+  <text x="80" y="198" font-family="Georgia,'Times New Roman',serif" font-size="64" fill="#f7f1e6" letter-spacing="-2">Premium loader animation</text>
+  <text x="82" y="246" font-family="-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="24" fill="#f7f1e6" opacity=".62">Fullscreen transition · serif counter · quiet progress</text>
+  
+        <circle cx="610" cy="295" r="108" fill="none" stroke="#d9c7a3" stroke-width="3" stroke-dasharray="22 18"/>
+        <circle cx="610" cy="295" r="58" fill="none" stroke="#f7f1e6" stroke-opacity=".36" stroke-width="1"/>
+        <text x="610" y="306" text-anchor="middle" font-family="Georgia,serif" font-size="42" fill="#f7f1e6">48%</text>
+        <path d="M170 460 H650" stroke="#d9c7a3" stroke-width="8" stroke-linecap="round"/>
+        <path d="M170 460 H402" stroke="#f7f1e6" stroke-opacity=".35" stroke-width="8" stroke-linecap="round"/>
+</svg>

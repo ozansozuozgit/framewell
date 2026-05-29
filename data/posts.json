@@ -348,7 +348,9 @@
       "framer motion"
     ],
     "promptOnly": true,
-    "license": "MIT"
+    "license": "MIT",
+    "thumbnail": "assets/previews/generated/motionsites-loader-animation.svg",
+    "previewGenerated": true
   },
   {
     "id": "curated-2d7fb08aa3f9676a",
@@ -428,7 +430,9 @@
       "video",
       "landing page"
     ],
-    "promptOnly": true
+    "promptOnly": true,
+    "thumbnail": "assets/previews/generated/motionsites-motionz-premium.svg",
+    "previewGenerated": true
   },
   {
     "id": "curated-16d3704a0a3989ea",
@@ -449,7 +453,9 @@
       "UI design"
     ],
     "promptOnly": true,
-    "license": "MIT"
+    "license": "MIT",
+    "thumbnail": "assets/previews/generated/reddit-v0-visual-generation-template.svg",
+    "previewGenerated": true
   },
   {
     "id": "curated-d51050ffeaf84e12",
@@ -472,7 +478,9 @@
       "hover",
       "landing page"
     ],
-    "promptOnly": true
+    "promptOnly": true,
+    "thumbnail": "assets/previews/generated/x-render-and-co-3d-animation-studio.svg",
+    "previewGenerated": true
   },
   {
     "id": "curated-5caf331daa4d21d3",
@@ -495,7 +503,9 @@
       "landing page",
       "animation"
     ],
-    "promptOnly": true
+    "promptOnly": true,
+    "thumbnail": "assets/previews/generated/x-luxury-tea-scrollytelling-gsap.svg",
+    "previewGenerated": true
   },
   {
     "id": "curated-ocd-88eec2b13875717f",
