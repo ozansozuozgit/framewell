@@ -18,7 +18,9 @@ const els = {
   sourceFacet: document.getElementById('sourceFacet'),
   tagFacet: document.getElementById('tagFacet'),
   quickChips: document.getElementById('quickChips'),
-  scoutList: document.getElementById('scoutList')
+  scoutList: document.getElementById('scoutList'),
+  heroStage: document.getElementById('heroStage'),
+  heroReel: document.getElementById('heroReel')
 };
 
 async function loadJson(path, fallback){
@@ -100,10 +102,35 @@ function renderShowcase(){
   const preferred = posts.filter(p => p.promptOnly && hasPreview(p)).slice(-8).reverse();
   els.trend.innerHTML = preferred.slice(0,6).map((p,i)=>`<article class="trend-card" data-id="${esc(p.id)}" style="--i:${i}">${mediaEl(p)}<div class="trend-meta"><span>${esc(sourceOf(p))}</span><h3>${esc(p.title)}</h3><p>${esc(typeOf(p))}</p></div></article>`).join('');
 }
+function heroCandidates(){
+  const wanted = ['motionsites-liquid-glass-agency','motionsites-space-voyage','motionsites-framelix-3d-studios','website-cards-animation','synex','motionsites-ai-designer-agency','motionsites-buzzentic-agency','motionsites-terra-geo-map','motionsites-weblex-dark-hero'];
+  const bySlug = new Map(posts.map(p => [p.slug, p]));
+  const handPicked = wanted.map(slug => bySlug.get(slug)).filter(Boolean);
+  const backup = posts
+    .filter(p => hasPreview(p) && /hero|motion|animation|video|3d|glass|space|agency|gsap|scroll|interactive/i.test([p.title, typeOf(p), sourceOf(p), ...(p.tags||[])].join(' ')))
+    .sort((a,b) => (b.media?1:0) - (a.media?1:0));
+  return [...new Map([...handPicked, ...backup].map(p => [p.id, p])).values()].slice(0, 9);
+}
+function renderHeroLab(){
+  if(!els.heroStage || !els.heroReel) return;
+  const picks = heroCandidates();
+  const primary = picks[0];
+  if(!primary) return;
+  els.heroStage.innerHTML = `<article class="hero-feature" data-id="${esc(primary.id)}">
+    ${mediaEl(primary, 'hero-feature-media')}
+    <div class="hero-feature-copy"><span>${esc(sourceOf(primary))}</span><h2>${esc(primary.title)}</h2><p>${esc(typeOf(primary))}</p></div>
+  </article>
+  <div class="hero-orbit" aria-hidden="true"><span>GSAP</span><span>liquid glass</span><span>3D</span><span>dashboards</span></div>`;
+  els.heroReel.innerHTML = picks.slice(1, 7).map((p,i)=>`<article class="hero-reel-card" data-id="${esc(p.id)}" style="--i:${i}">
+    ${mediaEl(p, 'hero-reel-media')}
+    <div><span>${esc(sourceOf(p))}</span><b>${esc(p.title)}</b></div>
+  </article>`).join('');
+}
 function render(){
   applyFilters();
   renderStats();
   renderFacets();
+  renderHeroLab();
   renderShowcase();
   const promptCount = Object.keys(prompts).length;
   const curatedCount = posts.filter(p => p.promptOnly).length;
@@ -112,7 +139,7 @@ function render(){
   const active = [state.query && `search: ${state.query}`, state.source && `source: ${state.source}`, state.type && `type: ${state.type}`, state.tag && `tag: ${state.tag}`, shuffleMode && 'random set'].filter(Boolean);
   els.activeFilters.textContent = active.join(' · ');
   els.grid.innerHTML = filtered.length ? filtered.map(card).join('') : `<div class="empty-state"><h3>No matching cards</h3><p>Clear filters or try a broader search like dashboard, hero, animation, or Magic UI.</p></div>`;
-  document.querySelectorAll('video').forEach(v=>{ v.addEventListener('mouseenter',()=>v.play().catch(()=>{})); v.addEventListener('mouseleave',()=>{v.pause(); v.currentTime=0;}); if(v.closest('.trend-card')) v.play().catch(()=>{}); });
+  document.querySelectorAll('video').forEach(v=>{ v.addEventListener('mouseenter',()=>v.play().catch(()=>{})); v.addEventListener('mouseleave',()=>{ if(!v.closest('.trend-card,.hero-feature,.hero-reel-card')){ v.pause(); v.currentTime=0; } }); if(v.closest('.trend-card,.hero-feature,.hero-reel-card')) v.play().catch(()=>{}); });
 }
 async function copyPrompt(p){
   const text = getPrompt(p);
