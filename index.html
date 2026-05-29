@@ -6,7 +6,7 @@
   <title>Lafys prompt atlas</title>
   <meta name="description" content="Local prompt atlas for beautiful websites, dashboards, motion patterns, and UI references.">
   <link rel="icon" href="assets/ui/favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="stylesheet" href="styles.css?v=11">
 </head>
 <body>
   <header class="topbar">
@@ -48,16 +48,34 @@
       </div>
     </section>
 
-    <section id="showcase" class="showcase" aria-label="Selected prompt showcase">
-      <div class="section-head">
-        <div><span class="eyebrow">Selected cards</span><h2>Fresh patterns to try</h2></div>
-        <p>Preview-led cards from the newest imports and strongest motion/component sources.</p>
+    <section id="showcase" class="motion-theatre" aria-label="Motion theatre">
+      <div class="theatre-copy">
+        <span class="eyebrow">Now playing</span>
+        <h2>Stop browsing thumbnails. Watch the patterns move.</h2>
+        <p>The strongest motion, hero, glass, 3D, and dashboard prompts are pulled into a live theatre before the full archive.</p>
+        <div id="theatrePills" class="theatre-pills" aria-label="Theatre quick filters"></div>
       </div>
-      <div id="trendingTrack" class="trending-track"></div>
+      <div id="theatreSpotlight" class="theatre-spotlight"></div>
+      <div id="trendingTrack" class="theatre-strip"></div>
     </section>
 
-    <section id="library" class="library" aria-label="Prompt library">
-      <div class="library-toolbar">
+    <section class="pattern-lanes" aria-label="Pattern lanes">
+      <div class="lanes-head">
+        <span class="eyebrow">Pattern lanes</span>
+        <h2>Jump by what the interface does, not where it came from.</h2>
+      </div>
+      <div id="patternLanes" class="pattern-lanes-grid"></div>
+    </section>
+
+    <section id="library" class="library catalog-lab" aria-label="Prompt library">
+      <div class="catalog-titlebar">
+        <div>
+          <span class="eyebrow">Archive console</span>
+          <h2>Every prompt, still searchable.</h2>
+        </div>
+        <p>Use the console when you know what you want. Use the motion lanes above when you want to discover something weird.</p>
+      </div>
+      <div class="library-toolbar command-console">
         <label class="command-box"><span>Command search</span><input id="searchInput" type="search" placeholder="Try liquid glass, dashboard, Magic UI, onboarding"></label>
         <label><span>Source</span><select id="sourceSelect"><option value="">All sources</option></select></label>
         <label><span>Type</span><select id="typeSelect"><option value="">All types</option></select></label>
@@ -65,24 +83,24 @@
       </div>
       <div id="quickChips" class="quick-chips" aria-label="Quick filters"></div>
       <div class="library-meta"><div id="count"></div><div id="activeFilters"></div></div>
-      <div class="library-shell">
-        <aside class="facets" aria-label="Collection facets">
+      <div class="library-shell kinetic-shell">
+        <aside class="facets command-rail" aria-label="Collection facets">
           <div><h3>Sources</h3><div id="sourceFacet" class="facet-list"></div></div>
           <div><h3>Tags</h3><div id="tagFacet" class="facet-list tag-list"></div></div>
         </aside>
-        <div id="grid" class="grid" aria-live="polite"><div class="loading-card"></div><div class="loading-card"></div><div class="loading-card"></div></div>
+        <div id="grid" class="grid motion-grid" aria-live="polite"><div class="loading-card"></div><div class="loading-card"></div><div class="loading-card"></div></div>
       </div>
     </section>
 
-    <section class="collector-note">
-      <span class="eyebrow">Curation rule</span>
-      <h2>Free/open material only, with source links kept close to the prompt.</h2>
-      <p>Premium, gated, or access-denied prompt text is skipped. For component libraries and templates, cards are local prompt expansions from public/open patterns rather than copied code.</p>
+    <section class="collector-note source-ledger">
+      <span class="eyebrow">Source ledger</span>
+      <h2>Free/open material only. Nothing premium gets smuggled into the atlas.</h2>
+      <p>Source links stay near every prompt. Component and template entries are local prompt expansions from public/open patterns, not copied private code.</p>
     </section>
   </main>
 
   <dialog id="modal"><button id="closeModal" class="close" type="button" aria-label="Close modal">×</button><div id="modalBody"></div></dialog>
   <footer><span>Local Lafys prompt atlas</span><a href="#top">Back to top</a><a href="THIRD_PARTY_PROMPTS.md">Third-party sources</a></footer>
-  <script src="app.js?v=8"></script>
+  <script src="app.js?v=11"></script>
 </body>
 </html>

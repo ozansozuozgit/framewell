@@ -20,7 +20,10 @@ const els = {
   quickChips: document.getElementById('quickChips'),
   scoutList: document.getElementById('scoutList'),
   heroStage: document.getElementById('heroStage'),
-  heroReel: document.getElementById('heroReel')
+  heroReel: document.getElementById('heroReel'),
+  theatreSpotlight: document.getElementById('theatreSpotlight'),
+  theatrePills: document.getElementById('theatrePills'),
+  patternLanes: document.getElementById('patternLanes')
 };
 
 async function loadJson(path, fallback){
@@ -98,9 +101,48 @@ function card(p, i){
     <div class="card-body"><div class="toolrow">${tools}</div><h3>${esc(p.title)}</h3><p>${esc(typeOf(p))}</p><div class="tags">${tags}</div></div>
   </article>`;
 }
+function visualText(p){ return [p.title, typeOf(p), sourceOf(p), ...(p.tags||[]), ...(p.aiTools||[])].join(' '); }
+function uniquePosts(items){ return [...new Map(items.filter(Boolean).map(p => [p.id, p])).values()]; }
+function laneCard(p, i, cls='lane-card'){
+  return `<article class="${cls}" data-id="${esc(p.id)}" style="--i:${i}">
+    <div class="lane-media-wrap">${mediaEl(p, 'lane-media')}</div>
+    <div class="lane-copy"><span>${esc(sourceOf(p))}</span><b>${esc(p.title)}</b><small>${esc(typeOf(p))}</small></div>
+  </article>`;
+}
+function pickByRegex(rx, limit=10){
+  return posts.filter(p => hasPreview(p) && rx.test(visualText(p))).sort((a,b)=> (b.media?1:0) - (a.media?1:0)).slice(0, limit);
+}
 function renderShowcase(){
-  const preferred = posts.filter(p => p.promptOnly && hasPreview(p)).slice(-8).reverse();
-  els.trend.innerHTML = preferred.slice(0,6).map((p,i)=>`<article class="trend-card" data-id="${esc(p.id)}" style="--i:${i}">${mediaEl(p)}<div class="trend-meta"><span>${esc(sourceOf(p))}</span><h3>${esc(p.title)}</h3><p>${esc(typeOf(p))}</p></div></article>`).join('');
+  const picks = heroCandidates();
+  if(els.theatrePills){
+    const pills = [['hero motion','hero'],['glass + 3D','glass'],['dashboards','dashboard'],['component tricks','component']];
+    els.theatrePills.innerHTML = pills.map(([label,value])=>`<button type="button" data-chip="${esc(value)}">${esc(label)}</button>`).join('');
+  }
+  if(els.theatreSpotlight){
+    const main = picks[1] || picks[0];
+    const side = picks.slice(2,5);
+    els.theatreSpotlight.innerHTML = main ? `<article class="spotlight-main" data-id="${esc(main.id)}">
+      ${mediaEl(main, 'spotlight-media')}
+      <div class="spotlight-copy"><span>${esc(sourceOf(main))}</span><h3>${esc(main.title)}</h3><p>${esc(typeOf(main))}</p><button class="copy ${hasPrompt(main)?'has-prompt':''}" type="button">Copy prompt</button></div>
+    </article><div class="spotlight-stack">${side.map((p,i)=>laneCard(p,i,'spotlight-mini')).join('')}</div>` : '';
+  }
+  const strip = uniquePosts([...picks, ...pickByRegex(/animation|motion|gsap|scroll|3d|glass|hero|video/i, 12)]).slice(0,10);
+  els.trend.innerHTML = strip.map((p,i)=>laneCard(p,i,'theatre-card')).join('');
+  renderPatternLanes();
+}
+function renderPatternLanes(){
+  if(!els.patternLanes) return;
+  const lanes = [
+    ['Hero motion', 'hero', /hero|landing|agency|website/i],
+    ['Animation systems', 'animation', /animation|motion|gsap|scroll|transition|typewriter|marquee|trail|scramble/i],
+    ['Glass, 3D, space', 'glass', /glass|3d|cosmic|space|particle|liquid|collectible|globe|orbit/i],
+    ['Dashboards that feel alive', 'dashboard', /dashboard|command|analytics|ops|console|finance|revenue/i],
+    ['Component tricks', 'component', /component|button|card|dock|carousel|popover|terminal|bento|beam/i]
+  ];
+  els.patternLanes.innerHTML = lanes.map(([title,filter,rx],idx)=>{
+    const items = pickByRegex(rx, 9);
+    return `<section class="pattern-lane" style="--lane:${idx}"><div class="lane-head"><h3>${esc(title)}</h3><button type="button" data-chip="${esc(filter)}">Filter</button></div><div class="lane-row">${items.map((p,i)=>laneCard(p,i)).join('')}</div></section>`;
+  }).join('');
 }
 function heroCandidates(){
   const wanted = ['motionsites-liquid-glass-agency','motionsites-space-voyage','motionsites-framelix-3d-studios','website-cards-animation','synex','motionsites-ai-designer-agency','motionsites-buzzentic-agency','motionsites-terra-geo-map','motionsites-weblex-dark-hero'];
@@ -139,7 +181,7 @@ function render(){
   const active = [state.query && `search: ${state.query}`, state.source && `source: ${state.source}`, state.type && `type: ${state.type}`, state.tag && `tag: ${state.tag}`, shuffleMode && 'random set'].filter(Boolean);
   els.activeFilters.textContent = active.join(' · ');
   els.grid.innerHTML = filtered.length ? filtered.map(card).join('') : `<div class="empty-state"><h3>No matching cards</h3><p>Clear filters or try a broader search like dashboard, hero, animation, or Magic UI.</p></div>`;
-  document.querySelectorAll('video').forEach(v=>{ v.addEventListener('mouseenter',()=>v.play().catch(()=>{})); v.addEventListener('mouseleave',()=>{ if(!v.closest('.trend-card,.hero-feature,.hero-reel-card')){ v.pause(); v.currentTime=0; } }); if(v.closest('.trend-card,.hero-feature,.hero-reel-card')) v.play().catch(()=>{}); });
+  document.querySelectorAll('video').forEach(v=>{ v.addEventListener('mouseenter',()=>v.play().catch(()=>{})); v.addEventListener('mouseleave',()=>{ if(!v.closest('.trend-card,.hero-feature,.hero-reel-card,.spotlight-main,.spotlight-mini,.theatre-card,.lane-card')){ v.pause(); v.currentTime=0; } }); if(v.closest('.trend-card,.hero-feature,.hero-reel-card,.spotlight-main,.spotlight-mini,.theatre-card,.lane-card')) v.play().catch(()=>{}); });
 }
 async function copyPrompt(p){
   const text = getPrompt(p);
