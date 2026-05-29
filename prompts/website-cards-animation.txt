@@ -1,0 +1,112 @@
+Build a single-page scroll-driven landing page for an artist marketplace called Pallet Ross. Use React with Vite, TypeScript, Tailwind CSS, Framer Motion, and lucide-react icons. Load the Google Font Inter Tight (weights 300 to 900) and configure Tailwind so font-heading, font-body, and font-sans all map to "Inter Tight", sans-serif. The page is one vertical scroll surface with three full-height sections stacked inside a single container ref. The global page background is the off-white color #F2F2F0 applied to the outermost container.
+
+Behind everything, render a fixed full-viewport layer at z-index 0 that holds three soft radial-gradient blur blobs as decoration. First blob: top 5%, left 8%, 300x300, radial-gradient circle from rgba(180,180,180,0.12) at 0% to transparent at 70%, blur 40px. Second blob: top 8%, right 10%, 250x250, same gradient and blur. Third blob: top 30%, left 50% translateX -50%, 600x400, radial-gradient circle from rgba(160,160,160,0.08) to transparent at 70%, blur 60px. These blobs are pointer-events none.
+
+Fixed top navbar at z-index 50, transparent background, padding 18px 32px, full width, three groups in a flex space-between row. Left group: small logo plus the wordmark "Pallet Ross". The logo is a 28x28 SVG composed of two overlapping diamond/parallelogram shapes filled with #4ECDC4 (the back shape at full opacity, the front shape at 0.85 opacity, slightly offset down and right to suggest layered palettes). Wordmark uses font-heading, 18px, weight 600, color #111111, with 10px gap from the logo. Center group is a row of small text buttons in font-heading 14px, color #111111, padding 14px horizontal 8px vertical, no background, cursor pointer: "Get Started", then a special button labeled "Create strategy" prefixed with a 14px solid #4ECDC4 circle (6px right margin), then "Pricing", "Contact", "Solution", "E-Commerce". Right group: two icon buttons, lucide User and lucide Settings, both 20px, color #111, padding 8px, transparent background.
+
+Fixed scroll indicator at right 24px, vertically centered, z-index 40. It is a vertical column of two 36x36 buttons with 1.5px solid rgba(0,0,0,0.15) border, border-radius 8px, transparent background, lucide ChevronUp and ChevronDown icons at 16px color #111. Clicking up scrolls the window by minus one viewport height with smooth behavior, clicking down scrolls by plus one viewport height. Hover tints the background to rgba(0,0,0,0.05).
+
+Above all sections sits a global ScrollCards overlay component that owns the seven artwork cards across the entire page. It uses framer-motion's useScroll bound to the page container ref with offset start start to end end, and tracks the scrollYProgress motion value. It also measures, on mount and on resize plus a 300ms timeout for layout settle, the document position of the section with data-section="two": it computes containerTop, containerScrollHeight minus innerHeight as the scrollable height, sectionTwoTop, then derives lockProgress = clamp((sectionTwoTop minus containerTop) divided by scrollableHeight, 0.05, 0.99). It also stores sectionTwoTop and section height for anchoring.
+
+The seven cards use images /card-1.png through /card-7.png loaded from the public folder (sourced originally from qclay.design/lovable/pallet/card-1.png through card-7.png). Every card is a square, width and height 220px, border-radius 18px, overflow hidden, box-shadow 0 20px 60px rgba(0,0,0,0.20), with an inner img tag that fills 100 percent width and height with object-fit cover and draggable false. Card draw order in Section 2 is controlled by the cascade z-index (7 down to 1, leftmost on top), and any hovered card jumps to z-index 30.
+
+There are two visual states for the card overlay: an intro animation in Section 1 (scroll progress approximately 0) and a scroll-linked state once the intro completes. While intro plays, render a non-interactive fixed full-viewport div at z-index 5. Inside it render slot indices 1 to 6 each as a motion.div positioned absolutely at top 0 left 0 with translateX -50% translateY -50% so x and y values describe the card center. Each of these cards animates from initial opacity 0 to opacity 1 with no movement on x, y, rotate, or scale (their target equals the Section 1 fan slot). The fan layout, all values relative to the viewport center on x and to a fixed HERO_ROW_Y of 522px on y, is:
+
+slot 0 x -480 y 18 rotate -18 scale 0.88 z 1, slot 1 x -310 y 6 rotate -10 scale 0.92 z 2, slot 2 x -155 y -2 rotate -4 scale 0.96 z 3, slot 3 x 0 y -8 rotate 0 scale 1 z 4, slot 4 x 160 y -2 rotate 5 scale 0.96 z 3, slot 5 x 320 y 6 rotate 12 scale 0.92 z 2, slot 6 x 480 y 18 rotate 20 scale 0.88 z 1.
+
+Card 1 is the lead card and gets a three-phase choreographed entrance:
+
+```ts
+const introDelay = 0.8;
+const introDuration = 0.72;       // rise from below center to viewport center
+const travelToRightDuration = 0.6; // fly to slot 6 (rightmost)
+const sweepLeftDuration = 1.6;     // sweep across to slot 0 (leftmost)
+const totalDuration = introDuration + travelToRightDuration + sweepLeftDuration;
+// motion.div animate keyframes:
+x: [vp.w/2, vp.w/2, vp.w/2 + slot6.x, vp.w/2 + slot0.x],
+y: [vp.h/2 + 180, HERO_ROW_Y, HERO_ROW_Y + slot6.y, HERO_ROW_Y + slot0.y],
+rotate: [0, 0, slot6.rotate, slot0.rotate],
+scale:  [0.3, 1, slot6.scale, slot0.scale],
+opacity:[0, 1, 1, 1],
+times:  [0, introDuration/totalDuration, (introDuration+travelToRightDuration)/totalDuration, 1],
+ease:   [smoothEase, smoothEase, smoothEase], // smoothEase = [0.22, 1, 0.36, 1]
+```
+
+While card 1 is sweeping left across slots 6 to 0, the remaining 6 cards reveal one by one exactly when card 1 visually passes them. The reveal time per slot is computed by inverting the smoothEase bezier curve: for each slot i in 1..6, progress = (slot[i].x - slot[6].x) / (slot[0].x - slot[6].x), revealTime = getTimeForProgress(progress, smoothEase), and revealDelay = sweepStart + revealTime * sweepLeftDuration where sweepStart = introDelay + introDuration + travelToRightDuration. Reveal duration is 0.06s for slots 1, 2, 3 and 0.18s for slots 4, 5, 6, ease easeOut. After a card finishes revealing, mark it as revealed so any later re-render uses a quick 0.25s hoverEase transition (hoverEase = [0.34, 1.56, 0.64, 1]) instead of replaying the long delay.
+
+When the lead card's onAnimationComplete fires, set introDone true and switch the overlay to scroll-linked mode. In scroll-linked mode the wrapper changes between two CSS positions but the seven inner card components stay continuously mounted with stable keys so React never remounts them (this prevents the visible reset when crossing into Section 2):
+
+```ts
+const isLocked = currentProgress >= lockProgress;
+const wrapperStyle = isLocked
+  ? { position: "absolute", top: lockProgress * scrollableHeight, left: 0, width: "100%", height: vp.h, zIndex: 5 }
+  : { position: "fixed", inset: 0, zIndex: 5 };
+```
+
+Each of the seven cards in scroll-linked mode is a ScrollLinkedCard whose x, y, rotate, and scale are useTransform values driven by a clamped scroll progress (clamped to lockProgress so values cannot keep changing past the lock). The keyframes are anchored at four scroll points 0, p1 = lp0.33, p2 = lp0.66, lp where lp = max(lockProgress, 0.05):
+
+```ts
+const s1Cx = vp.w/2 + slot.x;            // Section 1 fan center x
+const s1Cy = HERO_ROW_Y + slot.y;        // Section 1 fan center y
+const stackCx = vp.w/2;                  // mid-transition stack center x
+const stackCy = vp.h/2;                  // mid-transition stack center y
+const cascadeLeftRef = vp.w * 0.4;
+const s2Cx = cascadeLeftRef + cascade[i].left + 220/2; // Section 2 ladder center x
+const s2Cy = cascade[i].top  + 220/2;                  // Section 2 ladder center y
+
+x        = useTransform(clamped, [0, p1, p2, lp], [s1Cx, stackCx, stackCx, s2Cx]);
+y        = useTransform(clamped, [0, p1, p2, lp], [s1Cy, stackCy, s2Cy, s2Cy]);
+rotate   = useTransform(clamped, [0, p1, lp],     [slot.rotate, 0, cascade[i].rotate]);
+scaleX   = useTransform(clamped, [0, p1, lp],     [slot.scale, 1, 1]);
+scaleY   = useTransform(clamped, [0, p1, lp],     [slot.scale, 1, 1]);
+```
+
+This means the cards first collapse from the fan into a single centered stack (all seven occupy the exact same center between 0 and p1, scaling and unrotating to 1.0 at scale 1 and rotate 0, which produces the visible "gather into one" moment), then between p1 and p2 the stack slides downward to the Section 2 cascade y while the x stays centered, then between p2 and lp the stack fans out horizontally into the diagonal ladder. Because all seven cards share identical x, y, rotate, scale, and shadow during the stack moment, they perfectly overlap and read as one card with one shadow, no shadow stacking artifact. The cascade target layout for Section 2, rendered relative to the wrapper origin, is a 7-step ladder going from upper-left to lower-right: for i in 0..6, top = 300 + i70, left = 20 + i150, rotate = -3 + i*3, z = 7 - i. Each card is rendered absolutely at top 0 left 0 with translate -50% -50% so x and y are the card center.
+
+The card markup for both intro and scroll-linked modes:
+
+```tsx
+ setHovered(true)}
+  onMouseLeave={() => setHovered(false)}
+  whileHover={{ transition: { duration: 0.2, ease: [0.34, 1.56, 0.64, 1] } }}
+>
+
+```
+
+Section 1, the hero, is a section with min-height 100vh and overflow hidden. Inside, a centered main element with paddingTop 140px holds an h1 in font-heading, font-size 96px, weight 800, line-height 1.0, letter-spacing -3px, color #111111, max-width 1100px. The headline is two lines: line one "A place to display", line two "your masterpiece." Each word is wrapped in a motion.span with display inline-block, marginRight 0.25em, that animates from initial opacity 0 y 28 to opacity 1 y 0, duration 0.5s, ease easeOut, delay equal to globalWordIndex * 0.08s (so words appear in order across both lines). Below the headline there is a 260px tall, 100% wide spacer with marginTop 40px that holds the chat bubble overlay; this is where the Section 1 cards visually live in the overlay. Two chat bubbles sit absolutely above the cards layer at z-index 20:
+
+@coplin bubble at left calc(50% - 320px), top -12px, background #4D7EFF, padding 18px horizontal 8px vertical, border-radius 9999, font-heading 15px weight 600 color white. A small triangle tail under the bubble at bottom -8px left 16px built with borderLeft 8px solid transparent, borderRight 4px solid transparent, borderTop 10px solid #4D7EFF.
+
+@andrea bubble at right calc(50% - 420px), top -20px, background #3DBF7A, same padding, font, and border-radius. Tail at bottom -8px right 16px with borderLeft 4px solid transparent, borderRight 8px solid transparent, borderTop 10px solid #3DBF7A.
+
+Both bubbles do a jelly squash-and-stretch microanimation: opacity from 0 to 1 and scaleX keyframes [1, 1.25, 0.75, 1.15, 0.95, 1.05, 1] with simultaneous scaleY keyframes [1, 0.75, 1.25, 0.85, 1.05, 0.95, 1], duration 0.8s. Coplin starts at delay 3.05s, Andrea at 3.20s, so they pop in just after the cards finish their sweep.
+
+Beneath the bubble spacer, a paragraph in font-body, 16px, weight 400, color rgba(0,0,0,0.55), line-height 1.6, max-width 480px, marginTop 48px, with copy: "Artists can display their masterpieces, and buyers can discover and purchase works that resonate with them." It fades from opacity 0 y 20 to opacity 1 y 0 over 0.6s with delay 2.2s. Below it a flex row gap 16px with marginTop 28px and paddingBottom 80px, fading in with delay 2.4s, holds two buttons. Primary button: background #111111, color white, 15px weight 600, padding 14px 28px, border-radius 9999, no border, hover background #333333, label "Join for $9.99/m". Secondary button: transparent background, color #111111, 15px weight 500, padding 14px 20px, border-radius 9999, no border, hover background rgba(0,0,0,0.06), label "Read more".
+
+Section 2 has data-section="two", background #F2F2F0, min-height calc(100vh - 30px), padding 80px 64px 0, display flex, align-items flex-start, position relative, overflow hidden. It contains only a left text column 520px wide with paddingTop 32px, plus two floating tag bubbles. The right side is intentionally empty so the global cards overlay can drop the cards into the cascade ladder anchored on cascadeLeftRef = vp.w * 0.4. The card cascade visually occupies the right two-thirds of the section.
+
+Left column from top to bottom: an eyebrow div in font-heading, 11px, weight 500, letter-spacing 2.5px, color rgba(0,0,0,0.45), marginBottom 20px, text "E-COMMERCE", entering with initial opacity 0 filter blur 8px y 16 to opacity 1 filter blur 0 y 0, duration 0.6s easeOut, viewport once with margin -80px. Then an h2 in font-heading, 60px, weight 800, line-height 1.05, letter-spacing -1.5px, margin 0, made of three lines: "Showcase, Sell" in #111111, then "& acquire arts to" in the brand red #C0392B, then "our marketplace." in #111111. Every word in every line is a motion.span with display inline-block, marginRight 0.25em, animating from opacity 0 filter blur 10px y 20 to opacity 1 filter blur 0 y 0, duration 0.5s easeOut, with delay equal to globalWordIndex * 0.06s. Then a paragraph in font-body, marginTop 28px, 15px, weight 400, color rgba(0,0,0,0.55), line-height 1.65, max-width 340px, text "Dynamic community where artists and buyers seamlessly merge. ArtFusion brings together creators and enthusiasts to share creativity." Fades from blur 8px y 16 with delay 0.5s. Then a flex row marginTop 48px gap 12px holding the same primary "Join for $9.99/m" black pill button and secondary "Read more" outline pill button (this one with a 1.5px solid rgba(0,0,0,0.15) border, hover background rgba(0,0,0,0.05)), entering with delay 0.7s.
+
+Two floating tags overlay the cards in Section 2, animating in only when the section is at least 95 percent in view (useInView with amount 0.95), going from opacity 0 scale 0.6 to opacity 1 scale 1 over 0.5s easeOut.
+
+@howard tag at top 260px, left calc(40% + 340px), z-index 20, background brand red #C0392B, border-radius 9999, padding 9px 20px, label "@howard" in font-heading 15px weight 600 color white. Triangle tail centered under the bubble: bottom -9px, left 50% translateX -50%, borderLeft 8px solid transparent, borderRight 8px solid transparent, borderTop 10px solid #C0392B.
+
+@robin tag at top 430px, left calc(40% + 680px), z-index 20, background #111111, same padding and font, label "@robin" white. Tail at bottom -9px left 20px with borderLeft 8px solid transparent, borderRight 8px solid transparent, borderTop 10px solid #111111. Robin appears with delay 0.15s after Howard.
+
+While the user scrolls through Section 2 and into Section 3, once scroll progress crosses lockProgress the overlay's wrapper switches from fixed to absolute and is pinned to top = lockProgress * scrollableHeight. The seven cards remain mounted, useTransform is clamped, so their on-screen pose is frozen exactly as the final cascade. They cannot move further regardless of additional scrolling, and they scroll with the document like normal content. They never unmount or rebuild. The visible result is: cards gather into one centered overlapped stack, descend together, fan out into the diagonal ladder, then lock in place anchored to Section 2's top.
+
+Section 3 has data-section="three", background #F2F2F0, min-height 100vh, padding 80px 64px 80px, position relative, overflow hidden. At the top, a text block max-width 520px marginBottom 40px, position relative z-index 10. Eyebrow in font-heading 11px weight 500, letter-spacing 2.5px, color rgba(0,0,0,0.45), marginBottom 20px, text "CLASS BY REATHA C. PHELAN", entering from blur 8px y 12 opacity 0 to blur 0 y 0 opacity 1, 0.55s easeOut, viewport once. Then an h2 in font-heading, 80px, weight 800, line-height 1.0, letter-spacing -2.5px, color #111111, margin 0, with words "Gateway", "to", "artist", "people." Each word is a motion.span display inline-block marginRight 0.2em, animating from opacity 0 filter blur 10px y 20 to opacity 1 filter blur 0 y 0, duration 0.5s easeOut, delay i * 0.07s, viewport once.
+
+A floating @reatha tag sits absolutely at top 120px, right 180px, z-index 10. Background #111111, border-radius 9999, padding 10px 22px, label "@reatha" in font-heading 16px weight 600 color white. Triangle tail at bottom -9px right 24px with borderLeft 8px solid transparent, borderRight 4px solid transparent, borderTop 10px solid #111111. It animates in with the same jelly squash and stretch as the hero bubbles: opacity 0 to 1 and scaleX [1, 1.25, 0.75, 1.15, 0.95, 1.05, 1] with scaleY [1, 0.75, 1.25, 0.85, 1.05, 0.95, 1], duration 0.8s, delay 0.65s, viewport once.
+
+Below the text block is the autoplay banner. It is a motion.div with width 100%, border-radius 24, overflow hidden, height 600px, background #111111, entering from opacity 0 y 40 filter blur 12px to opacity 1 y 0 filter blur 0, duration 0.8s easeOut, delay 0.4s, viewport once with margin -60px. Inside it three slides /banner-1.png, /banner-2.png, /banner-3.png (sourced from qclay.design/lovable/pallet/banner-1.png through banner-3.png) are stacked as absolutely positioned img tags filling inset 0 with object-fit cover and object-position center top. Each slide animates opacity to 1 if its index equals activeSlide otherwise 0, and scale 1 if active otherwise 1.04, transition duration 0.5s easeInOut. The component holds activeSlide in useState starting at 0 and runs a setInterval every 3000ms that advances activeSlide to (activeSlide + 1) mod 3, with cleanup on unmount and on activeSlide change.
+
+Inside the banner at top 24px right 24px z-index 10 sits a row of 3 dot buttons gap 5px. Each dot has height 6px, the active one is 18px wide and rgba(255,255,255,0.95), inactive ones are 6px wide and rgba(255,255,255,0.45), border-radius 9999, no border, no padding, transition all 0.3s ease, cursor pointer; clicking a dot sets activeSlide to that index.
+
+At bottom 28px left 28px sits the Watch CTA. It is a relative inline-block container with two pulsing ring spans behind it, both pointer-events none, both border-radius 9999 with no fill: ring one inset -8px, border 2px solid rgba(255,255,255,0.40), animating scale [1, 1.5] and opacity [0.8, 0], duration 2s, repeat Infinity, easeOut; ring two inset -4px, border 2px solid rgba(255,255,255,0.25), same animation but delay 0.5s. In front of the rings sits a motion.button at z-index 2, background white, color #111111, font-heading 15px weight 600, padding 12px 28px, border-radius 9999, no border, flex align-items center gap 8, label "Watch", whileHover scale 1.05 over 0.2s.
+
+At bottom 28px right 28px sits a row gap 10px of two 44x44 circular motion.buttons, background rgba(255,255,255,0.90), border-radius 50%, box-shadow 0 4px 16px rgba(0,0,0,0.15), no border, flex centered, cursor pointer, whileHover scale 1.08 with background #FFFFFF over 0.2s. They render lucide ChevronLeft and ChevronRight icons at size 20, color #111111, with aria-labels "Previous slide" and "Next slide". Prev sets activeSlide to (activeSlide - 1 + 3) mod 3, Next sets activeSlide to (activeSlide + 1) mod 3.
+
+Asset list: place card-1.png through card-7.png and banner-1.png through banner-3.png in the public folder, downloaded from https://qclay.design/lovable/pallet/.
+
+Color tokens used directly: page background #F2F2F0, primary text #111111, brand red #C0392B (Section 2 highlight + @howard), brand teal #4ECDC4 (logo + Create strategy dot), brand blue #4D7EFF (@coplin), brand green #3DBF7A (@andrea), white #FFFFFF, plus translucent blacks rgba(0,0,0,0.45) for eyebrow text, rgba(0,0,0,0.55) for body copy, rgba(0,0,0,0.15) for button outlines, rgba(0,0,0,0.05) and rgba(0,0,0,0.06) for hover backgrounds. Easing tokens used throughout: smoothEase [0.22, 1, 0.36, 1] for hero choreography and scroll cascade, hoverEase [0.34, 1.56, 0.64, 1] for snappy hover and re-reveal, easeOut for text reveals, easeInOut for slide cross-fades.

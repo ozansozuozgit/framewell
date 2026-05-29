@@ -1,0 +1,39 @@
+PUBLIC SEED PROMPT (from X)
+"Build an interactive landing page for a 3D animation studio called 'Render & Co.' Dark background, neon accent colours. Floating 3D geometric shapes in the hero. Three service tiles that animate on hover. Ready to publish."
+
+EXPANDED LAFYS-STYLE PROMPT
+
+Build a single-page interactive landing page for a fictional 3D animation studio called Render & Co. The page should feel like a high-end motion studio reel: dark, cinematic, glossy, and energetic without becoming gamer-chaotic.
+
+TECH STACK
+Use React, Vite, TypeScript, Tailwind CSS, Framer Motion, and three.js via @react-three/fiber. If 3D dependencies are unavailable, create the same spatial feeling with CSS perspective, gradients, and animated SVG geometry.
+
+VISUAL DIRECTION
+Background: near-black #05050A with subtle radial glows in electric cyan #00E5FF, ultraviolet #8B5CF6, and hot magenta #FF4FD8. Typography should be sharp and modern: large condensed display headings, compact uppercase labels, and clean body copy. Avoid generic purple-gradient SaaS styling; make it feel like a boutique CGI studio.
+
+HERO
+Full viewport height. Add a fixed transparent navbar with left wordmark "Render & Co.", centered links Work / Services / Studio / Contact, and a small pill CTA "Start a Reel". The hero layout is asymmetric: oversized headline on the left, floating 3D geometric scene on the right. Headline: "Motion systems for impossible products." Use two-line composition with tight tracking and one outlined/stroked word. Add a small eyebrow: "3D animation studio · realtime product films".
+
+3D HERO OBJECTS
+Render a cluster of floating geometric primitives: torus, rounded cube, faceted sphere, and thin wireframe plane. They should drift at different speeds, rotate slowly, and respond subtly to cursor movement. Materials: dark glass, chrome edges, neon rim lights. Add soft bloom-like CSS glows behind them.
+
+SERVICE TILES
+Below the hero, create three large service tiles in a 3-column desktop grid and single column on mobile:
+1. Product films — cinematic launch videos and UI fly-throughs.
+2. Interactive 3D — web-native objects, configurators, scroll scenes.
+3. Motion systems — brand motion language, loops, icon animations.
+Each card should tilt on hover, reveal a neon border sweep, and animate a small 3D/symbolic glyph. Use Framer Motion for hover scale, y-offset, and spring transitions.
+
+SCROLL SECTION
+Add a dark editorial case-study strip with horizontal cards. Cards should have fake project names, tiny metadata labels, and parallax image placeholders made from gradients/noise. On scroll, cards fade/slide upward with staggered delays.
+
+FINAL CTA
+End with a full-width black-to-violet gradient block. Heading: "Have a product that needs to move?" CTA: "Book a 20 minute concept call". Add a secondary text link "View reel".
+
+QUALITY BAR
+Make all animations respect prefers-reduced-motion. Keep contrast high. Use CSS variables for colors, shadows, and easing. The result should look ready to publish, not like a template.
+
+---
+Source: public X post seed — https://x.com/i/status/2040140251952189807
+Note: expanded locally into a detailed Lafys-style prompt; not a verbatim full thread unless marked as seed.
+Curated locally for Lafys-copy.

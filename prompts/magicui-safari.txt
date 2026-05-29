@@ -1,0 +1,34 @@
+Build a polished, production-ready web UI inspired by the public/open source pattern: Browser mockup hero.
+
+Source reference: Magic UI components
+Source URL: https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/safari.mdx
+License/provenance note: MIT; local prompt expansion, not copied source code
+
+Goal:
+Create a high-end interface that uses the same broad interaction pattern, not a clone of the source implementation. Make it suitable for v0, Lovable, Cursor, Bolt, or Claude Code to generate as a modern React/Next.js component or page.
+
+Design direction:
+- Calm, scannable, simple, and beautiful.
+- Avoid generic AI gradients, default card spam, and loud neon effects.
+- Use one restrained accent color, warm neutral surfaces, clear spacing, and strong typographic hierarchy.
+- If motion is involved, keep it useful: reveal state, focus attention, or explain relationship.
+
+Build requirements:
+- React + TypeScript + Tailwind-compatible structure.
+- Responsive layout with mobile-first collapse.
+- Accessible labels, keyboard states, reduced-motion fallback, and semantic markup.
+- Include realistic content, not lorem ipsum.
+- Include loading, empty, and active states when the component implies data or interaction.
+- Use CSS transitions or Motion/Framer Motion only where it materially improves comprehension.
+
+Specific pattern to create:
+Design a Mockup called “Browser mockup hero”. It should feel like a carefully curated product/design reference card. Include details for: Magic UI, animation, mockup, open source.
+
+Interaction notes:
+- Add tactile hover/active states.
+- Use staggered reveals for lists or grids.
+- Use transform and opacity for animations; avoid animating layout properties.
+- Keep performance safe for long pages and large collections.
+
+Deliverable:
+Return the complete component/page code and a short note explaining how to adapt the visual language for another brand.

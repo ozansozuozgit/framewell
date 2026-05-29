@@ -1,0 +1,6 @@
+Source: MotionSites.ai free prompt
+Source URL: https://motionsites.ai/
+Source prompt id: luminex-hero
+License: not specified by live site; prompt was available through the public Copy prompt flow.
+
+Create a modern React landing page with a full-screen HLS video background, glassmorphic navigation header, and hero content positioned in the bottom-left corner.

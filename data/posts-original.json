@@ -1,0 +1,1774 @@
+{
+  "docs": [
+    {
+      "createdAt": "2026-05-03T14:07:19.831Z",
+      "updatedAt": "2026-05-13T11:47:18.165Z",
+      "title": "AI Agents Landing Page",
+      "sectionType": "9 Sections",
+      "preview": {
+        "createdAt": "2026-05-03T14:06:32.608Z",
+        "updatedAt": "2026-05-09T12:57:49.513Z",
+        "url": "/api/media/file/reticla.mp4",
+        "filename": "reticla.mp4",
+        "mimeType": "video/mp4",
+        "filesize": 66244844,
+        "sizes": {
+          "webp": {
+            "url": null
+          }
+        },
+        "alt": "",
+        "thumbnail": {
+          "url": "/media/reticla_thumbnail.jpg",
+          "name": "reticla_thumbnail.jpg"
+        },
+        "thumbnailURL": null,
+        "duration": 36.766667,
+        "height": 1080,
+        "width": 1422,
+        "id": "69f756681dd95881f9237506"
+      },
+      "priority": 1,
+      "generateSlug": false,
+      "slug": "ai-agents-landing-page",
+      "category": {
+        "createdAt": "2026-04-24T19:13:53.531Z",
+        "updatedAt": "2026-04-24T19:13:53.531Z",
+        "name": "Motion Design",
+        "_status": "published",
+        "id": "69ebc0f17a8e372f56724585"
+      },
+      "plan": "premium",
+      "aiTool": [
+        {
+          "createdAt": "2026-04-24T18:48:06.455Z",
+          "updatedAt": "2026-04-24T18:48:06.455Z",
+          "name": "Lovable",
+          "_status": "published",
+          "id": "69ebbae67a8e372f5672437e"
+        }
+      ],
+      "_status": "published",
+      "tagsList": [
+        {
+          "createdAt": "2026-05-04T11:24:48.769Z",
+          "updatedAt": "2026-05-13T11:47:18.196Z",
+          "value": "ai product",
+          "_status": "published",
+          "count": 12,
+          "id": "69f882009a800b6bef221afd"
+        },
+        {
+          "createdAt": "2026-05-04T11:24:55.364Z",
+          "updatedAt": "2026-05-13T11:47:18.204Z",
+          "value": "liquid glass",
+          "_status": "published",
+          "count": 5,
+          "id": "69f882079a800b6bef221b1d"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:00.441Z",
+          "updatedAt": "2026-05-13T11:50:00.219Z",
+          "value": "glass effect",
+          "_status": "published",
+          "count": 8,
+          "id": "69f8820c9a800b6bef221b39"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:05.818Z",
+          "updatedAt": "2026-05-13T11:47:18.218Z",
+          "value": "scroll animation",
+          "_status": "published",
+          "count": 8,
+          "id": "69f882119a800b6bef221b56"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:11.714Z",
+          "updatedAt": "2026-05-13T11:51:25.560Z",
+          "value": "landing page",
+          "_status": "published",
+          "count": 17,
+          "id": "69f882179a800b6bef221b72"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:17.922Z",
+          "updatedAt": "2026-05-13T11:51:25.575Z",
+          "value": "lovable",
+          "_status": "published",
+          "count": 26,
+          "id": "69f8821d9a800b6bef221b92"
+        }
+      ],
+      "createdBy": {
+        "name": "Bogdan Falin",
+        "email": "bogdan@qclay.design",
+        "avatar": {
+          "createdAt": "2026-05-08T21:47:28.390Z",
+          "updatedAt": "2026-05-08T21:47:28.390Z",
+          "url": "/api/media/file/IMG_0914.JPG",
+          "filename": "IMG_0914.JPG",
+          "mimeType": "image/jpeg",
+          "filesize": 17250,
+          "width": 400,
+          "height": 400,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "webp": {
+              "url": "/api/media/file/IMG_0914-400x400.webp",
+              "width": 400,
+              "height": 400,
+              "mimeType": "image/webp",
+              "filesize": 4650,
+              "filename": "IMG_0914-400x400.webp"
+            }
+          },
+          "id": "69fe59f087894d71d3255238",
+          "thumbnail": {},
+          "thumbnailURL": null
+        },
+        "id": "69f979f239b3f18ee10de4f3",
+        "collection": "users"
+      },
+      "file": {
+        "createdAt": "2026-05-11T13:14:09.516Z",
+        "updatedAt": "2026-05-11T13:14:09.516Z",
+        "thumbnail": {},
+        "url": "/api/media/file/Reticla%20AI.zip",
+        "filename": "Reticla AI.zip",
+        "mimeType": "application/zip",
+        "filesize": 257043,
+        "sizes": {
+          "webp": {
+            "url": null
+          }
+        },
+        "id": "6a01d621bb5c6e68d41a64fc",
+        "thumbnailURL": null
+      },
+      "id": "69f756971dd95881f9237535"
+    },
+    {
+      "createdAt": "2026-04-28T15:40:17.728Z",
+      "updatedAt": "2026-05-13T11:44:06.878Z",
+      "title": "Synex",
+      "sectionType": "Growing Grass Effect",
+      "preview": {
+        "createdAt": "2026-04-28T15:40:15.372Z",
+        "updatedAt": "2026-05-09T13:00:00.362Z",
+        "url": "/api/media/file/synex_KxIcsq3R.mp4",
+        "filename": "synex_KxIcsq3R.mp4",
+        "mimeType": "video/mp4",
+        "filesize": 1352510,
+        "sizes": {
+          "webp": {
+            "url": null
+          }
+        },
+        "alt": "",
+        "thumbnail": {
+          "url": "/media/synex_KxIcsq3R_thumbnail.jpg",
+          "name": "synex_KxIcsq3R_thumbnail.jpg"
+        },
+        "thumbnailURL": null,
+        "duration": 12.017,
+        "height": 1080,
+        "width": 1592,
+        "id": "69f0d4df43687485f0b01aee"
+      },
+      "generateSlug": false,
+      "slug": "synex",
+      "category": {
+        "createdAt": "2026-04-24T19:13:53.531Z",
+        "updatedAt": "2026-04-24T19:13:53.531Z",
+        "name": "Motion Design",
+        "_status": "published",
+        "id": "69ebc0f17a8e372f56724585"
+      },
+      "plan": "free",
+      "aiTool": [
+        {
+          "createdAt": "2026-04-24T18:48:06.455Z",
+          "updatedAt": "2026-04-24T18:48:06.455Z",
+          "name": "Lovable",
+          "_status": "published",
+          "id": "69ebbae67a8e372f5672437e"
+        }
+      ],
+      "_status": "published",
+      "priority": 0,
+      "tagsList": [
+        {
+          "createdAt": "2026-05-04T11:32:32.206Z",
+          "updatedAt": "2026-05-13T11:51:18.869Z",
+          "value": "hover",
+          "_status": "published",
+          "count": 2,
+          "id": "69f883d09a800b6bef2225cb"
+        },
+        {
+          "createdAt": "2026-05-04T11:35:33.165Z",
+          "updatedAt": "2026-05-13T11:44:06.913Z",
+          "value": "3D",
+          "_status": "published",
+          "count": 1,
+          "id": "69f884859a800b6bef22295f"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:49.964Z",
+          "updatedAt": "2026-05-13T11:51:21.679Z",
+          "value": "hero section",
+          "_status": "published",
+          "count": 16,
+          "id": "69f8823d9a800b6bef221c53"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:17.922Z",
+          "updatedAt": "2026-05-13T11:51:25.575Z",
+          "value": "lovable",
+          "_status": "published",
+          "count": 26,
+          "id": "69f8821d9a800b6bef221b92"
+        }
+      ],
+      "createdBy": {
+        "name": "Bogdan Falin",
+        "email": "bogdan@qclay.design",
+        "avatar": {
+          "createdAt": "2026-05-08T21:47:28.390Z",
+          "updatedAt": "2026-05-08T21:47:28.390Z",
+          "url": "/api/media/file/IMG_0914.JPG",
+          "filename": "IMG_0914.JPG",
+          "mimeType": "image/jpeg",
+          "filesize": 17250,
+          "width": 400,
+          "height": 400,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "webp": {
+              "url": "/api/media/file/IMG_0914-400x400.webp",
+              "width": 400,
+              "height": 400,
+              "mimeType": "image/webp",
+              "filesize": 4650,
+              "filename": "IMG_0914-400x400.webp"
+            }
+          },
+          "id": "69fe59f087894d71d3255238",
+          "thumbnail": {},
+          "thumbnailURL": null
+        },
+        "id": "69f979f239b3f18ee10de4f3",
+        "collection": "users"
+      },
+      "id": "69f0d4e143687485f0b01afe"
+    },
+    {
+      "createdAt": "2026-04-28T16:17:37.010Z",
+      "updatedAt": "2026-05-13T11:50:00.188Z",
+      "title": "Synergeus",
+      "sectionType": "3 Sections",
+      "preview": {
+        "createdAt": "2026-04-28T16:16:20.220Z",
+        "updatedAt": "2026-05-09T13:00:04.548Z",
+        "url": "/api/media/file/synergeus_JaaqgDoA.mp4",
+        "filename": "synergeus_JaaqgDoA.mp4",
+        "mimeType": "video/mp4",
+        "filesize": 4388857,
+        "sizes": {
+          "webp": {
+            "url": null
+          }
+        },
+        "alt": "",
+        "thumbnail": {
+          "url": "/media/synergeus_JaaqgDoA_thumbnail.jpg",
+          "name": "synergeus_JaaqgDoA_thumbnail.jpg"
+        },
+        "thumbnailURL": null,
+        "duration": 20.55,
+        "height": 1080,
+        "width": 1598,
+        "id": "69f0dd5443687485f0b01baa"
+      },
+      "generateSlug": false,
+      "slug": "synergeus",
+      "category": {
+        "createdAt": "2026-04-24T19:13:53.531Z",
+        "updatedAt": "2026-04-24T19:13:53.531Z",
+        "name": "Motion Design",
+        "_status": "published",
+        "id": "69ebc0f17a8e372f56724585"
+      },
+      "plan": "free",
+      "aiTool": [
+        {
+          "createdAt": "2026-04-24T18:48:06.455Z",
+          "updatedAt": "2026-04-24T18:48:06.455Z",
+          "name": "Lovable",
+          "_status": "published",
+          "id": "69ebbae67a8e372f5672437e"
+        }
+      ],
+      "_status": "published",
+      "priority": 0,
+      "tagsList": [
+        {
+          "createdAt": "2026-05-04T11:25:49.964Z",
+          "updatedAt": "2026-05-13T11:51:21.679Z",
+          "value": "hero section",
+          "_status": "published",
+          "count": 16,
+          "id": "69f8823d9a800b6bef221c53"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:17.922Z",
+          "updatedAt": "2026-05-13T11:51:25.575Z",
+          "value": "lovable",
+          "_status": "published",
+          "count": 26,
+          "id": "69f8821d9a800b6bef221b92"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:11.714Z",
+          "updatedAt": "2026-05-13T11:51:25.560Z",
+          "value": "landing page",
+          "_status": "published",
+          "count": 17,
+          "id": "69f882179a800b6bef221b72"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:00.441Z",
+          "updatedAt": "2026-05-13T11:50:00.219Z",
+          "value": "glass effect",
+          "_status": "published",
+          "count": 8,
+          "id": "69f8820c9a800b6bef221b39"
+        }
+      ],
+      "createdBy": {
+        "name": "Bogdan Falin",
+        "email": "bogdan@qclay.design",
+        "avatar": {
+          "createdAt": "2026-05-08T21:47:28.390Z",
+          "updatedAt": "2026-05-08T21:47:28.390Z",
+          "url": "/api/media/file/IMG_0914.JPG",
+          "filename": "IMG_0914.JPG",
+          "mimeType": "image/jpeg",
+          "filesize": 17250,
+          "width": 400,
+          "height": 400,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "webp": {
+              "url": "/api/media/file/IMG_0914-400x400.webp",
+              "width": 400,
+              "height": 400,
+              "mimeType": "image/webp",
+              "filesize": 4650,
+              "filename": "IMG_0914-400x400.webp"
+            }
+          },
+          "id": "69fe59f087894d71d3255238",
+          "thumbnail": {},
+          "thumbnailURL": null
+        },
+        "id": "69f979f239b3f18ee10de4f3",
+        "collection": "users"
+      },
+      "id": "69f0dda143687485f0b01bdd"
+    },
+    {
+      "createdAt": "2026-04-28T16:34:18.262Z",
+      "updatedAt": "2026-05-13T11:49:48.434Z",
+      "title": "Interactive Loader",
+      "sectionType": "Loader made by AI",
+      "preview": {
+        "createdAt": "2026-04-28T16:34:08.875Z",
+        "updatedAt": "2026-05-09T12:59:13.344Z",
+        "url": "/api/media/file/moneta_ypediHfa.mp4",
+        "filename": "moneta_ypediHfa.mp4",
+        "mimeType": "video/mp4",
+        "filesize": 480090,
+        "sizes": {
+          "webp": {
+            "url": null
+          }
+        },
+        "alt": "",
+        "thumbnail": {
+          "url": "/media/moneta_ypediHfa_thumbnail.jpg",
+          "name": "moneta_ypediHfa_thumbnail.jpg"
+        },
+        "thumbnailURL": null,
+        "duration": 12.067,
+        "height": 1080,
+        "width": 1608,
+        "id": "69f0e18043687485f0b01cc6"
+      },
+      "generateSlug": false,
+      "slug": "interactive-loader",
+      "category": {
+        "createdAt": "2026-04-24T19:13:53.531Z",
+        "updatedAt": "2026-04-24T19:13:53.531Z",
+        "name": "Motion Design",
+        "_status": "published",
+        "id": "69ebc0f17a8e372f56724585"
+      },
+      "plan": "free",
+      "aiTool": [
+        {
+          "createdAt": "2026-04-24T18:48:06.455Z",
+          "updatedAt": "2026-04-24T18:48:06.455Z",
+          "name": "Lovable",
+          "_status": "published",
+          "id": "69ebbae67a8e372f5672437e"
+        }
+      ],
+      "_status": "published",
+      "priority": 0,
+      "tagsList": [
+        {
+          "createdAt": "2026-05-04T11:29:34.537Z",
+          "updatedAt": "2026-05-13T11:51:25.555Z",
+          "value": "loader",
+          "_status": "published",
+          "count": 2,
+          "id": "69f8831e9a800b6bef2221d2"
+        },
+        {
+          "createdAt": "2026-05-04T11:34:28.633Z",
+          "updatedAt": "2026-05-13T11:49:48.461Z",
+          "value": "logo animation",
+          "_status": "published",
+          "count": 1,
+          "id": "69f884449a800b6bef22286c"
+        },
+        {
+          "createdAt": "2026-05-04T11:34:34.761Z",
+          "updatedAt": "2026-05-13T11:49:48.466Z",
+          "value": "path animation",
+          "_status": "published",
+          "count": 1,
+          "id": "69f8844a9a800b6bef222891"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:17.922Z",
+          "updatedAt": "2026-05-13T11:51:25.575Z",
+          "value": "lovable",
+          "_status": "published",
+          "count": 26,
+          "id": "69f8821d9a800b6bef221b92"
+        }
+      ],
+      "createdBy": {
+        "name": "Bogdan Falin",
+        "email": "bogdan@qclay.design",
+        "avatar": {
+          "createdAt": "2026-05-08T21:47:28.390Z",
+          "updatedAt": "2026-05-08T21:47:28.390Z",
+          "url": "/api/media/file/IMG_0914.JPG",
+          "filename": "IMG_0914.JPG",
+          "mimeType": "image/jpeg",
+          "filesize": 17250,
+          "width": 400,
+          "height": 400,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "webp": {
+              "url": "/api/media/file/IMG_0914-400x400.webp",
+              "width": 400,
+              "height": 400,
+              "mimeType": "image/webp",
+              "filesize": 4650,
+              "filename": "IMG_0914-400x400.webp"
+            }
+          },
+          "id": "69fe59f087894d71d3255238",
+          "thumbnail": {},
+          "thumbnailURL": null
+        },
+        "id": "69f979f239b3f18ee10de4f3",
+        "collection": "users"
+      },
+      "id": "69f0e18a43687485f0b01cde"
+    },
+    {
+      "createdAt": "2026-04-28T17:07:16.033Z",
+      "updatedAt": "2026-05-13T11:50:16.770Z",
+      "title": "Fashion Website",
+      "sectionType": "Creative transition between the 2nd section",
+      "preview": {
+        "createdAt": "2026-04-28T17:05:42.453Z",
+        "updatedAt": "2026-05-09T12:59:16.861Z",
+        "url": "/api/media/file/bags_EV1r0FBY.mp4",
+        "filename": "bags_EV1r0FBY.mp4",
+        "mimeType": "video/mp4",
+        "filesize": 2411359,
+        "sizes": {
+          "webp": {
+            "url": null
+          }
+        },
+        "alt": "",
+        "thumbnail": {
+          "url": "/media/bags_EV1r0FBY_thumbnail.jpg",
+          "name": "bags_EV1r0FBY_thumbnail.jpg"
+        },
+        "thumbnailURL": null,
+        "duration": 24.317,
+        "height": 1080,
+        "width": 1714,
+        "id": "69f0e8e643687485f0b01d36"
+      },
+      "generateSlug": false,
+      "slug": "fashion-website",
+      "category": {
+        "createdAt": "2026-04-24T19:13:53.531Z",
+        "updatedAt": "2026-04-24T19:13:53.531Z",
+        "name": "Motion Design",
+        "_status": "published",
+        "id": "69ebc0f17a8e372f56724585"
+      },
+      "plan": "free",
+      "aiTool": [
+        {
+          "createdAt": "2026-04-24T18:48:06.455Z",
+          "updatedAt": "2026-04-24T18:48:06.455Z",
+          "name": "Lovable",
+          "_status": "published",
+          "id": "69ebbae67a8e372f5672437e"
+        }
+      ],
+      "_status": "published",
+      "priority": 0,
+      "tagsList": [
+        {
+          "createdAt": "2026-05-04T11:31:23.603Z",
+          "updatedAt": "2026-05-13T11:50:16.777Z",
+          "value": "fashion",
+          "_status": "published",
+          "count": 2,
+          "id": "69f8838b9a800b6bef222451"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:11.714Z",
+          "updatedAt": "2026-05-13T11:51:25.560Z",
+          "value": "landing page",
+          "_status": "published",
+          "count": 17,
+          "id": "69f882179a800b6bef221b72"
+        },
+        {
+          "createdAt": "2026-05-04T11:26:06.402Z",
+          "updatedAt": "2026-05-13T11:51:22.746Z",
+          "value": "website",
+          "_status": "published",
+          "count": 18,
+          "id": "69f8824e9a800b6bef221cc7"
+        },
+        {
+          "createdAt": "2026-05-04T11:34:16.550Z",
+          "updatedAt": "2026-05-13T11:50:16.794Z",
+          "value": "section transition",
+          "_status": "published",
+          "count": 1,
+          "id": "69f884389a800b6bef22280d"
+        }
+      ],
+      "createdBy": {
+        "name": "Bogdan Falin",
+        "email": "bogdan@qclay.design",
+        "avatar": {
+          "createdAt": "2026-05-08T21:47:28.390Z",
+          "updatedAt": "2026-05-08T21:47:28.390Z",
+          "url": "/api/media/file/IMG_0914.JPG",
+          "filename": "IMG_0914.JPG",
+          "mimeType": "image/jpeg",
+          "filesize": 17250,
+          "width": 400,
+          "height": 400,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "webp": {
+              "url": "/api/media/file/IMG_0914-400x400.webp",
+              "width": 400,
+              "height": 400,
+              "mimeType": "image/webp",
+              "filesize": 4650,
+              "filename": "IMG_0914-400x400.webp"
+            }
+          },
+          "id": "69fe59f087894d71d3255238",
+          "thumbnail": {},
+          "thumbnailURL": null
+        },
+        "id": "69f979f239b3f18ee10de4f3",
+        "collection": "users"
+      },
+      "id": "69f0e94443687485f0b01d74"
+    },
+    {
+      "createdAt": "2026-04-28T17:14:44.240Z",
+      "updatedAt": "2026-05-13T11:50:38.780Z",
+      "title": "Website cards animation",
+      "sectionType": "Popular website, you've certainly seen on Pinterest",
+      "preview": {
+        "createdAt": "2026-04-28T17:14:06.812Z",
+        "updatedAt": "2026-05-09T12:59:19.829Z",
+        "url": "/api/media/file/4d32e42469657663b66a3c08aeccd70e_1DkflpwZ.mp4",
+        "filename": "4d32e42469657663b66a3c08aeccd70e_1DkflpwZ.mp4",
+        "mimeType": "video/mp4",
+        "filesize": 2158346,
+        "sizes": {
+          "webp": {
+            "url": null
+          }
+        },
+        "alt": "",
+        "thumbnail": {
+          "url": "/media/4d32e42469657663b66a3c08aeccd70e_1DkflpwZ_thumbnail.jpg",
+          "name": "4d32e42469657663b66a3c08aeccd70e_1DkflpwZ_thumbnail.jpg"
+        },
+        "thumbnailURL": null,
+        "duration": 9.942,
+        "height": 1200,
+        "width": 1600,
+        "id": "69f0eade43687485f0b01dea"
+      },
+      "generateSlug": false,
+      "slug": "website-cards-animation",
+      "category": {
+        "createdAt": "2026-04-24T19:13:53.531Z",
+        "updatedAt": "2026-04-24T19:13:53.531Z",
+        "name": "Motion Design",
+        "_status": "published",
+        "id": "69ebc0f17a8e372f56724585"
+      },
+      "plan": "free",
+      "aiTool": [
+        {
+          "createdAt": "2026-04-24T18:48:06.455Z",
+          "updatedAt": "2026-04-24T18:48:06.455Z",
+          "name": "Lovable",
+          "_status": "published",
+          "id": "69ebbae67a8e372f5672437e"
+        }
+      ],
+      "_status": "published",
+      "priority": 0,
+      "tagsList": [
+        {
+          "createdAt": "2026-05-04T11:26:15.879Z",
+          "updatedAt": "2026-05-13T11:51:22.758Z",
+          "value": "animation",
+          "_status": "published",
+          "count": 8,
+          "id": "69f882579a800b6bef221cff"
+        },
+        {
+          "createdAt": "2026-05-04T11:26:06.402Z",
+          "updatedAt": "2026-05-13T11:51:22.746Z",
+          "value": "website",
+          "_status": "published",
+          "count": 18,
+          "id": "69f8824e9a800b6bef221cc7"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:49.964Z",
+          "updatedAt": "2026-05-13T11:51:21.679Z",
+          "value": "hero section",
+          "_status": "published",
+          "count": 16,
+          "id": "69f8823d9a800b6bef221c53"
+        },
+        {
+          "createdAt": "2026-05-04T11:33:52.226Z",
+          "updatedAt": "2026-05-13T11:50:38.808Z",
+          "value": "popular",
+          "_status": "published",
+          "count": 1,
+          "id": "69f884209a800b6bef22278b"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:17.922Z",
+          "updatedAt": "2026-05-13T11:51:25.575Z",
+          "value": "lovable",
+          "_status": "published",
+          "count": 26,
+          "id": "69f8821d9a800b6bef221b92"
+        }
+      ],
+      "createdBy": {
+        "name": "Bogdan Falin",
+        "email": "bogdan@qclay.design",
+        "avatar": {
+          "createdAt": "2026-05-08T21:47:28.390Z",
+          "updatedAt": "2026-05-08T21:47:28.390Z",
+          "url": "/api/media/file/IMG_0914.JPG",
+          "filename": "IMG_0914.JPG",
+          "mimeType": "image/jpeg",
+          "filesize": 17250,
+          "width": 400,
+          "height": 400,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "webp": {
+              "url": "/api/media/file/IMG_0914-400x400.webp",
+              "width": 400,
+              "height": 400,
+              "mimeType": "image/webp",
+              "filesize": 4650,
+              "filename": "IMG_0914-400x400.webp"
+            }
+          },
+          "id": "69fe59f087894d71d3255238",
+          "thumbnail": {},
+          "thumbnailURL": null
+        },
+        "id": "69f979f239b3f18ee10de4f3",
+        "collection": "users"
+      },
+      "id": "69f0eb0443687485f0b01e10"
+    },
+    {
+      "createdAt": "2026-05-03T10:32:59.998Z",
+      "updatedAt": "2026-05-13T11:50:40.055Z",
+      "title": "Bancuip - Adaptive landing page",
+      "sectionType": "5 Sections",
+      "preview": {
+        "createdAt": "2026-05-03T10:32:56.631Z",
+        "updatedAt": "2026-05-09T12:59:22.631Z",
+        "url": "/api/media/file/bancuip_oXEYIxm8.mp4",
+        "filename": "bancuip_oXEYIxm8.mp4",
+        "mimeType": "video/mp4",
+        "filesize": 5038447,
+        "sizes": {
+          "webp": {
+            "url": null
+          }
+        },
+        "alt": "",
+        "thumbnail": {
+          "url": "/media/bancuip_oXEYIxm8_thumbnail.jpg",
+          "name": "bancuip_oXEYIxm8_thumbnail.jpg"
+        },
+        "thumbnailURL": null,
+        "duration": 30.45,
+        "height": 1080,
+        "width": 1666,
+        "id": "69f724581dd95881f92369bf"
+      },
+      "priority": 0,
+      "generateSlug": false,
+      "slug": "bancuip---adaptive-landing-page",
+      "category": {
+        "createdAt": "2026-04-24T19:13:53.531Z",
+        "updatedAt": "2026-04-24T19:13:53.531Z",
+        "name": "Motion Design",
+        "_status": "published",
+        "id": "69ebc0f17a8e372f56724585"
+      },
+      "plan": "premium",
+      "aiTool": [
+        {
+          "createdAt": "2026-04-24T18:48:06.455Z",
+          "updatedAt": "2026-04-24T18:48:06.455Z",
+          "name": "Lovable",
+          "_status": "published",
+          "id": "69ebbae67a8e372f5672437e"
+        }
+      ],
+      "_status": "published",
+      "tagsList": [
+        {
+          "createdAt": "2026-05-04T11:25:11.714Z",
+          "updatedAt": "2026-05-13T11:51:25.560Z",
+          "value": "landing page",
+          "_status": "published",
+          "count": 17,
+          "id": "69f882179a800b6bef221b72"
+        },
+        {
+          "createdAt": "2026-05-04T11:33:16.402Z",
+          "updatedAt": "2026-05-13T11:50:40.069Z",
+          "value": "Responsive",
+          "_status": "published",
+          "count": 1,
+          "id": "69f883fc9a800b6bef2226e2"
+        },
+        {
+          "createdAt": "2026-05-04T11:26:06.402Z",
+          "updatedAt": "2026-05-13T11:51:22.746Z",
+          "value": "website",
+          "_status": "published",
+          "count": 18,
+          "id": "69f8824e9a800b6bef221cc7"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:17.922Z",
+          "updatedAt": "2026-05-13T11:51:25.575Z",
+          "value": "lovable",
+          "_status": "published",
+          "count": 26,
+          "id": "69f8821d9a800b6bef221b92"
+        },
+        {
+          "createdAt": "2026-05-04T11:26:15.879Z",
+          "updatedAt": "2026-05-13T11:51:22.758Z",
+          "value": "animation",
+          "_status": "published",
+          "count": 8,
+          "id": "69f882579a800b6bef221cff"
+        }
+      ],
+      "createdBy": {
+        "name": "Bogdan Falin",
+        "email": "bogdan@qclay.design",
+        "avatar": {
+          "createdAt": "2026-05-08T21:47:28.390Z",
+          "updatedAt": "2026-05-08T21:47:28.390Z",
+          "url": "/api/media/file/IMG_0914.JPG",
+          "filename": "IMG_0914.JPG",
+          "mimeType": "image/jpeg",
+          "filesize": 17250,
+          "width": 400,
+          "height": 400,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "webp": {
+              "url": "/api/media/file/IMG_0914-400x400.webp",
+              "width": 400,
+              "height": 400,
+              "mimeType": "image/webp",
+              "filesize": 4650,
+              "filename": "IMG_0914-400x400.webp"
+            }
+          },
+          "id": "69fe59f087894d71d3255238",
+          "thumbnail": {},
+          "thumbnailURL": null
+        },
+        "id": "69f979f239b3f18ee10de4f3",
+        "collection": "users"
+      },
+      "id": "69f7245b1dd95881f92369cf"
+    },
+    {
+      "createdAt": "2026-05-03T10:38:22.476Z",
+      "updatedAt": "2026-05-13T11:50:41.336Z",
+      "title": "AI Start Page",
+      "sectionType": "Dialog window with a dynamic background",
+      "preview": {
+        "createdAt": "2026-05-03T10:37:12.527Z",
+        "updatedAt": "2026-05-09T12:59:25.998Z",
+        "url": "/api/media/file/sixsense_oQEQ8V3R.mp4",
+        "filename": "sixsense_oQEQ8V3R.mp4",
+        "mimeType": "video/mp4",
+        "filesize": 2229011,
+        "sizes": {
+          "webp": {
+            "url": null
+          }
+        },
+        "alt": "",
+        "thumbnail": {
+          "url": "/media/sixsense_oQEQ8V3R_thumbnail.jpg",
+          "name": "sixsense_oQEQ8V3R_thumbnail.jpg"
+        },
+        "thumbnailURL": null,
+        "duration": 21.284,
+        "height": 1080,
+        "width": 1562,
+        "id": "69f725581dd95881f9236a34"
+      },
+      "priority": 0,
+      "generateSlug": false,
+      "slug": "ai-start-page",
+      "category": {
+        "createdAt": "2026-04-24T19:13:53.531Z",
+        "updatedAt": "2026-04-24T19:13:53.531Z",
+        "name": "Motion Design",
+        "_status": "published",
+        "id": "69ebc0f17a8e372f56724585"
+      },
+      "plan": "free",
+      "aiTool": [
+        {
+          "createdAt": "2026-04-24T18:48:06.455Z",
+          "updatedAt": "2026-04-24T18:48:06.455Z",
+          "name": "Lovable",
+          "_status": "published",
+          "id": "69ebbae67a8e372f5672437e"
+        }
+      ],
+      "_status": "published",
+      "tagsList": [
+        {
+          "createdAt": "2026-05-04T11:32:50.166Z",
+          "updatedAt": "2026-05-13T11:50:41.343Z",
+          "value": "GPT",
+          "_status": "published",
+          "count": 1,
+          "id": "69f883e29a800b6bef222639"
+        },
+        {
+          "createdAt": "2026-05-04T11:32:54.770Z",
+          "updatedAt": "2026-05-13T11:50:41.349Z",
+          "value": "Dynamic background",
+          "_status": "published",
+          "count": 1,
+          "id": "69f883e69a800b6bef22265b"
+        },
+        {
+          "createdAt": "2026-05-04T11:32:58.843Z",
+          "updatedAt": "2026-05-13T11:50:41.354Z",
+          "value": "Hover effects",
+          "_status": "published",
+          "count": 1,
+          "id": "69f883ea9a800b6bef222678"
+        },
+        {
+          "createdAt": "2026-05-04T11:26:15.879Z",
+          "updatedAt": "2026-05-13T11:51:22.758Z",
+          "value": "animation",
+          "_status": "published",
+          "count": 8,
+          "id": "69f882579a800b6bef221cff"
+        }
+      ],
+      "createdBy": {
+        "name": "Bogdan Falin",
+        "email": "bogdan@qclay.design",
+        "avatar": {
+          "createdAt": "2026-05-08T21:47:28.390Z",
+          "updatedAt": "2026-05-08T21:47:28.390Z",
+          "url": "/api/media/file/IMG_0914.JPG",
+          "filename": "IMG_0914.JPG",
+          "mimeType": "image/jpeg",
+          "filesize": 17250,
+          "width": 400,
+          "height": 400,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "webp": {
+              "url": "/api/media/file/IMG_0914-400x400.webp",
+              "width": 400,
+              "height": 400,
+              "mimeType": "image/webp",
+              "filesize": 4650,
+              "filename": "IMG_0914-400x400.webp"
+            }
+          },
+          "id": "69fe59f087894d71d3255238",
+          "thumbnail": {},
+          "thumbnailURL": null
+        },
+        "id": "69f979f239b3f18ee10de4f3",
+        "collection": "users"
+      },
+      "id": "69f7259e1dd95881f9236a64"
+    },
+    {
+      "createdAt": "2026-05-03T11:10:17.390Z",
+      "updatedAt": "2026-05-13T11:51:18.849Z",
+      "title": "Solv. - Fintech Landing Page",
+      "sectionType": "8 Sections of landing page",
+      "preview": {
+        "createdAt": "2026-05-03T11:02:56.566Z",
+        "updatedAt": "2026-05-09T12:59:29.799Z",
+        "url": "/api/media/file/65bae7446bde6d5a908c16e67a7b7a71.mp4",
+        "filename": "65bae7446bde6d5a908c16e67a7b7a71.mp4",
+        "mimeType": "video/mp4",
+        "filesize": 6631841,
+        "sizes": {
+          "webp": {
+            "url": null
+          }
+        },
+        "alt": "",
+        "thumbnail": {
+          "url": "/media/65bae7446bde6d5a908c16e67a7b7a71_thumbnail.jpg",
+          "name": "65bae7446bde6d5a908c16e67a7b7a71_thumbnail.jpg"
+        },
+        "thumbnailURL": null,
+        "duration": 25.367,
+        "height": 1200,
+        "width": 1600,
+        "id": "69f72b601dd95881f9236b1f"
+      },
+      "priority": 0,
+      "generateSlug": false,
+      "slug": "solv---fintech-landing-page",
+      "category": {
+        "createdAt": "2026-04-24T19:13:53.531Z",
+        "updatedAt": "2026-04-24T19:13:53.531Z",
+        "name": "Motion Design",
+        "_status": "published",
+        "id": "69ebc0f17a8e372f56724585"
+      },
+      "plan": "coming-soon",
+      "aiTool": [
+        {
+          "createdAt": "2026-04-24T19:13:03.074Z",
+          "updatedAt": "2026-04-24T19:13:03.074Z",
+          "name": "Claude",
+          "_status": "published",
+          "id": "69ebc0bf7a8e372f56724548"
+        },
+        {
+          "createdAt": "2026-04-24T18:48:06.455Z",
+          "updatedAt": "2026-04-24T18:48:06.455Z",
+          "name": "Lovable",
+          "_status": "published",
+          "id": "69ebbae67a8e372f5672437e"
+        }
+      ],
+      "_status": "published",
+      "tagsList": [
+        {
+          "createdAt": "2026-05-04T11:25:11.714Z",
+          "updatedAt": "2026-05-13T11:51:25.560Z",
+          "value": "landing page",
+          "_status": "published",
+          "count": 17,
+          "id": "69f882179a800b6bef221b72"
+        },
+        {
+          "createdAt": "2026-05-04T11:27:28.837Z",
+          "updatedAt": "2026-05-13T11:51:20.538Z",
+          "value": "fintech",
+          "_status": "published",
+          "count": 3,
+          "id": "69f882a09a800b6bef221eae"
+        },
+        {
+          "createdAt": "2026-05-04T11:32:32.206Z",
+          "updatedAt": "2026-05-13T11:51:18.869Z",
+          "value": "hover",
+          "_status": "published",
+          "count": 2,
+          "id": "69f883d09a800b6bef2225cb"
+        },
+        {
+          "createdAt": "2026-05-04T11:28:18.368Z",
+          "updatedAt": "2026-05-13T11:51:20.560Z",
+          "value": "claude",
+          "_status": "published",
+          "count": 5,
+          "id": "69f882d29a800b6bef221fd5"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:17.922Z",
+          "updatedAt": "2026-05-13T11:51:25.575Z",
+          "value": "lovable",
+          "_status": "published",
+          "count": 26,
+          "id": "69f8821d9a800b6bef221b92"
+        }
+      ],
+      "createdBy": "69fe19bf87894d71d3252f03",
+      "id": "69f72d191dd95881f9236b6e"
+    },
+    {
+      "createdAt": "2026-05-03T12:21:07.655Z",
+      "updatedAt": "2026-05-13T11:51:20.531Z",
+      "title": "Lumio Fintech",
+      "sectionType": "Hero Section",
+      "preview": {
+        "createdAt": "2026-05-03T12:15:37.227Z",
+        "updatedAt": "2026-05-09T12:59:32.677Z",
+        "url": "/api/media/file/0c29b563945db43e7e6d73a685224f4a-1_fToUOHUL.mp4",
+        "filename": "0c29b563945db43e7e6d73a685224f4a-1_fToUOHUL.mp4",
+        "mimeType": "video/mp4",
+        "filesize": 4018627,
+        "sizes": {
+          "webp": {
+            "url": null
+          }
+        },
+        "alt": "",
+        "thumbnail": {
+          "url": "/media/0c29b563945db43e7e6d73a685224f4a-1_fToUOHUL_thumbnail.jpg",
+          "name": "0c29b563945db43e7e6d73a685224f4a-1_fToUOHUL_thumbnail.jpg"
+        },
+        "thumbnailURL": null,
+        "duration": 20.017,
+        "height": 1200,
+        "width": 1600,
+        "id": "69f73c691dd95881f9236be0"
+      },
+      "priority": 0,
+      "generateSlug": false,
+      "slug": "lumio-fintech",
+      "plan": "coming-soon",
+      "aiTool": [
+        {
+          "createdAt": "2026-04-24T18:48:06.455Z",
+          "updatedAt": "2026-04-24T18:48:06.455Z",
+          "name": "Lovable",
+          "_status": "published",
+          "id": "69ebbae67a8e372f5672437e"
+        },
+        {
+          "createdAt": "2026-04-24T19:13:03.074Z",
+          "updatedAt": "2026-04-24T19:13:03.074Z",
+          "name": "Claude",
+          "_status": "published",
+          "id": "69ebc0bf7a8e372f56724548"
+        }
+      ],
+      "_status": "published",
+      "tagsList": [
+        {
+          "createdAt": "2026-05-04T11:27:28.837Z",
+          "updatedAt": "2026-05-13T11:51:20.538Z",
+          "value": "fintech",
+          "_status": "published",
+          "count": 3,
+          "id": "69f882a09a800b6bef221eae"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:49.964Z",
+          "updatedAt": "2026-05-13T11:51:21.679Z",
+          "value": "hero section",
+          "_status": "published",
+          "count": 16,
+          "id": "69f8823d9a800b6bef221c53"
+        },
+        {
+          "createdAt": "2026-05-04T11:26:06.402Z",
+          "updatedAt": "2026-05-13T11:51:22.746Z",
+          "value": "website",
+          "_status": "published",
+          "count": 18,
+          "id": "69f8824e9a800b6bef221cc7"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:17.922Z",
+          "updatedAt": "2026-05-13T11:51:25.575Z",
+          "value": "lovable",
+          "_status": "published",
+          "count": 26,
+          "id": "69f8821d9a800b6bef221b92"
+        },
+        {
+          "createdAt": "2026-05-04T11:28:18.368Z",
+          "updatedAt": "2026-05-13T11:51:20.560Z",
+          "value": "claude",
+          "_status": "published",
+          "count": 5,
+          "id": "69f882d29a800b6bef221fd5"
+        }
+      ],
+      "createdBy": "69fe1a5887894d71d3252f58",
+      "id": "69f73db31dd95881f9236c09"
+    },
+    {
+      "createdAt": "2026-05-03T12:23:12.309Z",
+      "updatedAt": "2026-05-13T11:51:21.670Z",
+      "title": "Kubric Website",
+      "sectionType": "Hero section",
+      "preview": {
+        "createdAt": "2026-05-03T12:22:01.738Z",
+        "updatedAt": "2026-05-09T12:59:37.399Z",
+        "url": "/api/media/file/original-f090c3b87518834b3e341885608b20e3_UJTcmHeh.mp4",
+        "filename": "original-f090c3b87518834b3e341885608b20e3_UJTcmHeh.mp4",
+        "mimeType": "video/mp4",
+        "filesize": 3360667,
+        "sizes": {
+          "webp": {
+            "url": null
+          }
+        },
+        "alt": "",
+        "thumbnail": {
+          "url": "/media/original-f090c3b87518834b3e341885608b20e3_UJTcmHeh_thumbnail.jpg",
+          "name": "original-f090c3b87518834b3e341885608b20e3_UJTcmHeh_thumbnail.jpg"
+        },
+        "thumbnailURL": null,
+        "duration": 10.4,
+        "height": 1200,
+        "width": 1600,
+        "id": "69f73de91dd95881f9236c34"
+      },
+      "priority": 0,
+      "generateSlug": false,
+      "slug": "kubric-website",
+      "category": {
+        "createdAt": "2026-04-24T19:13:53.531Z",
+        "updatedAt": "2026-04-24T19:13:53.531Z",
+        "name": "Motion Design",
+        "_status": "published",
+        "id": "69ebc0f17a8e372f56724585"
+      },
+      "plan": "coming-soon",
+      "aiTool": [
+        {
+          "createdAt": "2026-04-24T18:48:06.455Z",
+          "updatedAt": "2026-04-24T18:48:06.455Z",
+          "name": "Lovable",
+          "_status": "published",
+          "id": "69ebbae67a8e372f5672437e"
+        }
+      ],
+      "_status": "published",
+      "tagsList": [
+        {
+          "createdAt": "2026-05-04T11:25:49.964Z",
+          "updatedAt": "2026-05-13T11:51:21.679Z",
+          "value": "hero section",
+          "_status": "published",
+          "count": 16,
+          "id": "69f8823d9a800b6bef221c53"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:55.142Z",
+          "updatedAt": "2026-05-13T11:51:21.686Z",
+          "value": "Kling",
+          "_status": "published",
+          "count": 5,
+          "id": "69f882439a800b6bef221c79"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:17.922Z",
+          "updatedAt": "2026-05-13T11:51:25.575Z",
+          "value": "lovable",
+          "_status": "published",
+          "count": 26,
+          "id": "69f8821d9a800b6bef221b92"
+        },
+        {
+          "createdAt": "2026-05-04T11:31:52.042Z",
+          "updatedAt": "2026-05-13T11:51:21.704Z",
+          "value": "text animation",
+          "_status": "published",
+          "count": 1,
+          "id": "69f883a89a800b6bef2224f3"
+        }
+      ],
+      "createdBy": "69fe1abc87894d71d3252faf",
+      "id": "69f73e301dd95881f9236c58"
+    },
+    {
+      "createdAt": "2026-05-03T12:47:41.645Z",
+      "updatedAt": "2026-05-13T11:50:14.588Z",
+      "title": "Fashion Website",
+      "sectionType": "Shopify",
+      "preview": {
+        "createdAt": "2026-05-03T12:46:50.845Z",
+        "updatedAt": "2026-05-09T12:59:45.292Z",
+        "url": "/api/media/file/original-d96403fc1d9c7c8c33987baeec228896-1-1_RycO48Fw.mp4",
+        "filename": "original-d96403fc1d9c7c8c33987baeec228896-1-1_RycO48Fw.mp4",
+        "mimeType": "video/mp4",
+        "filesize": 2554060,
+        "sizes": {
+          "webp": {
+            "url": null
+          }
+        },
+        "alt": "",
+        "thumbnail": {
+          "url": "/media/original-d96403fc1d9c7c8c33987baeec228896-1-1_RycO48Fw_thumbnail.jpg",
+          "name": "original-d96403fc1d9c7c8c33987baeec228896-1-1_RycO48Fw_thumbnail.jpg"
+        },
+        "thumbnailURL": null,
+        "duration": 17.767,
+        "height": 1200,
+        "width": 1600,
+        "id": "69f743ba1dd95881f9236cea"
+      },
+      "priority": 0,
+      "generateSlug": false,
+      "slug": "fashion-website-2",
+      "category": {
+        "createdAt": "2026-04-24T19:13:53.531Z",
+        "updatedAt": "2026-04-24T19:13:53.531Z",
+        "name": "Motion Design",
+        "_status": "published",
+        "id": "69ebc0f17a8e372f56724585"
+      },
+      "plan": "coming-soon",
+      "aiTool": [
+        {
+          "createdAt": "2026-04-24T18:48:06.455Z",
+          "updatedAt": "2026-04-24T18:48:06.455Z",
+          "name": "Lovable",
+          "_status": "published",
+          "id": "69ebbae67a8e372f5672437e"
+        },
+        {
+          "createdAt": "2026-04-24T19:13:03.074Z",
+          "updatedAt": "2026-04-24T19:13:03.074Z",
+          "name": "Claude",
+          "_status": "published",
+          "id": "69ebc0bf7a8e372f56724548"
+        }
+      ],
+      "_status": "published",
+      "tagsList": [
+        {
+          "createdAt": "2026-05-04T11:31:13.711Z",
+          "updatedAt": "2026-05-13T11:50:14.597Z",
+          "value": "shopify",
+          "_status": "published",
+          "count": 1,
+          "id": "69f883819a800b6bef222409"
+        },
+        {
+          "createdAt": "2026-05-04T11:31:19.350Z",
+          "updatedAt": "2026-05-13T11:50:14.603Z",
+          "value": "ecommerce",
+          "_status": "published",
+          "count": 1,
+          "id": "69f883879a800b6bef222434"
+        },
+        {
+          "createdAt": "2026-05-04T11:31:23.603Z",
+          "updatedAt": "2026-05-13T11:50:16.777Z",
+          "value": "fashion",
+          "_status": "published",
+          "count": 2,
+          "id": "69f8838b9a800b6bef222451"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:17.922Z",
+          "updatedAt": "2026-05-13T11:51:25.575Z",
+          "value": "lovable",
+          "_status": "published",
+          "count": 26,
+          "id": "69f8821d9a800b6bef221b92"
+        },
+        {
+          "createdAt": "2026-05-04T11:26:06.402Z",
+          "updatedAt": "2026-05-13T11:51:22.746Z",
+          "value": "website",
+          "_status": "published",
+          "count": 18,
+          "id": "69f8824e9a800b6bef221cc7"
+        }
+      ],
+      "createdBy": {
+        "avatar": {
+          "createdAt": "2026-05-08T17:07:26.320Z",
+          "updatedAt": "2026-05-08T17:07:26.320Z",
+          "url": "/api/media/file/photo_2026-05-08_22-07-09.jpg",
+          "filename": "photo_2026-05-08_22-07-09.jpg",
+          "mimeType": "image/jpeg",
+          "filesize": 1990,
+          "width": 160,
+          "height": 160,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "webp": {
+              "url": "/api/media/file/photo_2026-05-08_22-07-09-160x160.webp",
+              "width": 160,
+              "height": 160,
+              "mimeType": "image/webp",
+              "filesize": 910,
+              "filename": "photo_2026-05-08_22-07-09-160x160.webp"
+            }
+          },
+          "id": "69fe184e87894d71d3252e3e",
+          "thumbnail": {},
+          "thumbnailURL": null
+        },
+        "name": "Enweus",
+        "email": "enweus0@gmail.com",
+        "id": "69fe186e87894d71d3252e59",
+        "collection": "users"
+      },
+      "id": "69f743ed1dd95881f9236d14"
+    },
+    {
+      "createdAt": "2026-05-03T12:50:09.116Z",
+      "updatedAt": "2026-05-13T11:51:22.729Z",
+      "title": "Dynamic theme switching",
+      "sectionType": "Hero section",
+      "preview": {
+        "createdAt": "2026-05-03T12:48:18.966Z",
+        "updatedAt": "2026-05-09T12:58:11.621Z",
+        "url": "/api/media/file/original-a70807b11c96aa1b31d6444deea776d1_leK2xbpI.mp4",
+        "filename": "original-a70807b11c96aa1b31d6444deea776d1_leK2xbpI.mp4",
+        "mimeType": "video/mp4",
+        "filesize": 1216547,
+        "sizes": {
+          "webp": {
+            "url": null
+          }
+        },
+        "alt": "",
+        "thumbnail": {
+          "url": "/media/original-a70807b11c96aa1b31d6444deea776d1_leK2xbpI_thumbnail.jpg",
+          "name": "original-a70807b11c96aa1b31d6444deea776d1_leK2xbpI_thumbnail.jpg"
+        },
+        "thumbnailURL": null,
+        "duration": 7.034,
+        "height": 1200,
+        "width": 1600,
+        "id": "69f744121dd95881f9236d42"
+      },
+      "priority": 0,
+      "generateSlug": false,
+      "slug": "dynamic-theme-switching",
+      "category": {
+        "createdAt": "2026-04-24T19:13:53.531Z",
+        "updatedAt": "2026-04-24T19:13:53.531Z",
+        "name": "Motion Design",
+        "_status": "published",
+        "id": "69ebc0f17a8e372f56724585"
+      },
+      "plan": "coming-soon",
+      "aiTool": [
+        {
+          "createdAt": "2026-04-24T18:48:06.455Z",
+          "updatedAt": "2026-04-24T18:48:06.455Z",
+          "name": "Lovable",
+          "_status": "published",
+          "id": "69ebbae67a8e372f5672437e"
+        }
+      ],
+      "_status": "published",
+      "tagsList": [
+        {
+          "createdAt": "2026-05-04T11:30:47.533Z",
+          "updatedAt": "2026-05-13T11:51:22.736Z",
+          "value": "dark theme",
+          "_status": "published",
+          "count": 1,
+          "id": "69f883679a800b6bef22236d"
+        },
+        {
+          "createdAt": "2026-05-04T11:30:53.289Z",
+          "updatedAt": "2026-05-13T11:51:22.741Z",
+          "value": "light theme",
+          "_status": "published",
+          "count": 1,
+          "id": "69f8836d9a800b6bef222398"
+        },
+        {
+          "createdAt": "2026-05-04T11:26:06.402Z",
+          "updatedAt": "2026-05-13T11:51:22.746Z",
+          "value": "website",
+          "_status": "published",
+          "count": 18,
+          "id": "69f8824e9a800b6bef221cc7"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:17.922Z",
+          "updatedAt": "2026-05-13T11:51:25.575Z",
+          "value": "lovable",
+          "_status": "published",
+          "count": 26,
+          "id": "69f8821d9a800b6bef221b92"
+        },
+        {
+          "createdAt": "2026-05-04T11:26:15.879Z",
+          "updatedAt": "2026-05-13T11:51:22.758Z",
+          "value": "animation",
+          "_status": "published",
+          "count": 8,
+          "id": "69f882579a800b6bef221cff"
+        }
+      ],
+      "createdBy": "69fe1a5887894d71d3252f58",
+      "id": "69f744811dd95881f9236d66"
+    },
+    {
+      "createdAt": "2026-05-03T12:54:27.263Z",
+      "updatedAt": "2026-05-13T11:48:58.763Z",
+      "title": "AI Website ",
+      "sectionType": "3 Sections",
+      "preview": {
+        "createdAt": "2026-05-03T12:50:47.537Z",
+        "updatedAt": "2026-05-09T12:58:14.202Z",
+        "url": "/api/media/file/original-676834d6fe4a83b1ec988cb0c765eeef_aichuMys.mp4",
+        "filename": "original-676834d6fe4a83b1ec988cb0c765eeef_aichuMys.mp4",
+        "mimeType": "video/mp4",
+        "filesize": 3700565,
+        "sizes": {
+          "webp": {
+            "url": null
+          }
+        },
+        "alt": "",
+        "thumbnail": {
+          "url": "/media/original-676834d6fe4a83b1ec988cb0c765eeef_aichuMys_thumbnail.jpg",
+          "name": "original-676834d6fe4a83b1ec988cb0c765eeef_aichuMys_thumbnail.jpg"
+        },
+        "thumbnailURL": null,
+        "duration": 18.006,
+        "height": 1200,
+        "width": 1600,
+        "id": "69f744a71dd95881f9236d94"
+      },
+      "priority": 0,
+      "generateSlug": false,
+      "slug": "ai-website",
+      "category": {
+        "createdAt": "2026-04-24T19:13:53.531Z",
+        "updatedAt": "2026-04-24T19:13:53.531Z",
+        "name": "Motion Design",
+        "_status": "published",
+        "id": "69ebc0f17a8e372f56724585"
+      },
+      "plan": "premium",
+      "aiTool": [
+        {
+          "createdAt": "2026-04-24T18:48:06.455Z",
+          "updatedAt": "2026-04-24T18:48:06.455Z",
+          "name": "Lovable",
+          "_status": "published",
+          "id": "69ebbae67a8e372f5672437e"
+        },
+        {
+          "createdAt": "2026-04-24T19:13:03.074Z",
+          "updatedAt": "2026-04-24T19:13:03.074Z",
+          "name": "Claude",
+          "_status": "published",
+          "id": "69ebc0bf7a8e372f56724548"
+        }
+      ],
+      "_status": "published",
+      "tagsList": [
+        {
+          "createdAt": "2026-05-04T11:30:26.979Z",
+          "updatedAt": "2026-05-13T11:48:58.780Z",
+          "value": "ai",
+          "_status": "published",
+          "count": 1,
+          "id": "69f883529a800b6bef2222ff"
+        },
+        {
+          "createdAt": "2026-05-04T11:26:06.402Z",
+          "updatedAt": "2026-05-13T11:51:22.746Z",
+          "value": "website",
+          "_status": "published",
+          "count": 18,
+          "id": "69f8824e9a800b6bef221cc7"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:17.922Z",
+          "updatedAt": "2026-05-13T11:51:25.575Z",
+          "value": "lovable",
+          "_status": "published",
+          "count": 26,
+          "id": "69f8821d9a800b6bef221b92"
+        }
+      ],
+      "createdBy": null,
+      "id": "69f745831dd95881f9236dd2"
+    },
+    {
+      "createdAt": "2026-05-03T12:56:54.911Z",
+      "updatedAt": "2026-05-13T11:51:23.888Z",
+      "title": "Product Landing Page",
+      "sectionType": "7 Section",
+      "preview": {
+        "createdAt": "2026-05-03T12:55:25.136Z",
+        "updatedAt": "2026-05-09T12:58:18.409Z",
+        "url": "/api/media/file/0ebc00f0672fa3621d2284712e4481f2-2_xQEIqvrz.mp4",
+        "filename": "0ebc00f0672fa3621d2284712e4481f2-2_xQEIqvrz.mp4",
+        "mimeType": "video/mp4",
+        "filesize": 5187501,
+        "sizes": {
+          "webp": {
+            "url": null
+          }
+        },
+        "alt": "",
+        "thumbnail": {
+          "url": "/media/0ebc00f0672fa3621d2284712e4481f2-2_xQEIqvrz_thumbnail.jpg",
+          "name": "0ebc00f0672fa3621d2284712e4481f2-2_xQEIqvrz_thumbnail.jpg"
+        },
+        "thumbnailURL": null,
+        "duration": 39.936,
+        "height": 1200,
+        "width": 1600,
+        "id": "69f745bd1dd95881f9236e00"
+      },
+      "priority": 0,
+      "generateSlug": false,
+      "slug": "product-landing-page",
+      "category": {
+        "createdAt": "2026-04-24T19:13:53.531Z",
+        "updatedAt": "2026-04-24T19:13:53.531Z",
+        "name": "Motion Design",
+        "_status": "published",
+        "id": "69ebc0f17a8e372f56724585"
+      },
+      "plan": "coming-soon",
+      "aiTool": [
+        {
+          "createdAt": "2026-04-24T18:48:06.455Z",
+          "updatedAt": "2026-04-24T18:48:06.455Z",
+          "name": "Lovable",
+          "_status": "published",
+          "id": "69ebbae67a8e372f5672437e"
+        },
+        {
+          "createdAt": "2026-04-24T19:13:03.074Z",
+          "updatedAt": "2026-04-24T19:13:03.074Z",
+          "name": "Claude",
+          "_status": "published",
+          "id": "69ebc0bf7a8e372f56724548"
+        }
+      ],
+      "_status": "published",
+      "tagsList": [
+        {
+          "createdAt": "2026-05-04T11:29:48.191Z",
+          "updatedAt": "2026-05-13T11:51:25.570Z",
+          "value": "product",
+          "_status": "published",
+          "count": 2,
+          "id": "69f8832c9a800b6bef22222f"
+        },
+        {
+          "createdAt": "2026-05-04T11:30:06.377Z",
+          "updatedAt": "2026-05-13T11:51:23.900Z",
+          "value": "bottom navigation",
+          "_status": "published",
+          "count": 1,
+          "id": "69f8833e9a800b6bef22229a"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:11.714Z",
+          "updatedAt": "2026-05-13T11:51:25.560Z",
+          "value": "landing page",
+          "_status": "published",
+          "count": 17,
+          "id": "69f882179a800b6bef221b72"
+        },
+        {
+          "createdAt": "2026-05-04T11:29:23.674Z",
+          "updatedAt": "2026-05-13T11:51:23.910Z",
+          "value": "videos",
+          "_status": "published",
+          "count": 2,
+          "id": "69f883139a800b6bef222186"
+        }
+      ],
+      "createdBy": "69fe19bf87894d71d3252f03",
+      "id": "69f746161dd95881f9236e28"
+    },
+    {
+      "createdAt": "2026-05-03T12:58:15.101Z",
+      "updatedAt": "2026-05-13T11:51:25.548Z",
+      "title": "Jewelry Website",
+      "sectionType": "4 Sections",
+      "preview": {
+        "createdAt": "2026-05-03T12:57:22.607Z",
+        "updatedAt": "2026-05-09T12:58:21.229Z",
+        "url": "/api/media/file/4fc59eaaeee43108e27829b35f708740_OkLx8OiW.mp4",
+        "filename": "4fc59eaaeee43108e27829b35f708740_OkLx8OiW.mp4",
+        "mimeType": "video/mp4",
+        "filesize": 5379462,
+        "sizes": {
+          "webp": {
+            "url": null
+          }
+        },
+        "alt": "",
+        "thumbnail": {
+          "url": "/media/4fc59eaaeee43108e27829b35f708740_OkLx8OiW_thumbnail.jpg",
+          "name": "4fc59eaaeee43108e27829b35f708740_OkLx8OiW_thumbnail.jpg"
+        },
+        "thumbnailURL": null,
+        "duration": 29.5,
+        "height": 1200,
+        "width": 1600,
+        "id": "69f746321dd95881f9236e56"
+      },
+      "priority": 0,
+      "generateSlug": false,
+      "slug": "jewelry-website",
+      "category": {
+        "createdAt": "2026-04-24T19:13:53.531Z",
+        "updatedAt": "2026-04-24T19:13:53.531Z",
+        "name": "Motion Design",
+        "_status": "published",
+        "id": "69ebc0f17a8e372f56724585"
+      },
+      "plan": "coming-soon",
+      "aiTool": [
+        {
+          "createdAt": "2026-04-24T18:48:06.455Z",
+          "updatedAt": "2026-04-24T18:48:06.455Z",
+          "name": "Lovable",
+          "_status": "published",
+          "id": "69ebbae67a8e372f5672437e"
+        },
+        {
+          "createdAt": "2026-04-24T19:13:03.074Z",
+          "updatedAt": "2026-04-24T19:13:03.074Z",
+          "name": "Claude",
+          "_status": "published",
+          "id": "69ebc0bf7a8e372f56724548"
+        }
+      ],
+      "_status": "published",
+      "tagsList": [
+        {
+          "createdAt": "2026-05-04T11:29:34.537Z",
+          "updatedAt": "2026-05-13T11:51:25.555Z",
+          "value": "loader",
+          "_status": "published",
+          "count": 2,
+          "id": "69f8831e9a800b6bef2221d2"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:11.714Z",
+          "updatedAt": "2026-05-13T11:51:25.560Z",
+          "value": "landing page",
+          "_status": "published",
+          "count": 17,
+          "id": "69f882179a800b6bef221b72"
+        },
+        {
+          "createdAt": "2026-05-04T11:29:42.965Z",
+          "updatedAt": "2026-05-13T11:51:25.565Z",
+          "value": "jewelry",
+          "_status": "published",
+          "count": 1,
+          "id": "69f883269a800b6bef22220a"
+        },
+        {
+          "createdAt": "2026-05-04T11:29:48.191Z",
+          "updatedAt": "2026-05-13T11:51:25.570Z",
+          "value": "product",
+          "_status": "published",
+          "count": 2,
+          "id": "69f8832c9a800b6bef22222f"
+        },
+        {
+          "createdAt": "2026-05-04T11:25:17.922Z",
+          "updatedAt": "2026-05-13T11:51:25.575Z",
+          "value": "lovable",
+          "_status": "published",
+          "count": 26,
+          "id": "69f8821d9a800b6bef221b92"
+        }
+      ],
+      "createdBy": "69fe192687894d71d3252eae",
+      "id": "69f746671dd95881f9236e83"
+    }
+  ],
+  "totalDocs": 16,
+  "limit": 16,
+  "totalPages": 1,
+  "page": 1,
+  "pagingCounter": 1,
+  "hasPrevPage": false,
+  "hasNextPage": false,
+  "prevPage": null,
+  "nextPage": null
+}

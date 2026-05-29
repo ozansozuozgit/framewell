@@ -1,0 +1,121 @@
+SECTION 1 — HERO SECTION (Currently Built)
+
+OVERVIEW
+
+Build a full-viewport hero section for "Synex," a wealth management platform. The aesthetic is editorial-minimal with a tactile, organic twist: warm off-white background, large refined typography, two photorealistic stones flanking the composition at the bottom, and a product dashboard screenshot rising centrally between them. The mood is premium, calm, confident — think Apple keynote crossed with Swiss editorial design, grounded by natural texture (stones, grass).
+
+LAYOUT & STRUCTURE
+
+The hero is a single full-bleed section with min-height 100vh, position relative, overflow hidden. It uses a layered z-index composition (background gradient → text content → left stone base → left stone grass overlay → centered dashboard image → right stone base → right stone grass overlay → bottom dark fade → scroll indicator → fixed navbar on top). The background color is a warm paper tone (#F2F2F0). A subtle radial gradient sits behind everything: ellipse 80% wide × 60% tall, anchored at 50% 30%, fading from rgba(220,220,215,0.6) at center to transparent at 70% — this gives a soft top-down halo behind the headline.
+
+TYPOGRAPHY (global font: Inter Tight, loaded from Google Fonts with weights 300–900)
+
+Eyebrow label — "Finance Reimagined" — Inter Tight 500, 12px mobile / 13px sm / 14px md, color rgba(0,0,0,0.50), centered, sits with margin-bottom 12–16px.
+
+Headline (H1) — two stacked lines, both Inter Tight 500, letter-spacing -1.36px, line-height 1.05 (lg: 73.088px exact):
+
+Line 1: "A New Standard" — color rgba(0,0,0,0.20) (intentionally faded/ghost)
+
+Line 2: "in Wealth Management" — color #05050C (near-black)
+
+Sizes: 34px mobile → 44px sm → 56px md → 68px lg
+
+Subhead paragraph — "Take full control of your assets with a unified platform for investing, tracking, and growing your portfolio in real time." — Inter Tight 500, 14px mobile / 16px sm / 18px md, color rgba(0,0,0,0.20), max-width 460px, centered, margin-top 16–20px.
+
+All text content sits in a centered flex column starting with top padding 90px mobile / 110px sm / 140px md (to clear the fixed navbar).
+
+NAVBAR (fixed, top:0, z-50)
+
+Background rgba(242,242,240,0.85) with backdrop-filter blur(12px). Padding 16px vertical, 40px horizontal. Layout is a 3-column CSS grid (grid-cols-3, items-center) so the middle column is mathematically centered to the viewport regardless of the side columns' widths.
+
+Left cell (justify-self-start): Synex SVG logo from https://qclay.design/lovable/synex/logo.svg, height 28px.
+
+Middle cell (justify-self-center): four nav links — DASHBOARD, ASSETS, ANALYTICS, MARKETS. Each is Inter Tight 600, 13px, letter-spacing 1.5px, color #111111, padding 8px 14px. Hover transitions opacity to 0.55 over 200ms.
+
+Right cell (justify-self-end): a globe icon (lucide-react Globe, 16px, #111) followed by "English" label (Inter Tight 400, 13px, #111), then a primary CTA button. CTA: black pill (background #111111, border-radius 9999px, padding 10px 20px), white text "Launch app" (Inter Tight 600, 13px), with a small circular indicator on its left — outer circle 18×18 with rgba(255,255,255,0.20), inner dot 6×6 solid white. Hover transitions background to #333333 over 200ms.
+
+STONES (StoneReveal component, mounted twice — left and right)
+
+Two photorealistic stones anchored to the bottom corners. Each instance is an absolutely-positioned wrapper at bottom:0, with side:0 (left or right), w-fit, cursor-crosshair. Heights are responsive: 280px mobile / 380px sm / 500px md / 600px lg / 680px xl.
+
+Each stone is composed of TWO stacked images:
+
+Base stone (zBase: 1 for left, 4 for right): the dry/clean stone PNG (stone-left.png / stone-right.png).
+
+Grass overlay (zGrass: 2 for left, 5 for right): the same stone but covered in moss/grass (stone-g-left.png / stone-g-right.png), positioned absolutely on top, pointer-events none.
+
+Both images use object-fit contain, object-position anchored to the corresponding bottom edge ("left bottom" or "right bottom").
+
+Stone entry animation — base image fades in from opacity 0 with x-offset (-40px for left, +40px for right) to opacity 1 / x:0 over 0.9s, easeOut, with a 0.5s delay.
+
+Mossy reveal interaction (the signature micro-interaction) — On mouse enter, a radial mask reveals the grass overlay through a soft circle that follows the cursor:
+
+A motion value radiusRaw is set to 120 on mouseEnter and back to 0 on mouseLeave.
+
+A spring (stiffness 200, damping 25) smooths it into radius.
+
+The grass image's CSS mask is radial-gradient(circle ${radius}px at ${x}px ${y}px, black 0%, black 40%, transparent 100%), where x/y are tracked from the mousemove event relative to the wrapper's bounding rect.
+
+Effect: as the user hovers, a soft circular "wet" patch of moss organically appears under the cursor and fades out at the edges; on leave, it springs closed.
+
+DASHBOARD IMAGE (z-index 3, between the two stones)
+
+A centered container at absolute bottom:0, left:0, right:0, with flex justify-center (this guarantees true horizontal centering even while Framer Motion animates the inner element's transform). Pointer-events none so it doesn't block stone hover.
+
+Inner motion.div widths: 92vw mobile / 72vw sm / 60vw md / 54vw lg, capped at max-width 944px (intentionally ~20% smaller than full-width to avoid colliding with text on ultra-wide screens).
+
+The image is Dashboard.png from https://qclay.design/lovable/synex/Dashboard.png, width 100%, height auto, object-contain, border-radius 12px on top corners only, with a layered shadow: 0 -8px 80px rgba(0,0,0,0.12), 0 40px 120px rgba(0,0,0,0.10) (a soft top glow plus a deep ambient drop).
+
+Dashboard entry animation — initial: opacity 0, y:80, blur 8px → animate: opacity 1, y:0, blur 0 — over 1.0s, 0.6s delay, easing cubic-bezier(0.22, 1, 0.36, 1) (expo-out feel: a confident upward rise).
+
+BOTTOM DARK FADE (z-index 6)
+
+A non-interactive overlay at the bottom of the section, height 220px, full width, with gradient from rgba(5,5,12,0.85) at bottom → rgba(5,5,12,0.5) at 40% → transparent at top. This anchors the composition and provides contrast for the white scroll indicator text.
+
+SCROLL INDICATOR (z-index 20, bottom 10px)
+
+Centered horizontally via left:0 right:0 mx-auto w-fit, flex row with 8px gap. Contains:
+
+A small star SVG (https://qclay.design/lovable/synex/star.svg), 14×14px.
+
+Label "Scroll to explore" — Inter Tight 500, 14px, letter-spacing -0.28px, color #FFF.
+
+Two simultaneous animations:
+
+Container float: opacity 0→1 over 0.6s with 1.2s delay, then a continuous gentle vertical bob — y oscillates 0 → -4 → 0 over 2.5s, infinite, easeInOut.
+
+Star spin: continuous rotation 0→360° over 4s, infinite repeat, easeInOut (intentionally not linear — it has a soft accelerate/decelerate feel each rotation, like a slow gentle pulse rather than a mechanical spin).
+
+TEXT ENTRY ANIMATIONS (staggered blur-up on load)
+
+Each text element animates from opacity 0 + blur(8–12px) + y offset → opacity 1 + blur 0 + y:0, easeOut, staggered:
+
+Eyebrow: 0.6s duration, 0.1s delay, y:16, blur 8px
+
+Headline line 1: 0.7s, 0.2s delay, y:24, blur 12px
+
+Headline line 2: 0.7s, 0.32s delay, y:24, blur 12px
+
+Subhead: 0.7s, 0.45s delay, y:20, blur 8px
+
+This produces a cinematic, top-to-bottom focus-in cascade.
+
+ASSETS USED (all hosted, no local copies)
+
+https://qclay.design/lovable/synex/logo.svg — Synex wordmark
+
+https://qclay.design/lovable/synex/star.svg — 4-point star for scroll indicator
+
+https://qclay.design/lovable/synex/stone-left.png — left stone, dry
+
+https://qclay.design/lovable/synex/stone-g-left.png — left stone with moss
+
+https://qclay.design/lovable/synex/stone-right.png — right stone, dry
+
+https://qclay.design/lovable/synex/stone-g-right.png — right stone with moss
+
+https://qclay.design/lovable/synex/Dashboard.png — product UI screenshot
+
+TECH STACK
+
+React 18 + Vite + TypeScript + Tailwind CSS v3 + Framer Motion + lucide-react. Components live in src/components/synex/ (Hero.tsx, Navbar.tsx, StoneReveal.tsx). Page entry is src/pages/Index.tsx which renders <Hero /> inside a <main> with an sr-only h1 for SEO. Document title: "Synex — A New Standard in Wealth Management". Meta description matches the subhead copy.

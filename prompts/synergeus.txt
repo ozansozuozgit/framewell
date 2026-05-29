@@ -1,0 +1,684 @@
+SYNERGEUS LANDING PAGE - FULL ACCURATE SPEC
+
+
+TECH STACK
+
+React 18, Vite, TypeScript, Tailwind CSS v3, framer-motion, hls.js, lucide-react, react-router-dom.
+
+
+GLOBAL FONTS (loaded in index.html via Google Fonts)
+
+Inter Tight weights 300, 400, 500, 600, 700.
+
+Instrument Serif italic and roman.
+
+Tailwind aliases: font-heading and font-sans both map to “Inter Tight”. font-serif maps to “Instrument Serif”. Body default is font-heading.
+
+
+GLOBAL CSS ANIMATIONS (src/index.css)
+
+keyframes marquee: translateX 0 to -50%. Class .animate-marquee uses 14s linear infinite.
+
+keyframes story-fill-1: scaleX 0 at 0%, scaleX 1 at 50%, scaleX 1 at 100%.
+
+keyframes story-fill-2: scaleX 0 at 0%, scaleX 0 at 50%, scaleX 1 at 100%.
+
+.story-bar-1 .story-bar-fill runs story-fill-1 6s linear infinite, transform-origin left center.
+
+.story-bar-2 .story-bar-fill runs story-fill-2 6s linear infinite, transform-origin left center.
+
+
+DESIGN TOKENS (src/index.css :root, HSL)
+
+Standard shadcn light palette: background 0 0% 100%, foreground 222.2 84% 4.9%, primary 222.2 47.4% 11.2%, etc. Radius 0.5rem. A .dark variant exists but is not currently toggled.
+
+
+PAGE COMPOSITION (src/pages/Index.tsx)
+
+renders then . No router-driven navigation in this view.
+
+
+============================================================
+
+SECTION 1 - HERO (src/components/Hero.tsx)
+
+
+CONTAINER
+
+position relative, overflow hidden, minHeight 100vh, background #000.
+
+
+BACKGROUND VIDEO (src/components/HeroVideo.tsx)
+
+A single element, absolute inset-0, h-full w-full, object-cover, zIndex 0.
+
+Attributes: autoPlay, loop, muted (also set muted, defaultMuted, autoplay, loop, playsInline and webkit-playsinline imperatively in useEffect for iOS).
+
+Source URL: https://stream.mux.com/rfmAy41mljxrk4K28xbeP6bt7UOMsf6d6Ce7C7Ul4vs.m3u8
+
+Playback logic:
+
+
+If browser supports application/vnd.apple.mpegurl natively (Safari): assigns video.src directly, calls play() on loadedmetadata.
+
+Else if Hls.isSupported(): creates new Hls({enableWorker: true}), loadSource, attachMedia, plays on MANIFEST_PARSED.
+
+Else: assigns video.src as a fallback.
+
+Cleanup destroys hls instance on unmount.
+
+Errors from play() are swallowed with console.warn “Video play blocked”.
+
+
+DARK OVERLAY
+
+Absolute inset-0, zIndex 1.
+
+background: linear-gradient(to bottom, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.65) 100%).
+
+
+NAVBAR (src/components/Navbar.tsx)
+
+fixed top-0 left-0 right-0, zIndex 50, padding 16px 32px.
+
+Inner row: relative flex items-center, height 48.
+
+
+Left: with (logo height 28px).
+
+
+Center pill (absolutely positioned, left 50%, translateX -50%):
+
+
+background rgba(28,28,28,0.75)
+
+backdrop-filter blur(12px) (and -webkit-)
+
+border 1px solid rgba(255,255,255,0.10)
+
+borderRadius 9999, padding 6px 8px, gap 4
+
+Items array: [“Advisors”, “What we do”, “AI Intelligence”, “Tools”]
+
+Each link: font-heading, fontSize 14, weight 400, color rgba(255,255,255,0.80), padding 8px 16px, borderRadius 9999.
+
+Hover micro-interaction: onMouseEnter sets background rgba(255,255,255,0.10); onMouseLeave restores transparent (inline JS, no transition duration).
+
+
+Right (ml-auto, gap 8):
+
+
+“Login” link: font-heading, fontSize 14, color rgba(255,255,255,0.80), padding 8px 16px.
+
+“Find an advisor” button: font-heading, background #fff, color #000, fontSize 14, weight 500, padding 10px 20px, borderRadius 9999.
+
+
+HERO CONTENT WRAPPER
+
+absolute inset-0, flex-col items-center justify-center, zIndex 10, paddingTop 80.
+
+
+H1 TITLE (motion.h1)
+
+Initial: opacity 0, y -40. Animate: opacity 1, y 0. Transition: duration 0.9s, ease cubic-bezier [0.22, 1, 0.36, 1].
+
+Style: color #fff, textAlign center, margin 0, fontSize 102, lineHeight 96px, letter-spacing -1.02px.
+
+Three spans, all weight 400:
+
+
+Line 1 (block, font-heading): “Our AI simplify”
+
+Line 2 (block) contains:
+
+
+“your “ in font-heading (Inter Tight upright)
+
+“financial life” in font-serif italic (Instrument Serif italic)
+
+
+CTA BUTTON (motion.button)
+
+Initial: opacity 0, y 30. Animate: opacity 1, y 0. Transition: duration 0.8s, delay 0.25s, ease [0.22, 1, 0.36, 1].
+
+Class font-heading, flex items-center.
+
+Style: marginTop 32, background #fff, color #000, fontSize 15, weight 500, paddingLeft 24, paddingRight 8, paddingTop 6, paddingBottom 6, borderRadius 9999, gap 8.
+
+Text: “Start free trial now”.
+
+Trailing circle: 24x24, borderRadius 9999, background #000, contains lucide ArrowUpRight size 14, color #fff, strokeWidth 2.5.
+
+
+STORY CARD (src/components/StoryCard.tsx) - rendered immediately after the CTA
+
+Wrapper: marginTop 48, perspective 1200.
+
+
+Card (motion.div):
+
+
+Entry animation: opacity 0 -> 1, y 30 -> 0, duration 0.8s, delay 0.2s, ease [0.22, 1, 0.36, 1].
+
+Width 310, height 455, borderRadius 28, background #1a1a1a, overflow hidden, position relative.
+
+transformStyle preserve-3d.
+
+3D tilt micro-interaction: tracks window mousemove, normalizes mouse to range [-1, 1] relative to viewport center, feeds two motion values x,y into useSpring (stiffness 120, damping 18, mass 0.4). Mapped via useTransform: rotateY = sx in [-18, 18] degrees, rotateX = sy in [12, -12] degrees. Applied to the card.
+
+BoxShadow: “0 40px 100px rgba(0,0,0,0.55), 0 8px 24px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.18), inset 0 0 0 1px rgba(255,255,255,0.06)”.
+
+
+Content layers (back to front):
+
+
+absolute inset-0 h-full w-full object-cover, objectPosition “center 20%”.
+
+Soft-light tinted overlay, mixBlendMode soft-light, linear-gradient 160deg from rgba(220,255,90,0.65) 0% -> rgba(170,230,70,0.35) 40% -> rgba(80,140,40,0.25) 100%. Pointer-events none.
+
+Radial highlight at 30% 15% from rgba(230,255,120,0.25) to transparent 55%.
+
+Inset top highlight: borderRadius 28, boxShadow inset 0 1px 0 rgba(255,255,255,0.25).
+
+Two story progress bars (top 24, left 24, right 24, gap 6, zIndex 20). Each is a 3px tall pill with background rgba(0,0,0,0.25), overflow hidden, containing a fill div (background rgba(0,0,0,0.95)). Fill is animated by CSS classes story-bar-1/story-bar-2 (see global animations) - bar 1 fills 0->100% over the first half of a 6s cycle, bar 2 fills during the second half, both loop infinitely.
+
+Lower dark gradient: bottom 0, height 55%, linear-gradient 0deg #040504 20.54% -> rgba(29,37,9,0) 100%.
+
+Headline (left 24, right 24, bottom 88, zIndex 10). motion.h3 with key={slide} so it re-mounts on slide change. Initial opacity 0, y 12; animate to opacity 1, y 0; duration 0.5s, ease [0.22, 1, 0.36, 1]. Style: color #fff, fontSize 38, lineHeight 40px, letterSpacing -0.5px, textShadow 0 2px 18px rgba(0,0,0,0.35).
+
+Two slide states alternating:
+
+
+slide 0: “Guiding” in font-heading bold, then , then “your money” in font-serif italic weight 400.
+
+slide 1: “Building” in font-heading bold, then , then “the future” in font-serif italic weight 400.
+
+Slide timer: setTimeout 3000ms sets slide 1 first; setInterval every 6000ms resets to 0 then to 1 after 3000ms (synchronized with the progress bars).
+
+
+Bottom action row (left 24, right 24, bottom 24, gap 10, zIndex 10):
+
+
+“Top Rated” pill: font-heading, background rgba(255,255,255,0.96), color #0a0a0a, fontSize 13, weight 500, padding 9px 16px, borderRadius 9999, boxShadow “0 6px 18px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.9)”.
+
+Two icon buttons (lucide Heart, then MessageCircle): 38x38, borderRadius 14, background rgba(20,20,20,0.45), backdrop-filter blur(10px), border 1px solid rgba(255,255,255,0.14), inset top highlight rgba(255,255,255,0.12). Icon size 18, color #fff, strokeWidth 1.8.
+
+
+BOTTOM-LEFT BLOCK (Hero)
+
+Absolute, bottom 40, left 40, zIndex 10.
+
+Heading “Nationally recognized”: font-heading, fontSize 21, lineHeight 1.2, color rgba(255,255,255,0.6), marginBottom 18.
+
+Marquee: container width 430, overflow hidden. Inner row class “flex animate-marquee”, gap 54, width max-content.
+
+Logos array (each rendered twice, back-to-back, for seamless loop): https://qclay.design/lovable/synergy/logo-taa.png, https://qclay.design/lovable/synergy/logo-harris.png, https://qclay.design/lovable/synergy/logo-siemens.png, https://qclay.design/lovable/synergy/logo-summit.png.
+
+Each: height 30, width auto, objectFit contain, filter “brightness(0) invert(1) opacity(0.55)” (renders as ~55% white silhouette), flexShrink 0.
+
+Marquee animation: translateX 0 -> -50%, 14s linear infinite.
+
+
+BOTTOM-RIGHT BLOCK (Hero)
+
+Absolute, bottom 40, right 40, zIndex 10, maxWidth 430.
+
+Paragraph: font-heading, color #fff, fontSize 21, lineHeight 1.4, marginBottom 12.
+
+Text: “Synergeus is your all in one financial home, now powered by your own intelligent AI advisor.”
+
+Below it, anchor “Learn more”: font-heading, color #fff, underline, fontSize 21.
+
+
+============================================================
+
+SECTION 2 - ANALYTICS (src/components/Analytics.tsx)
+
+
+ASSETS
+
+https://qclay.design/lovable/synergy/block-1.png (left card background)
+
+https://qclay.design/lovable/synergy/block-2.png (right card background)
+
+https://qclay.design/lovable/synergy/person-2.png (portrait inside right card)
+
+https://qclay.design/lovable/synergy/Logo-lov.svg (Synergeus mark in brand pill)
+
+
+CONTAINER
+
+, background #000, padding 80px 48px, className overflow-hidden.
+
+
+SCROLL TRIGGER
+
+A ref attached to the header div. useInView(ref, { once: true, margin: “-100px” }) gates all entry animations and the count-up animations in this section. Once it enters, isInView stays true.
+
+
+HEADER (textAlign center, marginBottom 64)
+
+Eyebrow: font-heading, fontSize 12, weight 500, letterSpacing 2, color rgba(255,255,255,0.50), marginBottom 16. Text: “ANALYTICS”.
+
+
+H2 (motion.h2):
+
+Initial: opacity 0, filter blur(12px), y 30. Animate (when isInView): opacity 1, filter blur(0px), y 0. Transition duration 0.8s, ease “easeOut”.
+
+Style: margin 0, color #fff. Two block spans, both fontSize 72, weight 400, lineHeight 1, letterSpacing -1.02px:
+
+
+Span 1 (font-heading, upright): “Smarter cash flow”
+
+Span 2 (font-serif italic): “insights at a glance”
+
+
+Subhead (motion.p):
+
+Initial: opacity 0, filter blur(8px), y 20. Animate: opacity 1, filter blur(0px), y 0. Duration 0.8s, easeOut, delay 0.2s.
+
+font-heading, fontSize 16, weight 400, color rgba(255,255,255,0.60), marginTop 16.
+
+Text: “Keep your income and expense in sync with real-time AI”.
+
+
+CARDS ROW
+
+Flex row, gap 16, alignItems stretch, maxWidth 1200, margin 0 auto.
+
+
+CARD 1 - LEFT (flex 1.4, the wider card) motion.div
+
+Entry: opacity 0 -> 1, x -60 -> 0, duration 0.8s, easeOut, delay 0.3s.
+
+borderRadius 24, overflow hidden, position relative, minHeight 480.
+
+
+Background:
+
+
+absolute inset-0 cover, zIndex 0.
+
+Tint layer: absolute inset-0, zIndex 1, background rgba(0,0,0,0.35).
+
+
+Glass overview card (absolute top 32, left 32, right 32, zIndex 2):
+
+
+borderRadius 20, border 1px solid rgba(255,255,255,0.20), background rgba(255,255,255,0.10), backdrop-filter blur(56px), padding 24px 28px.
+
+Top row (flex space-between, marginBottom 8):
+
+
+“MONTHLY OVERVIEW”: font-heading, fontSize 11, weight 500, letterSpacing 1.5, color rgba(255,255,255,0.60).
+
+“MONTHLY”: same style + textDecoration underline.
+
+
+Big amount: font-heading, fontSize 42, weight 400, letterSpacing -1px, color #fff, marginBottom 24, fontVariantNumeric tabular-nums.
+
+Renders .
+
+COUNT-UP HOOK BEHAVIOR: requestAnimationFrame loop, easing eased = 1 - (1 - t)^3 (cubic ease-out). Output formatted with toLocaleString en-US, min/max 2 fraction digits, prefixed with “$”. So it animates from “$100.00” to “$14,250.00” over 1200ms when isInView becomes true.
+
+Dashed divider: width 100%, borderTop 1px dashed rgba(255,255,255,0.20), marginBottom 20.
+
+Three rows (each marginBottom 16). Row labels and values use font-heading; label fontSize 13, color rgba(255,255,255,0.70); value fontSize 13, color #fff, weight 500.
+
+Row 1: “Income” / “$15,500”, bar width 75%, fill linear-gradient(90deg, #1DC47D 60.8%, rgba(29,196,125,0) 100%).
+
+Row 2: “Investment” / “$4,250”, bar width 45%, fill linear-gradient(90deg, #B48F17 55.74%, rgba(180,143,23,0) 100%).
+
+Row 3: “Expenses” / “$8,200”, bar width 60%, fill linear-gradient(90deg, #FFF 52.46%, rgba(255,255,255,0) 100%).
+
+Bar track: height 5, borderRadius 5, width 100%, marginTop 6, position relative. Inside it a base layer (absolute inset-0, opacity 0.13, background linear-gradient 90deg #040504 0% -> rgba(4,5,4,0.50) 100%) and the colored fill (absolute left 0 top 0, height 100%, width per row, borderRadius 5, background per row).
+
+Note: bar fills are static widths, not animated.
+
+
+Bottom text block (absolute bottom 22, left 32, right 32, zIndex 2):
+
+
+Heading: font-serif italic, fontSize 26, weight 400, color #fff, marginBottom 8.
+
+“See the full picture of your finances.”
+
+Paragraph: font-heading, fontSize 13, weight 400, lineHeight 1.6, color rgba(255,255,255,0.65), margin 0.
+
+“AI keeps your income, expenses, and goals effortlessly aligned giving you a clearer view of your financial rhythm, smarter decisions, and lasting stability.”
+
+
+CARD 2 - RIGHT (flex 1) motion.div
+
+Entry: opacity 0 -> 1, x 60 -> 0, duration 0.8s, easeOut, delay 0.45s.
+
+borderRadius 24, overflow hidden, position relative, minHeight 480.
+
+
+Background:
+
+
+absolute inset-0 cover, zIndex 0.
+
+Tint layer: absolute inset-0, zIndex 1, background rgba(0,0,0,0.25).
+
+
+“DAILY” tag (absolute top 24, right 24, zIndex 2): font-heading, fontSize 11, weight 500, letterSpacing 1.5, color rgba(255,255,255,0.70), textDecoration underline.
+
+
+White transaction card (absolute top 32, left 32, zIndex 2):
+
+
+width 200, borderRadius 16, background #fff, padding 16px 18px, boxShadow 0 8px 32px rgba(0,0,0,0.20).
+
+Top row (flex space-between):
+
+
+Amount: font-heading, fontSize 22, weight 400, color #000, letterSpacing -0.5px, fontVariantNumeric tabular-nums. Renders -> animates “$10.00” -> “$925.00” over 1.2s with cubic ease-out, triggered when section enters view (synced with the $14,250 count).
+
+lucide Info icon, size 16, color rgba(0,0,0,0.35).
+
+
+Caption: font-heading, fontSize 12, color rgba(0,0,0,0.45), marginBottom 14. Text: “Sent today”.
+
+Pill button: font-heading, flex space-between items-center, background #000, color #fff, fontSize 13, weight 500, padding 10px 14px, borderRadius 9999, width 100%, no border.
+
+Label: “View transaction”.
+
+Trailing circle: 24x24, borderRadius 50%, background rgba(255,255,255,0.15), contains lucide ArrowUpRight size 13, color #fff.
+
+
+Portrait image (absolute, bottom 140, left 50%, translateX(-50%), zIndex 2):
+
+
+, width 200, height 240, objectFit cover, objectPosition “top center”, borderRadius 16.
+
+
+Brand bar (absolute bottom 160, right 24, zIndex 3, flex items-center, gap 8):
+
+
+Pill: flex items-center, gap 8, background rgba(255,255,255,0.15), backdrop-filter blur(12px), borderRadius 9999, padding 8px 16px 8px 10px.
+
+Contains only . (No separate “Synergeus” text - the SVG already includes the wordmark.)
+
+Adjacent circular button: 36x36, borderRadius 50%, background rgba(255,255,255,0.15), backdrop-filter blur(12px), no border, contains lucide ArrowUpRight size 16, color #fff.
+
+
+Bottom text block (absolute bottom 22, left 32, right 32, zIndex 2):
+
+
+Heading: font-serif italic, fontSize 24, weight 400, color #fff, marginBottom 8. “Your money, perfect transactions”.
+
+Paragraph: font-heading, fontSize 13, weight 400, lineHeight 1.6, color rgba(255,255,255,0.65), margin 0.
+
+“Stay grounded with real-time visibility into where your money’s going and growing.”
+
+
+ANIMATION SUMMARY (Section 2, in firing order once isInView=true)
+
+t=0.0s : H2 starts blur-in (12px -> 0), opacity and y 30 -> 0, over 0.8s easeOut.
+
+t=0.2s : Subhead blur-in (8px -> 0), opacity and y 20 -> 0, over 0.8s easeOut.
+
+t=0.3s : Card 1 slides from x -60 to 0 over 0.8s easeOut.
+
+t=0.45s: Card 2 slides from x 60 to 0 over 0.8s easeOut.
+
+On the same trigger: $14,250.00 counts up from $100.00 (1200ms cubic ease-out) and $925.00 counts up from $10.00 (1200ms cubic ease-out). Both run in parallel as soon as isInView flips true.
+
+No hover or scroll-linked micro-interactions on Section 2 cards beyond this.
+
+
+════════════════════════════════════════
+
+
+SECTION 3 - AI INTELLIGENCE - FULL TECHNICAL SPECIFICATION
+
+
+════════════════════════════════════════
+
+
+OVERVIEW
+
+
+A dark, scroll-triggered showcase section featuring three equal-width cards that demonstrate AI capabilities. Each card has a photographic background image, a dark overlay, an interactive UI element in the upper area, and an aligned title plus description at the bottom. All entry animations are gated on a single useInView trigger that fires once when the section enters the viewport. After that initial reveal, certain elements continue to loop (Card 1 question rotation, Card 3 traveling connector dots).
+
+
+TECH STACK
+
+
+React 18 with TypeScript. framer-motion provides motion, useInView, AnimatePresence. lucide-react provides the ArrowUpRight icon. forwardRef is used so node DOM positions can be measured. Native SVG animateMotion plus mpath is used for path-following traveling dots in Card 3. Styling is done with inline styles, no Tailwind classes inside this component.
+
+
+ASSETS, all served from /public
+
+
+https://qclay.design/lovable/synergy/back-3-1.png is the background for Card 1, a dark moody scene. https://qclay.design/lovable/synergy/back-3-2.png is the background for Card 2, a green grassy landscape. https://qclay.design/lovable/synergy/back-3-3.png is the background for Card 3, a textured surface. https://qclay.design/lovable/synergy/Logo-lov.svg is the Synergeus logo mark, used twice inside Card 1’s glass UI (once large in a white square, once small inside the answer icon chip).
+
+
+FONTS
+
+
+‘Inter Tight’ is used for all body, UI, labels, and the upright heading parts. ‘Instrument Serif’ italic is used for accent and display text such as “AI advisor”, “Natural Language Queries”, “Predictive Analysis”, “Smart Categorization”, the big “3%” in Card 2, and the italic glass pill nodes in Card 3.
+
+
+════════════════════════════════════════
+
+
+CONTAINER
+
+
+A section element with background #000, padding 80px on top, 48px on the sides, 80px on the bottom, overflow hidden.
+
+
+════════════════════════════════════════
+
+
+SCROLL TRIGGER
+
+
+const ref = useRef(null) const isInView = useInView(ref, { once: true, margin: “-100px” })
+
+
+The ref is attached to the centered header wrapper. Once isInView flips to true it stays true. Every entry animation in the section reads from this single boolean.
+
+
+════════════════════════════════════════
+
+
+SECTION HEADER
+
+
+A wrapper div with ref attached, text-align center, margin-bottom 64px.
+
+
+Eyebrow badge above the heading. Plain text “AI INTELLIGENCE”. Font ‘Inter Tight’, size 12, weight 500, letter-spacing 2, color rgba(255,255,255,0.50), margin-bottom 16. No animation of its own, fades in with the page.
+
+
+H2 heading uses motion.h2. initial = { opacity: 0, filter: “blur(12px)”, y: 30 } animate (when isInView) = { opacity: 1, filter: “blur(0px)”, y: 0 } transition = { duration: 0.8, ease: “easeOut” } Style: margin 0, color #fff. Inside the h2 there are two inline spans, both font-size 72, font-weight 400, letter-spacing -1.02px, color #fff. Span 1 is ‘Inter Tight’ upright with the text “Your personal “ (note the trailing space). Span 2 is ‘Instrument Serif’ italic with the text “AI advisor”.
+
+
+Subtext is a motion.p directly under the h2. initial = { opacity: 0, filter: “blur(8px)”, y: 20 } animate (when isInView) = { opacity: 1, filter: “blur(0px)”, y: 0 } transition = { duration: 0.8, ease: “easeOut”, delay: 0.2 } Style: ‘Inter Tight’, size 16, weight 400, color rgba(255,255,255,0.60), line-height 1.6, text-align center, margin-top 16. Text: “Experience the power of artificial intelligence working for your financial well being”.
+
+
+════════════════════════════════════════
+
+
+CARDS ROW
+
+
+A flex row, gap 16, align-items stretch, max-width 1200, margin 0 auto.
+
+
+All three cards: flex 1 (equal width), min-height 560, border-radius 24, overflow hidden, position relative.
+
+
+All three cards share the same entry animation pattern: initial = { opacity: 0, y: 40 } animate (when isInView) = { opacity: 1, y: 0 } transition = { duration: 0.7, ease: “easeOut”, delay: … } Card 1 delay 0.2, Card 2 delay 0.35, Card 3 delay 0.5.
+
+
+All three cards share a common bottom title/description block that is absolutely positioned at bottom 28, left 24, right 24, z-index 2. The title is ‘Instrument Serif’ italic, size 26, weight 400, color #fff, margin-bottom 8. The description is ‘Inter Tight’, size 13, color rgba(255,255,255,0.65), line-height 1.6.
+
+
+════════════════════════════════════════
+
+
+CARD 1 - NATURAL LANGUAGE QUERIES
+
+
+Background image is https://qclay.design/lovable/synergy/back-3-1.png as an absolute img, inset 0, width and height 100%, object-fit cover, z-index 0. Overlay div on top, absolute inset 0, z-index 1, background rgba(0,0,0,0.30).
+
+
+Glass UI card sits in the upper area. position absolute, top 32, left 24, right 24, z-index 2. border-radius 20, border 1px solid rgba(255,255,255,0.20), background rgba(255,255,255,0.10), backdrop-filter blur(56px) and -webkit-backdrop-filter blur(56px), padding 20.
+
+
+Header row inside the glass card: display flex, align-items center, gap 10, margin-bottom 16. Left: a 40x40 white square, border-radius 12, flex centered, containing https://qclay.design/lovable/synergy/Logo-lov.svg width 22 with filter invert(1) so the mark renders black on white. Right: span “Synergeus”, ‘Inter Tight’, size 16, weight 500, color #fff.
+
+
+Divider: 1px dashed rgba(255,255,255,0.20), margin-bottom 16.
+
+
+Rotating question/answer block. A relative container with height 160. Inside, AnimatePresence with mode “wait” wraps a motion.div keyed by qIdx (the current question index in state). On each cycle: exit = { opacity: 0, filter: “blur(8px)”, y: -6 } initial = { opacity: 0, filter: “blur(8px)”, y: 8 } animate = { opacity: 1, filter: “blur(0px)”, y: 0 } transition = { duration: 0.6, ease: [0.22, 1, 0.36, 1] } Style: position absolute, inset 0. A useEffect runs setInterval every 4000ms that increments qIdx modulo questions.length.
+
+
+The questions array has three entries (q and a strings):
+
+
+q “Can I afford to invest $500 this month?”, a “Based on your current income and expenses, you’ll have around $620 in available balance after bills. Investing $500 is within reach - but consider saving at least $200 as an emergency buffer.”
+
+q “When will I reach my savings goal?”, a “At your current savings rate of $850/month, you’ll reach your $10,000 goal in approximately 8 months. Cutting discretionary spending by 15% could shave off 3 weeks.”
+
+q “How much did I spend on food last month?”, a “You spent $643 on food in March - $421 on groceries and $222 on dining out. That’s 18% above your monthly food budget of $545.”
+
+Inside each rotating slide: The question text: ‘Inter Tight’, size 16, weight 500, color #fff, margin-bottom 12, line-height 1.4. The answer block: flex row, gap 8, align-items flex-start. The answer icon: 20x20, border-radius 6, background rgba(255,255,255,0.15), flex centered, flex-shrink 0, contains https://qclay.design/lovable/synergy/Logo-lov.svg width 12 with opacity 0.8. The answer text: ‘Inter Tight’, size 12, weight 400, line-height 1.6, color rgba(255,255,255,0.55).
+
+
+Glass card bottom row: display flex, align-items center, justify-content space-between, margin-top 16. Left: a “View transaction” pill button. display flex, align-items center, gap 8, background #fff, color #000, ‘Inter Tight’, size 13, weight 500, padding “6px 6px 6px 16px”, border-radius 9999, border none, cursor pointer. Trailing badge: a 22x22 black circle (border-radius 50%, background #000), flex centered, containing lucide ArrowUpRight size 12 color #fff. Right: an “ASK YOURS” anchor. ‘Inter Tight’, size 13, weight 500, color rgba(255,255,255,0.80), text-decoration underline, cursor pointer.
+
+
+Card 1 bottom block: title “Natural Language Queries” and description “Ask questions about your finances in plain English and get instant, accurate answers.” Both styled per the shared bottom block rules above.
+
+
+════════════════════════════════════════
+
+
+CARD 2 - PREDICTIVE ANALYSIS
+
+
+Background image https://qclay.design/lovable/synergy/back-3-2.png as the same absolute cover img, z-index 0. Overlay absolute inset 0 z-index 1 background rgba(0,0,0,0.20). Note this is lighter than Card 1’s overlay so the green landscape shows through.
+
+
+White rounded info block sits in the upper area. Outer wrapper: position absolute, top 32, left 24, right 24, z-index 2. Inner block: border-radius 20, background rgba(255,255,255,0.92), padding “24px 20px 20px”, text-align center.
+
+
+Two-line label at top: ‘Inter Tight’, size 12, weight 400, color rgba(0,0,0,0.50), line-height 1.5, margin-bottom 4. Text “Expenses” then a  then “expected to rise”.
+
+
+Big number “3%”: ‘Instrument Serif’ italic, size 52, weight 400, color #000, letter-spacing -1px, line-height 1.
+
+
+Spacer div height 16 between the number and the chart, so the chart doesn’t crowd the number.
+
+
+Chart container: A div with width 280, max-width 100%, height 145, position relative, overflow visible, margin 0 auto. The fixed 280 width matches the natural width of the Tip pill below so the chart visually aligns with it. Inside: an svg with viewBox “60 -25 220 145”, width 100%, height 100%, preserveAspectRatio none, style overflow visible. The negative y in the viewBox gives space above the chart for the floating green dot and connector to render outside the natural chart area.
+
+
+SVG defs: A linearGradient id “areaFill” going top-to-bottom, from rgba(180,210,80,0.85) to rgba(180,210,80,0.10). A clipPath id “reveal” containing a motion.rect at x 60, y -25, height 145, animated from width 0 to width 220 with duration 1.4, ease easeOut, delay 0.3 once isInView is true. This produces a left-to-right wipe reveal of everything inside the clip group.
+
+
+SVG drawing inside : Filled area path, fill url(#areaFill): d = “M 60 75 L 150 20 L 280 28 L 280 120 L 60 120 Z” This shape goes up sharply from the lower-left baseline (60,75), peaks at (150,20), drops slightly to a high plateau at (280,28), then closes down to the chart baseline at y 120.
+
+
+Top stroke path, same shape, no fill: d = “M 60 75 L 150 20 L 280 28” stroke #8DB800, stroke-width 3, stroke-linejoin round, stroke-linecap round.
+
+
+Two dashed vertical guide lines at the left and right edges of the shape: Left: x1 60 y1 75 to x2 60 y2 120, stroke #8DB800, stroke-width 1, stroke-dasharray “3 3”, opacity 0.6. Right: x1 280 y1 28 to x2 280 y2 120, same style.
+
+
+Connector line from the floating dot above the chart down to the chart’s peak: motion.line, x1 150 y1 -15 to x2 150 y2 20, stroke #1DC47D (green), stroke-width 1.2. initial = { pathLength: 0 } animate (when isInView) = { pathLength: 1 } transition = { duration: 0.5, ease: “easeOut”, delay: 1.4 }
+
+
+Floating green dot at the top: motion.circle, cx 150, cy -15, r 4.5, fill #1DC47D. initial = { scale: 0 } animate (when isInView) = { scale: 1 } transition = { duration: 0.3, ease: “easeOut”, delay: 1.7 } style transformOrigin “150px -15px” so the scale anchors at the dot center.
+
+
+Tip pill below the chart: border-radius 9999, border 1px solid rgba(0,0,0,0.12), background rgba(255,255,255,0.80), backdrop-filter blur(8px), padding “8px 16px”, margin-top 16, display inline-block, ‘Inter Tight’, size 11, color rgba(0,0,0,0.60), text-align center. Text “Tip: Reduce subscriptions to maintain savings target.”
+
+
+Card 2 bottom block: title “Predictive Analysis” and description “AI algorithms analyze patterns to forecast future expenses and income trends.” Standard shared bottom block styling.
+
+
+════════════════════════════════════════
+
+
+CARD 3 - SMART CATEGORIZATION
+
+
+Background https://qclay.design/lovable/synergy/back-3-3.png as a cover img z-index 0. Overlay absolute inset 0 z-index 1 background rgba(0,0,0,0.30).
+
+
+Card 3 renders a sub-component CategorizationTree that draws the node tree plus animated SVG connector lines plus traveling glow dots. The tree wrapper is absolutely positioned: top 32, left 16, right 16, bottom 110, z-index 2 (bottom 110 leaves room for the title/description block).
+
+
+The tree is rendered as a flex column inside the wrapper with display flex, flex-direction column, align-items center, gap 18, position relative, z-index 2. There are seven node refs tracked in a ref map keyed by node id: root, transport, entertainment, transportDetail, entertainmentDetail, bills, billsDetail.
+
+
+Visual layout, top to bottom: Row 1: NodeA “Categorization”, centered. Row 2: a flex row with gap 16 containing NodeA “Transportation” on the left and NodeA “Entertainment” on the right. Row 3: a flex row with gap 16, align-items flex-start, containing NodeB “Fuel, rides, car maintenance, public transit” and NodeB “Streaming services, gaming, events”. Row 4: NodeA “Bills and Utilities”, centered. Row 5: NodeB “Electricity, water, gas, internet, phone”, centered.
+
+
+NodeA, the glass italic pill (forwardRef so the tree can measure its DOM rect): motion.div with initial { opacity: 0, scale: 0.85 }, animate when isInView { opacity: 1, scale: 1 }, transition { duration: 0.45, ease: “easeOut”, delay }. Style: border-radius 9999, border 1px solid rgba(255,255,255,0.25), background rgba(255,255,255,0.10), backdrop-filter blur(20px) and -webkit equivalent, padding “10px 20px”, ‘Instrument Serif’ italic, size 16, color #fff, display inline-block, white-space nowrap. Per-node delays: root 0, transport 0.18, entertainment 0.36, bills 0.9.
+
+
+NodeB, the white detail card (also forwardRef): Same motion entry as NodeA (opacity 0 -> 1, scale 0.85 -> 1, duration 0.45, easeOut, with its own delay). Style: border-radius 12, background rgba(255,255,255,0.92), padding “10px 16px”, ‘Inter Tight’, size 12, weight 400, color rgba(0,0,0,0.75), line-height 1.5, display inline-block, max-width 160. Per-node delays: transportDetail 0.54, entertainmentDetail 0.72, billsDetail 1.08.
+
+
+Connector measurement and SVG: A useLayoutEffect runs measure() after layout. measure() reads the container’s bounding rect and each node’s bounding rect and stores, for every node, its top-center point (topX, topY) and bottom-center point (botX, botY) in container-local coordinates. A ResizeObserver on the container plus a window resize listener re-measure on size changes.
+
+
+The connectors are defined in an array of { from, to, delay }: { root -> transport, delay 0.25 } { root -> entertainment, delay 0.4 } { transport -> transportDetail, delay 0.6 } { entertainment -> entertainmentDetail, delay 0.78 } { root -> bills, delay 0.95 } { bills -> billsDetail, delay 1.15 }
+
+
+An svg overlay sits absolutely at top 0 left 0 with width and height equal to the measured container size, pointer-events none, z-index 1 (behind the nodes which are z-index 2). For each connection it renders three things inside a :
+
+
+A motion.path that draws a smooth S-curve from the parent’s bottom point (x1,y1) to the child’s top point (x2,y2). The path uses a cubic Bezier with two control points at the vertical midpoint: d = M ${x1} ${y1} C ${x1} ${midY}, ${x2} ${midY}, ${x2} ${y2} where midY = (y1+y2)/2. stroke rgba(255,255,255,0.35), stroke-width 1, fill none. initial { pathLength: 0, opacity: 0 } animate (when isInView) { pathLength: 1, opacity: 1 } transition { duration: 0.5, ease: “easeOut”, delay } The path has a unique id “tree-path-{i}” so the traveling dot can reference it.
+
+
+A motion.circle “endpoint dot” at the child’s top point (cx x2, cy y2), r 2.5, fill rgba(255,255,255,0.9). It fades in with initial { opacity: 0 }, animate { opacity: 1 }, transition { duration: 0.3, delay: delay + 0.5 }. This creates the small white marker exactly where the line meets the child node.
+
+
+A traveling glow dot that loops along the connector path forever. It is a motion.circle r 3, fill #fff, with style filter “drop-shadow(0 0 4px rgba(255,255,255,0.8))” so it glows. The framer-motion animation only fades it in: initial { opacity: 0 } animate (when isInView) { opacity: [0, 1, 1, 0] } transition { duration: 2.4, delay: delay + 0.6, repeat: Infinity, repeatDelay: 1.2, ease: “easeInOut”, times: [0, 0.1, 0.9, 1] } The motion along the path is done with native SVG inside the circle: . So each connector has a glowing white dot that travels from the parent node down its curve to the child node, fades out, then loops after a 1.2s pause.
+
+
+Card 3 bottom block: title “Smart Categorization” and description “Automatically categorize transactions with machine learning that improves over time.” Standard shared bottom block styling.
+
+
+════════════════════════════════════════
+
+
+ANIMATION TIMELINE, IN FIRING ORDER ONCE isInView FLIPS TRUE
+
+
+t = 0.0s H2 blur-in starts (12px -> 0, y 30 -> 0, opacity 0 -> 1, 0.8s easeOut) t = 0.2s Subtext blur-in starts (8px -> 0, y 20 -> 0, 0.8s easeOut) t = 0.2s Card 1 slides up + fades in (y 40 -> 0, opacity 0 -> 1, 0.7s easeOut) t = 0.35s Card 2 slides up + fades in t = 0.3s Card 2 chart wipe reveal starts (clipPath rect width 0 -> 220, 1.4s easeOut) t = 0.5s Card 3 slides up + fades in t = 0.45s Tree NodeA “Categorization” pops in (scale 0.85 -> 1, opacity 0 -> 1, 0.45s easeOut, base delay 0) t = 0.63s NodeA “Transportation” (delay 0.18) t = 0.70s Tree connector root -> transport draws (pathLength 0 -> 1, 0.5s easeOut, delay 0.25) t = 0.81s NodeA “Entertainment” (delay 0.36) t = 0.85s Tree connector root -> entertainment draws t = 0.99s NodeB transportDetail (delay 0.54) t = 1.05s Connector transport -> transportDetail t = 1.17s NodeB entertainmentDetail (delay 0.72) t = 1.20s Endpoint dot at transport’s child appears (delay 0.6 + 0.5) t = 1.23s Connector entertainment -> entertainmentDetail t = 1.30s Card 2 connector line dot -> peak draws (0.5s, delay 1.4 from isInView) t = 1.35s NodeA “Bills and Utilities” (delay 0.9) t = 1.40s Connector root -> bills t = 1.53s NodeB billsDetail (delay 1.08) t = 1.60s Card 2 floating green dot scales in (0.3s, delay 1.7) t = 1.60s Connector bills -> billsDetail After all connectors finish, the traveling glow dots loop forever along each connector (2.4s duration, 1.2s repeat delay, staggered by their connector delay).
+
+
+LOOPING ANIMATIONS THAT NEVER STOP
+
+
+Card 1 question rotation: setInterval every 4000ms cycles qIdx through the 3 questions. Each transition is exit blur-out (0.6s) then a new entry blur-in (0.6s) via AnimatePresence mode “wait”. This is intentionally soft, no clip-path masks, no sharp edges.
+
+
+Card 3 traveling glow dots: each connector has its own infinite animateMotion plus framer-motion opacity loop. The result is a continuous flow of light from parent nodes down to their children, communicating “data flowing through the categorization tree”.
+
+
+LAYOUT CONSTANTS WORTH REPEATING
+
+
+Cards: flex 1, min-height 560, border-radius 24, overflow hidden. Bottom title/description block on every card: position absolute, bottom 28, left 24, right 24, z-index 2, so titles align horizontally across all three cards regardless of upper content height. Card 2 chart container width 280 matches the natural width of the Tip pill so the chart and pill share a visual column.
+
+
+COLOR REFERENCE
+
+
+Background black #000. Card overlays rgba(0,0,0,0.30) for Card 1 and Card 3, rgba(0,0,0,0.20) for Card 2. White text full opacity #fff for headings. White text 0.60 alpha for subtext, 0.65 for card descriptions, 0.55 for Card 1 answer body, 0.80 for “ASK YOURS”. Glass surfaces: background rgba(255,255,255,0.10) with blur(56px) for Card 1’s main glass, blur(20px) for Card 3 NodeA pills. White content cards: rgba(255,255,255,0.92) for Card 2’s white block, Card 3 NodeB cards, and the Tip pill is rgba(255,255,255,0.80). Green accents: #1DC47D for the dot and connector in Card 2, #8DB800 for the chart stroke and dashed guides, fill gradient rgba(180,210,80,0.85) -> rgba(180,210,80,0.10).
+
+
+That is the complete spec for Section 3 - every text string, color, font, size, animation timing, easing curve, asset path, layout constant, scroll trigger, looping behavior, and SVG construction.

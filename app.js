@@ -1,0 +1,174 @@
+let posts = [];
+let prompts = {};
+let filtered = [];
+let shuffleMode = false;
+const state = { query: '', source: '', type: '', tag: '' };
+
+const els = {
+  grid: document.getElementById('grid'),
+  trend: document.getElementById('trendingTrack'),
+  modal: document.getElementById('modal'),
+  modalBody: document.getElementById('modalBody'),
+  count: document.getElementById('count'),
+  navCount: document.getElementById('navCount'),
+  activeFilters: document.getElementById('activeFilters'),
+  search: document.getElementById('searchInput'),
+  sourceSelect: document.getElementById('sourceSelect'),
+  typeSelect: document.getElementById('typeSelect'),
+  sourceFacet: document.getElementById('sourceFacet'),
+  tagFacet: document.getElementById('tagFacet'),
+  quickChips: document.getElementById('quickChips'),
+  scoutList: document.getElementById('scoutList')
+};
+
+async function loadJson(path, fallback){
+  try { const r = await fetch(path); if(!r.ok) throw new Error(r.status); return await r.json(); }
+  catch(e) { console.warn('Could not load', path, e); return fallback; }
+}
+function esc(s){ return String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function sourceOf(p){ return p.sourceName || p.author || 'Local archive'; }
+function typeOf(p){ return p.sectionType || 'Prompt'; }
+function hasPrompt(p){ return Boolean(prompts[p.slug] || prompts[p.id]); }
+function getPrompt(p){ return prompts[p.slug] || prompts[p.id] || ''; }
+function hasPreview(p){ return Boolean(p.media || p.thumbnail); }
+function mediaEl(p, cls=''){
+  const src = p.media || p.thumbnail || '';
+  const poster = p.thumbnail || '';
+  if((p.mimeType||'').includes('video') && src){ return `<video class="${cls}" src="${esc(src)}" poster="${esc(poster)}" muted loop playsinline preload="metadata"></video>`; }
+  if(poster || src){ return `<img class="${cls}" src="${esc(poster || src)}" alt="">`; }
+  const tool = esc((p.aiTools || [])[0] || 'Prompt');
+  const title = esc(p.title || 'Curated prompt');
+  const source = esc(sourceOf(p));
+  return `<div class="${cls} prompt-placeholder"><span>${tool}</span><strong>${title}</strong><em>${source}</em></div>`;
+}
+function countBy(items, fn){
+  const map = new Map();
+  items.forEach(item => { const key = fn(item); if(key) map.set(key, (map.get(key)||0)+1); });
+  return [...map.entries()].sort((a,b)=>b[1]-a[1] || a[0].localeCompare(b[0]));
+}
+function normalize(s){ return String(s||'').toLowerCase(); }
+function optionHtml(values){ return values.map(v => `<option value="${esc(v)}">${esc(v)}</option>`).join(''); }
+function setupControls(){
+  const sources = countBy(posts, sourceOf).map(([k])=>k);
+  const types = countBy(posts, typeOf).map(([k])=>k);
+  els.sourceSelect.innerHTML = '<option value="">All sources</option>' + optionHtml(sources);
+  els.typeSelect.innerHTML = '<option value="">All types</option>' + optionHtml(types);
+  const chips = ['dashboard','landing page','animation','hero','cards','Magic UI','Animata','Cult UI','MotionSites.ai','Tailark'];
+  els.quickChips.innerHTML = chips.map(c => `<button type="button" data-chip="${esc(c)}">${esc(c)}</button>`).join('');
+}
+function applyFilters(){
+  const q = normalize(state.query);
+  filtered = posts.filter(p => {
+    const hay = normalize([p.title, p.sectionType, sourceOf(p), p.author, ...(p.tags||[]), ...(p.aiTools||[])].join(' '));
+    if(q && !hay.includes(q)) return false;
+    if(state.source && sourceOf(p) !== state.source) return false;
+    if(state.type && typeOf(p) !== state.type) return false;
+    if(state.tag && !hay.includes(normalize(state.tag))) return false;
+    return true;
+  });
+  if(shuffleMode) filtered = [...filtered].sort(() => Math.random() - 0.5).slice(0, 36);
+}
+function renderStats(){
+  const curated = posts.filter(p => p.promptOnly).length;
+  const previews = posts.filter(p => p.promptOnly && hasPreview(p)).length;
+  const sources = new Set(posts.map(sourceOf)).size;
+  document.getElementById('statTotal').textContent = posts.length;
+  document.getElementById('statCurated').textContent = curated;
+  document.getElementById('statPreviews').textContent = previews;
+  document.getElementById('statSources').textContent = sources;
+  document.getElementById('promptTotal').textContent = `${Object.keys(prompts).length} prompts`;
+  els.navCount.textContent = `${posts.length} cards`;
+  const latest = posts.slice(-5).reverse();
+  els.scoutList.innerHTML = latest.map(p => `<button type="button" data-open="${esc(p.id)}"><span>${esc(sourceOf(p))}</span><b>${esc(p.title)}</b></button>`).join('');
+}
+function renderFacets(){
+  const srcCounts = countBy(posts, sourceOf).slice(0, 12);
+  els.sourceFacet.innerHTML = srcCounts.map(([name,n]) => `<button type="button" class="${state.source===name?'active':''}" data-source="${esc(name)}"><span>${esc(name)}</span><b>${n}</b></button>`).join('');
+  const tagCounts = countBy(posts.flatMap(p => (p.tags||[]).map(t => ({tag:t}))), x => x.tag).slice(0, 22);
+  els.tagFacet.innerHTML = tagCounts.map(([name,n]) => `<button type="button" class="${state.tag===name?'active':''}" data-tag="${esc(name)}"><span>${esc(name)}</span><b>${n}</b></button>`).join('');
+}
+function card(p, i){
+  const copyLabel = hasPrompt(p) ? 'Copy prompt' : 'View prompt';
+  const tags = (p.tags||[]).slice(0,5).map(t=>`<span class="tag">${esc(t)}</span>`).join('');
+  const tools = (p.aiTools||[]).slice(0,4).map(t=>`<span class="pill">${esc(t)}</span>`).join('');
+  return `<article class="card" data-id="${esc(p.id)}" style="--i:${i%18}">
+    <div class="thumb">${mediaEl(p)}<button class="copy ${hasPrompt(p)?'has-prompt':''}" type="button">${copyLabel}</button><span class="source-chip">${esc(sourceOf(p))}</span></div>
+    <div class="card-body"><div class="toolrow">${tools}</div><h3>${esc(p.title)}</h3><p>${esc(typeOf(p))}</p><div class="tags">${tags}</div></div>
+  </article>`;
+}
+function renderShowcase(){
+  const preferred = posts.filter(p => p.promptOnly && hasPreview(p)).slice(-8).reverse();
+  els.trend.innerHTML = preferred.slice(0,6).map((p,i)=>`<article class="trend-card" data-id="${esc(p.id)}" style="--i:${i}">${mediaEl(p)}<div class="trend-meta"><span>${esc(sourceOf(p))}</span><h3>${esc(p.title)}</h3><p>${esc(typeOf(p))}</p></div></article>`).join('');
+}
+function render(){
+  applyFilters();
+  renderStats();
+  renderFacets();
+  renderShowcase();
+  const promptCount = Object.keys(prompts).length;
+  const curatedCount = posts.filter(p => p.promptOnly).length;
+  const curatedWithPreview = posts.filter(p => p.promptOnly && hasPreview(p)).length;
+  els.count.textContent = `${filtered.length} shown · ${posts.length} cards · ${curatedCount} curated (${curatedWithPreview} with previews) · ${promptCount} local prompts`;
+  const active = [state.query && `search: ${state.query}`, state.source && `source: ${state.source}`, state.type && `type: ${state.type}`, state.tag && `tag: ${state.tag}`, shuffleMode && 'random set'].filter(Boolean);
+  els.activeFilters.textContent = active.join(' · ');
+  els.grid.innerHTML = filtered.length ? filtered.map(card).join('') : `<div class="empty-state"><h3>No matching cards</h3><p>Clear filters or try a broader search like dashboard, hero, animation, or Magic UI.</p></div>`;
+  document.querySelectorAll('video').forEach(v=>{ v.addEventListener('mouseenter',()=>v.play().catch(()=>{})); v.addEventListener('mouseleave',()=>{v.pause(); v.currentTime=0;}); if(v.closest('.trend-card')) v.play().catch(()=>{}); });
+}
+async function copyPrompt(p){
+  const text = getPrompt(p);
+  if(!text){ openModal(p); return; }
+  try{ await navigator.clipboard.writeText(text); }
+  catch(e){
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.style.position = 'fixed'; ta.style.left = '-9999px';
+    document.body.appendChild(ta); ta.focus(); ta.select(); document.execCommand('copy'); ta.remove();
+  }
+  const btn = document.querySelector(`[data-id="${CSS.escape(p.id)}"] .copy`);
+  if(btn){ const old = btn.textContent; btn.textContent = 'Copied'; setTimeout(()=>btn.textContent=old, 1400); }
+}
+function openModal(p){
+  const prompt = getPrompt(p);
+  const source = p.sourceUrl || p.sourcePreview || '';
+  els.modalBody.innerHTML = `${mediaEl(p,'modal-media')}<div class="modal-content">
+    <span class="eyebrow">${esc(sourceOf(p))}</span><h2>${esc(p.title)}</h2><p>${esc(typeOf(p))}</p>
+    <div class="modal-tags">${(p.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div>
+    <div class="modal-actions">${prompt?`<button id="copyFromModal" type="button">Copy local prompt</button>`:''}${source?`<a href="${esc(source)}" target="_blank" rel="noreferrer">Open source</a>`:''}</div>
+    ${prompt?`<pre class="prompt-preview">${esc(prompt.slice(0,7000))}</pre>`:`<div class="notice"><b>No local prompt yet.</b><br><code>python3 scripts/add_prompt.py ${esc(p.slug)} --from-clipboard</code></div>`}
+  </div>`;
+  els.modal.showModal();
+  const b = document.getElementById('copyFromModal');
+  if(b) b.onclick = () => copyPrompt(p);
+}
+function findPostFromEvent(e){
+  const item = e.target.closest('[data-id], [data-open]');
+  if(!item) return null;
+  const id = item.dataset.id || item.dataset.open;
+  return posts.find(x => x.id === id);
+}
+
+document.addEventListener('click', e => {
+  if(e.target.closest('.copy')){ const p = findPostFromEvent(e); if(p) copyPrompt(p); return; }
+  const p = findPostFromEvent(e); if(p) openModal(p);
+  const sourceBtn = e.target.closest('[data-source]');
+  if(sourceBtn){ state.source = sourceBtn.dataset.source === state.source ? '' : sourceBtn.dataset.source; els.sourceSelect.value = state.source; shuffleMode = false; render(); }
+  const tagBtn = e.target.closest('[data-tag]');
+  if(tagBtn){ state.tag = tagBtn.dataset.tag === state.tag ? '' : tagBtn.dataset.tag; shuffleMode = false; render(); }
+  const chipBtn = e.target.closest('[data-chip]');
+  if(chipBtn){ state.query = chipBtn.dataset.chip; els.search.value = state.query; shuffleMode = false; render(); }
+});
+document.getElementById('closeModal').onclick = () => els.modal.close();
+els.modal.addEventListener('click', e => { if(e.target === els.modal) els.modal.close(); });
+els.search.addEventListener('input', e => { state.query = e.target.value.trim(); shuffleMode = false; render(); });
+els.sourceSelect.addEventListener('change', e => { state.source = e.target.value; shuffleMode = false; render(); });
+els.typeSelect.addEventListener('change', e => { state.type = e.target.value; shuffleMode = false; render(); });
+document.getElementById('clearFilters').onclick = () => { state.query=''; state.source=''; state.type=''; state.tag=''; shuffleMode=false; els.search.value=''; els.sourceSelect.value=''; els.typeSelect.value=''; render(); };
+document.getElementById('shuffleButton').onclick = () => { shuffleMode = !shuffleMode; render(); document.getElementById('library').scrollIntoView({behavior:'smooth'}); };
+document.addEventListener('keydown', e => { if(e.key === '/' && document.activeElement !== els.search){ e.preventDefault(); els.search.focus(); } });
+
+(async function init(){
+  posts = await loadJson('data/posts.json', []);
+  prompts = await loadJson('data/prompts.json', {});
+  filtered = posts;
+  setupControls();
+  render();
+})();

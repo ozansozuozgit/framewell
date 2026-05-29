@@ -1,0 +1,17 @@
+PUBLIC OPEN-SOURCE SEED PROMPT
+Source: Open CoDesign examples, MIT license
+Source URL: https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts
+
+Create an interactive particle-field landing section for a data infrastructure company called Vector Loom. Show a dark canvas-like hero with 80-120 tiny particles connected by subtle lines, mouse/keyboard-safe hover attraction, headline, short technical subhead, metric chips, and CTA row. Use CSS/Canvas or SVG with no external libraries, provide reduced-motion fallback, and keep content readable across mobile and desktop.
+
+LAFYS-COLLECTION EXPANSION
+
+Build this as a complete, copy-pasteable frontend artifact, not a tiny component. Use React + Vite or Next.js, TypeScript, Tailwind CSS, and shadcn/ui primitives only where they genuinely improve the result. If a chart, map, product screenshot, avatar, or image is needed, create it with CSS/SVG/inline mock data instead of hotlinking external assets.
+
+Quality bar:
+- Make the composition feel designed, not template-generated: strong hierarchy, specific product copy, real labels, believable metrics, and no lorem ipsum.
+- Include responsive behavior for mobile, tablet, and desktop.
+- Add polished interaction states: hover, focus, active, selected, empty/error/loading where the surface calls for it.
+- Use accessible contrast, keyboard-visible controls, semantic landmarks, and reduced-motion fallbacks for any animation.
+- Keep visual style cohesive: pick one strong aesthetic direction and carry it through typography, spacing, color, borders, and motion.
+- Return all code needed for the page/screen and avoid TODO placeholders.

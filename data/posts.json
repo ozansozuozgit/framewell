@@ -1,0 +1,5069 @@
+[
+  {
+    "id": "69f0d4e143687485f0b01afe",
+    "title": "Synex",
+    "sectionType": "Growing Grass Effect",
+    "slug": "synex",
+    "plan": "free",
+    "author": "Bogdan Falin",
+    "aiTools": [
+      "Lovable"
+    ],
+    "tags": [
+      "hover",
+      "3D",
+      "hero section",
+      "lovable"
+    ],
+    "media": "assets/previews/synex_KxIcsq3R.mp4",
+    "thumbnail": "assets/thumbnails/synex_KxIcsq3R_thumbnail.jpg",
+    "avatar": "assets/avatars/IMG_0914-400x400.webp",
+    "mimeType": "video/mp4",
+    "duration": 12.017,
+    "width": 1592,
+    "height": 1080,
+    "sourcePreview": "https://admin.lafys.com/api/media/file/synex_KxIcsq3R.mp4"
+  },
+  {
+    "id": "69f0dda143687485f0b01bdd",
+    "title": "Synergeus",
+    "sectionType": "3 Sections",
+    "slug": "synergeus",
+    "plan": "free",
+    "author": "Bogdan Falin",
+    "aiTools": [
+      "Lovable"
+    ],
+    "tags": [
+      "hero section",
+      "lovable",
+      "landing page",
+      "glass effect"
+    ],
+    "media": "assets/previews/synergeus_JaaqgDoA.mp4",
+    "thumbnail": "assets/thumbnails/synergeus_JaaqgDoA_thumbnail.jpg",
+    "avatar": "assets/avatars/IMG_0914-400x400.webp",
+    "mimeType": "video/mp4",
+    "duration": 20.55,
+    "width": 1598,
+    "height": 1080,
+    "sourcePreview": "https://admin.lafys.com/api/media/file/synergeus_JaaqgDoA.mp4"
+  },
+  {
+    "id": "69f0e94443687485f0b01d74",
+    "title": "Fashion Website",
+    "sectionType": "Creative transition between the 2nd section",
+    "slug": "fashion-website",
+    "plan": "free",
+    "author": "Bogdan Falin",
+    "aiTools": [
+      "Lovable"
+    ],
+    "tags": [
+      "fashion",
+      "landing page",
+      "website",
+      "section transition"
+    ],
+    "media": "assets/previews/bags_EV1r0FBY.mp4",
+    "thumbnail": "assets/thumbnails/bags_EV1r0FBY_thumbnail.jpg",
+    "avatar": "assets/avatars/IMG_0914-400x400.webp",
+    "mimeType": "video/mp4",
+    "duration": 24.317,
+    "width": 1714,
+    "height": 1080,
+    "sourcePreview": "https://admin.lafys.com/api/media/file/bags_EV1r0FBY.mp4"
+  },
+  {
+    "id": "69f0eb0443687485f0b01e10",
+    "title": "Website cards animation",
+    "sectionType": "Popular website, you've certainly seen on Pinterest",
+    "slug": "website-cards-animation",
+    "plan": "free",
+    "author": "Bogdan Falin",
+    "aiTools": [
+      "Lovable"
+    ],
+    "tags": [
+      "animation",
+      "website",
+      "hero section",
+      "popular",
+      "lovable"
+    ],
+    "media": "assets/previews/4d32e42469657663b66a3c08aeccd70e_1DkflpwZ.mp4",
+    "thumbnail": "assets/thumbnails/4d32e42469657663b66a3c08aeccd70e_1DkflpwZ_thumbnail.jpg",
+    "avatar": "assets/avatars/IMG_0914-400x400.webp",
+    "mimeType": "video/mp4",
+    "duration": 9.942,
+    "width": 1600,
+    "height": 1200,
+    "sourcePreview": "https://admin.lafys.com/api/media/file/4d32e42469657663b66a3c08aeccd70e_1DkflpwZ.mp4"
+  },
+  {
+    "id": "curated-eaaca150d190b058",
+    "title": "3D motion studio hero",
+    "sectionType": "Agency / cinematic",
+    "slug": "motionsites-framelix-3d-studios",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai Prompt Library",
+    "sourceUrl": "https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/Framelix_3D_Studios.md",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "3D",
+      "video",
+      "hero section",
+      "framer motion",
+      "dark"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "media": "assets/previews/motionsites-framelix-3d-studios.mp4",
+    "mimeType": "video/mp4",
+    "sourcePreview": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260223_060517_9feec9ab-18e4-477a-b034-de5903a67e91.mp4",
+    "thumbnail": "assets/thumbnails/motionsites-framelix-3d-studios_thumbnail.jpg"
+  },
+  {
+    "id": "curated-cd0c10dbcd9e676f",
+    "title": "Liquid-glass agency landing page",
+    "sectionType": "Apple-style liquid glass",
+    "slug": "motionsites-liquid-glass-agency",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai Prompt Library",
+    "sourceUrl": "https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/Liquid_Glass_Agency.md",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "glassmorphism",
+      "landing page",
+      "agency",
+      "dark",
+      "shadcn"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "media": "assets/previews/motionsites-liquid-glass-agency.mp4",
+    "mimeType": "video/mp4",
+    "sourcePreview": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260307_083826_e938b29f-a43a-41ec-a153-3d4730578ab8.mp4",
+    "thumbnail": "assets/thumbnails/motionsites-liquid-glass-agency_thumbnail.jpg"
+  },
+  {
+    "id": "curated-6c21b81646367051",
+    "title": "Space voyage cinematic hero",
+    "sectionType": "Cinematic space hero",
+    "slug": "motionsites-space-voyage",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai Prompt Library",
+    "sourceUrl": "https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/Space_Voyage.md",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "hero section",
+      "space",
+      "framer motion",
+      "cinematic"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "media": "assets/previews/motionsites-space-voyage.mp4",
+    "mimeType": "video/mp4",
+    "sourcePreview": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260306_115329_5e00c9c5-4d69-49b7-94c3-9c31c60bb644.mp4",
+    "thumbnail": "assets/thumbnails/motionsites-space-voyage_thumbnail.jpg"
+  },
+  {
+    "id": "curated-1700dc425f2d8f49",
+    "title": "Cosmic portfolio landing page",
+    "sectionType": "GSAP portfolio system",
+    "slug": "motionsites-portfolio-cosmic",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai Prompt Library",
+    "sourceUrl": "https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/Portfolio_Cosmic.md",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "portfolio",
+      "GSAP",
+      "video",
+      "landing page",
+      "dark"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "thumbnail": "assets/thumbnails/motionsites-portfolio-cosmic_thumbnail.jpg",
+    "sourcePreview": "https://stream.mux.com/Aa02T7oM1wH5Mk5EEVDYhbZ1ChcdhRsS2m1NYyx4Ua1g.m3u8",
+    "sourceThumbnail": "https://image.mux.com/Aa02T7oM1wH5Mk5EEVDYhbZ1ChcdhRsS2m1NYyx4Ua1g/thumbnail.jpg?time=2&width=800"
+  },
+  {
+    "id": "curated-f2365e760bd5ef7e",
+    "title": "Wealth video hero",
+    "sectionType": "Fintech video hero",
+    "slug": "motionsites-wealth-video-hero",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai Prompt Library",
+    "sourceUrl": "https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/Wealth_Video_Hero.md",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "fintech",
+      "hero section",
+      "video",
+      "wealth"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "media": "assets/previews/motionsites-wealth-video-hero.mp4",
+    "mimeType": "video/mp4",
+    "sourcePreview": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260207_050933_33e2620d-09cd-43a2-80ef-4cdbb42f4194.mp4",
+    "thumbnail": "assets/thumbnails/motionsites-wealth-video-hero_thumbnail.jpg"
+  },
+  {
+    "id": "curated-8261c67772bf5db2",
+    "title": "Weblex dark hero",
+    "sectionType": "Fullscreen dark video hero",
+    "slug": "motionsites-weblex-dark-hero",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai Prompt Library",
+    "sourceUrl": "https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/Weblex_Dark_Hero.md",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "hero section",
+      "video",
+      "dark",
+      "navbar"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "media": "assets/previews/motionsites-weblex-dark-hero.mp4",
+    "mimeType": "video/mp4",
+    "sourcePreview": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260221_085953_8463b46e-ba85-4bb7-912a-1feaf346e970.mp4",
+    "thumbnail": "assets/thumbnails/motionsites-weblex-dark-hero_thumbnail.jpg"
+  },
+  {
+    "id": "curated-873b808680fe6b35",
+    "title": "Terra geo-map SaaS hero",
+    "sectionType": "Animated map SaaS hero",
+    "slug": "motionsites-terra-geo-map",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai Prompt Library",
+    "sourceUrl": "https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/Terra_Geo_Map.md",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "SaaS",
+      "map",
+      "hero section",
+      "animation"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "media": "assets/previews/motionsites-terra-geo-map.mp4",
+    "mimeType": "video/mp4",
+    "sourcePreview": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260325_092310_5c71bab5-63cd-4a95-9390-cc6a1189d553.mp4",
+    "thumbnail": "assets/thumbnails/motionsites-terra-geo-map_thumbnail.jpg"
+  },
+  {
+    "id": "curated-bec4c4bdf389dc86",
+    "title": "New Era automotive hero",
+    "sectionType": "Automotive hero animation",
+    "slug": "motionsites-new-era-automotive-hero",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai Prompt Library",
+    "sourceUrl": "https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/New_Era_Automotive_Hero.md",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "automotive",
+      "hero section",
+      "typography",
+      "video"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "media": "assets/previews/motionsites-new-era-automotive-hero.mp4",
+    "mimeType": "video/mp4",
+    "sourcePreview": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260213_051817_c7d8ccc6-bfaa-417c-8474-e5cefeea26b4.mp4",
+    "thumbnail": "assets/thumbnails/motionsites-new-era-automotive-hero_thumbnail.jpg"
+  },
+  {
+    "id": "curated-a3dc1ae2f1eaf197",
+    "title": "Premium loader animation",
+    "sectionType": "Fullscreen loading component",
+    "slug": "motionsites-loader-animation",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai Prompt Library",
+    "sourceUrl": "https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/Loader_Animation.md",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "loader",
+      "animation",
+      "component",
+      "framer motion"
+    ],
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-2d7fb08aa3f9676a",
+    "title": "Buzzentic agency hero",
+    "sectionType": "High-impact agency video hero",
+    "slug": "motionsites-buzzentic-agency",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai Prompt Library",
+    "sourceUrl": "https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/Buzzentic_Agency.md",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "agency",
+      "hero section",
+      "video",
+      "tailwind"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "media": "assets/previews/motionsites-buzzentic-agency.mp4",
+    "mimeType": "video/mp4",
+    "sourcePreview": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260306_074215_04640ca7-042c-45d6-bb56-58b1e8a42489.mp4",
+    "thumbnail": "assets/thumbnails/motionsites-buzzentic-agency_thumbnail.jpg"
+  },
+  {
+    "id": "curated-e0893dbe635f5fdd",
+    "title": "AI designer agency landing page",
+    "sectionType": "Dark AI agency landing page",
+    "slug": "motionsites-ai-designer-agency",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai Prompt Library",
+    "sourceUrl": "https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/AI_Designer_Agency.md",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "AI",
+      "agency",
+      "landing page",
+      "dark",
+      "animation"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "media": "assets/previews/motionsites-ai-designer-agency.mp4",
+    "mimeType": "video/mp4",
+    "sourcePreview": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260326_073936_8dd07fdb-4f6b-4220-a3f0-9dedfaab0c88.mp4",
+    "thumbnail": "assets/thumbnails/motionsites-ai-designer-agency_thumbnail.jpg"
+  },
+  {
+    "id": "curated-1805dddd9dd33e7a",
+    "title": "MotionZ premium gaming landing page",
+    "sectionType": "Gaming universe / GSAP bento landing",
+    "slug": "motionsites-motionz-premium",
+    "plan": "free",
+    "author": "Nomaan Khan / MotionSites",
+    "sourceName": "MotionSites.ai prompt library fork",
+    "sourceUrl": "https://github.com/nomaan5541/motionsites.ai-prompt-library/blob/main/prompts/Zentry_Premium.md",
+    "aiTools": [
+      "Claude",
+      "v0",
+      "Lovable"
+    ],
+    "tags": [
+      "GSAP",
+      "gaming",
+      "bento",
+      "video",
+      "landing page"
+    ],
+    "promptOnly": true
+  },
+  {
+    "id": "curated-16d3704a0a3989ea",
+    "title": "v0 visual generation template",
+    "sectionType": "Modular prompt template from Reddit/GitHub",
+    "slug": "reddit-v0-visual-generation-template",
+    "plan": "free",
+    "author": "Tech Nomad",
+    "sourceName": "Reddit + AI Product Development Toolkit",
+    "sourceUrl": "https://github.com/TechNomadCode/AI-Product-Development-Toolkit/blob/main/v0-Design/v0.dev-visual-generation-prompt.md",
+    "aiTools": [
+      "v0"
+    ],
+    "tags": [
+      "v0",
+      "template",
+      "prompt engineering",
+      "UI design"
+    ],
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-d51050ffeaf84e12",
+    "title": "Render & Co. 3D animation studio",
+    "sectionType": "X seed prompt expanded into a Lafys-style spec",
+    "slug": "x-render-and-co-3d-animation-studio",
+    "plan": "free",
+    "author": "Teri_AI / local expansion",
+    "sourceName": "X public post seed",
+    "sourceUrl": "https://x.com/i/status/2040140251952189807",
+    "aiTools": [
+      "Claude",
+      "Lovable",
+      "v0"
+    ],
+    "tags": [
+      "3D",
+      "studio",
+      "neon",
+      "hover",
+      "landing page"
+    ],
+    "promptOnly": true
+  },
+  {
+    "id": "curated-5caf331daa4d21d3",
+    "title": "Luxury tea scrollytelling landing page",
+    "sectionType": "X GSAP tea animation seed expanded",
+    "slug": "x-luxury-tea-scrollytelling-gsap",
+    "plan": "free",
+    "author": "sukoopuff / local expansion",
+    "sourceName": "X public post seed",
+    "sourceUrl": "https://x.com/i/status/2054151716468347208",
+    "aiTools": [
+      "Claude",
+      "Lovable",
+      "v0"
+    ],
+    "tags": [
+      "GSAP",
+      "scrollytelling",
+      "luxury",
+      "landing page",
+      "animation"
+    ],
+    "promptOnly": true
+  },
+  {
+    "id": "curated-ocd-88eec2b13875717f",
+    "title": "Field Notes productivity landing page",
+    "sectionType": "Full marketing page",
+    "slug": "opencodesign-field-notes-landing-page",
+    "plan": "free",
+    "author": "Open CoDesign",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "aiTools": [
+      "v0",
+      "Claude",
+      "Lovable",
+      "Bolt"
+    ],
+    "tags": [
+      "landing page",
+      "productivity",
+      "editorial",
+      "full page",
+      "AI-ready"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "thumbnail": "assets/thumbnails/opencodesign-field-notes-landing-page.svg"
+  },
+  {
+    "id": "curated-ocd-d82e63e323a10043",
+    "title": "Northstar Canvas launch page",
+    "sectionType": "Campaign / launch page",
+    "slug": "opencodesign-product-launch-page",
+    "plan": "free",
+    "author": "Open CoDesign",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "aiTools": [
+      "v0",
+      "Claude",
+      "Lovable",
+      "Bolt"
+    ],
+    "tags": [
+      "landing page",
+      "product launch",
+      "SaaS",
+      "marketing",
+      "CSS visuals"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "thumbnail": "assets/thumbnails/opencodesign-product-launch-page.svg"
+  },
+  {
+    "id": "curated-ocd-d34190c00aa6222b",
+    "title": "Boutique agency homepage",
+    "sectionType": "Full agency website",
+    "slug": "opencodesign-boutique-agency-homepage",
+    "plan": "free",
+    "author": "Open CoDesign",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "aiTools": [
+      "v0",
+      "Claude",
+      "Lovable",
+      "Bolt"
+    ],
+    "tags": [
+      "agency",
+      "homepage",
+      "portfolio",
+      "editorial",
+      "full page"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "thumbnail": "assets/thumbnails/opencodesign-boutique-agency-homepage.svg"
+  },
+  {
+    "id": "curated-ocd-e79657e2b736caf8",
+    "title": "Open-source devtool homepage",
+    "sectionType": "Developer landing page",
+    "slug": "opencodesign-open-source-project-homepage",
+    "plan": "free",
+    "author": "Open CoDesign",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "aiTools": [
+      "v0",
+      "Claude",
+      "Lovable",
+      "Bolt"
+    ],
+    "tags": [
+      "developer tool",
+      "open source",
+      "landing page",
+      "terminal",
+      "architecture"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "thumbnail": "assets/thumbnails/opencodesign-open-source-project-homepage.svg"
+  },
+  {
+    "id": "curated-ocd-c3a32f18ea86aacd",
+    "title": "Enterprise security trust page",
+    "sectionType": "Trust center / SaaS page",
+    "slug": "opencodesign-enterprise-security-page",
+    "plan": "free",
+    "author": "Open CoDesign",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "aiTools": [
+      "v0",
+      "Claude",
+      "Lovable",
+      "Bolt"
+    ],
+    "tags": [
+      "enterprise",
+      "security",
+      "SaaS",
+      "landing page",
+      "diagram"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "thumbnail": "assets/thumbnails/opencodesign-enterprise-security-page.svg"
+  },
+  {
+    "id": "curated-ocd-698ec450ae123a47",
+    "title": "AI notebook waitlist page",
+    "sectionType": "Editorial waitlist page",
+    "slug": "opencodesign-ai-notebook-waitlist",
+    "plan": "free",
+    "author": "Open CoDesign",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "aiTools": [
+      "v0",
+      "Claude",
+      "Lovable",
+      "Bolt"
+    ],
+    "tags": [
+      "waitlist",
+      "AI product",
+      "landing page",
+      "forms",
+      "editorial"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "thumbnail": "assets/thumbnails/opencodesign-ai-notebook-waitlist.svg"
+  },
+  {
+    "id": "curated-ocd-7f0b915977df13d2",
+    "title": "AI writing assistant hero",
+    "sectionType": "Hero section",
+    "slug": "opencodesign-ai-writing-assistant-hero",
+    "plan": "free",
+    "author": "Open CoDesign",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "aiTools": [
+      "v0",
+      "Claude",
+      "Lovable",
+      "Bolt"
+    ],
+    "tags": [
+      "hero section",
+      "AI product",
+      "animated",
+      "CSS SVG",
+      "landing page"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "thumbnail": "assets/thumbnails/opencodesign-ai-writing-assistant-hero.svg"
+  },
+  {
+    "id": "curated-ocd-978170572dfa9bf2",
+    "title": "Particle-field data infra hero",
+    "sectionType": "Interactive landing hero",
+    "slug": "opencodesign-particle-field-data-hero",
+    "plan": "free",
+    "author": "Open CoDesign",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "aiTools": [
+      "v0",
+      "Claude",
+      "Lovable",
+      "Bolt"
+    ],
+    "tags": [
+      "hero section",
+      "animation",
+      "data infra",
+      "interactive",
+      "canvas"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "thumbnail": "assets/thumbnails/opencodesign-particle-field-data-hero.svg"
+  },
+  {
+    "id": "curated-ocd-f837ea03fdbdeacf",
+    "title": "SaaS revenue analytics dashboard",
+    "sectionType": "Full analytics dashboard",
+    "slug": "opencodesign-saas-revenue-dashboard",
+    "plan": "free",
+    "author": "Open CoDesign",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "aiTools": [
+      "v0",
+      "Claude",
+      "Lovable",
+      "Bolt"
+    ],
+    "tags": [
+      "dashboard",
+      "analytics",
+      "SaaS",
+      "data visualization",
+      "dark UI"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "thumbnail": "assets/thumbnails/opencodesign-saas-revenue-dashboard.svg"
+  },
+  {
+    "id": "curated-ocd-c2d7a008dff05222",
+    "title": "Finance operations dashboard",
+    "sectionType": "CFO command dashboard",
+    "slug": "opencodesign-finance-ops-dashboard",
+    "plan": "free",
+    "author": "Open CoDesign",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "aiTools": [
+      "v0",
+      "Claude",
+      "Lovable",
+      "Bolt"
+    ],
+    "tags": [
+      "dashboard",
+      "finance",
+      "operations",
+      "charts",
+      "tables"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "thumbnail": "assets/thumbnails/opencodesign-finance-ops-dashboard.svg"
+  },
+  {
+    "id": "curated-ocd-f70f84f8e8bd19e6",
+    "title": "Observability incident dashboard",
+    "sectionType": "Infrastructure dashboard",
+    "slug": "opencodesign-observability-dashboard",
+    "plan": "free",
+    "author": "Open CoDesign",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "aiTools": [
+      "v0",
+      "Claude",
+      "Lovable",
+      "Bolt"
+    ],
+    "tags": [
+      "dashboard",
+      "observability",
+      "developer tool",
+      "dark UI",
+      "logs"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "thumbnail": "assets/thumbnails/opencodesign-observability-dashboard.svg"
+  },
+  {
+    "id": "curated-ocd-6ed7cb1a4ffbcba3",
+    "title": "Creator analytics dashboard",
+    "sectionType": "Media analytics dashboard",
+    "slug": "opencodesign-creator-analytics-dashboard",
+    "plan": "free",
+    "author": "Open CoDesign",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "aiTools": [
+      "v0",
+      "Claude",
+      "Lovable",
+      "Bolt"
+    ],
+    "tags": [
+      "dashboard",
+      "creator economy",
+      "analytics",
+      "calendar",
+      "revenue"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "thumbnail": "assets/thumbnails/opencodesign-creator-analytics-dashboard.svg"
+  },
+  {
+    "id": "curated-ocd-7871e1f42a01c534",
+    "title": "Ecommerce inventory dashboard",
+    "sectionType": "Operations dashboard",
+    "slug": "opencodesign-ecommerce-inventory-dashboard",
+    "plan": "free",
+    "author": "Open CoDesign",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "aiTools": [
+      "v0",
+      "Claude",
+      "Lovable",
+      "Bolt"
+    ],
+    "tags": [
+      "dashboard",
+      "ecommerce",
+      "inventory",
+      "operations",
+      "tables"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "thumbnail": "assets/thumbnails/opencodesign-ecommerce-inventory-dashboard.svg"
+  },
+  {
+    "id": "curated-ocd-42cccbc991cc3892",
+    "title": "AI operations command center",
+    "sectionType": "Agent ops dashboard",
+    "slug": "opencodesign-ai-ops-command-center",
+    "plan": "free",
+    "author": "Open CoDesign",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "aiTools": [
+      "v0",
+      "Claude",
+      "Lovable",
+      "Bolt"
+    ],
+    "tags": [
+      "dashboard",
+      "AI operations",
+      "command center",
+      "incident",
+      "dense UI"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "thumbnail": "assets/thumbnails/opencodesign-ai-ops-command-center.svg"
+  },
+  {
+    "id": "curated-ocd-976c2b11bf75f9ef",
+    "title": "Design-token inspector",
+    "sectionType": "Design-system tool UI",
+    "slug": "opencodesign-design-token-inspector",
+    "plan": "free",
+    "author": "Open CoDesign",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "aiTools": [
+      "v0",
+      "Claude",
+      "Lovable",
+      "Bolt"
+    ],
+    "tags": [
+      "dashboard",
+      "design system",
+      "developer tool",
+      "tokens",
+      "inspector"
+    ],
+    "promptOnly": true,
+    "license": "MIT",
+    "thumbnail": "assets/thumbnails/opencodesign-design-token-inspector.svg"
+  },
+  {
+    "id": "curated-37efb976368d8894",
+    "title": "Aetheris Voyage",
+    "sectionType": "Hero Section",
+    "slug": "motionsites-free-aetheris-voyage",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "aetheris-voyage-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Hero Section",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-aetheris-voyage-preview-BGJn1z4t.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-aetheris-voyage.png"
+  },
+  {
+    "id": "curated-57824b4667c72abf",
+    "title": "Digital Epoch",
+    "sectionType": "Hero Section",
+    "slug": "motionsites-free-digital-epoch",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "digital-epoch-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Hero Section",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-digital-epoch-preview-B85ezqXO.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-digital-epoch.png"
+  },
+  {
+    "id": "curated-f6f586425b57ca56",
+    "title": "RIVR",
+    "sectionType": "Hero Section",
+    "slug": "motionsites-free-rivr",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "rivr-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Hero Section",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-rivr-preview-DcS3pjx4.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-rivr.png"
+  },
+  {
+    "id": "curated-87c0a1dd9a4de062",
+    "title": "Lumina",
+    "sectionType": "Footer Section",
+    "slug": "motionsites-free-lumina",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "lumina-footer",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Footer Section",
+      "hero",
+      "MotionSites",
+      "AI website",
+      "footer"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/footer-lumina-preview-CYkr-ACN.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-lumina.png"
+  },
+  {
+    "id": "curated-a9a378852863bf42",
+    "title": "HAUL!",
+    "sectionType": "Footer Section",
+    "slug": "motionsites-free-haul",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "haul-footer",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Footer Section",
+      "hero",
+      "MotionSites",
+      "AI website",
+      "footer"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/footer-haul-poster-Do5X7frB.png",
+    "thumbnail": "assets/thumbnails/motionsites-free-haul.png"
+  },
+  {
+    "id": "curated-73608fee819a1b2c",
+    "title": "Vize Footer",
+    "sectionType": "Footer Section",
+    "slug": "motionsites-free-vize-footer",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "vize-footer",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Footer Section",
+      "hero",
+      "MotionSites",
+      "AI website",
+      "footer"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/footer-vize-poster-BRRRDP-A.png",
+    "thumbnail": "assets/thumbnails/motionsites-free-vize-footer.png"
+  },
+  {
+    "id": "curated-ea0723b59fea0bd0",
+    "title": "Glow Features",
+    "sectionType": "Features Section",
+    "slug": "motionsites-free-glow-features",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "glow-features",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Features Section",
+      "hero",
+      "MotionSites",
+      "AI website",
+      "features"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/features-glow-poster-CmUBaPAq.png",
+    "thumbnail": "assets/thumbnails/motionsites-free-glow-features.png"
+  },
+  {
+    "id": "curated-9c63229921e38ee5",
+    "title": "Kresna Footer",
+    "sectionType": "Footer Section",
+    "slug": "motionsites-free-kresna-footer",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "kresna-footer",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Footer Section",
+      "hero",
+      "MotionSites",
+      "AI website",
+      "footer"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/footer-kresna-preview-BrIYYd2q.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-kresna-footer.png"
+  },
+  {
+    "id": "curated-0363ea2c2415a9e1",
+    "title": "Price Calculator",
+    "sectionType": "SaaS",
+    "slug": "motionsites-free-price-calculator",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "price-calculator",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "SaaS",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-price-calculator-preview-Dak8DDgY.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-price-calculator.png"
+  },
+  {
+    "id": "curated-090cad8c8f501854",
+    "title": "SkyElite Private Jets",
+    "sectionType": "Landing Page",
+    "slug": "motionsites-free-skyelite-private-jets",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "skyelite-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Landing Page",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-skyelite-preview-DHaZIgUv.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-skyelite-private-jets.png"
+  },
+  {
+    "id": "curated-c045b33342d0930d",
+    "title": "Securify Data Security",
+    "sectionType": "SaaS",
+    "slug": "motionsites-free-securify-data-security",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "securify-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "SaaS",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-securify-preview-DQSYrftH.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-securify-data-security.png"
+  },
+  {
+    "id": "curated-b6eae1a4b6b523a9",
+    "title": "Datacore Booking",
+    "sectionType": "SaaS",
+    "slug": "motionsites-free-datacore-booking",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "datacore-booking-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "SaaS",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-datacore-booking-preview-B3t9SRK6.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-datacore-booking.png"
+  },
+  {
+    "id": "curated-434da20e752cd07f",
+    "title": "USD Halo",
+    "sectionType": "Landing Page",
+    "slug": "motionsites-free-usd-halo",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "halo-usd-landing",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Landing Page",
+      "landing-page",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/halo-usd-hero-CtMXOklk.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-usd-halo.gif"
+  },
+  {
+    "id": "curated-d9164a2ff1d04dc6",
+    "title": "Convix Software",
+    "sectionType": "SaaS",
+    "slug": "motionsites-free-convix-software",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "convix-software-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "SaaS",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/convix-software-hero-B6-tdnN6.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-convix-software.png"
+  },
+  {
+    "id": "curated-687d967170d401c7",
+    "title": "Digitwist AI Builder",
+    "sectionType": "SaaS",
+    "slug": "motionsites-free-digitwist-ai-builder",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "digitwist-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "SaaS",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-digitwist-preview-s2pJetjQ.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-digitwist-ai-builder.png"
+  },
+  {
+    "id": "curated-c4d80e533537b651",
+    "title": "CodeNest Coding Platform",
+    "sectionType": "Landing Page",
+    "slug": "motionsites-free-codenest-coding-platform",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "codenest-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Landing Page",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-codenest-preview-Cgppc2qV.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-codenest-coding-platform.png"
+  },
+  {
+    "id": "curated-12a27a4175bc02e0",
+    "title": "Velorah",
+    "sectionType": "Agency",
+    "slug": "motionsites-free-velorah",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "velorah-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Agency",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-velorah-preview-CJNTtbpd.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-velorah.png"
+  },
+  {
+    "id": "curated-cefded26a1e883d1",
+    "title": "Neuralyn",
+    "sectionType": "SaaS",
+    "slug": "motionsites-free-neuralyn",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "neuralyn-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "SaaS",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-neuralyn-preview-Br4FRDQA.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-neuralyn.png"
+  },
+  {
+    "id": "curated-38ef81410e7ed8ce",
+    "title": "Orbis NFT",
+    "sectionType": "Landing Page",
+    "slug": "motionsites-free-orbis-nft",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "orbis-nft-landing",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Landing Page",
+      "landing-page",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-orbis-nft-preview-C3wvh77a.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-orbis-nft.png"
+  },
+  {
+    "id": "curated-66a8fa0aaca39fcc",
+    "title": "Bloom AI",
+    "sectionType": "Hero Section",
+    "slug": "motionsites-free-bloom-ai",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "bloom-ai-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Hero Section",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-bloom-ai-preview-g6RcYLTl.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-bloom-ai.png"
+  },
+  {
+    "id": "curated-4373f87a399b4174",
+    "title": "Taskly",
+    "sectionType": "Hero Section",
+    "slug": "motionsites-free-taskly",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "taskly-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Hero Section",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-taskly-preview-Dq2MKaI0.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-taskly.png"
+  },
+  {
+    "id": "curated-23a61b5371143304",
+    "title": "Nexora Automation",
+    "sectionType": "SaaS",
+    "slug": "motionsites-free-nexora-automation",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "nexora-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "SaaS",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-nexora-preview-cx5HmUgo.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-nexora-automation.png"
+  },
+  {
+    "id": "curated-bac67e6693edfa82",
+    "title": "Mindloop Landing",
+    "sectionType": "Landing Page",
+    "slug": "motionsites-free-mindloop-landing",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "mindloop-landing",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Landing Page",
+      "landing-page",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-mindloop-landing-preview-Bqnstohr.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-mindloop-landing.png"
+  },
+  {
+    "id": "curated-103c754dc6a0fda2",
+    "title": "Power AI",
+    "sectionType": "Hero Section",
+    "slug": "motionsites-free-power-ai",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "power-ai-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Hero Section",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-power-ai-preview-BqpSbx41.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-power-ai.png"
+  },
+  {
+    "id": "curated-4bcd7b870ed10317",
+    "title": "Luminex",
+    "sectionType": "Hero Section",
+    "slug": "motionsites-free-luminex",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "luminex-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Hero Section",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-luminex-preview-CxOP7ce6.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-luminex.png"
+  },
+  {
+    "id": "curated-5d50e786f32ec95a",
+    "title": "Prisma Creative Studio",
+    "sectionType": "Landing Page",
+    "slug": "motionsites-free-prisma-creative-studio",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "prisma-landing",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Landing Page",
+      "landing-page",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-prisma-preview-D4QeI0Bn.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-prisma-creative-studio.png"
+  },
+  {
+    "id": "curated-fbde7f09ca1c6b4e",
+    "title": "Aethera Studio",
+    "sectionType": "Hero Section",
+    "slug": "motionsites-free-aethera-studio",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "aethera-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Hero Section",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-aethera-preview-DknSlcTa.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-aethera-studio.png"
+  },
+  {
+    "id": "curated-6063b4836a7d0ac7",
+    "title": "Asme",
+    "sectionType": "Hero Section",
+    "slug": "motionsites-free-asme",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "asme-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Hero Section",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-asme-preview-B_nGDnTP.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-asme.png"
+  },
+  {
+    "id": "curated-691987e9e97a6415",
+    "title": "Transform Data",
+    "sectionType": "Hero Section",
+    "slug": "motionsites-free-transform-data",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "transform-data-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Hero Section",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-transform-data-preview-Cx5OU29N.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-transform-data.png"
+  },
+  {
+    "id": "curated-3da6cdb685a55742",
+    "title": "3D Portfolio",
+    "sectionType": "Portfolio",
+    "slug": "motionsites-free-3d-portfolio",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "3d-jack-portfolio-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Portfolio",
+      "hero",
+      "MotionSites",
+      "AI website",
+      "3d"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-3d-jack-portfolio-preview-BS06Nx21.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-3d-portfolio.png",
+    "boltUrl": "https://bolt.new/~/sb1-676j2jmy"
+  },
+  {
+    "id": "curated-b0a597d878c24216",
+    "title": "Dot",
+    "sectionType": "Hero Section",
+    "slug": "motionsites-free-dot",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "dot-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Hero Section",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/dot-hero-Csf49OgS.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-dot.png"
+  },
+  {
+    "id": "curated-f557a0b6649ee5cf",
+    "title": "Duolingo Styleguide",
+    "sectionType": "Hero Section",
+    "slug": "motionsites-free-duolingo-styleguide",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "duolingo-styleguide-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Hero Section",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-duolingo-styleguide-preview-1HTxQ6Tj.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-duolingo-styleguide.png"
+  },
+  {
+    "id": "curated-5781a474bb8c4044",
+    "title": "Portfolio Cosmic",
+    "sectionType": "Portfolio",
+    "slug": "motionsites-free-portfolio-cosmic",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "portfolio-cosmic-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Portfolio",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-portfolio-cosmic-preview-BpvWJ3Nc.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-portfolio-cosmic.png"
+  },
+  {
+    "id": "curated-b1e69501827d892d",
+    "title": "DesignPro Academy",
+    "sectionType": "Hero Section",
+    "slug": "motionsites-free-designpro-academy",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "designpro-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Hero Section",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-designpro-preview-D8c5_een.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-designpro-academy.png"
+  },
+  {
+    "id": "curated-e08c605f6e370e78",
+    "title": "Stellar AI",
+    "sectionType": "Hero Section",
+    "slug": "motionsites-free-stellar-ai",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "stellar-ai-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Hero Section",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-stellar-ai-preview-D3HL6bw1.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-stellar-ai.png"
+  },
+  {
+    "id": "curated-013439cd52c44f57",
+    "title": "AI Designer Portfolio",
+    "sectionType": "Landing Page",
+    "slug": "motionsites-free-ai-designer-portfolio",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "vortex-studio-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Landing Page",
+      "hero",
+      "MotionSites",
+      "AI website",
+      "portfolio"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-vortex-studio-preview-BQyvwopD.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-ai-designer-portfolio.png",
+    "boltUrl": "https://bolt.new/~/sb1-oszmzx67"
+  },
+  {
+    "id": "curated-f682ab4a2ecb745f",
+    "title": "Email Marketing",
+    "sectionType": "Email Marketing",
+    "slug": "motionsites-free-email-marketing",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "design-rocket-email-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Email Marketing",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-design-rocket-email-preview-DBed7Yfk.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-email-marketing.png"
+  },
+  {
+    "id": "curated-6a16c31c61bddc44",
+    "title": "Innovation",
+    "sectionType": "Landing Page",
+    "slug": "motionsites-free-innovation",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "innovation-landing",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Landing Page",
+      "landing-page",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-innovation-preview-BerBJHh1.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-innovation.png"
+  },
+  {
+    "id": "curated-2a9e29f8444602b7",
+    "title": "VEX Ventures",
+    "sectionType": "Hero Section",
+    "slug": "motionsites-free-vex-ventures",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "vex-ventures-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Hero Section",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-vex-ventures-preview-BczMFIiw.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-vex-ventures.png"
+  },
+  {
+    "id": "curated-d36532771d856ce9",
+    "title": "Portal",
+    "sectionType": "Hero Section",
+    "slug": "motionsites-free-portal",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "portal-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Hero Section",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-portal-preview-DEscBr2T.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-portal.png"
+  },
+  {
+    "id": "curated-3d396053d547d0b9",
+    "title": "Sentinel AI",
+    "sectionType": "Hero Section",
+    "slug": "motionsites-free-sentinel-ai",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "sentinel-ai-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Hero Section",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-sentinel-ai-preview-BXas7Q1_.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-sentinel-ai.png"
+  },
+  {
+    "id": "curated-255dba5bf4a6ded7",
+    "title": "Celestia",
+    "sectionType": "Hero Section",
+    "slug": "motionsites-free-celestia",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "celestia-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Hero Section",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://motionsites.ai/assets/hero-celestia-preview-0yO3jXO8.gif",
+    "thumbnail": "assets/thumbnails/motionsites-free-celestia.png"
+  },
+  {
+    "id": "curated-0449cc8f8d71e700",
+    "title": "3D Collectible Hero",
+    "sectionType": "3D Website",
+    "slug": "motionsites-free-3d-collectible-hero",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "3d-collectible-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "3D Website",
+      "MotionSites",
+      "AI website",
+      "3d"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://image.mux.com/2Zin2zj1X02i00e6wveowiKS8muvd9M6y9wGm00WGmGHgI/animated.webp?width=640&fps=15",
+    "thumbnail": "assets/thumbnails/motionsites-free-3d-collectible-hero.webp"
+  },
+  {
+    "id": "curated-407a61f7b65e546c",
+    "title": "No-Code Waitlist",
+    "sectionType": "Waitlist",
+    "slug": "motionsites-free-no-code-waitlist",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "no-code-waitlist",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Waitlist",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://image.mux.com/iY611PYuZ02AKpIzYB4Q1BMpl7W2O3UwqjQm9p01xlmVg/animated.webp?width=640&fps=15",
+    "thumbnail": "assets/thumbnails/motionsites-free-no-code-waitlist.webp"
+  },
+  {
+    "id": "curated-f4962b6cce037660",
+    "title": "Modern Agency",
+    "sectionType": "Agency",
+    "slug": "motionsites-free-modern-agency",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "modern-agency",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Agency",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://image.mux.com/gUXSp2ByuPZuBqhtjly028le1RHgF3eqXHLUNZVbczgQ/animated.webp?width=640&fps=15",
+    "thumbnail": "assets/thumbnails/motionsites-free-modern-agency.webp"
+  },
+  {
+    "id": "curated-583f5b14ebe1e380",
+    "title": "VaultShield",
+    "sectionType": "Hero",
+    "slug": "motionsites-free-vaultshield",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "vaultshield",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://image.mux.com/802ps1LP2vYwpJjPj9DLdbaOAwDTG4UkLgPJOVZaR8N4/animated.webp?width=640&fps=15",
+    "thumbnail": "assets/thumbnails/motionsites-free-vaultshield.webp"
+  },
+  {
+    "id": "curated-bbe82c0bc588c6f3",
+    "title": "AI Workflow Hero",
+    "sectionType": "Hero",
+    "slug": "motionsites-free-ai-workflow-hero",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "ai-workflow",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://image.mux.com/kQpiNEp6XDOf01rdRLjurjdEp2Crp1CbbGUMEfFBPbIg/animated.webp?width=640&fps=15",
+    "thumbnail": "assets/thumbnails/motionsites-free-ai-workflow-hero.webp"
+  },
+  {
+    "id": "curated-ea9ccf90db6f26d8",
+    "title": "Neo Museum",
+    "sectionType": "Website",
+    "slug": "motionsites-free-neo-museum",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "neo-museum",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Website",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://image.mux.com/rvV01To34SdNmXrjyPh7Wauq5I14M1YU005fldhLChTuA/animated.webp?width=640&fps=15",
+    "thumbnail": "assets/thumbnails/motionsites-free-neo-museum.webp"
+  },
+  {
+    "id": "curated-2328a7315706e5dc",
+    "title": "Visual Hero",
+    "sectionType": "Hero",
+    "slug": "motionsites-free-visual-hero",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "visual-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://image.mux.com/i9kUFJpB6GrWoe2UXRZG4lIP02g00LGulS1GTVrMMwZI00/animated.webp?width=640&fps=15",
+    "thumbnail": "assets/thumbnails/motionsites-free-visual-hero.webp"
+  },
+  {
+    "id": "curated-e33052e382d51a4f",
+    "title": "Creative Studio",
+    "sectionType": "Agency",
+    "slug": "motionsites-free-creative-studio",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "creative-studio",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Agency",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://image.mux.com/gzcKZeWPVE0100AbmzB2CIun2zAyPweshVRfONxYCkhpU/animated.webp?width=640&fps=15",
+    "thumbnail": "assets/thumbnails/motionsites-free-creative-studio.webp"
+  },
+  {
+    "id": "curated-e57ae1bf50a78d7b",
+    "title": "Wanderful Hero",
+    "sectionType": "Travel",
+    "slug": "motionsites-free-wanderful-hero",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "wanderful-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Travel",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://image.mux.com/loU9GqELzagaHuXwR2ucJx02Fpy00LnEAsr4TAHnTriho/animated.webp?width=640&fps=15",
+    "thumbnail": "assets/thumbnails/motionsites-free-wanderful-hero.webp"
+  },
+  {
+    "id": "curated-0267abd131d34797",
+    "title": "Prosthetics Hero",
+    "sectionType": "Hero",
+    "slug": "motionsites-free-prosthetics-hero",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "prosthetics-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://image.mux.com/ZbJ6QKnC012pbyMayZL5A00Le8Xx4UGCDk007lprB2LAb4/animated.webp?width=640&fps=15",
+    "thumbnail": "assets/thumbnails/motionsites-free-prosthetics-hero.webp"
+  },
+  {
+    "id": "curated-ea6431cb20ba5ee4",
+    "title": "Max Reed Portfolio",
+    "sectionType": "Features",
+    "slug": "motionsites-free-max-reed-portfolio",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "max-reed-portfolio",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Features",
+      "MotionSites",
+      "AI website",
+      "portfolio"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://image.mux.com/hKCFPaFLC9Wgvyr01ztcjJBERpeuiJQDxZMmWaRDMUk8/animated.webp?width=640&fps=15",
+    "thumbnail": "assets/thumbnails/motionsites-free-max-reed-portfolio.webp"
+  },
+  {
+    "id": "curated-ec3ee93204f16b82",
+    "title": "Email Landing Page",
+    "sectionType": "Landing page",
+    "slug": "motionsites-free-email-landing-page",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "email-landing-page",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Landing page",
+      "landing",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://image.mux.com/p2cKLBgPeQElq5VAKGkwX4PoTY01s01YOV111XWrnLn88/animated.webp?width=640&fps=15",
+    "thumbnail": "assets/thumbnails/motionsites-free-email-landing-page.webp"
+  },
+  {
+    "id": "curated-cb2176d7827316f7",
+    "title": "FAQ CTA",
+    "sectionType": "CTA",
+    "slug": "motionsites-free-faq-cta",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "faq-cta",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "CTA",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://image.mux.com/F01M5JCF004R9SYNgG02wRlscqRn5tacvrc500Mgb2cKzBc/animated.webp?width=640&fps=15",
+    "thumbnail": "assets/thumbnails/motionsites-free-faq-cta.webp"
+  },
+  {
+    "id": "curated-cfac4bcd79d2f139",
+    "title": "AI Image Generator UI",
+    "sectionType": "AI",
+    "slug": "motionsites-free-ai-image-generator-ui",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "ai-image-generator-ui",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "AI",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://res.cloudinary.com/dsdhxhhqh/image/upload/v1778221760/CleanShot_2026-05-08_at_13.28.55_2x_swwnfd.png",
+    "thumbnail": "assets/thumbnails/motionsites-free-ai-image-generator-ui.png"
+  },
+  {
+    "id": "curated-f194868aaa02d0ce",
+    "title": "Aurora Onboard",
+    "sectionType": "Signup",
+    "slug": "motionsites-free-aurora-onboard",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "aurora-onboard",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Signup",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://res.cloudinary.com/dsdhxhhqh/image/upload/v1778143525/CleanShot_2026-05-07_at_15.40.21_2x_kfgapx.png",
+    "thumbnail": "assets/thumbnails/motionsites-free-aurora-onboard.png"
+  },
+  {
+    "id": "curated-8de862dd49e679ee",
+    "title": "Cybersecurity Hero",
+    "sectionType": "Hero",
+    "slug": "motionsites-free-cybersecurity-hero",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "cybersecurity-hero",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://image.mux.com/02UEPE3F00WgHUukugHlZDQfLYL7D691esS00MqeG02GYGQ/animated.webp?width=640&fps=15",
+    "thumbnail": "assets/thumbnails/motionsites-free-cybersecurity-hero.webp"
+  },
+  {
+    "id": "curated-9ff28a6b6dae4b54",
+    "title": "Equilibrium",
+    "sectionType": "Hero",
+    "slug": "motionsites-free-equilibrium",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "equilibrium",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://image.mux.com/QXSAAL9UTEAH3SoaMLIkSSb01m02TgV1qtSWjzPNO1pFY/animated.webp?width=640&fps=15",
+    "thumbnail": "assets/thumbnails/motionsites-free-equilibrium.webp"
+  },
+  {
+    "id": "curated-12deac62ed21c2fd",
+    "title": "Blog Showcase",
+    "sectionType": "Blog",
+    "slug": "motionsites-free-blog-showcase",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "blog-showcase",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "Blog",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://image.mux.com/tmh8pemc00LzWJuVgyll9RahISoCELfuCC4W4Gp8yBJs/animated.webp?width=640&fps=15",
+    "thumbnail": "assets/thumbnails/motionsites-free-blog-showcase.webp"
+  },
+  {
+    "id": "curated-6d7ba4ff77c67386",
+    "title": "Nexto 404",
+    "sectionType": "404",
+    "slug": "motionsites-free-nexto-404",
+    "plan": "free",
+    "author": "MotionSites.ai",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "sourcePromptId": "404",
+    "aiTools": [
+      "Bolt",
+      "v0",
+      "Lovable",
+      "Claude"
+    ],
+    "tags": [
+      "404",
+      "hero",
+      "MotionSites",
+      "AI website"
+    ],
+    "promptOnly": true,
+    "sourcePreview": "https://res.cloudinary.com/dsdhxhhqh/image/upload/v1778835031/CleanShot_2026-05-15_at_15.46.24_2x_i163nd.png",
+    "thumbnail": "assets/thumbnails/motionsites-free-nexto-404.png"
+  },
+  {
+    "id": "curated-63441fd5189ce337",
+    "title": "Asymmetric product bento grid",
+    "sectionType": "Layout",
+    "slug": "magicui-bento-grid",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/bento-grid.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "layout",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-bento-grid.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-4749872302c754aa",
+    "title": "Auto Sorting animated list",
+    "sectionType": "Dashboard",
+    "slug": "magicui-animated-list",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/animated-list.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "dashboard",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-animated-list.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-817d1d02a0a1b785",
+    "title": "Macos-style floating dock navigation",
+    "sectionType": "Navigation",
+    "slug": "magicui-dock",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/dock.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "navigation",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-dock.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-6075c4541166d906",
+    "title": "Video First product hero",
+    "sectionType": "Hero",
+    "slug": "magicui-hero-video-dialog",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/hero-video-dialog.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "hero",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-hero-video-dialog.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-8723e7898070717a",
+    "title": "Orbiting integration constellation",
+    "sectionType": "Animation",
+    "slug": "magicui-orbiting-circles",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/orbiting-circles.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "animation",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-orbiting-circles.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-31b9d08d1beb5f1e",
+    "title": "Global network globe hero",
+    "sectionType": "3d",
+    "slug": "magicui-globe",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/globe.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "3D",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-globe.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-bc813fac020a4bdc",
+    "title": "Floating integration icon cloud",
+    "sectionType": "Animation",
+    "slug": "magicui-icon-cloud",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/icon-cloud.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "animation",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-icon-cloud.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-d6b9ff07495cce4e",
+    "title": "Proof Logo kinetic marquee",
+    "sectionType": "Motion",
+    "slug": "magicui-marquee",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/marquee.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "motion",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-marquee.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-bca279915bbcde0e",
+    "title": "Workflow beam connector",
+    "sectionType": "Animation",
+    "slug": "magicui-animated-beam",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/animated-beam.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "animation",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-animated-beam.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-0ea73e7986de5a47",
+    "title": "Premium beam border cards",
+    "sectionType": "Cards",
+    "slug": "magicui-border-beam",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/border-beam.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "cards",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-border-beam.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-569b530cd87062d4",
+    "title": "Shiny border feature grid",
+    "sectionType": "Cards",
+    "slug": "magicui-shine-border",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/shine-border.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "cards",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-shine-border.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-31e251d069189176",
+    "title": "Spotlight magic cards",
+    "sectionType": "Cards",
+    "slug": "magicui-magic-card",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/magic-card.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "cards",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-magic-card.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-604b0a3ac0e5e358",
+    "title": "Glare hover product cards",
+    "sectionType": "Cards",
+    "slug": "magicui-glare-hover",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/glare-hover.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "cards",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-glare-hover.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-5492618ca3375a36",
+    "title": "Meteor shower launch hero",
+    "sectionType": "Background",
+    "slug": "magicui-meteors",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/meteors.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "background",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-meteors.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-4e3520c50a985019",
+    "title": "Particle field backdrop",
+    "sectionType": "Background",
+    "slug": "magicui-particles",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/particles.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "background",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-particles.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-b93a1d7c2fbb09ba",
+    "title": "Animated grid background",
+    "sectionType": "Background",
+    "slug": "magicui-animated-grid-pattern",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/animated-grid-pattern.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "background",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-animated-grid-pattern.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-e9c5f4aa3d1b3507",
+    "title": "Flickering grid terminal backdrop",
+    "sectionType": "Background",
+    "slug": "magicui-flickering-grid",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/flickering-grid.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "background",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-flickering-grid.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-9367b545815b0194",
+    "title": "Warped mesh hero background",
+    "sectionType": "Background",
+    "slug": "magicui-warp-background",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/warp-background.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "background",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-warp-background.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-b4ba127519d63319",
+    "title": "Backlit product panel",
+    "sectionType": "Background",
+    "slug": "magicui-backlight",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/backlight.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "background",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-backlight.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-e6212737432f6ed0",
+    "title": "Scroll text reveal story",
+    "sectionType": "Typography",
+    "slug": "magicui-text-reveal",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/text-reveal.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "typography",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-text-reveal.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-18ad1fc022fbdf44",
+    "title": "Typewriter command input",
+    "sectionType": "Typography",
+    "slug": "magicui-typing-animation",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/typing-animation.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "typography",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-typing-animation.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-ab98dea9c8484555",
+    "title": "Animated kpi counters",
+    "sectionType": "Dashboard",
+    "slug": "magicui-number-ticker",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/number-ticker.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "dashboard",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-number-ticker.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-933cca17aabfa3f8",
+    "title": "Morphing headline loop",
+    "sectionType": "Typography",
+    "slug": "magicui-morphing-text",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/morphing-text.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "typography",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-morphing-text.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-ab82b70d78813a4e",
+    "title": "Video masked display type",
+    "sectionType": "Typography",
+    "slug": "magicui-video-text",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/video-text.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "typography",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-video-text.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-2cb95ad23beaba57",
+    "title": "Scroll velocity marquee",
+    "sectionType": "Animation",
+    "slug": "magicui-scroll-based-velocity",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/scroll-based-velocity.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "animation",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-scroll-based-velocity.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-b3c44d487095b205",
+    "title": "Browser mockup hero",
+    "sectionType": "Mockup",
+    "slug": "magicui-safari",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/safari.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "mockup",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-safari.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-6dc30e10e8e4e90f",
+    "title": "Mobile app preview hero",
+    "sectionType": "Mockup",
+    "slug": "magicui-iphone",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/iphone.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "mockup",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-iphone.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-eb461afc933b5c45",
+    "title": "Dotted map traction section",
+    "sectionType": "Map",
+    "slug": "magicui-dotted-map",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/dotted-map.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "map",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-dotted-map.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-ce515fb9ac4dfd6a",
+    "title": "Developer docs file tree",
+    "sectionType": "Devtool",
+    "slug": "magicui-file-tree",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/file-tree.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "devtool",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-file-tree.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-cfe4d28693cab452",
+    "title": "Before After code comparison",
+    "sectionType": "Devtool",
+    "slug": "magicui-code-comparison",
+    "plan": "free",
+    "author": "Magic UI",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/code-comparison.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Magic UI",
+      "animation",
+      "devtool",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/magicui-code-comparison.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-cd3170b0af45d613",
+    "title": "Animated beam onboarding flow",
+    "sectionType": "Background",
+    "slug": "animata-animated-beam",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "background",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-animated-beam.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-e7ec088016ea94a1",
+    "title": "Soft blob gradient background",
+    "sectionType": "Background",
+    "slug": "animata-blurry-blob",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "background",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-blurry-blob.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-171d3326534a899f",
+    "title": "Cursor reactive grid",
+    "sectionType": "Background",
+    "slug": "animata-interactive-grid",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "background",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-interactive-grid.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-8e2ec9d94f0250be",
+    "title": "Moving gradient hero shell",
+    "sectionType": "Background",
+    "slug": "animata-moving-gradient",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "background",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-moving-gradient.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-1a75f402c6709136",
+    "title": "Ai action button with thinking state",
+    "sectionType": "Button",
+    "slug": "animata-ai-button",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "button",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-ai-button.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-9cca55e05aafa2a9",
+    "title": "Social follow microinteraction",
+    "sectionType": "Button",
+    "slug": "animata-animated-follow-button",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "button",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-animated-follow-button.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-34a85dc1ab989905",
+    "title": "Directional ripple button",
+    "sectionType": "Button",
+    "slug": "animata-ripple-button",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "button",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-ripple-button.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-2a943c4ab2ab55b2",
+    "title": "Loading Success state button",
+    "sectionType": "Button",
+    "slug": "animata-status-button",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "button",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-status-button.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-1a69fdef4956acb2",
+    "title": "Swipe To Confirm control",
+    "sectionType": "Button",
+    "slug": "animata-swipe-button",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "button",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-swipe-button.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-b8d1d77072750bde",
+    "title": "Stacked blur cards",
+    "sectionType": "Cards",
+    "slug": "animata-blur-stack-card",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "cards",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-blur-stack-card.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-0dc92a5da48ba892",
+    "title": "Spreadable card deck",
+    "sectionType": "Cards",
+    "slug": "animata-card-spread",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "cards",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-card-spread.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-dd4f08fc60ce5900",
+    "title": "Case study preview card",
+    "sectionType": "Cards",
+    "slug": "animata-case-study-card",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "cards",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-case-study-card.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-a170b91af50d90b7",
+    "title": "Email product feature card",
+    "sectionType": "Cards",
+    "slug": "animata-email-feature-card",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "cards",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-email-feature-card.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-c42895b34a413cc4",
+    "title": "Expandable details card",
+    "sectionType": "Cards",
+    "slug": "animata-expandable-card",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "cards",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-expandable-card.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-1e67158924eb1a51",
+    "title": "Feature card with scan line",
+    "sectionType": "Cards",
+    "slug": "animata-feature-card",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "cards",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-feature-card.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-2fb347e6068ba2fc",
+    "title": "Sparkles accent card",
+    "sectionType": "Cards",
+    "slug": "animata-sparkles-card",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "cards",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-sparkles-card.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-eefd51e987343827",
+    "title": "Drag To Organize card board",
+    "sectionType": "Interaction",
+    "slug": "animata-drag-cards",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "interaction",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-drag-cards.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-4f752c11ccf76f24",
+    "title": "Compact animated app dock",
+    "sectionType": "Navigation",
+    "slug": "animata-dock",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "navigation",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-dock.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-a959134a2092ab43",
+    "title": "Floating navbar with active state",
+    "sectionType": "Navigation",
+    "slug": "animata-floating-navbar",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "navigation",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-floating-navbar.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-95194d4e8557e6db",
+    "title": "Animated setup steps",
+    "sectionType": "Onboarding",
+    "slug": "animata-steps",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "onboarding",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-steps.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-472bdeca530055e7",
+    "title": "Multi Step loader timeline",
+    "sectionType": "Loader",
+    "slug": "animata-multi-step-loader",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "loader",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-multi-step-loader.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-c5d5759b8053c47d",
+    "title": "Animated terminal walkthrough",
+    "sectionType": "Devtool",
+    "slug": "animata-terminal",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "devtool",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-terminal.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-b0182bdfe7cbaddc",
+    "title": "Text scramble headline",
+    "sectionType": "Typography",
+    "slug": "animata-text-scramble",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "typography",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-text-scramble.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-bab1f78f44d98fc1",
+    "title": "Typewriter product copy",
+    "sectionType": "Typography",
+    "slug": "animata-typewriter",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "typography",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-typewriter.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-c1b9cd5f7e0979c9",
+    "title": "Word By Word intro reveal",
+    "sectionType": "Typography",
+    "slug": "animata-word-fade-in",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "typography",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-word-fade-in.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-0ea1733ce376fdda",
+    "title": "Scroll progress story rail",
+    "sectionType": "Scroll",
+    "slug": "animata-scroll-progress",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "scroll",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-scroll-progress.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-871b1870ef7b9d07",
+    "title": "Cursor image trail gallery",
+    "sectionType": "Gallery",
+    "slug": "animata-image-trail",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "gallery",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-image-trail.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-7ea6c1ce5da568be",
+    "title": "Spring carousel gallery",
+    "sectionType": "Gallery",
+    "slug": "animata-carousel",
+    "plan": "free",
+    "author": "Animata",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Animata",
+      "motion",
+      "gallery",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/animata-carousel.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-bb666dfcdf1d9d9d",
+    "title": "Dynamic island command status",
+    "sectionType": "Navigation",
+    "slug": "cultui-dynamic-island",
+    "plan": "free",
+    "author": "Cult UI",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/dynamic-island.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Cult UI",
+      "component",
+      "navigation",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/cultui-dynamic-island.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-5b76dc2e6aebc0aa",
+    "title": "Distorted glass surface",
+    "sectionType": "Glass",
+    "slug": "cultui-distorted-glass",
+    "plan": "free",
+    "author": "Cult UI",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/distorted-glass.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Cult UI",
+      "component",
+      "glass",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/cultui-distorted-glass.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-9afbb166c905971c",
+    "title": "Liquid metal hero",
+    "sectionType": "Hero",
+    "slug": "cultui-hero-liquid-metal",
+    "plan": "free",
+    "author": "Cult UI",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/hero-liquid-metal.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Cult UI",
+      "component",
+      "hero",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/cultui-hero-liquid-metal.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-8626c2110735e0a3",
+    "title": "Dithered retro hero",
+    "sectionType": "Hero",
+    "slug": "cultui-hero-dithering",
+    "plan": "free",
+    "author": "Cult UI",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/hero-dithering.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Cult UI",
+      "component",
+      "hero",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/cultui-hero-dithering.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-b107ade164c243ae",
+    "title": "Heatmap product hero",
+    "sectionType": "Hero",
+    "slug": "cultui-hero-heatmap",
+    "plan": "free",
+    "author": "Cult UI",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/hero-heatmap.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Cult UI",
+      "component",
+      "hero",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/cultui-hero-heatmap.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-17957fc29e3721f8",
+    "title": "Tactile texture cards",
+    "sectionType": "Cards",
+    "slug": "cultui-texture-card",
+    "plan": "free",
+    "author": "Cult UI",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/texture-card.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Cult UI",
+      "component",
+      "cards",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/cultui-texture-card.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-b89c6392ee057d31",
+    "title": "Tactile texture button",
+    "sectionType": "Button",
+    "slug": "cultui-texture-button",
+    "plan": "free",
+    "author": "Cult UI",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/texture-button.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Cult UI",
+      "component",
+      "button",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/cultui-texture-button.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-c825a696262c258b",
+    "title": "Shift Hover editorial card",
+    "sectionType": "Cards",
+    "slug": "cultui-shift-card",
+    "plan": "free",
+    "author": "Cult UI",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/shift-card.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Cult UI",
+      "component",
+      "cards",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/cultui-shift-card.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-8a5903a1c068f1a8",
+    "title": "Slide Over details panel",
+    "sectionType": "Interaction",
+    "slug": "cultui-side-panel",
+    "plan": "free",
+    "author": "Cult UI",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/side-panel.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Cult UI",
+      "component",
+      "interaction",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/cultui-side-panel.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-2e9351df80fb0097",
+    "title": "Sortable priority list",
+    "sectionType": "Dashboard",
+    "slug": "cultui-sortable-list",
+    "plan": "free",
+    "author": "Cult UI",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/sortable-list.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Cult UI",
+      "component",
+      "dashboard",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/cultui-sortable-list.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-36365dbadaaba1fd",
+    "title": "Floating inspector panel",
+    "sectionType": "Dashboard",
+    "slug": "cultui-floating-panel",
+    "plan": "free",
+    "author": "Cult UI",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/floating-panel.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Cult UI",
+      "component",
+      "dashboard",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/cultui-floating-panel.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-66a72147b4cc5f34",
+    "title": "Prompt library browser",
+    "sectionType": "Library",
+    "slug": "cultui-prompt-library",
+    "plan": "free",
+    "author": "Cult UI",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/prompt-library.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Cult UI",
+      "component",
+      "library",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/cultui-prompt-library.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-0289b2e333d8d798",
+    "title": "Terminal command animation",
+    "sectionType": "Devtool",
+    "slug": "cultui-terminal-animation",
+    "plan": "free",
+    "author": "Cult UI",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/terminal-animation.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Cult UI",
+      "component",
+      "devtool",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/cultui-terminal-animation.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-78d71675389506c1",
+    "title": "Animated gif text mask",
+    "sectionType": "Typography",
+    "slug": "cultui-text-gif",
+    "plan": "free",
+    "author": "Cult UI",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/text-gif.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Cult UI",
+      "component",
+      "typography",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/cultui-text-gif.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-551cabf64d0e62fe",
+    "title": "Pixelated word heading",
+    "sectionType": "Typography",
+    "slug": "cultui-pixel-heading-word",
+    "plan": "free",
+    "author": "Cult UI",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/pixel-heading-word.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Cult UI",
+      "component",
+      "typography",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/cultui-pixel-heading-word.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-a032ab613b388bf5",
+    "title": "Logo carousel trust row",
+    "sectionType": "Marquee",
+    "slug": "cultui-logo-carousel",
+    "plan": "free",
+    "author": "Cult UI",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/logo-carousel.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Cult UI",
+      "component",
+      "marquee",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/cultui-logo-carousel.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-e06589de31cce53b",
+    "title": "Feature carousel explainer",
+    "sectionType": "Carousel",
+    "slug": "cultui-feature-carousel",
+    "plan": "free",
+    "author": "Cult UI",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/feature-carousel.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Cult UI",
+      "component",
+      "carousel",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/cultui-feature-carousel.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-0d25d65ffd74e03c",
+    "title": "Interactive choice poll",
+    "sectionType": "Form",
+    "slug": "cultui-choice-poll",
+    "plan": "free",
+    "author": "Cult UI",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/choice-poll.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Cult UI",
+      "component",
+      "form",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/cultui-choice-poll.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-c2484429353aa588",
+    "title": "Popover form workflow",
+    "sectionType": "Form",
+    "slug": "cultui-popover-form",
+    "plan": "free",
+    "author": "Cult UI",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/popover-form.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Cult UI",
+      "component",
+      "form",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/cultui-popover-form.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-c7f3854fd5ea40d4",
+    "title": "Onboarding checklist flow",
+    "sectionType": "Onboarding",
+    "slug": "cultui-onboarding",
+    "plan": "free",
+    "author": "Cult UI",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/onboarding.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Cult UI",
+      "component",
+      "onboarding",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/cultui-onboarding.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-b709db40acdd8a5f",
+    "title": "Lightboard idea wall",
+    "sectionType": "Gallery",
+    "slug": "cultui-lightboard",
+    "plan": "free",
+    "author": "Cult UI",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/lightboard.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Cult UI",
+      "component",
+      "gallery",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/cultui-lightboard.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-25f4db2396b047e5",
+    "title": "Morphing surface card",
+    "sectionType": "Motion",
+    "slug": "cultui-morph-surface",
+    "plan": "free",
+    "author": "Cult UI",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/morph-surface.mdx",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Cult UI",
+      "component",
+      "motion",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/cultui-morph-surface.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-5e5e731bb3ac4962",
+    "title": "Split product landing hero",
+    "sectionType": "Hero",
+    "slug": "tailark-hero-split-product",
+    "plan": "free",
+    "author": "Tailark",
+    "sourceName": "Tailark marketing blocks",
+    "sourceUrl": "https://github.com/tailark/blocks",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Tailark",
+      "marketing",
+      "hero",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/tailark-hero-split-product.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-c83393356f46ccc2",
+    "title": "Clean logo cloud marquee",
+    "sectionType": "Social proof",
+    "slug": "tailark-logo-cloud-marquee",
+    "plan": "free",
+    "author": "Tailark",
+    "sourceName": "Tailark marketing blocks",
+    "sourceUrl": "https://github.com/tailark/blocks",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Tailark",
+      "marketing",
+      "social proof",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/tailark-logo-cloud-marquee.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-88e74dceadebd728",
+    "title": "Marketing feature bento grid",
+    "sectionType": "Features",
+    "slug": "tailark-feature-bento-grid",
+    "plan": "free",
+    "author": "Tailark",
+    "sourceName": "Tailark marketing blocks",
+    "sourceUrl": "https://github.com/tailark/blocks",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Tailark",
+      "marketing",
+      "features",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/tailark-feature-bento-grid.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-8b6ce2b2405b2aae",
+    "title": "Integrations cloud section",
+    "sectionType": "Integrations",
+    "slug": "tailark-integrations-cloud",
+    "plan": "free",
+    "author": "Tailark",
+    "sourceName": "Tailark marketing blocks",
+    "sourceUrl": "https://github.com/tailark/blocks",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Tailark",
+      "marketing",
+      "integrations",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/tailark-integrations-cloud.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-37c9aba79d479c4f",
+    "title": "Stats proof band",
+    "sectionType": "Metrics",
+    "slug": "tailark-stats-proof-band",
+    "plan": "free",
+    "author": "Tailark",
+    "sourceName": "Tailark marketing blocks",
+    "sourceUrl": "https://github.com/tailark/blocks",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Tailark",
+      "marketing",
+      "metrics",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/tailark-stats-proof-band.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-aabf2120a72d90ae",
+    "title": "Editorial team grid",
+    "sectionType": "Team",
+    "slug": "tailark-team-grid-editorial",
+    "plan": "free",
+    "author": "Tailark",
+    "sourceName": "Tailark marketing blocks",
+    "sourceUrl": "https://github.com/tailark/blocks",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Tailark",
+      "marketing",
+      "team",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/tailark-team-grid-editorial.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-1f725d8cde089bfd",
+    "title": "Testimonial wall",
+    "sectionType": "Social proof",
+    "slug": "tailark-testimonial-wall",
+    "plan": "free",
+    "author": "Tailark",
+    "sourceName": "Tailark marketing blocks",
+    "sourceUrl": "https://github.com/tailark/blocks",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Tailark",
+      "marketing",
+      "social proof",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/tailark-testimonial-wall.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-cfc6302bb556449c",
+    "title": "Pricing comparison page",
+    "sectionType": "Pricing",
+    "slug": "tailark-pricing-comparison",
+    "plan": "free",
+    "author": "Tailark",
+    "sourceName": "Tailark marketing blocks",
+    "sourceUrl": "https://github.com/tailark/blocks",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Tailark",
+      "marketing",
+      "pricing",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/tailark-pricing-comparison.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-412640821a410aae",
+    "title": "Faq accordion section",
+    "sectionType": "Faq",
+    "slug": "tailark-faq-accordion-section",
+    "plan": "free",
+    "author": "Tailark",
+    "sourceName": "Tailark marketing blocks",
+    "sourceUrl": "https://github.com/tailark/blocks",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Tailark",
+      "marketing",
+      "faq",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/tailark-faq-accordion-section.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-fd692f2574f7b885",
+    "title": "Final cta and footer system",
+    "sectionType": "Cta",
+    "slug": "tailark-final-cta-footer",
+    "plan": "free",
+    "author": "Tailark",
+    "sourceName": "Tailark marketing blocks",
+    "sourceUrl": "https://github.com/tailark/blocks",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "Tailark",
+      "marketing",
+      "cta",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/tailark-final-cta-footer.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-0b7bd7768791fc72",
+    "title": "Admin analytics command center",
+    "sectionType": "Dashboard",
+    "slug": "template-shadcnstore-analytics-command-center",
+    "plan": "free",
+    "author": "Open-source template maintainers",
+    "sourceName": "Open-source template pattern",
+    "sourceUrl": "https://github.com/shadcnstore/shadcn-dashboard-landing-template",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "template",
+      "dashboard",
+      "dashboard",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/template-shadcnstore-analytics-command-center.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-69218df593e21f5d",
+    "title": "Mail and task workspace dashboard",
+    "sectionType": "Dashboard",
+    "slug": "template-shadcnstore-mail-task-dashboard",
+    "plan": "free",
+    "author": "Open-source template maintainers",
+    "sourceName": "Open-source template pattern",
+    "sourceUrl": "https://github.com/shadcnstore/shadcn-dashboard-landing-template",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "template",
+      "dashboard",
+      "dashboard",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/template-shadcnstore-mail-task-dashboard.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-ecf3ec763c0fe2a9",
+    "title": "Calendar operations dashboard",
+    "sectionType": "Dashboard",
+    "slug": "template-shadcnstore-calendar-ops-dashboard",
+    "plan": "free",
+    "author": "Open-source template maintainers",
+    "sourceName": "Open-source template pattern",
+    "sourceUrl": "https://github.com/shadcnstore/shadcn-dashboard-landing-template",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "template",
+      "dashboard",
+      "dashboard",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/template-shadcnstore-calendar-ops-dashboard.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-182576697b11cafa",
+    "title": "Chat support console",
+    "sectionType": "Dashboard",
+    "slug": "template-shadcnstore-chat-support-console",
+    "plan": "free",
+    "author": "Open-source template maintainers",
+    "sourceName": "Open-source template pattern",
+    "sourceUrl": "https://github.com/shadcnstore/shadcn-dashboard-landing-template",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "template",
+      "dashboard",
+      "dashboard",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/template-shadcnstore-chat-support-console.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-abf7beda85b88cde",
+    "title": "Developer First landing starter",
+    "sectionType": "Landing page",
+    "slug": "template-ixartz-devtool-landing-page",
+    "plan": "free",
+    "author": "Open-source template maintainers",
+    "sourceName": "Open-source template pattern",
+    "sourceUrl": "https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "template",
+      "landing page",
+      "landing page",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/template-ixartz-devtool-landing-page.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-d78f16a992df376e",
+    "title": "Docs-first saas homepage",
+    "sectionType": "Landing page",
+    "slug": "template-ixartz-docs-first-saas-home",
+    "plan": "free",
+    "author": "Open-source template maintainers",
+    "sourceName": "Open-source template pattern",
+    "sourceUrl": "https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "template",
+      "landing page",
+      "landing page",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/template-ixartz-docs-first-saas-home.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-2cfc986cce1b6316",
+    "title": "Dark animated saas launch page",
+    "sectionType": "Landing page",
+    "slug": "template-karthik-dark-saas-launch",
+    "plan": "free",
+    "author": "Open-source template maintainers",
+    "sourceName": "Open-source template pattern",
+    "sourceUrl": "https://github.com/karthikmudunuri/saas-landing-page-template",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "template",
+      "landing page",
+      "landing page",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/template-karthik-dark-saas-launch.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-061b5ac00f0b90a0",
+    "title": "Framer motion feature flow",
+    "sectionType": "Landing page",
+    "slug": "template-karthik-framer-motion-feature-flow",
+    "plan": "free",
+    "author": "Open-source template maintainers",
+    "sourceName": "Open-source template pattern",
+    "sourceUrl": "https://github.com/karthikmudunuri/saas-landing-page-template",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "template",
+      "landing page",
+      "landing page",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/template-karthik-framer-motion-feature-flow.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-1f294d36d22338d8",
+    "title": "Creative scroll landing system",
+    "sectionType": "Landing page",
+    "slug": "template-ui-layouts-creative-scroll-home",
+    "plan": "free",
+    "author": "Open-source template maintainers",
+    "sourceName": "Open-source template pattern",
+    "sourceUrl": "https://github.com/ui-layouts/uilayouts",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "template",
+      "landing page",
+      "landing page",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/template-ui-layouts-creative-scroll-home.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  },
+  {
+    "id": "curated-7839b512bb2ca6cd",
+    "title": "Interactive layout gallery",
+    "sectionType": "Gallery",
+    "slug": "template-ui-layouts-interactive-gallery",
+    "plan": "free",
+    "author": "Open-source template maintainers",
+    "sourceName": "Open-source template pattern",
+    "sourceUrl": "https://github.com/ui-layouts/uilayouts",
+    "aiTools": [
+      "v0",
+      "Lovable",
+      "Cursor",
+      "Claude"
+    ],
+    "tags": [
+      "template",
+      "landing page",
+      "gallery",
+      "open source"
+    ],
+    "thumbnail": "assets/thumbnails/template-ui-layouts-interactive-gallery.svg",
+    "mimeType": "image/svg+xml",
+    "promptOnly": true,
+    "license": "MIT"
+  }
+]

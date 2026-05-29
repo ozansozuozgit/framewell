@@ -1,0 +1,62 @@
+{
+  "generated_at": "2026-05-28",
+  "purpose": "Curated expansion of Lafys prompt atlas with free/open UI, motion, dashboard, and landing-page patterns.",
+  "method": "Added local prompt expansions from public/open source component libraries and templates; did not copy source code into prompts; generated local SVG previews.",
+  "sources": [
+    {
+      "name": "Magic UI",
+      "url": "https://github.com/magicuidesign/magicui",
+      "license": "MIT"
+    },
+    {
+      "name": "Animata",
+      "url": "https://github.com/codse/animata",
+      "license": "MIT"
+    },
+    {
+      "name": "Cult UI",
+      "url": "https://github.com/nolly-studio/cult-ui",
+      "license": "MIT"
+    },
+    {
+      "name": "Tailark blocks",
+      "url": "https://github.com/tailark/blocks",
+      "license": "MIT"
+    },
+    {
+      "name": "shadcnstore dashboard landing template",
+      "url": "https://github.com/shadcnstore/shadcn-dashboard-landing-template",
+      "license": "MIT"
+    },
+    {
+      "name": "ixartz Next.js landing starter",
+      "url": "https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template",
+      "license": "MIT"
+    },
+    {
+      "name": "karthikmudunuri SaaS landing template",
+      "url": "https://github.com/karthikmudunuri/saas-landing-page-template",
+      "license": "MIT"
+    },
+    {
+      "name": "UI Layouts",
+      "url": "https://github.com/ui-layouts/uilayouts",
+      "license": "MIT"
+    }
+  ],
+  "added_cards": 100,
+  "added_by_prefix": {
+    "magicui-": 30,
+    "animata-": 28,
+    "cultui-": 22,
+    "tailark-": 10,
+    "template-": 10
+  },
+  "totals": {
+    "posts": 195,
+    "prompts": 195,
+    "sources": 191,
+    "curated": 191,
+    "curated_with_preview": 186
+  }
+}

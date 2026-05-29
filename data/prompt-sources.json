@@ -1,0 +1,1497 @@
+{
+  "motionsites-framelix-3d-studios": {
+    "title": "3D motion studio hero",
+    "sourceName": "MotionSites.ai Prompt Library",
+    "sourceUrl": "https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/Framelix_3D_Studios.md",
+    "author": "MotionSites.ai",
+    "license": "MIT"
+  },
+  "motionsites-liquid-glass-agency": {
+    "title": "Liquid-glass agency landing page",
+    "sourceName": "MotionSites.ai Prompt Library",
+    "sourceUrl": "https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/Liquid_Glass_Agency.md",
+    "author": "MotionSites.ai",
+    "license": "MIT"
+  },
+  "motionsites-space-voyage": {
+    "title": "Space voyage cinematic hero",
+    "sourceName": "MotionSites.ai Prompt Library",
+    "sourceUrl": "https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/Space_Voyage.md",
+    "author": "MotionSites.ai",
+    "license": "MIT"
+  },
+  "motionsites-portfolio-cosmic": {
+    "title": "Cosmic portfolio landing page",
+    "sourceName": "MotionSites.ai Prompt Library",
+    "sourceUrl": "https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/Portfolio_Cosmic.md",
+    "author": "MotionSites.ai",
+    "license": "MIT"
+  },
+  "motionsites-wealth-video-hero": {
+    "title": "Wealth video hero",
+    "sourceName": "MotionSites.ai Prompt Library",
+    "sourceUrl": "https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/Wealth_Video_Hero.md",
+    "author": "MotionSites.ai",
+    "license": "MIT"
+  },
+  "motionsites-weblex-dark-hero": {
+    "title": "Weblex dark hero",
+    "sourceName": "MotionSites.ai Prompt Library",
+    "sourceUrl": "https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/Weblex_Dark_Hero.md",
+    "author": "MotionSites.ai",
+    "license": "MIT"
+  },
+  "motionsites-terra-geo-map": {
+    "title": "Terra geo-map SaaS hero",
+    "sourceName": "MotionSites.ai Prompt Library",
+    "sourceUrl": "https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/Terra_Geo_Map.md",
+    "author": "MotionSites.ai",
+    "license": "MIT"
+  },
+  "motionsites-new-era-automotive-hero": {
+    "title": "New Era automotive hero",
+    "sourceName": "MotionSites.ai Prompt Library",
+    "sourceUrl": "https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/New_Era_Automotive_Hero.md",
+    "author": "MotionSites.ai",
+    "license": "MIT"
+  },
+  "motionsites-loader-animation": {
+    "title": "Premium loader animation",
+    "sourceName": "MotionSites.ai Prompt Library",
+    "sourceUrl": "https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/Loader_Animation.md",
+    "author": "MotionSites.ai",
+    "license": "MIT"
+  },
+  "motionsites-buzzentic-agency": {
+    "title": "Buzzentic agency hero",
+    "sourceName": "MotionSites.ai Prompt Library",
+    "sourceUrl": "https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/Buzzentic_Agency.md",
+    "author": "MotionSites.ai",
+    "license": "MIT"
+  },
+  "motionsites-ai-designer-agency": {
+    "title": "AI designer agency landing page",
+    "sourceName": "MotionSites.ai Prompt Library",
+    "sourceUrl": "https://github.com/aayushsoam/motionsites.ai/blob/main/prompts/AI_Designer_Agency.md",
+    "author": "MotionSites.ai",
+    "license": "MIT"
+  },
+  "motionsites-motionz-premium": {
+    "title": "MotionZ premium gaming landing page",
+    "sourceName": "MotionSites.ai prompt library fork",
+    "sourceUrl": "https://github.com/nomaan5541/motionsites.ai-prompt-library/blob/main/prompts/Zentry_Premium.md",
+    "author": "Nomaan Khan / MotionSites"
+  },
+  "reddit-v0-visual-generation-template": {
+    "title": "v0 visual generation template",
+    "sourceName": "Reddit + AI Product Development Toolkit",
+    "sourceUrl": "https://github.com/TechNomadCode/AI-Product-Development-Toolkit/blob/main/v0-Design/v0.dev-visual-generation-prompt.md",
+    "author": "Tech Nomad",
+    "license": "MIT"
+  },
+  "x-render-and-co-3d-animation-studio": {
+    "title": "Render & Co. 3D animation studio",
+    "sourceName": "X public post seed",
+    "sourceUrl": "https://x.com/i/status/2040140251952189807",
+    "author": "Teri_AI / local expansion"
+  },
+  "x-luxury-tea-scrollytelling-gsap": {
+    "title": "Luxury tea scrollytelling landing page",
+    "sourceName": "X public post seed",
+    "sourceUrl": "https://x.com/i/status/2054151716468347208",
+    "author": "sukoopuff / local expansion"
+  },
+  "opencodesign-field-notes-landing-page": {
+    "title": "Field Notes productivity landing page",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "author": "Open CoDesign",
+    "license": "MIT"
+  },
+  "opencodesign-product-launch-page": {
+    "title": "Northstar Canvas launch page",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "author": "Open CoDesign",
+    "license": "MIT"
+  },
+  "opencodesign-boutique-agency-homepage": {
+    "title": "Boutique agency homepage",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "author": "Open CoDesign",
+    "license": "MIT"
+  },
+  "opencodesign-open-source-project-homepage": {
+    "title": "Open-source devtool homepage",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "author": "Open CoDesign",
+    "license": "MIT"
+  },
+  "opencodesign-enterprise-security-page": {
+    "title": "Enterprise security trust page",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "author": "Open CoDesign",
+    "license": "MIT"
+  },
+  "opencodesign-ai-notebook-waitlist": {
+    "title": "AI notebook waitlist page",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "author": "Open CoDesign",
+    "license": "MIT"
+  },
+  "opencodesign-ai-writing-assistant-hero": {
+    "title": "AI writing assistant hero",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "author": "Open CoDesign",
+    "license": "MIT"
+  },
+  "opencodesign-particle-field-data-hero": {
+    "title": "Particle-field data infra hero",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "author": "Open CoDesign",
+    "license": "MIT"
+  },
+  "opencodesign-saas-revenue-dashboard": {
+    "title": "SaaS revenue analytics dashboard",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "author": "Open CoDesign",
+    "license": "MIT"
+  },
+  "opencodesign-finance-ops-dashboard": {
+    "title": "Finance operations dashboard",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "author": "Open CoDesign",
+    "license": "MIT"
+  },
+  "opencodesign-observability-dashboard": {
+    "title": "Observability incident dashboard",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "author": "Open CoDesign",
+    "license": "MIT"
+  },
+  "opencodesign-creator-analytics-dashboard": {
+    "title": "Creator analytics dashboard",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "author": "Open CoDesign",
+    "license": "MIT"
+  },
+  "opencodesign-ecommerce-inventory-dashboard": {
+    "title": "Ecommerce inventory dashboard",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "author": "Open CoDesign",
+    "license": "MIT"
+  },
+  "opencodesign-ai-ops-command-center": {
+    "title": "AI operations command center",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "author": "Open CoDesign",
+    "license": "MIT"
+  },
+  "opencodesign-design-token-inspector": {
+    "title": "Design-token inspector",
+    "sourceName": "Open CoDesign example prompts",
+    "sourceUrl": "https://github.com/OpenCoworkAI/open-codesign/blob/main/packages/templates/src/examples/index.ts",
+    "author": "Open CoDesign",
+    "license": "MIT"
+  },
+  "motionsites-free-aetheris-voyage": {
+    "title": "Aetheris Voyage",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "aetheris-voyage-hero"
+  },
+  "motionsites-free-digital-epoch": {
+    "title": "Digital Epoch",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "digital-epoch-hero"
+  },
+  "motionsites-free-rivr": {
+    "title": "RIVR",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "rivr-hero"
+  },
+  "motionsites-free-lumina": {
+    "title": "Lumina",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "lumina-footer"
+  },
+  "motionsites-free-haul": {
+    "title": "HAUL!",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "haul-footer"
+  },
+  "motionsites-free-vize-footer": {
+    "title": "Vize Footer",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "vize-footer"
+  },
+  "motionsites-free-glow-features": {
+    "title": "Glow Features",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "glow-features"
+  },
+  "motionsites-free-kresna-footer": {
+    "title": "Kresna Footer",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "kresna-footer"
+  },
+  "motionsites-free-price-calculator": {
+    "title": "Price Calculator",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "price-calculator"
+  },
+  "motionsites-free-skyelite-private-jets": {
+    "title": "SkyElite Private Jets",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "skyelite-hero"
+  },
+  "motionsites-free-securify-data-security": {
+    "title": "Securify Data Security",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "securify-hero"
+  },
+  "motionsites-free-datacore-booking": {
+    "title": "Datacore Booking",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "datacore-booking-hero"
+  },
+  "motionsites-free-usd-halo": {
+    "title": "USD Halo",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "halo-usd-landing"
+  },
+  "motionsites-free-convix-software": {
+    "title": "Convix Software",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "convix-software-hero"
+  },
+  "motionsites-free-digitwist-ai-builder": {
+    "title": "Digitwist AI Builder",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "digitwist-hero"
+  },
+  "motionsites-free-codenest-coding-platform": {
+    "title": "CodeNest Coding Platform",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "codenest-hero"
+  },
+  "motionsites-free-velorah": {
+    "title": "Velorah",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "velorah-hero"
+  },
+  "motionsites-free-neuralyn": {
+    "title": "Neuralyn",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "neuralyn-hero"
+  },
+  "motionsites-free-orbis-nft": {
+    "title": "Orbis NFT",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "orbis-nft-landing"
+  },
+  "motionsites-free-bloom-ai": {
+    "title": "Bloom AI",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "bloom-ai-hero"
+  },
+  "motionsites-free-taskly": {
+    "title": "Taskly",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "taskly-hero"
+  },
+  "motionsites-free-nexora-automation": {
+    "title": "Nexora Automation",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "nexora-hero"
+  },
+  "motionsites-free-mindloop-landing": {
+    "title": "Mindloop Landing",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "mindloop-landing"
+  },
+  "motionsites-free-power-ai": {
+    "title": "Power AI",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "power-ai-hero"
+  },
+  "motionsites-free-luminex": {
+    "title": "Luminex",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "luminex-hero"
+  },
+  "motionsites-free-prisma-creative-studio": {
+    "title": "Prisma Creative Studio",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "prisma-landing"
+  },
+  "motionsites-free-aethera-studio": {
+    "title": "Aethera Studio",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "aethera-hero"
+  },
+  "motionsites-free-asme": {
+    "title": "Asme",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "asme-hero"
+  },
+  "motionsites-free-transform-data": {
+    "title": "Transform Data",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "transform-data-hero"
+  },
+  "motionsites-free-3d-portfolio": {
+    "title": "3D Portfolio",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "3d-jack-portfolio-hero"
+  },
+  "motionsites-free-dot": {
+    "title": "Dot",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "dot-hero"
+  },
+  "motionsites-free-duolingo-styleguide": {
+    "title": "Duolingo Styleguide",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "duolingo-styleguide-hero"
+  },
+  "motionsites-free-portfolio-cosmic": {
+    "title": "Portfolio Cosmic",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "portfolio-cosmic-hero"
+  },
+  "motionsites-free-designpro-academy": {
+    "title": "DesignPro Academy",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "designpro-hero"
+  },
+  "motionsites-free-stellar-ai": {
+    "title": "Stellar AI",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "stellar-ai-hero"
+  },
+  "motionsites-free-ai-designer-portfolio": {
+    "title": "AI Designer Portfolio",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "vortex-studio-hero"
+  },
+  "motionsites-free-email-marketing": {
+    "title": "Email Marketing",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "design-rocket-email-hero"
+  },
+  "motionsites-free-innovation": {
+    "title": "Innovation",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "innovation-landing"
+  },
+  "motionsites-free-vex-ventures": {
+    "title": "VEX Ventures",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "vex-ventures-hero"
+  },
+  "motionsites-free-portal": {
+    "title": "Portal",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "portal-hero"
+  },
+  "motionsites-free-sentinel-ai": {
+    "title": "Sentinel AI",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "sentinel-ai-hero"
+  },
+  "motionsites-free-celestia": {
+    "title": "Celestia",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "celestia-hero"
+  },
+  "motionsites-free-3d-collectible-hero": {
+    "title": "3D Collectible Hero",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "3d-collectible-hero"
+  },
+  "motionsites-free-no-code-waitlist": {
+    "title": "No-Code Waitlist",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "no-code-waitlist"
+  },
+  "motionsites-free-modern-agency": {
+    "title": "Modern Agency",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "modern-agency"
+  },
+  "motionsites-free-vaultshield": {
+    "title": "VaultShield",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "vaultshield"
+  },
+  "motionsites-free-ai-workflow-hero": {
+    "title": "AI Workflow Hero",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "ai-workflow"
+  },
+  "motionsites-free-neo-museum": {
+    "title": "Neo Museum",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "neo-museum"
+  },
+  "motionsites-free-visual-hero": {
+    "title": "Visual Hero",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "visual-hero"
+  },
+  "motionsites-free-creative-studio": {
+    "title": "Creative Studio",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "creative-studio"
+  },
+  "motionsites-free-wanderful-hero": {
+    "title": "Wanderful Hero",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "wanderful-hero"
+  },
+  "motionsites-free-prosthetics-hero": {
+    "title": "Prosthetics Hero",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "prosthetics-hero"
+  },
+  "motionsites-free-max-reed-portfolio": {
+    "title": "Max Reed Portfolio",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "max-reed-portfolio"
+  },
+  "motionsites-free-email-landing-page": {
+    "title": "Email Landing Page",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "email-landing-page"
+  },
+  "motionsites-free-faq-cta": {
+    "title": "FAQ CTA",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "faq-cta"
+  },
+  "motionsites-free-ai-image-generator-ui": {
+    "title": "AI Image Generator UI",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "ai-image-generator-ui"
+  },
+  "motionsites-free-aurora-onboard": {
+    "title": "Aurora Onboard",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "aurora-onboard"
+  },
+  "motionsites-free-cybersecurity-hero": {
+    "title": "Cybersecurity Hero",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "cybersecurity-hero"
+  },
+  "motionsites-free-equilibrium": {
+    "title": "Equilibrium",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "equilibrium"
+  },
+  "motionsites-free-blog-showcase": {
+    "title": "Blog Showcase",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "blog-showcase"
+  },
+  "motionsites-free-nexto-404": {
+    "title": "Nexto 404",
+    "sourceName": "MotionSites.ai free prompt",
+    "sourceUrl": "https://motionsites.ai/",
+    "author": "MotionSites.ai",
+    "license": "Not specified by live site; public free Copy prompt",
+    "sourcePromptId": "404"
+  },
+  "magicui-bento-grid": {
+    "title": "Asymmetric product bento grid",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/bento-grid.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-animated-list": {
+    "title": "Auto Sorting animated list",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/animated-list.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-dock": {
+    "title": "Macos-style floating dock navigation",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/dock.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-hero-video-dialog": {
+    "title": "Video First product hero",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/hero-video-dialog.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-orbiting-circles": {
+    "title": "Orbiting integration constellation",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/orbiting-circles.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-globe": {
+    "title": "Global network globe hero",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/globe.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-icon-cloud": {
+    "title": "Floating integration icon cloud",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/icon-cloud.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-marquee": {
+    "title": "Proof Logo kinetic marquee",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/marquee.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-animated-beam": {
+    "title": "Workflow beam connector",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/animated-beam.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-border-beam": {
+    "title": "Premium beam border cards",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/border-beam.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-shine-border": {
+    "title": "Shiny border feature grid",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/shine-border.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-magic-card": {
+    "title": "Spotlight magic cards",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/magic-card.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-glare-hover": {
+    "title": "Glare hover product cards",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/glare-hover.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-meteors": {
+    "title": "Meteor shower launch hero",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/meteors.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-particles": {
+    "title": "Particle field backdrop",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/particles.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-animated-grid-pattern": {
+    "title": "Animated grid background",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/animated-grid-pattern.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-flickering-grid": {
+    "title": "Flickering grid terminal backdrop",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/flickering-grid.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-warp-background": {
+    "title": "Warped mesh hero background",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/warp-background.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-backlight": {
+    "title": "Backlit product panel",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/backlight.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-text-reveal": {
+    "title": "Scroll text reveal story",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/text-reveal.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-typing-animation": {
+    "title": "Typewriter command input",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/typing-animation.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-number-ticker": {
+    "title": "Animated kpi counters",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/number-ticker.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-morphing-text": {
+    "title": "Morphing headline loop",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/morphing-text.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-video-text": {
+    "title": "Video masked display type",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/video-text.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-scroll-based-velocity": {
+    "title": "Scroll velocity marquee",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/scroll-based-velocity.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-safari": {
+    "title": "Browser mockup hero",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/safari.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-iphone": {
+    "title": "Mobile app preview hero",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/iphone.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-dotted-map": {
+    "title": "Dotted map traction section",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/dotted-map.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-file-tree": {
+    "title": "Developer docs file tree",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/file-tree.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "magicui-code-comparison": {
+    "title": "Before After code comparison",
+    "sourceName": "Magic UI components",
+    "sourceUrl": "https://github.com/magicuidesign/magicui/blob/main/apps/www/content/docs/components/code-comparison.mdx",
+    "author": "Magic UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-animated-beam": {
+    "title": "Animated beam onboarding flow",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-blurry-blob": {
+    "title": "Soft blob gradient background",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-interactive-grid": {
+    "title": "Cursor reactive grid",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-moving-gradient": {
+    "title": "Moving gradient hero shell",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-ai-button": {
+    "title": "Ai action button with thinking state",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-animated-follow-button": {
+    "title": "Social follow microinteraction",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-ripple-button": {
+    "title": "Directional ripple button",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-status-button": {
+    "title": "Loading Success state button",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-swipe-button": {
+    "title": "Swipe To Confirm control",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-blur-stack-card": {
+    "title": "Stacked blur cards",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-card-spread": {
+    "title": "Spreadable card deck",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-case-study-card": {
+    "title": "Case study preview card",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-email-feature-card": {
+    "title": "Email product feature card",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-expandable-card": {
+    "title": "Expandable details card",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-feature-card": {
+    "title": "Feature card with scan line",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-sparkles-card": {
+    "title": "Sparkles accent card",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-drag-cards": {
+    "title": "Drag To Organize card board",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-dock": {
+    "title": "Compact animated app dock",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-floating-navbar": {
+    "title": "Floating navbar with active state",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-steps": {
+    "title": "Animated setup steps",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-multi-step-loader": {
+    "title": "Multi Step loader timeline",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-terminal": {
+    "title": "Animated terminal walkthrough",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-text-scramble": {
+    "title": "Text scramble headline",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-typewriter": {
+    "title": "Typewriter product copy",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-word-fade-in": {
+    "title": "Word By Word intro reveal",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-scroll-progress": {
+    "title": "Scroll progress story rail",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-image-trail": {
+    "title": "Cursor image trail gallery",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "animata-carousel": {
+    "title": "Spring carousel gallery",
+    "sourceName": "Animata animated components",
+    "sourceUrl": "https://github.com/codse/animata/tree/main/animata",
+    "author": "Animata",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "cultui-dynamic-island": {
+    "title": "Dynamic island command status",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/dynamic-island.mdx",
+    "author": "Cult UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "cultui-distorted-glass": {
+    "title": "Distorted glass surface",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/distorted-glass.mdx",
+    "author": "Cult UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "cultui-hero-liquid-metal": {
+    "title": "Liquid metal hero",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/hero-liquid-metal.mdx",
+    "author": "Cult UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "cultui-hero-dithering": {
+    "title": "Dithered retro hero",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/hero-dithering.mdx",
+    "author": "Cult UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "cultui-hero-heatmap": {
+    "title": "Heatmap product hero",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/hero-heatmap.mdx",
+    "author": "Cult UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "cultui-texture-card": {
+    "title": "Tactile texture cards",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/texture-card.mdx",
+    "author": "Cult UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "cultui-texture-button": {
+    "title": "Tactile texture button",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/texture-button.mdx",
+    "author": "Cult UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "cultui-shift-card": {
+    "title": "Shift Hover editorial card",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/shift-card.mdx",
+    "author": "Cult UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "cultui-side-panel": {
+    "title": "Slide Over details panel",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/side-panel.mdx",
+    "author": "Cult UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "cultui-sortable-list": {
+    "title": "Sortable priority list",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/sortable-list.mdx",
+    "author": "Cult UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "cultui-floating-panel": {
+    "title": "Floating inspector panel",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/floating-panel.mdx",
+    "author": "Cult UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "cultui-prompt-library": {
+    "title": "Prompt library browser",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/prompt-library.mdx",
+    "author": "Cult UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "cultui-terminal-animation": {
+    "title": "Terminal command animation",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/terminal-animation.mdx",
+    "author": "Cult UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "cultui-text-gif": {
+    "title": "Animated gif text mask",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/text-gif.mdx",
+    "author": "Cult UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "cultui-pixel-heading-word": {
+    "title": "Pixelated word heading",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/pixel-heading-word.mdx",
+    "author": "Cult UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "cultui-logo-carousel": {
+    "title": "Logo carousel trust row",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/logo-carousel.mdx",
+    "author": "Cult UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "cultui-feature-carousel": {
+    "title": "Feature carousel explainer",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/feature-carousel.mdx",
+    "author": "Cult UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "cultui-choice-poll": {
+    "title": "Interactive choice poll",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/choice-poll.mdx",
+    "author": "Cult UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "cultui-popover-form": {
+    "title": "Popover form workflow",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/popover-form.mdx",
+    "author": "Cult UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "cultui-onboarding": {
+    "title": "Onboarding checklist flow",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/onboarding.mdx",
+    "author": "Cult UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "cultui-lightboard": {
+    "title": "Lightboard idea wall",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/lightboard.mdx",
+    "author": "Cult UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "cultui-morph-surface": {
+    "title": "Morphing surface card",
+    "sourceName": "Cult UI components",
+    "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/main/apps/www/content/docs/components/morph-surface.mdx",
+    "author": "Cult UI",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "tailark-hero-split-product": {
+    "title": "Split product landing hero",
+    "sourceName": "Tailark marketing blocks",
+    "sourceUrl": "https://github.com/tailark/blocks",
+    "author": "Tailark",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "tailark-logo-cloud-marquee": {
+    "title": "Clean logo cloud marquee",
+    "sourceName": "Tailark marketing blocks",
+    "sourceUrl": "https://github.com/tailark/blocks",
+    "author": "Tailark",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "tailark-feature-bento-grid": {
+    "title": "Marketing feature bento grid",
+    "sourceName": "Tailark marketing blocks",
+    "sourceUrl": "https://github.com/tailark/blocks",
+    "author": "Tailark",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "tailark-integrations-cloud": {
+    "title": "Integrations cloud section",
+    "sourceName": "Tailark marketing blocks",
+    "sourceUrl": "https://github.com/tailark/blocks",
+    "author": "Tailark",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "tailark-stats-proof-band": {
+    "title": "Stats proof band",
+    "sourceName": "Tailark marketing blocks",
+    "sourceUrl": "https://github.com/tailark/blocks",
+    "author": "Tailark",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "tailark-team-grid-editorial": {
+    "title": "Editorial team grid",
+    "sourceName": "Tailark marketing blocks",
+    "sourceUrl": "https://github.com/tailark/blocks",
+    "author": "Tailark",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "tailark-testimonial-wall": {
+    "title": "Testimonial wall",
+    "sourceName": "Tailark marketing blocks",
+    "sourceUrl": "https://github.com/tailark/blocks",
+    "author": "Tailark",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "tailark-pricing-comparison": {
+    "title": "Pricing comparison page",
+    "sourceName": "Tailark marketing blocks",
+    "sourceUrl": "https://github.com/tailark/blocks",
+    "author": "Tailark",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "tailark-faq-accordion-section": {
+    "title": "Faq accordion section",
+    "sourceName": "Tailark marketing blocks",
+    "sourceUrl": "https://github.com/tailark/blocks",
+    "author": "Tailark",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "tailark-final-cta-footer": {
+    "title": "Final cta and footer system",
+    "sourceName": "Tailark marketing blocks",
+    "sourceUrl": "https://github.com/tailark/blocks",
+    "author": "Tailark",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "template-shadcnstore-analytics-command-center": {
+    "title": "Admin analytics command center",
+    "sourceName": "Open-source template pattern",
+    "sourceUrl": "https://github.com/shadcnstore/shadcn-dashboard-landing-template",
+    "author": "Open-source template maintainers",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "template-shadcnstore-mail-task-dashboard": {
+    "title": "Mail and task workspace dashboard",
+    "sourceName": "Open-source template pattern",
+    "sourceUrl": "https://github.com/shadcnstore/shadcn-dashboard-landing-template",
+    "author": "Open-source template maintainers",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "template-shadcnstore-calendar-ops-dashboard": {
+    "title": "Calendar operations dashboard",
+    "sourceName": "Open-source template pattern",
+    "sourceUrl": "https://github.com/shadcnstore/shadcn-dashboard-landing-template",
+    "author": "Open-source template maintainers",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "template-shadcnstore-chat-support-console": {
+    "title": "Chat support console",
+    "sourceName": "Open-source template pattern",
+    "sourceUrl": "https://github.com/shadcnstore/shadcn-dashboard-landing-template",
+    "author": "Open-source template maintainers",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "template-ixartz-devtool-landing-page": {
+    "title": "Developer First landing starter",
+    "sourceName": "Open-source template pattern",
+    "sourceUrl": "https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template",
+    "author": "Open-source template maintainers",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "template-ixartz-docs-first-saas-home": {
+    "title": "Docs-first saas homepage",
+    "sourceName": "Open-source template pattern",
+    "sourceUrl": "https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template",
+    "author": "Open-source template maintainers",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "template-karthik-dark-saas-launch": {
+    "title": "Dark animated saas launch page",
+    "sourceName": "Open-source template pattern",
+    "sourceUrl": "https://github.com/karthikmudunuri/saas-landing-page-template",
+    "author": "Open-source template maintainers",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "template-karthik-framer-motion-feature-flow": {
+    "title": "Framer motion feature flow",
+    "sourceName": "Open-source template pattern",
+    "sourceUrl": "https://github.com/karthikmudunuri/saas-landing-page-template",
+    "author": "Open-source template maintainers",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "template-ui-layouts-creative-scroll-home": {
+    "title": "Creative scroll landing system",
+    "sourceName": "Open-source template pattern",
+    "sourceUrl": "https://github.com/ui-layouts/uilayouts",
+    "author": "Open-source template maintainers",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  },
+  "template-ui-layouts-interactive-gallery": {
+    "title": "Interactive layout gallery",
+    "sourceName": "Open-source template pattern",
+    "sourceUrl": "https://github.com/ui-layouts/uilayouts",
+    "author": "Open-source template maintainers",
+    "license": "MIT",
+    "notes": "Local prompt expansion from public/open source component or template pattern; source code was not copied into the prompt."
+  }
+}

@@ -1,0 +1,36 @@
+PUBLIC SEED PROMPT (from X)
+"Build a luxury 'scrollytelling' landing page for a tea brand using React, Tailwind, and GSAP."
+
+EXPANDED LAFYS-STYLE PROMPT
+
+Build a premium scrollytelling landing page for a fictional tea atelier called Aster Tea. The page should feel like an editorial luxury fragrance site translated into tea: quiet, tactile, warm, and cinematic.
+
+TECH STACK
+Use React, Vite, TypeScript, Tailwind CSS, GSAP, ScrollTrigger, and Lenis for smooth scrolling. If Lenis is not available, keep native scrolling and preserve the ScrollTrigger choreography.
+
+GLOBAL STYLE
+Palette: smoked black #080705, tea cream #F4EEE2, matcha green #BFD66A, aged gold #BFA46A, clay brown #6B4A35. Use a high-contrast serif display font for headings and a clean grotesk for labels/body. Add a subtle noise overlay and paper-grain texture.
+
+SCROLL CHOREOGRAPHY
+The page is one continuous vertical story made of pinned sections:
+1. Steam opening: black screen with a fine gold logo. Wisps of steam rise as translucent blurred SVG paths. The word "ASTER" fades in letter by letter.
+2. Hero pour: pinned full-screen section. As the user scrolls, a teapot silhouette rotates slightly, a stream of tea draws downward using an animated SVG stroke, and the headline splits apart to reveal "Tea, slowed down.".
+3. Origin map: cream background. Three origin cards slide in from the side. A fine-line map path draws between Yunnan, Uji, and Darjeeling. Small botanical illustrations drift in parallax.
+4. Leaves macro: an oversized tea leaf image/gradient mask expands with clip-path from a small circle to full width. Overlay text explains harvest, oxidation, and roast notes.
+5. Ritual timeline: horizontal scroll panel with four steps: warm the cup, wake the leaves, first pour, second bloom. Each step has a small animated icon and 2-line copy.
+6. Product reveal: three tins rotate into a centered row with staggered y movement. Use fake product cards with tasting notes and add-to-cart buttons.
+7. Closing CTA: dark section with a slow steam loop, gold outline button, and short membership pitch.
+
+GSAP DETAILS
+Use gsap.context for cleanup. Register ScrollTrigger once. Use pinned hero and macro sections. Animate clip-path, opacity, y, scale, rotate, SVG strokeDashoffset, and staggered text. Keep durations tied to scrubbed timelines, not random timeouts.
+
+INTERACTION DETAILS
+Product cards lift on hover with warm glow. CTA has a liquid gold border sweep. Nav changes from transparent to cream glass after first section.
+
+QUALITY BAR
+The result should feel restrained and premium: no neon, no generic glass cards, no stock SaaS gradients. All motion should serve the sensory story of tea.
+
+---
+Source: public X post seed — https://x.com/i/status/2054151716468347208
+Note: expanded locally into a detailed Lafys-style prompt; not a verbatim full thread unless marked as seed.
+Curated locally for Lafys-copy.
