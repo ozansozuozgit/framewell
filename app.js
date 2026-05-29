@@ -93,12 +93,15 @@ function renderFacets(){
   els.tagFacet.innerHTML = tagCounts.map(([name,n]) => `<button type="button" class="${state.tag===name?'active':''}" data-tag="${esc(name)}"><span>${esc(name)}</span><b>${n}</b></button>`).join('');
 }
 function card(p, i){
-  const copyLabel = hasPrompt(p) ? 'Copy prompt' : 'View prompt';
-  const tags = (p.tags||[]).slice(0,5).map(t=>`<span class="tag">${esc(t)}</span>`).join('');
-  const tools = (p.aiTools||[]).slice(0,4).map(t=>`<span class="pill">${esc(t)}</span>`).join('');
-  return `<article class="card" data-id="${esc(p.id)}" style="--i:${i%18}">
-    <div class="thumb">${mediaEl(p)}<button class="copy ${hasPrompt(p)?'has-prompt':''}" type="button">${copyLabel}</button><span class="source-chip">${esc(sourceOf(p))}</span></div>
-    <div class="card-body"><div class="toolrow">${tools}</div><h3>${esc(p.title)}</h3><p>${esc(typeOf(p))}</p><div class="tags">${tags}</div></div>
+  const copyLabel = hasPrompt(p) ? 'Copy' : 'Open';
+  const tags = (p.tags||[]).slice(0,3).map(t=>`<span class="tag">${esc(t)}</span>`).join('');
+  const tools = (p.aiTools||[]).slice(0,2).map(t=>`<span class="pill">${esc(t)}</span>`).join('');
+  const text = visualText(p).toLowerCase();
+  const motion = /motion|animation|hero|video|scroll|gsap|3d|glass|space|particle|liquid/.test(text);
+  const size = motion && i % 11 === 0 ? 'poster' : motion && i % 7 === 0 ? 'wide' : i % 9 === 0 ? 'tall' : 'tile';
+  return `<article class="card atlas-card ${size}" data-id="${esc(p.id)}" style="--i:${i%24}">
+    <div class="thumb atlas-thumb">${mediaEl(p)}<button class="copy ${hasPrompt(p)?'has-prompt':''}" type="button">${copyLabel}</button><span class="source-chip">${esc(sourceOf(p))}</span></div>
+    <div class="card-body atlas-card-body"><div class="toolrow">${tools}</div><h3>${esc(p.title)}</h3><p>${esc(typeOf(p))}</p><div class="tags">${tags}</div></div>
   </article>`;
 }
 function visualText(p){ return [p.title, typeOf(p), sourceOf(p), ...(p.tags||[]), ...(p.aiTools||[])].join(' '); }
