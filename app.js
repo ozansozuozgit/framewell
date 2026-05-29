@@ -46,6 +46,11 @@ function mediaEl(p, cls=''){
   const source = esc(sourceOf(p));
   return `<div class="${cls} prompt-placeholder"><span>${tool}</span><strong>${title}</strong><em>${source}</em></div>`;
 }
+function stillMediaEl(p, cls=''){
+  const src = p.thumbnail || p.media || '';
+  if(src) return `<img class="${cls}" src="${esc(src)}" alt="">`;
+  return mediaEl(p, cls);
+}
 function countBy(items, fn){
   const map = new Map();
   items.forEach(item => { const key = fn(item); if(key) map.set(key, (map.get(key)||0)+1); });
@@ -162,12 +167,12 @@ function renderHeroLab(){
   const primary = picks[0];
   if(!primary) return;
   els.heroStage.innerHTML = `<article class="hero-feature" data-id="${esc(primary.id)}">
-    ${mediaEl(primary, 'hero-feature-media')}
+    ${stillMediaEl(primary, 'hero-feature-media')}
     <div class="hero-feature-copy"><span>${esc(sourceOf(primary))}</span><h2>${esc(primary.title)}</h2><p>${esc(typeOf(primary))}</p></div>
   </article>
   <div class="hero-orbit" aria-hidden="true"><span>GSAP</span><span>liquid glass</span><span>3D</span><span>dashboards</span></div>`;
   els.heroReel.innerHTML = picks.slice(1, 7).map((p,i)=>`<article class="hero-reel-card" data-id="${esc(p.id)}" style="--i:${i}">
-    ${mediaEl(p, 'hero-reel-media')}
+    ${stillMediaEl(p, 'hero-reel-media')}
     <div><span>${esc(sourceOf(p))}</span><b>${esc(p.title)}</b></div>
   </article>`).join('');
 }
