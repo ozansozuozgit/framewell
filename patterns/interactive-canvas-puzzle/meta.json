@@ -1,0 +1,22 @@
+{
+  "id": "interactive-canvas-puzzle",
+  "title": "Interactive canvas puzzle",
+  "behavior": "Canvas game",
+  "context": "Portfolio",
+  "description": "A small puzzle-game interaction reveals capabilities before opening the work.",
+  "tags": [
+    "canvas",
+    "game",
+    "puzzle",
+    "portfolio",
+    "interactive"
+  ],
+  "sourcePromptIds": [
+    "x-gaurav-verma-canvas-game"
+  ],
+  "template": "canvas-puzzle",
+  "quality": "featured",
+  "mixRoles": [
+    "signature moment"
+  ]
+}

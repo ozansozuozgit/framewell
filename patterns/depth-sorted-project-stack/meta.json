@@ -1,0 +1,22 @@
+{
+  "id": "depth-sorted-project-stack",
+  "title": "Depth-sorted project stack",
+  "behavior": "Project browse",
+  "context": "Portfolio",
+  "description": "A project stack sorts itself by depth, recency, or theme with a cinematic shuffle.",
+  "tags": [
+    "3d",
+    "stack",
+    "project",
+    "sorting",
+    "portfolio"
+  ],
+  "sourcePromptIds": [
+    "awwwards-project-stack"
+  ],
+  "template": "depth-stack",
+  "quality": "specimen",
+  "mixRoles": [
+    "signature moment"
+  ]
+}

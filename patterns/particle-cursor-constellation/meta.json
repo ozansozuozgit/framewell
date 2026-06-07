@@ -16,6 +16,7 @@
   "template": "constellation",
   "quality": "featured",
   "mixRoles": [
-    "signature moment"
+    "signature moment",
+    "navigation/control"
   ]
 }

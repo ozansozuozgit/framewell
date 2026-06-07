@@ -1,0 +1,23 @@
+{
+  "id": "timeline-camera-scrubber",
+  "title": "Timeline camera scrubber",
+  "behavior": "Scroll aid",
+  "context": "Portfolio",
+  "description": "A vertical timeline scrubs camera states and shows exactly where the viewer is.",
+  "tags": [
+    "timeline",
+    "camera",
+    "scrubber",
+    "scroll",
+    "portfolio"
+  ],
+  "sourcePromptIds": [
+    "joseph-santamaria-camera-path"
+  ],
+  "template": "camera-timeline",
+  "quality": "featured",
+  "mixRoles": [
+    "signature moment",
+    "navigation/control"
+  ]
+}

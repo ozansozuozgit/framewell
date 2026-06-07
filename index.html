@@ -12,7 +12,7 @@
   <link rel="icon" href="assets/ui/favicon.svg">
   <link rel="stylesheet" href="styles.css?v=19">
   <link rel="stylesheet" href="hero-v20.css?v=4">
-  <link rel="stylesheet" href="curation.css?v=4">
+  <link rel="stylesheet" href="curation.css?v=5">
 </head>
 <body>
   <header class="topbar">
@@ -70,6 +70,12 @@
         <span id="patternCount" class="pattern-count">Loading patterns</span>
       </div>
       <label class="intent-box"><span>Project you want to build</span><input id="mixIntent" type="text" value="a polished AI product dashboard" placeholder="portfolio, command center, SaaS landing page, docs app..."></label>
+      <div class="preset-mixes" aria-label="One click effect mixes">
+        <button type="button" data-mix-preset="portfolio">Portfolio: shader + scroll + case-study</button>
+        <button type="button" data-mix-preset="ai-dashboard">AI dashboard: command + agent map + data surface</button>
+        <button type="button" data-mix-preset="saas-hero">SaaS hero: 3D product + proof + microinteractions</button>
+        <button type="button" data-mix-preset="wild">Wild card: weird but usable</button>
+      </div>
       <div id="kitTray" class="kit-tray" aria-live="polite"></div>
       <div id="patternGrid" class="live-pattern-grid" aria-live="polite"></div>
       <pre id="kitBrief" class="kit-brief" hidden></pre>
@@ -157,6 +163,6 @@
 
   <dialog id="modal"><button id="closeModal" class="close" type="button" aria-label="Close modal">×</button><div id="modalBody"></div></dialog>
   <footer><span>Framewell live component atlas</span><a href="#top">Back to top</a><a href="THIRD_PARTY_PROMPTS.md">Third-party sources</a></footer>
-  <script src="app.js?v=24"></script>
+  <script src="app.js?v=25"></script>
 </body>
 </html>

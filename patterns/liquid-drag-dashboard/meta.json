@@ -1,0 +1,22 @@
+{
+  "id": "liquid-drag-dashboard",
+  "title": "Liquid drag dashboard",
+  "behavior": "Dashboard motion",
+  "context": "Dashboard",
+  "description": "Widgets stretch and reflow like liquid while preserving dashboard clarity.",
+  "tags": [
+    "dashboard",
+    "drag",
+    "liquid",
+    "layout",
+    "motion"
+  ],
+  "sourcePromptIds": [
+    "dashboard-motion-inspiration"
+  ],
+  "template": "liquid-dashboard",
+  "quality": "specimen",
+  "mixRoles": [
+    "product surface"
+  ]
+}

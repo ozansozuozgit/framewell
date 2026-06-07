@@ -1,0 +1,22 @@
+{
+  "id": "elastic-cursor-work-index",
+  "title": "Elastic cursor work index",
+  "behavior": "Cursor",
+  "context": "Portfolio",
+  "description": "The cursor becomes a preview lens, action label, and magnetic selector in one.",
+  "tags": [
+    "cursor",
+    "preview",
+    "magnetic",
+    "portfolio",
+    "index"
+  ],
+  "sourcePromptIds": [
+    "brandon-bartram-custom-cursor"
+  ],
+  "template": "cursor-index",
+  "quality": "specimen",
+  "mixRoles": [
+    "navigation/control"
+  ]
+}

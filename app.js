@@ -469,6 +469,40 @@ function renderKitTray(){
   els.kitTray.innerHTML = `<span>${picked.length} selected</span><p>${picked.map(p => esc(p.title)).join(' · ')}</p><button type="button" data-copy-live-kit>Copy mix brief</button><button type="button" data-clear-live-kit>Clear</button>`;
   if(els.kitBrief){ els.kitBrief.hidden = false; els.kitBrief.textContent = liveKitBrief(picked); }
 }
+function applyMixPreset(name){
+  const rules = {
+    portfolio: {
+      intent: 'a high-end interactive portfolio with shader transitions and cinematic case studies',
+      ids: ['brush-shader-project-reveal','infinite-3d-corridor-scroll','scroll-driven-3d-room','dom-to-canvas-handoff','horizontal-scroll-project-world','elastic-cursor-work-index']
+    },
+    'ai-dashboard': {
+      intent: 'an AI product dashboard with command surfaces, agent reasoning, and dense evidence views',
+      ids: ['spatial-command-room','ai-map-of-thought','command-center-alert-lens','data-lineage-river','audit-evidence-peek','liquid-drag-dashboard']
+    },
+    'saas-hero': {
+      intent: 'a premium SaaS landing page with a memorable 3D product hero and conversion proof',
+      ids: ['scroll-synced-model-exploder','orbital-product-stage','glass-torus-pricing','liquid-metal-cta','stats-countup-proof-band','copy-button-success-sweep']
+    },
+    wild: {
+      intent: 'a distinctive but usable product site with one weird signature interaction',
+      ids: ['webgpu-particle-logo-field','water-shader-page-transition','interactive-canvas-puzzle','shader-noise-navigation','immersive-case-study-portal','glassmorphic-audio-reactor']
+    }
+  }[name];
+  if(!rules) return;
+  selectedPatterns.clear();
+  rules.ids.filter(id => patterns.some(p => p.id === id)).forEach(id => selectedPatterns.add(id));
+  if(els.mixIntent) els.mixIntent.value = rules.intent;
+  patternState.query = '';
+  patternState.behavior = '';
+  patternState.context = '';
+  patternState.role = '';
+  if(els.patternSearch) els.patternSearch.value = '';
+  if(els.behaviorSelect) els.behaviorSelect.value = '';
+  if(els.contextSelect) els.contextSelect.value = '';
+  if(els.roleSelect) els.roleSelect.value = '';
+  renderPatternStudio();
+  document.getElementById('kitTray')?.scrollIntoView({behavior:'smooth', block:'center'});
+}
 function liveKitBrief(picked){
   const intent = els.mixIntent?.value?.trim() || 'my existing product';
   return `Goal: build ${intent}.\n\nIntegrate these Framewell live UI patterns without replacing the app structure. Combine them as atoms: one signature moment, one navigation/control idea, supporting product-surface effects, and only the microinteractions that genuinely help. Keep one coherent art direction; do not collage styles.\n\nSelected patterns:\n${picked.map((p,i)=>`${i+1}. ${p.title} — ${p.description} Behavior: ${p.behavior}. Context: ${p.context}. Mix role: ${(p.mixRoles||[]).join(', ') || 'supporting effect'}. Tags: ${(p.tags||[]).join(', ')}.`).join('\n')}\n\nImplementation rules:\n- Treat each pattern as an isolated behavior/specimen, not a full page template.\n- First assign each pattern a job: structure, signature motion, data surface, control, proof, or microinteraction.\n- Reuse my existing data model, components, typography, and color tokens.\n- Add the smallest necessary HTML/CSS/JS or framework code.\n- Use real states: loading, hover/focus, keyboard, empty/error, mobile, reduced motion.\n- If two effects compete, keep the stronger one and demote the other to a subtle detail.\n- Explain which pattern influenced each change.`;
@@ -543,6 +577,8 @@ document.addEventListener('click', e => {
   if(togglePatternBtn){ const id = togglePatternBtn.dataset.togglePattern; selectedPatterns.has(id) ? selectedPatterns.delete(id) : selectedPatterns.add(id); renderPatternStudio(); return; }
   if(e.target.closest('[data-copy-live-kit]')){ const picked = [...selectedPatterns].map(id => patterns.find(p => p.id === id)).filter(Boolean); copyText(liveKitBrief(picked)); return; }
   if(e.target.closest('[data-clear-live-kit]')){ selectedPatterns.clear(); renderPatternStudio(); return; }
+  const presetBtn = e.target.closest('[data-mix-preset]');
+  if(presetBtn){ applyMixPreset(presetBtn.dataset.mixPreset); return; }
   const patternCardEl = e.target.closest('[data-pattern]');
   if(patternCardEl && !e.target.closest('iframe,button,a')){ openPatternModal(patternCardEl.dataset.pattern); return; }
   if(e.target.closest('.copy')){ const p = findPostFromEvent(e); if(p) copyPrompt(p); return; }
@@ -584,8 +620,8 @@ if(els.contextSelect) els.contextSelect.addEventListener('change', e => { patter
 if(els.roleSelect) els.roleSelect.addEventListener('change', e => { patternState.role = e.target.value; renderPatternStudio(); });
 if(els.mixIntent) els.mixIntent.addEventListener('input', () => renderKitTray());
 document.getElementById('clearFilters').onclick = () => { state.query=''; state.source=''; state.type=''; state.tag=''; state.tier=''; shuffleMode=false; els.search.value=''; els.sourceSelect.value=''; els.typeSelect.value=''; if(els.tierSelect) els.tierSelect.value=''; render(); };
-document.getElementById('shuffleButton').onclick = () => { shuffleMode = !shuffleMode; render(); document.getElementById('library').scrollIntoView({behavior:'smooth'}); };
-document.addEventListener('keydown', e => { if(e.key === '/' && document.activeElement !== els.search){ e.preventDefault(); els.search.focus(); } });
+document.getElementById('shuffleButton').onclick = () => { shuffleMode = !shuffleMode; render(); document.getElementById('patterns').scrollIntoView({behavior:'smooth'}); };
+document.addEventListener('keydown', e => { if(e.key === '/' && document.activeElement !== els.patternSearch){ e.preventDefault(); (els.patternSearch || els.search).focus(); } });
 
 (async function init(){
   posts = await loadJson('data/posts.json', []);

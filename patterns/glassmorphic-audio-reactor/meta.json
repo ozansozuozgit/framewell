@@ -1,0 +1,22 @@
+{
+  "id": "glassmorphic-audio-reactor",
+  "title": "Glassmorphic audio reactor",
+  "behavior": "Audio visual",
+  "context": "Media",
+  "description": "Glass panels react to audio bands with depth and restrained glow.",
+  "tags": [
+    "audio",
+    "glass",
+    "reactive",
+    "media",
+    "visualizer"
+  ],
+  "sourcePromptIds": [
+    "creative-audio-visualizer"
+  ],
+  "template": "audio-reactor",
+  "quality": "specimen",
+  "mixRoles": [
+    "microinteraction"
+  ]
+}
