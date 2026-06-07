@@ -1,0 +1,21 @@
+{
+  "id": "split-text-control-deck",
+  "title": "Split text control deck",
+  "behavior": "Split text",
+  "context": "Landing page",
+  "description": "Type reveals are controlled by state so the user can compare premium motion styles.",
+  "tags": [
+    "gsap",
+    "split-text",
+    "typography",
+    "hero"
+  ],
+  "sourcePromptIds": [
+    "gsapien-animated-text"
+  ],
+  "template": "split-text",
+  "quality": "featured",
+  "mixRoles": [
+    "signature moment"
+  ]
+}

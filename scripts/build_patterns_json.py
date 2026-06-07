@@ -19,6 +19,15 @@ DATA_PATH = ROOT / "data" / "patterns.json"
 # Codrops shader/scroll/text demos, GSAP showcase, and classic creative portfolios.
 # These are original local specimens, not copied third-party source.
 PATTERNS = [
+    ("three-scroll-product-stage", "Three.js scroll product stage", "Three.js scroll", "SaaS hero", "A real Three.js object and camera move through product chapters as the user scrolls.", ["three-js", "gsap", "scroll", "camera", "product"], "three-product", "codrops-scroll-driven-3d-world"),
+    ("gsap-scroll-cascade-stack", "GSAP scroll cascade stack", "GSAP scroll", "Portfolio", "Cards collapse, stack, and cascade with a scrubbed GSAP timeline instead of a loop.", ["gsap", "scroll", "stack", "portfolio", "cards"], "gsap-cascade", "gsap-scrolltrigger-product-demo"),
+    ("webgl-shader-gallery-wall", "WebGL shader gallery wall", "Shader gallery", "Portfolio", "A premium gallery wall with shader-like gradients, active focus, and inspectable cases.", ["webgl", "shader", "gallery", "portfolio"], "shader-gallery", "codrops-scroll-revealed-webgl-gallery"),
+    ("fluid-cursor-lens-index", "Fluid cursor lens index", "Cursor lens", "Portfolio", "The pointer becomes a soft glass lens over an oversized project index.", ["cursor", "glass", "portfolio", "hover"], "fluid-cursor", "brandon-bartram-custom-cursor"),
+    ("scroll-mask-story-panels", "Scroll mask story panels", "Scroll mask", "Marketing", "A before/after mask makes a product transformation visible and controllable.", ["gsap", "mask", "scroll", "story"], "scroll-mask", "x-luxury-tea-scrollytelling-gsap"),
+    ("three-particle-command-field", "Three.js particle command field", "Three.js particles", "AI app", "A live Three.js particle field supports command UI without becoming decorative noise.", ["three-js", "particles", "ai", "command"], "particle-field", "webgl-webgpu-showcase"),
+    ("gsap-flip-board-recompose", "GSAP board recompose", "GSAP FLIP", "Internal tool", "A board switches modes with continuity so cards feel physically rearranged.", ["gsap", "flip", "board", "dashboard"], "flip-board", "codrops-gsap-flip-scrolltrigger"),
+    ("split-text-control-deck", "Split text control deck", "Split text", "Landing page", "Type reveals are controlled by state so the user can compare premium motion styles.", ["gsap", "split-text", "typography", "hero"], "split-text", "gsapien-animated-text"),
+
     # Cinematic / hero / WebGL-feeling
     ("cinematic-scroll-camera", "Cinematic scroll camera pass", "Scroll cinema", "Portfolio", "A product scene appears to move past camera planes as the page scrolls.", ["gsap", "scrolltrigger", "camera", "portfolio", "cinematic"], "motion", "motionsites-space-voyage"),
     ("shader-type-dissolve", "Shader text dissolve", "Text effect", "Portfolio", "Large type breaks into particles and reforms on hover/focus.", ["webgl", "shader", "text", "particles", "hero"], "type-dissolve", "x-render-and-co-3d-animation-studio"),
@@ -135,6 +144,14 @@ PATTERNS = [
 ]
 
 PREMIUM_PATTERN_IDS = {
+    "three-scroll-product-stage",
+    "gsap-scroll-cascade-stack",
+    "webgl-shader-gallery-wall",
+    "fluid-cursor-lens-index",
+    "scroll-mask-story-panels",
+    "three-particle-command-field",
+    "gsap-flip-board-recompose",
+    "split-text-control-deck",
     "radial-command-wheel",
     "search-bar-morph-results",
     "ai-agent-path-trace",

@@ -14,7 +14,7 @@
     "template-ui-layouts-interactive-gallery"
   ],
   "template": "search-morph",
-  "quality": "featured",
+  "quality": "specimen",
   "mixRoles": [
     "navigation/control"
   ]

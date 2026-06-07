@@ -1,11 +1,230 @@
 {
   "summary": {
-    "count": 23,
-    "featured": 13,
-    "specimens": 10,
+    "count": 31,
+    "featured": 19,
+    "specimens": 12,
     "archiveMode": "hidden; live effects are primary"
   },
   "patterns": [
+    {
+      "id": "three-scroll-product-stage",
+      "title": "Three.js scroll product stage",
+      "behavior": "Three.js scroll",
+      "context": "SaaS hero",
+      "description": "A real Three.js object and camera move through product chapters as the user scrolls.",
+      "tags": [
+        "three-js",
+        "gsap",
+        "scroll",
+        "camera",
+        "product"
+      ],
+      "sourcePromptIds": [
+        "codrops-scroll-driven-3d-world"
+      ],
+      "template": "three-product",
+      "quality": "featured",
+      "mixRoles": [
+        "signature moment"
+      ],
+      "slug": "three-scroll-product-stage",
+      "previewUrl": "patterns/three-scroll-product-stage/index.html",
+      "prompt": "Adapt the Framewell pattern 'Three.js scroll product stage' into my existing SaaS hero without replacing my product structure. Use it only as a focused Three.js scroll layer. A real Three.js object and camera move through product chapters as the user scrolls. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: three-js, gsap, scroll, camera, product.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Three.js scroll product stage \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"three-scroll-product-stage\", \"slug\": \"three-scroll-product-stage\", \"title\": \"Three.js scroll product stage\", \"behavior\": \"Three.js scroll\", \"context\": \"SaaS hero\", \"description\": \"A real Three.js object and camera move through product chapters as the user scrolls.\", \"tags\": [\"three-js\", \"gsap\", \"scroll\", \"camera\", \"product\"], \"template\": \"three-product\", \"sourcePromptIds\": [\"codrops-scroll-driven-3d-world\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "advanced",
+      "dependencies": []
+    },
+    {
+      "id": "gsap-scroll-cascade-stack",
+      "title": "GSAP scroll cascade stack",
+      "behavior": "GSAP scroll",
+      "context": "Portfolio",
+      "description": "Cards collapse, stack, and cascade with a scrubbed GSAP timeline instead of a loop.",
+      "tags": [
+        "gsap",
+        "scroll",
+        "stack",
+        "portfolio",
+        "cards"
+      ],
+      "sourcePromptIds": [
+        "gsap-scrolltrigger-product-demo"
+      ],
+      "template": "gsap-cascade",
+      "quality": "featured",
+      "mixRoles": [
+        "supporting effect"
+      ],
+      "slug": "gsap-scroll-cascade-stack",
+      "previewUrl": "patterns/gsap-scroll-cascade-stack/index.html",
+      "prompt": "Adapt the Framewell pattern 'GSAP scroll cascade stack' into my existing Portfolio without replacing my product structure. Use it only as a focused GSAP scroll layer. Cards collapse, stack, and cascade with a scrubbed GSAP timeline instead of a loop. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: gsap, scroll, stack, portfolio, cards.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>GSAP scroll cascade stack \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"gsap-scroll-cascade-stack\", \"slug\": \"gsap-scroll-cascade-stack\", \"title\": \"GSAP scroll cascade stack\", \"behavior\": \"GSAP scroll\", \"context\": \"Portfolio\", \"description\": \"Cards collapse, stack, and cascade with a scrubbed GSAP timeline instead of a loop.\", \"tags\": [\"gsap\", \"scroll\", \"stack\", \"portfolio\", \"cards\"], \"template\": \"gsap-cascade\", \"sourcePromptIds\": [\"gsap-scrolltrigger-product-demo\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "advanced",
+      "dependencies": []
+    },
+    {
+      "id": "webgl-shader-gallery-wall",
+      "title": "WebGL shader gallery wall",
+      "behavior": "Shader gallery",
+      "context": "Portfolio",
+      "description": "A premium gallery wall with shader-like gradients, active focus, and inspectable cases.",
+      "tags": [
+        "webgl",
+        "shader",
+        "gallery",
+        "portfolio"
+      ],
+      "sourcePromptIds": [
+        "codrops-scroll-revealed-webgl-gallery"
+      ],
+      "template": "shader-gallery",
+      "quality": "featured",
+      "mixRoles": [
+        "signature moment"
+      ],
+      "slug": "webgl-shader-gallery-wall",
+      "previewUrl": "patterns/webgl-shader-gallery-wall/index.html",
+      "prompt": "Adapt the Framewell pattern 'WebGL shader gallery wall' into my existing Portfolio without replacing my product structure. Use it only as a focused Shader gallery layer. A premium gallery wall with shader-like gradients, active focus, and inspectable cases. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: webgl, shader, gallery, portfolio.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>WebGL shader gallery wall \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"webgl-shader-gallery-wall\", \"slug\": \"webgl-shader-gallery-wall\", \"title\": \"WebGL shader gallery wall\", \"behavior\": \"Shader gallery\", \"context\": \"Portfolio\", \"description\": \"A premium gallery wall with shader-like gradients, active focus, and inspectable cases.\", \"tags\": [\"webgl\", \"shader\", \"gallery\", \"portfolio\"], \"template\": \"shader-gallery\", \"sourcePromptIds\": [\"codrops-scroll-revealed-webgl-gallery\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "advanced",
+      "dependencies": []
+    },
+    {
+      "id": "fluid-cursor-lens-index",
+      "title": "Fluid cursor lens index",
+      "behavior": "Cursor lens",
+      "context": "Portfolio",
+      "description": "The pointer becomes a soft glass lens over an oversized project index.",
+      "tags": [
+        "cursor",
+        "glass",
+        "portfolio",
+        "hover"
+      ],
+      "sourcePromptIds": [
+        "brandon-bartram-custom-cursor"
+      ],
+      "template": "fluid-cursor",
+      "quality": "featured",
+      "mixRoles": [
+        "navigation/control"
+      ],
+      "slug": "fluid-cursor-lens-index",
+      "previewUrl": "patterns/fluid-cursor-lens-index/index.html",
+      "prompt": "Adapt the Framewell pattern 'Fluid cursor lens index' into my existing Portfolio without replacing my product structure. Use it only as a focused Cursor lens layer. The pointer becomes a soft glass lens over an oversized project index. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: cursor, glass, portfolio, hover.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Fluid cursor lens index \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"fluid-cursor-lens-index\", \"slug\": \"fluid-cursor-lens-index\", \"title\": \"Fluid cursor lens index\", \"behavior\": \"Cursor lens\", \"context\": \"Portfolio\", \"description\": \"The pointer becomes a soft glass lens over an oversized project index.\", \"tags\": [\"cursor\", \"glass\", \"portfolio\", \"hover\"], \"template\": \"fluid-cursor\", \"sourcePromptIds\": [\"brandon-bartram-custom-cursor\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "medium",
+      "dependencies": []
+    },
+    {
+      "id": "scroll-mask-story-panels",
+      "title": "Scroll mask story panels",
+      "behavior": "Scroll mask",
+      "context": "Marketing",
+      "description": "A before/after mask makes a product transformation visible and controllable.",
+      "tags": [
+        "gsap",
+        "mask",
+        "scroll",
+        "story"
+      ],
+      "sourcePromptIds": [
+        "x-luxury-tea-scrollytelling-gsap"
+      ],
+      "template": "scroll-mask",
+      "quality": "featured",
+      "mixRoles": [
+        "supporting effect"
+      ],
+      "slug": "scroll-mask-story-panels",
+      "previewUrl": "patterns/scroll-mask-story-panels/index.html",
+      "prompt": "Adapt the Framewell pattern 'Scroll mask story panels' into my existing Marketing without replacing my product structure. Use it only as a focused Scroll mask layer. A before/after mask makes a product transformation visible and controllable. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: gsap, mask, scroll, story.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Scroll mask story panels \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"scroll-mask-story-panels\", \"slug\": \"scroll-mask-story-panels\", \"title\": \"Scroll mask story panels\", \"behavior\": \"Scroll mask\", \"context\": \"Marketing\", \"description\": \"A before/after mask makes a product transformation visible and controllable.\", \"tags\": [\"gsap\", \"mask\", \"scroll\", \"story\"], \"template\": \"scroll-mask\", \"sourcePromptIds\": [\"x-luxury-tea-scrollytelling-gsap\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "advanced",
+      "dependencies": []
+    },
+    {
+      "id": "three-particle-command-field",
+      "title": "Three.js particle command field",
+      "behavior": "Three.js particles",
+      "context": "AI app",
+      "description": "A live Three.js particle field supports command UI without becoming decorative noise.",
+      "tags": [
+        "three-js",
+        "particles",
+        "ai",
+        "command"
+      ],
+      "sourcePromptIds": [
+        "webgl-webgpu-showcase"
+      ],
+      "template": "particle-field",
+      "quality": "featured",
+      "mixRoles": [
+        "signature moment",
+        "navigation/control"
+      ],
+      "slug": "three-particle-command-field",
+      "previewUrl": "patterns/three-particle-command-field/index.html",
+      "prompt": "Adapt the Framewell pattern 'Three.js particle command field' into my existing AI app without replacing my product structure. Use it only as a focused Three.js particles layer. A live Three.js particle field supports command UI without becoming decorative noise. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: three-js, particles, ai, command.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Three.js particle command field \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"three-particle-command-field\", \"slug\": \"three-particle-command-field\", \"title\": \"Three.js particle command field\", \"behavior\": \"Three.js particles\", \"context\": \"AI app\", \"description\": \"A live Three.js particle field supports command UI without becoming decorative noise.\", \"tags\": [\"three-js\", \"particles\", \"ai\", \"command\"], \"template\": \"particle-field\", \"sourcePromptIds\": [\"webgl-webgpu-showcase\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "advanced",
+      "dependencies": []
+    },
+    {
+      "id": "gsap-flip-board-recompose",
+      "title": "GSAP board recompose",
+      "behavior": "GSAP FLIP",
+      "context": "Internal tool",
+      "description": "A board switches modes with continuity so cards feel physically rearranged.",
+      "tags": [
+        "gsap",
+        "flip",
+        "board",
+        "dashboard"
+      ],
+      "sourcePromptIds": [
+        "codrops-gsap-flip-scrolltrigger"
+      ],
+      "template": "flip-board",
+      "quality": "featured",
+      "mixRoles": [
+        "product surface"
+      ],
+      "slug": "gsap-flip-board-recompose",
+      "previewUrl": "patterns/gsap-flip-board-recompose/index.html",
+      "prompt": "Adapt the Framewell pattern 'GSAP board recompose' into my existing Internal tool without replacing my product structure. Use it only as a focused GSAP FLIP layer. A board switches modes with continuity so cards feel physically rearranged. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: gsap, flip, board, dashboard.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>GSAP board recompose \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"gsap-flip-board-recompose\", \"slug\": \"gsap-flip-board-recompose\", \"title\": \"GSAP board recompose\", \"behavior\": \"GSAP FLIP\", \"context\": \"Internal tool\", \"description\": \"A board switches modes with continuity so cards feel physically rearranged.\", \"tags\": [\"gsap\", \"flip\", \"board\", \"dashboard\"], \"template\": \"flip-board\", \"sourcePromptIds\": [\"codrops-gsap-flip-scrolltrigger\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "advanced",
+      "dependencies": []
+    },
+    {
+      "id": "split-text-control-deck",
+      "title": "Split text control deck",
+      "behavior": "Split text",
+      "context": "Landing page",
+      "description": "Type reveals are controlled by state so the user can compare premium motion styles.",
+      "tags": [
+        "gsap",
+        "split-text",
+        "typography",
+        "hero"
+      ],
+      "sourcePromptIds": [
+        "gsapien-animated-text"
+      ],
+      "template": "split-text",
+      "quality": "featured",
+      "mixRoles": [
+        "signature moment"
+      ],
+      "slug": "split-text-control-deck",
+      "previewUrl": "patterns/split-text-control-deck/index.html",
+      "prompt": "Adapt the Framewell pattern 'Split text control deck' into my existing Landing page without replacing my product structure. Use it only as a focused Split text layer. Type reveals are controlled by state so the user can compare premium motion styles. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: gsap, split-text, typography, hero.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Split text control deck \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"split-text-control-deck\", \"slug\": \"split-text-control-deck\", \"title\": \"Split text control deck\", \"behavior\": \"Split text\", \"context\": \"Landing page\", \"description\": \"Type reveals are controlled by state so the user can compare premium motion styles.\", \"tags\": [\"gsap\", \"split-text\", \"typography\", \"hero\"], \"template\": \"split-text\", \"sourcePromptIds\": [\"gsapien-animated-text\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "advanced",
+      "dependencies": []
+    },
     {
       "id": "glass-torus-pricing",
       "title": "Glass torus pricing focus",
@@ -265,7 +484,7 @@
         "template-ui-layouts-interactive-gallery"
       ],
       "template": "search-morph",
-      "quality": "featured",
+      "quality": "specimen",
       "mixRoles": [
         "navigation/control"
       ],
@@ -292,7 +511,7 @@
         "opencodesign-ai-notebook-waitlist"
       ],
       "template": "onboard-stars",
-      "quality": "featured",
+      "quality": "specimen",
       "mixRoles": [
         "supporting effect"
       ],

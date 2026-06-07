@@ -1,0 +1,21 @@
+{
+  "id": "gsap-flip-board-recompose",
+  "title": "GSAP board recompose",
+  "behavior": "GSAP FLIP",
+  "context": "Internal tool",
+  "description": "A board switches modes with continuity so cards feel physically rearranged.",
+  "tags": [
+    "gsap",
+    "flip",
+    "board",
+    "dashboard"
+  ],
+  "sourcePromptIds": [
+    "codrops-gsap-flip-scrolltrigger"
+  ],
+  "template": "flip-board",
+  "quality": "featured",
+  "mixRoles": [
+    "product surface"
+  ]
+}

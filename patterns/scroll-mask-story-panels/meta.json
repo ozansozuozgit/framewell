@@ -1,0 +1,21 @@
+{
+  "id": "scroll-mask-story-panels",
+  "title": "Scroll mask story panels",
+  "behavior": "Scroll mask",
+  "context": "Marketing",
+  "description": "A before/after mask makes a product transformation visible and controllable.",
+  "tags": [
+    "gsap",
+    "mask",
+    "scroll",
+    "story"
+  ],
+  "sourcePromptIds": [
+    "x-luxury-tea-scrollytelling-gsap"
+  ],
+  "template": "scroll-mask",
+  "quality": "featured",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

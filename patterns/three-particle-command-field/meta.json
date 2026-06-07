@@ -1,0 +1,22 @@
+{
+  "id": "three-particle-command-field",
+  "title": "Three.js particle command field",
+  "behavior": "Three.js particles",
+  "context": "AI app",
+  "description": "A live Three.js particle field supports command UI without becoming decorative noise.",
+  "tags": [
+    "three-js",
+    "particles",
+    "ai",
+    "command"
+  ],
+  "sourcePromptIds": [
+    "webgl-webgpu-showcase"
+  ],
+  "template": "particle-field",
+  "quality": "featured",
+  "mixRoles": [
+    "signature moment",
+    "navigation/control"
+  ]
+}

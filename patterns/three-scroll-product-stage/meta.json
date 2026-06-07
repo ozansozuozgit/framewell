@@ -1,0 +1,22 @@
+{
+  "id": "three-scroll-product-stage",
+  "title": "Three.js scroll product stage",
+  "behavior": "Three.js scroll",
+  "context": "SaaS hero",
+  "description": "A real Three.js object and camera move through product chapters as the user scrolls.",
+  "tags": [
+    "three-js",
+    "gsap",
+    "scroll",
+    "camera",
+    "product"
+  ],
+  "sourcePromptIds": [
+    "codrops-scroll-driven-3d-world"
+  ],
+  "template": "three-product",
+  "quality": "featured",
+  "mixRoles": [
+    "signature moment"
+  ]
+}

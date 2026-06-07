@@ -9,9 +9,11 @@
     "validate": "node --check app.js && npm run build:specimens && python3 scripts/build_prompts_json.py && python3 scripts/build_curation_json.py && python3 scripts/build_composition_json.py && python3 scripts/validate_composition_json.py && python3 scripts/build_patterns_json.py"
   },
   "dependencies": {
+    "gsap": "^3.15.0",
     "lucide-react": "^1.17.0",
     "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "react-dom": "^19.2.7",
+    "three": "^0.184.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.0.2",

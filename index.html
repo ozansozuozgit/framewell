@@ -3,166 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Framewell — live component atlas</title>
-  <meta name="description" content="Framewell is a live atlas of isolated UI components, interaction patterns, source code, optional prompts, kits, and preserved prompt archive material.">
-  <meta property="og:title" content="Framewell — live component atlas">
-  <meta property="og:description" content="Browse live UI specimens, copy the code, mix patterns into AI-ready briefs, and keep the full prompt archive available underneath.">
+  <title>Framewell — premium motion lab</title>
+  <meta name="description" content="Framewell is a live motion lab of premium React, GSAP, Three.js, scroll, WebGL-feeling, dashboard, and microinteraction specimens with prompts and code.">
+  <meta property="og:title" content="Framewell — premium motion lab">
+  <meta property="og:description" content="Inspect full-stage live motion examples, then copy the prompt or code behind them.">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#f7f4ed">
+  <meta name="theme-color" content="#09090b">
   <link rel="icon" href="assets/ui/favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=19">
-  <link rel="stylesheet" href="hero-v20.css?v=4">
-  <link rel="stylesheet" href="curation.css?v=7">
+  <link rel="stylesheet" href="assets/specimens/style.css">
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="#top" aria-label="Framewell live component atlas"><img src="assets/ui/framewell-mark.svg" alt="Framewell"><span>Framewell</span></a>
-    <nav aria-label="Primary navigation">
-      <a href="#patterns">Live patterns</a>
-      <a href="#kitTray">Mix kit</a>
-      <a href="THIRD_PARTY_PROMPTS.md">Sources</a>
-    </nav>
-    <div class="actions"><span id="navCount">Loading library</span></div>
-  </header>
-
-  <main id="top">
-    <section class="hero-studio" aria-labelledby="heroTitle">
-      <div class="hero-backdrop" aria-hidden="true"></div>
-      <div class="hero-copy">
-        <span class="eyebrow">Framewell component atlas</span>
-        <h1 id="heroTitle">Steal the effect, not the whole website.</h1>
-        <p>A curated atlas of live, isolated interaction patterns: GSAP-style scroll moments, WebGL-feeling heroes, dense dashboard tricks, portfolio transitions, command surfaces, and microinteractions. Pick the atoms, then ask an LLM to combine them for your project.</p>
-        <div class="hero-actions">
-          <a class="primary-link" href="#patterns">Browse live patterns</a>
-          <button id="shuffleButton" type="button">Shuffle references</button>
-        </div>
-        <div class="hero-mini-stats" aria-label="Collection statistics">
-          <div><span id="statTotal">0</span><small>live effects</small></div>
-          <div><span id="statCurated">0</span><small>featured</small></div>
-          <div><span id="statPreviews">0</span><small>contexts</small></div>
-          <div><span id="statSources">0</span><small>mix roles</small></div>
-        </div>
-      </div>
-      <div class="hero-motion-lab" aria-label="Live preview wall from the collection">
-        <div class="lab-topline"><span>Framewell shelf</span><b id="promptTotal">0 prompts</b></div>
-        <div id="heroStage" class="hero-stage"></div>
-        <div id="heroReel" class="hero-reel"></div>
-        <div class="hero-scout">
-          <div class="radar-head"><span>Fresh studies</span><b>latest additions</b></div>
-          <div id="scoutList" class="scout-list"></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="patterns" class="live-pattern-lab" aria-labelledby="patternsTitle">
-      <div class="kit-titlebar">
-        <div>
-          <span class="eyebrow">Live specimens</span>
-          <h2 id="patternsTitle">Small components and effects you can scan, run, and remix.</h2>
-        </div>
-        <p>No generic archive cards here. Each pattern is a live iframe specimen with code, a short adaptation prompt, and mix roles so an LLM can combine effects without turning your app into a collage.</p>
-      </div>
-      <div class="pattern-toolbar">
-        <label><span>Search live patterns</span><input id="patternSearch" type="search" placeholder="scroll, dashboard, hover, command, glass"></label>
-        <label><span>Behavior</span><select id="behaviorSelect"><option value="">All behaviors</option></select></label>
-        <label><span>Context</span><select id="contextSelect"><option value="">All contexts</option></select></label>
-        <label><span>Mix role</span><select id="roleSelect"><option value="">All roles</option></select></label>
-        <span id="patternCount" class="pattern-count">Loading patterns</span>
-      </div>
-      <label class="intent-box"><span>Project you want to build</span><input id="mixIntent" type="text" value="a polished AI product dashboard" placeholder="portfolio, command center, SaaS landing page, docs app..."></label>
-      <div class="preset-mixes" aria-label="One click effect mixes">
-        <button type="button" data-mix-preset="portfolio">Portfolio: shader + scroll + case-study</button>
-        <button type="button" data-mix-preset="ai-dashboard">AI dashboard: command + agent map + data surface</button>
-        <button type="button" data-mix-preset="saas-hero">SaaS hero: 3D product + proof + microinteractions</button>
-        <button type="button" data-mix-preset="wild">Wild card: weird but usable</button>
-      </div>
-      <div id="kitTray" class="kit-tray" aria-live="polite"></div>
-      <div id="patternGrid" class="live-pattern-grid" aria-live="polite"></div>
-      <pre id="kitBrief" class="kit-brief" hidden></pre>
-    </section>
-
-    <section id="kits" class="kit-lab" aria-labelledby="kitsTitle">
-      <div class="kit-titlebar">
-        <div>
-          <span class="eyebrow">Curated website kits</span>
-          <h2 id="kitsTitle">Keep big prompts as source material, not the main interface.</h2>
-        </div>
-        <p>The raw archive stays intact. These bundles pull the best references into practical recipes: hero, sections, motion layer, anti-slop rules, and a complete AI brief.</p>
-      </div>
-      <div id="bundleGrid" class="bundle-grid" aria-live="polite"></div>
-    </section>
-
-    <section id="recipes" class="composition-lab" aria-labelledby="recipesTitle">
-      <div class="kit-titlebar">
-        <div>
-          <span class="eyebrow">Composition recipes</span>
-          <h2 id="recipesTitle">Mix structure, style, motion, and accents deliberately.</h2>
-        </div>
-        <p>Recipes force the AI to assign roles before writing: one dominant structure, one visual skin, one motion layer, plus section and component accents. No more accidental one-prompt answers.</p>
-      </div>
-      <div id="recipeGrid" class="recipe-grid" aria-live="polite"></div>
-    </section>
-
-    <section id="composer" class="brief-composer" aria-labelledby="composerTitle">
-      <div class="composer-copy">
-        <span class="eyebrow">AI / human brief composer</span>
-        <h2 id="composerTitle">Turn the library into one buildable website brief.</h2>
-        <p>Choose the site outcome, kit, recipe, and vibe. Framewell combines roles, vocabulary, selected references, quality rules, and section structure into a prompt that an AI agent or designer can actually use.</p>
-      </div>
-      <div class="composer-panel">
-        <div class="composer-controls">
-          <label><span>Website kit</span><select id="bundleSelect"></select></label>
-          <label><span>Remix recipe</span><select id="recipeSelect"></select></label>
-          <label><span>Outcome</span><input id="outcomeInput" type="text" value="premium AI product landing page"></label>
-          <label><span>Vibe</span><select id="vibeSelect"><option>calm editorial</option><option>technical / command</option><option>cinematic 3D</option><option>luxury editorial</option><option>playful consumer</option><option>clean minimal SaaS</option></select></label>
-        </div>
-        <div class="composer-actions"><button id="composeBrief" type="button">Compose brief</button><button id="copyBrief" type="button">Copy brief</button></div>
-        <pre id="briefOutput" class="brief-output">Loading curation system…</pre>
-      </div>
-    </section>
-
-    <section id="vocabulary" class="vocabulary-lab" aria-labelledby="vocabularyTitle">
-      <div class="kit-titlebar">
-        <div>
-          <span class="eyebrow">Framewell vocabulary</span>
-          <h2 id="vocabularyTitle">Named primitives for better AI direction.</h2>
-        </div>
-        <p>Click a term to browse matching references. The composer also injects these terms into briefs so agents get precise language like stagger, layout animation, proof band, hierarchy, and content density.</p>
-      </div>
-      <div id="vocabularyBoard" class="vocabulary-board" aria-live="polite"></div>
-    </section>
-
-    <section id="library" class="library catalog-lab" aria-label="Prompt library">
-      <div class="catalog-titlebar">
-        <div>
-          <span class="eyebrow">Framewell archive</span>
-          <h2>Browse by what it looks like.</h2>
-        </div>
-        <p>Every card has a preview or a clear concept sketch. Search by behavior, source, tool, or tag — then open the prompt when something looks useful.</p>
-      </div>
-      <div class="library-toolbar command-console">
-        <label class="command-box"><span>Search references</span><input id="searchInput" type="search" placeholder="Try liquid glass, dashboard, Magic UI, onboarding"></label>
-        <label><span>Shelf</span><select id="tierSelect"><option value="">All shelves</option><option value="canon">Canon</option><option value="pantry">Component pantry</option><option value="archive">Archive</option></select></label>
-        <label><span>Source</span><select id="sourceSelect"><option value="">All sources</option></select></label>
-        <label><span>Type</span><select id="typeSelect"><option value="">All types</option></select></label>
-        <button id="clearFilters" type="button">Clear</button>
-      </div>
-      <div id="quickChips" class="quick-chips" aria-label="Quick filters"></div>
-      <div class="library-meta"><div id="count"></div><div id="activeFilters"></div></div>
-      <div class="library-shell gallery-shell">
-        <div id="grid" class="grid atlas-wall" aria-live="polite"><div class="loading-card"></div><div class="loading-card"></div><div class="loading-card"></div></div>
-      </div>
-    </section>
-
-    <section class="collector-note source-ledger">
-      <span class="eyebrow">Source ledger</span>
-      <h2>Public and open material, kept with provenance.</h2>
-      <p>Source links stay near every prompt. Component and template entries are local prompt expansions from public/open patterns, not copied private code.</p>
-    </section>
-  </main>
-
-  <dialog id="modal"><button id="closeModal" class="close" type="button" aria-label="Close modal">×</button><div id="modalBody"></div></dialog>
-  <footer><span>Framewell live component atlas</span><a href="#top">Back to top</a><a href="THIRD_PARTY_PROMPTS.md">Third-party sources</a></footer>
-  <script src="app.js?v=27"></script>
+  <div id="root"></div>
+  <script type="module" src="assets/specimens/framewell-specimens.js"></script>
 </body>
 </html>

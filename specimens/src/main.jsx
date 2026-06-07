@@ -1,5 +1,7 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
+import { gsap } from 'gsap';
+import * as THREE from 'three';
 import {
   Activity,
   AlertTriangle,
@@ -42,7 +44,7 @@ const fallbackMeta = {
   template: 'command-room',
 };
 
-const routeMeta = window.__FRAMEWELL_PATTERN_META__ || fallbackMeta;
+const routeMeta = window.__FRAMEWELL_PATTERN_META__ || null;
 
 const specimenKindById = {
   'spatial-command-room': 'command-room',
@@ -67,6 +69,14 @@ const specimenKindById = {
   'aave-glass-slider-refraction': 'glass-slider',
   'aave-glass-toggle-group': 'glass-toggle',
   'aave-glass-video-controls': 'video-controls',
+  'three-scroll-product-stage': 'three-product',
+  'gsap-scroll-cascade-stack': 'gsap-cascade',
+  'webgl-shader-gallery-wall': 'shader-gallery',
+  'fluid-cursor-lens-index': 'fluid-cursor',
+  'scroll-mask-story-panels': 'scroll-mask',
+  'three-particle-command-field': 'particle-field',
+  'gsap-flip-board-recompose': 'flip-board',
+  'split-text-control-deck': 'split-text',
   'dock-with-liquid-focus': 'dock',
   'gallery-hover-scrub': 'gallery',
   'horizontal-case-filmstrip': 'gallery',
@@ -95,11 +105,12 @@ const specimenKindById = {
 };
 
 function App(){
-  const meta = routeMeta;
+  if(!routeMeta) return <AtlasApp />;
+  const meta = routeMeta || fallbackMeta;
   const kind = specimenKindById[meta.id] || specimenKindById[meta.slug] || meta.template || 'dashboard';
   const Specimen = components[kind] || DashboardSurface;
   return (
-    <main className="fw-root">
+    <main className={`fw-root ${kind.includes('scroll') || kind === 'three-product' || kind === 'gsap-cascade' ? 'scroll-specimen-root' : ''}`}>
       <section className="specimen-shell">
         <div className="shell-bar">
           <span className="traffic" />
@@ -110,6 +121,89 @@ function App(){
         </div>
         <Specimen meta={meta} />
       </section>
+    </main>
+  );
+}
+
+function AtlasApp(){
+  const [items, setItems] = useState([]);
+  const [activeId, setActiveId] = useState('');
+  const [query, setQuery] = useState('');
+  const [view, setView] = useState('Stage');
+  useEffect(() => {
+    let alive = true;
+    fetch('data/patterns.json')
+      .then(r => r.json())
+      .then(data => {
+        if(!alive) return;
+        const patterns = data.patterns || [];
+        setItems(patterns);
+        setActiveId(patterns[0]?.id || '');
+      })
+      .catch(err => console.error('Could not load patterns', err));
+    return () => { alive = false; };
+  }, []);
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if(!q) return items;
+    return items.filter(item => [item.title, item.behavior, item.context, item.description, ...(item.tags || [])].join(' ').toLowerCase().includes(q));
+  }, [items, query]);
+  const active = items.find(item => item.id === activeId) || filtered[0] || items[0];
+  useEffect(() => {
+    if(!filtered.some(item => item.id === activeId)) setActiveId(filtered[0]?.id || items[0]?.id || '');
+  }, [filtered, activeId, items]);
+  if(!active) return <div className="motion-lab loading">Loading Framewell motion lab</div>;
+  return (
+    <main className="motion-lab">
+      <aside className="motion-rail">
+        <div className="motion-brand">
+          <span>Framewell</span>
+          <b>premium motion lab</b>
+        </div>
+        <label className="motion-search">
+          <Search size={15} />
+          <input value={query} onChange={event => setQuery(event.target.value)} placeholder="gsap, three, scroll, shader..." />
+        </label>
+        <div className="motion-count">{filtered.length} working examples</div>
+        <nav className="motion-list" aria-label="Live motion examples">
+          {filtered.map((item, index) => (
+            <button key={item.id} className={item.id === active.id ? 'active' : ''} onClick={() => setActiveId(item.id)}>
+              <small>{String(index + 1).padStart(2, '0')} · {item.behavior}</small>
+              <span>{item.title}</span>
+            </button>
+          ))}
+        </nav>
+      </aside>
+      <section className="motion-stage-shell">
+        <div className="motion-stage-top">
+          <div>
+            <div className="eyebrow">{active.behavior} · {active.context}</div>
+            <h1>{active.title}</h1>
+          </div>
+          <div className="tabs">
+            {['Stage','Prompt','Code'].map(tab => <button key={tab} className={`tab ${view===tab?'active':''}`} onClick={() => setView(tab)}>{tab}</button>)}
+          </div>
+        </div>
+        {view === 'Stage' ? (
+          <iframe className="motion-stage-frame" src={active.previewUrl} title={`${active.title} live preview`} />
+        ) : (
+          <pre className="motion-readable">{view === 'Prompt' ? active.prompt : active.code}</pre>
+        )}
+      </section>
+      <aside className="motion-detail">
+        <div className="panel">
+          <div className="eyebrow">Why it matters</div>
+          <p>{active.description}</p>
+        </div>
+        <div className="panel">
+          <div className="eyebrow">Stack / behavior</div>
+          <div className="tag-cloud">{(active.tags || []).map(tag => <span key={tag}>{tag}</span>)}</div>
+        </div>
+        <div className="panel">
+          <div className="eyebrow">Use it in a build</div>
+          <p>Inspect it at full size first. Then copy the prompt or code and adapt the motion as one focused layer, not as an entire template.</p>
+        </div>
+      </aside>
     </main>
   );
 }
@@ -185,6 +279,220 @@ function SearchMorph({ meta }){
             </button>
           ))}
         </div>
+      </div>
+    </div>
+  );
+}
+
+function ThreeProductStage({ meta }){
+  const mountRef = useRef(null);
+  const [chapter, setChapter] = useState(0);
+  useEffect(() => {
+    const mount = mountRef.current;
+    if(!mount) return;
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(38, mount.clientWidth / mount.clientHeight, 0.1, 100);
+    camera.position.set(0, 0.25, 5.6);
+    const renderer = new THREE.WebGLRenderer({ antialias:true, alpha:true });
+    renderer.setSize(mount.clientWidth, mount.clientHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.8));
+    mount.appendChild(renderer.domElement);
+    const group = new THREE.Group();
+    scene.add(group);
+    const geo = new THREE.IcosahedronGeometry(1.15, 3);
+    const mat = new THREE.MeshStandardMaterial({ color:0x79f4d3, roughness:0.38, metalness:0.72 });
+    const core = new THREE.Mesh(geo, mat);
+    group.add(core);
+    const ringMat = new THREE.MeshBasicMaterial({ color:0xf5c76a, transparent:true, opacity:.46 });
+    for(let i=0;i<3;i++){
+      const ring = new THREE.Mesh(new THREE.TorusGeometry(1.55 + i*.28, .012, 16, 128), ringMat);
+      ring.rotation.set(i*.7, i*.42, i*.2);
+      group.add(ring);
+    }
+    const light = new THREE.PointLight(0xffffff, 4, 20);
+    light.position.set(2.5, 3, 4);
+    scene.add(light, new THREE.AmbientLight(0x8aa8ff, 1.2));
+    let frame = 0;
+    const onScroll = () => {
+      const max = document.documentElement.scrollHeight - innerHeight || 1;
+      const p = scrollY / max;
+      setChapter(Math.min(3, Math.floor(p * 4)));
+      gsap.to(group.rotation, { x: p * 1.2, y: p * Math.PI * 1.4, duration:.35, overwrite:true });
+      gsap.to(camera.position, { z: 5.6 - p * 1.4, y: .25 + p * .8, duration:.35, overwrite:true });
+    };
+    const tick = () => {
+      frame = requestAnimationFrame(tick);
+      core.rotation.y += .006;
+      renderer.render(scene, camera);
+    };
+    const resize = () => {
+      camera.aspect = mount.clientWidth / mount.clientHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(mount.clientWidth, mount.clientHeight);
+    };
+    addEventListener('scroll', onScroll, { passive:true });
+    addEventListener('resize', resize);
+    tick(); onScroll();
+    return () => {
+      cancelAnimationFrame(frame);
+      removeEventListener('scroll', onScroll);
+      removeEventListener('resize', resize);
+      mount.removeChild(renderer.domElement);
+      renderer.dispose(); geo.dispose(); mat.dispose(); ringMat.dispose();
+    };
+  }, []);
+  return (
+    <div className="surface dark scroll-cinema">
+      <div className="scroll-stage">
+        <div className="three-stage" ref={mountRef} />
+        <div className="scroll-copy">
+          <Header meta={meta} icon={Box} />
+          <h1>Scroll drives the camera, labels, and object state.</h1>
+          <p>This is a real Three.js render loop, not a CSS approximation. Scroll inside the example to move through the product chapters.</p>
+          <div className="chapter-tabs">{['Form','Layers','Signals','Ship'].map((x,i)=><span className={chapter===i?'active':''} key={x}>{x}</span>)}</div>
+        </div>
+      </div>
+      <div className="scroll-spacer" />
+    </div>
+  );
+}
+
+function GsapCascade({ meta }){
+  const rootRef = useRef(null);
+  useEffect(() => {
+    const root = rootRef.current;
+    if(!root) return;
+    const cards = gsap.utils.toArray(root.querySelectorAll('.cascade-card'));
+    const onScroll = () => {
+      const rect = root.getBoundingClientRect();
+      const p = Math.min(1, Math.max(.34, -rect.top / (root.scrollHeight - innerHeight || 1)));
+      cards.forEach((card, i) => {
+        gsap.to(card, {
+          x: (i - 2) * 76 * p,
+          y: i * 42 * p,
+          rotate: (-12 + i * 6) * p,
+          scale: 1 - Math.abs(i - 2) * .03 * p,
+          duration:.28,
+          overwrite:true,
+          ease:'power3.out',
+        });
+      });
+    };
+    addEventListener('scroll', onScroll, { passive:true });
+    onScroll();
+    return () => removeEventListener('scroll', onScroll);
+  }, []);
+  return (
+    <div className="surface clean scroll-cinema" ref={rootRef}>
+      <div className="scroll-stage light">
+        <Header meta={meta} icon={Layers} />
+        <div className="cascade-stack">
+          {['Discover','Frame','Animate','Inspect','Ship'].map((x,i)=><div className="cascade-card panel" key={x}><span>0{i+1}</span><h2>{x}</h2><p>GSAP scrubbed stack transition with stable cards and readable stops.</p></div>)}
+        </div>
+      </div>
+      <div className="scroll-spacer" />
+    </div>
+  );
+}
+
+function ShaderGallery({ meta }){
+  const [active, setActive] = useState(2);
+  return (
+    <div className="surface ink">
+      <Header meta={meta} icon={GalleryHorizontalEnd} />
+      <div className="shader-gallery">
+        {[0,1,2,3,4].map(i => (
+          <button key={i} onClick={()=>setActive(i)} className={active===i?'active':''}>
+            <span>Case {i+1}</span>
+            <b>{['Ripple','Frost','Plasma','Glass','Time'][i]}</b>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function FluidCursor({ meta }){
+  const [pos, setPos] = useState({x:58,y:52});
+  return (
+    <div className="surface ink" onPointerMove={event => {
+      const r = event.currentTarget.getBoundingClientRect();
+      setPos({ x: ((event.clientX-r.left)/r.width)*100, y: ((event.clientY-r.top)/r.height)*100 });
+    }}>
+      <Header meta={meta} icon={MousePointer2} />
+      <div className="fluid-index" style={{'--x':`${pos.x}%`,'--y':`${pos.y}%`}}>
+        {['Atlas','Motion','Systems','Deploy'].map((item,i)=><button key={item}><small>0{i+1}</small>{item}</button>)}
+        <div className="cursor-orb" />
+      </div>
+    </div>
+  );
+}
+
+function ScrollMaskPanels({ meta }){
+  const [amount, setAmount] = useState(55);
+  return (
+    <div className="surface clean">
+      <Header meta={meta} icon={Film} action={<input type="range" min="12" max="92" value={amount} onChange={e=>setAmount(Number(e.target.value))} />} />
+      <div className="mask-story">
+        <div className="mask-before"><h1>Static claim</h1><p>Looks fine, but says nothing about the product behavior.</p></div>
+        <div className="mask-after" style={{clipPath:`inset(0 ${100-amount}% 0 0)`}}><h1>Motion proof</h1><p>The interaction makes the transformation inspectable.</p></div>
+      </div>
+    </div>
+  );
+}
+
+function ParticleField({ meta }){
+  const mountRef = useRef(null);
+  useEffect(() => {
+    const mount = mountRef.current;
+    if(!mount) return;
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, mount.clientWidth/mount.clientHeight, .1, 100);
+    camera.position.z = 5;
+    const renderer = new THREE.WebGLRenderer({ antialias:true, alpha:true });
+    renderer.setSize(mount.clientWidth, mount.clientHeight);
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 1.8));
+    mount.appendChild(renderer.domElement);
+    const count = 900;
+    const positions = new Float32Array(count*3);
+    for(let i=0;i<count;i++){ positions[i*3]=(Math.random()-.5)*5; positions[i*3+1]=(Math.random()-.5)*3; positions[i*3+2]=(Math.random()-.5)*2; }
+    const geo = new THREE.BufferGeometry();
+    geo.setAttribute('position', new THREE.BufferAttribute(positions,3));
+    const points = new THREE.Points(geo, new THREE.PointsMaterial({ color:0x78f0d0, size:.035, transparent:true, opacity:.94 }));
+    scene.add(points);
+    let frame=0;
+    const tick=()=>{ frame=requestAnimationFrame(tick); points.rotation.y+=.003; points.rotation.x=Math.sin(performance.now()/1600)*.1; renderer.render(scene,camera); };
+    tick();
+    return()=>{ cancelAnimationFrame(frame); mount.removeChild(renderer.domElement); renderer.dispose(); geo.dispose(); };
+  }, []);
+  return (
+    <div className="surface dark">
+      <Header meta={meta} icon={Sparkles} />
+      <div className="particle-stage" ref={mountRef}><div><h1>Particle command field</h1><p>Three.js points react as a product-grade ambient hero layer.</p></div></div>
+    </div>
+  );
+}
+
+function FlipBoard({ meta }){
+  const [mode, setMode] = useState('Priority');
+  const cards = mode === 'Priority' ? ['Incident','Review','Patch','Ship'] : ['Research','Prototype','Probe','Publish'];
+  return (
+    <div className="surface clean">
+      <Header meta={meta} icon={Layers} action={<div className="tabs">{['Priority','Timeline'].map(x=><button className={`tab ${mode===x?'active':''}`} onClick={()=>setMode(x)} key={x}>{x}</button>)}</div>} />
+      <div className="flip-board">
+        {cards.map((card,i)=><div className="panel" key={card}><span>{String(i+1).padStart(2,'0')}</span><h2>{card}</h2><p>Layout recomposes without losing continuity.</p></div>)}
+      </div>
+    </div>
+  );
+}
+
+function SplitTextDeck({ meta }){
+  const [style, setStyle] = useState('Stagger');
+  return (
+    <div className="surface ink">
+      <Header meta={meta} icon={Sparkles} action={<div className="tabs">{['Stagger','Blur','Invert'].map(x=><button className={`tab ${style===x?'active':''}`} onClick={()=>setStyle(x)} key={x}>{x}</button>)}</div>} />
+      <div className={`split-deck ${style.toLowerCase()}`}>
+        {'Premium motion should explain the product'.split(' ').map((word,i)=><span key={`${word}-${i}`} style={{'--i':i}}>{word}</span>)}
       </div>
     </div>
   );
@@ -597,6 +905,14 @@ function SimpleWorkbench({ meta }){
 }
 
 const components = {
+  'three-product': ThreeProductStage,
+  'gsap-cascade': GsapCascade,
+  'shader-gallery': ShaderGallery,
+  'fluid-cursor': FluidCursor,
+  'scroll-mask': ScrollMaskPanels,
+  'particle-field': ParticleField,
+  'flip-board': FlipBoard,
+  'split-text': SplitTextDeck,
   'command-room': CommandRoom,
   search: SearchMorph,
   'alert-lens': CommandRoom,

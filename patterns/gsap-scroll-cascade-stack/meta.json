@@ -1,0 +1,22 @@
+{
+  "id": "gsap-scroll-cascade-stack",
+  "title": "GSAP scroll cascade stack",
+  "behavior": "GSAP scroll",
+  "context": "Portfolio",
+  "description": "Cards collapse, stack, and cascade with a scrubbed GSAP timeline instead of a loop.",
+  "tags": [
+    "gsap",
+    "scroll",
+    "stack",
+    "portfolio",
+    "cards"
+  ],
+  "sourcePromptIds": [
+    "gsap-scrolltrigger-product-demo"
+  ],
+  "template": "gsap-cascade",
+  "quality": "featured",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

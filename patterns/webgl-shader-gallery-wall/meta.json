@@ -1,0 +1,21 @@
+{
+  "id": "webgl-shader-gallery-wall",
+  "title": "WebGL shader gallery wall",
+  "behavior": "Shader gallery",
+  "context": "Portfolio",
+  "description": "A premium gallery wall with shader-like gradients, active focus, and inspectable cases.",
+  "tags": [
+    "webgl",
+    "shader",
+    "gallery",
+    "portfolio"
+  ],
+  "sourcePromptIds": [
+    "codrops-scroll-revealed-webgl-gallery"
+  ],
+  "template": "shader-gallery",
+  "quality": "featured",
+  "mixRoles": [
+    "signature moment"
+  ]
+}
