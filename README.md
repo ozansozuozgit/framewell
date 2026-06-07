@@ -147,7 +147,7 @@ See `THIRD_PARTY_PROMPTS.md`. Framewell keeps source links near each prompt and 
 <!-- live-demo:start -->
 ## Live Demo
 
-- Production URL: https://framewell-ewntu54h1-ozan-sozuozs-projects.vercel.app"
+- Production URL: https://framewell-7d45fkeu3-ozan-sozuozs-projects.vercel.app"
 - Source: https://github.com/ozansozuozgit/framewell
 
 <!-- live-demo:end -->
