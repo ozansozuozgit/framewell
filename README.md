@@ -143,3 +143,11 @@ missing_assets: 0
 ## Provenance
 
 See `THIRD_PARTY_PROMPTS.md`. Framewell keeps source links near each prompt and avoids importing gated/premium private prompt text.
+
+<!-- live-demo:start -->
+## Live Demo
+
+- Production URL: https://framewell-nu.vercel.app
+- Source: https://github.com/ozansozuozgit/framewell
+
+<!-- live-demo:end -->
