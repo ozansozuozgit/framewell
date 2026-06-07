@@ -1,0 +1,16 @@
+{
+  "id": "draggable-chip-cloud",
+  "title": "Draggable chip cloud",
+  "behavior": "Filter",
+  "context": "AI app",
+  "description": "Filter chips feel tactile through press, lift, and snap feedback.",
+  "tags": [
+    "chips",
+    "filter",
+    "drag",
+    "tactile"
+  ],
+  "sourcePromptIds": [
+    "template-ui-layouts-interactive-gallery"
+  ]
+}

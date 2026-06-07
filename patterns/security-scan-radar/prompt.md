@@ -1,0 +1,1 @@
+Implement a focused UI specimen called 'Security scan radar'. A radar sweep visualizes background protection checks. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: security, radar, status, scan.

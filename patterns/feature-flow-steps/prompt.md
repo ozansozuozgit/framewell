@@ -1,0 +1,1 @@
+Implement a focused UI specimen called 'Feature flow steps'. A three-step flow highlights one step at a time. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: steps, feature, flow, explain.

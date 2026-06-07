@@ -1,0 +1,16 @@
+{
+  "id": "footer-orbital-links",
+  "title": "Footer orbital links",
+  "behavior": "Navigate",
+  "context": "Marketing",
+  "description": "Footer links orbit around one final CTA without clutter.",
+  "tags": [
+    "footer",
+    "links",
+    "cta",
+    "motion"
+  ],
+  "sourcePromptIds": [
+    "tailark-final-cta-footer"
+  ]
+}

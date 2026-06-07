@@ -1,0 +1,1 @@
+Implement a focused UI specimen called 'Hero word rotation'. One hero noun rotates while the layout stays stable. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: hero, copy, rotation, landing.

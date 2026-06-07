@@ -1,0 +1,1 @@
+Implement a focused UI specimen called 'Hover source peek'. Metadata slides in only when the user needs provenance. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: hover, metadata, source, provenance.

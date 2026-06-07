@@ -1,0 +1,1 @@
+Implement a focused UI specimen called 'Revenue sparkline stack'. Tiny sparklines animate into a compact metric stack. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: sparkline, revenue, metrics, chart.

@@ -1,0 +1,16 @@
+{
+  "id": "security-scan-radar",
+  "title": "Security scan radar",
+  "behavior": "Status",
+  "context": "Security",
+  "description": "A radar sweep visualizes background protection checks.",
+  "tags": [
+    "security",
+    "radar",
+    "status",
+    "scan"
+  ],
+  "sourcePromptIds": [
+    "opencodesign-enterprise-security-page"
+  ]
+}

@@ -1,0 +1,1 @@
+Implement a focused UI specimen called 'Sticky metric strip'. A compact KPI strip pins while panels move underneath. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: sticky, metrics, dashboard, status.

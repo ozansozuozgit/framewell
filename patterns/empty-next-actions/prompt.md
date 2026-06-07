@@ -1,0 +1,1 @@
+Implement a focused UI specimen called 'Empty state next actions'. A zero state offers three concrete next moves instead of dead space. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: empty-state, onboarding, actions, cards.

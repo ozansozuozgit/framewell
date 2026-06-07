@@ -1,0 +1,16 @@
+{
+  "id": "segmented-filter-morph",
+  "title": "Segmented filter morph",
+  "behavior": "Filter",
+  "context": "SaaS app",
+  "description": "Filter pills share one moving active background.",
+  "tags": [
+    "filter",
+    "tabs",
+    "morph",
+    "controls"
+  ],
+  "sourcePromptIds": [
+    "template-shadcnstore-analytics-command-center"
+  ]
+}

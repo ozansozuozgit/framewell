@@ -1,0 +1,1 @@
+Implement a focused UI specimen called 'Pricing toggle proof'. Pricing cards animate proof points when billing mode changes. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: pricing, toggle, proof, saas.

@@ -1,0 +1,16 @@
+{
+  "id": "inline-copy-confirm",
+  "title": "Inline copy confirm",
+  "behavior": "Confirm",
+  "context": "Devtool",
+  "description": "Copy buttons confirm in place with a tiny success sweep.",
+  "tags": [
+    "copy",
+    "confirm",
+    "code",
+    "microinteraction"
+  ],
+  "sourcePromptIds": [
+    "template-ixartz-devtool-landing-page"
+  ]
+}

@@ -1,0 +1,1 @@
+Implement a focused UI specimen called 'Audit row expansion'. Dense table rows open into evidence without leaving the table. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: table, expand, audit, details.

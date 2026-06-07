@@ -1,9 +1,13 @@
 let posts = [];
 let prompts = {};
+let patternCatalog = { summary: {}, patterns: [] };
+let patterns = [];
 let curation = { summary: {}, items: {}, bundles: [], antiSlopRules: [] };
 let composition = { summary: {}, vocabulary: {}, roles: [], compatibility: { goodPairs: [], badPairs: [] }, items: {}, recipes: [] };
 let filtered = [];
 let shuffleMode = false;
+const patternState = { query: '', behavior: '', context: '' };
+const selectedPatterns = new Set();
 const state = { query: '', source: '', type: '', tag: '', tier: 'canon' };
 
 const els = {
@@ -36,7 +40,14 @@ const els = {
   briefOutput: document.getElementById('briefOutput'),
   recipeSelect: document.getElementById('recipeSelect'),
   recipeGrid: document.getElementById('recipeGrid'),
-  vocabularyBoard: document.getElementById('vocabularyBoard')
+  vocabularyBoard: document.getElementById('vocabularyBoard'),
+  patternGrid: document.getElementById('patternGrid'),
+  patternCount: document.getElementById('patternCount'),
+  patternSearch: document.getElementById('patternSearch'),
+  behaviorSelect: document.getElementById('behaviorSelect'),
+  contextSelect: document.getElementById('contextSelect'),
+  kitTray: document.getElementById('kitTray'),
+  kitBrief: document.getElementById('kitBrief')
 };
 
 async function loadJson(path, fallback){
@@ -108,6 +119,14 @@ function setupControls(){
   }
   if(els.recipeSelect){
     els.recipeSelect.innerHTML = (composition.recipes || []).map(r => `<option value="${esc(r.id)}">${esc(r.title)}</option>`).join('');
+  }
+  if(els.behaviorSelect){
+    const behaviors = [...new Set(patterns.map(p => p.behavior).filter(Boolean))].sort();
+    els.behaviorSelect.innerHTML = '<option value="">All behaviors</option>' + optionHtml(behaviors);
+  }
+  if(els.contextSelect){
+    const contexts = [...new Set(patterns.map(p => p.context).filter(Boolean))].sort();
+    els.contextSelect.innerHTML = '<option value="">All contexts</option>' + optionHtml(contexts);
   }
   renderQuickChips();
 }
@@ -398,11 +417,84 @@ function applyVideoBehavior(){
     if(v.closest('.trend-card,.hero-feature,.hero-reel-card,.spotlight-main,.spotlight-mini,.theatre-card,.lane-card,.bundle-media')) v.play().catch(()=>{});
   });
 }
+function filteredPatterns(){
+  const q = normalize(patternState.query);
+  return patterns.filter(p => {
+    const hay = normalize([p.title, p.behavior, p.context, p.description, ...(p.tags || []), ...(p.sourcePromptIds || [])].join(' '));
+    if(q && !q.split(/\s+/).every(token => hay.includes(token))) return false;
+    if(patternState.behavior && p.behavior !== patternState.behavior) return false;
+    if(patternState.context && p.context !== patternState.context) return false;
+    return true;
+  });
+}
+function patternCard(p, i){
+  const selected = selectedPatterns.has(p.id);
+  const tags = (p.tags || []).slice(0,4).map(t => `<span class="tag">${esc(t)}</span>`).join('');
+  const sources = (p.sourcePromptIds || []).slice(0,2).map(id => `<span>${esc(id)}</span>`).join('');
+  return `<article class="live-pattern-card ${selected ? 'is-selected' : ''}" data-pattern="${esc(p.id)}" style="--i:${i}">
+    <div class="pattern-frame"><iframe src="${esc(p.previewUrl)}" title="${esc(p.title)} preview" loading="lazy"></iframe></div>
+    <div class="pattern-body"><div class="browse-meta"><span>${esc(p.behavior)}</span><span>${esc(p.context)}</span></div><h3>${esc(p.title)}</h3><p>${esc(p.description)}</p><div class="tags">${tags}</div><div class="pattern-source">Source prompt ${sources || '<span>local specimen</span>'}</div>
+    <div class="pattern-actions"><button type="button" data-open-pattern="${esc(p.id)}">Open</button><button type="button" data-copy-pattern="${esc(p.id)}">Copy code</button><button type="button" data-copy-pattern-prompt="${esc(p.id)}">Copy prompt</button><button type="button" data-toggle-pattern="${esc(p.id)}">${selected ? 'Selected' : 'Add to mix'}</button></div></div>
+  </article>`;
+}
+function renderKitTray(){
+  if(!els.kitTray) return;
+  const picked = [...selectedPatterns].map(id => patterns.find(p => p.id === id)).filter(Boolean);
+  if(!picked.length){
+    els.kitTray.innerHTML = '<span>Mix kit empty</span><p>Select live patterns to generate a combined AI instruction.</p>';
+    if(els.kitBrief) els.kitBrief.hidden = true;
+    return;
+  }
+  els.kitTray.innerHTML = `<span>${picked.length} selected</span><p>${picked.map(p => esc(p.title)).join(' · ')}</p><button type="button" data-copy-live-kit>Copy mix brief</button><button type="button" data-clear-live-kit>Clear</button>`;
+  if(els.kitBrief){ els.kitBrief.hidden = false; els.kitBrief.textContent = liveKitBrief(picked); }
+}
+function liveKitBrief(picked){
+  return `Integrate these Framewell live UI patterns into my existing product without replacing the app structure. Keep visual language cohesive, preserve accessibility, and adapt code only where needed.\n\nSelected patterns:\n${picked.map((p,i)=>`${i+1}. ${p.title} — ${p.description} Behavior: ${p.behavior}. Context: ${p.context}. Tags: ${(p.tags||[]).join(', ')}.`).join('\n')}\n\nImplementation rules:\n- Treat each pattern as an isolated behavior/specimen, not a full page template.\n- Reuse my existing data model, components, typography, and color tokens.\n- Add the smallest necessary HTML/CSS/JS or framework code.\n- Respect prefers-reduced-motion and keyboard interaction.\n- Explain which pattern influenced each change.`;
+}
+function renderPatternStudio(){
+  if(!els.patternGrid) return;
+  const items = filteredPatterns();
+  if(els.patternCount) els.patternCount.textContent = `${items.length} shown · ${patterns.length} live patterns · ${posts.length} archive prompts preserved`;
+  els.patternGrid.innerHTML = items.length ? items.map(patternCard).join('') : `<div class="empty-state"><h3>No live patterns found</h3><p>Try scroll, dashboard, hover, proof, AI, or clear the filters.</p></div>`;
+  renderKitTray();
+}
+async function copyPatternCode(id){
+  const p = patterns.find(x => x.id === id); if(!p) return;
+  await copyText(p.code || '');
+}
+async function copyPatternPrompt(id){
+  const p = patterns.find(x => x.id === id); if(!p) return;
+  await copyText(p.prompt || '');
+}
+function openPatternModal(id){
+  const p = patterns.find(x => x.id === id); if(!p || !els.modalBody) return;
+  const tags = (p.tags || []).map(t=>`<span class="tag">${esc(t)}</span>`).join('');
+  const sourceLinks = (p.sourcePromptIds || []).map(src => {
+    const sourcePost = postBySlug(src);
+    return sourcePost ? `<button type="button" data-open="${esc(sourcePost.id)}">${esc(sourcePost.title)}</button>` : `<span>${esc(src)}</span>`;
+  }).join('');
+  els.modalBody.innerHTML = `<div class="pattern-modal-preview"><iframe src="${esc(p.previewUrl)}" title="${esc(p.title)} live preview"></iframe></div><div class="modal-content pattern-modal-content">
+    <span class="eyebrow">Live pattern · ${esc(p.behavior)} · ${esc(p.context)}</span><h2>${esc(p.title)}</h2><p>${esc(p.description)}</p><div class="modal-tags">${tags}</div>
+    <div class="modal-actions"><button type="button" id="copyPatternCode">Copy code</button><button type="button" id="copyPatternPrompt">Copy prompt</button><button type="button" id="selectPatternForMix">${selectedPatterns.has(p.id) ? 'Remove from mix' : 'Add to mix'}</button></div>
+    <div class="mix-notes"><b>Archive lineage</b><p class="source-buttons">${sourceLinks || 'Local live specimen'}</p><b>Prompt</b><p>${esc(p.prompt || '')}</p></div>
+    <pre class="prompt-preview">${esc((p.code || '').slice(0,9000))}</pre>
+  </div>`;
+  els.modal.showModal();
+  document.getElementById('copyPatternCode').onclick = () => copyPatternCode(p.id);
+  document.getElementById('copyPatternPrompt').onclick = () => copyPatternPrompt(p.id);
+  document.getElementById('selectPatternForMix').onclick = (event) => {
+    selectedPatterns.has(p.id) ? selectedPatterns.delete(p.id) : selectedPatterns.add(p.id);
+    event.currentTarget.textContent = selectedPatterns.has(p.id) ? 'Remove from mix' : 'Add to mix';
+    renderPatternStudio();
+  };
+}
+
 function render(){
   applyFilters();
   renderStats();
   renderFacets();
   renderHeroLab();
+  renderPatternStudio();
   renderBundleGrid();
   renderRecipeGrid();
   renderVocabularyBoard();
@@ -419,6 +511,18 @@ function render(){
 }
 
 document.addEventListener('click', e => {
+  const openPatternBtn = e.target.closest('[data-open-pattern]');
+  if(openPatternBtn){ openPatternModal(openPatternBtn.dataset.openPattern); return; }
+  const copyPatternBtn = e.target.closest('[data-copy-pattern]');
+  if(copyPatternBtn){ copyPatternCode(copyPatternBtn.dataset.copyPattern); return; }
+  const copyPatternPromptBtn = e.target.closest('[data-copy-pattern-prompt]');
+  if(copyPatternPromptBtn){ copyPatternPrompt(copyPatternPromptBtn.dataset.copyPatternPrompt); return; }
+  const togglePatternBtn = e.target.closest('[data-toggle-pattern]');
+  if(togglePatternBtn){ const id = togglePatternBtn.dataset.togglePattern; selectedPatterns.has(id) ? selectedPatterns.delete(id) : selectedPatterns.add(id); renderPatternStudio(); return; }
+  if(e.target.closest('[data-copy-live-kit]')){ const picked = [...selectedPatterns].map(id => patterns.find(p => p.id === id)).filter(Boolean); copyText(liveKitBrief(picked)); return; }
+  if(e.target.closest('[data-clear-live-kit]')){ selectedPatterns.clear(); renderPatternStudio(); return; }
+  const patternCardEl = e.target.closest('[data-pattern]');
+  if(patternCardEl && !e.target.closest('iframe,button,a')){ openPatternModal(patternCardEl.dataset.pattern); return; }
   if(e.target.closest('.copy')){ const p = findPostFromEvent(e); if(p) copyPrompt(p); return; }
   const composeBtn = e.target.closest('[data-bundle-compose]');
   if(composeBtn){ const id = composeBtn.dataset.bundleCompose; if(els.bundleSelect) els.bundleSelect.value = id; composeBrief(bundleById(id)); document.getElementById('composer')?.scrollIntoView({behavior:'smooth'}); return; }
@@ -452,6 +556,9 @@ if(els.outcomeInput) els.outcomeInput.addEventListener('input', () => composeBri
 if(els.vibeSelect) els.vibeSelect.addEventListener('change', () => composeBrief());
 if(els.composeBrief) els.composeBrief.onclick = () => composeBrief();
 if(els.copyBrief) els.copyBrief.onclick = () => copyCurrentBrief();
+if(els.patternSearch) els.patternSearch.addEventListener('input', e => { patternState.query = e.target.value.trim(); renderPatternStudio(); });
+if(els.behaviorSelect) els.behaviorSelect.addEventListener('change', e => { patternState.behavior = e.target.value; renderPatternStudio(); });
+if(els.contextSelect) els.contextSelect.addEventListener('change', e => { patternState.context = e.target.value; renderPatternStudio(); });
 document.getElementById('clearFilters').onclick = () => { state.query=''; state.source=''; state.type=''; state.tag=''; state.tier=''; shuffleMode=false; els.search.value=''; els.sourceSelect.value=''; els.typeSelect.value=''; if(els.tierSelect) els.tierSelect.value=''; render(); };
 document.getElementById('shuffleButton').onclick = () => { shuffleMode = !shuffleMode; render(); document.getElementById('library').scrollIntoView({behavior:'smooth'}); };
 document.addEventListener('keydown', e => { if(e.key === '/' && document.activeElement !== els.search){ e.preventDefault(); els.search.focus(); } });
@@ -459,6 +566,8 @@ document.addEventListener('keydown', e => { if(e.key === '/' && document.activeE
 (async function init(){
   posts = await loadJson('data/posts.json', []);
   prompts = await loadJson('data/prompts.json', {});
+  patternCatalog = await loadJson('data/patterns.json', patternCatalog);
+  patterns = patternCatalog.patterns || [];
   curation = await loadJson('data/curation.json', curation);
   composition = await loadJson('data/composition.json', composition);
   filtered = posts;

@@ -1,0 +1,16 @@
+{
+  "id": "empty-next-actions",
+  "title": "Empty state next actions",
+  "behavior": "Empty",
+  "context": "SaaS app",
+  "description": "A zero state offers three concrete next moves instead of dead space.",
+  "tags": [
+    "empty-state",
+    "onboarding",
+    "actions",
+    "cards"
+  ],
+  "sourcePromptIds": [
+    "opencodesign-ai-notebook-waitlist"
+  ]
+}

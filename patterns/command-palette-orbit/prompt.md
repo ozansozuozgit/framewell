@@ -1,0 +1,1 @@
+Implement a focused UI specimen called 'Command palette orbit'. A soft command surface with orbiting shortcut chips. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: command, keyboard, ai, overlay.

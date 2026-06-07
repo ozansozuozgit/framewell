@@ -1,0 +1,16 @@
+{
+  "id": "chat-message-stream",
+  "title": "Chat message stream",
+  "behavior": "AI app",
+  "context": "Chat",
+  "description": "Assistant messages enter with line-by-line cadence and source chips.",
+  "tags": [
+    "chat",
+    "stream",
+    "ai",
+    "sources"
+  ],
+  "sourcePromptIds": [
+    "template-shadcnstore-chat-support-console"
+  ]
+}

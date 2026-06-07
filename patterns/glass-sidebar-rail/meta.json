@@ -1,0 +1,16 @@
+{
+  "id": "glass-sidebar-rail",
+  "title": "Glass sidebar rail",
+  "behavior": "Navigate",
+  "context": "Dashboard",
+  "description": "A translucent left rail reveals labels and active context.",
+  "tags": [
+    "sidebar",
+    "glass",
+    "navigation",
+    "dashboard"
+  ],
+  "sourcePromptIds": [
+    "opencodesign-finance-ops-dashboard"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "spring-roller-reveal",
+  "title": "Spring roller reveal",
+  "behavior": "Reveal",
+  "context": "Hero",
+  "description": "A roller-blind mask uncovers content with springy overshoot.",
+  "tags": [
+    "reveal",
+    "spring",
+    "mask",
+    "hero"
+  ],
+  "sourcePromptIds": [
+    "spring-roller-blind-reveal"
+  ]
+}

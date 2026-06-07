@@ -1,0 +1,1 @@
+Implement a focused UI specimen called 'Footer orbital links'. Footer links orbit around one final CTA without clutter. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: footer, links, cta, motion.

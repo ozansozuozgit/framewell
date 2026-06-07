@@ -1,0 +1,1 @@
+Implement a focused UI specimen called 'Inventory alert row'. Low-stock rows pulse once, then settle into clear severity color. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: inventory, alert, commerce, table.

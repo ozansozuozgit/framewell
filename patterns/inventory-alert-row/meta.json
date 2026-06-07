@@ -1,0 +1,16 @@
+{
+  "id": "inventory-alert-row",
+  "title": "Inventory alert row",
+  "behavior": "Status",
+  "context": "Commerce",
+  "description": "Low-stock rows pulse once, then settle into clear severity color.",
+  "tags": [
+    "inventory",
+    "alert",
+    "commerce",
+    "table"
+  ],
+  "sourcePromptIds": [
+    "opencodesign-ecommerce-inventory-dashboard"
+  ]
+}

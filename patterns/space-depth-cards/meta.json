@@ -1,0 +1,16 @@
+{
+  "id": "space-depth-cards",
+  "title": "Space depth cards",
+  "behavior": "3D",
+  "context": "Portfolio",
+  "description": "Cards float in depth with soft starfield movement.",
+  "tags": [
+    "space",
+    "3d",
+    "portfolio",
+    "depth"
+  ],
+  "sourcePromptIds": [
+    "motionsites-space-voyage"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "particle-field-hero",
+  "title": "Particle field hero",
+  "behavior": "Ambient",
+  "context": "Landing page",
+  "description": "Tiny particles drift behind a product promise without stealing attention.",
+  "tags": [
+    "particle",
+    "hero",
+    "ambient",
+    "canvas"
+  ],
+  "sourcePromptIds": [
+    "opencodesign-particle-field-data-hero"
+  ]
+}

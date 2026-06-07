@@ -1,0 +1,1 @@
+Implement a focused UI specimen called 'Space depth cards'. Cards float in depth with soft starfield movement. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: space, 3d, portfolio, depth.

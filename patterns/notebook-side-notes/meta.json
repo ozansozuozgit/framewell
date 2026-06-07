@@ -1,0 +1,16 @@
+{
+  "id": "notebook-side-notes",
+  "title": "Notebook side notes",
+  "behavior": "Editor",
+  "context": "AI app",
+  "description": "Inline notes anchor to selected paragraphs in a calm editor layout.",
+  "tags": [
+    "notebook",
+    "editor",
+    "annotations",
+    "ai"
+  ],
+  "sourcePromptIds": [
+    "opencodesign-ai-writing-assistant-hero"
+  ]
+}

@@ -1,0 +1,1 @@
+Implement a focused UI specimen called 'Team grid spotlight'. Team portraits receive a soft cursor-follow spotlight. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: team, grid, spotlight, hover.

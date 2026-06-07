@@ -1,0 +1,16 @@
+{
+  "id": "calendar-density-hover",
+  "title": "Calendar density hover",
+  "behavior": "Inspect",
+  "context": "Calendar",
+  "description": "A dense schedule exposes details through focused hover lanes.",
+  "tags": [
+    "calendar",
+    "density",
+    "hover",
+    "schedule"
+  ],
+  "sourcePromptIds": [
+    "template-shadcnstore-calendar-ops-dashboard"
+  ]
+}

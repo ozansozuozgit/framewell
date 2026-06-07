@@ -5,6 +5,6 @@
   "description": "Preview-first motion prompt library for websites, dashboards, animations, and component ideas.",
   "scripts": {
     "start": "python3 -m http.server 4173",
-    "validate": "node --check app.js && python3 scripts/build_prompts_json.py && python3 scripts/build_curation_json.py && python3 scripts/build_composition_json.py && python3 scripts/validate_composition_json.py"
+    "validate": "node --check app.js && python3 scripts/build_prompts_json.py && python3 scripts/build_curation_json.py && python3 scripts/build_composition_json.py && python3 scripts/validate_composition_json.py && python3 scripts/build_patterns_json.py"
   }
 }

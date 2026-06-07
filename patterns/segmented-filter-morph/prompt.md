@@ -1,0 +1,1 @@
+Implement a focused UI specimen called 'Segmented filter morph'. Filter pills share one moving active background. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: filter, tabs, morph, controls.

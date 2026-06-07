@@ -1,0 +1,16 @@
+{
+  "id": "bento-card-tilt",
+  "title": "Bento card tilt",
+  "behavior": "Emphasize",
+  "context": "Marketing",
+  "description": "Feature cards react to pointer position without looking gamey.",
+  "tags": [
+    "bento",
+    "hover",
+    "feature",
+    "tilt"
+  ],
+  "sourcePromptIds": [
+    "tailark-feature-bento-grid"
+  ]
+}

@@ -1,0 +1,1 @@
+Implement a focused UI specimen called 'Testimonial wall focus'. Hovering a quote lifts it while the wall stays calm. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: testimonials, hover, proof, grid.

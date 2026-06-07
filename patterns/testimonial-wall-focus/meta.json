@@ -1,0 +1,16 @@
+{
+  "id": "testimonial-wall-focus",
+  "title": "Testimonial wall focus",
+  "behavior": "Proof",
+  "context": "Marketing",
+  "description": "Hovering a quote lifts it while the wall stays calm.",
+  "tags": [
+    "testimonials",
+    "hover",
+    "proof",
+    "grid"
+  ],
+  "sourcePromptIds": [
+    "tailark-testimonial-wall"
+  ]
+}

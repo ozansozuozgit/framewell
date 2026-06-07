@@ -1,0 +1,16 @@
+{
+  "id": "skeleton-signal-loader",
+  "title": "Signal skeleton loader",
+  "behavior": "Load",
+  "context": "Data app",
+  "description": "Loading rows shimmer with tiny source/signal placeholders.",
+  "tags": [
+    "loading",
+    "skeleton",
+    "data",
+    "status"
+  ],
+  "sourcePromptIds": [
+    "motionsites-loader-animation"
+  ]
+}

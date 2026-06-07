@@ -1,0 +1,16 @@
+{
+  "id": "sticky-metric-strip",
+  "title": "Sticky metric strip",
+  "behavior": "Navigate",
+  "context": "Dashboard",
+  "description": "A compact KPI strip pins while panels move underneath.",
+  "tags": [
+    "sticky",
+    "metrics",
+    "dashboard",
+    "status"
+  ],
+  "sourcePromptIds": [
+    "opencodesign-saas-revenue-dashboard"
+  ]
+}

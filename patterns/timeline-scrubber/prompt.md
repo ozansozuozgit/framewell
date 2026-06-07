@@ -1,0 +1,1 @@
+Implement a focused UI specimen called 'Timeline scrubber'. Milestones become a draggable-feeling horizontal timeline. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: timeline, analytics, history, scrub.

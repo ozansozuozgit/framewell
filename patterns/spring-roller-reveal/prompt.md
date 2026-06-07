@@ -1,0 +1,1 @@
+Implement a focused UI specimen called 'Spring roller reveal'. A roller-blind mask uncovers content with springy overshoot. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: reveal, spring, mask, hero.

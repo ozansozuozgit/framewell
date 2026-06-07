@@ -1,0 +1,16 @@
+{
+  "id": "scroll-shadow-panel",
+  "title": "Scroll shadow panel",
+  "behavior": "Scroll",
+  "context": "Docs",
+  "description": "A scrollable panel earns top/bottom shadows only when useful.",
+  "tags": [
+    "scroll",
+    "shadow",
+    "docs",
+    "panel"
+  ],
+  "sourcePromptIds": [
+    "template-ixartz-docs-first-saas-home"
+  ]
+}

@@ -1,0 +1,1 @@
+Implement a focused UI specimen called 'FAQ accordion rhythm'. Answers open with measured height and icon rotation. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: faq, accordion, motion, content.

@@ -1,0 +1,16 @@
+{
+  "id": "liquid-glass-card",
+  "title": "Liquid glass card",
+  "behavior": "Surface",
+  "context": "Marketing",
+  "description": "A glass panel uses gradient blur, shine, and parallax depth.",
+  "tags": [
+    "glass",
+    "surface",
+    "hero",
+    "premium"
+  ],
+  "sourcePromptIds": [
+    "motionsites-liquid-glass-agency"
+  ]
+}

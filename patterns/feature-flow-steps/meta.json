@@ -1,0 +1,16 @@
+{
+  "id": "feature-flow-steps",
+  "title": "Feature flow steps",
+  "behavior": "Explain",
+  "context": "SaaS app",
+  "description": "A three-step flow highlights one step at a time.",
+  "tags": [
+    "steps",
+    "feature",
+    "flow",
+    "explain"
+  ],
+  "sourcePromptIds": [
+    "template-karthik-framer-motion-feature-flow"
+  ]
+}
