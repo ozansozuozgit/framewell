@@ -1,0 +1,22 @@
+{
+  "id": "gsap-flip-detail-expander",
+  "title": "GSAP Flip detail expander",
+  "behavior": "Transition",
+  "context": "Portfolio",
+  "description": "A thumbnail keeps continuity as it flips into a full case-study scene.",
+  "tags": [
+    "gsap",
+    "flip",
+    "page-transition",
+    "case-study",
+    "portfolio"
+  ],
+  "sourcePromptIds": [
+    "codrops-gsap-flip-scrolltrigger"
+  ],
+  "template": "flip-expander",
+  "quality": "specimen",
+  "mixRoles": [
+    "signature moment"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aave-glass-slider-refraction",
+  "title": "Aave glass slider refraction",
+  "behavior": "Glass control",
+  "context": "Web app",
+  "description": "A slider handle bends only the fill region with a conservative high-performance lens.",
+  "tags": [
+    "aave-glass",
+    "slider",
+    "refraction",
+    "performance",
+    "glass"
+  ],
+  "sourcePromptIds": [
+    "aave-building-glass-for-the-web"
+  ],
+  "template": "aave-slider",
+  "quality": "specimen",
+  "mixRoles": [
+    "microinteraction"
+  ]
+}

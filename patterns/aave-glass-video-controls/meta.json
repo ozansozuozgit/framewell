@@ -1,0 +1,22 @@
+{
+  "id": "aave-glass-video-controls",
+  "title": "Aave glass video controls",
+  "behavior": "Glass media",
+  "context": "Media",
+  "description": "Independent glass control lenses float over moving video without destroying legibility.",
+  "tags": [
+    "aave-glass",
+    "video",
+    "webgl",
+    "controls",
+    "refraction"
+  ],
+  "sourcePromptIds": [
+    "aave-building-glass-for-the-web"
+  ],
+  "template": "aave-video",
+  "quality": "featured",
+  "mixRoles": [
+    "signature moment"
+  ]
+}

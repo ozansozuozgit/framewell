@@ -122,6 +122,16 @@ PATTERNS = [
     ("spatial-command-room", "Spatial command room", "Command", "AI app", "Commands live on walls of a compact 3D room instead of a flat palette.", ["command", "spatial", "3d", "keyboard", "ai"], "command-room", "creative-command-palette-3d"),
     ("liquid-drag-dashboard", "Liquid drag dashboard", "Dashboard motion", "Dashboard", "Widgets stretch and reflow like liquid while preserving dashboard clarity.", ["dashboard", "drag", "liquid", "layout", "motion"], "liquid-dashboard", "dashboard-motion-inspiration"),
 
+    # Aave Glass / Codrops GSAP+WebGL reference pass
+    ("aave-glass-switch-lens", "Aave glass switch lens", "Glass control", "Web app", "A moving refraction lens becomes the switch thumb while preserving readable content.", ["aave-glass", "refraction", "svg-filter", "switch", "glass"], "aave-glass", "aave-building-glass-for-the-web"),
+    ("aave-glass-slider-refraction", "Aave glass slider refraction", "Glass control", "Web app", "A slider handle bends only the fill region with a conservative high-performance lens.", ["aave-glass", "slider", "refraction", "performance", "glass"], "aave-slider", "aave-building-glass-for-the-web"),
+    ("aave-glass-toggle-group", "Aave glass toggle group", "Glass selection", "Web app", "Selection is a springing glass lens, not another background pill.", ["aave-glass", "toggle", "selection", "spring", "glass"], "aave-toggle", "aave-building-glass-for-the-web"),
+    ("aave-glass-video-controls", "Aave glass video controls", "Glass media", "Media", "Independent glass control lenses float over moving video without destroying legibility.", ["aave-glass", "video", "webgl", "controls", "refraction"], "aave-video", "aave-building-glass-for-the-web"),
+    ("codrops-webgl-scroll-gallery", "WebGL scroll-revealed gallery", "Shader gallery", "Portfolio", "Images reveal with shader masks on scroll, then expand into a detail transition.", ["codrops", "webgl", "gsap", "scrolltrigger", "barba", "gallery"], "webgl-scroll-gallery", "codrops-scroll-revealed-webgl-gallery"),
+    ("gsap-flip-detail-expander", "GSAP Flip detail expander", "Transition", "Portfolio", "A thumbnail keeps continuity as it flips into a full case-study scene.", ["gsap", "flip", "page-transition", "case-study", "portfolio"], "flip-expander", "codrops-gsap-flip-scrolltrigger"),
+    ("scroll-driven-3d-world-chapters", "Scroll-driven 3D world chapters", "3D scene", "Portfolio", "Every scroll chapter moves the viewer through an authored 3D world with a point of view.", ["three-js", "gsap", "scroll", "world", "camera"], "world-chapters", "codrops-scroll-driven-3d-world"),
+    ("video-texture-cube-grid", "Video texture cube grid", "WebGL grid", "Portfolio", "Video frames map onto rotating cube tiles with mask-driven hover states.", ["three-js", "video-texture", "cube-grid", "webgl", "hover"], "video-cube-grid", "codrops-threejs-video-cube-grid"),
+
 ]
 
 BASE_CSS = r'''
@@ -385,7 +395,7 @@ def t_liquid_dashboard(p):
 
 # Alias many templates to a strong fallback with labels still differentiating the card.
 ALIASES = {
-    "search-morph":"radial-command", "onboard-stars":"constellation", "pricing-pressure":"refractive-pricing", "living-label":"liquid-cta", "empty-orbit":"orbit-stage", "copy-sweep":"liquid-cta", "card-marquee":"depth-marquee", "roller-blind":"slice-poster", "prism-carousel":"orbit-stage", "line-map":"map-accordion", "noise-gradient":"constellation", "pixel-dissolve":"type-dissolve", "progress-rail":"dashboard-rows", "clip-gallery":"ripple-grid", "audio-loader":"stats-band", "morph-divider":"slice-poster", "comparison-wipe":"split-transition", "annotation-rail":"ai-stream", "completion-burst":"constellation", "depth-bento":"ripple-grid", "title-loader":"type-dissolve", "device-morph":"split-transition", "cluster-map":"map-accordion", "toggle-array":"dashboard-rows", "column-xray":"evidence-peek", "video-scrub":"filmstrip", "type-3d":"type-dissolve", "gen-controls":"constellation", "size-magnet":"kanban-physics", "code-stepper":"ai-stream", "vault-door":"split-transition", "agent-trace":"lineage-river", "masonry-recompose":"ripple-grid", "kinetic-text":"magnetic-menu", "micro-charts":"metric-scrub", "doc-shadows":"dashboard-rows", "spotlight-type":"spotlight-menu", "depth-stack":"orbit-stage", "particle-logo":"constellation", "cursor-index":"spotlight-menu", "camera-timeline":"dashboard-rows", "audio-reactor":"stats-band"
+    "search-morph":"radial-command", "onboard-stars":"constellation", "pricing-pressure":"refractive-pricing", "living-label":"liquid-cta", "empty-orbit":"orbit-stage", "copy-sweep":"liquid-cta", "card-marquee":"depth-marquee", "roller-blind":"slice-poster", "prism-carousel":"orbit-stage", "line-map":"map-accordion", "noise-gradient":"constellation", "pixel-dissolve":"type-dissolve", "progress-rail":"dashboard-rows", "clip-gallery":"ripple-grid", "audio-loader":"stats-band", "morph-divider":"slice-poster", "comparison-wipe":"split-transition", "annotation-rail":"ai-stream", "completion-burst":"constellation", "depth-bento":"ripple-grid", "title-loader":"type-dissolve", "device-morph":"split-transition", "cluster-map":"map-accordion", "toggle-array":"dashboard-rows", "column-xray":"evidence-peek", "video-scrub":"filmstrip", "type-3d":"type-dissolve", "gen-controls":"constellation", "size-magnet":"kanban-physics", "code-stepper":"ai-stream", "vault-door":"split-transition", "agent-trace":"lineage-river", "masonry-recompose":"ripple-grid", "kinetic-text":"magnetic-menu", "micro-charts":"metric-scrub", "doc-shadows":"dashboard-rows", "spotlight-type":"spotlight-menu", "depth-stack":"orbit-stage", "particle-logo":"constellation", "cursor-index":"spotlight-menu", "camera-timeline":"dashboard-rows", "audio-reactor":"stats-band", "aave-glass":"refractive-pricing", "aave-slider":"refractive-pricing", "aave-toggle":"liquid-dock", "aave-video":"refractive-pricing", "webgl-scroll-gallery":"ripple-grid", "flip-expander":"canvas-handoff", "world-chapters":"scene-room", "video-cube-grid":"ripple-grid"
 }
 
 def build_index(p):
@@ -409,6 +419,14 @@ def main():
     seen=set()
     for i,p in enumerate(PATTERNS):
         slug,title,behavior,context,desc,tags,template_key,source = p
+        DROP_GENERIC = {
+            "faq-elastic-drawer", "team-spotlight-grid", "footer-gravity-links", "logo-cloud-depth-marquee",
+            "stats-countup-proof-band", "mask-reveal-testimonials", "infinite-marquee-cards", "audio-wave-loader",
+            "morphing-section-divider", "task-completion-confetti-minimal", "scroll-shadow-document",
+            "form-field-living-label", "copy-button-success-sweep", "empty-state-suggestion-orbit"
+        }
+        if slug in DROP_GENERIC:
+            continue
         if slug in seen: raise SystemExit(f"duplicate slug: {slug}")
         seen.add(slug)
         folder=PATTERN_DIR/slug; folder.mkdir(parents=True, exist_ok=True)

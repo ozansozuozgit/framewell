@@ -1,1 +1,0 @@
-Adapt the Framewell pattern 'Audio wave loader' into my existing Media without replacing my product structure. Use it only as a focused Loader layer. Loading becomes a compact equalizer with branded rhythm. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: loader, audio, equalizer, motion.

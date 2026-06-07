@@ -1,8 +1,8 @@
 {
   "summary": {
-    "count": 89,
-    "featured": 48,
-    "specimens": 41,
+    "count": 83,
+    "featured": 45,
+    "specimens": 38,
     "archiveMode": "hidden; live effects are primary"
   },
   "patterns": [
@@ -716,168 +716,6 @@
       "dependencies": []
     },
     {
-      "id": "mask-reveal-testimonials",
-      "title": "Mask reveal testimonials",
-      "behavior": "Proof",
-      "context": "Marketing",
-      "description": "Quotes reveal through animated masks, keeping the wall premium and calm.",
-      "tags": [
-        "testimonials",
-        "mask",
-        "proof",
-        "animation"
-      ],
-      "sourcePromptIds": [
-        "tailark-testimonial-wall"
-      ],
-      "template": "mask-proof",
-      "quality": "featured",
-      "mixRoles": [
-        "conversion/proof"
-      ],
-      "slug": "mask-reveal-testimonials",
-      "previewUrl": "patterns/mask-reveal-testimonials/index.html",
-      "prompt": "Adapt the Framewell pattern 'Mask reveal testimonials' into my existing Marketing without replacing my product structure. Use it only as a focused Proof layer. Quotes reveal through animated masks, keeping the wall premium and calm. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: testimonials, mask, proof, animation.",
-      "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Mask reveal testimonials \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.q{min-height:130px;border:1px solid var(--line);border-radius:24px;padding:18px;background:rgba(255,255,255,.06);clip-path:inset(0 100% 0 0);animation:unmask .9s forwards;animation-delay:calc(var(--i)*160ms)}@keyframes unmask{to{clip-path:inset(0)}}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"Mask reveal testimonials\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">Proof \u00b7 Marketing</span></div><section class=\"stage\"><div class='quotes'><div class='q' style='--i:0'><b>\u201cThis feels expensive.\u201d</b><p class='muted'>Proof quote with calm motion.</p></div><div class='q' style='--i:1'><b>\u201cThis feels expensive.\u201d</b><p class='muted'>Proof quote with calm motion.</p></div><div class='q' style='--i:2'><b>\u201cThis feels expensive.\u201d</b><p class='muted'>Proof quote with calm motion.</p></div><div class='q' style='--i:3'><b>\u201cThis feels expensive.\u201d</b><p class='muted'>Proof quote with calm motion.</p></div><div class='q' style='--i:4'><b>\u201cThis feels expensive.\u201d</b><p class='muted'>Proof quote with calm motion.</p></div><div class='q' style='--i:5'><b>\u201cThis feels expensive.\u201d</b><p class='muted'>Proof quote with calm motion.</p></div></div></section></main></div></body></html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "logo-cloud-depth-marquee",
-      "title": "Depth logo marquee",
-      "behavior": "Proof",
-      "context": "Marketing",
-      "description": "Logo strips move at different depths with soft mask edges.",
-      "tags": [
-        "marquee",
-        "logos",
-        "depth",
-        "proof"
-      ],
-      "sourcePromptIds": [
-        "tailark-logo-cloud-marquee"
-      ],
-      "template": "depth-marquee",
-      "quality": "featured",
-      "mixRoles": [
-        "conversion/proof"
-      ],
-      "slug": "logo-cloud-depth-marquee",
-      "previewUrl": "patterns/logo-cloud-depth-marquee/index.html",
-      "prompt": "Adapt the Framewell pattern 'Depth logo marquee' into my existing Marketing without replacing my product structure. Use it only as a focused Proof layer. Logo strips move at different depths with soft mask edges. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: marquee, logos, depth, proof.",
-      "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Depth logo marquee \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.wrap{display:grid;gap:16px;align-content:center;height:100%;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}.track{display:flex;gap:12px;animation:mar 12s linear infinite}.track:nth-child(2){animation-duration:18s;animation-direction:reverse;opacity:.55}.logo{flex:0 0 160px;height:74px;border:1px solid var(--line);border-radius:20px;display:grid;place-items:center;background:rgba(255,255,255,.07)}@keyframes mar{to{transform:translateX(-50%)}}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"Depth logo marquee\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">Proof \u00b7 Marketing</span></div><section class=\"stage\"><div class='wrap'><div class='track'><div class='logo'>LOGO 1</div><div class='logo'>LOGO 2</div><div class='logo'>LOGO 3</div><div class='logo'>LOGO 4</div><div class='logo'>LOGO 5</div><div class='logo'>LOGO 6</div><div class='logo'>LOGO 1</div><div class='logo'>LOGO 2</div><div class='logo'>LOGO 3</div><div class='logo'>LOGO 4</div><div class='logo'>LOGO 5</div><div class='logo'>LOGO 6</div></div><div class='track'><div class='logo'>LOGO 1</div><div class='logo'>LOGO 2</div><div class='logo'>LOGO 3</div><div class='logo'>LOGO 4</div><div class='logo'>LOGO 5</div><div class='logo'>LOGO 6</div><div class='logo'>LOGO 1</div><div class='logo'>LOGO 2</div><div class='logo'>LOGO 3</div><div class='logo'>LOGO 4</div><div class='logo'>LOGO 5</div><div class='logo'>LOGO 6</div></div></div></section></main></div></body></html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "faq-elastic-drawer",
-      "title": "FAQ elastic drawer",
-      "behavior": "Accordion",
-      "context": "Marketing",
-      "description": "Questions open with springy drawers, icon twist, and content shadows.",
-      "tags": [
-        "faq",
-        "accordion",
-        "spring",
-        "drawer"
-      ],
-      "sourcePromptIds": [
-        "tailark-faq-accordion-section"
-      ],
-      "template": "elastic-faq",
-      "quality": "featured",
-      "mixRoles": [
-        "supporting effect"
-      ],
-      "slug": "faq-elastic-drawer",
-      "previewUrl": "patterns/faq-elastic-drawer/index.html",
-      "prompt": "Adapt the Framewell pattern 'FAQ elastic drawer' into my existing Marketing without replacing my product structure. Use it only as a focused Accordion layer. Questions open with springy drawers, icon twist, and content shadows. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: faq, accordion, spring, drawer.",
-      "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>FAQ elastic drawer \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.faq{display:grid;gap:10px}.qa{border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.06);overflow:hidden}.q{padding:16px;display:flex;justify-content:space-between}.a{max-height:0;padding:0 16px;color:var(--muted);transition:.45s cubic-bezier(.2,1.4,.2,1)}.qa:hover .a{max-height:120px;padding-bottom:16px}.qa:hover .q span{rotate:45deg}.q span{transition:.25s}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"FAQ elastic drawer\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">Accordion \u00b7 Marketing</span></div><section class=\"stage\"><div class='faq'><div class='qa'><div class='q'><b>Question 1</b><span>\uff0b</span></div><div class='a'>Answer opens with spring drawer behavior and clear hierarchy.</div></div><div class='qa'><div class='q'><b>Question 2</b><span>\uff0b</span></div><div class='a'>Answer opens with spring drawer behavior and clear hierarchy.</div></div><div class='qa'><div class='q'><b>Question 3</b><span>\uff0b</span></div><div class='a'>Answer opens with spring drawer behavior and clear hierarchy.</div></div><div class='qa'><div class='q'><b>Question 4</b><span>\uff0b</span></div><div class='a'>Answer opens with spring drawer behavior and clear hierarchy.</div></div><div class='qa'><div class='q'><b>Question 5</b><span>\uff0b</span></div><div class='a'>Answer opens with spring drawer behavior and clear hierarchy.</div></div></div></section></main></div></body></html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "team-spotlight-grid",
-      "title": "Team spotlight grid",
-      "behavior": "People grid",
-      "context": "Marketing",
-      "description": "A cursor spotlight reveals portraits, roles, and one-line principles.",
-      "tags": [
-        "team",
-        "spotlight",
-        "grid",
-        "people"
-      ],
-      "sourcePromptIds": [
-        "tailark-team-grid-editorial"
-      ],
-      "template": "team-spotlight",
-      "quality": "featured",
-      "mixRoles": [
-        "supporting effect"
-      ],
-      "slug": "team-spotlight-grid",
-      "previewUrl": "patterns/team-spotlight-grid/index.html",
-      "prompt": "Adapt the Framewell pattern 'Team spotlight grid' into my existing Marketing without replacing my product structure. Use it only as a focused People grid layer. A cursor spotlight reveals portraits, roles, and one-line principles. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: team, spotlight, grid, people.",
-      "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Team spotlight grid \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.team{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;height:100%;position:relative}.person{border:1px solid var(--line);border-radius:22px;background:radial-gradient(circle at 50% 34%,rgba(143,255,224,.35),transparent 24%),rgba(255,255,255,.06);filter:brightness(.75);transition:.25s}.person:hover{filter:brightness(1.25);transform:translateY(-6px)}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"Team spotlight grid\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">People grid \u00b7 Marketing</span></div><section class=\"stage\"><div class='team'><div class='person'></div><div class='person'></div><div class='person'></div><div class='person'></div><div class='person'></div><div class='person'></div><div class='person'></div><div class='person'></div><div class='person'></div><div class='person'></div><div class='person'></div><div class='person'></div></div></section></main></div></body></html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "stats-countup-proof-band",
-      "title": "Count-up proof band",
-      "behavior": "Proof",
-      "context": "Marketing",
-      "description": "Proof numbers count once, then leave tactile confidence marks.",
-      "tags": [
-        "stats",
-        "count-up",
-        "proof",
-        "scroll"
-      ],
-      "sourcePromptIds": [
-        "tailark-stats-proof-band"
-      ],
-      "template": "stats-band",
-      "quality": "featured",
-      "mixRoles": [
-        "conversion/proof"
-      ],
-      "slug": "stats-countup-proof-band",
-      "previewUrl": "patterns/stats-countup-proof-band/index.html",
-      "prompt": "Adapt the Framewell pattern 'Count-up proof band' into my existing Marketing without replacing my product structure. Use it only as a focused Proof layer. Proof numbers count once, then leave tactile confidence marks. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: stats, count-up, proof, scroll.",
-      "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Count-up proof band \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.stats{height:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-items:center}.stat{border:1px solid var(--line);border-radius:28px;padding:22px;background:rgba(255,255,255,.06)}.n{font-size:58px;font-weight:950;color:var(--a);counter-reset:num var(--v)}.n:after{content:counter(num)}.stat{animation:pop .8s cubic-bezier(.2,1.5,.2,1) both;animation-delay:calc(var(--i)*120ms)}@keyframes pop{from{opacity:0;transform:translateY(25px) scale(.9)}}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"Count-up proof band\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">Proof \u00b7 Marketing</span></div><section class=\"stage\"><div class='stats'><div class='stat' style='--i:0'><div class='n' style='--v:42'></div><p class='muted'>proof metric</p></div><div class='stat' style='--i:1'><div class='n' style='--v:87'></div><p class='muted'>proof metric</p></div><div class='stat' style='--i:2'><div class='n' style='--v:12'></div><p class='muted'>proof metric</p></div></div></section></main></div></body></html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "footer-gravity-links",
-      "title": "Gravity footer links",
-      "behavior": "Footer",
-      "context": "Marketing",
-      "description": "Footer links cluster around the CTA and drift like low gravity objects.",
-      "tags": [
-        "footer",
-        "gravity",
-        "links",
-        "cta"
-      ],
-      "sourcePromptIds": [
-        "tailark-final-cta-footer"
-      ],
-      "template": "gravity-footer",
-      "quality": "featured",
-      "mixRoles": [
-        "supporting effect"
-      ],
-      "slug": "footer-gravity-links",
-      "previewUrl": "patterns/footer-gravity-links/index.html",
-      "prompt": "Adapt the Framewell pattern 'Gravity footer links' into my existing Marketing without replacing my product structure. Use it only as a focused Footer layer. Footer links cluster around the CTA and drift like low gravity objects. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: footer, gravity, links, cta.",
-      "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Gravity footer links \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.space{height:100%;position:relative}.planet{position:absolute;left:50%;top:50%;width:170px;height:170px;border-radius:50%;background:linear-gradient(135deg,var(--a),var(--d));transform:translate(-50%,-50%);display:grid;place-items:center;color:#07100d;font-weight:900}.link{position:absolute;left:50%;top:50%;transform:rotate(var(--r)) translateX(210px) rotate(calc(var(--r)*-1));animation:grav 5s ease-in-out infinite;animation-delay:calc(var(--i)*-.3s)}@keyframes grav{50%{translate:0 -18px}}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"Gravity footer links\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">Footer \u00b7 Marketing</span></div><section class=\"stage\"><div class='space'><div class='planet'>CTA</div><span class='link' style='--r:0deg;--i:0'>Link</span><span class='link' style='--r:51deg;--i:1'>Link</span><span class='link' style='--r:102deg;--i:2'>Link</span><span class='link' style='--r:153deg;--i:3'>Link</span><span class='link' style='--r:204deg;--i:4'>Link</span><span class='link' style='--r:255deg;--i:5'>Link</span><span class='link' style='--r:306deg;--i:6'>Link</span></div></section></main></div></body></html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
       "id": "search-bar-morph-results",
       "title": "Search bar morph results",
       "behavior": "Search",
@@ -956,114 +794,6 @@
       "previewUrl": "patterns/pricing-card-pressure/index.html",
       "prompt": "Adapt the Framewell pattern 'Pricing pressure card' into my existing SaaS without replacing my product structure. Use it only as a focused Pricing layer. Recommended plan reacts to plan toggles with proof and pressure indicators. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: pricing, toggle, proof, saas.",
       "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Pricing pressure card \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.plans{height:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:center}.plan{height:260px;border:1px solid var(--line);border-radius:28px;padding:20px;background:rgba(255,255,255,.06);position:relative;overflow:hidden}.plan:nth-child(2){height:310px;background:rgba(143,255,224,.08)}.plan:nth-child(2):after{content:'';position:absolute;inset:22px;border:1px solid rgba(255,255,255,.35);border-radius:50%;filter:blur(.2px);box-shadow:inset 0 0 24px rgba(255,255,255,.18),0 0 40px rgba(143,255,224,.22);animation:ring 4s linear infinite}.price{font-size:44px;font-weight:900;margin-top:80px}@keyframes ring{50%{transform:scale(1.15) rotate(8deg);border-radius:38% 62% 55% 45%}}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"Pricing pressure card\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">Pricing \u00b7 SaaS</span></div><section class=\"stage\"><div class='plans'><div class='plan'>Start<div class='price'>$19</div></div><div class='plan'>Studio<div class='price'>$49</div></div><div class='plan'>Scale<div class='price'>$99</div></div></div></section></main></div></body></html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "form-field-living-label",
-      "title": "Living form label",
-      "behavior": "Form",
-      "context": "SaaS",
-      "description": "Labels become validation hints, progress, and context without extra chrome.",
-      "tags": [
-        "form",
-        "label",
-        "validation",
-        "microinteraction"
-      ],
-      "sourcePromptIds": [
-        "template-ixartz-devtool-landing-page"
-      ],
-      "template": "living-label",
-      "quality": "featured",
-      "mixRoles": [
-        "microinteraction"
-      ],
-      "slug": "form-field-living-label",
-      "previewUrl": "patterns/form-field-living-label/index.html",
-      "prompt": "Adapt the Framewell pattern 'Living form label' into my existing SaaS without replacing my product structure. Use it only as a focused Form layer. Labels become validation hints, progress, and context without extra chrome. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: form, label, validation, microinteraction.",
-      "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Living form label \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.wrap{height:100%;display:grid;place-items:center}.cta{font-size:34px;font-weight:900;padding:28px 46px;border-radius:999px;position:relative;overflow:hidden;background:#f6ead5;color:#0b0d12;box-shadow:0 26px 80px rgba(255,207,90,.16)}.cta:before{content:'';position:absolute;inset:-80%;background:radial-gradient(circle,var(--a),transparent 28%),radial-gradient(circle at 70% 40%,var(--c),transparent 24%);animation:flow 4s linear infinite;mix-blend-mode:multiply}.cta span{position:relative}.cta:hover:before{animation-duration:1.2s}@keyframes flow{to{transform:rotate(1turn)}}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"Living form label\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">Form \u00b7 SaaS</span></div><section class=\"stage\"><div class='wrap'><button class='cta'><span>Living form label</span></button></div></section></main></div></body></html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "empty-state-suggestion-orbit",
-      "title": "Suggestion orbit empty state",
-      "behavior": "Empty state",
-      "context": "AI app",
-      "description": "Suggested actions orbit the empty state and collapse into the chosen action.",
-      "tags": [
-        "empty-state",
-        "ai",
-        "suggestions",
-        "orbit"
-      ],
-      "sourcePromptIds": [
-        "opencodesign-ai-writing-assistant-hero"
-      ],
-      "template": "empty-orbit",
-      "quality": "specimen",
-      "mixRoles": [
-        "supporting effect"
-      ],
-      "slug": "empty-state-suggestion-orbit",
-      "previewUrl": "patterns/empty-state-suggestion-orbit/index.html",
-      "prompt": "Adapt the Framewell pattern 'Suggestion orbit empty state' into my existing AI app without replacing my product structure. Use it only as a focused Empty state layer. Suggested actions orbit the empty state and collapse into the chosen action. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: empty-state, ai, suggestions, orbit.",
-      "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Suggestion orbit empty state \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.orbit{height:100%;display:grid;place-items:center;position:relative}.core{width:170px;height:170px;border-radius:40px;background:linear-gradient(135deg,var(--a),var(--d));box-shadow:0 0 60px rgba(143,255,224,.28);animation:core 5s ease-in-out infinite}.sat{position:absolute;width:142px;padding:13px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.08);backdrop-filter:blur(14px);animation:orb 8s linear infinite;transform-origin:calc(50% + var(--rx)) calc(50% + var(--ry))}.sat:nth-child(2){--rx:190px;--ry:0px}.sat:nth-child(3){--rx:-160px;--ry:70px;animation-delay:-2.6s}.sat:nth-child(4){--rx:80px;--ry:-150px;animation-delay:-5.2s}@keyframes orb{to{rotate:1turn}}@keyframes core{50%{transform:translateY(-12px) rotateX(10deg)}}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"Suggestion orbit empty state\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">Empty state \u00b7 AI app</span></div><section class=\"stage\"><div class='orbit'><div class='core'></div><div class='sat'>Realtime mesh</div><div class='sat'>Agent state</div><div class='sat'>3D context</div></div></section></main></div></body></html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "copy-button-success-sweep",
-      "title": "Success sweep copy button",
-      "behavior": "Microinteraction",
-      "context": "Devtool",
-      "description": "A code copy button confirms with a fast sweep and inline command memory.",
-      "tags": [
-        "copy",
-        "code",
-        "success",
-        "devtool"
-      ],
-      "sourcePromptIds": [
-        "template-ixartz-devtool-landing-page"
-      ],
-      "template": "copy-sweep",
-      "quality": "specimen",
-      "mixRoles": [
-        "microinteraction"
-      ],
-      "slug": "copy-button-success-sweep",
-      "previewUrl": "patterns/copy-button-success-sweep/index.html",
-      "prompt": "Adapt the Framewell pattern 'Success sweep copy button' into my existing Devtool without replacing my product structure. Use it only as a focused Microinteraction layer. A code copy button confirms with a fast sweep and inline command memory. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: copy, code, success, devtool.",
-      "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Success sweep copy button \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.wrap{height:100%;display:grid;place-items:center}.cta{font-size:34px;font-weight:900;padding:28px 46px;border-radius:999px;position:relative;overflow:hidden;background:#f6ead5;color:#0b0d12;box-shadow:0 26px 80px rgba(255,207,90,.16)}.cta:before{content:'';position:absolute;inset:-80%;background:radial-gradient(circle,var(--a),transparent 28%),radial-gradient(circle at 70% 40%,var(--c),transparent 24%);animation:flow 4s linear infinite;mix-blend-mode:multiply}.cta span{position:relative}.cta:hover:before{animation-duration:1.2s}@keyframes flow{to{transform:rotate(1turn)}}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"Success sweep copy button\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">Microinteraction \u00b7 Devtool</span></div><section class=\"stage\"><div class='wrap'><button class='cta'><span>Success sweep copy button</span></button></div></section></main></div></body></html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "infinite-marquee-cards",
-      "title": "Infinite marquee cards",
-      "behavior": "Loop",
-      "context": "Gallery",
-      "description": "Cards loop in two directions while preserving hover focus.",
-      "tags": [
-        "marquee",
-        "cards",
-        "loop",
-        "gallery"
-      ],
-      "sourcePromptIds": [
-        "website-cards-animation"
-      ],
-      "template": "card-marquee",
-      "quality": "specimen",
-      "mixRoles": [
-        "supporting effect"
-      ],
-      "slug": "infinite-marquee-cards",
-      "previewUrl": "patterns/infinite-marquee-cards/index.html",
-      "prompt": "Adapt the Framewell pattern 'Infinite marquee cards' into my existing Gallery without replacing my product structure. Use it only as a focused Loop layer. Cards loop in two directions while preserving hover focus. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: marquee, cards, loop, gallery.",
-      "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Infinite marquee cards \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.wrap{display:grid;gap:16px;align-content:center;height:100%;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}.track{display:flex;gap:12px;animation:mar 12s linear infinite}.track:nth-child(2){animation-duration:18s;animation-direction:reverse;opacity:.55}.logo{flex:0 0 160px;height:74px;border:1px solid var(--line);border-radius:20px;display:grid;place-items:center;background:rgba(255,255,255,.07)}@keyframes mar{to{transform:translateX(-50%)}}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"Infinite marquee cards\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">Loop \u00b7 Gallery</span></div><section class=\"stage\"><div class='wrap'><div class='track'><div class='logo'>LOGO 1</div><div class='logo'>LOGO 2</div><div class='logo'>LOGO 3</div><div class='logo'>LOGO 4</div><div class='logo'>LOGO 5</div><div class='logo'>LOGO 6</div><div class='logo'>LOGO 1</div><div class='logo'>LOGO 2</div><div class='logo'>LOGO 3</div><div class='logo'>LOGO 4</div><div class='logo'>LOGO 5</div><div class='logo'>LOGO 6</div></div><div class='track'><div class='logo'>LOGO 1</div><div class='logo'>LOGO 2</div><div class='logo'>LOGO 3</div><div class='logo'>LOGO 4</div><div class='logo'>LOGO 5</div><div class='logo'>LOGO 6</div><div class='logo'>LOGO 1</div><div class='logo'>LOGO 2</div><div class='logo'>LOGO 3</div><div class='logo'>LOGO 4</div><div class='logo'>LOGO 5</div><div class='logo'>LOGO 6</div></div></div></section></main></div></body></html>",
       "complexity": "medium",
       "dependencies": []
     },
@@ -1257,60 +987,6 @@
       "dependencies": []
     },
     {
-      "id": "audio-wave-loader",
-      "title": "Audio wave loader",
-      "behavior": "Loader",
-      "context": "Media",
-      "description": "Loading becomes a compact equalizer with branded rhythm.",
-      "tags": [
-        "loader",
-        "audio",
-        "equalizer",
-        "motion"
-      ],
-      "sourcePromptIds": [
-        "motionsites-loader-animation"
-      ],
-      "template": "audio-loader",
-      "quality": "specimen",
-      "mixRoles": [
-        "microinteraction"
-      ],
-      "slug": "audio-wave-loader",
-      "previewUrl": "patterns/audio-wave-loader/index.html",
-      "prompt": "Adapt the Framewell pattern 'Audio wave loader' into my existing Media without replacing my product structure. Use it only as a focused Loader layer. Loading becomes a compact equalizer with branded rhythm. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: loader, audio, equalizer, motion.",
-      "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Audio wave loader \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.stats{height:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-items:center}.stat{border:1px solid var(--line);border-radius:28px;padding:22px;background:rgba(255,255,255,.06)}.n{font-size:58px;font-weight:950;color:var(--a);counter-reset:num var(--v)}.n:after{content:counter(num)}.stat{animation:pop .8s cubic-bezier(.2,1.5,.2,1) both;animation-delay:calc(var(--i)*120ms)}@keyframes pop{from{opacity:0;transform:translateY(25px) scale(.9)}}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"Audio wave loader\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">Loader \u00b7 Media</span></div><section class=\"stage\"><div class='stats'><div class='stat' style='--i:0'><div class='n' style='--v:42'></div><p class='muted'>proof metric</p></div><div class='stat' style='--i:1'><div class='n' style='--v:87'></div><p class='muted'>proof metric</p></div><div class='stat' style='--i:2'><div class='n' style='--v:12'></div><p class='muted'>proof metric</p></div></div></section></main></div></body></html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "morphing-section-divider",
-      "title": "Morphing section divider",
-      "behavior": "Divider",
-      "context": "Landing page",
-      "description": "A divider shape morphs to signal moving between product modes.",
-      "tags": [
-        "svg",
-        "morph",
-        "divider",
-        "section"
-      ],
-      "sourcePromptIds": [
-        "motionsites-free-transform-data"
-      ],
-      "template": "morph-divider",
-      "quality": "specimen",
-      "mixRoles": [
-        "supporting effect"
-      ],
-      "slug": "morphing-section-divider",
-      "previewUrl": "patterns/morphing-section-divider/index.html",
-      "prompt": "Adapt the Framewell pattern 'Morphing section divider' into my existing Landing page without replacing my product structure. Use it only as a focused Divider layer. A divider shape morphs to signal moving between product modes. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: svg, morph, divider, section.",
-      "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Morphing section divider \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.poster{height:100%;display:grid;grid-template-columns:repeat(6,1fr);gap:4px}.slice{background:linear-gradient(180deg,var(--a),var(--c));border-radius:18px;animation:slice 2.8s cubic-bezier(.2,.8,.2,1) infinite alternate;animation-delay:calc(var(--i)*80ms)}.copy{position:absolute;left:34px;bottom:30px}.copy h2{font-size:56px;line-height:.84;letter-spacing:-.08em}@keyframes slice{0%{clip-path:inset(0 0 82% 0)}45%{clip-path:inset(0 0 0 0)}100%{transform:translateY(calc(var(--i)*-7px));filter:hue-rotate(35deg)}}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"Morphing section divider\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">Divider \u00b7 Landing page</span></div><section class=\"stage\"><div class='poster'><div class='slice' style='--i:0'></div><div class='slice' style='--i:1'></div><div class='slice' style='--i:2'></div><div class='slice' style='--i:3'></div><div class='slice' style='--i:4'></div><div class='slice' style='--i:5'></div></div><div class='copy'><h2>Morphing section divider</h2></div></section></main></div></body></html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
       "id": "sticky-comparison-wipe",
       "title": "Sticky comparison wipe",
       "behavior": "Compare",
@@ -1361,33 +1037,6 @@
       "previewUrl": "patterns/notebook-annotation-rail/index.html",
       "prompt": "Adapt the Framewell pattern 'Notebook annotation rail' into my existing AI notebook without replacing my product structure. Use it only as a focused Editor layer. Side notes magnetize to selected paragraphs and source chips. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: editor, annotations, notebook, ai.",
       "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Notebook annotation rail \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.stream{display:grid;gap:10px}.msg{max-width:86%;padding:13px 15px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.06);opacity:0;transform:translateY(12px);animation:msg .55s forwards;animation-delay:calc(var(--i)*260ms)}.msg:nth-child(even){margin-left:auto;background:rgba(143,255,224,.09)}.sources{display:flex;gap:6px;margin-top:9px}.sources span{font-size:11px;color:#06100d;background:var(--a);border-radius:999px;padding:4px 7px}@keyframes msg{to{opacity:1;transform:none}}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"Notebook annotation rail\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">Editor \u00b7 AI notebook</span></div><section class=\"stage\"><div class='stream'><div class='msg' style='--i:0'>Analyze this dashboard<div class='sources'><span>doc</span><span>88%</span></div></div><div class='msg' style='--i:1'>I found three interaction opportunities<div class='sources'><span>doc</span><span>89%</span></div></div><div class='msg' style='--i:2'>Use source chips near the claim<div class='sources'><span>doc</span><span>90%</span></div></div><div class='msg' style='--i:3'>Ready to patch the UI<div class='sources'><span>doc</span><span>91%</span></div></div></div></section></main></div></body></html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "task-completion-confetti-minimal",
-      "title": "Minimal completion burst",
-      "behavior": "Celebration",
-      "context": "Productivity",
-      "description": "Completing a task emits a tiny geometric burst without becoming childish.",
-      "tags": [
-        "completion",
-        "confetti",
-        "minimal",
-        "task"
-      ],
-      "sourcePromptIds": [
-        "motionsites-free-taskly"
-      ],
-      "template": "completion-burst",
-      "quality": "specimen",
-      "mixRoles": [
-        "supporting effect"
-      ],
-      "slug": "task-completion-confetti-minimal",
-      "previewUrl": "patterns/task-completion-confetti-minimal/index.html",
-      "prompt": "Adapt the Framewell pattern 'Minimal completion burst' into my existing Productivity without replacing my product structure. Use it only as a focused Celebration layer. Completing a task emits a tiny geometric burst without becoming childish. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: completion, confetti, minimal, task.",
-      "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Minimal completion burst \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.stars{height:100%;position:relative;overflow:hidden}.star{position:absolute;left:var(--x);top:var(--y);width:6px;height:6px;border-radius:50%;background:var(--a);box-shadow:0 0 18px var(--a);animation:twinkle 2s ease-in-out infinite alternate;animation-delay:calc(var(--i)*-.13s)}.cursor{position:absolute;left:50%;top:50%;width:120px;height:120px;border:1px solid rgba(143,255,224,.35);border-radius:50%;transform:translate(-50%,-50%);animation:drift 6s ease-in-out infinite}.title{position:absolute;left:26px;bottom:24px;right:26px}.title h2{font-size:42px;letter-spacing:-.06em}@keyframes twinkle{to{opacity:.35;transform:scale(.55)}}@keyframes drift{50%{transform:translate(-20%,-70%) scale(1.25)}}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"Minimal completion burst\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">Celebration \u00b7 Productivity</span></div><section class=\"stage\"><div class='stars'><span class='star' style='--i:0;--x:0%;--y:0%'></span><span class='star' style='--i:1;--x:23%;--y:41%'></span><span class='star' style='--i:2;--x:46%;--y:82%'></span><span class='star' style='--i:3;--x:69%;--y:35%'></span><span class='star' style='--i:4;--x:92%;--y:76%'></span><span class='star' style='--i:5;--x:19%;--y:29%'></span><span class='star' style='--i:6;--x:42%;--y:70%'></span><span class='star' style='--i:7;--x:65%;--y:23%'></span><span class='star' style='--i:8;--x:88%;--y:64%'></span><span class='star' style='--i:9;--x:15%;--y:17%'></span><span class='star' style='--i:10;--x:38%;--y:58%'></span><span class='star' style='--i:11;--x:61%;--y:11%'></span><span class='star' style='--i:12;--x:84%;--y:52%'></span><span class='star' style='--i:13;--x:11%;--y:5%'></span><span class='star' style='--i:14;--x:34%;--y:46%'></span><span class='star' style='--i:15;--x:57%;--y:87%'></span><span class='star' style='--i:16;--x:80%;--y:40%'></span><span class='star' style='--i:17;--x:7%;--y:81%'></span><span class='star' style='--i:18;--x:30%;--y:34%'></span><span class='star' style='--i:19;--x:53%;--y:75%'></span><span class='star' style='--i:20;--x:76%;--y:28%'></span><span class='star' style='--i:21;--x:3%;--y:69%'></span><span class='star' style='--i:22;--x:26%;--y:22%'></span><span class='star' style='--i:23;--x:49%;--y:63%'></span><span class='star' style='--i:24;--x:72%;--y:16%'></span><span class='star' style='--i:25;--x:95%;--y:57%'></span><span class='star' style='--i:26;--x:22%;--y:10%'></span><span class='star' style='--i:27;--x:45%;--y:51%'></span><span class='star' style='--i:28;--x:68%;--y:4%'></span><span class='star' style='--i:29;--x:91%;--y:45%'></span><span class='star' style='--i:30;--x:18%;--y:86%'></span><span class='star' style='--i:31;--x:41%;--y:39%'></span><span class='star' style='--i:32;--x:64%;--y:80%'></span><span class='star' style='--i:33;--x:87%;--y:33%'></span><span class='star' style='--i:34;--x:14%;--y:74%'></span><span class='star' style='--i:35;--x:37%;--y:27%'></span><span class='star' style='--i:36;--x:60%;--y:68%'></span><span class='star' style='--i:37;--x:83%;--y:21%'></span><span class='star' style='--i:38;--x:10%;--y:62%'></span><span class='star' style='--i:39;--x:33%;--y:15%'></span><span class='star' style='--i:40;--x:56%;--y:56%'></span><span class='star' style='--i:41;--x:79%;--y:9%'></span><div class='cursor'></div><div class='title'><span class='chip'>ambient pointer field</span><h2>Minimal completion burst</h2></div></div></section></main></div></body></html>",
       "complexity": "medium",
       "dependencies": []
     },
@@ -1821,33 +1470,6 @@
       "previewUrl": "patterns/micro-chart-hover-pack/index.html",
       "prompt": "Adapt the Framewell pattern 'Micro chart hover pack' into my existing Dashboard without replacing my product structure. Use it only as a focused Charts layer. Tiny charts expose comparison, anomaly, and projection on hover. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: charts, hover, micro, dashboard.",
       "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Micro chart hover pack \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.metric{border:1px solid var(--line);border-radius:24px;padding:16px;background:rgba(255,255,255,.06)}.num{font-size:40px;font-weight:900}.scrub{margin-top:28px;height:12px;border-radius:999px;background:rgba(255,255,255,.1);position:relative}.scrub:before{content:'';position:absolute;inset:0 45% 0 0;border-radius:inherit;background:var(--a);animation:scrub 4s ease-in-out infinite}svg{width:100%;height:70px}.p{stroke:var(--a);fill:none;stroke-width:4;stroke-dasharray:170;animation:draw 2s infinite alternate}@keyframes draw{from{stroke-dashoffset:170}}@keyframes scrub{50%{right:12%}}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"Micro chart hover pack\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">Charts \u00b7 Dashboard</span></div><section class=\"stage\"><div class='metrics'><div class='metric'><div class='num'>+24%</div><svg viewBox='0 0 120 60'><path class='p' d='M2 48 C30 8 48 58 78 24 S100 14 118 10'/></svg></div><div class='metric'><div class='num'>+24%</div><svg viewBox='0 0 120 60'><path class='p' d='M2 48 C30 8 48 58 78 24 S100 14 118 10'/></svg></div><div class='metric'><div class='num'>+24%</div><svg viewBox='0 0 120 60'><path class='p' d='M2 48 C30 8 48 58 78 24 S100 14 118 10'/></svg></div></div><div class='scrub'></div></section></main></div></body></html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "scroll-shadow-document",
-      "title": "Scroll shadow document",
-      "behavior": "Scroll affordance",
-      "context": "Docs",
-      "description": "Top/bottom shadows and sticky labels make long panels feel tactile.",
-      "tags": [
-        "scroll",
-        "shadow",
-        "document",
-        "docs"
-      ],
-      "sourcePromptIds": [
-        "template-ixartz-docs-first-saas-home"
-      ],
-      "template": "doc-shadows",
-      "quality": "specimen",
-      "mixRoles": [
-        "supporting effect"
-      ],
-      "slug": "scroll-shadow-document",
-      "previewUrl": "patterns/scroll-shadow-document/index.html",
-      "prompt": "Adapt the Framewell pattern 'Scroll shadow document' into my existing Docs without replacing my product structure. Use it only as a focused Scroll affordance layer. Top/bottom shadows and sticky labels make long panels feel tactile. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: scroll, shadow, document, docs.",
-      "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Scroll shadow document \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.rows{display:grid;gap:10px}.row{display:grid;grid-template-columns:42px 1fr auto;gap:12px;align-items:center;padding:12px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.06);opacity:0;transform:translateY(18px) scale(.98);animation:rise .65s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i)*80ms)}.sig{width:42px;height:42px;border-radius:16px;background:linear-gradient(135deg,var(--a),var(--d))}.score{color:var(--a)}@keyframes rise{to{opacity:1;transform:none}}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"Scroll shadow document\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">Scroll affordance \u00b7 Docs</span></div><section class=\"stage\"><div class='rows'><div class='row' style='--i:0'><span class='sig'></span><b>Signal cluster 1</b><span class='score'>91%</span></div><div class='row' style='--i:1'><span class='sig'></span><b>Signal cluster 2</b><span class='score'>88%</span></div><div class='row' style='--i:2'><span class='sig'></span><b>Signal cluster 3</b><span class='score'>85%</span></div><div class='row' style='--i:3'><span class='sig'></span><b>Signal cluster 4</b><span class='score'>82%</span></div><div class='row' style='--i:4'><span class='sig'></span><b>Signal cluster 5</b><span class='score'>79%</span></div><div class='row' style='--i:5'><span class='sig'></span><b>Signal cluster 6</b><span class='score'>76%</span></div><div class='row' style='--i:6'><span class='sig'></span><b>Signal cluster 7</b><span class='score'>73%</span></div></div></section></main></div></body></html>",
       "complexity": "medium",
       "dependencies": []
     },
@@ -2438,6 +2060,231 @@
       "prompt": "Adapt the Framewell pattern 'Liquid drag dashboard' into my existing Dashboard without replacing my product structure. Use it only as a focused Dashboard motion layer. Widgets stretch and reflow like liquid while preserving dashboard clarity. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: dashboard, drag, liquid, layout, motion.",
       "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Liquid drag dashboard \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.dash{height:100%;display:grid;grid-template-columns:1.2fr .8fr;grid-template-rows:1fr 1fr;gap:12px}.widget{border:1px solid var(--line);border-radius:30px;background:rgba(255,255,255,.07);position:relative;overflow:hidden;animation:liq 5s ease-in-out infinite;animation-delay:calc(var(--i)*-.5s)}.widget:before{content:'';position:absolute;inset:-60%;background:radial-gradient(circle,var(--a),transparent 22%),radial-gradient(circle at 80% 30%,var(--c),transparent 18%);opacity:.22;animation:spin 6s linear infinite}.widget:first-child{grid-row:span 2}@keyframes liq{50%{border-radius:42% 24% 38% 28%;transform:scale(.98)}}@keyframes spin{to{transform:rotate(1turn)}}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"Liquid drag dashboard\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">Dashboard motion \u00b7 Dashboard</span></div><section class=\"stage\"><div class='dash'><div class='widget' style='--i:0'></div><div class='widget' style='--i:1'></div><div class='widget' style='--i:2'></div></div></section></main></div></body></html>",
       "complexity": "medium",
+      "dependencies": []
+    },
+    {
+      "id": "aave-glass-switch-lens",
+      "title": "Aave glass switch lens",
+      "behavior": "Glass control",
+      "context": "Web app",
+      "description": "A moving refraction lens becomes the switch thumb while preserving readable content.",
+      "tags": [
+        "aave-glass",
+        "refraction",
+        "svg-filter",
+        "switch",
+        "glass"
+      ],
+      "sourcePromptIds": [
+        "aave-building-glass-for-the-web"
+      ],
+      "template": "aave-glass",
+      "quality": "specimen",
+      "mixRoles": [
+        "supporting effect"
+      ],
+      "slug": "aave-glass-switch-lens",
+      "previewUrl": "patterns/aave-glass-switch-lens/index.html",
+      "prompt": "Adapt the Framewell pattern 'Aave glass switch lens' into my existing Web app without replacing my product structure. Use it only as a focused Glass control layer. A moving refraction lens becomes the switch thumb while preserving readable content. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: aave-glass, refraction, svg-filter, switch, glass.",
+      "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Aave glass switch lens \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.plans{height:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:center}.plan{height:260px;border:1px solid var(--line);border-radius:28px;padding:20px;background:rgba(255,255,255,.06);position:relative;overflow:hidden}.plan:nth-child(2){height:310px;background:rgba(143,255,224,.08)}.plan:nth-child(2):after{content:'';position:absolute;inset:22px;border:1px solid rgba(255,255,255,.35);border-radius:50%;filter:blur(.2px);box-shadow:inset 0 0 24px rgba(255,255,255,.18),0 0 40px rgba(143,255,224,.22);animation:ring 4s linear infinite}.price{font-size:44px;font-weight:900;margin-top:80px}@keyframes ring{50%{transform:scale(1.15) rotate(8deg);border-radius:38% 62% 55% 45%}}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"Aave glass switch lens\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">Glass control \u00b7 Web app</span></div><section class=\"stage\"><div class='plans'><div class='plan'>Start<div class='price'>$19</div></div><div class='plan'>Studio<div class='price'>$49</div></div><div class='plan'>Scale<div class='price'>$99</div></div></div></section></main></div></body></html>",
+      "complexity": "medium",
+      "dependencies": []
+    },
+    {
+      "id": "aave-glass-slider-refraction",
+      "title": "Aave glass slider refraction",
+      "behavior": "Glass control",
+      "context": "Web app",
+      "description": "A slider handle bends only the fill region with a conservative high-performance lens.",
+      "tags": [
+        "aave-glass",
+        "slider",
+        "refraction",
+        "performance",
+        "glass"
+      ],
+      "sourcePromptIds": [
+        "aave-building-glass-for-the-web"
+      ],
+      "template": "aave-slider",
+      "quality": "specimen",
+      "mixRoles": [
+        "microinteraction"
+      ],
+      "slug": "aave-glass-slider-refraction",
+      "previewUrl": "patterns/aave-glass-slider-refraction/index.html",
+      "prompt": "Adapt the Framewell pattern 'Aave glass slider refraction' into my existing Web app without replacing my product structure. Use it only as a focused Glass control layer. A slider handle bends only the fill region with a conservative high-performance lens. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: aave-glass, slider, refraction, performance, glass.",
+      "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Aave glass slider refraction \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.plans{height:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:center}.plan{height:260px;border:1px solid var(--line);border-radius:28px;padding:20px;background:rgba(255,255,255,.06);position:relative;overflow:hidden}.plan:nth-child(2){height:310px;background:rgba(143,255,224,.08)}.plan:nth-child(2):after{content:'';position:absolute;inset:22px;border:1px solid rgba(255,255,255,.35);border-radius:50%;filter:blur(.2px);box-shadow:inset 0 0 24px rgba(255,255,255,.18),0 0 40px rgba(143,255,224,.22);animation:ring 4s linear infinite}.price{font-size:44px;font-weight:900;margin-top:80px}@keyframes ring{50%{transform:scale(1.15) rotate(8deg);border-radius:38% 62% 55% 45%}}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"Aave glass slider refraction\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">Glass control \u00b7 Web app</span></div><section class=\"stage\"><div class='plans'><div class='plan'>Start<div class='price'>$19</div></div><div class='plan'>Studio<div class='price'>$49</div></div><div class='plan'>Scale<div class='price'>$99</div></div></div></section></main></div></body></html>",
+      "complexity": "medium",
+      "dependencies": []
+    },
+    {
+      "id": "aave-glass-toggle-group",
+      "title": "Aave glass toggle group",
+      "behavior": "Glass selection",
+      "context": "Web app",
+      "description": "Selection is a springing glass lens, not another background pill.",
+      "tags": [
+        "aave-glass",
+        "toggle",
+        "selection",
+        "spring",
+        "glass"
+      ],
+      "sourcePromptIds": [
+        "aave-building-glass-for-the-web"
+      ],
+      "template": "aave-toggle",
+      "quality": "specimen",
+      "mixRoles": [
+        "microinteraction"
+      ],
+      "slug": "aave-glass-toggle-group",
+      "previewUrl": "patterns/aave-glass-toggle-group/index.html",
+      "prompt": "Adapt the Framewell pattern 'Aave glass toggle group' into my existing Web app without replacing my product structure. Use it only as a focused Glass selection layer. Selection is a springing glass lens, not another background pill. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: aave-glass, toggle, selection, spring, glass.",
+      "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Aave glass toggle group \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.dock{height:100%;display:grid;place-items:center}.rail{display:flex;gap:10px;padding:10px;border:1px solid var(--line);border-radius:30px;background:rgba(255,255,255,.08);position:relative}.icon{width:58px;height:58px;border-radius:22px;background:rgba(255,255,255,.08);display:grid;place-items:center;z-index:1;transition:.25s}.icon:hover{transform:translateY(-12px)}.rail:before{content:'';position:absolute;width:58px;height:58px;left:10px;top:10px;border-radius:22px;background:var(--a);animation:dock 5s infinite steps(4)}@keyframes dock{to{transform:translateX(272px)}}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"Aave glass toggle group\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">Glass selection \u00b7 Web app</span></div><section class=\"stage\"><div class='dock'><div class='rail'><div class='icon'>1</div><div class='icon'>2</div><div class='icon'>3</div><div class='icon'>4</div><div class='icon'>5</div></div></div></section></main></div></body></html>",
+      "complexity": "medium",
+      "dependencies": []
+    },
+    {
+      "id": "aave-glass-video-controls",
+      "title": "Aave glass video controls",
+      "behavior": "Glass media",
+      "context": "Media",
+      "description": "Independent glass control lenses float over moving video without destroying legibility.",
+      "tags": [
+        "aave-glass",
+        "video",
+        "webgl",
+        "controls",
+        "refraction"
+      ],
+      "sourcePromptIds": [
+        "aave-building-glass-for-the-web"
+      ],
+      "template": "aave-video",
+      "quality": "featured",
+      "mixRoles": [
+        "signature moment"
+      ],
+      "slug": "aave-glass-video-controls",
+      "previewUrl": "patterns/aave-glass-video-controls/index.html",
+      "prompt": "Adapt the Framewell pattern 'Aave glass video controls' into my existing Media without replacing my product structure. Use it only as a focused Glass media layer. Independent glass control lenses float over moving video without destroying legibility. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: aave-glass, video, webgl, controls, refraction.",
+      "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Aave glass video controls \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.plans{height:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:center}.plan{height:260px;border:1px solid var(--line);border-radius:28px;padding:20px;background:rgba(255,255,255,.06);position:relative;overflow:hidden}.plan:nth-child(2){height:310px;background:rgba(143,255,224,.08)}.plan:nth-child(2):after{content:'';position:absolute;inset:22px;border:1px solid rgba(255,255,255,.35);border-radius:50%;filter:blur(.2px);box-shadow:inset 0 0 24px rgba(255,255,255,.18),0 0 40px rgba(143,255,224,.22);animation:ring 4s linear infinite}.price{font-size:44px;font-weight:900;margin-top:80px}@keyframes ring{50%{transform:scale(1.15) rotate(8deg);border-radius:38% 62% 55% 45%}}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"Aave glass video controls\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">Glass media \u00b7 Media</span></div><section class=\"stage\"><div class='plans'><div class='plan'>Start<div class='price'>$19</div></div><div class='plan'>Studio<div class='price'>$49</div></div><div class='plan'>Scale<div class='price'>$99</div></div></div></section></main></div></body></html>",
+      "complexity": "advanced",
+      "dependencies": []
+    },
+    {
+      "id": "codrops-webgl-scroll-gallery",
+      "title": "WebGL scroll-revealed gallery",
+      "behavior": "Shader gallery",
+      "context": "Portfolio",
+      "description": "Images reveal with shader masks on scroll, then expand into a detail transition.",
+      "tags": [
+        "codrops",
+        "webgl",
+        "gsap",
+        "scrolltrigger",
+        "barba",
+        "gallery"
+      ],
+      "sourcePromptIds": [
+        "codrops-scroll-revealed-webgl-gallery"
+      ],
+      "template": "webgl-scroll-gallery",
+      "quality": "featured",
+      "mixRoles": [
+        "signature moment"
+      ],
+      "slug": "codrops-webgl-scroll-gallery",
+      "previewUrl": "patterns/codrops-webgl-scroll-gallery/index.html",
+      "prompt": "Adapt the Framewell pattern 'WebGL scroll-revealed gallery' into my existing Portfolio without replacing my product structure. Use it only as a focused Shader gallery layer. Images reveal with shader masks on scroll, then expand into a detail transition. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: codrops, webgl, gsap, scrolltrigger, barba, gallery.",
+      "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>WebGL scroll-revealed gallery \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;height:100%}.tile{border:1px solid var(--line);border-radius:24px;background:radial-gradient(circle at var(--x,50%) var(--y,50%),rgba(143,255,224,.55),rgba(138,168,255,.12) 32%,rgba(255,255,255,.05));transition:transform .25s,filter .25s;overflow:hidden;position:relative}.tile:before{content:'';position:absolute;inset:-40%;background:repeating-radial-gradient(circle,rgba(255,255,255,.22) 0 1px,transparent 2px 12px);animation:ripple 5s linear infinite}.tile:hover{transform:scale(1.04) rotate(.8deg);filter:saturate(1.4)}@keyframes ripple{to{transform:translate(18%,12%) rotate(1turn)}}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"WebGL scroll-revealed gallery\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">Shader gallery \u00b7 Portfolio</span></div><section class=\"stage\"><div class='grid'><div class='tile'></div><div class='tile'></div><div class='tile'></div><div class='tile'></div><div class='tile'></div><div class='tile'></div><div class='tile'></div><div class='tile'></div><div class='tile'></div></div></section></main></div><script>document.querySelectorAll('.tile').forEach(t=>t.onpointermove=e=>{let r=t.getBoundingClientRect();t.style.setProperty('--x',((e.clientX-r.left)/r.width*100)+'%');t.style.setProperty('--y',((e.clientY-r.top)/r.height*100)+'%')})</script></body></html>",
+      "complexity": "advanced",
+      "dependencies": []
+    },
+    {
+      "id": "gsap-flip-detail-expander",
+      "title": "GSAP Flip detail expander",
+      "behavior": "Transition",
+      "context": "Portfolio",
+      "description": "A thumbnail keeps continuity as it flips into a full case-study scene.",
+      "tags": [
+        "gsap",
+        "flip",
+        "page-transition",
+        "case-study",
+        "portfolio"
+      ],
+      "sourcePromptIds": [
+        "codrops-gsap-flip-scrolltrigger"
+      ],
+      "template": "flip-expander",
+      "quality": "specimen",
+      "mixRoles": [
+        "signature moment"
+      ],
+      "slug": "gsap-flip-detail-expander",
+      "previewUrl": "patterns/gsap-flip-detail-expander/index.html",
+      "prompt": "Adapt the Framewell pattern 'GSAP Flip detail expander' into my existing Portfolio without replacing my product structure. Use it only as a focused Transition layer. A thumbnail keeps continuity as it flips into a full case-study scene. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: gsap, flip, page-transition, case-study, portfolio.",
+      "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>GSAP Flip detail expander \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.handoff{height:100%;display:grid;place-items:center;position:relative}.dom{width:280px;height:180px;border-radius:28px;background:#fff8ea;color:#07080b;padding:22px;font-weight:900;box-shadow:0 30px 80px rgba(0,0,0,.35);animation:detach 4.4s cubic-bezier(.2,.8,.2,1) infinite}.ghost{position:absolute;width:280px;height:180px;border-radius:28px;border:1px solid var(--a);filter:blur(.2px);animation:ghost 4.4s infinite}@keyframes detach{42%,65%{transform:translate(-120px,-24px) rotateY(-24deg) scale(.9);opacity:.42}100%{transform:none}}@keyframes ghost{0%,30%{opacity:0;transform:translate(0)}45%,70%{opacity:1;transform:translate(120px,18px) rotateY(22deg)}100%{opacity:0;transform:translate(170px,40px) scale(.8)}}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"GSAP Flip detail expander\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">Transition \u00b7 Portfolio</span></div><section class=\"stage\"><div class='handoff'><div class='dom'>DOM card<br><span class='muted'>becomes canvas</span></div><div class='ghost'></div></div></section></main></div></body></html>",
+      "complexity": "advanced",
+      "dependencies": []
+    },
+    {
+      "id": "scroll-driven-3d-world-chapters",
+      "title": "Scroll-driven 3D world chapters",
+      "behavior": "3D scene",
+      "context": "Portfolio",
+      "description": "Every scroll chapter moves the viewer through an authored 3D world with a point of view.",
+      "tags": [
+        "three-js",
+        "gsap",
+        "scroll",
+        "world",
+        "camera"
+      ],
+      "sourcePromptIds": [
+        "codrops-scroll-driven-3d-world"
+      ],
+      "template": "world-chapters",
+      "quality": "featured",
+      "mixRoles": [
+        "signature moment"
+      ],
+      "slug": "scroll-driven-3d-world-chapters",
+      "previewUrl": "patterns/scroll-driven-3d-world-chapters/index.html",
+      "prompt": "Adapt the Framewell pattern 'Scroll-driven 3D world chapters' into my existing Portfolio without replacing my product structure. Use it only as a focused 3D scene layer. Every scroll chapter moves the viewer through an authored 3D world with a point of view. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: three-js, gsap, scroll, world, camera.",
+      "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Scroll-driven 3D world chapters \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.room{height:100%;perspective:900px;display:grid;place-items:center;overflow:hidden}.cube{width:260px;height:190px;position:relative;transform-style:preserve-3d;animation:room 7s cubic-bezier(.65,0,.35,1) infinite}.face{position:absolute;inset:0;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.07);display:grid;place-items:center;font-weight:900}.front{transform:translateZ(120px);background:linear-gradient(135deg,var(--a),var(--d));color:#06100d}.left{transform:rotateY(-90deg) translateZ(130px)}.right{transform:rotateY(90deg) translateZ(130px)}.floor{transform:rotateX(90deg) translateZ(-100px);background:rgba(255,207,90,.09)}@keyframes room{0%,18%{transform:rotateX(-8deg) rotateY(-24deg) translateZ(0)}42%,58%{transform:rotateX(6deg) rotateY(42deg) translateZ(80px)}82%,100%{transform:rotateX(-16deg) rotateY(180deg) translateZ(-30px)}}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"Scroll-driven 3D world chapters\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">3D scene \u00b7 Portfolio</span></div><section class=\"stage\"><div class='room'><div class='cube'><div class='face front'>Scene</div><div class='face left'>Work</div><div class='face right'>Lab</div><div class='face floor'>Camera path</div></div></div></section></main></div></body></html>",
+      "complexity": "advanced",
+      "dependencies": []
+    },
+    {
+      "id": "video-texture-cube-grid",
+      "title": "Video texture cube grid",
+      "behavior": "WebGL grid",
+      "context": "Portfolio",
+      "description": "Video frames map onto rotating cube tiles with mask-driven hover states.",
+      "tags": [
+        "three-js",
+        "video-texture",
+        "cube-grid",
+        "webgl",
+        "hover"
+      ],
+      "sourcePromptIds": [
+        "codrops-threejs-video-cube-grid"
+      ],
+      "template": "video-cube-grid",
+      "quality": "featured",
+      "mixRoles": [
+        "signature moment"
+      ],
+      "slug": "video-texture-cube-grid",
+      "previewUrl": "patterns/video-texture-cube-grid/index.html",
+      "prompt": "Adapt the Framewell pattern 'Video texture cube grid' into my existing Portfolio without replacing my product structure. Use it only as a focused WebGL grid layer. Video frames map onto rotating cube tiles with mask-driven hover states. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: three-js, video-texture, cube-grid, webgl, hover.",
+      "code": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Video texture cube grid \u2014 Framewell live effect</title><style>\n:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max... [truncated]\n\n.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;height:100%}.tile{border:1px solid var(--line);border-radius:24px;background:radial-gradient(circle at var(--x,50%) var(--y,50%),rgba(143,255,224,.55),rgba(138,168,255,.12) 32%,rgba(255,255,255,.05));transition:transform .25s,filter .25s;overflow:hidden;position:relative}.tile:before{content:'';position:absolute;inset:-40%;background:repeating-radial-gradient(circle,rgba(255,255,255,.22) 0 1px,transparent 2px 12px);animation:ripple 5s linear infinite}.tile:hover{transform:scale(1.04) rotate(.8deg);filter:saturate(1.4)}@keyframes ripple{to{transform:translate(18%,12%) rotate(1turn)}}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"Video texture cube grid\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">WebGL grid \u00b7 Portfolio</span></div><section class=\"stage\"><div class='grid'><div class='tile'></div><div class='tile'></div><div class='tile'></div><div class='tile'></div><div class='tile'></div><div class='tile'></div><div class='tile'></div><div class='tile'></div><div class='tile'></div></div></section></main></div><script>document.querySelectorAll('.tile').forEach(t=>t.onpointermove=e=>{let r=t.getBoundingClientRect();t.style.setProperty('--x',((e.clientX-r.left)/r.width*100)+'%');t.style.setProperty('--y',((e.clientY-r.top)/r.height*100)+'%')})</script></body></html>",
+      "complexity": "advanced",
       "dependencies": []
     }
   ]

@@ -1,0 +1,22 @@
+{
+  "id": "aave-glass-toggle-group",
+  "title": "Aave glass toggle group",
+  "behavior": "Glass selection",
+  "context": "Web app",
+  "description": "Selection is a springing glass lens, not another background pill.",
+  "tags": [
+    "aave-glass",
+    "toggle",
+    "selection",
+    "spring",
+    "glass"
+  ],
+  "sourcePromptIds": [
+    "aave-building-glass-for-the-web"
+  ],
+  "template": "aave-toggle",
+  "quality": "specimen",
+  "mixRoles": [
+    "microinteraction"
+  ]
+}

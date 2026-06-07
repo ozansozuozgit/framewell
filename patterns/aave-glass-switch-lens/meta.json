@@ -1,0 +1,22 @@
+{
+  "id": "aave-glass-switch-lens",
+  "title": "Aave glass switch lens",
+  "behavior": "Glass control",
+  "context": "Web app",
+  "description": "A moving refraction lens becomes the switch thumb while preserving readable content.",
+  "tags": [
+    "aave-glass",
+    "refraction",
+    "svg-filter",
+    "switch",
+    "glass"
+  ],
+  "sourcePromptIds": [
+    "aave-building-glass-for-the-web"
+  ],
+  "template": "aave-glass",
+  "quality": "specimen",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}
