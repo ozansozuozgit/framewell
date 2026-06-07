@@ -1,0 +1,1 @@
+Adapt the Framewell pattern 'Depth logo marquee' into my existing Marketing without replacing my product structure. Use it only as a focused Proof layer. Logo strips move at different depths with soft mask edges. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: marquee, logos, depth, proof.

@@ -1,0 +1,21 @@
+{
+  "id": "ai-stream-with-sources",
+  "title": "AI stream with source chips",
+  "behavior": "AI response",
+  "context": "AI app",
+  "description": "Message lines stream in with attached citations and confidence states.",
+  "tags": [
+    "ai",
+    "chat",
+    "streaming",
+    "sources"
+  ],
+  "sourcePromptIds": [
+    "template-shadcnstore-chat-support-console"
+  ],
+  "template": "ai-stream",
+  "quality": "featured",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

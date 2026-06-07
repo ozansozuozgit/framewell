@@ -1,0 +1,21 @@
+{
+  "id": "calendar-density-brush",
+  "title": "Calendar density brush",
+  "behavior": "Calendar interaction",
+  "context": "Calendar",
+  "description": "Dragging across a dense calendar reveals heat and available gaps.",
+  "tags": [
+    "calendar",
+    "density",
+    "brush",
+    "schedule"
+  ],
+  "sourcePromptIds": [
+    "template-shadcnstore-calendar-ops-dashboard"
+  ],
+  "template": "calendar-brush",
+  "quality": "featured",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

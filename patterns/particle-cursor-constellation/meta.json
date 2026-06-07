@@ -1,0 +1,22 @@
+{
+  "id": "particle-cursor-constellation",
+  "title": "Particle cursor constellation",
+  "behavior": "Cursor field",
+  "context": "Portfolio",
+  "description": "Pointer movement pulls a constellation field behind the content.",
+  "tags": [
+    "particles",
+    "cursor",
+    "ambient",
+    "webgl-feel"
+  ],
+  "sourcePromptIds": [
+    "opencodesign-particle-field-data-hero"
+  ],
+  "template": "constellation",
+  "quality": "featured",
+  "mixRoles": [
+    "signature moment",
+    "navigation/control"
+  ]
+}

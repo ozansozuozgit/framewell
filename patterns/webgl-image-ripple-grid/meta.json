@@ -1,0 +1,22 @@
+{
+  "id": "webgl-image-ripple-grid",
+  "title": "WebGL image ripple grid",
+  "behavior": "Image grid",
+  "context": "Portfolio",
+  "description": "A project grid bends like liquid when the pointer crosses each tile.",
+  "tags": [
+    "webgl",
+    "image-grid",
+    "ripple",
+    "portfolio",
+    "hover"
+  ],
+  "sourcePromptIds": [
+    "template-ui-layouts-interactive-gallery"
+  ],
+  "template": "ripple-grid",
+  "quality": "featured",
+  "mixRoles": [
+    "signature moment"
+  ]
+}

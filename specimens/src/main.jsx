@@ -49,7 +49,7 @@ const clampProgress = raw => Math.max(0, Math.min(1, Number(raw) || 0));
 
 const specimenKindById = {
   'spatial-command-room': 'command-room',
-  'radial-command-wheel': 'command-room',
+  'radial-command-wheel': 'radial-command',
   'search-bar-morph-results': 'search',
   'command-center-alert-lens': 'alert-lens',
   'ai-map-of-thought': 'thought-map',
@@ -216,21 +216,24 @@ function AtlasApp(){
             className={`motion-stage-live ${hasStageDriver ? 'is-scroll-example' : ''}`}
             onWheel={event => {
               if(!hasStageDriver) return;
-              event.preventDefault();
               driveStageProgress(stageProgress + event.deltaY / 1800);
             }}
           >
             {hasStageDriver && (
-              <div className="stage-scroll-controls">
-                <span>{isScrollExample ? 'Scroll driver' : 'Effect driver'}</span>
-                <input
-                  type="range"
-                  min="0"
-                  max="100"
-                  value={Math.round(stageProgress * 100)}
-                  onChange={event => driveStageProgress(Number(event.target.value) / 100)}
-                  aria-label={`Scrub ${active.title}`}
-                />
+              <div className={`stage-scroll-controls ${isScrollExample ? 'scroll-mode' : ''}`}>
+                <span>{isScrollExample ? 'Scroll the stage' : 'Effect driver'}</span>
+                {isScrollExample ? (
+                  <div className="stage-progress-rail" aria-label={`${active.title} scroll progress`}><b style={{width:`${Math.round(stageProgress * 100)}%`}} /></div>
+                ) : (
+                  <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value={Math.round(stageProgress * 100)}
+                    onChange={event => driveStageProgress(Number(event.target.value) / 100)}
+                    aria-label={`Scrub ${active.title}`}
+                  />
+                )}
                 <b>{Math.round(stageProgress * 100)}%</b>
               </div>
             )}
@@ -1064,6 +1067,215 @@ function SimpleWorkbench({ meta }){
   );
 }
 
+function PremiumEffectSurface({ meta }){
+  const [progress, setProgress] = useState(.48);
+  useFramewellDriver(setProgress, []);
+  const p = clampProgress(progress);
+  const step = Math.min(4, Math.floor(p * 5));
+  const template = meta.template;
+  const sceneTitle = meta.title;
+  const header = icon => <Header meta={meta} icon={icon || Sparkles} action={<span className="specimen-hint"><Sparkles size={15}/> scrub effect</span>} />;
+
+  if(template === 'radial-command'){
+    const commands = ['Ask','Patch','Trace','Ship','Share','Undo'];
+    return (
+      <div className="surface dark premium-radial">
+        {header(Command)}
+        <div className="radial-stage">
+          <div className="radial-core" style={{transform:`scale(${1 + p * .16}) rotate(${p * 90}deg)`}}>⌘K</div>
+          {commands.map((cmd,i) => (
+            <button key={cmd} className={i===step?'active':''} style={{'--angle':`${i * 60 + p * 24}deg`}}>
+              <span>{cmd}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  if(template === 'motion'){
+    return (
+      <div className="surface dark premium-cinema">
+        {header(Film)}
+        <div className="cinema-depth" style={{'--p':p}}>
+          {[0,1,2,3].map(i => <div key={i} className="cinema-plane" style={{'--i':i}}><b>{String(i+1).padStart(2,'0')}</b></div>)}
+          <h1>{sceneTitle}</h1>
+        </div>
+      </div>
+    );
+  }
+
+  if(template === 'type-dissolve'){
+    return (
+      <div className="surface ink premium-type-dissolve">
+        {header(Sparkles)}
+        <div className="dissolve-word">
+          {'DISSOLVE'.split('').map((ch,i) => <span key={i} style={{'--i':i,'--p':p}}>{ch}</span>)}
+        </div>
+      </div>
+    );
+  }
+
+  if(template === 'ripple-grid'){
+    return (
+      <div className="surface ink premium-ripple">
+        {header(GalleryHorizontalEnd)}
+        <div className="ripple-grid" style={{'--p':p}}>
+          {Array.from({length:9},(_,i)=><button key={i} className={i===step+2?'active':''}><span>Case {i+1}</span></button>)}
+        </div>
+      </div>
+    );
+  }
+
+  if(template === 'orbit-stage' || template === 'constellation' || template === 'empty-orbit'){
+    return (
+      <div className="surface dark premium-orbit">
+        {header(template === 'orbit-stage' ? Box : Sparkles)}
+        <div className="orbit-core" style={{'--p':p}}><span>{template === 'orbit-stage' ? '3D' : 'AI'}</span></div>
+        {['Intent','Source','Motion','Proof','Ship'].map((x,i)=><div key={x} className="orbit-chip" style={{'--i':i,'--p':p}}>{x}</div>)}
+      </div>
+    );
+  }
+
+  if(template === 'slice-poster' || template === 'roller-blind'){
+    return (
+      <div className="surface clean premium-slices">
+        {header(Film)}
+        <div className="slice-wall" style={{'--p':p}}>
+          {Array.from({length:8},(_,i)=><span key={i} style={{'--i':i}} />)}
+          <h1>{template === 'slice-poster' ? 'Poster splits reveal product proof' : 'Spring blind reveals the hero'}</h1>
+        </div>
+      </div>
+    );
+  }
+
+  if(template === 'liquid-cta'){
+    return (
+      <div className="surface dark premium-liquid-cta">
+        {header(Zap)}
+        <button className="liquid-button" style={{'--p':p}}><span>Start the motion system</span></button>
+      </div>
+    );
+  }
+
+  if(template === 'magnetic-menu' || template === 'spotlight-menu' || template === 'noise-nav'){
+    const labels = ['Studio','Work','Systems','Contact'];
+    return (
+      <div className="surface ink premium-menu">
+        {header(MousePointer2)}
+        <nav style={{'--p':p}}>
+          {labels.map((label,i)=><button key={label} className={i===Math.min(3, Math.floor(p*4))?'active':''}>{String(i+1).padStart(2,'0')} {label}</button>)}
+        </nav>
+      </div>
+    );
+  }
+
+  if(template === 'split-transition' || template === 'water-transition'){
+    return (
+      <div className="surface dark premium-transition">
+        {header(PanelTop)}
+        <div className="transition-panels" style={{'--p':p}}>
+          <span />
+          <span />
+          <h1>{template === 'water-transition' ? 'Liquid page handoff' : 'Split route handoff'}</h1>
+        </div>
+      </div>
+    );
+  }
+
+  if(template === 'calendar-brush'){
+    return (
+      <div className="surface clean premium-calendar">
+        {header(BarChart3)}
+        <div className="calendar-grid" style={{'--p':p}}>
+          {Array.from({length:35},(_,i)=><button key={i} className={i <= p*34 && i % 3 !== 1 ? 'active' : ''}>{i % 7 === 0 ? '9a' : ''}</button>)}
+        </div>
+      </div>
+    );
+  }
+
+  if(template === 'metric-scrub' || template === 'micro-charts'){
+    return (
+      <div className="surface blue premium-metrics">
+        {header(BarChart3)}
+        <div className="grid-3">
+          {['Revenue','Risk','Velocity'].map((label,i)=>(
+            <div className="metric" key={label}><span>{label}</span><b>{Math.round((p + .2) * [180,74,112][i])}</b><svg viewBox="0 0 160 70"><path d={`M5 58 C40 ${52-p*34} 74 ${18+i*12} 112 ${48-p*28} S140 ${22+p*18} 155 ${16+i*8}`} /></svg></div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  if(template === 'ai-stream'){
+    const lines = ['Reading source set','Finding contradictions','Attaching citations','Ready to adapt'];
+    return (
+      <div className="surface dark premium-stream">
+        {header(Command)}
+        <div className="stream-lines">
+          {lines.map((line,i)=><div key={line} className={i<=step?'visible':''}><span>{line}</span><b>{82+i*4}%</b></div>)}
+        </div>
+      </div>
+    );
+  }
+
+  if(template === 'shelf-pulse'){
+    return (
+      <div className="surface clean premium-shelves">
+        {header(Database)}
+        {Array.from({length:5},(_,row)=><div className="shelf-row" key={row}>{Array.from({length:10},(_,i)=><span key={i} className={(i+row+step)%7===0?'hot':''} />)}</div>)}
+      </div>
+    );
+  }
+
+  if(template === 'stacked-cards' || template === 'mask-proof'){
+    return (
+      <div className="surface clean premium-stack">
+        {header(Layers)}
+        {[0,1,2,3,4].map(i=><article key={i} style={{'--i':i,'--p':p}}><span>0{i+1}</span><h2>{template === 'mask-proof' ? 'Masked proof quote' : 'Pinned dossier card'}</h2></article>)}
+      </div>
+    );
+  }
+
+  if(template === 'depth-marquee'){
+    return (
+      <div className="surface dark premium-marquee">
+        {header(ArrowRight)}
+        {[0,1].map(row=><div className="marquee-track" key={row} style={{'--p':p,'--dir':row?1:-1}}>{Array.from({length:8},(_,i)=><span key={i}>Partner {i+1}</span>)}</div>)}
+      </div>
+    );
+  }
+
+  if(template === 'elastic-faq'){
+    return (
+      <div className="surface clean premium-faq">
+        {header(ChevronRight)}
+        {[0,1,2,3,4].map(i=><section key={i} className={i===step?'open':''}><b>How does this motion help?</b><p>It exposes state, hierarchy, and timing without asking the viewer to guess.</p></section>)}
+      </div>
+    );
+  }
+
+  if(template === 'team-spotlight'){
+    return (
+      <div className="surface ink premium-team">
+        {header(MousePointer2)}
+        <div className="team-grid" style={{'--p':p}}>{Array.from({length:12},(_,i)=><button key={i} className={i===step+3?'active':''}><span>Role {i+1}</span></button>)}</div>
+      </div>
+    );
+  }
+
+  if(template === 'stats-band'){
+    return (
+      <div className="surface clean premium-stats">
+        {header(Gauge)}
+        {['42','87','12'].map((n,i)=><div key={n} className="stat-card" style={{'--i':i,'--p':p}}><b>{Math.round(Number(n) * (.45 + p))}</b><span>proof metric</span></div>)}
+      </div>
+    );
+  }
+
+  return <SimpleWorkbench meta={meta} />;
+}
+
 const components = {
   'three-product': ThreeProductStage,
   'gsap-cascade': GsapCascade,
@@ -1073,6 +1285,27 @@ const components = {
   'particle-field': ParticleField,
   'flip-board': FlipBoard,
   'split-text': SplitTextDeck,
+  motion: PremiumEffectSurface,
+  'type-dissolve': PremiumEffectSurface,
+  'ripple-grid': PremiumEffectSurface,
+  'orbit-stage': PremiumEffectSurface,
+  constellation: PremiumEffectSurface,
+  'slice-poster': PremiumEffectSurface,
+  'liquid-cta': PremiumEffectSurface,
+  'magnetic-menu': PremiumEffectSurface,
+  'radial-command': PremiumEffectSurface,
+  'split-transition': PremiumEffectSurface,
+  'spotlight-menu': PremiumEffectSurface,
+  'calendar-brush': PremiumEffectSurface,
+  'metric-scrub': PremiumEffectSurface,
+  'ai-stream': PremiumEffectSurface,
+  'shelf-pulse': PremiumEffectSurface,
+  'stacked-cards': PremiumEffectSurface,
+  'mask-proof': PremiumEffectSurface,
+  'depth-marquee': PremiumEffectSurface,
+  'elastic-faq': PremiumEffectSurface,
+  'team-spotlight': PremiumEffectSurface,
+  'stats-band': PremiumEffectSurface,
   'command-room': CommandRoom,
   search: SearchMorph,
   'alert-lens': CommandRoom,

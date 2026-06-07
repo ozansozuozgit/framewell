@@ -1,0 +1,21 @@
+{
+  "id": "stacked-editorial-cards",
+  "title": "Stacked editorial cards",
+  "behavior": "Scroll stack",
+  "context": "Article",
+  "description": "Editorial cards pin and stack like a physical dossier.",
+  "tags": [
+    "scroll",
+    "stack",
+    "editorial",
+    "cards"
+  ],
+  "sourcePromptIds": [
+    "opencodesign-field-notes-landing-page"
+  ],
+  "template": "stacked-cards",
+  "quality": "featured",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

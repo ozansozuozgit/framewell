@@ -1,0 +1,21 @@
+{
+  "id": "liquid-metal-cta",
+  "title": "Liquid metal CTA",
+  "behavior": "Microinteraction",
+  "context": "Landing page",
+  "description": "A call-to-action surface flows like mercury on hover.",
+  "tags": [
+    "button",
+    "liquid",
+    "premium",
+    "hover"
+  ],
+  "sourcePromptIds": [
+    "motionsites-liquid-glass-agency"
+  ],
+  "template": "liquid-cta",
+  "quality": "featured",
+  "mixRoles": [
+    "microinteraction"
+  ]
+}

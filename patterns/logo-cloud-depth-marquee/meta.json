@@ -1,0 +1,21 @@
+{
+  "id": "logo-cloud-depth-marquee",
+  "title": "Depth logo marquee",
+  "behavior": "Proof",
+  "context": "Marketing",
+  "description": "Logo strips move at different depths with soft mask edges.",
+  "tags": [
+    "marquee",
+    "logos",
+    "depth",
+    "proof"
+  ],
+  "sourcePromptIds": [
+    "tailark-logo-cloud-marquee"
+  ],
+  "template": "depth-marquee",
+  "quality": "featured",
+  "mixRoles": [
+    "conversion/proof"
+  ]
+}

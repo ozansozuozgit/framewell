@@ -1,0 +1,21 @@
+{
+  "id": "stats-countup-proof-band",
+  "title": "Count-up proof band",
+  "behavior": "Proof",
+  "context": "Marketing",
+  "description": "Proof numbers count once, then leave tactile confidence marks.",
+  "tags": [
+    "stats",
+    "count-up",
+    "proof",
+    "scroll"
+  ],
+  "sourcePromptIds": [
+    "tailark-stats-proof-band"
+  ],
+  "template": "stats-band",
+  "quality": "specimen",
+  "mixRoles": [
+    "conversion/proof"
+  ]
+}

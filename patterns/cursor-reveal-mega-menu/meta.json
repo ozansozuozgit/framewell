@@ -1,0 +1,21 @@
+{
+  "id": "cursor-reveal-mega-menu",
+  "title": "Cursor reveal mega menu",
+  "behavior": "Menu",
+  "context": "Marketing",
+  "description": "Menu panels reveal images only under the cursor spotlight.",
+  "tags": [
+    "mega-menu",
+    "spotlight",
+    "cursor",
+    "navigation"
+  ],
+  "sourcePromptIds": [
+    "tailark-integrations-cloud"
+  ],
+  "template": "spotlight-menu",
+  "quality": "featured",
+  "mixRoles": [
+    "navigation/control"
+  ]
+}

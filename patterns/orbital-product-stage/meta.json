@@ -1,0 +1,22 @@
+{
+  "id": "orbital-product-stage",
+  "title": "Orbital product stage",
+  "behavior": "3D orbit",
+  "context": "SaaS hero",
+  "description": "Cards and chips orbit a central object with depth and parallax.",
+  "tags": [
+    "three-js",
+    "orbit",
+    "product",
+    "hero",
+    "depth"
+  ],
+  "sourcePromptIds": [
+    "opencodesign-product-launch-page"
+  ],
+  "template": "orbit-stage",
+  "quality": "featured",
+  "mixRoles": [
+    "signature moment"
+  ]
+}

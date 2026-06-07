@@ -1,0 +1,22 @@
+{
+  "id": "magnetic-work-menu",
+  "title": "Magnetic work menu",
+  "behavior": "Menu",
+  "context": "Portfolio",
+  "description": "Project links stretch toward the pointer with oversized typography.",
+  "tags": [
+    "menu",
+    "magnetic",
+    "portfolio",
+    "typography"
+  ],
+  "sourcePromptIds": [
+    "motionsites-portfolio-cosmic"
+  ],
+  "template": "magnetic-menu",
+  "quality": "featured",
+  "mixRoles": [
+    "signature moment",
+    "navigation/control"
+  ]
+}
