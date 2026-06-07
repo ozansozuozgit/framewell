@@ -21239,7 +21239,7 @@ var nm = class {
 		"interactive"
 	],
 	template: "command-room"
-}, Lm = window.__FRAMEWELL_PATTERN_META__ || null, Rm = {
+}, Lm = window.__FRAMEWELL_PATTERN_META__ || null, Rm = (e) => Math.max(0, Math.min(1, Number(e) || 0)), zm = {
 	"spatial-command-room": "command-room",
 	"radial-command-wheel": "command-room",
 	"search-bar-morph-results": "search",
@@ -21296,9 +21296,9 @@ var nm = class {
 	"scroll-driven-3d-world-chapters": "world",
 	"video-texture-cube-grid": "video-grid"
 };
-function zm() {
-	if (!Lm) return /* @__PURE__ */ (0, $.jsx)(Bm, {});
-	let e = Lm || Im, t = Rm[e.id] || Rm[e.slug] || e.template || "dashboard", n = bh[t] || Qm;
+function Bm() {
+	if (!Lm) return /* @__PURE__ */ (0, $.jsx)(Vm, {});
+	let e = Lm || Im, t = zm[e.id] || zm[e.slug] || e.template || "dashboard", n = Sh[t] || eh;
 	return /* @__PURE__ */ (0, $.jsx)("main", {
 		className: `fw-root ${t.includes("scroll") || t === "three-product" || t === "gsap-cascade" ? "scroll-specimen-root" : ""}`,
 		children: /* @__PURE__ */ (0, $.jsxs)("section", {
@@ -21322,8 +21322,8 @@ function zm() {
 		})
 	});
 }
-function Bm() {
-	let [e, t] = (0, _.useState)([]), [n, r] = (0, _.useState)(""), [i, a] = (0, _.useState)(""), [o, s] = (0, _.useState)("Stage"), [c, l] = (0, _.useState)(0), u = (0, _.useRef)(null);
+function Vm() {
+	let [e, t] = (0, _.useState)([]), [n, r] = (0, _.useState)(""), [i, a] = (0, _.useState)(""), [o, s] = (0, _.useState)("Stage"), [c, l] = (0, _.useState)(0), [u, d] = (0, _.useState)(!1), f = (0, _.useRef)(null);
 	(0, _.useEffect)(() => {
 		let e = !0;
 		return fetch("data/patterns.json").then((e) => e.json()).then((n) => {
@@ -21334,7 +21334,7 @@ function Bm() {
 			e = !1;
 		};
 	}, []);
-	let d = (0, _.useMemo)(() => {
+	let p = (0, _.useMemo)(() => {
 		let t = i.trim().toLowerCase();
 		return t ? e.filter((e) => [
 			e.title,
@@ -21343,10 +21343,10 @@ function Bm() {
 			e.description,
 			...e.tags || []
 		].join(" ").toLowerCase().includes(t)) : e;
-	}, [e, i]), f = e.find((e) => e.id === n) || d[0] || e[0], p = f && (Rm[f.id] || f.template) || "", m = f?.tags || [], h = /scroll|gsap|three-product|scroll-mask/.test(`${p} ${f?.behavior || ""} ${m.join(" ")}`.toLowerCase()), g = (e) => {
-		let t = Math.max(0, Math.min(1, Number(e) || 0));
+	}, [e, i]), m = e.find((e) => e.id === n) || p[0] || e[0], h = m && (zm[m.id] || m.template) || "", g = m?.tags || [], v = /scroll|gsap|three-product|scroll-mask/.test(`${h} ${m?.behavior || ""} ${g.join(" ")}`.toLowerCase()), y = v || u, b = (e) => {
+		let t = Rm(e);
 		l(t);
-		let n = u.current?.contentWindow;
+		let n = f.current?.contentWindow;
 		if (n) try {
 			if (typeof n.__FRAMEWELL_SET_PROGRESS__ == "function") n.__FRAMEWELL_SET_PROGRESS__(t);
 			else {
@@ -21359,14 +21359,14 @@ function Bm() {
 		} catch {}
 	};
 	return (0, _.useEffect)(() => {
-		l(0), requestAnimationFrame(() => g(0));
-	}, [f?.id]), (0, _.useEffect)(() => {
-		d.some((e) => e.id === n) || r(d[0]?.id || e[0]?.id || "");
+		l(0), d(!1), requestAnimationFrame(() => b(0));
+	}, [m?.id]), (0, _.useEffect)(() => {
+		p.some((e) => e.id === n) || r(p[0]?.id || e[0]?.id || "");
 	}, [
-		d,
+		p,
 		n,
 		e
-	]), f ? /* @__PURE__ */ (0, $.jsxs)("main", {
+	]), m ? /* @__PURE__ */ (0, $.jsxs)("main", {
 		className: "motion-lab",
 		children: [
 			/* @__PURE__ */ (0, $.jsxs)("aside", {
@@ -21386,13 +21386,13 @@ function Bm() {
 					}),
 					/* @__PURE__ */ (0, $.jsxs)("div", {
 						className: "motion-count",
-						children: [d.length, " working examples"]
+						children: [p.length, " working examples"]
 					}),
 					/* @__PURE__ */ (0, $.jsx)("nav", {
 						className: "motion-list",
 						"aria-label": "Live motion examples",
-						children: d.map((e, t) => /* @__PURE__ */ (0, $.jsxs)("button", {
-							className: e.id === f.id ? "active" : "",
+						children: p.map((e, t) => /* @__PURE__ */ (0, $.jsxs)("button", {
+							className: e.id === m.id ? "active" : "",
 							onClick: () => r(e.id),
 							children: [/* @__PURE__ */ (0, $.jsxs)("small", { children: [
 								String(t + 1).padStart(2, "0"),
@@ -21410,11 +21410,11 @@ function Bm() {
 					children: [/* @__PURE__ */ (0, $.jsxs)("div", { children: [/* @__PURE__ */ (0, $.jsxs)("div", {
 						className: "eyebrow",
 						children: [
-							f.behavior,
+							m.behavior,
 							" · ",
-							f.context
+							m.context
 						]
-					}), /* @__PURE__ */ (0, $.jsx)("h1", { children: f.title })] }), /* @__PURE__ */ (0, $.jsx)("div", {
+					}), /* @__PURE__ */ (0, $.jsx)("h1", { children: m.title })] }), /* @__PURE__ */ (0, $.jsx)("div", {
 						className: "tabs",
 						children: [
 							"Stage",
@@ -21427,39 +21427,45 @@ function Bm() {
 						}, e))
 					})]
 				}), o === "Stage" ? /* @__PURE__ */ (0, $.jsxs)("div", {
-					className: `motion-stage-live ${h ? "is-scroll-example" : ""}`,
+					className: `motion-stage-live ${y ? "is-scroll-example" : ""}`,
 					onWheel: (e) => {
-						h && (e.preventDefault(), g(c + e.deltaY / 1800));
+						y && (e.preventDefault(), b(c + e.deltaY / 1800));
 					},
-					children: [h && /* @__PURE__ */ (0, $.jsxs)("div", {
+					children: [y && /* @__PURE__ */ (0, $.jsxs)("div", {
 						className: "stage-scroll-controls",
 						children: [
-							/* @__PURE__ */ (0, $.jsx)("span", { children: "Scroll driver" }),
+							/* @__PURE__ */ (0, $.jsx)("span", { children: v ? "Scroll driver" : "Effect driver" }),
 							/* @__PURE__ */ (0, $.jsx)("input", {
 								type: "range",
 								min: "0",
 								max: "100",
 								value: Math.round(c * 100),
-								onChange: (e) => g(Number(e.target.value) / 100),
-								"aria-label": `Scrub ${f.title}`
+								onChange: (e) => b(Number(e.target.value) / 100),
+								"aria-label": `Scrub ${m.title}`
 							}),
 							/* @__PURE__ */ (0, $.jsxs)("b", { children: [Math.round(c * 100), "%"] })
 						]
 					}), /* @__PURE__ */ (0, $.jsx)("iframe", {
-						ref: u,
+						ref: f,
 						className: "motion-stage-frame",
-						src: f.previewUrl,
-						title: `${f.title} live preview`,
+						src: m.previewUrl,
+						title: `${m.title} live preview`,
 						onLoad: () => {
+							let e = () => {
+								try {
+									d(typeof f.current?.contentWindow?.__FRAMEWELL_SET_PROGRESS__ == "function");
+								} catch {}
+							};
 							try {
-								h && u.current?.contentDocument?.documentElement.classList.add("framewell-stage-embedded");
+								let t = f.current?.contentDocument;
+								v && t?.documentElement.classList.add("framewell-stage-embedded"), e(), setTimeout(e, 80);
 							} catch {}
-							g(0);
+							b(0);
 						}
 					})]
 				}) : /* @__PURE__ */ (0, $.jsx)("pre", {
 					className: "motion-readable",
-					children: o === "Prompt" ? f.prompt : f.code
+					children: o === "Prompt" ? m.prompt : m.code
 				})]
 			}),
 			/* @__PURE__ */ (0, $.jsxs)("aside", {
@@ -21470,7 +21476,7 @@ function Bm() {
 						children: [/* @__PURE__ */ (0, $.jsx)("div", {
 							className: "eyebrow",
 							children: "Why it matters"
-						}), /* @__PURE__ */ (0, $.jsx)("p", { children: f.description })]
+						}), /* @__PURE__ */ (0, $.jsx)("p", { children: m.description })]
 					}),
 					/* @__PURE__ */ (0, $.jsxs)("div", {
 						className: "panel",
@@ -21479,7 +21485,7 @@ function Bm() {
 							children: "Stack / behavior"
 						}), /* @__PURE__ */ (0, $.jsx)("div", {
 							className: "tag-cloud",
-							children: (f.tags || []).map((e) => /* @__PURE__ */ (0, $.jsx)("span", { children: e }, e))
+							children: (m.tags || []).map((e) => /* @__PURE__ */ (0, $.jsx)("span", { children: e }, e))
 						})]
 					}),
 					/* @__PURE__ */ (0, $.jsxs)("div", {
@@ -21497,24 +21503,31 @@ function Bm() {
 		children: "Loading Framewell motion lab"
 	});
 }
-function Vm({ meta: e, icon: t = Am, action: n }) {
+function Hm({ meta: e, icon: t = Am, action: n }) {
 	return /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "header-row",
 		children: [/* @__PURE__ */ (0, $.jsxs)("div", { children: [/* @__PURE__ */ (0, $.jsx)("div", {
 			className: "eyebrow",
 			children: e.behavior
-		}), /* @__PURE__ */ (0, $.jsx)("h2", { children: e.title })] }), n || /* @__PURE__ */ (0, $.jsxs)("button", {
-			className: "btn light",
-			type: "button",
-			children: [/* @__PURE__ */ (0, $.jsx)(t, { size: 16 }), " Live specimen"]
+		}), /* @__PURE__ */ (0, $.jsx)("h2", { children: e.title })] }), n || /* @__PURE__ */ (0, $.jsxs)("span", {
+			className: "specimen-hint",
+			children: [/* @__PURE__ */ (0, $.jsx)(t, { size: 15 }), " interactive specimen"]
 		})]
 	});
 }
-function Hm({ meta: e }) {
+function Um(e, t = []) {
+	(0, _.useEffect)(() => {
+		let t = (t) => e(Rm(t));
+		return window.__FRAMEWELL_SET_PROGRESS__ = t, () => {
+			window.__FRAMEWELL_SET_PROGRESS__ === t && delete window.__FRAMEWELL_SET_PROGRESS__;
+		};
+	}, t);
+}
+function Wm({ meta: e }) {
 	let [t, n] = (0, _.useState)("Build");
 	return /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface dark noise",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: vm,
 			action: /* @__PURE__ */ (0, $.jsxs)("button", {
@@ -21648,7 +21661,7 @@ function Hm({ meta: e }) {
 		})]
 	});
 }
-function Um({ meta: e }) {
+function Gm({ meta: e }) {
 	let [t, n] = (0, _.useState)("glass"), r = [
 		"Glass switch lens",
 		"Pricing pressure card",
@@ -21657,7 +21670,7 @@ function Um({ meta: e }) {
 	].filter((e) => e.toLowerCase().includes(t.toLowerCase()) || !t);
 	return /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface clean",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: Dm
 		}), /* @__PURE__ */ (0, $.jsxs)("div", {
@@ -21715,7 +21728,7 @@ function Um({ meta: e }) {
 		})]
 	});
 }
-function Wm({ meta: e }) {
+function Km({ meta: e }) {
 	let t = (0, _.useRef)(null), [n, r] = (0, _.useState)(0);
 	return (0, _.useEffect)(() => {
 		let e = t.current;
@@ -21782,7 +21795,7 @@ function Wm({ meta: e }) {
 			}), /* @__PURE__ */ (0, $.jsxs)("div", {
 				className: "scroll-copy",
 				children: [
-					/* @__PURE__ */ (0, $.jsx)(Vm, {
+					/* @__PURE__ */ (0, $.jsx)(Hm, {
 						meta: e,
 						icon: mm
 					}),
@@ -21805,7 +21818,7 @@ function Wm({ meta: e }) {
 		}), /* @__PURE__ */ (0, $.jsx)("div", { className: "scroll-spacer" })]
 	});
 }
-function Gm({ meta: e }) {
+function qm({ meta: e }) {
 	let t = (0, _.useRef)(null);
 	return (0, _.useEffect)(() => {
 		let e = t.current;
@@ -21836,7 +21849,7 @@ function Gm({ meta: e }) {
 		ref: t,
 		children: [/* @__PURE__ */ (0, $.jsxs)("div", {
 			className: "scroll-stage light",
-			children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+			children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 				meta: e,
 				icon: Cm
 			}), /* @__PURE__ */ (0, $.jsx)("div", {
@@ -21859,11 +21872,11 @@ function Gm({ meta: e }) {
 		}), /* @__PURE__ */ (0, $.jsx)("div", { className: "scroll-spacer" })]
 	});
 }
-function Km({ meta: e }) {
+function Jm({ meta: e }) {
 	let [t, n] = (0, _.useState)(2);
-	return /* @__PURE__ */ (0, $.jsxs)("div", {
+	return Um((e) => n(Math.min(4, Math.floor(e * 5))), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface ink",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: xm
 		}), /* @__PURE__ */ (0, $.jsx)("div", {
@@ -21888,12 +21901,15 @@ function Km({ meta: e }) {
 		})]
 	});
 }
-function qm({ meta: e }) {
+function Ym({ meta: e }) {
 	let [t, n] = (0, _.useState)({
 		x: 58,
 		y: 52
 	});
-	return /* @__PURE__ */ (0, $.jsxs)("div", {
+	return Um((e) => n({
+		x: 18 + e * 70,
+		y: 42 + Math.sin(e * Math.PI * 2) * 22
+	}), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface ink",
 		onPointerMove: (e) => {
 			let t = e.currentTarget.getBoundingClientRect();
@@ -21902,7 +21918,7 @@ function qm({ meta: e }) {
 				y: (e.clientY - t.top) / t.height * 100
 			});
 		},
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: wm
 		}), /* @__PURE__ */ (0, $.jsxs)("div", {
@@ -21920,7 +21936,7 @@ function qm({ meta: e }) {
 		})]
 	});
 }
-function Jm({ meta: e }) {
+function Xm({ meta: e }) {
 	let [t, n] = (0, _.useState)(55);
 	return (0, _.useEffect)(() => {
 		let e = (e) => n(Math.round(12 + Math.max(0, Math.min(1, Number(e) || 0)) * 80));
@@ -21929,7 +21945,7 @@ function Jm({ meta: e }) {
 		};
 	}, []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface clean",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: bm,
 			action: /* @__PURE__ */ (0, $.jsx)("input", {
@@ -21952,7 +21968,7 @@ function Jm({ meta: e }) {
 		})]
 	});
 }
-function Ym({ meta: e }) {
+function Zm({ meta: e }) {
 	let t = (0, _.useRef)(null);
 	return (0, _.useEffect)(() => {
 		let e = t.current;
@@ -21983,7 +21999,7 @@ function Ym({ meta: e }) {
 		};
 	}, []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface dark",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: Am
 		}), /* @__PURE__ */ (0, $.jsx)("div", {
@@ -21993,8 +22009,10 @@ function Ym({ meta: e }) {
 		})]
 	});
 }
-function Xm({ meta: e }) {
-	let [t, n] = (0, _.useState)("Priority"), r = t === "Priority" ? [
+function Qm({ meta: e }) {
+	let [t, n] = (0, _.useState)("Priority");
+	Um((e) => n(e > .5 ? "Timeline" : "Priority"), []);
+	let r = t === "Priority" ? [
 		"Incident",
 		"Review",
 		"Patch",
@@ -22007,7 +22025,7 @@ function Xm({ meta: e }) {
 	];
 	return /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface clean",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: Cm,
 			action: /* @__PURE__ */ (0, $.jsx)("div", {
@@ -22031,11 +22049,11 @@ function Xm({ meta: e }) {
 		})]
 	});
 }
-function Zm({ meta: e }) {
+function $m({ meta: e }) {
 	let [t, n] = (0, _.useState)("Stagger");
-	return /* @__PURE__ */ (0, $.jsxs)("div", {
+	return Um((e) => n(e < .34 ? "Stagger" : e < .67 ? "Blur" : "Invert"), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface ink",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: Am,
 			action: /* @__PURE__ */ (0, $.jsx)("div", {
@@ -22059,12 +22077,12 @@ function Zm({ meta: e }) {
 		})]
 	});
 }
-function Qm({ meta: e }) {
+function eh({ meta: e }) {
 	let [t, n] = (0, _.useState)(62);
-	return /* @__PURE__ */ (0, $.jsxs)("div", {
+	return Um((e) => n(Math.round(20 + e * 74)), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface blue",
 		children: [
-			/* @__PURE__ */ (0, $.jsx)(Vm, {
+			/* @__PURE__ */ (0, $.jsx)(Hm, {
 				meta: e,
 				icon: hm,
 				action: /* @__PURE__ */ (0, $.jsx)("input", {
@@ -22137,11 +22155,15 @@ function Qm({ meta: e }) {
 		]
 	});
 }
-function $m({ meta: e }) {
+function th({ meta: e }) {
 	let [t, n] = (0, _.useState)("Studio");
-	return /* @__PURE__ */ (0, $.jsxs)("div", {
+	return Um((e) => n([
+		"Starter",
+		"Studio",
+		"Scale"
+	][Math.min(2, Math.floor(e * 3))]), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface clean",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: _m
 		}), /* @__PURE__ */ (0, $.jsx)("div", {
@@ -22204,12 +22226,19 @@ function $m({ meta: e }) {
 		})]
 	});
 }
-function eh({ meta: e, mode: t = "switch" }) {
+function nh({ meta: e, mode: t = "switch" }) {
 	let [n, r] = (0, _.useState)(58), [i, a] = (0, _.useState)("Flow");
-	return /* @__PURE__ */ (0, $.jsxs)("div", {
+	return Um((e) => {
+		r(Math.round(12 + e * 70)), a([
+			"Risk",
+			"Flow",
+			"Cost",
+			"Live"
+		][Math.min(3, Math.floor(e * 4))]);
+	}, []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface dark",
 		style: { background: "radial-gradient(circle at 22% 20%,#293d67,#101114 36%,#09090b)" },
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: km
 		}), /* @__PURE__ */ (0, $.jsxs)("div", {
@@ -22287,11 +22316,11 @@ function eh({ meta: e, mode: t = "switch" }) {
 		})]
 	});
 }
-function th({ meta: e }) {
+function rh({ meta: e }) {
 	let [t, n] = (0, _.useState)(2);
-	return /* @__PURE__ */ (0, $.jsxs)("div", {
+	return Um((e) => n(Math.min(4, Math.floor(e * 5))), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface ink",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: xm
 		}), /* @__PURE__ */ (0, $.jsx)("div", {
@@ -22342,8 +22371,10 @@ function th({ meta: e }) {
 		})]
 	});
 }
-function nh({ meta: e }) {
-	let [t, n] = (0, _.useState)(1), r = [
+function ih({ meta: e }) {
+	let [t, n] = (0, _.useState)(1);
+	Um((e) => n(Math.min(3, Math.floor(e * 4))), []);
+	let r = [
 		"Launch copy changed",
 		"Model selector added",
 		"Preview route deployed",
@@ -22351,7 +22382,7 @@ function nh({ meta: e }) {
 	];
 	return /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface clean",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: Om
 		}), /* @__PURE__ */ (0, $.jsxs)("div", {
@@ -22421,8 +22452,10 @@ function nh({ meta: e }) {
 		})]
 	});
 }
-function rh({ meta: e }) {
-	let [t, n] = (0, _.useState)(2), r = [
+function ah({ meta: e }) {
+	let [t, n] = (0, _.useState)(2);
+	Um((e) => n(Math.min(4, Math.floor(e * 5))), []);
+	let r = [
 		"Read",
 		"Patch",
 		"Build",
@@ -22431,7 +22464,7 @@ function rh({ meta: e }) {
 	];
 	return /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface dark",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: Sm
 		}), /* @__PURE__ */ (0, $.jsxs)("div", {
@@ -22491,15 +22524,17 @@ function rh({ meta: e }) {
 		})]
 	});
 }
-function ih({ meta: e }) {
-	let [t, n] = (0, _.useState)("Desktop"), r = {
+function oh({ meta: e }) {
+	let [t, n] = (0, _.useState)("Desktop");
+	Um((e) => n(e < .34 ? "Desktop" : e < .67 ? "Tablet" : "Mobile"), []);
+	let r = {
 		Desktop: [560, 300],
 		Tablet: [350, 330],
 		Mobile: [190, 350]
 	}[t];
 	return /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface clean",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: Tm,
 			action: /* @__PURE__ */ (0, $.jsx)("div", {
@@ -22551,11 +22586,11 @@ function ih({ meta: e }) {
 		})]
 	});
 }
-function ah({ meta: e }) {
+function sh({ meta: e }) {
 	let [t, n] = (0, _.useState)(1);
-	return /* @__PURE__ */ (0, $.jsxs)("div", {
+	return Um((e) => n(Math.min(3, Math.floor(e * 4))), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface dark",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: jm
 		}), /* @__PURE__ */ (0, $.jsxs)("div", {
@@ -22608,11 +22643,13 @@ function ah({ meta: e }) {
 		})]
 	});
 }
-function oh({ meta: e }) {
-	let [t, n] = (0, _.useState)("Focus"), r = (t === "Focus" ? "Build real components" : "Inspect every state").split(" ");
+function ch({ meta: e }) {
+	let [t, n] = (0, _.useState)("Focus");
+	Um((e) => n(e > .5 ? "Audit" : "Focus"), []);
+	let r = (t === "Focus" ? "Build real components" : "Inspect every state").split(" ");
 	return /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface ink noise",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: Am,
 			action: /* @__PURE__ */ (0, $.jsx)("div", {
@@ -22655,11 +22692,11 @@ function oh({ meta: e }) {
 		})]
 	});
 }
-function sh({ meta: e }) {
+function lh({ meta: e }) {
 	let [t, n] = (0, _.useState)(54);
-	return /* @__PURE__ */ (0, $.jsxs)("div", {
+	return Um((e) => n(Math.round(12 + e * 76)), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface clean",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: Cm,
 			action: /* @__PURE__ */ (0, $.jsx)("input", {
@@ -22715,11 +22752,11 @@ function sh({ meta: e }) {
 		})]
 	});
 }
-function ch({ meta: e }) {
+function uh({ meta: e }) {
 	let [t, n] = (0, _.useState)(72);
-	return /* @__PURE__ */ (0, $.jsxs)("div", {
+	return Um((e) => n(Math.round(42 + e * 58)), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface dark",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: Em,
 			action: /* @__PURE__ */ (0, $.jsxs)("button", {
@@ -22780,56 +22817,105 @@ function ch({ meta: e }) {
 		})]
 	});
 }
-function lh({ meta: e }) {
-	let [t, n] = (0, _.useState)("Build");
-	return /* @__PURE__ */ (0, $.jsxs)("div", {
-		className: "surface clean",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
-			meta: e,
-			icon: Cm
-		}), /* @__PURE__ */ (0, $.jsx)("div", {
-			className: "grid-3",
-			style: { height: 400 },
-			children: Object.entries({
-				Plan: ["Audit weak previews", "Choose component roles"],
-				Build: [
-					"React specimen app",
-					"Pattern page wrapper",
-					"Card scaling"
-				],
-				Verify: ["Modal route probe", "Screenshot montage"]
-			}).map(([e, r]) => /* @__PURE__ */ (0, $.jsxs)("div", {
-				className: "panel",
-				style: {
-					padding: 14,
-					background: t === e ? "#15120d" : "rgba(255,255,255,.72)",
-					color: t === e ? "#fff8eb" : "#15120d"
-				},
-				children: [/* @__PURE__ */ (0, $.jsx)("button", {
-					className: `tab ${t === e ? "active" : ""}`,
-					onClick: () => n(e),
-					children: e
-				}), /* @__PURE__ */ (0, $.jsx)("div", {
-					className: "list",
-					style: { marginTop: 14 },
-					children: r.map((n, r) => /* @__PURE__ */ (0, $.jsxs)("div", {
-						className: "row",
-						style: { transform: t === e ? `translateY(${-4 + r * 2}px)` : "none" },
-						children: [/* @__PURE__ */ (0, $.jsx)("span", {
-							className: "avatar",
-							children: r + 1
-						}), /* @__PURE__ */ (0, $.jsx)("span", { children: n })]
-					}, n))
-				})]
-			}, e))
-		})]
+function dh({ meta: e }) {
+	let [t, n] = (0, _.useState)("Build"), [r, i] = (0, _.useState)({
+		col: 1,
+		card: 1,
+		progress: .64
+	}), a = {
+		Plan: [
+			"Audit weak previews",
+			"Choose component roles",
+			"Name the motion"
+		],
+		Build: [
+			"React specimen app",
+			"Pattern page wrapper",
+			"Card scaling"
+		],
+		Verify: [
+			"Modal route probe",
+			"Screenshot montage",
+			"Ship proof"
+		]
+	}, o = Object.keys(a);
+	return Um((e) => {
+		let t = Math.min(2, Math.floor(e * 3));
+		n(o[t]), i({
+			col: t,
+			card: Math.min(2, Math.floor(e * 9 % 3)),
+			progress: e
+		});
+	}, []), /* @__PURE__ */ (0, $.jsxs)("div", {
+		className: "surface clean kanban-physics-surface",
+		children: [
+			/* @__PURE__ */ (0, $.jsx)(Hm, {
+				meta: e,
+				icon: Cm,
+				action: /* @__PURE__ */ (0, $.jsxs)("button", {
+					className: "btn",
+					onClick: () => {
+						let e = (r.progress + .34) % 1, t = Math.min(2, Math.floor(e * 3));
+						n(o[t]), i({
+							col: t,
+							card: Math.min(2, Math.floor(e * 9 % 3)),
+							progress: e
+						});
+					},
+					children: [/* @__PURE__ */ (0, $.jsx)(Cm, { size: 16 }), " Run"]
+				})
+			}),
+			/* @__PURE__ */ (0, $.jsxs)("div", {
+				className: "kanban-path",
+				children: [/* @__PURE__ */ (0, $.jsx)("span", {
+					style: { left: `${16 + r.progress * 68}%` },
+					children: "lift path"
+				}), /* @__PURE__ */ (0, $.jsx)("b", { style: { width: `${20 + r.progress * 62}%` } })]
+			}),
+			/* @__PURE__ */ (0, $.jsx)("div", {
+				className: "grid-3 kanban-board",
+				children: Object.entries(a).map(([e, a], o) => /* @__PURE__ */ (0, $.jsxs)("div", {
+					className: `panel kanban-column ${t === e ? "active" : ""}`,
+					onPointerEnter: () => n(e),
+					children: [/* @__PURE__ */ (0, $.jsx)("button", {
+						className: `tab ${t === e ? "active" : ""}`,
+						onClick: () => n(e),
+						children: e
+					}), /* @__PURE__ */ (0, $.jsx)("div", {
+						className: "list",
+						style: { marginTop: 14 },
+						children: a.map((t, a) => {
+							let s = r.col === o && r.card === a;
+							return /* @__PURE__ */ (0, $.jsxs)("button", {
+								className: `row kanban-card ${s ? "lifted" : ""}`,
+								onPointerEnter: () => {
+									n(e), i({
+										col: o,
+										card: a,
+										progress: (o + a / 3) / 3
+									});
+								},
+								children: [
+									/* @__PURE__ */ (0, $.jsx)("span", {
+										className: "avatar",
+										children: a + 1
+									}),
+									/* @__PURE__ */ (0, $.jsx)("span", { children: t }),
+									s && /* @__PURE__ */ (0, $.jsx)("b", { children: "lift" })
+								]
+							}, t);
+						})
+					})]
+				}, e))
+			})
+		]
 	});
 }
-function uh({ meta: e }) {
+function fh({ meta: e }) {
 	let [t, n] = (0, _.useState)(2);
-	return /* @__PURE__ */ (0, $.jsxs)("div", {
+	return Um((e) => n(Math.min(4, Math.floor(e * 5))), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface clean",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: wm
 		}), /* @__PURE__ */ (0, $.jsx)("div", {
@@ -22888,11 +22974,11 @@ function uh({ meta: e }) {
 		})]
 	});
 }
-function dh({ meta: e }) {
+function ph({ meta: e }) {
 	let [t, n] = (0, _.useState)(0);
-	return /* @__PURE__ */ (0, $.jsxs)("div", {
+	return Um((e) => n(Math.min(3, Math.floor(e * 4))), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface clean",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: Tm
 		}), /* @__PURE__ */ (0, $.jsxs)("div", {
@@ -22947,11 +23033,16 @@ function dh({ meta: e }) {
 		})]
 	});
 }
-function fh({ meta: e }) {
+function mh({ meta: e }) {
 	let [t, n] = (0, _.useState)("Work");
-	return /* @__PURE__ */ (0, $.jsxs)("div", {
+	return Um((e) => n([
+		"Studio",
+		"Work",
+		"Systems",
+		"Contact"
+	][Math.min(3, Math.floor(e * 4))]), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface ink noise",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: Nm
 		}), /* @__PURE__ */ (0, $.jsx)("nav", {
@@ -22990,11 +23081,17 @@ function fh({ meta: e }) {
 		})]
 	});
 }
-function ph({ meta: e }) {
+function hh({ meta: e }) {
 	let [t, n] = (0, _.useState)("M");
-	return /* @__PURE__ */ (0, $.jsxs)("div", {
+	return Um((e) => n([
+		"XS",
+		"S",
+		"M",
+		"L",
+		"XL"
+	][Math.min(4, Math.floor(e * 5))]), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface clean",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: mm
 		}), /* @__PURE__ */ (0, $.jsx)("div", {
@@ -23041,11 +23138,11 @@ function ph({ meta: e }) {
 		})]
 	});
 }
-function mh({ meta: e }) {
+function gh({ meta: e }) {
 	let [t, n] = (0, _.useState)(1);
-	return /* @__PURE__ */ (0, $.jsxs)("div", {
+	return Um((e) => n(Math.min(3, Math.floor(e * 4))), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface ink",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: wm
 		}), /* @__PURE__ */ (0, $.jsxs)("div", {
@@ -23090,11 +23187,11 @@ function mh({ meta: e }) {
 		})]
 	});
 }
-function hh({ meta: e }) {
+function _h({ meta: e }) {
 	let [t, n] = (0, _.useState)(2);
-	return /* @__PURE__ */ (0, $.jsxs)("div", {
+	return Um((e) => n(Math.min(3, Math.floor(e * 4))), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface dark",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: bm,
 			action: /* @__PURE__ */ (0, $.jsx)("div", {
@@ -23165,11 +23262,11 @@ function hh({ meta: e }) {
 		})]
 	});
 }
-function gh({ meta: e }) {
+function vh({ meta: e }) {
 	let [t, n] = (0, _.useState)(60);
-	return /* @__PURE__ */ (0, $.jsxs)("div", {
+	return Um((e) => n(Math.round(18 + e * 74)), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface dark",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: pm,
 			action: /* @__PURE__ */ (0, $.jsx)("input", {
@@ -23212,11 +23309,11 @@ function gh({ meta: e }) {
 		})]
 	});
 }
-function _h({ meta: e }) {
+function yh({ meta: e }) {
 	let [t, n] = (0, _.useState)(1);
-	return /* @__PURE__ */ (0, $.jsxs)("div", {
+	return Um((e) => n(Math.min(3, Math.floor(e * 4))), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface dark",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: ym
 		}), /* @__PURE__ */ (0, $.jsxs)("div", {
@@ -23262,16 +23359,24 @@ function _h({ meta: e }) {
 		})]
 	});
 }
-function vh({ meta: e }) {
+function bh({ meta: e }) {
 	let [t, n] = (0, _.useState)([
 		!0,
 		!1,
 		!0,
 		!1
 	]);
-	return /* @__PURE__ */ (0, $.jsxs)("div", {
+	return Um((e) => {
+		let t = Math.floor(e * 5);
+		n([
+			0,
+			1,
+			2,
+			3
+		].map((e) => e < t));
+	}, []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface blue",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: Am
 		}), /* @__PURE__ */ (0, $.jsxs)("div", {
@@ -23305,11 +23410,11 @@ function vh({ meta: e }) {
 		})]
 	});
 }
-function yh({ meta: e }) {
+function xh({ meta: e }) {
 	let [t, n] = (0, _.useState)(1);
-	return /* @__PURE__ */ (0, $.jsxs)("div", {
+	return Um((e) => n(Math.min(2, Math.floor(e * 3))), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface clean",
-		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
+		children: [/* @__PURE__ */ (0, $.jsx)(Hm, {
 			meta: e,
 			icon: Nm,
 			action: /* @__PURE__ */ (0, $.jsxs)("button", {
@@ -23357,68 +23462,68 @@ function yh({ meta: e }) {
 		})]
 	});
 }
-var bh = {
-	"three-product": Wm,
-	"gsap-cascade": Gm,
-	"shader-gallery": Km,
-	"fluid-cursor": qm,
-	"scroll-mask": Jm,
-	"particle-field": Ym,
-	"flip-board": Xm,
-	"split-text": Zm,
-	"command-room": Hm,
-	search: Um,
-	"alert-lens": Hm,
-	"thought-map": rh,
-	"agent-trace": rh,
-	lineage: _h,
-	evidence: nh,
-	dashboard: Qm,
-	metrics: Qm,
-	calendar: Qm,
-	inventory: Qm,
-	"table-xray": Qm,
-	security: ch,
-	kanban: lh,
-	pricing: $m,
-	"glass-switch": (e) => /* @__PURE__ */ (0, $.jsx)(eh, {
+var Sh = {
+	"three-product": Km,
+	"gsap-cascade": qm,
+	"shader-gallery": Jm,
+	"fluid-cursor": Ym,
+	"scroll-mask": Xm,
+	"particle-field": Zm,
+	"flip-board": Qm,
+	"split-text": $m,
+	"command-room": Wm,
+	search: Gm,
+	"alert-lens": Wm,
+	"thought-map": ah,
+	"agent-trace": ah,
+	lineage: yh,
+	evidence: ih,
+	dashboard: eh,
+	metrics: eh,
+	calendar: eh,
+	inventory: eh,
+	"table-xray": eh,
+	security: uh,
+	kanban: dh,
+	pricing: th,
+	"glass-switch": (e) => /* @__PURE__ */ (0, $.jsx)(nh, {
 		...e,
 		mode: "switch"
 	}),
-	"glass-slider": (e) => /* @__PURE__ */ (0, $.jsx)(eh, {
+	"glass-slider": (e) => /* @__PURE__ */ (0, $.jsx)(nh, {
 		...e,
 		mode: "slider"
 	}),
-	"glass-toggle": (e) => /* @__PURE__ */ (0, $.jsx)(eh, {
+	"glass-toggle": (e) => /* @__PURE__ */ (0, $.jsx)(nh, {
 		...e,
 		mode: "toggle"
 	}),
-	"video-controls": (e) => /* @__PURE__ */ (0, $.jsx)(eh, {
+	"video-controls": (e) => /* @__PURE__ */ (0, $.jsx)(nh, {
 		...e,
 		mode: "video"
 	}),
-	dock: uh,
-	gallery: th,
-	masonry: th,
-	carousel: th,
-	"clip-gallery": th,
-	compare: sh,
-	device: ih,
-	annotation: dh,
-	"code-stepper": ah,
-	onboarding: vh,
-	"type-hero": oh,
-	"shader-nav": fh,
-	roller: yh,
-	"size-magnet": ph,
-	"cursor-index": mh,
-	timeline: hh,
-	"video-card": th,
-	audio: gh,
-	map: _h,
-	"case-flip": th,
-	world: th,
-	"video-grid": th
+	dock: fh,
+	gallery: rh,
+	masonry: rh,
+	carousel: rh,
+	"clip-gallery": rh,
+	compare: lh,
+	device: oh,
+	annotation: ph,
+	"code-stepper": sh,
+	onboarding: bh,
+	"type-hero": ch,
+	"shader-nav": mh,
+	roller: xh,
+	"size-magnet": hh,
+	"cursor-index": gh,
+	timeline: _h,
+	"video-card": rh,
+	audio: vh,
+	map: yh,
+	"case-flip": rh,
+	world: rh,
+	"video-grid": rh
 };
-(0, v.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, $.jsx)(zm, {}));
+(0, v.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, $.jsx)(Bm, {}));
 //#endregion

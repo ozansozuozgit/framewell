@@ -45,6 +45,7 @@ const fallbackMeta = {
 };
 
 const routeMeta = window.__FRAMEWELL_PATTERN_META__ || null;
+const clampProgress = raw => Math.max(0, Math.min(1, Number(raw) || 0));
 
 const specimenKindById = {
   'spatial-command-room': 'command-room',
@@ -131,6 +132,7 @@ function AtlasApp(){
   const [query, setQuery] = useState('');
   const [view, setView] = useState('Stage');
   const [stageProgress, setStageProgress] = useState(0);
+  const [stageCanDrive, setStageCanDrive] = useState(false);
   const iframeRef = useRef(null);
   useEffect(() => {
     let alive = true;
@@ -154,8 +156,9 @@ function AtlasApp(){
   const activeKind = active ? (specimenKindById[active.id] || active.template || '') : '';
   const activeTags = active?.tags || [];
   const isScrollExample = /scroll|gsap|three-product|scroll-mask/.test(`${activeKind} ${active?.behavior || ''} ${activeTags.join(' ')}`.toLowerCase());
+  const hasStageDriver = isScrollExample || stageCanDrive;
   const driveStageProgress = next => {
-    const progress = Math.max(0, Math.min(1, Number(next) || 0));
+    const progress = clampProgress(next);
     setStageProgress(progress);
     const win = iframeRef.current?.contentWindow;
     if(!win) return;
@@ -170,6 +173,7 @@ function AtlasApp(){
   };
   useEffect(() => {
     setStageProgress(0);
+    setStageCanDrive(false);
     requestAnimationFrame(() => driveStageProgress(0));
   }, [active?.id]);
   useEffect(() => {
@@ -209,16 +213,16 @@ function AtlasApp(){
         </div>
         {view === 'Stage' ? (
           <div
-            className={`motion-stage-live ${isScrollExample ? 'is-scroll-example' : ''}`}
+            className={`motion-stage-live ${hasStageDriver ? 'is-scroll-example' : ''}`}
             onWheel={event => {
-              if(!isScrollExample) return;
+              if(!hasStageDriver) return;
               event.preventDefault();
               driveStageProgress(stageProgress + event.deltaY / 1800);
             }}
           >
-            {isScrollExample && (
+            {hasStageDriver && (
               <div className="stage-scroll-controls">
-                <span>Scroll driver</span>
+                <span>{isScrollExample ? 'Scroll driver' : 'Effect driver'}</span>
                 <input
                   type="range"
                   min="0"
@@ -236,10 +240,16 @@ function AtlasApp(){
               src={active.previewUrl}
               title={`${active.title} live preview`}
               onLoad={() => {
+                const detectDriver = () => {
+                  try {
+                    setStageCanDrive(typeof iframeRef.current?.contentWindow?.__FRAMEWELL_SET_PROGRESS__ === 'function');
+                  } catch(_) {}
+                };
                 try {
-                  if(isScrollExample){
-                    iframeRef.current?.contentDocument?.documentElement.classList.add('framewell-stage-embedded');
-                  }
+                  const doc = iframeRef.current?.contentDocument;
+                  if(isScrollExample) doc?.documentElement.classList.add('framewell-stage-embedded');
+                  detectDriver();
+                  setTimeout(detectDriver, 80);
                 } catch(_) {}
                 driveStageProgress(0);
               }}
@@ -274,9 +284,19 @@ function Header({ meta, icon: Icon = Sparkles, action }){
         <div className="eyebrow">{meta.behavior}</div>
         <h2>{meta.title}</h2>
       </div>
-      {action || <button className="btn light" type="button"><Icon size={16} /> Live specimen</button>}
+      {action || <span className="specimen-hint"><Icon size={15} /> interactive specimen</span>}
     </div>
   );
+}
+
+function useFramewellDriver(apply, deps = []){
+  useEffect(() => {
+    const driver = raw => apply(clampProgress(raw));
+    window.__FRAMEWELL_SET_PROGRESS__ = driver;
+    return () => {
+      if(window.__FRAMEWELL_SET_PROGRESS__ === driver) delete window.__FRAMEWELL_SET_PROGRESS__;
+    };
+  }, deps);
 }
 
 function CommandRoom({ meta }){
@@ -469,6 +489,7 @@ function GsapCascade({ meta }){
 
 function ShaderGallery({ meta }){
   const [active, setActive] = useState(2);
+  useFramewellDriver(p => setActive(Math.min(4, Math.floor(p * 5))), []);
   return (
     <div className="surface ink">
       <Header meta={meta} icon={GalleryHorizontalEnd} />
@@ -486,6 +507,7 @@ function ShaderGallery({ meta }){
 
 function FluidCursor({ meta }){
   const [pos, setPos] = useState({x:58,y:52});
+  useFramewellDriver(p => setPos({ x: 18 + p * 70, y: 42 + Math.sin(p * Math.PI * 2) * 22 }), []);
   return (
     <div className="surface ink" onPointerMove={event => {
       const r = event.currentTarget.getBoundingClientRect();
@@ -554,6 +576,7 @@ function ParticleField({ meta }){
 
 function FlipBoard({ meta }){
   const [mode, setMode] = useState('Priority');
+  useFramewellDriver(p => setMode(p > .5 ? 'Timeline' : 'Priority'), []);
   const cards = mode === 'Priority' ? ['Incident','Review','Patch','Ship'] : ['Research','Prototype','Probe','Publish'];
   return (
     <div className="surface clean">
@@ -567,6 +590,7 @@ function FlipBoard({ meta }){
 
 function SplitTextDeck({ meta }){
   const [style, setStyle] = useState('Stagger');
+  useFramewellDriver(p => setStyle(p < .34 ? 'Stagger' : p < .67 ? 'Blur' : 'Invert'), []);
   return (
     <div className="surface ink">
       <Header meta={meta} icon={Sparkles} action={<div className="tabs">{['Stagger','Blur','Invert'].map(x=><button className={`tab ${style===x?'active':''}`} onClick={()=>setStyle(x)} key={x}>{x}</button>)}</div>} />
@@ -579,6 +603,7 @@ function SplitTextDeck({ meta }){
 
 function DashboardSurface({ meta }){
   const [range, setRange] = useState(62);
+  useFramewellDriver(p => setRange(Math.round(20 + p * 74)), []);
   const cards = [['Revenue','$128k'],['Orders','1,482'],['AOV','$86'],['Risk','12']];
   return (
     <div className="surface blue">
@@ -607,6 +632,7 @@ function DashboardSurface({ meta }){
 
 function PricingWorkbench({ meta }){
   const [plan, setPlan] = useState('Studio');
+  useFramewellDriver(p => setPlan(['Starter','Studio','Scale'][Math.min(2, Math.floor(p * 3))]), []);
   return (
     <div className="surface clean">
       <Header meta={meta} icon={CircleDollarSign} />
@@ -628,6 +654,10 @@ function PricingWorkbench({ meta }){
 function GlassControls({ meta, mode='switch' }){
   const [value, setValue] = useState(58);
   const [active, setActive] = useState('Flow');
+  useFramewellDriver(p => {
+    setValue(Math.round(12 + p * 70));
+    setActive(['Risk','Flow','Cost','Live'][Math.min(3, Math.floor(p * 4))]);
+  }, []);
   return (
     <div className="surface dark" style={{background:'radial-gradient(circle at 22% 20%,#293d67,#101114 36%,#09090b)'}}>
       <Header meta={meta} icon={SlidersHorizontal} />
@@ -656,6 +686,7 @@ function GlassControls({ meta, mode='switch' }){
 
 function GallerySurface({ meta }){
   const [active, setActive] = useState(2);
+  useFramewellDriver(p => setActive(Math.min(4, Math.floor(p * 5))), []);
   return (
     <div className="surface ink">
       <Header meta={meta} icon={GalleryHorizontalEnd} />
@@ -675,6 +706,7 @@ function GallerySurface({ meta }){
 
 function EvidenceSurface({ meta }){
   const [open, setOpen] = useState(1);
+  useFramewellDriver(p => setOpen(Math.min(3, Math.floor(p * 4))), []);
   const rows = ['Launch copy changed','Model selector added','Preview route deployed','Accessibility pass'];
   return (
     <div className="surface clean">
@@ -702,6 +734,7 @@ function EvidenceSurface({ meta }){
 
 function AgentTrace({ meta }){
   const [step, setStep] = useState(2);
+  useFramewellDriver(p => setStep(Math.min(4, Math.floor(p * 5))), []);
   const tools = ['Read','Patch','Build','Probe','Push'];
   return (
     <div className="surface dark">
@@ -719,6 +752,7 @@ function AgentTrace({ meta }){
 
 function DeviceMorph({ meta }){
   const [device, setDevice] = useState('Desktop');
+  useFramewellDriver(p => setDevice(p < .34 ? 'Desktop' : p < .67 ? 'Tablet' : 'Mobile'), []);
   const dims = {Desktop:[560,300],Tablet:[350,330],Mobile:[190,350]}[device];
   return (
     <div className="surface clean">
@@ -737,6 +771,7 @@ function DeviceMorph({ meta }){
 
 function CodeStepper({ meta }){
   const [step, setStep] = useState(1);
+  useFramewellDriver(p => setStep(Math.min(3, Math.floor(p * 4))), []);
   return (
     <div className="surface dark">
       <Header meta={meta} icon={TerminalSquare} />
@@ -757,6 +792,7 @@ function CodeStepper({ meta }){
 
 function TypeHero({ meta }){
   const [mode, setMode] = useState('Focus');
+  useFramewellDriver(p => setMode(p > .5 ? 'Audit' : 'Focus'), []);
   const words = (mode === 'Focus' ? 'Build real components' : 'Inspect every state').split(' ');
   return (
     <div className="surface ink noise">
@@ -773,6 +809,7 @@ function TypeHero({ meta }){
 
 function ComparisonSurface({ meta }){
   const [value,setValue]=useState(54);
+  useFramewellDriver(p => setValue(Math.round(12 + p * 76)), []);
   return (
     <div className="surface clean">
       <Header meta={meta} icon={Layers} action={<input type="range" value={value} min="12" max="88" onChange={e=>setValue(e.target.value)} aria-label="Comparison wipe" />} />
@@ -787,6 +824,7 @@ function ComparisonSurface({ meta }){
 
 function SecuritySurface({ meta }){
   const [scan,setScan]=useState(72);
+  useFramewellDriver(p => setScan(Math.round(42 + p * 58)), []);
   return (
     <div className="surface dark">
       <Header meta={meta} icon={Radar} action={<button className="btn" onClick={()=>setScan(scan>80?54:scan+12)}><Radar size={16}/> Sweep</button>} />
@@ -804,20 +842,50 @@ function SecuritySurface({ meta }){
 
 function KanbanBoard({ meta }){
   const [active,setActive]=useState('Build');
+  const [lift,setLift]=useState({ col: 1, card: 1, progress: .64 });
   const columns = {
-    Plan:['Audit weak previews','Choose component roles'],
+    Plan:['Audit weak previews','Choose component roles','Name the motion'],
     Build:['React specimen app','Pattern page wrapper','Card scaling'],
-    Verify:['Modal route probe','Screenshot montage'],
+    Verify:['Modal route probe','Screenshot montage','Ship proof'],
+  };
+  const columnNames = Object.keys(columns);
+  useFramewellDriver(p => {
+    const col = Math.min(2, Math.floor(p * 3));
+    setActive(columnNames[col]);
+    setLift({ col, card: Math.min(2, Math.floor((p * 9) % 3)), progress: p });
+  }, []);
+  const runLift = () => {
+    const next = (lift.progress + .34) % 1;
+    const col = Math.min(2, Math.floor(next * 3));
+    setActive(columnNames[col]);
+    setLift({ col, card: Math.min(2, Math.floor((next * 9) % 3)), progress: next });
   };
   return (
-    <div className="surface clean">
-      <Header meta={meta} icon={Layers} />
-      <div className="grid-3" style={{height:400}}>
-        {Object.entries(columns).map(([col,cards])=>(
-          <div key={col} className="panel" style={{padding:14,background:active===col?'#15120d':'rgba(255,255,255,.72)',color:active===col?'#fff8eb':'#15120d'}}>
+    <div className="surface clean kanban-physics-surface">
+      <Header meta={meta} icon={Layers} action={<button className="btn" onClick={runLift}><Layers size={16}/> Run</button>} />
+      <div className="kanban-path">
+        <span style={{left:`${16 + lift.progress * 68}%`}}>lift path</span>
+        <b style={{width:`${20 + lift.progress * 62}%`}} />
+      </div>
+      <div className="grid-3 kanban-board">
+        {Object.entries(columns).map(([col,cards], colIndex)=>(
+          <div key={col} className={`panel kanban-column ${active===col?'active':''}`} onPointerEnter={() => setActive(col)}>
             <button className={`tab ${active===col?'active':''}`} onClick={()=>setActive(col)}>{col}</button>
             <div className="list" style={{marginTop:14}}>
-              {cards.map((card,i)=><div key={card} className="row" style={{transform:active===col?`translateY(${-4+i*2}px)`:'none'}}><span className="avatar">{i+1}</span><span>{card}</span></div>)}
+              {cards.map((card,i)=>{
+                const isLifted = lift.col === colIndex && lift.card === i;
+                return (
+                  <button
+                    key={card}
+                    className={`row kanban-card ${isLifted ? 'lifted' : ''}`}
+                    onPointerEnter={() => { setActive(col); setLift({ col: colIndex, card: i, progress: (colIndex + i / 3) / 3 }); }}
+                  >
+                    <span className="avatar">{i+1}</span>
+                    <span>{card}</span>
+                    {isLifted && <b>lift</b>}
+                  </button>
+                );
+              })}
             </div>
           </div>
         ))}
@@ -828,6 +896,7 @@ function KanbanBoard({ meta }){
 
 function DockSurface({ meta }){
   const [active,setActive]=useState(2);
+  useFramewellDriver(p => setActive(Math.min(4, Math.floor(p * 5))), []);
   const apps=[Command,BarChart3,GalleryHorizontalEnd,Shield,TerminalSquare];
   return (
     <div className="surface clean">
@@ -850,6 +919,7 @@ function DockSurface({ meta }){
 
 function AnnotationSurface({ meta }){
   const [note,setNote]=useState(0);
+  useFramewellDriver(p => setNote(Math.min(3, Math.floor(p * 4))), []);
   const notes=['Tighten headline','Add source chip','Expose keyboard state','Reduce decorative motion'];
   return (
     <div className="surface clean">
@@ -871,6 +941,7 @@ function AnnotationSurface({ meta }){
 
 function ShaderNavigation({ meta }){
   const [active,setActive]=useState('Work');
+  useFramewellDriver(p => setActive(['Studio','Work','Systems','Contact'][Math.min(3, Math.floor(p * 4))]), []);
   return (
     <div className="surface ink noise">
       <Header meta={meta} icon={Wand2} />
@@ -887,6 +958,7 @@ function ShaderNavigation({ meta }){
 
 function SizeMagnet({ meta }){
   const [size,setSize]=useState('M');
+  useFramewellDriver(p => setSize(['XS','S','M','L','XL'][Math.min(4, Math.floor(p * 5))]), []);
   return (
     <div className="surface clean">
       <Header meta={meta} icon={Box} />
@@ -904,6 +976,7 @@ function SizeMagnet({ meta }){
 
 function CursorIndex({ meta }){
   const [active,setActive]=useState(1);
+  useFramewellDriver(p => setActive(Math.min(3, Math.floor(p * 4))), []);
   const items=['Atlas','Specimens','Sources','Deploy'];
   return (
     <div className="surface ink">
@@ -918,6 +991,7 @@ function CursorIndex({ meta }){
 
 function TimelineSurface({ meta }){
   const [frame,setFrame]=useState(2);
+  useFramewellDriver(p => setFrame(Math.min(3, Math.floor(p * 4))), []);
   return (
     <div className="surface dark">
       <Header meta={meta} icon={Film} action={<div className="tabs">{[0,1,2,3].map(i=><button key={i} className={`tab ${frame===i?'active':''}`} onClick={()=>setFrame(i)}>F{i+1}</button>)}</div>} />
@@ -932,6 +1006,7 @@ function TimelineSurface({ meta }){
 
 function AudioMixer({ meta }){
   const [gain,setGain]=useState(60);
+  useFramewellDriver(p => setGain(Math.round(18 + p * 74)), []);
   return (
     <div className="surface dark">
       <Header meta={meta} icon={Activity} action={<input type="range" min="18" max="92" value={gain} onChange={e=>setGain(e.target.value)} aria-label="Audio gain" />} />
@@ -947,6 +1022,7 @@ function AudioMixer({ meta }){
 
 function MapSurface({ meta }){
   const [pin,setPin]=useState(1);
+  useFramewellDriver(p => setPin(Math.min(3, Math.floor(p * 4))), []);
   return (
     <div className="surface dark">
       <Header meta={meta} icon={Database} />
@@ -960,6 +1036,10 @@ function MapSurface({ meta }){
 
 function OnboardingSurface({ meta }){
   const [done,setDone]=useState([true,false,true,false]);
+  useFramewellDriver(p => {
+    const cutoff = Math.floor(p * 5);
+    setDone([0,1,2,3].map(i => i < cutoff));
+  }, []);
   return (
     <div className="surface blue">
       <Header meta={meta} icon={Sparkles} />
@@ -973,6 +1053,7 @@ function OnboardingSurface({ meta }){
 
 function SimpleWorkbench({ meta }){
   const [n,setN]=useState(1);
+  useFramewellDriver(p => setN(Math.min(2, Math.floor(p * 3))), []);
   return (
     <div className="surface clean">
       <Header meta={meta} icon={Wand2} action={<button className="btn" onClick={()=>setN((n+1)%3)}><Zap size={16}/> Change state</button>} />
