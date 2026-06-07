@@ -130,6 +130,8 @@ function AtlasApp(){
   const [activeId, setActiveId] = useState('');
   const [query, setQuery] = useState('');
   const [view, setView] = useState('Stage');
+  const [stageProgress, setStageProgress] = useState(0);
+  const iframeRef = useRef(null);
   useEffect(() => {
     let alive = true;
     fetch('data/patterns.json')
@@ -149,6 +151,27 @@ function AtlasApp(){
     return items.filter(item => [item.title, item.behavior, item.context, item.description, ...(item.tags || [])].join(' ').toLowerCase().includes(q));
   }, [items, query]);
   const active = items.find(item => item.id === activeId) || filtered[0] || items[0];
+  const activeKind = active ? (specimenKindById[active.id] || active.template || '') : '';
+  const activeTags = active?.tags || [];
+  const isScrollExample = /scroll|gsap|three-product|scroll-mask/.test(`${activeKind} ${active?.behavior || ''} ${activeTags.join(' ')}`.toLowerCase());
+  const driveStageProgress = next => {
+    const progress = Math.max(0, Math.min(1, Number(next) || 0));
+    setStageProgress(progress);
+    const win = iframeRef.current?.contentWindow;
+    if(!win) return;
+    try {
+      if(typeof win.__FRAMEWELL_SET_PROGRESS__ === 'function'){
+        win.__FRAMEWELL_SET_PROGRESS__(progress);
+      } else {
+        const max = win.document.documentElement.scrollHeight - win.innerHeight;
+        win.scrollTo({ top: max * progress, behavior: 'auto' });
+      }
+    } catch(_) {}
+  };
+  useEffect(() => {
+    setStageProgress(0);
+    requestAnimationFrame(() => driveStageProgress(0));
+  }, [active?.id]);
   useEffect(() => {
     if(!filtered.some(item => item.id === activeId)) setActiveId(filtered[0]?.id || items[0]?.id || '');
   }, [filtered, activeId, items]);
@@ -185,7 +208,43 @@ function AtlasApp(){
           </div>
         </div>
         {view === 'Stage' ? (
-          <iframe className="motion-stage-frame" src={active.previewUrl} title={`${active.title} live preview`} />
+          <div
+            className={`motion-stage-live ${isScrollExample ? 'is-scroll-example' : ''}`}
+            onWheel={event => {
+              if(!isScrollExample) return;
+              event.preventDefault();
+              driveStageProgress(stageProgress + event.deltaY / 1800);
+            }}
+          >
+            {isScrollExample && (
+              <div className="stage-scroll-controls">
+                <span>Scroll driver</span>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value={Math.round(stageProgress * 100)}
+                  onChange={event => driveStageProgress(Number(event.target.value) / 100)}
+                  aria-label={`Scrub ${active.title}`}
+                />
+                <b>{Math.round(stageProgress * 100)}%</b>
+              </div>
+            )}
+            <iframe
+              ref={iframeRef}
+              className="motion-stage-frame"
+              src={active.previewUrl}
+              title={`${active.title} live preview`}
+              onLoad={() => {
+                try {
+                  if(isScrollExample){
+                    iframeRef.current?.contentDocument?.documentElement.classList.add('framewell-stage-embedded');
+                  }
+                } catch(_) {}
+                driveStageProgress(0);
+              }}
+            />
+          </div>
         ) : (
           <pre className="motion-readable">{view === 'Prompt' ? active.prompt : active.code}</pre>
         )}
@@ -313,12 +372,16 @@ function ThreeProductStage({ meta }){
     light.position.set(2.5, 3, 4);
     scene.add(light, new THREE.AmbientLight(0x8aa8ff, 1.2));
     let frame = 0;
-    const onScroll = () => {
-      const max = document.documentElement.scrollHeight - innerHeight || 1;
-      const p = scrollY / max;
+    const applyProgress = raw => {
+      const p = Math.max(0, Math.min(1, Number(raw) || 0));
       setChapter(Math.min(3, Math.floor(p * 4)));
       gsap.to(group.rotation, { x: p * 1.2, y: p * Math.PI * 1.4, duration:.35, overwrite:true });
       gsap.to(camera.position, { z: 5.6 - p * 1.4, y: .25 + p * .8, duration:.35, overwrite:true });
+    };
+    window.__FRAMEWELL_SET_PROGRESS__ = applyProgress;
+    const onScroll = () => {
+      const max = document.documentElement.scrollHeight - innerHeight || 1;
+      applyProgress(scrollY / max);
     };
     const tick = () => {
       frame = requestAnimationFrame(tick);
@@ -337,6 +400,7 @@ function ThreeProductStage({ meta }){
       cancelAnimationFrame(frame);
       removeEventListener('scroll', onScroll);
       removeEventListener('resize', resize);
+      if(window.__FRAMEWELL_SET_PROGRESS__ === applyProgress) delete window.__FRAMEWELL_SET_PROGRESS__;
       mount.removeChild(renderer.domElement);
       renderer.dispose(); geo.dispose(); mat.dispose(); ringMat.dispose();
     };
@@ -363,24 +427,32 @@ function GsapCascade({ meta }){
     const root = rootRef.current;
     if(!root) return;
     const cards = gsap.utils.toArray(root.querySelectorAll('.cascade-card'));
-    const onScroll = () => {
-      const rect = root.getBoundingClientRect();
-      const p = Math.min(1, Math.max(.34, -rect.top / (root.scrollHeight - innerHeight || 1)));
+    const applyProgress = raw => {
+      const p = Math.min(1, Math.max(.2, Number(raw) || 0));
       cards.forEach((card, i) => {
         gsap.to(card, {
-          x: (i - 2) * 76 * p,
-          y: i * 42 * p,
-          rotate: (-12 + i * 6) * p,
-          scale: 1 - Math.abs(i - 2) * .03 * p,
+          x: (i - 2) * 112 * p,
+          y: (i - 2) * 22 * p + i * 26,
+          rotate: (-8 + i * 4) * p,
+          scale: 1 - Math.abs(i - 2) * .018 * p,
           duration:.28,
           overwrite:true,
           ease:'power3.out',
         });
       });
     };
+    window.__FRAMEWELL_SET_PROGRESS__ = applyProgress;
+    const onScroll = () => {
+      const rect = root.getBoundingClientRect();
+      applyProgress(-rect.top / (root.scrollHeight - innerHeight || 1));
+    };
     addEventListener('scroll', onScroll, { passive:true });
+    applyProgress(.62);
     onScroll();
-    return () => removeEventListener('scroll', onScroll);
+    return () => {
+      removeEventListener('scroll', onScroll);
+      if(window.__FRAMEWELL_SET_PROGRESS__ === applyProgress) delete window.__FRAMEWELL_SET_PROGRESS__;
+    };
   }, []);
   return (
     <div className="surface clean scroll-cinema" ref={rootRef}>
@@ -430,6 +502,13 @@ function FluidCursor({ meta }){
 
 function ScrollMaskPanels({ meta }){
   const [amount, setAmount] = useState(55);
+  useEffect(() => {
+    const applyProgress = raw => setAmount(Math.round(12 + Math.max(0, Math.min(1, Number(raw) || 0)) * 80));
+    window.__FRAMEWELL_SET_PROGRESS__ = applyProgress;
+    return () => {
+      if(window.__FRAMEWELL_SET_PROGRESS__ === applyProgress) delete window.__FRAMEWELL_SET_PROGRESS__;
+    };
+  }, []);
   return (
     <div className="surface clean">
       <Header meta={meta} icon={Film} action={<input type="range" min="12" max="92" value={amount} onChange={e=>setAmount(Number(e.target.value))} />} />

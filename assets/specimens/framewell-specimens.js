@@ -21323,7 +21323,7 @@ function zm() {
 	});
 }
 function Bm() {
-	let [e, t] = (0, _.useState)([]), [n, r] = (0, _.useState)(""), [i, a] = (0, _.useState)(""), [o, s] = (0, _.useState)("Stage");
+	let [e, t] = (0, _.useState)([]), [n, r] = (0, _.useState)(""), [i, a] = (0, _.useState)(""), [o, s] = (0, _.useState)("Stage"), [c, l] = (0, _.useState)(0), u = (0, _.useRef)(null);
 	(0, _.useEffect)(() => {
 		let e = !0;
 		return fetch("data/patterns.json").then((e) => e.json()).then((n) => {
@@ -21334,7 +21334,7 @@ function Bm() {
 			e = !1;
 		};
 	}, []);
-	let c = (0, _.useMemo)(() => {
+	let d = (0, _.useMemo)(() => {
 		let t = i.trim().toLowerCase();
 		return t ? e.filter((e) => [
 			e.title,
@@ -21343,14 +21343,30 @@ function Bm() {
 			e.description,
 			...e.tags || []
 		].join(" ").toLowerCase().includes(t)) : e;
-	}, [e, i]), l = e.find((e) => e.id === n) || c[0] || e[0];
+	}, [e, i]), f = e.find((e) => e.id === n) || d[0] || e[0], p = f && (Rm[f.id] || f.template) || "", m = f?.tags || [], h = /scroll|gsap|three-product|scroll-mask/.test(`${p} ${f?.behavior || ""} ${m.join(" ")}`.toLowerCase()), g = (e) => {
+		let t = Math.max(0, Math.min(1, Number(e) || 0));
+		l(t);
+		let n = u.current?.contentWindow;
+		if (n) try {
+			if (typeof n.__FRAMEWELL_SET_PROGRESS__ == "function") n.__FRAMEWELL_SET_PROGRESS__(t);
+			else {
+				let e = n.document.documentElement.scrollHeight - n.innerHeight;
+				n.scrollTo({
+					top: e * t,
+					behavior: "auto"
+				});
+			}
+		} catch {}
+	};
 	return (0, _.useEffect)(() => {
-		c.some((e) => e.id === n) || r(c[0]?.id || e[0]?.id || "");
+		l(0), requestAnimationFrame(() => g(0));
+	}, [f?.id]), (0, _.useEffect)(() => {
+		d.some((e) => e.id === n) || r(d[0]?.id || e[0]?.id || "");
 	}, [
-		c,
+		d,
 		n,
 		e
-	]), l ? /* @__PURE__ */ (0, $.jsxs)("main", {
+	]), f ? /* @__PURE__ */ (0, $.jsxs)("main", {
 		className: "motion-lab",
 		children: [
 			/* @__PURE__ */ (0, $.jsxs)("aside", {
@@ -21370,13 +21386,13 @@ function Bm() {
 					}),
 					/* @__PURE__ */ (0, $.jsxs)("div", {
 						className: "motion-count",
-						children: [c.length, " working examples"]
+						children: [d.length, " working examples"]
 					}),
 					/* @__PURE__ */ (0, $.jsx)("nav", {
 						className: "motion-list",
 						"aria-label": "Live motion examples",
-						children: c.map((e, t) => /* @__PURE__ */ (0, $.jsxs)("button", {
-							className: e.id === l.id ? "active" : "",
+						children: d.map((e, t) => /* @__PURE__ */ (0, $.jsxs)("button", {
+							className: e.id === f.id ? "active" : "",
 							onClick: () => r(e.id),
 							children: [/* @__PURE__ */ (0, $.jsxs)("small", { children: [
 								String(t + 1).padStart(2, "0"),
@@ -21394,11 +21410,11 @@ function Bm() {
 					children: [/* @__PURE__ */ (0, $.jsxs)("div", { children: [/* @__PURE__ */ (0, $.jsxs)("div", {
 						className: "eyebrow",
 						children: [
-							l.behavior,
+							f.behavior,
 							" · ",
-							l.context
+							f.context
 						]
-					}), /* @__PURE__ */ (0, $.jsx)("h1", { children: l.title })] }), /* @__PURE__ */ (0, $.jsx)("div", {
+					}), /* @__PURE__ */ (0, $.jsx)("h1", { children: f.title })] }), /* @__PURE__ */ (0, $.jsx)("div", {
 						className: "tabs",
 						children: [
 							"Stage",
@@ -21410,13 +21426,40 @@ function Bm() {
 							children: e
 						}, e))
 					})]
-				}), o === "Stage" ? /* @__PURE__ */ (0, $.jsx)("iframe", {
-					className: "motion-stage-frame",
-					src: l.previewUrl,
-					title: `${l.title} live preview`
+				}), o === "Stage" ? /* @__PURE__ */ (0, $.jsxs)("div", {
+					className: `motion-stage-live ${h ? "is-scroll-example" : ""}`,
+					onWheel: (e) => {
+						h && (e.preventDefault(), g(c + e.deltaY / 1800));
+					},
+					children: [h && /* @__PURE__ */ (0, $.jsxs)("div", {
+						className: "stage-scroll-controls",
+						children: [
+							/* @__PURE__ */ (0, $.jsx)("span", { children: "Scroll driver" }),
+							/* @__PURE__ */ (0, $.jsx)("input", {
+								type: "range",
+								min: "0",
+								max: "100",
+								value: Math.round(c * 100),
+								onChange: (e) => g(Number(e.target.value) / 100),
+								"aria-label": `Scrub ${f.title}`
+							}),
+							/* @__PURE__ */ (0, $.jsxs)("b", { children: [Math.round(c * 100), "%"] })
+						]
+					}), /* @__PURE__ */ (0, $.jsx)("iframe", {
+						ref: u,
+						className: "motion-stage-frame",
+						src: f.previewUrl,
+						title: `${f.title} live preview`,
+						onLoad: () => {
+							try {
+								h && u.current?.contentDocument?.documentElement.classList.add("framewell-stage-embedded");
+							} catch {}
+							g(0);
+						}
+					})]
 				}) : /* @__PURE__ */ (0, $.jsx)("pre", {
 					className: "motion-readable",
-					children: o === "Prompt" ? l.prompt : l.code
+					children: o === "Prompt" ? f.prompt : f.code
 				})]
 			}),
 			/* @__PURE__ */ (0, $.jsxs)("aside", {
@@ -21427,7 +21470,7 @@ function Bm() {
 						children: [/* @__PURE__ */ (0, $.jsx)("div", {
 							className: "eyebrow",
 							children: "Why it matters"
-						}), /* @__PURE__ */ (0, $.jsx)("p", { children: l.description })]
+						}), /* @__PURE__ */ (0, $.jsx)("p", { children: f.description })]
 					}),
 					/* @__PURE__ */ (0, $.jsxs)("div", {
 						className: "panel",
@@ -21436,7 +21479,7 @@ function Bm() {
 							children: "Stack / behavior"
 						}), /* @__PURE__ */ (0, $.jsx)("div", {
 							className: "tag-cloud",
-							children: (l.tags || []).map((e) => /* @__PURE__ */ (0, $.jsx)("span", { children: e }, e))
+							children: (f.tags || []).map((e) => /* @__PURE__ */ (0, $.jsx)("span", { children: e }, e))
 						})]
 					}),
 					/* @__PURE__ */ (0, $.jsxs)("div", {
@@ -21703,8 +21746,8 @@ function Wm({ meta: e }) {
 		}
 		let d = new yu(16777215, 4, 20);
 		d.position.set(2.5, 3, 4), n.add(d, new xu(9087231, 1.2));
-		let f = 0, p = () => {
-			let e = document.documentElement.scrollHeight - innerHeight || 1, t = scrollY / e;
+		let f = 0, p = (e) => {
+			let t = Math.max(0, Math.min(1, Number(e) || 0));
 			r(Math.min(3, Math.floor(t * 4))), Fi.to(o.rotation, {
 				x: t * 1.2,
 				y: t * Math.PI * 1.4,
@@ -21716,13 +21759,18 @@ function Wm({ meta: e }) {
 				duration: .35,
 				overwrite: !0
 			});
-		}, m = () => {
-			f = requestAnimationFrame(m), l.rotation.y += .006, a.render(n, i);
+		};
+		window.__FRAMEWELL_SET_PROGRESS__ = p;
+		let m = () => {
+			let e = document.documentElement.scrollHeight - innerHeight || 1;
+			p(scrollY / e);
 		}, h = () => {
+			f = requestAnimationFrame(h), l.rotation.y += .006, a.render(n, i);
+		}, g = () => {
 			i.aspect = e.clientWidth / e.clientHeight, i.updateProjectionMatrix(), a.setSize(e.clientWidth, e.clientHeight);
 		};
-		return addEventListener("scroll", p, { passive: !0 }), addEventListener("resize", h), m(), p(), () => {
-			cancelAnimationFrame(f), removeEventListener("scroll", p), removeEventListener("resize", h), e.removeChild(a.domElement), a.dispose(), s.dispose(), c.dispose(), u.dispose();
+		return addEventListener("scroll", m, { passive: !0 }), addEventListener("resize", g), h(), m(), () => {
+			cancelAnimationFrame(f), removeEventListener("scroll", m), removeEventListener("resize", g), window.__FRAMEWELL_SET_PROGRESS__ === p && delete window.__FRAMEWELL_SET_PROGRESS__, e.removeChild(a.domElement), a.dispose(), s.dispose(), c.dispose(), u.dispose();
 		};
 	}, []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface dark scroll-cinema",
@@ -21762,21 +21810,27 @@ function Gm({ meta: e }) {
 	return (0, _.useEffect)(() => {
 		let e = t.current;
 		if (!e) return;
-		let n = Fi.utils.toArray(e.querySelectorAll(".cascade-card")), r = () => {
-			let t = e.getBoundingClientRect(), r = Math.min(1, Math.max(.34, -t.top / (e.scrollHeight - innerHeight || 1)));
-			n.forEach((e, t) => {
+		let n = Fi.utils.toArray(e.querySelectorAll(".cascade-card")), r = (e) => {
+			let t = Math.min(1, Math.max(.2, Number(e) || 0));
+			n.forEach((e, n) => {
 				Fi.to(e, {
-					x: (t - 2) * 76 * r,
-					y: t * 42 * r,
-					rotate: (-12 + t * 6) * r,
-					scale: 1 - Math.abs(t - 2) * .03 * r,
+					x: (n - 2) * 112 * t,
+					y: (n - 2) * 22 * t + n * 26,
+					rotate: (-8 + n * 4) * t,
+					scale: 1 - Math.abs(n - 2) * .018 * t,
 					duration: .28,
 					overwrite: !0,
 					ease: "power3.out"
 				});
 			});
 		};
-		return addEventListener("scroll", r, { passive: !0 }), r(), () => removeEventListener("scroll", r);
+		window.__FRAMEWELL_SET_PROGRESS__ = r;
+		let i = () => {
+			r(-e.getBoundingClientRect().top / (e.scrollHeight - innerHeight || 1));
+		};
+		return addEventListener("scroll", i, { passive: !0 }), r(.62), i(), () => {
+			removeEventListener("scroll", i), window.__FRAMEWELL_SET_PROGRESS__ === r && delete window.__FRAMEWELL_SET_PROGRESS__;
+		};
 	}, []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface clean scroll-cinema",
 		ref: t,
@@ -21868,7 +21922,12 @@ function qm({ meta: e }) {
 }
 function Jm({ meta: e }) {
 	let [t, n] = (0, _.useState)(55);
-	return /* @__PURE__ */ (0, $.jsxs)("div", {
+	return (0, _.useEffect)(() => {
+		let e = (e) => n(Math.round(12 + Math.max(0, Math.min(1, Number(e) || 0)) * 80));
+		return window.__FRAMEWELL_SET_PROGRESS__ = e, () => {
+			window.__FRAMEWELL_SET_PROGRESS__ === e && delete window.__FRAMEWELL_SET_PROGRESS__;
+		};
+	}, []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface clean",
 		children: [/* @__PURE__ */ (0, $.jsx)(Vm, {
 			meta: e,
