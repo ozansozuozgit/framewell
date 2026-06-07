@@ -1,0 +1,21 @@
+{
+  "id": "audit-evidence-peek",
+  "title": "Audit evidence peek",
+  "behavior": "Disclosure",
+  "context": "Dashboard",
+  "description": "Evidence opens inline with source chips instead of a modal detour.",
+  "tags": [
+    "audit",
+    "evidence",
+    "disclosure",
+    "table"
+  ],
+  "sourcePromptIds": [
+    "opencodesign-observability-dashboard"
+  ],
+  "template": "evidence-peek",
+  "quality": "featured",
+  "mixRoles": [
+    "product surface"
+  ]
+}

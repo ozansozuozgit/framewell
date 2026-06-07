@@ -1,0 +1,1 @@
+Adapt the Framewell pattern 'Map cluster explosion' into my existing Geo app without replacing my product structure. Use it only as a focused Map layer. Clustered markers explode into categorized pins on focus. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: map, cluster, pins, geo.

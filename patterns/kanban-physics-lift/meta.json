@@ -1,0 +1,21 @@
+{
+  "id": "kanban-physics-lift",
+  "title": "Kanban physics lift",
+  "behavior": "Drag affordance",
+  "context": "Internal tool",
+  "description": "Cards tilt, cast shadows, and snap into lanes before a drag starts.",
+  "tags": [
+    "kanban",
+    "drag",
+    "physics",
+    "board"
+  ],
+  "sourcePromptIds": [
+    "template-shadcnstore-mail-task-dashboard"
+  ],
+  "template": "kanban-physics",
+  "quality": "featured",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

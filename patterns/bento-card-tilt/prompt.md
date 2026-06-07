@@ -1,1 +1,0 @@
-Implement a focused UI specimen called 'Bento card tilt'. Feature cards react to pointer position without looking gamey. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: bento, hover, feature, tilt.

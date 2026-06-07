@@ -1,0 +1,21 @@
+{
+  "id": "scroll-progress-rail",
+  "title": "Scroll progress rail",
+  "behavior": "Scroll aid",
+  "context": "Docs",
+  "description": "A progress rail becomes section navigation, status, and mini map.",
+  "tags": [
+    "scroll",
+    "progress",
+    "docs",
+    "navigation"
+  ],
+  "sourcePromptIds": [
+    "template-ixartz-docs-first-saas-home"
+  ],
+  "template": "progress-rail",
+  "quality": "specimen",
+  "mixRoles": [
+    "navigation/control"
+  ]
+}

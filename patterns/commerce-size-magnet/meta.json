@@ -1,0 +1,21 @@
+{
+  "id": "commerce-size-magnet",
+  "title": "Size selector magnet",
+  "behavior": "Commerce",
+  "context": "E-commerce",
+  "description": "Size chips magnetize to selection and show inventory pressure.",
+  "tags": [
+    "commerce",
+    "selector",
+    "magnetic",
+    "inventory"
+  ],
+  "sourcePromptIds": [
+    "opencodesign-ecommerce-inventory-dashboard"
+  ],
+  "template": "size-magnet",
+  "quality": "specimen",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "svg-line-draw-map",
+  "title": "SVG line-draw map",
+  "behavior": "Map path",
+  "context": "Geo app",
+  "description": "Routes draw in with labels and pulsing handoff points.",
+  "tags": [
+    "svg",
+    "map",
+    "line-draw",
+    "geo"
+  ],
+  "sourcePromptIds": [
+    "motionsites-terra-geo-map"
+  ],
+  "template": "line-map",
+  "quality": "specimen",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

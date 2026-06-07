@@ -1,0 +1,21 @@
+{
+  "id": "audio-wave-loader",
+  "title": "Audio wave loader",
+  "behavior": "Loader",
+  "context": "Media",
+  "description": "Loading becomes a compact equalizer with branded rhythm.",
+  "tags": [
+    "loader",
+    "audio",
+    "equalizer",
+    "motion"
+  ],
+  "sourcePromptIds": [
+    "motionsites-loader-animation"
+  ],
+  "template": "audio-loader",
+  "quality": "specimen",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

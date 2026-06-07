@@ -1,0 +1,21 @@
+{
+  "id": "pixel-dissolve-card",
+  "title": "Pixel dissolve card",
+  "behavior": "Transition",
+  "context": "Portfolio",
+  "description": "A card dissolves into square pixels before revealing alternate content.",
+  "tags": [
+    "pixel",
+    "dissolve",
+    "transition",
+    "hover"
+  ],
+  "sourcePromptIds": [
+    "motionsites-free-vex-ventures"
+  ],
+  "template": "pixel-dissolve",
+  "quality": "specimen",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

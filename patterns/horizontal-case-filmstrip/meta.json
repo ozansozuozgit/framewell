@@ -1,0 +1,21 @@
+{
+  "id": "horizontal-case-filmstrip",
+  "title": "Horizontal case filmstrip",
+  "behavior": "Project browse",
+  "context": "Portfolio",
+  "description": "Case studies move as a cinematic horizontal reel with active captions.",
+  "tags": [
+    "horizontal-scroll",
+    "portfolio",
+    "filmstrip",
+    "cases"
+  ],
+  "sourcePromptIds": [
+    "opencodesign-boutique-agency-homepage"
+  ],
+  "template": "filmstrip",
+  "quality": "featured",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

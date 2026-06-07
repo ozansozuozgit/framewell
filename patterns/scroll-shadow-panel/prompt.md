@@ -1,1 +1,0 @@
-Implement a focused UI specimen called 'Scroll shadow panel'. A scrollable panel earns top/bottom shadows only when useful. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: scroll, shadow, docs, panel.

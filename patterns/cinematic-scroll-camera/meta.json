@@ -1,0 +1,22 @@
+{
+  "id": "cinematic-scroll-camera",
+  "title": "Cinematic scroll camera pass",
+  "behavior": "Scroll cinema",
+  "context": "Portfolio",
+  "description": "A product scene appears to move past camera planes as the page scrolls.",
+  "tags": [
+    "gsap",
+    "scrolltrigger",
+    "camera",
+    "portfolio",
+    "cinematic"
+  ],
+  "sourcePromptIds": [
+    "motionsites-space-voyage"
+  ],
+  "template": "motion",
+  "quality": "featured",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

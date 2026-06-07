@@ -1,0 +1,21 @@
+{
+  "id": "dashboard-row-scroll-reveal",
+  "title": "Dashboard row scroll reveal",
+  "behavior": "Dashboard motion",
+  "context": "Dashboard",
+  "description": "Dense rows lift, lock, and show confidence metadata as they enter.",
+  "tags": [
+    "dashboard",
+    "scroll",
+    "rows",
+    "confidence"
+  ],
+  "sourcePromptIds": [
+    "opencodesign-ai-ops-command-center"
+  ],
+  "template": "dashboard-rows",
+  "quality": "featured",
+  "mixRoles": [
+    "product surface"
+  ]
+}

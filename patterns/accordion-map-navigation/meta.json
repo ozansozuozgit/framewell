@@ -1,0 +1,21 @@
+{
+  "id": "accordion-map-navigation",
+  "title": "Accordion map navigation",
+  "behavior": "Navigation",
+  "context": "Geo app",
+  "description": "A side accordion drives map markers and path emphasis.",
+  "tags": [
+    "map",
+    "accordion",
+    "navigation",
+    "geo"
+  ],
+  "sourcePromptIds": [
+    "motionsites-terra-geo-map"
+  ],
+  "template": "map-accordion",
+  "quality": "featured",
+  "mixRoles": [
+    "navigation/control"
+  ]
+}

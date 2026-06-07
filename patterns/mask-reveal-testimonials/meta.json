@@ -1,0 +1,21 @@
+{
+  "id": "mask-reveal-testimonials",
+  "title": "Mask reveal testimonials",
+  "behavior": "Proof",
+  "context": "Marketing",
+  "description": "Quotes reveal through animated masks, keeping the wall premium and calm.",
+  "tags": [
+    "testimonials",
+    "mask",
+    "proof",
+    "animation"
+  ],
+  "sourcePromptIds": [
+    "tailark-testimonial-wall"
+  ],
+  "template": "mask-proof",
+  "quality": "featured",
+  "mixRoles": [
+    "conversion/proof"
+  ]
+}

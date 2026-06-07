@@ -1,1 +1,0 @@
-Implement a focused UI specimen called 'Notebook side notes'. Inline notes anchor to selected paragraphs in a calm editor layout. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: notebook, editor, annotations, ai.

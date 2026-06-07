@@ -1,1 +1,0 @@
-Implement a focused UI specimen called 'Logo cloud marquee'. A restrained logo belt loops with masked edges. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: marquee, logos, social-proof, motion.

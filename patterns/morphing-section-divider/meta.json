@@ -1,0 +1,21 @@
+{
+  "id": "morphing-section-divider",
+  "title": "Morphing section divider",
+  "behavior": "Divider",
+  "context": "Landing page",
+  "description": "A divider shape morphs to signal moving between product modes.",
+  "tags": [
+    "svg",
+    "morph",
+    "divider",
+    "section"
+  ],
+  "sourcePromptIds": [
+    "motionsites-free-transform-data"
+  ],
+  "template": "morph-divider",
+  "quality": "specimen",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

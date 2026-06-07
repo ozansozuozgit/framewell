@@ -1,1 +1,0 @@
-Implement a focused UI specimen called 'Particle field hero'. Tiny particles drift behind a product promise without stealing attention. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: particle, hero, ambient, canvas.

@@ -1,1 +1,0 @@
-Implement a focused UI specimen called 'Kanban card lift'. Cards lift with shadow hierarchy before moving across a board. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: kanban, drag, card, board.

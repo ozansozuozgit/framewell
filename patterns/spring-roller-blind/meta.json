@@ -1,0 +1,21 @@
+{
+  "id": "spring-roller-blind",
+  "title": "Spring roller blind reveal",
+  "behavior": "Mask reveal",
+  "context": "Hero",
+  "description": "A blind mask rolls down, overshoots, and uncovers the content in bands.",
+  "tags": [
+    "mask",
+    "spring",
+    "reveal",
+    "hero"
+  ],
+  "sourcePromptIds": [
+    "spring-roller-blind-reveal"
+  ],
+  "template": "roller-blind",
+  "quality": "specimen",
+  "mixRoles": [
+    "signature moment"
+  ]
+}

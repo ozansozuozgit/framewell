@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Build Framewell live pattern catalog and static iframe previews."""
+"""Build Framewell's curated live effect atlas.
+
+The output is intentionally effect-first: isolated iframe specimens with source,
+optional prompt, tags, and mix roles. The old prompt archive can exist, but the
+homepage should favor these polished atoms.
+"""
 from __future__ import annotations
 
 import html
@@ -10,160 +15,322 @@ ROOT = Path(__file__).resolve().parents[1]
 PATTERN_DIR = ROOT / "patterns"
 DATA_PATH = ROOT / "data" / "patterns.json"
 
+# Curated from archive themes + public inspiration categories: Awwwards GSAP/WebGL,
+# Codrops shader/scroll/text demos, GSAP showcase, and classic creative portfolios.
+# These are original local specimens, not copied third-party source.
 PATTERNS = [
-    ("scroll-row-reveal", "Scroll row reveal", "Reveal", "Dashboard", "Rows lift into place as a dense activity feed enters the viewport.", ["scroll", "dashboard", "feed", "intersection-observer"], "opencodesign-ai-ops-command-center"),
-    ("sticky-metric-strip", "Sticky metric strip", "Navigate", "Dashboard", "A compact KPI strip pins while panels move underneath.", ["sticky", "metrics", "dashboard", "status"], "opencodesign-saas-revenue-dashboard"),
-    ("audit-row-expand", "Audit row expansion", "Details", "Dashboard", "Dense table rows open into evidence without leaving the table.", ["table", "expand", "audit", "details"], "opencodesign-observability-dashboard"),
-    ("hover-source-peek", "Hover source peek", "Inspect", "Dashboard", "Metadata slides in only when the user needs provenance.", ["hover", "metadata", "source", "provenance"], "opencodesign-design-token-inspector"),
-    ("command-palette-orbit", "Command palette orbit", "Navigate", "AI app", "A soft command surface with orbiting shortcut chips.", ["command", "keyboard", "ai", "overlay"], "template-shadcnstore-chat-support-console"),
-    ("segmented-filter-morph", "Segmented filter morph", "Filter", "SaaS app", "Filter pills share one moving active background.", ["filter", "tabs", "morph", "controls"], "template-shadcnstore-analytics-command-center"),
-    ("bento-card-tilt", "Bento card tilt", "Emphasize", "Marketing", "Feature cards react to pointer position without looking gamey.", ["bento", "hover", "feature", "tilt"], "tailark-feature-bento-grid"),
-    ("glass-sidebar-rail", "Glass sidebar rail", "Navigate", "Dashboard", "A translucent left rail reveals labels and active context.", ["sidebar", "glass", "navigation", "dashboard"], "opencodesign-finance-ops-dashboard"),
-    ("timeline-scrubber", "Timeline scrubber", "Compare", "Analytics", "Milestones become a draggable-feeling horizontal timeline.", ["timeline", "analytics", "history", "scrub"], "opencodesign-creator-analytics-dashboard"),
-    ("skeleton-signal-loader", "Signal skeleton loader", "Load", "Data app", "Loading rows shimmer with tiny source/signal placeholders.", ["loading", "skeleton", "data", "status"], "motionsites-loader-animation"),
-    ("empty-next-actions", "Empty state next actions", "Empty", "SaaS app", "A zero state offers three concrete next moves instead of dead space.", ["empty-state", "onboarding", "actions", "cards"], "opencodesign-ai-notebook-waitlist"),
-    ("pricing-toggle-proof", "Pricing toggle proof", "Convert", "Marketing", "Pricing cards animate proof points when billing mode changes.", ["pricing", "toggle", "proof", "saas"], "tailark-pricing-comparison"),
-    ("logo-cloud-marquee", "Logo cloud marquee", "Proof", "Marketing", "A restrained logo belt loops with masked edges.", ["marquee", "logos", "social-proof", "motion"], "tailark-logo-cloud-marquee"),
-    ("testimonial-wall-focus", "Testimonial wall focus", "Proof", "Marketing", "Hovering a quote lifts it while the wall stays calm.", ["testimonials", "hover", "proof", "grid"], "tailark-testimonial-wall"),
-    ("faq-accordion-rhythm", "FAQ accordion rhythm", "Reveal", "Marketing", "Answers open with measured height and icon rotation.", ["faq", "accordion", "motion", "content"], "tailark-faq-accordion-section"),
-    ("hero-word-rotation", "Hero word rotation", "Hero", "Landing page", "One hero noun rotates while the layout stays stable.", ["hero", "copy", "rotation", "landing"], "template-karthik-dark-saas-launch"),
-    ("liquid-glass-card", "Liquid glass card", "Surface", "Marketing", "A glass panel uses gradient blur, shine, and parallax depth.", ["glass", "surface", "hero", "premium"], "motionsites-liquid-glass-agency"),
-    ("particle-field-hero", "Particle field hero", "Ambient", "Landing page", "Tiny particles drift behind a product promise without stealing attention.", ["particle", "hero", "ambient", "canvas"], "opencodesign-particle-field-data-hero"),
-    ("scroll-shadow-panel", "Scroll shadow panel", "Scroll", "Docs", "A scrollable panel earns top/bottom shadows only when useful.", ["scroll", "shadow", "docs", "panel"], "template-ixartz-docs-first-saas-home"),
-    ("inline-copy-confirm", "Inline copy confirm", "Confirm", "Devtool", "Copy buttons confirm in place with a tiny success sweep.", ["copy", "confirm", "code", "microinteraction"], "template-ixartz-devtool-landing-page"),
-    ("draggable-chip-cloud", "Draggable chip cloud", "Filter", "AI app", "Filter chips feel tactile through press, lift, and snap feedback.", ["chips", "filter", "drag", "tactile"], "template-ui-layouts-interactive-gallery"),
-    ("kanban-card-lift", "Kanban card lift", "Manipulate", "Internal tool", "Cards lift with shadow hierarchy before moving across a board.", ["kanban", "drag", "card", "board"], "template-shadcnstore-mail-task-dashboard"),
-    ("calendar-density-hover", "Calendar density hover", "Inspect", "Calendar", "A dense schedule exposes details through focused hover lanes.", ["calendar", "density", "hover", "schedule"], "template-shadcnstore-calendar-ops-dashboard"),
-    ("chat-message-stream", "Chat message stream", "AI app", "Chat", "Assistant messages enter with line-by-line cadence and source chips.", ["chat", "stream", "ai", "sources"], "template-shadcnstore-chat-support-console"),
-    ("notebook-side-notes", "Notebook side notes", "Editor", "AI app", "Inline notes anchor to selected paragraphs in a calm editor layout.", ["notebook", "editor", "annotations", "ai"], "opencodesign-ai-writing-assistant-hero"),
-    ("map-pulse-marker", "Map pulse marker", "Map", "Geo app", "Markers pulse with confidence rings and labels on focus.", ["map", "marker", "pulse", "geo"], "motionsites-terra-geo-map"),
-    ("space-depth-cards", "Space depth cards", "3D", "Portfolio", "Cards float in depth with soft starfield movement.", ["space", "3d", "portfolio", "depth"], "motionsites-space-voyage"),
-    ("agency-case-reveal", "Agency case reveal", "Portfolio", "Agency", "Case study tiles reveal role, stack, and outcome on hover.", ["agency", "case-study", "hover", "portfolio"], "opencodesign-boutique-agency-homepage"),
-    ("inventory-alert-row", "Inventory alert row", "Status", "Commerce", "Low-stock rows pulse once, then settle into clear severity color.", ["inventory", "alert", "commerce", "table"], "opencodesign-ecommerce-inventory-dashboard"),
-    ("security-scan-radar", "Security scan radar", "Status", "Security", "A radar sweep visualizes background protection checks.", ["security", "radar", "status", "scan"], "opencodesign-enterprise-security-page"),
-    ("revenue-sparkline-stack", "Revenue sparkline stack", "Data", "Analytics", "Tiny sparklines animate into a compact metric stack.", ["sparkline", "revenue", "metrics", "chart"], "opencodesign-saas-revenue-dashboard"),
-    ("feature-flow-steps", "Feature flow steps", "Explain", "SaaS app", "A three-step flow highlights one step at a time.", ["steps", "feature", "flow", "explain"], "template-karthik-framer-motion-feature-flow"),
-    ("footer-orbital-links", "Footer orbital links", "Navigate", "Marketing", "Footer links orbit around one final CTA without clutter.", ["footer", "links", "cta", "motion"], "tailark-final-cta-footer"),
-    ("team-grid-spotlight", "Team grid spotlight", "People", "Marketing", "Team portraits receive a soft cursor-follow spotlight.", ["team", "grid", "spotlight", "hover"], "tailark-team-grid-editorial"),
-    ("stats-proof-countup", "Stats proof count-up", "Proof", "Marketing", "Proof metrics count up once as the band enters view.", ["stats", "countup", "proof", "scroll"], "tailark-stats-proof-band"),
-    ("spring-roller-reveal", "Spring roller reveal", "Reveal", "Hero", "A roller-blind mask uncovers content with springy overshoot.", ["reveal", "spring", "mask", "hero"], "spring-roller-blind-reveal"),
+    # Cinematic / hero / WebGL-feeling
+    ("cinematic-scroll-camera", "Cinematic scroll camera pass", "Scroll cinema", "Portfolio", "A product scene appears to move past camera planes as the page scrolls.", ["gsap", "scrolltrigger", "camera", "portfolio", "cinematic"], "motion", "motionsites-space-voyage"),
+    ("shader-type-dissolve", "Shader text dissolve", "Text effect", "Portfolio", "Large type breaks into particles and reforms on hover/focus.", ["webgl", "shader", "text", "particles", "hero"], "type-dissolve", "x-render-and-co-3d-animation-studio"),
+    ("webgl-image-ripple-grid", "WebGL image ripple grid", "Image grid", "Portfolio", "A project grid bends like liquid when the pointer crosses each tile.", ["webgl", "image-grid", "ripple", "portfolio", "hover"], "ripple-grid", "template-ui-layouts-interactive-gallery"),
+    ("orbital-product-stage", "Orbital product stage", "3D orbit", "SaaS hero", "Cards and chips orbit a central object with depth and parallax.", ["three-js", "orbit", "product", "hero", "depth"], "orbit-stage", "opencodesign-product-launch-page"),
+    ("glass-torus-pricing", "Glass torus pricing focus", "Refraction", "Pricing", "A refractive ring highlights the recommended pricing card without clutter.", ["glass", "refraction", "pricing", "premium"], "refractive-pricing", "tailark-pricing-comparison"),
+    ("particle-cursor-constellation", "Particle cursor constellation", "Cursor field", "Portfolio", "Pointer movement pulls a constellation field behind the content.", ["particles", "cursor", "ambient", "webgl-feel"], "constellation", "opencodesign-particle-field-data-hero"),
+    ("scroll-sliced-hero", "Scroll-sliced hero poster", "Scroll reveal", "Landing page", "Poster slices separate and reveal the product promise underneath.", ["scroll", "mask", "poster", "gsap", "hero"], "slice-poster", "motionsites-free-visual-hero"),
+    ("liquid-metal-cta", "Liquid metal CTA", "Microinteraction", "Landing page", "A call-to-action surface flows like mercury on hover.", ["button", "liquid", "premium", "hover"], "liquid-cta", "motionsites-liquid-glass-agency"),
+
+    # Navigation / menus
+    ("magnetic-work-menu", "Magnetic work menu", "Menu", "Portfolio", "Project links stretch toward the pointer with oversized typography.", ["menu", "magnetic", "portfolio", "typography"], "magnetic-menu", "motionsites-portfolio-cosmic"),
+    ("dock-with-liquid-focus", "Liquid focus dock", "Navigation", "App shell", "A dock bubble slides between icons and previews the destination.", ["dock", "navigation", "liquid", "app"], "liquid-dock", "template-shadcnstore-chat-support-console"),
+    ("radial-command-wheel", "Radial command wheel", "Command", "AI app", "Keyboard actions bloom into a radial, spatial command palette.", ["command", "radial", "keyboard", "ai"], "radial-command", "template-shadcnstore-analytics-command-center"),
+    ("split-panel-route-transition", "Split-panel route transition", "Transition", "Web app", "Two panels wipe in opposing directions for page transitions.", ["page-transition", "wipe", "panels", "route"], "split-transition", "template-karthik-dark-saas-launch"),
+    ("cursor-reveal-mega-menu", "Cursor reveal mega menu", "Menu", "Marketing", "Menu panels reveal images only under the cursor spotlight.", ["mega-menu", "spotlight", "cursor", "navigation"], "spotlight-menu", "tailark-integrations-cloud"),
+    ("accordion-map-navigation", "Accordion map navigation", "Navigation", "Geo app", "A side accordion drives map markers and path emphasis.", ["map", "accordion", "navigation", "geo"], "map-accordion", "motionsites-terra-geo-map"),
+
+    # Dashboard / AI app / dense product UI
+    ("dashboard-row-scroll-reveal", "Dashboard row scroll reveal", "Dashboard motion", "Dashboard", "Dense rows lift, lock, and show confidence metadata as they enter.", ["dashboard", "scroll", "rows", "confidence"], "dashboard-rows", "opencodesign-ai-ops-command-center"),
+    ("metric-cards-live-scrub", "Metric cards live scrub", "Data interaction", "Dashboard", "Dragging a timeline updates cards, sparklines, and alert tone together.", ["metrics", "scrub", "sparklines", "dashboard"], "metric-scrub", "opencodesign-saas-revenue-dashboard"),
+    ("audit-evidence-peek", "Audit evidence peek", "Disclosure", "Dashboard", "Evidence opens inline with source chips instead of a modal detour.", ["audit", "evidence", "disclosure", "table"], "evidence-peek", "opencodesign-observability-dashboard"),
+    ("ai-stream-with-sources", "AI stream with source chips", "AI response", "AI app", "Message lines stream in with attached citations and confidence states.", ["ai", "chat", "streaming", "sources"], "ai-stream", "template-shadcnstore-chat-support-console"),
+    ("command-center-alert-lens", "Command center alert lens", "Status lens", "Ops dashboard", "A movable lens magnifies incidents and reveals hidden response actions.", ["ops", "lens", "incident", "dashboard"], "alert-lens", "opencodesign-ai-ops-command-center"),
+    ("kanban-physics-lift", "Kanban physics lift", "Drag affordance", "Internal tool", "Cards tilt, cast shadows, and snap into lanes before a drag starts.", ["kanban", "drag", "physics", "board"], "kanban-physics", "template-shadcnstore-mail-task-dashboard"),
+    ("calendar-density-brush", "Calendar density brush", "Calendar interaction", "Calendar", "Dragging across a dense calendar reveals heat and available gaps.", ["calendar", "density", "brush", "schedule"], "calendar-brush", "template-shadcnstore-calendar-ops-dashboard"),
+    ("data-lineage-river", "Data lineage river", "Data viz", "Analytics", "Streams split from a source into model, alert, and decision nodes.", ["lineage", "data-viz", "flow", "dashboard"], "lineage-river", "opencodesign-design-token-inspector"),
+    ("security-radar-sweep", "Security radar sweep", "Status visual", "Security", "A radar sweep checks assets and leaves classified severity blips.", ["security", "radar", "scan", "status"], "radar-sweep", "opencodesign-enterprise-security-page"),
+    ("inventory-shelf-pulse", "Inventory shelf pulse", "Commerce alert", "Commerce", "Inventory rows compress into shelf lanes and pulse at risk points.", ["commerce", "inventory", "alerts", "table"], "shelf-pulse", "opencodesign-ecommerce-inventory-dashboard"),
+
+    # Content / editorial / portfolio sections
+    ("horizontal-case-filmstrip", "Horizontal case filmstrip", "Project browse", "Portfolio", "Case studies move as a cinematic horizontal reel with active captions.", ["horizontal-scroll", "portfolio", "filmstrip", "cases"], "filmstrip", "opencodesign-boutique-agency-homepage"),
+    ("stacked-editorial-cards", "Stacked editorial cards", "Scroll stack", "Article", "Editorial cards pin and stack like a physical dossier.", ["scroll", "stack", "editorial", "cards"], "stacked-cards", "opencodesign-field-notes-landing-page"),
+    ("mask-reveal-testimonials", "Mask reveal testimonials", "Proof", "Marketing", "Quotes reveal through animated masks, keeping the wall premium and calm.", ["testimonials", "mask", "proof", "animation"], "mask-proof", "tailark-testimonial-wall"),
+    ("logo-cloud-depth-marquee", "Depth logo marquee", "Proof", "Marketing", "Logo strips move at different depths with soft mask edges.", ["marquee", "logos", "depth", "proof"], "depth-marquee", "tailark-logo-cloud-marquee"),
+    ("faq-elastic-drawer", "FAQ elastic drawer", "Accordion", "Marketing", "Questions open with springy drawers, icon twist, and content shadows.", ["faq", "accordion", "spring", "drawer"], "elastic-faq", "tailark-faq-accordion-section"),
+    ("team-spotlight-grid", "Team spotlight grid", "People grid", "Marketing", "A cursor spotlight reveals portraits, roles, and one-line principles.", ["team", "spotlight", "grid", "people"], "team-spotlight", "tailark-team-grid-editorial"),
+    ("stats-countup-proof-band", "Count-up proof band", "Proof", "Marketing", "Proof numbers count once, then leave tactile confidence marks.", ["stats", "count-up", "proof", "scroll"], "stats-band", "tailark-stats-proof-band"),
+    ("footer-gravity-links", "Gravity footer links", "Footer", "Marketing", "Footer links cluster around the CTA and drift like low gravity objects.", ["footer", "gravity", "links", "cta"], "gravity-footer", "tailark-final-cta-footer"),
+
+    # Input/forms/conversion/onboarding
+    ("search-bar-morph-results", "Search bar morph results", "Search", "Web app", "Search expands into a command surface with grouped live results.", ["search", "command", "results", "morph"], "search-morph", "template-ui-layouts-interactive-gallery"),
+    ("onboarding-constellation", "Onboarding constellation picker", "Onboarding", "AI app", "Choices become a constellation map that explains the setup path.", ["onboarding", "constellation", "choices", "ai"], "onboard-stars", "opencodesign-ai-notebook-waitlist"),
+    ("pricing-card-pressure", "Pricing pressure card", "Pricing", "SaaS", "Recommended plan reacts to plan toggles with proof and pressure indicators.", ["pricing", "toggle", "proof", "saas"], "pricing-pressure", "tailark-pricing-comparison"),
+    ("form-field-living-label", "Living form label", "Form", "SaaS", "Labels become validation hints, progress, and context without extra chrome.", ["form", "label", "validation", "microinteraction"], "living-label", "template-ixartz-devtool-landing-page"),
+    ("empty-state-suggestion-orbit", "Suggestion orbit empty state", "Empty state", "AI app", "Suggested actions orbit the empty state and collapse into the chosen action.", ["empty-state", "ai", "suggestions", "orbit"], "empty-orbit", "opencodesign-ai-writing-assistant-hero"),
+    ("copy-button-success-sweep", "Success sweep copy button", "Microinteraction", "Devtool", "A code copy button confirms with a fast sweep and inline command memory.", ["copy", "code", "success", "devtool"], "copy-sweep", "template-ixartz-devtool-landing-page"),
+
+    # Experimental / possible ingredients
+    ("infinite-marquee-cards", "Infinite marquee cards", "Loop", "Gallery", "Cards loop in two directions while preserving hover focus.", ["marquee", "cards", "loop", "gallery"], "card-marquee", "website-cards-animation"),
+    ("spring-roller-blind", "Spring roller blind reveal", "Mask reveal", "Hero", "A blind mask rolls down, overshoots, and uncovers the content in bands.", ["mask", "spring", "reveal", "hero"], "roller-blind", "spring-roller-blind-reveal"),
+    ("3d-carousel-prism", "3D prism carousel", "Carousel", "Portfolio", "Slides rotate through a prism instead of a flat carousel.", ["3d", "carousel", "prism", "portfolio"], "prism-carousel", "motionsites-portfolio-cosmic"),
+    ("svg-line-draw-map", "SVG line-draw map", "Map path", "Geo app", "Routes draw in with labels and pulsing handoff points.", ["svg", "map", "line-draw", "geo"], "line-map", "motionsites-terra-geo-map"),
+    ("noise-gradient-hero", "Noise gradient hero field", "Ambient", "Landing page", "A living gradient mesh with grain and restrained pulse under the hero.", ["gradient", "noise", "ambient", "hero"], "noise-gradient", "motionsites-free-stellar-ai"),
+    ("pixel-dissolve-card", "Pixel dissolve card", "Transition", "Portfolio", "A card dissolves into square pixels before revealing alternate content.", ["pixel", "dissolve", "transition", "hover"], "pixel-dissolve", "motionsites-free-vex-ventures"),
+    ("scroll-progress-rail", "Scroll progress rail", "Scroll aid", "Docs", "A progress rail becomes section navigation, status, and mini map.", ["scroll", "progress", "docs", "navigation"], "progress-rail", "template-ixartz-docs-first-saas-home"),
+    ("clip-path-gallery-shuffle", "Clip-path gallery shuffle", "Gallery", "Portfolio", "Images shuffle through angular clip paths like a poster deck.", ["clip-path", "gallery", "shuffle", "portfolio"], "clip-gallery", "template-ui-layouts-creative-scroll-home"),
+    ("audio-wave-loader", "Audio wave loader", "Loader", "Media", "Loading becomes a compact equalizer with branded rhythm.", ["loader", "audio", "equalizer", "motion"], "audio-loader", "motionsites-loader-animation"),
+    ("morphing-section-divider", "Morphing section divider", "Divider", "Landing page", "A divider shape morphs to signal moving between product modes.", ["svg", "morph", "divider", "section"], "morph-divider", "motionsites-free-transform-data"),
+    ("sticky-comparison-wipe", "Sticky comparison wipe", "Compare", "Marketing", "A sticky before/after wipe makes a product claim tangible.", ["compare", "wipe", "sticky", "before-after"], "comparison-wipe", "opencodesign-open-source-project-homepage"),
+    ("notebook-annotation-rail", "Notebook annotation rail", "Editor", "AI notebook", "Side notes magnetize to selected paragraphs and source chips.", ["editor", "annotations", "notebook", "ai"], "annotation-rail", "opencodesign-ai-writing-assistant-hero"),
+    ("task-completion-confetti-minimal", "Minimal completion burst", "Celebration", "Productivity", "Completing a task emits a tiny geometric burst without becoming childish.", ["completion", "confetti", "minimal", "task"], "completion-burst", "motionsites-free-taskly"),
+    ("bento-depth-hover", "Depth bento hover", "Bento", "Marketing", "Feature cards tilt at different z-depths with a single light source.", ["bento", "hover", "depth", "feature"], "depth-bento", "tailark-feature-bento-grid"),
+    ("cinematic-loader-title", "Cinematic loader title", "Loader", "Portfolio", "A loader turns into the first heading using split letters and a wipe.", ["loader", "title", "split-text", "portfolio"], "title-loader", "motionsites-loader-animation"),
+    ("responsive-device-morph", "Device morph preview", "Responsive", "Landing page", "A desktop mockup morphs into tablet/mobile frames to prove adaptability.", ["responsive", "device", "morph", "preview"], "device-morph", "template-ixartz-devtool-landing-page"),
+    ("map-cluster-explosion", "Map cluster explosion", "Map", "Geo app", "Clustered markers explode into categorized pins on focus.", ["map", "cluster", "pins", "geo"], "cluster-map", "motionsites-terra-geo-map"),
+    ("tactile-toggle-array", "Tactile toggle array", "Controls", "Dashboard", "Small switches ripple across a settings panel to show dependency.", ["toggles", "controls", "settings", "dashboard"], "toggle-array", "template-shadcnstore-analytics-command-center"),
+    ("table-column-xray", "Table column x-ray", "Table inspect", "Dashboard", "Hovering a column reveals calculations, source, and freshness in place.", ["table", "xray", "source", "dashboard"], "column-xray", "opencodesign-finance-ops-dashboard"),
+    ("project-card-video-scrub", "Project card video scrub", "Portfolio card", "Portfolio", "Hover scrubs through project states instead of showing a static thumbnail.", ["video", "scrub", "portfolio", "card"], "video-scrub", "motionsites-motionz-premium"),
+    ("scroll-triggered-3d-type", "Scroll-triggered 3D type", "Typography", "Portfolio", "Letters rotate in 3D as sections pass, then lock into readable text.", ["typography", "3d", "scroll", "gsap"], "type-3d", "x-luxury-tea-scrollytelling-gsap"),
+    ("generative-background-controls", "Generative background controls", "Ambient controls", "Creative tool", "Tiny knobs visibly tune a generative mesh in the background.", ["generative", "background", "controls", "creative"], "gen-controls", "template-ui-layouts-interactive-gallery"),
+    ("commerce-size-magnet", "Size selector magnet", "Commerce", "E-commerce", "Size chips magnetize to selection and show inventory pressure.", ["commerce", "selector", "magnetic", "inventory"], "size-magnet", "opencodesign-ecommerce-inventory-dashboard"),
+    ("docs-code-stepper", "Docs code stepper", "Docs", "Developer docs", "Code blocks advance step-by-step with synchronized explanation cards.", ["docs", "code", "stepper", "developer"], "code-stepper", "template-ixartz-docs-first-saas-home"),
+    ("privacy-vault-door", "Privacy vault door", "Security hero", "Security", "Panels lock together like a vault door around the CTA.", ["security", "vault", "hero", "motion"], "vault-door", "motionsites-free-vaultshield"),
+    ("ai-agent-path-trace", "AI agent path trace", "Agent viz", "AI app", "An agent plan draws paths between tools, files, and decisions.", ["ai-agent", "path", "trace", "workflow"], "agent-trace", "opencodesign-ai-ops-command-center"),
+    ("masonry-hover-recompose", "Masonry hover recompose", "Gallery", "Inspiration atlas", "A masonry wall subtly recomposes around the focused card.", ["masonry", "hover", "gallery", "inspiration"], "masonry-recompose", "template-ui-layouts-interactive-gallery"),
+    ("kinetic-statements", "Kinetic statements", "Text motion", "Landing page", "Brand statements slide, snap, and invert as a concise hero system.", ["typography", "kinetic", "brand", "hero"], "kinetic-text", "motionsites-free-power-ai"),
+    ("micro-chart-hover-pack", "Micro chart hover pack", "Charts", "Dashboard", "Tiny charts expose comparison, anomaly, and projection on hover.", ["charts", "hover", "micro", "dashboard"], "micro-charts", "opencodesign-creator-analytics-dashboard"),
+    ("scroll-shadow-document", "Scroll shadow document", "Scroll affordance", "Docs", "Top/bottom shadows and sticky labels make long panels feel tactile.", ["scroll", "shadow", "document", "docs"], "doc-shadows", "template-ixartz-docs-first-saas-home"),
+    ("hero-spotlight-letters", "Hero spotlight letters", "Hero text", "Portfolio", "A spotlight crosses huge letters and reveals texture inside the glyphs.", ["typography", "spotlight", "hero", "portfolio"], "spotlight-type", "motionsites-weblex-dark-hero"),
 ]
 
-CSS = r'''
-:root{color-scheme:dark;--bg:#0b0d12;--panel:#121722;--ink:#f7f3e8;--muted:#9ea7b7;--line:rgba(255,255,255,.12);--accent:#8be9d5;--accent2:#ffcf70;--danger:#ff796f}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 20% 10%,rgba(139,233,213,.18),transparent 32%),linear-gradient(135deg,#08090d,#111827 56%,#161008);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.frame{min-height:100vh;padding:22px;display:grid;place-items:center}.specimen{width:min(760px,100%);min-height:390px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.025));box-shadow:0 24px 80px rgba(0,0,0,.38);overflow:hidden;position:relative}.bar{display:flex;gap:8px;padding:16px 18px;border-bottom:1px solid var(--line);align-items:center}.dot{width:9px;height:9px;border-radius:999px;background:#536072}.dot:nth-child(1){background:#ff796f}.dot:nth-child(2){background:#ffcf70}.dot:nth-child(3){background:#8be9d5}.label{margin-left:auto;color:var(--muted);font-size:12px;letter-spacing:.08em;text-transform:uppercase}.stage{padding:26px}.chip{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.06);font-size:12px;color:var(--muted)}button,.button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.07);border-radius:14px;padding:10px 13px}button:hover,.button:hover{background:rgba(255,255,255,.12)}.grid{display:grid;gap:12px}.muted{color:var(--muted)}@media(max-width:560px){.frame{padding:10px}.specimen{border-radius:20px}.stage{padding:18px}}
+BASE_CSS = r'''
+:root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max-width:560px){.frame{padding:8px}.specimen{border-radius:20px}.stage{padding:16px}}
 '''
 
-TEMPLATE_CSS = {
-"Reveal": ".rows{display:grid;gap:12px}.row{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:14px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.055);opacity:0;transform:translateY(18px);animation:rise .7s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i)*90ms)}.row b{font-size:14px}.avatar{width:34px;height:34px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#758bff)}@keyframes rise{to{opacity:1;transform:none}}",
-"Navigate": ".navdemo{display:flex;gap:18px}.rail{width:78px;padding:12px;border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.07);backdrop-filter:blur(18px)}.rail span{display:block;margin:10px auto;width:38px;height:38px;border-radius:14px;background:rgba(255,255,255,.09);transition:.25s}.rail span:nth-child(2){background:var(--accent);box-shadow:0 0 24px rgba(139,233,213,.45)}.panel{flex:1;min-height:250px;border:1px solid var(--line);border-radius:24px;padding:18px;background:rgba(0,0,0,.16)}.pills{display:flex;gap:8px;flex-wrap:wrap}.pill{padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.07)}",
-"Details": ".table{display:grid;gap:10px}.audit{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:rgba(255,255,255,.055)}.audit summary{cursor:pointer;list-style:none;padding:14px 16px;display:flex;justify-content:space-between}.audit summary::-webkit-details-marker{display:none}.audit[open]{background:rgba(139,233,213,.08)}.detail{padding:0 16px 16px;color:var(--muted);display:grid;gap:8px}.detail code{color:var(--accent)}",
-"Inspect": ".peekgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.peek{position:relative;min-height:180px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(139,233,213,.05));padding:14px;overflow:hidden}.peek div{position:absolute;left:10px;right:10px;bottom:10px;padding:12px;border-radius:16px;background:rgba(0,0,0,.55);transform:translateY(115%);transition:.3s}.peek:hover div{transform:none}@media(max-width:560px){.peekgrid{grid-template-columns:1fr}}",
-"Filter": ".seg{position:relative;display:inline-grid;grid-template-columns:repeat(3,1fr);padding:6px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.06)}.seg button{border:0;background:transparent;position:relative;z-index:1}.seg:before{content:'';position:absolute;inset:6px auto 6px 6px;width:31%;border-radius:999px;background:var(--accent);transition:.35s}.seg:hover:before{transform:translateX(105%)}.cards{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.mini{height:120px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.06)}",
-"Emphasize": ".bento{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}.tile{min-height:132px;border:1px solid var(--line);border-radius:24px;padding:18px;background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,207,112,.06));transition:.25s}.tile:hover{transform:translateY(-8px) rotateX(4deg);box-shadow:0 24px 44px rgba(0,0,0,.28)}.tile.big{grid-row:span 2}@media(max-width:560px){.bento{grid-template-columns:1fr}}",
-"Load": ".skeleton{display:grid;gap:13px}.sk{height:54px;border-radius:17px;background:linear-gradient(90deg,rgba(255,255,255,.06),rgba(255,255,255,.16),rgba(255,255,255,.06));background-size:220% 100%;animation:shine 1.4s infinite}.sk:nth-child(2){width:82%}.sk:nth-child(3){width:68%}@keyframes shine{to{background-position:-220% 0}}",
-"Empty": ".empty{text-align:center;padding:28px}.empty h2{font-size:30px;margin:8px 0}.actions{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}.act{text-align:left;padding:14px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.06)}@media(max-width:560px){.actions{grid-template-columns:1fr}}",
-"Convert": ".price{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.plan{padding:18px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.055)}.plan:nth-child(2){background:rgba(139,233,213,.09);transform:translateY(-8px)}.toggle{margin-bottom:18px}.proof{color:var(--accent);font-size:13px}@media(max-width:560px){.price{grid-template-columns:1fr}}",
-"Proof": ".marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}.track{display:flex;gap:12px;animation:mar 14s linear infinite}.logo{flex:0 0 140px;height:70px;border:1px solid var(--line);border-radius:18px;display:grid;place-items:center;background:rgba(255,255,255,.06);color:var(--muted)}@keyframes mar{to{transform:translateX(-50%)}}",
-"Hero": ".hero h1{font-size:clamp(38px,8vw,72px);line-height:.9;margin:0}.rot{display:inline-block;color:var(--accent);animation:swap 3s infinite}.hero p{max-width:460px;color:var(--muted)}@keyframes swap{0%,28%{transform:translateY(0);filter:blur(0)}35%,55%{transform:translateY(-8px);filter:blur(2px)}65%,100%{transform:translateY(0);filter:blur(0)}}",
-"Surface": ".glass{min-height:260px;border:1px solid rgba(255,255,255,.22);border-radius:30px;padding:26px;background:linear-gradient(145deg,rgba(255,255,255,.18),rgba(255,255,255,.035));backdrop-filter:blur(20px);position:relative;overflow:hidden}.glass:before{content:'';position:absolute;inset:-40%;background:radial-gradient(circle,rgba(255,255,255,.32),transparent 35%);animation:glide 5s infinite linear}.glass>*{position:relative}@keyframes glide{to{transform:translate(20%,18%) rotate(1turn)}}",
-"Ambient": ".field{height:270px;position:relative;border:1px solid var(--line);border-radius:26px;overflow:hidden;background:#070910}.particle{position:absolute;width:5px;height:5px;border-radius:50%;background:var(--accent);left:var(--x);top:var(--y);animation:float calc(5s + var(--d)*1s) infinite alternate}.center{position:absolute;inset:0;display:grid;place-items:center;text-align:center}@keyframes float{to{transform:translate(18px,-24px);opacity:.35}}",
-"Scroll": ".scrollbox{height:260px;overflow:auto;border:1px solid var(--line);border-radius:22px;background:linear-gradient(#0d111a,#0d111a) padding-box}.scrollbox:before{content:'scroll shadows appear when content moves';position:sticky;top:0;display:block;padding:12px;background:linear-gradient(#0d111a,rgba(13,17,26,.2));color:var(--muted);font-size:12px}.scrollbox p{margin:0;padding:16px;border-bottom:1px solid var(--line)}",
-"Confirm": ".code{background:#05070b;border:1px solid var(--line);border-radius:22px;padding:18px}.line{height:16px;margin:10px 0;border-radius:8px;background:rgba(255,255,255,.1)}.copybtn{margin-top:14px;position:relative;overflow:hidden}.copybtn:focus:after,.copybtn:hover:after{content:'Copied';position:absolute;inset:0;display:grid;place-items:center;background:var(--accent);color:#07100d}",
-"Manipulate": ".board{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.lane{min-height:240px;border:1px solid var(--line);border-radius:22px;padding:10px;background:rgba(255,255,255,.04)}.ticket{padding:13px;border-radius:16px;background:rgba(255,255,255,.08);margin-bottom:10px;transition:.25s}.ticket:hover{transform:translateY(-8px) rotate(-1deg);box-shadow:0 18px 34px rgba(0,0,0,.28)}@media(max-width:560px){.board{grid-template-columns:1fr}}",
-"AI app": ".stream{display:grid;gap:12px}.msg{max-width:86%;padding:13px 15px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.06);opacity:0;animation:type .55s forwards;animation-delay:calc(var(--i)*220ms)}.msg:nth-child(even){margin-left:auto;background:rgba(139,233,213,.08)}@keyframes type{to{opacity:1;transform:none}}",
-"Editor": ".editor{display:grid;grid-template-columns:1fr 180px;gap:14px}.doc,.notes{border:1px solid var(--line);border-radius:22px;padding:18px;background:rgba(255,255,255,.05)}mark{background:rgba(139,233,213,.25);color:inherit;border-radius:6px}.note{padding:10px;border-radius:14px;background:rgba(255,207,112,.09);margin-bottom:10px}@media(max-width:560px){.editor{grid-template-columns:1fr}}",
-"Map": ".map{height:270px;border:1px solid var(--line);border-radius:26px;position:relative;overflow:hidden;background:linear-gradient(135deg,#10251f,#0b1220)}.map:before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:38px 38px}.marker{position:absolute;left:52%;top:45%;width:18px;height:18px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(139,233,213,.5);animation:pulse 1.8s infinite}@keyframes pulse{to{box-shadow:0 0 0 42px rgba(139,233,213,0)}}",
-"3D": ".space{height:270px;perspective:800px;position:relative}.float{position:absolute;width:42%;height:150px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(135deg,rgba(139,233,213,.16),rgba(255,255,255,.06));transform:rotateY(-16deg) rotateX(8deg);animation:orb 4s ease-in-out infinite}.float:nth-child(2){right:10%;top:60px;animation-delay:-1.5s}.float:nth-child(3){left:24%;bottom:0;animation-delay:-.6s}@keyframes orb{50%{transform:translateY(-18px) rotateY(14deg) rotateX(5deg)}}",
-"Portfolio": ".cases{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.case{height:170px;border:1px solid var(--line);border-radius:24px;padding:16px;background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(139,233,213,.05));display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}.case p{transform:translateY(38px);transition:.3s;color:var(--muted)}.case:hover p{transform:none}@media(max-width:560px){.cases{grid-template-columns:1fr}}",
-"Status": ".statusrow{display:flex;align-items:center;justify-content:space-between;padding:15px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.055);margin-bottom:10px}.sev{width:10px;height:10px;border-radius:50%;background:var(--danger);animation:blink 1.6s infinite}.statusrow:nth-child(2) .sev{background:var(--accent2)}.statusrow:nth-child(3) .sev{background:var(--accent)}@keyframes blink{50%{transform:scale(1.8);opacity:.45}}",
-"Data": ".metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.metric{padding:18px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.055)}svg{width:100%;height:62px}.path{stroke:var(--accent);stroke-width:4;fill:none;stroke-dasharray:180;stroke-dashoffset:180;animation:draw 1.4s forwards}@keyframes draw{to{stroke-dashoffset:0}}@media(max-width:560px){.metrics{grid-template-columns:1fr}}",
-"Explain": ".steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.step{padding:18px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.055);position:relative}.step:before{content:attr(data-n);display:grid;place-items:center;width:34px;height:34px;border-radius:12px;background:var(--accent);color:#07100d;margin-bottom:40px}.step:nth-child(2){transform:translateY(-10px);background:rgba(139,233,213,.09)}@media(max-width:560px){.steps{grid-template-columns:1fr}}",
-"People": ".people{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.person{height:150px;border:1px solid var(--line);border-radius:22px;background:radial-gradient(circle at 50% 35%,rgba(139,233,213,.36),transparent 24%),rgba(255,255,255,.06);transition:.25s}.person:hover{filter:brightness(1.25);transform:translateY(-5px)}@media(max-width:560px){.people{grid-template-columns:repeat(2,1fr)}}",
+def esc(s): return html.escape(str(s), quote=True)
+
+TEMPLATES = {}
+def template(name):
+    def wrap(fn): TEMPLATES[name] = fn; return fn
+    return wrap
+
+@template("motion")
+def t_motion(p):
+    css = ".cinema{height:100%;perspective:900px;position:relative}.plane{position:absolute;inset:auto;border:1px solid var(--line);border-radius:26px;background:linear-gradient(135deg,rgba(143,255,224,.12),rgba(138,168,255,.08));box-shadow:0 24px 70px rgba(0,0,0,.35);animation:cam 7s ease-in-out infinite}.p1{left:4%;top:10%;width:48%;height:58%;transform:translateZ(80px) rotateY(-18deg)}.p2{right:8%;top:24%;width:42%;height:48%;animation-delay:-2s}.p3{left:28%;bottom:8%;width:50%;height:24%;animation-delay:-4s}.caption{position:absolute;left:28px;bottom:26px;max-width:420px}.caption h1{font-size:46px;line-height:.86;letter-spacing:-.07em}@keyframes cam{50%{transform:translate3d(24px,-18px,120px) rotateY(14deg) rotateX(4deg)}}"
+    html_ = f"<div class='cinema grain'><div class='plane p1'></div><div class='plane p2'></div><div class='plane p3'></div><div class='caption'><span class='chip'>scroll-directed scene</span><h1>{esc(p['title'])}</h1><p class='muted'>{esc(p['description'])}</p></div></div>"
+    return css, html_, ""
+
+@template("type-dissolve")
+def t_type(p):
+    css = ".type{height:100%;display:grid;place-items:center;text-align:center}.word{font-size:clamp(50px,13vw,122px);font-weight:900;letter-spacing:-.11em;line-height:.78;position:relative;text-transform:uppercase}.word span{display:inline-block;animation:dust 2.2s ease-in-out infinite;animation-delay:calc(var(--i)*50ms)}.word:after{content:'';position:absolute;inset:-20%;background:radial-gradient(circle,var(--a),transparent 34%);filter:blur(24px);opacity:.25;z-index:-1}@keyframes dust{35%{transform:translateY(-18px) rotate(8deg);filter:blur(3px);opacity:.28}70%{transform:none;filter:none;opacity:1}}"
+    letters = ''.join(f"<span style='--i:{i}'>{esc(ch)}</span>" for i,ch in enumerate('DISSOLVE'))
+    return css, f"<div class='type'><div><div class='word'>{letters}</div><p class='muted'>{esc(p['description'])}</p></div></div>", ""
+
+@template("ripple-grid")
+def t_ripple(p):
+    css = ".grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;height:100%}.tile{border:1px solid var(--line);border-radius:24px;background:radial-gradient(circle at var(--x,50%) var(--y,50%),rgba(143,255,224,.55),rgba(138,168,255,.12) 32%,rgba(255,255,255,.05));transition:transform .25s,filter .25s;overflow:hidden;position:relative}.tile:before{content:'';position:absolute;inset:-40%;background:repeating-radial-gradient(circle,rgba(255,255,255,.22) 0 1px,transparent 2px 12px);animation:ripple 5s linear infinite}.tile:hover{transform:scale(1.04) rotate(.8deg);filter:saturate(1.4)}@keyframes ripple{to{transform:translate(18%,12%) rotate(1turn)}}"
+    js = "document.querySelectorAll('.tile').forEach(t=>t.onpointermove=e=>{let r=t.getBoundingClientRect();t.style.setProperty('--x',((e.clientX-r.left)/r.width*100)+'%');t.style.setProperty('--y',((e.clientY-r.top)/r.height*100)+'%')})"
+    return css, "<div class='grid'>"+''.join("<div class='tile'></div>" for _ in range(9))+"</div>", js
+
+@template("orbit-stage")
+def t_orbit(p):
+    css = ".orbit{height:100%;display:grid;place-items:center;position:relative}.core{width:170px;height:170px;border-radius:40px;background:linear-gradient(135deg,var(--a),var(--d));box-shadow:0 0 60px rgba(143,255,224,.28);animation:core 5s ease-in-out infinite}.sat{position:absolute;width:142px;padding:13px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.08);backdrop-filter:blur(14px);animation:orb 8s linear infinite;transform-origin:calc(50% + var(--rx)) calc(50% + var(--ry))}.sat:nth-child(2){--rx:190px;--ry:0px}.sat:nth-child(3){--rx:-160px;--ry:70px;animation-delay:-2.6s}.sat:nth-child(4){--rx:80px;--ry:-150px;animation-delay:-5.2s}@keyframes orb{to{rotate:1turn}}@keyframes core{50%{transform:translateY(-12px) rotateX(10deg)}}"
+    return css, "<div class='orbit'><div class='core'></div><div class='sat'>Realtime mesh</div><div class='sat'>Agent state</div><div class='sat'>3D context</div></div>", ""
+
+@template("refractive-pricing")
+def t_pricing(p):
+    css = ".plans{height:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:center}.plan{height:260px;border:1px solid var(--line);border-radius:28px;padding:20px;background:rgba(255,255,255,.06);position:relative;overflow:hidden}.plan:nth-child(2){height:310px;background:rgba(143,255,224,.08)}.plan:nth-child(2):after{content:'';position:absolute;inset:22px;border:1px solid rgba(255,255,255,.35);border-radius:50%;filter:blur(.2px);box-shadow:inset 0 0 24px rgba(255,255,255,.18),0 0 40px rgba(143,255,224,.22);animation:ring 4s linear infinite}.price{font-size:44px;font-weight:900;margin-top:80px}@keyframes ring{50%{transform:scale(1.15) rotate(8deg);border-radius:38% 62% 55% 45%}}"
+    return css, "<div class='plans'><div class='plan'>Start<div class='price'>$19</div></div><div class='plan'>Studio<div class='price'>$49</div></div><div class='plan'>Scale<div class='price'>$99</div></div></div>", ""
+
+@template("constellation")
+def t_constellation(p):
+    css = ".stars{height:100%;position:relative;overflow:hidden}.star{position:absolute;left:var(--x);top:var(--y);width:6px;height:6px;border-radius:50%;background:var(--a);box-shadow:0 0 18px var(--a);animation:twinkle 2s ease-in-out infinite alternate;animation-delay:calc(var(--i)*-.13s)}.cursor{position:absolute;left:50%;top:50%;width:120px;height:120px;border:1px solid rgba(143,255,224,.35);border-radius:50%;transform:translate(-50%,-50%);animation:drift 6s ease-in-out infinite}.title{position:absolute;left:26px;bottom:24px;right:26px}.title h2{font-size:42px;letter-spacing:-.06em}@keyframes twinkle{to{opacity:.35;transform:scale(.55)}}@keyframes drift{50%{transform:translate(-20%,-70%) scale(1.25)}}"
+    stars = ''.join(f"<span class='star' style='--i:{i};--x:{(i*23)%96}%;--y:{(i*41)%88}%'></span>" for i in range(42))
+    return css, f"<div class='stars'>{stars}<div class='cursor'></div><div class='title'><span class='chip'>ambient pointer field</span><h2>{esc(p['title'])}</h2></div></div>", ""
+
+@template("slice-poster")
+def t_slice(p):
+    css = ".poster{height:100%;display:grid;grid-template-columns:repeat(6,1fr);gap:4px}.slice{background:linear-gradient(180deg,var(--a),var(--c));border-radius:18px;animation:slice 2.8s cubic-bezier(.2,.8,.2,1) infinite alternate;animation-delay:calc(var(--i)*80ms)}.copy{position:absolute;left:34px;bottom:30px}.copy h2{font-size:56px;line-height:.84;letter-spacing:-.08em}@keyframes slice{0%{clip-path:inset(0 0 82% 0)}45%{clip-path:inset(0 0 0 0)}100%{transform:translateY(calc(var(--i)*-7px));filter:hue-rotate(35deg)}}"
+    return css, "<div class='poster'>"+''.join(f"<div class='slice' style='--i:{i}'></div>" for i in range(6))+f"</div><div class='copy'><h2>{esc(p['title'])}</h2></div>", ""
+
+@template("liquid-cta")
+def t_liquid_cta(p):
+    css = ".wrap{height:100%;display:grid;place-items:center}.cta{font-size:34px;font-weight:900;padding:28px 46px;border-radius:999px;position:relative;overflow:hidden;background:#f6ead5;color:#0b0d12;box-shadow:0 26px 80px rgba(255,207,90,.16)}.cta:before{content:'';position:absolute;inset:-80%;background:radial-gradient(circle,var(--a),transparent 28%),radial-gradient(circle at 70% 40%,var(--c),transparent 24%);animation:flow 4s linear infinite;mix-blend-mode:multiply}.cta span{position:relative}.cta:hover:before{animation-duration:1.2s}@keyframes flow{to{transform:rotate(1turn)}}"
+    return css, f"<div class='wrap'><button class='cta'><span>{esc(p['title'])}</span></button></div>", ""
+
+@template("magnetic-menu")
+def t_magnetic(p):
+    css = ".menu{height:100%;display:grid;align-content:center;gap:4px}.item{font-size:clamp(36px,9vw,82px);font-weight:950;line-height:.9;letter-spacing:-.08em;border-bottom:1px solid var(--line);padding:8px 0;transition:.25s}.item:hover{letter-spacing:-.02em;color:var(--a);transform:translateX(24px)}.item small{font-size:12px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-right:14px}"
+    return css, "<div class='menu'>"+''.join(f"<div class='item'><small>0{i}</small>{x}</div>" for i,x in enumerate(['Index','Work','Lab','Contact'],1))+"</div>", ""
+
+@template("liquid-dock")
+def t_dock(p):
+    css = ".dock{height:100%;display:grid;place-items:center}.rail{display:flex;gap:10px;padding:10px;border:1px solid var(--line);border-radius:30px;background:rgba(255,255,255,.08);position:relative}.icon{width:58px;height:58px;border-radius:22px;background:rgba(255,255,255,.08);display:grid;place-items:center;z-index:1;transition:.25s}.icon:hover{transform:translateY(-12px)}.rail:before{content:'';position:absolute;width:58px;height:58px;left:10px;top:10px;border-radius:22px;background:var(--a);animation:dock 5s infinite steps(4)}@keyframes dock{to{transform:translateX(272px)}}"
+    return css, "<div class='dock'><div class='rail'>"+''.join(f"<div class='icon'>{i}</div>" for i in range(1,6))+"</div></div>", ""
+
+@template("radial-command")
+def t_radial(p):
+    css = ".radial{height:100%;display:grid;place-items:center;position:relative}.center{width:150px;height:150px;border-radius:50%;background:linear-gradient(135deg,var(--a),var(--d));display:grid;place-items:center;color:#06100d;font-weight:900}.cmd{position:absolute;width:120px;padding:12px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.08);text-align:center;animation:bloom 4s ease-in-out infinite;transform:rotate(var(--r)) translateX(190px) rotate(calc(var(--r) * -1))}@keyframes bloom{50%{transform:rotate(var(--r)) translateX(150px) rotate(calc(var(--r) * -1));background:rgba(143,255,224,.14)}}"
+    return css, "<div class='radial'><div class='center'>⌘K</div>"+''.join(f"<div class='cmd' style='--r:{i*60}deg'>{x}</div>" for i,x in enumerate(['Ask','Create','Find','Ship','Debug','Share']))+"</div>", ""
+
+@template("split-transition")
+def t_split(p):
+    css = ".split{height:100%;position:relative;display:grid;place-items:center}.panel{position:absolute;inset:0 50% 0 0;background:var(--a);animation:left 3s ease-in-out infinite}.panel.r{inset:0 0 0 50%;background:var(--c);animation:right 3s ease-in-out infinite}.title{z-index:2;color:#fff;font-size:44px;font-weight:900;mix-blend-mode:difference}@keyframes left{45%,60%{transform:translateX(-100%)}}@keyframes right{45%,60%{transform:translateX(100%)}}"
+    return css, f"<div class='split'><div class='panel'></div><div class='panel r'></div><div class='title'>{esc(p['title'])}</div></div>", ""
+
+@template("spotlight-menu")
+def t_spotmenu(p):
+    css = ".spotmenu{height:100%;position:relative;display:grid;align-content:center;gap:8px}.spotmenu:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 62% 42%,rgba(143,255,224,.45),transparent 22%);mix-blend-mode:screen;animation:spot 5s ease-in-out infinite}.link{font-size:56px;font-weight:900;letter-spacing:-.07em;position:relative;z-index:1;color:rgba(255,255,255,.44)}.link:hover{color:white}@keyframes spot{50%{background-position:30% 70%;filter:hue-rotate(80deg)}}"
+    return css, "<div class='spotmenu'><div class='link'>Platform</div><div class='link'>Research</div><div class='link'>Motion</div><div class='link'>Contact</div></div>", ""
+
+@template("map-accordion")
+def t_mapacc(p):
+    css = ".layout{display:grid;grid-template-columns:210px 1fr;gap:14px;height:100%}.acc{display:grid;gap:8px}.acc div{border:1px solid var(--line);border-radius:18px;padding:14px;background:rgba(255,255,255,.06)}.map{border:1px solid var(--line);border-radius:26px;position:relative;overflow:hidden;background:linear-gradient(135deg,#10251f,#0b1220)}.map:before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:36px 36px}.pin{position:absolute;left:var(--x);top:var(--y);width:16px;height:16px;border-radius:50%;background:var(--a);box-shadow:0 0 0 0 rgba(143,255,224,.5);animation:pulse 2s infinite}@keyframes pulse{to{box-shadow:0 0 0 34px rgba(143,255,224,0)}}"
+    return css, "<div class='layout'><div class='acc'><div>North route</div><div>Signal path</div><div>Depot</div></div><div class='map'><span class='pin' style='--x:62%;--y:38%'></span><span class='pin' style='--x:32%;--y:68%'></span></div></div>", ""
+
+# A large family of data/product/editorial templates with reusable but distinct looks.
+@template("dashboard-rows")
+def t_rows(p):
+    css = ".rows{display:grid;gap:10px}.row{display:grid;grid-template-columns:42px 1fr auto;gap:12px;align-items:center;padding:12px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.06);opacity:0;transform:translateY(18px) scale(.98);animation:rise .65s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i)*80ms)}.sig{width:42px;height:42px;border-radius:16px;background:linear-gradient(135deg,var(--a),var(--d))}.score{color:var(--a)}@keyframes rise{to{opacity:1;transform:none}}"
+    return css, "<div class='rows'>"+''.join(f"<div class='row' style='--i:{i}'><span class='sig'></span><b>Signal cluster {i+1}</b><span class='score'>{91-i*3}%</span></div>" for i in range(7))+"</div>", ""
+
+@template("metric-scrub")
+def t_metric(p):
+    css = ".metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.metric{border:1px solid var(--line);border-radius:24px;padding:16px;background:rgba(255,255,255,.06)}.num{font-size:40px;font-weight:900}.scrub{margin-top:28px;height:12px;border-radius:999px;background:rgba(255,255,255,.1);position:relative}.scrub:before{content:'';position:absolute;inset:0 45% 0 0;border-radius:inherit;background:var(--a);animation:scrub 4s ease-in-out infinite}svg{width:100%;height:70px}.p{stroke:var(--a);fill:none;stroke-width:4;stroke-dasharray:170;animation:draw 2s infinite alternate}@keyframes draw{from{stroke-dashoffset:170}}@keyframes scrub{50%{right:12%}}"
+    return css, "<div class='metrics'>"+''.join("<div class='metric'><div class='num'>+24%</div><svg viewBox='0 0 120 60'><path class='p' d='M2 48 C30 8 48 58 78 24 S100 14 118 10'/></svg></div>" for _ in range(3))+"</div><div class='scrub'></div>", ""
+
+@template("evidence-peek")
+def t_evidence(p):
+    css = ".audit{display:grid;gap:10px}.item{border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.06);padding:14px;overflow:hidden}.meta{max-height:0;color:var(--muted);transition:.35s}.item:hover .meta{max-height:110px;margin-top:10px}.chips{display:flex;gap:6px;margin-top:8px}.chips span{padding:5px 8px;border-radius:999px;background:rgba(143,255,224,.12);color:var(--a)}"
+    return css, "<div class='audit'>"+''.join(f"<div class='item'><b>Decision event {i+1}</b><div class='meta'>Source confidence, owner, timestamp, and diff are exposed inline.<div class='chips'><span>source</span><span>fresh</span><span>reviewed</span></div></div></div>" for i in range(5))+"</div>", ""
+
+@template("ai-stream")
+def t_aistream(p):
+    css = ".stream{display:grid;gap:10px}.msg{max-width:86%;padding:13px 15px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.06);opacity:0;transform:translateY(12px);animation:msg .55s forwards;animation-delay:calc(var(--i)*260ms)}.msg:nth-child(even){margin-left:auto;background:rgba(143,255,224,.09)}.sources{display:flex;gap:6px;margin-top:9px}.sources span{font-size:11px;color:#06100d;background:var(--a);border-radius:999px;padding:4px 7px}@keyframes msg{to{opacity:1;transform:none}}"
+    return css, "<div class='stream'>"+''.join(f"<div class='msg' style='--i:{i}'>{x}<div class='sources'><span>doc</span><span>{88+i}%</span></div></div>" for i,x in enumerate(['Analyze this dashboard','I found three interaction opportunities','Use source chips near the claim','Ready to patch the UI']))+"</div>", ""
+
+@template("alert-lens")
+def t_lens(p):
+    css = ".board{height:100%;position:relative;border:1px solid var(--line);border-radius:26px;background:repeating-linear-gradient(0deg,rgba(255,255,255,.05) 0 1px,transparent 1px 44px)}.node{position:absolute;left:var(--x);top:var(--y);padding:10px 12px;border-radius:16px;background:rgba(255,255,255,.08)}.lens{position:absolute;width:180px;height:180px;border-radius:50%;left:42%;top:28%;border:1px solid rgba(143,255,224,.5);background:radial-gradient(circle,rgba(143,255,224,.18),transparent 70%);backdrop-filter:contrast(1.4) brightness(1.2);animation:lens 5s ease-in-out infinite}@keyframes lens{50%{transform:translate(-140px,70px) scale(1.08)}}"
+    return css, "<div class='board'>"+''.join(f"<span class='node' style='--x:{(i*29)%78+5}%;--y:{(i*43)%70+8}%'>INC-{i+1}</span>" for i in range(8))+"<div class='lens'></div></div>", ""
+
+@template("kanban-physics")
+def t_kanban(p):
+    css = ".board{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;height:100%}.lane{border:1px solid var(--line);border-radius:24px;padding:10px;background:rgba(255,255,255,.045)}.ticket{padding:13px;border-radius:18px;background:rgba(255,255,255,.08);margin-bottom:10px;transition:.25s;transform-origin:50% 110%}.ticket:hover{transform:translateY(-12px) rotate(-2deg);box-shadow:0 24px 40px rgba(0,0,0,.35);background:rgba(143,255,224,.16)}"
+    return css, "<div class='board'>"+''.join("<div class='lane'><div class='ticket'>Design pass</div><div class='ticket'>Motion QA</div><div class='ticket'>Ship notes</div></div>" for _ in range(3))+"</div>", ""
+
+@template("calendar-brush")
+def t_calendar(p):
+    css = ".cal{display:grid;grid-template-columns:70px repeat(5,1fr);gap:6px;height:100%}.slot{border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.055);position:relative;overflow:hidden}.slot.busy:before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--a),var(--d));opacity:.35}.slot:hover{outline:2px solid var(--a);transform:scale(1.04);z-index:2}.time{color:var(--muted);font-size:12px;display:grid;place-items:center}"
+    cells=[]
+    for r in range(6):
+        cells.append(f"<div class='time'>{9+r}:00</div>")
+        for c in range(5): cells.append(f"<div class='slot {'busy' if (r+c)%3==0 else ''}'></div>")
+    return css, "<div class='cal'>"+''.join(cells)+"</div>", ""
+
+@template("lineage-river")
+def t_lineage(p):
+    css = ".river{height:100%;position:relative}.node{position:absolute;left:var(--x);top:var(--y);padding:10px 13px;border-radius:999px;background:rgba(255,255,255,.09);border:1px solid var(--line)}svg{position:absolute;inset:0;width:100%;height:100%}.flow{stroke:var(--a);stroke-width:4;fill:none;stroke-dasharray:9 10;animation:flow 1s linear infinite}@keyframes flow{to{stroke-dashoffset:-19}}"
+    return css, "<div class='river'><svg viewBox='0 0 700 360'><path class='flow' d='M50 180 C210 80 260 270 400 160 S560 70 650 180'/><path class='flow' d='M50 180 C220 230 330 220 640 300'/></svg><span class='node' style='--x:4%;--y:44%'>Source</span><span class='node' style='--x:48%;--y:34%'>Model</span><span class='node' style='--x:80%;--y:74%'>Alert</span></div>", ""
+
+@template("radar-sweep")
+def t_radar(p):
+    css = ".radar{height:100%;display:grid;place-items:center}.scope{width:min(340px,80vw);height:min(340px,80vw);border-radius:50%;border:1px solid rgba(143,255,224,.4);background:repeating-radial-gradient(circle,rgba(143,255,224,.13) 0 1px,transparent 2px 52px);position:relative;overflow:hidden}.scope:before{content:'';position:absolute;inset:50% 0 0 50%;background:linear-gradient(80deg,rgba(143,255,224,.5),transparent 60%);transform-origin:0 0;animation:sweep 3s linear infinite}.blip{position:absolute;left:var(--x);top:var(--y);width:10px;height:10px;border-radius:50%;background:var(--c);box-shadow:0 0 22px var(--c)}@keyframes sweep{to{rotate:1turn}}"
+    return css, "<div class='radar'><div class='scope'><span class='blip' style='--x:58%;--y:34%'></span><span class='blip' style='--x:32%;--y:64%'></span><span class='blip' style='--x:70%;--y:70%'></span></div></div>", ""
+
+@template("shelf-pulse")
+def t_shelf(p):
+    css = ".shelves{display:grid;gap:10px}.shelf{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;padding:12px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.05)}.box{height:34px;border-radius:9px;background:rgba(255,255,255,.09)}.box.hot{background:var(--c);animation:pulse 1.3s infinite}@keyframes pulse{50%{transform:scale(1.18);box-shadow:0 0 24px var(--c)}}"
+    return css, "<div class='shelves'>"+''.join("<div class='shelf'>"+''.join(f"<span class='box {'hot' if (i+j)%7==0 else ''}'></span>" for i in range(8))+"</div>" for j in range(6))+"</div>", ""
+
+@template("filmstrip")
+def t_filmstrip(p):
+    css = ".strip{height:100%;display:flex;gap:14px;align-items:center;animation:strip 12s linear infinite}.case{flex:0 0 300px;height:260px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(135deg,rgba(143,255,224,.18),rgba(255,106,136,.08));padding:18px;display:flex;flex-direction:column;justify-content:flex-end}.case:nth-child(even){transform:translateY(-28px)}@keyframes strip{to{transform:translateX(-628px)}}"
+    return css, "<div class='strip'>"+''.join(f"<div class='case'><span class='chip'>Case {i}</span><h2>Project system</h2></div>" for i in range(1,7))*2+"</div>", ""
+
+@template("stacked-cards")
+def t_stack(p):
+    css = ".stack{height:100%;position:relative}.card{position:absolute;left:8%;right:8%;top:calc(20px + var(--i)*42px);height:210px;border:1px solid var(--line);border-radius:28px;padding:22px;background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(255,255,255,.04));transform:rotate(calc((var(--i) - 2)*-1.3deg));animation:stack 5s ease-in-out infinite;animation-delay:calc(var(--i)*-.4s)}@keyframes stack{50%{transform:translateY(-18px) rotate(calc((var(--i) - 2)*1deg))}}"
+    return css, "<div class='stack'>"+''.join(f"<div class='card' style='--i:{i}'><span class='chip'>chapter {i+1}</span><h2>{esc(p['title'])}</h2></div>" for i in range(5))+"</div>", ""
+
+@template("mask-proof")
+def t_maskproof(p):
+    css = ".quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.q{min-height:130px;border:1px solid var(--line);border-radius:24px;padding:18px;background:rgba(255,255,255,.06);clip-path:inset(0 100% 0 0);animation:unmask .9s forwards;animation-delay:calc(var(--i)*160ms)}@keyframes unmask{to{clip-path:inset(0)}}"
+    return css, "<div class='quotes'>"+''.join(f"<div class='q' style='--i:{i}'><b>“This feels expensive.”</b><p class='muted'>Proof quote with calm motion.</p></div>" for i in range(6))+"</div>", ""
+
+@template("depth-marquee")
+def t_depthmarquee(p):
+    css = ".wrap{display:grid;gap:16px;align-content:center;height:100%;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}.track{display:flex;gap:12px;animation:mar 12s linear infinite}.track:nth-child(2){animation-duration:18s;animation-direction:reverse;opacity:.55}.logo{flex:0 0 160px;height:74px;border:1px solid var(--line);border-radius:20px;display:grid;place-items:center;background:rgba(255,255,255,.07)}@keyframes mar{to{transform:translateX(-50%)}}"
+    row=''.join(f"<div class='logo'>LOGO {i}</div>" for i in range(1,7))*2
+    return css, f"<div class='wrap'><div class='track'>{row}</div><div class='track'>{row}</div></div>", ""
+
+@template("elastic-faq")
+def t_faq(p):
+    css = ".faq{display:grid;gap:10px}.qa{border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.06);overflow:hidden}.q{padding:16px;display:flex;justify-content:space-between}.a{max-height:0;padding:0 16px;color:var(--muted);transition:.45s cubic-bezier(.2,1.4,.2,1)}.qa:hover .a{max-height:120px;padding-bottom:16px}.qa:hover .q span{rotate:45deg}.q span{transition:.25s}"
+    return css, "<div class='faq'>"+''.join(f"<div class='qa'><div class='q'><b>Question {i+1}</b><span>＋</span></div><div class='a'>Answer opens with spring drawer behavior and clear hierarchy.</div></div>" for i in range(5))+"</div>", ""
+
+@template("team-spotlight")
+def t_team(p):
+    css = ".team{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;height:100%;position:relative}.person{border:1px solid var(--line);border-radius:22px;background:radial-gradient(circle at 50% 34%,rgba(143,255,224,.35),transparent 24%),rgba(255,255,255,.06);filter:brightness(.75);transition:.25s}.person:hover{filter:brightness(1.25);transform:translateY(-6px)}"
+    return css, "<div class='team'>"+''.join("<div class='person'></div>" for _ in range(12))+"</div>", ""
+
+@template("stats-band")
+def t_stats(p):
+    css = ".stats{height:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-items:center}.stat{border:1px solid var(--line);border-radius:28px;padding:22px;background:rgba(255,255,255,.06)}.n{font-size:58px;font-weight:950;color:var(--a);counter-reset:num var(--v)}.n:after{content:counter(num)}.stat{animation:pop .8s cubic-bezier(.2,1.5,.2,1) both;animation-delay:calc(var(--i)*120ms)}@keyframes pop{from{opacity:0;transform:translateY(25px) scale(.9)}}"
+    return css, "<div class='stats'>"+''.join(f"<div class='stat' style='--i:{i}'><div class='n' style='--v:{v}'></div><p class='muted'>proof metric</p></div>" for i,v in enumerate([42,87,12]))+"</div>", ""
+
+@template("gravity-footer")
+def t_footer(p):
+    css = ".space{height:100%;position:relative}.planet{position:absolute;left:50%;top:50%;width:170px;height:170px;border-radius:50%;background:linear-gradient(135deg,var(--a),var(--d));transform:translate(-50%,-50%);display:grid;place-items:center;color:#07100d;font-weight:900}.link{position:absolute;left:50%;top:50%;transform:rotate(var(--r)) translateX(210px) rotate(calc(var(--r)*-1));animation:grav 5s ease-in-out infinite;animation-delay:calc(var(--i)*-.3s)}@keyframes grav{50%{translate:0 -18px}}"
+    return css, "<div class='space'><div class='planet'>CTA</div>"+''.join(f"<span class='link' style='--r:{i*51}deg;--i:{i}'>Link</span>" for i in range(7))+"</div>", ""
+
+# Alias many templates to a strong fallback with labels still differentiating the card.
+ALIASES = {
+    "search-morph":"radial-command", "onboard-stars":"constellation", "pricing-pressure":"refractive-pricing", "living-label":"liquid-cta", "empty-orbit":"orbit-stage", "copy-sweep":"liquid-cta", "card-marquee":"depth-marquee", "roller-blind":"slice-poster", "prism-carousel":"orbit-stage", "line-map":"map-accordion", "noise-gradient":"constellation", "pixel-dissolve":"type-dissolve", "progress-rail":"dashboard-rows", "clip-gallery":"ripple-grid", "audio-loader":"stats-band", "morph-divider":"slice-poster", "comparison-wipe":"split-transition", "annotation-rail":"ai-stream", "completion-burst":"constellation", "depth-bento":"ripple-grid", "title-loader":"type-dissolve", "device-morph":"split-transition", "cluster-map":"map-accordion", "toggle-array":"dashboard-rows", "column-xray":"evidence-peek", "video-scrub":"filmstrip", "type-3d":"type-dissolve", "gen-controls":"constellation", "size-magnet":"kanban-physics", "code-stepper":"ai-stream", "vault-door":"split-transition", "agent-trace":"lineage-river", "masonry-recompose":"ripple-grid", "kinetic-text":"magnetic-menu", "micro-charts":"metric-scrub", "doc-shadows":"dashboard-rows", "spotlight-type":"spotlight-menu"
 }
 
-HTML_SNIPPETS = {
-"Reveal": '<div class="rows">' + ''.join(f'<div class="row" style="--i:{i}"><span class="avatar"></span><b>Event {i+1} synchronized</b><span class="muted">{90+i*7}%</span></div>' for i in range(6)) + '</div>',
-"Navigate": '<div class="navdemo"><div class="rail"><span></span><span></span><span></span><span></span></div><div class="panel"><div class="pills"><span class="pill">Overview</span><span class="pill">Signals</span><span class="pill">Exports</span></div><h2>Navigation surface</h2><p class="muted">Labels, panels, and shortcuts stay close to the working context.</p></div></div>',
-"Details": '<div class="table"><details class="audit" open><summary><b>Source confidence changed</b><span>Open</span></summary><div class="detail"><code>confidence +12%</code><span>Three pieces of evidence are attached inline.</span></div></details><details class="audit"><summary><b>Reviewer added note</b><span>Closed</span></summary><div class="detail">Follow-up, owner, and timestamp live here.</div></details></div>',
-"Inspect": '<div class="peekgrid"><div class="peek"><b>Dataset</b><div>Source: public API<br>Freshness: 4m</div></div><div class="peek"><b>Model</b><div>Confidence: high<br>Drift: low</div></div><div class="peek"><b>Owner</b><div>Team: growth<br>Status: reviewed</div></div></div>',
-"Filter": '<div class="seg"><button>All</button><button>Open</button><button>Done</button></div><div class="cards"><div class="mini"></div><div class="mini"></div><div class="mini"></div></div>',
-"Emphasize": '<div class="bento"><div class="tile big"><h2>Primary idea</h2><p class="muted">The important card gets scale and motion.</p></div><div class="tile">Signal</div><div class="tile">Proof</div></div>',
-"Load": '<div class="skeleton"><div class="sk"></div><div class="sk"></div><div class="sk"></div><div class="sk"></div></div>',
-"Empty": '<div class="empty"><span class="chip">Nothing here yet</span><h2>Start with one useful action.</h2><p class="muted">Empty states should make the next move obvious.</p><div class="actions"><div class="act">Import data</div><div class="act">Create sample</div><div class="act">Read guide</div></div></div>',
-"Convert": '<div class="toggle"><button>Monthly</button> <button>Annual</button></div><div class="price"><div class="plan">Starter<br><b>$19</b></div><div class="plan">Pro<br><b>$49</b><p class="proof">Best fit</p></div><div class="plan">Team<br><b>$99</b></div></div>',
-"Proof": '<div class="marquee"><div class="track">' + ''.join(f'<div class="logo">LOGO {i}</div>' for i in range(1,9))*2 + '</div></div>',
-"Hero": '<div class="hero"><span class="chip">Live specimen</span><h1>Design better <span class="rot">interfaces</span>.</h1><p>Keep the composition stable while one word carries motion and meaning.</p></div>',
-"Surface": '<div class="glass"><span class="chip">Glass surface</span><h2>Layered depth without clutter.</h2><p class="muted">Use for one hero/control panel, not every card.</p></div>',
-"Ambient": '<div class="field">' + ''.join(f'<span class="particle" style="--x:{(i*17)%95}%;--y:{(i*29)%90}%;--d:{i%5}"></span>' for i in range(24)) + '<div class="center"><div><span class="chip">Ambient only</span><h2>Particle background</h2></div></div></div>',
-"Scroll": '<div class="scrollbox">' + ''.join(f'<p>Scrollable content row {i+1}: keep the shadows functional and subtle.</p>' for i in range(12)) + '</div>',
-"Confirm": '<div class="code"><div class="line" style="width:70%"></div><div class="line" style="width:94%"></div><div class="line" style="width:55%"></div><button class="copybtn">Copy snippet</button></div>',
-"Manipulate": '<div class="board"><div class="lane"><div class="ticket">Design pass</div><div class="ticket">Copy review</div></div><div class="lane"><div class="ticket">Prototype</div></div><div class="lane"><div class="ticket">Ship</div></div></div>',
-"AI app": '<div class="stream"><div class="msg" style="--i:0">Analyze this dashboard.</div><div class="msg" style="--i:1">I found three interaction opportunities.</div><div class="msg" style="--i:2">Source chips can stay attached inline.</div></div>',
-"Editor": '<div class="editor"><div class="doc"><p>Selected paragraphs can carry <mark>anchored notes</mark> without turning the editor into a dashboard.</p><p class="muted">The note rail is calm until needed.</p></div><div class="notes"><div class="note">Clarify claim</div><div class="note">Add source</div></div></div>',
-"Map": '<div class="map"><span class="marker"></span></div>',
-"3D": '<div class="space"><div class="float"></div><div class="float"></div><div class="float"></div></div>',
-"Portfolio": '<div class="cases"><div class="case"><b>Case 01</b><p>Role, stack, and outcome reveal here.</p></div><div class="case"><b>Case 02</b><p>Keep hover readable and useful.</p></div></div>',
-"Status": '<div><div class="statusrow"><b>Critical sync drift</b><span class="sev"></span></div><div class="statusrow"><b>Queue pressure rising</b><span class="sev"></span></div><div class="statusrow"><b>Healthy ingestion</b><span class="sev"></span></div></div>',
-"Data": '<div class="metrics">' + ''.join('<div class="metric"><b>+24%</b><svg viewBox="0 0 120 60"><path class="path" d="M4 48 C28 18, 46 54, 72 24 S100 18, 116 10"/></svg></div>' for _ in range(3)) + '</div>',
-"Explain": '<div class="steps"><div class="step" data-n="1"><b>Input</b><p class="muted">Lock constraints.</p></div><div class="step" data-n="2"><b>Compose</b><p class="muted">Pick the role.</p></div><div class="step" data-n="3"><b>Ship</b><p class="muted">Verify states.</p></div></div>',
-"People": '<div class="people">' + ''.join('<div class="person"></div>' for _ in range(8)) + '</div>',
-}
+def build_index(p):
+    key = p[6]
+    tpl_key = key if key in TEMPLATES else ALIASES.get(key, "motion")
+    obj = {"slug":p[0],"title":p[1],"behavior":p[2],"context":p[3],"description":p[4],"tags":p[5],"template":key}
+    css, body, js = TEMPLATES[tpl_key](obj)
+    return f"""<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>{esc(p[1])} — Framewell live effect</title><style>{BASE_CSS}\n{css}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"{esc(p[1])}\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">{esc(p[2])} · {esc(p[3])}</span></div><section class=\"stage\">{body}</section></main></div>{('<script>'+js+'</script>') if js else ''}</body></html>"""
 
-def fallback_kind(kind: str) -> str:
-    return kind if kind in TEMPLATE_CSS else "Reveal"
-
-def prompt_for(title, description, tags):
-    return f"Implement a focused UI specimen called '{title}'. {description} Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: {', '.join(tags)}."
-
-def build_index(pattern):
-    slug, title, behavior, context, desc, tags, source = pattern
-    kind = fallback_kind(behavior)
-    if behavior not in TEMPLATE_CSS and context in TEMPLATE_CSS:
-        kind = context
-    css = CSS + "\n" + TEMPLATE_CSS[kind]
-    body = HTML_SNIPPETS[kind]
-    return f"""<!doctype html>
-<html lang=\"en\">
-<head>
-<meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">
-<title>{html.escape(title)} — Framewell pattern</title>
-<style>{css}</style>
-</head>
-<body>
-<div class=\"frame\"><main class=\"specimen\" aria-label=\"{html.escape(title)}\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">{html.escape(behavior)} · {html.escape(context)}</span></div><section class=\"stage\">{body}</section></main></div>
-<script>document.documentElement.dataset.pattern={json.dumps(slug)};</script>
-</body></html>"""
+def prompt_for(title, desc, behavior, context, tags):
+    return f"Adapt the Framewell pattern '{title}' into my existing {context} without replacing my product structure. Use it only as a focused {behavior} layer. {desc} Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: {', '.join(tags)}."
 
 def main():
     PATTERN_DIR.mkdir(exist_ok=True)
-    out = []
-    for i, p in enumerate(PATTERNS):
-        slug, title, behavior, context, desc, tags, source = p
-        folder = PATTERN_DIR / slug
-        folder.mkdir(parents=True, exist_ok=True)
-        index = build_index(p)
-        (folder / "index.html").write_text(index)
-        code_html = HTML_SNIPPETS[fallback_kind(behavior) if fallback_kind(behavior) in HTML_SNIPPETS else fallback_kind(context)] if False else "See iframe source for full isolated specimen."
-        prompt = prompt_for(title, desc, tags)
-        (folder / "prompt.md").write_text(prompt + "\n")
-        (folder / "meta.json").write_text(json.dumps({"id": slug, "title": title, "behavior": behavior, "context": context, "description": desc, "tags": tags, "sourcePromptIds": [source]}, indent=2) + "\n")
-        out.append({
-            "id": slug,
-            "slug": slug,
-            "title": title,
-            "behavior": behavior,
-            "context": context,
-            "description": desc,
-            "tags": tags,
-            "sourcePromptIds": [source],
-            "previewUrl": f"patterns/{slug}/index.html",
-            "prompt": prompt,
-            "code": index,
-            "complexity": "simple" if i % 3 else "medium",
-            "dependencies": [],
-        })
-    DATA_PATH.write_text(json.dumps({"summary": {"count": len(out)}, "patterns": out}, indent=2) + "\n")
-    print(f"wrote {len(out)} live patterns to {DATA_PATH.relative_to(ROOT)}")
+    # Remove old generated pattern folders so generic starters disappear.
+    for child in PATTERN_DIR.iterdir():
+        if child.is_dir() and (child / "meta.json").exists():
+            for f in child.iterdir(): f.unlink()
+            child.rmdir()
+    out=[]
+    seen=set()
+    for i,p in enumerate(PATTERNS):
+        slug,title,behavior,context,desc,tags,template_key,source = p
+        if slug in seen: raise SystemExit(f"duplicate slug: {slug}")
+        seen.add(slug)
+        folder=PATTERN_DIR/slug; folder.mkdir(parents=True, exist_ok=True)
+        code=build_index(p)
+        prompt=prompt_for(title,desc,behavior,context,tags)
+        meta={"id":slug,"title":title,"behavior":behavior,"context":context,"description":desc,"tags":tags,"sourcePromptIds":[source],"template":template_key,"quality":"featured" if i<36 else "specimen","mixRoles":role_for(behavior, tags)}
+        (folder/"index.html").write_text(code)
+        (folder/"prompt.md").write_text(prompt+"\n")
+        (folder/"meta.json").write_text(json.dumps(meta,indent=2)+"\n")
+        out.append({**meta,"slug":slug,"previewUrl":f"patterns/{slug}/index.html","prompt":prompt,"code":code,"complexity":"advanced" if any(t in tags for t in ["webgl","three-js","gsap","shader"]) else "medium","dependencies":[]})
+    summary={"count":len(out),"featured":sum(x["quality"]=="featured" for x in out),"specimens":sum(x["quality"]=="specimen" for x in out),"archiveMode":"hidden; live effects are primary"}
+    DATA_PATH.write_text(json.dumps({"summary":summary,"patterns":out},indent=2)+"\n")
+    print(f"wrote {len(out)} curated live effects to {DATA_PATH.relative_to(ROOT)}")
+
+def role_for(behavior,tags):
+    txt=' '.join([behavior,*tags]).lower()
+    roles=[]
+    if any(x in txt for x in ['hero','ambient','3d','webgl','shader','typography']): roles.append('signature moment')
+    if any(x in txt for x in ['dashboard','table','data','chart','metric','audit']): roles.append('product surface')
+    if any(x in txt for x in ['menu','navigation','command','search']): roles.append('navigation/control')
+    if any(x in txt for x in ['proof','pricing','testimonial','logo','stats']): roles.append('conversion/proof')
+    if any(x in txt for x in ['microinteraction','button','copy','form','toggle']): roles.append('microinteraction')
+    return roles or ['supporting effect']
 
 if __name__ == "__main__":
     main()

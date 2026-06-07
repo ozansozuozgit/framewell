@@ -1,0 +1,21 @@
+{
+  "id": "sticky-comparison-wipe",
+  "title": "Sticky comparison wipe",
+  "behavior": "Compare",
+  "context": "Marketing",
+  "description": "A sticky before/after wipe makes a product claim tangible.",
+  "tags": [
+    "compare",
+    "wipe",
+    "sticky",
+    "before-after"
+  ],
+  "sourcePromptIds": [
+    "opencodesign-open-source-project-homepage"
+  ],
+  "template": "comparison-wipe",
+  "quality": "specimen",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

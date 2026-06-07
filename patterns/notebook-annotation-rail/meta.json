@@ -1,0 +1,21 @@
+{
+  "id": "notebook-annotation-rail",
+  "title": "Notebook annotation rail",
+  "behavior": "Editor",
+  "context": "AI notebook",
+  "description": "Side notes magnetize to selected paragraphs and source chips.",
+  "tags": [
+    "editor",
+    "annotations",
+    "notebook",
+    "ai"
+  ],
+  "sourcePromptIds": [
+    "opencodesign-ai-writing-assistant-hero"
+  ],
+  "template": "annotation-rail",
+  "quality": "specimen",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

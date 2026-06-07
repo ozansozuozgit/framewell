@@ -1,0 +1,21 @@
+{
+  "id": "ai-agent-path-trace",
+  "title": "AI agent path trace",
+  "behavior": "Agent viz",
+  "context": "AI app",
+  "description": "An agent plan draws paths between tools, files, and decisions.",
+  "tags": [
+    "ai-agent",
+    "path",
+    "trace",
+    "workflow"
+  ],
+  "sourcePromptIds": [
+    "opencodesign-ai-ops-command-center"
+  ],
+  "template": "agent-trace",
+  "quality": "specimen",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

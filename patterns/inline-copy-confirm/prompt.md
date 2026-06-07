@@ -1,1 +1,0 @@
-Implement a focused UI specimen called 'Inline copy confirm'. Copy buttons confirm in place with a tiny success sweep. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: copy, confirm, code, microinteraction.

@@ -1,1 +1,0 @@
-Implement a focused UI specimen called 'Stats proof count-up'. Proof metrics count up once as the band enters view. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: stats, countup, proof, scroll.

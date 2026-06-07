@@ -1,1 +1,0 @@
-Implement a focused UI specimen called 'Agency case reveal'. Case study tiles reveal role, stack, and outcome on hover. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: agency, case-study, hover, portfolio.

@@ -1,0 +1,21 @@
+{
+  "id": "data-lineage-river",
+  "title": "Data lineage river",
+  "behavior": "Data viz",
+  "context": "Analytics",
+  "description": "Streams split from a source into model, alert, and decision nodes.",
+  "tags": [
+    "lineage",
+    "data-viz",
+    "flow",
+    "dashboard"
+  ],
+  "sourcePromptIds": [
+    "opencodesign-design-token-inspector"
+  ],
+  "template": "lineage-river",
+  "quality": "featured",
+  "mixRoles": [
+    "product surface"
+  ]
+}

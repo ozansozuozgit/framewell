@@ -1,0 +1,21 @@
+{
+  "id": "split-panel-route-transition",
+  "title": "Split-panel route transition",
+  "behavior": "Transition",
+  "context": "Web app",
+  "description": "Two panels wipe in opposing directions for page transitions.",
+  "tags": [
+    "page-transition",
+    "wipe",
+    "panels",
+    "route"
+  ],
+  "sourcePromptIds": [
+    "template-karthik-dark-saas-launch"
+  ],
+  "template": "split-transition",
+  "quality": "featured",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

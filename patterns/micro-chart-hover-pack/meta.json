@@ -1,0 +1,21 @@
+{
+  "id": "micro-chart-hover-pack",
+  "title": "Micro chart hover pack",
+  "behavior": "Charts",
+  "context": "Dashboard",
+  "description": "Tiny charts expose comparison, anomaly, and projection on hover.",
+  "tags": [
+    "charts",
+    "hover",
+    "micro",
+    "dashboard"
+  ],
+  "sourcePromptIds": [
+    "opencodesign-creator-analytics-dashboard"
+  ],
+  "template": "micro-charts",
+  "quality": "specimen",
+  "mixRoles": [
+    "product surface"
+  ]
+}

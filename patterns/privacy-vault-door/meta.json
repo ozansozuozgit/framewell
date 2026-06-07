@@ -1,0 +1,21 @@
+{
+  "id": "privacy-vault-door",
+  "title": "Privacy vault door",
+  "behavior": "Security hero",
+  "context": "Security",
+  "description": "Panels lock together like a vault door around the CTA.",
+  "tags": [
+    "security",
+    "vault",
+    "hero",
+    "motion"
+  ],
+  "sourcePromptIds": [
+    "motionsites-free-vaultshield"
+  ],
+  "template": "vault-door",
+  "quality": "specimen",
+  "mixRoles": [
+    "signature moment"
+  ]
+}

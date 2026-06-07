@@ -1,0 +1,21 @@
+{
+  "id": "security-radar-sweep",
+  "title": "Security radar sweep",
+  "behavior": "Status visual",
+  "context": "Security",
+  "description": "A radar sweep checks assets and leaves classified severity blips.",
+  "tags": [
+    "security",
+    "radar",
+    "scan",
+    "status"
+  ],
+  "sourcePromptIds": [
+    "opencodesign-enterprise-security-page"
+  ],
+  "template": "radar-sweep",
+  "quality": "featured",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

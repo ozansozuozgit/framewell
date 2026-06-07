@@ -1,0 +1,21 @@
+{
+  "id": "infinite-marquee-cards",
+  "title": "Infinite marquee cards",
+  "behavior": "Loop",
+  "context": "Gallery",
+  "description": "Cards loop in two directions while preserving hover focus.",
+  "tags": [
+    "marquee",
+    "cards",
+    "loop",
+    "gallery"
+  ],
+  "sourcePromptIds": [
+    "website-cards-animation"
+  ],
+  "template": "card-marquee",
+  "quality": "specimen",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

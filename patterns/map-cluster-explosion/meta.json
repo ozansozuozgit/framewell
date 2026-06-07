@@ -1,0 +1,21 @@
+{
+  "id": "map-cluster-explosion",
+  "title": "Map cluster explosion",
+  "behavior": "Map",
+  "context": "Geo app",
+  "description": "Clustered markers explode into categorized pins on focus.",
+  "tags": [
+    "map",
+    "cluster",
+    "pins",
+    "geo"
+  ],
+  "sourcePromptIds": [
+    "motionsites-terra-geo-map"
+  ],
+  "template": "cluster-map",
+  "quality": "specimen",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

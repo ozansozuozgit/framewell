@@ -6,7 +6,7 @@ let curation = { summary: {}, items: {}, bundles: [], antiSlopRules: [] };
 let composition = { summary: {}, vocabulary: {}, roles: [], compatibility: { goodPairs: [], badPairs: [] }, items: {}, recipes: [] };
 let filtered = [];
 let shuffleMode = false;
-const patternState = { query: '', behavior: '', context: '' };
+const patternState = { query: '', behavior: '', context: '', role: '' };
 const selectedPatterns = new Set();
 const state = { query: '', source: '', type: '', tag: '', tier: 'canon' };
 
@@ -46,6 +46,8 @@ const els = {
   patternSearch: document.getElementById('patternSearch'),
   behaviorSelect: document.getElementById('behaviorSelect'),
   contextSelect: document.getElementById('contextSelect'),
+  roleSelect: document.getElementById('roleSelect'),
+  mixIntent: document.getElementById('mixIntent'),
   kitTray: document.getElementById('kitTray'),
   kitBrief: document.getElementById('kitBrief')
 };
@@ -128,6 +130,10 @@ function setupControls(){
     const contexts = [...new Set(patterns.map(p => p.context).filter(Boolean))].sort();
     els.contextSelect.innerHTML = '<option value="">All contexts</option>' + optionHtml(contexts);
   }
+  if(els.roleSelect){
+    const roles = [...new Set(patterns.flatMap(p => p.mixRoles || []).filter(Boolean))].sort();
+    els.roleSelect.innerHTML = '<option value="">All roles</option>' + optionHtml(roles);
+  }
   renderQuickChips();
 }
 function renderQuickChips(){
@@ -165,17 +171,17 @@ function applyFilters(){
   if(shuffleMode) filtered = [...filtered].sort(() => Math.random() - 0.5).slice(0, 36);
 }
 function renderStats(){
-  const canon = curation.summary?.canon ?? posts.filter(p => tierOf(p) === 'canon').length;
-  const previews = posts.filter(hasPreview).length;
-  const bundleCount = curation.bundles?.length || 0;
-  document.getElementById('statTotal').textContent = posts.length;
-  document.getElementById('statCurated').textContent = canon;
-  document.getElementById('statPreviews').textContent = previews;
-  document.getElementById('statSources').textContent = bundleCount;
-  document.getElementById('promptTotal').textContent = `${Object.keys(prompts).length} prompts`;
-  els.navCount.textContent = `${canon} canon · ${bundleCount} kits`;
-  const latest = posts.slice(-5).reverse();
-  if(els.scoutList) els.scoutList.innerHTML = latest.map(p => `<button type="button" data-open="${esc(p.id)}"><span>${esc(sourceOf(p))}</span><b>${esc(p.title)}</b></button>`).join('');
+  const featured = patterns.filter(p => p.quality === 'featured').length;
+  const contexts = new Set(patterns.map(p => p.context).filter(Boolean)).size;
+  const roles = new Set(patterns.flatMap(p => p.mixRoles || [])).size;
+  document.getElementById('statTotal').textContent = patterns.length || posts.length;
+  document.getElementById('statCurated').textContent = featured || (curation.summary?.canon ?? 0);
+  document.getElementById('statPreviews').textContent = contexts || posts.filter(hasPreview).length;
+  document.getElementById('statSources').textContent = roles || (curation.bundles?.length || 0);
+  document.getElementById('promptTotal').textContent = `${patterns.length || 0} live effects`;
+  els.navCount.textContent = `${patterns.length || 0} effects · ${featured || 0} featured`;
+  const latest = patterns.slice(0,5);
+  if(els.scoutList) els.scoutList.innerHTML = latest.map(p => `<button type="button" data-open-pattern="${esc(p.id)}"><span>${esc(p.behavior)}</span><b>${esc(p.title)}</b></button>`).join('');
 }
 function renderFacets(){
   if(!els.sourceFacet || !els.tagFacet) return;
@@ -217,6 +223,19 @@ function heroCandidates(){
 }
 function renderHeroLab(){
   if(!els.heroStage || !els.heroReel) return;
+  if(patterns.length){
+    const picks = patterns.filter(p => p.quality === 'featured').slice(0, 7);
+    const primary = picks[0];
+    els.heroStage.innerHTML = `<article class="hero-feature pattern-hero-feature" data-pattern="${esc(primary.id)}">
+      <iframe src="${esc(primary.previewUrl)}" title="${esc(primary.title)} hero preview" loading="eager"></iframe>
+      <div class="hero-feature-copy"><span>Featured live effect · ${esc(primary.behavior)}</span><h2>${esc(primary.title)}</h2><p>${esc(primary.description)}</p></div>
+    </article>`;
+    els.heroReel.innerHTML = picks.slice(1, 7).map((p,i)=>`<article class="hero-reel-card pattern-hero-reel" data-pattern="${esc(p.id)}" style="--i:${i}">
+      <iframe src="${esc(p.previewUrl)}" title="${esc(p.title)} mini preview" loading="lazy"></iframe>
+      <div><span>${esc(p.behavior)}</span><b>${esc(p.title)}</b></div>
+    </article>`).join('');
+    return;
+  }
   const picks = heroCandidates();
   const primary = picks[0];
   if(!primary) return;
@@ -424,16 +443,18 @@ function filteredPatterns(){
     if(q && !q.split(/\s+/).every(token => hay.includes(token))) return false;
     if(patternState.behavior && p.behavior !== patternState.behavior) return false;
     if(patternState.context && p.context !== patternState.context) return false;
+    if(patternState.role && !(p.mixRoles || []).includes(patternState.role)) return false;
     return true;
   });
 }
 function patternCard(p, i){
   const selected = selectedPatterns.has(p.id);
   const tags = (p.tags || []).slice(0,4).map(t => `<span class="tag">${esc(t)}</span>`).join('');
+  const roles = (p.mixRoles || []).slice(0,2).map(t => `<span class="role-pill">${esc(t)}</span>`).join('');
   const sources = (p.sourcePromptIds || []).slice(0,2).map(id => `<span>${esc(id)}</span>`).join('');
   return `<article class="live-pattern-card ${selected ? 'is-selected' : ''}" data-pattern="${esc(p.id)}" style="--i:${i}">
     <div class="pattern-frame"><iframe src="${esc(p.previewUrl)}" title="${esc(p.title)} preview" loading="lazy"></iframe></div>
-    <div class="pattern-body"><div class="browse-meta"><span>${esc(p.behavior)}</span><span>${esc(p.context)}</span></div><h3>${esc(p.title)}</h3><p>${esc(p.description)}</p><div class="tags">${tags}</div><div class="pattern-source">Source prompt ${sources || '<span>local specimen</span>'}</div>
+    <div class="pattern-body"><div class="browse-meta"><span>${esc(p.behavior)}</span><span>${esc(p.context)}</span><span>${esc(p.quality || 'specimen')}</span></div><h3>${esc(p.title)}</h3><p>${esc(p.description)}</p><div class="role-row">${roles}</div><div class="tags">${tags}</div><div class="pattern-source">Lineage ${sources || '<span>local specimen</span>'}</div>
     <div class="pattern-actions"><button type="button" data-open-pattern="${esc(p.id)}">Open</button><button type="button" data-copy-pattern="${esc(p.id)}">Copy code</button><button type="button" data-copy-pattern-prompt="${esc(p.id)}">Copy prompt</button><button type="button" data-toggle-pattern="${esc(p.id)}">${selected ? 'Selected' : 'Add to mix'}</button></div></div>
   </article>`;
 }
@@ -449,7 +470,8 @@ function renderKitTray(){
   if(els.kitBrief){ els.kitBrief.hidden = false; els.kitBrief.textContent = liveKitBrief(picked); }
 }
 function liveKitBrief(picked){
-  return `Integrate these Framewell live UI patterns into my existing product without replacing the app structure. Keep visual language cohesive, preserve accessibility, and adapt code only where needed.\n\nSelected patterns:\n${picked.map((p,i)=>`${i+1}. ${p.title} — ${p.description} Behavior: ${p.behavior}. Context: ${p.context}. Tags: ${(p.tags||[]).join(', ')}.`).join('\n')}\n\nImplementation rules:\n- Treat each pattern as an isolated behavior/specimen, not a full page template.\n- Reuse my existing data model, components, typography, and color tokens.\n- Add the smallest necessary HTML/CSS/JS or framework code.\n- Respect prefers-reduced-motion and keyboard interaction.\n- Explain which pattern influenced each change.`;
+  const intent = els.mixIntent?.value?.trim() || 'my existing product';
+  return `Goal: build ${intent}.\n\nIntegrate these Framewell live UI patterns without replacing the app structure. Combine them as atoms: one signature moment, one navigation/control idea, supporting product-surface effects, and only the microinteractions that genuinely help. Keep one coherent art direction; do not collage styles.\n\nSelected patterns:\n${picked.map((p,i)=>`${i+1}. ${p.title} — ${p.description} Behavior: ${p.behavior}. Context: ${p.context}. Mix role: ${(p.mixRoles||[]).join(', ') || 'supporting effect'}. Tags: ${(p.tags||[]).join(', ')}.`).join('\n')}\n\nImplementation rules:\n- Treat each pattern as an isolated behavior/specimen, not a full page template.\n- First assign each pattern a job: structure, signature motion, data surface, control, proof, or microinteraction.\n- Reuse my existing data model, components, typography, and color tokens.\n- Add the smallest necessary HTML/CSS/JS or framework code.\n- Use real states: loading, hover/focus, keyboard, empty/error, mobile, reduced motion.\n- If two effects compete, keep the stronger one and demote the other to a subtle detail.\n- Explain which pattern influenced each change.`;
 }
 function renderPatternStudio(){
   if(!els.patternGrid) return;
@@ -559,6 +581,8 @@ if(els.copyBrief) els.copyBrief.onclick = () => copyCurrentBrief();
 if(els.patternSearch) els.patternSearch.addEventListener('input', e => { patternState.query = e.target.value.trim(); renderPatternStudio(); });
 if(els.behaviorSelect) els.behaviorSelect.addEventListener('change', e => { patternState.behavior = e.target.value; renderPatternStudio(); });
 if(els.contextSelect) els.contextSelect.addEventListener('change', e => { patternState.context = e.target.value; renderPatternStudio(); });
+if(els.roleSelect) els.roleSelect.addEventListener('change', e => { patternState.role = e.target.value; renderPatternStudio(); });
+if(els.mixIntent) els.mixIntent.addEventListener('input', () => renderKitTray());
 document.getElementById('clearFilters').onclick = () => { state.query=''; state.source=''; state.type=''; state.tag=''; state.tier=''; shuffleMode=false; els.search.value=''; els.sourceSelect.value=''; els.typeSelect.value=''; if(els.tierSelect) els.tierSelect.value=''; render(); };
 document.getElementById('shuffleButton').onclick = () => { shuffleMode = !shuffleMode; render(); document.getElementById('library').scrollIntoView({behavior:'smooth'}); };
 document.addEventListener('keydown', e => { if(e.key === '/' && document.activeElement !== els.search){ e.preventDefault(); els.search.focus(); } });

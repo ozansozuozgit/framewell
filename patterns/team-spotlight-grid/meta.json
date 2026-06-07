@@ -1,0 +1,21 @@
+{
+  "id": "team-spotlight-grid",
+  "title": "Team spotlight grid",
+  "behavior": "People grid",
+  "context": "Marketing",
+  "description": "A cursor spotlight reveals portraits, roles, and one-line principles.",
+  "tags": [
+    "team",
+    "spotlight",
+    "grid",
+    "people"
+  ],
+  "sourcePromptIds": [
+    "tailark-team-grid-editorial"
+  ],
+  "template": "team-spotlight",
+  "quality": "featured",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

@@ -1,1 +1,0 @@
-Implement a focused UI specimen called 'Draggable chip cloud'. Filter chips feel tactile through press, lift, and snap feedback. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: chips, filter, drag, tactile.

@@ -1,1 +1,0 @@
-Implement a focused UI specimen called 'Glass sidebar rail'. A translucent left rail reveals labels and active context. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: sidebar, glass, navigation, dashboard.

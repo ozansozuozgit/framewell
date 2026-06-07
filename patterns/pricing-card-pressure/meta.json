@@ -1,0 +1,22 @@
+{
+  "id": "pricing-card-pressure",
+  "title": "Pricing pressure card",
+  "behavior": "Pricing",
+  "context": "SaaS",
+  "description": "Recommended plan reacts to plan toggles with proof and pressure indicators.",
+  "tags": [
+    "pricing",
+    "toggle",
+    "proof",
+    "saas"
+  ],
+  "sourcePromptIds": [
+    "tailark-pricing-comparison"
+  ],
+  "template": "pricing-pressure",
+  "quality": "featured",
+  "mixRoles": [
+    "conversion/proof",
+    "microinteraction"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "radial-command-wheel",
+  "title": "Radial command wheel",
+  "behavior": "Command",
+  "context": "AI app",
+  "description": "Keyboard actions bloom into a radial, spatial command palette.",
+  "tags": [
+    "command",
+    "radial",
+    "keyboard",
+    "ai"
+  ],
+  "sourcePromptIds": [
+    "template-shadcnstore-analytics-command-center"
+  ],
+  "template": "radial-command",
+  "quality": "featured",
+  "mixRoles": [
+    "navigation/control"
+  ]
+}

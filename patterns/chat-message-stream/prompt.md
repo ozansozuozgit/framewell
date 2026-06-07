@@ -1,1 +1,0 @@
-Implement a focused UI specimen called 'Chat message stream'. Assistant messages enter with line-by-line cadence and source chips. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: chat, stream, ai, sources.

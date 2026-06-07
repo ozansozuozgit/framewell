@@ -1,0 +1,1 @@
+Adapt the Framewell pattern '3D prism carousel' into my existing Portfolio without replacing my product structure. Use it only as a focused Carousel layer. Slides rotate through a prism instead of a flat carousel. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: 3d, carousel, prism, portfolio.

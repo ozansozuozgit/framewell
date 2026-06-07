@@ -1,0 +1,21 @@
+{
+  "id": "search-bar-morph-results",
+  "title": "Search bar morph results",
+  "behavior": "Search",
+  "context": "Web app",
+  "description": "Search expands into a command surface with grouped live results.",
+  "tags": [
+    "search",
+    "command",
+    "results",
+    "morph"
+  ],
+  "sourcePromptIds": [
+    "template-ui-layouts-interactive-gallery"
+  ],
+  "template": "search-morph",
+  "quality": "featured",
+  "mixRoles": [
+    "navigation/control"
+  ]
+}

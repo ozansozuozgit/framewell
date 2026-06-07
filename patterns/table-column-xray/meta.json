@@ -1,0 +1,21 @@
+{
+  "id": "table-column-xray",
+  "title": "Table column x-ray",
+  "behavior": "Table inspect",
+  "context": "Dashboard",
+  "description": "Hovering a column reveals calculations, source, and freshness in place.",
+  "tags": [
+    "table",
+    "xray",
+    "source",
+    "dashboard"
+  ],
+  "sourcePromptIds": [
+    "opencodesign-finance-ops-dashboard"
+  ],
+  "template": "column-xray",
+  "quality": "specimen",
+  "mixRoles": [
+    "product surface"
+  ]
+}

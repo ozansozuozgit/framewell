@@ -1,1 +1,0 @@
-Implement a focused UI specimen called 'Liquid glass card'. A glass panel uses gradient blur, shine, and parallax depth. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: glass, surface, hero, premium.

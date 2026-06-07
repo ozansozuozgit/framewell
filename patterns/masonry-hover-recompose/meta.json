@@ -1,0 +1,21 @@
+{
+  "id": "masonry-hover-recompose",
+  "title": "Masonry hover recompose",
+  "behavior": "Gallery",
+  "context": "Inspiration atlas",
+  "description": "A masonry wall subtly recomposes around the focused card.",
+  "tags": [
+    "masonry",
+    "hover",
+    "gallery",
+    "inspiration"
+  ],
+  "sourcePromptIds": [
+    "template-ui-layouts-interactive-gallery"
+  ],
+  "template": "masonry-recompose",
+  "quality": "specimen",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

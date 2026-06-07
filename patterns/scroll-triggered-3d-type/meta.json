@@ -1,0 +1,21 @@
+{
+  "id": "scroll-triggered-3d-type",
+  "title": "Scroll-triggered 3D type",
+  "behavior": "Typography",
+  "context": "Portfolio",
+  "description": "Letters rotate in 3D as sections pass, then lock into readable text.",
+  "tags": [
+    "typography",
+    "3d",
+    "scroll",
+    "gsap"
+  ],
+  "sourcePromptIds": [
+    "x-luxury-tea-scrollytelling-gsap"
+  ],
+  "template": "type-3d",
+  "quality": "specimen",
+  "mixRoles": [
+    "signature moment"
+  ]
+}

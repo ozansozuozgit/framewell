@@ -1,1 +1,0 @@
-Implement a focused UI specimen called 'Signal skeleton loader'. Loading rows shimmer with tiny source/signal placeholders. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: loading, skeleton, data, status.

@@ -1,0 +1,21 @@
+{
+  "id": "onboarding-constellation",
+  "title": "Onboarding constellation picker",
+  "behavior": "Onboarding",
+  "context": "AI app",
+  "description": "Choices become a constellation map that explains the setup path.",
+  "tags": [
+    "onboarding",
+    "constellation",
+    "choices",
+    "ai"
+  ],
+  "sourcePromptIds": [
+    "opencodesign-ai-notebook-waitlist"
+  ],
+  "template": "onboard-stars",
+  "quality": "featured",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

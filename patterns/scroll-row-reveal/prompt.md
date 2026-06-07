@@ -1,1 +1,0 @@
-Implement a focused UI specimen called 'Scroll row reveal'. Rows lift into place as a dense activity feed enters the viewport. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: scroll, dashboard, feed, intersection-observer.

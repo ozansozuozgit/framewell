@@ -1,0 +1,21 @@
+{
+  "id": "3d-carousel-prism",
+  "title": "3D prism carousel",
+  "behavior": "Carousel",
+  "context": "Portfolio",
+  "description": "Slides rotate through a prism instead of a flat carousel.",
+  "tags": [
+    "3d",
+    "carousel",
+    "prism",
+    "portfolio"
+  ],
+  "sourcePromptIds": [
+    "motionsites-portfolio-cosmic"
+  ],
+  "template": "prism-carousel",
+  "quality": "specimen",
+  "mixRoles": [
+    "signature moment"
+  ]
+}

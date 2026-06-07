@@ -1,0 +1,21 @@
+{
+  "id": "task-completion-confetti-minimal",
+  "title": "Minimal completion burst",
+  "behavior": "Celebration",
+  "context": "Productivity",
+  "description": "Completing a task emits a tiny geometric burst without becoming childish.",
+  "tags": [
+    "completion",
+    "confetti",
+    "minimal",
+    "task"
+  ],
+  "sourcePromptIds": [
+    "motionsites-free-taskly"
+  ],
+  "template": "completion-burst",
+  "quality": "specimen",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

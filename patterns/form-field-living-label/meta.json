@@ -1,0 +1,21 @@
+{
+  "id": "form-field-living-label",
+  "title": "Living form label",
+  "behavior": "Form",
+  "context": "SaaS",
+  "description": "Labels become validation hints, progress, and context without extra chrome.",
+  "tags": [
+    "form",
+    "label",
+    "validation",
+    "microinteraction"
+  ],
+  "sourcePromptIds": [
+    "template-ixartz-devtool-landing-page"
+  ],
+  "template": "living-label",
+  "quality": "featured",
+  "mixRoles": [
+    "microinteraction"
+  ]
+}

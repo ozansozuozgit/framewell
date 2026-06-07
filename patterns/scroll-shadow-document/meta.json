@@ -1,0 +1,21 @@
+{
+  "id": "scroll-shadow-document",
+  "title": "Scroll shadow document",
+  "behavior": "Scroll affordance",
+  "context": "Docs",
+  "description": "Top/bottom shadows and sticky labels make long panels feel tactile.",
+  "tags": [
+    "scroll",
+    "shadow",
+    "document",
+    "docs"
+  ],
+  "sourcePromptIds": [
+    "template-ixartz-docs-first-saas-home"
+  ],
+  "template": "doc-shadows",
+  "quality": "specimen",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}

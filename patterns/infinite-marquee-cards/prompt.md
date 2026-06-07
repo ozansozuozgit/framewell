@@ -1,0 +1,1 @@
+Adapt the Framewell pattern 'Infinite marquee cards' into my existing Gallery without replacing my product structure. Use it only as a focused Loop layer. Cards loop in two directions while preserving hover focus. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: marquee, cards, loop, gallery.

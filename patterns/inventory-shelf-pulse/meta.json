@@ -1,0 +1,21 @@
+{
+  "id": "inventory-shelf-pulse",
+  "title": "Inventory shelf pulse",
+  "behavior": "Commerce alert",
+  "context": "Commerce",
+  "description": "Inventory rows compress into shelf lanes and pulse at risk points.",
+  "tags": [
+    "commerce",
+    "inventory",
+    "alerts",
+    "table"
+  ],
+  "sourcePromptIds": [
+    "opencodesign-ecommerce-inventory-dashboard"
+  ],
+  "template": "shelf-pulse",
+  "quality": "featured",
+  "mixRoles": [
+    "product surface"
+  ]
+}

@@ -1,1 +1,0 @@
-Implement a focused UI specimen called 'Map pulse marker'. Markers pulse with confidence rings and labels on focus. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: map, marker, pulse, geo.

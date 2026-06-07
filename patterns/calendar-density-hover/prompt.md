@@ -1,1 +1,0 @@
-Implement a focused UI specimen called 'Calendar density hover'. A dense schedule exposes details through focused hover lanes. Keep it isolated, reusable, accessible, responsive, and easy to adapt into an existing product. Use minimal dependencies. Tags: calendar, density, hover, schedule.

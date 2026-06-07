@@ -1,0 +1,21 @@
+{
+  "id": "docs-code-stepper",
+  "title": "Docs code stepper",
+  "behavior": "Docs",
+  "context": "Developer docs",
+  "description": "Code blocks advance step-by-step with synchronized explanation cards.",
+  "tags": [
+    "docs",
+    "code",
+    "stepper",
+    "developer"
+  ],
+  "sourcePromptIds": [
+    "template-ixartz-docs-first-saas-home"
+  ],
+  "template": "code-stepper",
+  "quality": "specimen",
+  "mixRoles": [
+    "supporting effect"
+  ]
+}
