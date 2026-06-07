@@ -448,14 +448,69 @@ function filteredPatterns(){
     return true;
   });
 }
+function previewKind(p){
+  const t = normalize(p.template);
+  const hay = normalize([p.id, p.title, p.behavior, p.context, ...(p.tags || [])].join(' '));
+  if(/type|text|kinetic|letters|statement|dissolve/.test(t) || /type|text|letter|statement|glyph|typography/.test(hay)) return 'type';
+  if(/ripple|image|gallery|masonry|cube|video-scrub|filmstrip|carousel|prism|clip/.test(t) || /image|gallery|filmstrip|carousel|video|masonry/.test(hay)) return 'gallery';
+  if(/orbit|constellation|particle|agent-trace|map-of-thought|empty-orbit/.test(t) || /orbit|constellation|particle|agent|path/.test(hay)) return 'orbit';
+  if(/pricing|cta|button|copy|toggle|slider|glass|dock|living-label|size-magnet|aave/.test(t) || /button|pricing|toggle|slider|form|dock|glass|control/.test(hay)) return 'control';
+  if(/radial|command|search|menu|navigation|mega|accordion|route|split|noise-navigation/.test(t) || /command|menu|navigation|search|route|accordion/.test(hay)) return 'command';
+  if(/map|radar|lineage|river|calendar|shelf|xray|chart|metric|dashboard|rows|evidence|stream|lens|kanban|audit|table|alert/.test(t) || /dashboard|data|metric|audit|map|radar|calendar|table|lineage|chart|kanban|security|inventory/.test(hay)) return 'data';
+  if(/scroll|camera|corridor|room|world|handoff|transition|page|sliced|roller|wipe|sticky|progress|document/.test(t) || /scroll|camera|corridor|room|transition|wipe|progress|scene/.test(hay)) return 'cinema';
+  if(/shader|water|liquid|metal|brush|webgl|ambient|gradient|noise|procedural|preloader/.test(t) || /shader|webgl|water|liquid|gradient|loader|ambient/.test(hay)) return 'shader';
+  if(/proof|marquee|testimonial|stats|faq|team|footer|editorial|stack|bento/.test(t) || /proof|marquee|testimonial|stats|faq|team|footer|editorial|bento/.test(hay)) return 'section';
+  return 'specimen';
+}
+function previewHash(p){
+  return [...String(p.id || p.title || '')].reduce((sum, ch) => sum + ch.charCodeAt(0), 0) % 12;
+}
+function previewDots(count, cls='i'){
+  return Array.from({length:count}, (_, i) => `<i style="--i:${i}"></i>`).join('');
+}
+function previewMiniature(p){
+  const kind = previewKind(p);
+  const title = esc((p.title || 'Live effect').split(/\s+/).slice(0, 4).join(' '));
+  const behavior = esc(p.behavior || 'Live effect');
+  let scene = '';
+  if(kind === 'type'){
+    const letters = esc((p.title || 'Motion').replace(/[^A-Za-z0-9]/g, '').slice(0, 9) || 'MOTION').split('').map((ch, i) => `<b style="--i:${i}">${ch}</b>`).join('');
+    scene = `<div class="mini-type">${letters}</div><div class="mini-scan"></div>`;
+  } else if(kind === 'gallery'){
+    scene = `<div class="mini-gallery">${previewDots(8)}</div><div class="mini-scrub"><b></b></div>`;
+  } else if(kind === 'orbit'){
+    scene = `<div class="mini-orbit"><b></b>${previewDots(7)}</div><svg class="mini-path" viewBox="0 0 260 130"><path d="M18 92 C70 16 115 122 164 54 S220 42 246 20"/></svg>`;
+  } else if(kind === 'control'){
+    scene = `<div class="mini-control"><b>${title}</b><span></span></div><div class="mini-knobs">${previewDots(5)}</div>`;
+  } else if(kind === 'command'){
+    scene = `<div class="mini-command"><b>⌘</b>${previewDots(6)}</div>`;
+  } else if(kind === 'data'){
+    scene = `<div class="mini-data">${previewDots(15)}</div><svg class="mini-chart" viewBox="0 0 260 90"><path d="M4 78 C36 22 62 82 96 38 S152 6 188 42 S222 62 256 14"/></svg>`;
+  } else if(kind === 'cinema'){
+    scene = `<div class="mini-cinema">${previewDots(5)}</div><div class="mini-camera"></div>`;
+  } else if(kind === 'shader'){
+    scene = `<div class="mini-shader"></div><div class="mini-mask"></div><div class="mini-pixels">${previewDots(22)}</div>`;
+  } else if(kind === 'section'){
+    scene = `<div class="mini-section">${previewDots(6)}</div><div class="mini-marquee">${previewDots(10)}</div>`;
+  } else {
+    scene = `<div class="mini-specimen">${previewDots(9)}</div>`;
+  }
+  return `<div class="preview-loading preview-kind-${kind}" data-preview-hash="${previewHash(p)}">
+    <span>${behavior}</span>
+    <div class="preview-miniature" aria-hidden="true">${scene}</div>
+    <b>${title}</b>
+    <small>Actual live specimen loads into this card</small>
+  </div>`;
+}
 function patternCard(p, i){
   const selected = selectedPatterns.has(p.id);
   const tags = (p.tags || []).slice(0,4).map(t => `<span class="tag">${esc(t)}</span>`).join('');
   const roles = (p.mixRoles || []).slice(0,2).map(t => `<span class="role-pill">${esc(t)}</span>`).join('');
   const sources = (p.sourcePromptIds || []).slice(0,2).map(id => `<span>${esc(id)}</span>`).join('');
-  return `<article class="live-pattern-card ${selected ? 'is-selected' : ''}" data-pattern="${esc(p.id)}" style="--i:${i}">
+  const kind = previewKind(p);
+  return `<article class="live-pattern-card preview-card-${esc(kind)} ${selected ? 'is-selected' : ''}" data-pattern="${esc(p.id)}" data-preview-kind="${esc(kind)}" style="--i:${i}">
     <div class="pattern-frame live-preview-slot" data-preview-src="${esc(p.previewUrl)}" data-preview-title="${esc(p.title)} live effect">
-      <div class="preview-loading"><span>${esc(p.behavior)}</span><b>${esc(p.title)}</b><small>Loading actual live specimen…</small></div>
+      ${previewMiniature(p)}
     </div>
     <div class="pattern-body"><div class="browse-meta"><span>${esc(p.behavior)}</span><span>${esc(p.context)}</span><span>${esc(p.quality || 'specimen')}</span></div><h3>${esc(p.title)}</h3><p>${esc(p.description)}</p><div class="role-row">${roles}</div><div class="tags">${tags}</div><div class="pattern-source">Lineage ${sources || '<span>local specimen</span>'}</div>
     <div class="pattern-actions"><button type="button" data-open-pattern="${esc(p.id)}">Open large</button><button type="button" data-copy-pattern="${esc(p.id)}">Copy code</button><button type="button" data-copy-pattern-prompt="${esc(p.id)}">Copy prompt</button><button type="button" data-toggle-pattern="${esc(p.id)}">${selected ? 'Selected' : 'Add to mix'}</button></div></div>
