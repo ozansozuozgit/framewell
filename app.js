@@ -9,6 +9,7 @@ let shuffleMode = false;
 const patternState = { query: '', behavior: '', context: '', role: '' };
 const selectedPatterns = new Set();
 const state = { query: '', source: '', type: '', tag: '', tier: 'canon' };
+let previewObserver;
 
 const els = {
   grid: document.getElementById('grid'),
@@ -447,46 +448,17 @@ function filteredPatterns(){
     return true;
   });
 }
-function previewKind(p){
-  const hay = normalize([p.title, p.behavior, p.context, ...(p.tags || [])].join(' '));
-  if(/glass|refraction|liquid|aave|lens|frost/.test(hay)) return 'glass';
-  if(/shader|webgl|webgpu|water|cloud|ripple|dissolve|noise/.test(hay)) return 'shader';
-  if(/three|3d|corridor|camera|room|portal|orbit|model|prism/.test(hay)) return 'spatial';
-  if(/scroll|horizontal|filmstrip|timeline|scrub|progress/.test(hay)) return 'scroll';
-  if(/dashboard|table|metric|chart|audit|data|agent|reasoning|lineage/.test(hay)) return 'dashboard';
-  if(/command|menu|navigation|search|cursor|dock/.test(hay)) return 'control';
-  if(/map|route|geo|cluster/.test(hay)) return 'map';
-  if(/audio|loader|preloader|equalizer/.test(hay)) return 'loader';
-  if(/text|type|typography|letter|statement/.test(hay)) return 'type';
-  return 'motion';
-}
-function previewThumb(p){
-  const kind = previewKind(p);
-  const title = esc(p.title);
-  const label = esc(`${p.behavior} · ${p.context}`);
-  const bits = {
-    glass: `<div class="thumb-glass-grid"><span></span><span></span><span></span><span></span></div><div class="thumb-lens"></div><div class="thumb-caption">refractive lens</div>`,
-    shader: `<div class="thumb-shader-field"></div><div class="thumb-mask"></div><div class="thumb-pixels">${Array.from({length:24},(_,i)=>`<i style="--i:${i}"></i>`).join('')}</div>`,
-    spatial: `<div class="thumb-space">${Array.from({length:7},(_,i)=>`<i style="--i:${i}"></i>`).join('')}</div><div class="thumb-camera"></div>`,
-    scroll: `<div class="thumb-track">${Array.from({length:6},(_,i)=>`<i style="--i:${i}"></i>`).join('')}</div><div class="thumb-rail"><b></b></div>`,
-    dashboard: `<div class="thumb-dashboard">${Array.from({length:10},(_,i)=>`<i style="--i:${i}"></i>`).join('')}</div><svg viewBox="0 0 120 50"><path d="M2 42 C24 8 42 48 62 20 S92 8 118 14"/></svg>`,
-    control: `<div class="thumb-command"><b>⌘</b>${Array.from({length:6},(_,i)=>`<i style="--i:${i}"></i>`).join('')}</div>`,
-    map: `<div class="thumb-map"><svg viewBox="0 0 120 70"><path d="M8 56 C30 18 52 64 70 26 S98 8 114 30"/></svg><i></i><i></i><i></i></div>`,
-    loader: `<div class="thumb-loader-bars">${Array.from({length:18},(_,i)=>`<i style="--i:${i}"></i>`).join('')}</div>`,
-    type: `<div class="thumb-type">${title.split(' ').slice(0,2).join('<br>')}</div><div class="thumb-scan"></div>`,
-    motion: `<div class="thumb-motion-cards">${Array.from({length:5},(_,i)=>`<i style="--i:${i}"></i>`).join('')}</div>`
-  }[kind];
-  return `<div class="pattern-frame effect-thumb effect-${kind}" aria-label="Animated preview for ${title}"><span class="thumb-label">${label}</span>${bits}<span class="thumb-open">Open live specimen →</span></div>`;
-}
 function patternCard(p, i){
   const selected = selectedPatterns.has(p.id);
   const tags = (p.tags || []).slice(0,4).map(t => `<span class="tag">${esc(t)}</span>`).join('');
   const roles = (p.mixRoles || []).slice(0,2).map(t => `<span class="role-pill">${esc(t)}</span>`).join('');
   const sources = (p.sourcePromptIds || []).slice(0,2).map(id => `<span>${esc(id)}</span>`).join('');
   return `<article class="live-pattern-card ${selected ? 'is-selected' : ''}" data-pattern="${esc(p.id)}" style="--i:${i}">
-    ${previewThumb(p)}
+    <div class="pattern-frame live-preview-slot" data-preview-src="${esc(p.previewUrl)}" data-preview-title="${esc(p.title)} live effect">
+      <div class="preview-loading"><span>${esc(p.behavior)}</span><b>${esc(p.title)}</b><small>Loading actual live specimen…</small></div>
+    </div>
     <div class="pattern-body"><div class="browse-meta"><span>${esc(p.behavior)}</span><span>${esc(p.context)}</span><span>${esc(p.quality || 'specimen')}</span></div><h3>${esc(p.title)}</h3><p>${esc(p.description)}</p><div class="role-row">${roles}</div><div class="tags">${tags}</div><div class="pattern-source">Lineage ${sources || '<span>local specimen</span>'}</div>
-    <div class="pattern-actions"><button type="button" data-open-pattern="${esc(p.id)}">Open full preview</button><button type="button" data-copy-pattern="${esc(p.id)}">Copy code</button><button type="button" data-copy-pattern-prompt="${esc(p.id)}">Copy prompt</button><button type="button" data-toggle-pattern="${esc(p.id)}">${selected ? 'Selected' : 'Add to mix'}</button></div></div>
+    <div class="pattern-actions"><button type="button" data-open-pattern="${esc(p.id)}">Open large</button><button type="button" data-copy-pattern="${esc(p.id)}">Copy code</button><button type="button" data-copy-pattern-prompt="${esc(p.id)}">Copy prompt</button><button type="button" data-toggle-pattern="${esc(p.id)}">${selected ? 'Selected' : 'Add to mix'}</button></div></div>
   </article>`;
 }
 function renderKitTray(){
@@ -543,7 +515,33 @@ function renderPatternStudio(){
   const items = filteredPatterns();
   if(els.patternCount) els.patternCount.textContent = `${items.length} shown · ${patterns.length} live effects · open any card for full specimen`;
   els.patternGrid.innerHTML = items.length ? items.map(patternCard).join('') : `<div class="empty-state"><h3>No live patterns found</h3><p>Try scroll, dashboard, hover, proof, AI, or clear the filters.</p></div>`;
+  hydrateVisiblePreviews();
   renderKitTray();
+}
+function hydrateVisiblePreviews(){
+  const slots = [...document.querySelectorAll('.live-preview-slot[data-preview-src]')];
+  if(previewObserver) previewObserver.disconnect();
+  const mount = slot => {
+    if(slot.dataset.loaded) return;
+    slot.dataset.loaded = 'true';
+    const iframe = document.createElement('iframe');
+    iframe.src = slot.dataset.previewSrc;
+    iframe.title = slot.dataset.previewTitle || 'Live effect preview';
+    iframe.loading = 'lazy';
+    iframe.setAttribute('sandbox','allow-scripts allow-same-origin');
+    iframe.addEventListener('load', () => slot.classList.add('is-loaded'), { once:true });
+    slot.appendChild(iframe);
+  };
+  if(!('IntersectionObserver' in window)){
+    slots.slice(0, 16).forEach(mount);
+    return;
+  }
+  previewObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){ mount(entry.target); previewObserver.unobserve(entry.target); }
+    });
+  }, { rootMargin: '420px 0px', threshold: 0.01 });
+  slots.forEach(slot => previewObserver.observe(slot));
 }
 async function copyPatternCode(id){
   const p = patterns.find(x => x.id === id); if(!p) return;
