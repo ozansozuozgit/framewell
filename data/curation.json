@@ -1,0 +1,5837 @@
+{
+  "version": 1,
+  "generatedBy": "scripts/build_curation_json.py",
+  "summary": {
+    "total": 196,
+    "canon": 56,
+    "pantry": 60,
+    "archive": 80,
+    "bundles": 8,
+    "topTags": [
+      [
+        "motion",
+        140
+      ],
+      [
+        "open source",
+        102
+      ],
+      [
+        "hero",
+        69
+      ],
+      [
+        "motionsites",
+        61
+      ],
+      [
+        "ai website",
+        61
+      ],
+      [
+        "component",
+        46
+      ],
+      [
+        "animation",
+        37
+      ],
+      [
+        "magic ui",
+        30
+      ],
+      [
+        "landing page",
+        29
+      ],
+      [
+        "animata",
+        28
+      ],
+      [
+        "cult ui",
+        22
+      ],
+      [
+        "dashboard",
+        18
+      ],
+      [
+        "portfolio",
+        16
+      ],
+      [
+        "saas",
+        14
+      ],
+      [
+        "cards",
+        13
+      ],
+      [
+        "3d",
+        12
+      ],
+      [
+        "template",
+        11
+      ],
+      [
+        "marketing",
+        11
+      ],
+      [
+        "typography",
+        10
+      ],
+      [
+        "background",
+        10
+      ],
+      [
+        "tailark",
+        10
+      ],
+      [
+        "video",
+        7
+      ],
+      [
+        "agency",
+        7
+      ],
+      [
+        "button",
+        6
+      ]
+    ]
+  },
+  "antiSlopRules": [
+    "No generic purple-blue AI gradients unless the brand explicitly calls for them.",
+    "No fake dashboards or meaningless metrics; use supplied data or label placeholders honestly.",
+    "Motion must clarify hierarchy or product behavior, not decorate every element.",
+    "First viewport must explain what the product is, who it is for, and why it matters.",
+    "Typography needs visible hierarchy: display, body, labels, and actions cannot all feel equal.",
+    "Mobile layout must be intentionally composed, not merely collapsed."
+  ],
+  "items": {
+    "synex": {
+      "id": "69f0d4e143687485f0b01afe",
+      "slug": "synex",
+      "title": "Synex",
+      "qualityScore": 3.9,
+      "useCase": "hero",
+      "siteType": "saas",
+      "aesthetic": "cinematic 3d",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hover",
+        "3d",
+        "hero",
+        "lovable",
+        "growing grass effect"
+      ],
+      "sourceName": "Bogdan Falin",
+      "hasPreview": true,
+      "promptLength": 8207,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "synergeus": {
+      "id": "69f0dda143687485f0b01bdd",
+      "slug": "synergeus",
+      "title": "Synergeus",
+      "qualityScore": 3.7,
+      "useCase": "hero",
+      "siteType": "general website",
+      "aesthetic": "glass / luminous",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "lovable",
+        "landing page",
+        "glass",
+        "3 sections"
+      ],
+      "sourceName": "Bogdan Falin",
+      "hasPreview": true,
+      "promptLength": 35953,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "fashion-website": {
+      "id": "69f0e94443687485f0b01d74",
+      "slug": "fashion-website",
+      "title": "Fashion Website",
+      "qualityScore": 3.7,
+      "useCase": "hero",
+      "siteType": "saas",
+      "aesthetic": "editorial / luxury",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "fashion",
+        "landing page",
+        "website",
+        "section transition",
+        "creative transition between the 2nd section"
+      ],
+      "sourceName": "Bogdan Falin",
+      "hasPreview": true,
+      "promptLength": 22419,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "website-cards-animation": {
+      "id": "69f0eb0443687485f0b01e10",
+      "slug": "website-cards-animation",
+      "title": "Website cards animation",
+      "qualityScore": 3.5,
+      "useCase": "hero",
+      "siteType": "general website",
+      "aesthetic": "cinematic 3d",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "animation",
+        "website",
+        "hero",
+        "popular",
+        "lovable",
+        "popular website, you've certainly seen on pinterest",
+        "component",
+        "motion"
+      ],
+      "sourceName": "Bogdan Falin",
+      "hasPreview": true,
+      "promptLength": 19965,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-framelix-3d-studios": {
+      "id": "curated-eaaca150d190b058",
+      "slug": "motionsites-framelix-3d-studios",
+      "title": "3D motion studio hero",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "3d",
+        "video",
+        "hero",
+        "motion",
+        "dark",
+        "agency / cinematic",
+        "portfolio"
+      ],
+      "sourceName": "MotionSites.ai Prompt Library",
+      "hasPreview": true,
+      "promptLength": 3184,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-liquid-glass-agency": {
+      "id": "curated-cd0c10dbcd9e676f",
+      "slug": "motionsites-liquid-glass-agency",
+      "title": "Liquid-glass agency landing page",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "glass",
+        "landing page",
+        "agency",
+        "dark",
+        "shadcn",
+        "apple-style liquid glass",
+        "motion",
+        "portfolio"
+      ],
+      "sourceName": "MotionSites.ai Prompt Library",
+      "hasPreview": true,
+      "promptLength": 8742,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-space-voyage": {
+      "id": "curated-6c21b81646367051",
+      "slug": "motionsites-space-voyage",
+      "title": "Space voyage cinematic hero",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "space",
+        "motion",
+        "cinematic",
+        "cinematic space hero",
+        "3d"
+      ],
+      "sourceName": "MotionSites.ai Prompt Library",
+      "hasPreview": true,
+      "promptLength": 5949,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-portfolio-cosmic": {
+      "id": "curated-1700dc425f2d8f49",
+      "slug": "motionsites-portfolio-cosmic",
+      "title": "Cosmic portfolio landing page",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "portfolio",
+        "gsap",
+        "video",
+        "landing page",
+        "dark",
+        "gsap portfolio system",
+        "motion",
+        "3d"
+      ],
+      "sourceName": "MotionSites.ai Prompt Library",
+      "hasPreview": true,
+      "promptLength": 8457,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-wealth-video-hero": {
+      "id": "curated-f2365e760bd5ef7e",
+      "slug": "motionsites-wealth-video-hero",
+      "title": "Wealth video hero",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "fintech",
+        "hero",
+        "video",
+        "wealth",
+        "fintech video hero",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai Prompt Library",
+      "hasPreview": true,
+      "promptLength": 2226,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-weblex-dark-hero": {
+      "id": "curated-8261c67772bf5db2",
+      "slug": "motionsites-weblex-dark-hero",
+      "title": "Weblex dark hero",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "video",
+        "dark",
+        "navbar",
+        "fullscreen dark video hero",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai Prompt Library",
+      "hasPreview": true,
+      "promptLength": 2751,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-terra-geo-map": {
+      "id": "curated-873b808680fe6b35",
+      "slug": "motionsites-terra-geo-map",
+      "title": "Terra geo-map SaaS hero",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "minimal marketing",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "saas",
+        "map",
+        "hero",
+        "animation",
+        "animated map saas hero",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai Prompt Library",
+      "hasPreview": true,
+      "promptLength": 2817,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-new-era-automotive-hero": {
+      "id": "curated-bec4c4bdf389dc86",
+      "slug": "motionsites-new-era-automotive-hero",
+      "title": "New Era automotive hero",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "editorial / luxury",
+      "complexity": "simple",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "automotive",
+        "hero",
+        "typography",
+        "video",
+        "automotive hero animation",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai Prompt Library",
+      "hasPreview": true,
+      "promptLength": 2899,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-loader-animation": {
+      "id": "curated-a3dc1ae2f1eaf197",
+      "slug": "motionsites-loader-animation",
+      "title": "Premium loader animation",
+      "qualityScore": 4.1,
+      "useCase": "full page",
+      "siteType": "ai product",
+      "aesthetic": "editorial / luxury",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "loader",
+        "animation",
+        "component",
+        "motion",
+        "fullscreen loading component"
+      ],
+      "sourceName": "MotionSites.ai Prompt Library",
+      "hasPreview": true,
+      "promptLength": 3517,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-buzzentic-agency": {
+      "id": "curated-2d7fb08aa3f9676a",
+      "slug": "motionsites-buzzentic-agency",
+      "title": "Buzzentic agency hero",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "simple",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "agency",
+        "hero",
+        "video",
+        "tailwind",
+        "high-impact agency video hero",
+        "motion",
+        "portfolio"
+      ],
+      "sourceName": "MotionSites.ai Prompt Library",
+      "hasPreview": true,
+      "promptLength": 2284,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-ai-designer-agency": {
+      "id": "curated-e0893dbe635f5fdd",
+      "slug": "motionsites-ai-designer-agency",
+      "title": "AI designer agency landing page",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "ai",
+        "agency",
+        "landing page",
+        "dark",
+        "animation",
+        "dark ai agency landing page",
+        "motion",
+        "portfolio"
+      ],
+      "sourceName": "MotionSites.ai Prompt Library",
+      "hasPreview": true,
+      "promptLength": 7600,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-motionz-premium": {
+      "id": "curated-1805dddd9dd33e7a",
+      "slug": "motionsites-motionz-premium",
+      "title": "MotionZ premium gaming landing page",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "gsap",
+        "gaming",
+        "bento",
+        "video",
+        "landing page",
+        "gaming universe / gsap bento landing",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai prompt library fork",
+      "hasPreview": true,
+      "promptLength": 2781,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "reddit-v0-visual-generation-template": {
+      "id": "curated-16d3704a0a3989ea",
+      "slug": "reddit-v0-visual-generation-template",
+      "title": "v0 visual generation template",
+      "qualityScore": 3.7,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "advanced",
+      "motionLevel": "subtle",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "v0",
+        "template",
+        "prompt engineering",
+        "ui design",
+        "modular prompt template from reddit/github",
+        "open source"
+      ],
+      "sourceName": "Reddit + AI Product Development Toolkit",
+      "hasPreview": true,
+      "promptLength": 9342,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "x-render-and-co-3d-animation-studio": {
+      "id": "curated-d51050ffeaf84e12",
+      "slug": "x-render-and-co-3d-animation-studio",
+      "title": "Render & Co. 3D animation studio",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "3d",
+        "studio",
+        "neon",
+        "hover",
+        "landing page",
+        "x seed prompt expanded into a framewell-style spec",
+        "motion",
+        "portfolio"
+      ],
+      "sourceName": "X public post seed",
+      "hasPreview": true,
+      "promptLength": 3256,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "x-luxury-tea-scrollytelling-gsap": {
+      "id": "curated-5caf331daa4d21d3",
+      "slug": "x-luxury-tea-scrollytelling-gsap",
+      "title": "Luxury tea scrollytelling landing page",
+      "qualityScore": 4.1,
+      "useCase": "hero",
+      "siteType": "commerce / luxury",
+      "aesthetic": "cinematic 3d",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "gsap",
+        "scrollytelling",
+        "luxury",
+        "landing page",
+        "animation",
+        "x gsap tea animation seed expanded",
+        "motion"
+      ],
+      "sourceName": "X public post seed",
+      "hasPreview": true,
+      "promptLength": 2902,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "opencodesign-field-notes-landing-page": {
+      "id": "curated-ocd-88eec2b13875717f",
+      "slug": "opencodesign-field-notes-landing-page",
+      "title": "Field Notes productivity landing page",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "advanced",
+      "motionLevel": "none",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "landing page",
+        "productivity",
+        "editorial",
+        "full page",
+        "ai-ready",
+        "full marketing page"
+      ],
+      "sourceName": "Open CoDesign example prompts",
+      "hasPreview": true,
+      "promptLength": 1753,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "opencodesign-product-launch-page": {
+      "id": "curated-ocd-d82e63e323a10043",
+      "slug": "opencodesign-product-launch-page",
+      "title": "Northstar Canvas launch page",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "saas",
+      "aesthetic": "editorial / luxury",
+      "complexity": "advanced",
+      "motionLevel": "none",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "landing page",
+        "product launch",
+        "saas",
+        "marketing",
+        "css visuals",
+        "campaign / launch page"
+      ],
+      "sourceName": "Open CoDesign example prompts",
+      "hasPreview": true,
+      "promptLength": 1661,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "opencodesign-boutique-agency-homepage": {
+      "id": "curated-ocd-d34190c00aa6222b",
+      "slug": "opencodesign-boutique-agency-homepage",
+      "title": "Boutique agency homepage",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "saas",
+      "aesthetic": "editorial / luxury",
+      "complexity": "medium",
+      "motionLevel": "subtle",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "agency",
+        "homepage",
+        "portfolio",
+        "editorial",
+        "full page",
+        "full agency website"
+      ],
+      "sourceName": "Open CoDesign example prompts",
+      "hasPreview": true,
+      "promptLength": 1644,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "opencodesign-open-source-project-homepage": {
+      "id": "curated-ocd-e79657e2b736caf8",
+      "slug": "opencodesign-open-source-project-homepage",
+      "title": "Open-source devtool homepage",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "saas",
+      "aesthetic": "cinematic 3d",
+      "complexity": "medium",
+      "motionLevel": "none",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "developer tool",
+        "open source",
+        "landing page",
+        "terminal",
+        "architecture",
+        "developer landing page"
+      ],
+      "sourceName": "Open CoDesign example prompts",
+      "hasPreview": true,
+      "promptLength": 1651,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "opencodesign-enterprise-security-page": {
+      "id": "curated-ocd-c3a32f18ea86aacd",
+      "slug": "opencodesign-enterprise-security-page",
+      "title": "Enterprise security trust page",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "saas",
+      "aesthetic": "editorial / luxury",
+      "complexity": "medium",
+      "motionLevel": "none",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "enterprise",
+        "security",
+        "saas",
+        "landing page",
+        "diagram",
+        "trust center / saas page"
+      ],
+      "sourceName": "Open CoDesign example prompts",
+      "hasPreview": true,
+      "promptLength": 1659,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "opencodesign-ai-notebook-waitlist": {
+      "id": "curated-ocd-698ec450ae123a47",
+      "slug": "opencodesign-ai-notebook-waitlist",
+      "title": "AI notebook waitlist page",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "editorial / luxury",
+      "complexity": "advanced",
+      "motionLevel": "none",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "waitlist",
+        "ai product",
+        "landing page",
+        "forms",
+        "editorial",
+        "editorial waitlist page"
+      ],
+      "sourceName": "Open CoDesign example prompts",
+      "hasPreview": true,
+      "promptLength": 1623,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "opencodesign-ai-writing-assistant-hero": {
+      "id": "curated-ocd-7f0b915977df13d2",
+      "slug": "opencodesign-ai-writing-assistant-hero",
+      "title": "AI writing assistant hero",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "editorial / luxury",
+      "complexity": "medium",
+      "motionLevel": "none",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "ai product",
+        "animated",
+        "css svg",
+        "landing page"
+      ],
+      "sourceName": "Open CoDesign example prompts",
+      "hasPreview": true,
+      "promptLength": 1684,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "opencodesign-particle-field-data-hero": {
+      "id": "curated-ocd-978170572dfa9bf2",
+      "slug": "opencodesign-particle-field-data-hero",
+      "title": "Particle-field data infra hero",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "saas",
+      "aesthetic": "cinematic 3d",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "animation",
+        "data infra",
+        "interactive",
+        "canvas",
+        "interactive landing hero",
+        "motion",
+        "3d"
+      ],
+      "sourceName": "Open CoDesign example prompts",
+      "hasPreview": true,
+      "promptLength": 1679,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "opencodesign-saas-revenue-dashboard": {
+      "id": "curated-ocd-f837ea03fdbdeacf",
+      "slug": "opencodesign-saas-revenue-dashboard",
+      "title": "SaaS revenue analytics dashboard",
+      "qualityScore": 4.4,
+      "useCase": "full page",
+      "siteType": "saas",
+      "aesthetic": "editorial / luxury",
+      "complexity": "medium",
+      "motionLevel": "none",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "dashboard",
+        "analytics",
+        "saas",
+        "data visualization",
+        "dark ui",
+        "full analytics dashboard"
+      ],
+      "sourceName": "Open CoDesign example prompts",
+      "hasPreview": true,
+      "promptLength": 1748,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "opencodesign-finance-ops-dashboard": {
+      "id": "curated-ocd-c2d7a008dff05222",
+      "slug": "opencodesign-finance-ops-dashboard",
+      "title": "Finance operations dashboard",
+      "qualityScore": 4.4,
+      "useCase": "dashboard",
+      "siteType": "saas",
+      "aesthetic": "editorial / luxury",
+      "complexity": "medium",
+      "motionLevel": "none",
+      "bestFor": [
+        "AI agent",
+        "product designer"
+      ],
+      "normalizedTags": [
+        "dashboard",
+        "finance",
+        "operations",
+        "charts",
+        "tables",
+        "cfo command dashboard"
+      ],
+      "sourceName": "Open CoDesign example prompts",
+      "hasPreview": true,
+      "promptLength": 1623,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "opencodesign-observability-dashboard": {
+      "id": "curated-ocd-f70f84f8e8bd19e6",
+      "slug": "opencodesign-observability-dashboard",
+      "title": "Observability incident dashboard",
+      "qualityScore": 4.4,
+      "useCase": "dashboard",
+      "siteType": "saas",
+      "aesthetic": "cinematic 3d",
+      "complexity": "medium",
+      "motionLevel": "none",
+      "bestFor": [
+        "AI agent",
+        "product designer"
+      ],
+      "normalizedTags": [
+        "dashboard",
+        "observability",
+        "developer tool",
+        "dark ui",
+        "logs",
+        "infrastructure dashboard"
+      ],
+      "sourceName": "Open CoDesign example prompts",
+      "hasPreview": true,
+      "promptLength": 1676,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "opencodesign-creator-analytics-dashboard": {
+      "id": "curated-ocd-6ed7cb1a4ffbcba3",
+      "slug": "opencodesign-creator-analytics-dashboard",
+      "title": "Creator analytics dashboard",
+      "qualityScore": 4.4,
+      "useCase": "dashboard",
+      "siteType": "saas",
+      "aesthetic": "editorial / luxury",
+      "complexity": "medium",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "product designer"
+      ],
+      "normalizedTags": [
+        "dashboard",
+        "creator economy",
+        "analytics",
+        "calendar",
+        "revenue",
+        "media analytics dashboard"
+      ],
+      "sourceName": "Open CoDesign example prompts",
+      "hasPreview": true,
+      "promptLength": 1589,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "opencodesign-ecommerce-inventory-dashboard": {
+      "id": "curated-ocd-7871e1f42a01c534",
+      "slug": "opencodesign-ecommerce-inventory-dashboard",
+      "title": "Ecommerce inventory dashboard",
+      "qualityScore": 4.4,
+      "useCase": "full page",
+      "siteType": "saas",
+      "aesthetic": "editorial / luxury",
+      "complexity": "medium",
+      "motionLevel": "none",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "dashboard",
+        "ecommerce",
+        "inventory",
+        "operations",
+        "tables",
+        "operations dashboard"
+      ],
+      "sourceName": "Open CoDesign example prompts",
+      "hasPreview": true,
+      "promptLength": 1614,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "opencodesign-ai-ops-command-center": {
+      "id": "curated-ocd-42cccbc991cc3892",
+      "slug": "opencodesign-ai-ops-command-center",
+      "title": "AI operations command center",
+      "qualityScore": 4.4,
+      "useCase": "dashboard",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "medium",
+      "motionLevel": "none",
+      "bestFor": [
+        "AI agent",
+        "product designer"
+      ],
+      "normalizedTags": [
+        "dashboard",
+        "ai operations",
+        "command center",
+        "incident",
+        "dense ui",
+        "agent ops dashboard"
+      ],
+      "sourceName": "Open CoDesign example prompts",
+      "hasPreview": true,
+      "promptLength": 1682,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "opencodesign-design-token-inspector": {
+      "id": "curated-ocd-976c2b11bf75f9ef",
+      "slug": "opencodesign-design-token-inspector",
+      "title": "Design-token inspector",
+      "qualityScore": 4.4,
+      "useCase": "dashboard",
+      "siteType": "saas",
+      "aesthetic": "editorial / luxury",
+      "complexity": "medium",
+      "motionLevel": "none",
+      "bestFor": [
+        "AI agent",
+        "product designer"
+      ],
+      "normalizedTags": [
+        "dashboard",
+        "design system",
+        "developer tool",
+        "tokens",
+        "inspector",
+        "design-system tool ui"
+      ],
+      "sourceName": "Open CoDesign example prompts",
+      "hasPreview": true,
+      "promptLength": 1653,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-aetheris-voyage": {
+      "id": "curated-37efb976368d8894",
+      "slug": "motionsites-free-aetheris-voyage",
+      "title": "Aetheris Voyage",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 10396,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-digital-epoch": {
+      "id": "curated-57824b4667c72abf",
+      "slug": "motionsites-free-digital-epoch",
+      "title": "Digital Epoch",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "clean product",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 4798,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-free-rivr": {
+      "id": "curated-f6f586425b57ca56",
+      "slug": "motionsites-free-rivr",
+      "title": "RIVR",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 8284,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-free-lumina": {
+      "id": "curated-87c0a1dd9a4de062",
+      "slug": "motionsites-free-lumina",
+      "title": "Lumina",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "footer section",
+        "hero",
+        "motionsites",
+        "ai website",
+        "footer",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 5312,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-free-haul": {
+      "id": "curated-a9a378852863bf42",
+      "slug": "motionsites-free-haul",
+      "title": "HAUL!",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "footer section",
+        "hero",
+        "motionsites",
+        "ai website",
+        "footer",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 4526,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-free-vize-footer": {
+      "id": "curated-73608fee819a1b2c",
+      "slug": "motionsites-free-vize-footer",
+      "title": "Vize Footer",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "footer section",
+        "hero",
+        "motionsites",
+        "ai website",
+        "footer",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 7931,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-free-glow-features": {
+      "id": "curated-ea0723b59fea0bd0",
+      "slug": "motionsites-free-glow-features",
+      "title": "Glow Features",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "features section",
+        "hero",
+        "motionsites",
+        "ai website",
+        "features",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 3271,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-free-kresna-footer": {
+      "id": "curated-9c63229921e38ee5",
+      "slug": "motionsites-free-kresna-footer",
+      "title": "Kresna Footer",
+      "qualityScore": 4.0,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "playful / tactile",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "footer section",
+        "hero",
+        "motionsites",
+        "ai website",
+        "footer",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 9362,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-price-calculator": {
+      "id": "curated-0363ea2c2415a9e1",
+      "slug": "motionsites-free-price-calculator",
+      "title": "Price Calculator",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "clean product",
+      "complexity": "simple",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "saas",
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 3370,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-skyelite-private-jets": {
+      "id": "curated-090cad8c8f501854",
+      "slug": "motionsites-free-skyelite-private-jets",
+      "title": "SkyElite Private Jets",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "simple",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "landing page",
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 2484,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-securify-data-security": {
+      "id": "curated-c045b33342d0930d",
+      "slug": "motionsites-free-securify-data-security",
+      "title": "Securify Data Security",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "saas",
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 4021,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-free-datacore-booking": {
+      "id": "curated-b6eae1a4b6b523a9",
+      "slug": "motionsites-free-datacore-booking",
+      "title": "Datacore Booking",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "saas",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 3033,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-usd-halo": {
+      "id": "curated-434da20e752cd07f",
+      "slug": "motionsites-free-usd-halo",
+      "title": "USD Halo",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "clean product",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "landing page",
+        "landing-page",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 8733,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-convix-software": {
+      "id": "curated-d9164a2ff1d04dc6",
+      "slug": "motionsites-free-convix-software",
+      "title": "Convix Software",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "clean product",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "saas",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 5793,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-digitwist-ai-builder": {
+      "id": "curated-687d967170d401c7",
+      "slug": "motionsites-free-digitwist-ai-builder",
+      "title": "Digitwist AI Builder",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "clean product",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "saas",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 6201,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-codenest-coding-platform": {
+      "id": "curated-c4d80e533537b651",
+      "slug": "motionsites-free-codenest-coding-platform",
+      "title": "CodeNest Coding Platform",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "landing page",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 2780,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-free-velorah": {
+      "id": "curated-12a27a4175bc02e0",
+      "slug": "motionsites-free-velorah",
+      "title": "Velorah",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "agency",
+        "motionsites",
+        "ai website",
+        "motion",
+        "portfolio"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 3986,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-neuralyn": {
+      "id": "curated-cefded26a1e883d1",
+      "slug": "motionsites-free-neuralyn",
+      "title": "Neuralyn",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "saas",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 5456,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-orbis-nft": {
+      "id": "curated-38ef81410e7ed8ce",
+      "slug": "motionsites-free-orbis-nft",
+      "title": "Orbis NFT",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "landing page",
+        "landing-page",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 8479,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-bloom-ai": {
+      "id": "curated-66a8fa0aaca39fcc",
+      "slug": "motionsites-free-bloom-ai",
+      "title": "Bloom AI",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 4099,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-free-taskly": {
+      "id": "curated-4373f87a399b4174",
+      "slug": "motionsites-free-taskly",
+      "title": "Taskly",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 2662,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-nexora-automation": {
+      "id": "curated-23a61b5371143304",
+      "slug": "motionsites-free-nexora-automation",
+      "title": "Nexora Automation",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "clean product",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "saas",
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 5541,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-mindloop-landing": {
+      "id": "curated-bac67e6693edfa82",
+      "slug": "motionsites-free-mindloop-landing",
+      "title": "Mindloop Landing",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "landing page",
+        "landing-page",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 7444,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-free-power-ai": {
+      "id": "curated-103c754dc6a0fda2",
+      "slug": "motionsites-free-power-ai",
+      "title": "Power AI",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "clean product",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 4037,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-luminex": {
+      "id": "curated-4bcd7b870ed10317",
+      "slug": "motionsites-free-luminex",
+      "title": "Luminex",
+      "qualityScore": 4.0,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "simple",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 360,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-prisma-creative-studio": {
+      "id": "curated-5d50e786f32ec95a",
+      "slug": "motionsites-free-prisma-creative-studio",
+      "title": "Prisma Creative Studio",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "landing page",
+        "landing-page",
+        "motionsites",
+        "ai website",
+        "motion",
+        "portfolio"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 8632,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-free-aethera-studio": {
+      "id": "curated-fbde7f09ca1c6b4e",
+      "slug": "motionsites-free-aethera-studio",
+      "title": "Aethera Studio",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "simple",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion",
+        "portfolio"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 3367,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-asme": {
+      "id": "curated-6063b4836a7d0ac7",
+      "slug": "motionsites-free-asme",
+      "title": "Asme",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 4555,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-free-transform-data": {
+      "id": "curated-691987e9e97a6415",
+      "slug": "motionsites-free-transform-data",
+      "title": "Transform Data",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 3810,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-3d-portfolio": {
+      "id": "curated-3da6cdb685a55742",
+      "slug": "motionsites-free-3d-portfolio",
+      "title": "3D Portfolio",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "portfolio",
+        "hero",
+        "motionsites",
+        "ai website",
+        "3d",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 14085,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-dot": {
+      "id": "curated-b0a597d878c24216",
+      "slug": "motionsites-free-dot",
+      "title": "Dot",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 4064,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-duolingo-styleguide": {
+      "id": "curated-f557a0b6649ee5cf",
+      "slug": "motionsites-free-duolingo-styleguide",
+      "title": "Duolingo Styleguide",
+      "qualityScore": 4.0,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "playful / tactile",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 10986,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-portfolio-cosmic": {
+      "id": "curated-5781a474bb8c4044",
+      "slug": "motionsites-free-portfolio-cosmic",
+      "title": "Portfolio Cosmic",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "portfolio",
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion",
+        "3d"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 8460,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-free-designpro-academy": {
+      "id": "curated-b1e69501827d892d",
+      "slug": "motionsites-free-designpro-academy",
+      "title": "DesignPro Academy",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "minimal marketing",
+      "complexity": "simple",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 3238,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-free-stellar-ai": {
+      "id": "curated-e08c605f6e370e78",
+      "slug": "motionsites-free-stellar-ai",
+      "title": "Stellar AI",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "clean product",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 4174,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-ai-designer-portfolio": {
+      "id": "curated-013439cd52c44f57",
+      "slug": "motionsites-free-ai-designer-portfolio",
+      "title": "AI Designer Portfolio",
+      "qualityScore": 4.0,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "landing page",
+        "hero",
+        "motionsites",
+        "ai website",
+        "portfolio",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 11662,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-email-marketing": {
+      "id": "curated-f682ab4a2ecb745f",
+      "slug": "motionsites-free-email-marketing",
+      "title": "Email Marketing",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "clean product",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "email marketing",
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 8181,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-innovation": {
+      "id": "curated-6a16c31c61bddc44",
+      "slug": "motionsites-free-innovation",
+      "title": "Innovation",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "landing page",
+        "landing-page",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 9199,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-vex-ventures": {
+      "id": "curated-2a9e29f8444602b7",
+      "slug": "motionsites-free-vex-ventures",
+      "title": "VEX Ventures",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "clean product",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 5254,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-portal": {
+      "id": "curated-d36532771d856ce9",
+      "slug": "motionsites-free-portal",
+      "title": "Portal",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 6860,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-sentinel-ai": {
+      "id": "curated-3d396053d547d0b9",
+      "slug": "motionsites-free-sentinel-ai",
+      "title": "Sentinel AI",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 6142,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-celestia": {
+      "id": "curated-255dba5bf4a6ded7",
+      "slug": "motionsites-free-celestia",
+      "title": "Celestia",
+      "qualityScore": 4.0,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "simple",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 607,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-3d-collectible-hero": {
+      "id": "curated-0449cc8f8d71e700",
+      "slug": "motionsites-free-3d-collectible-hero",
+      "title": "3D Collectible Hero",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "3d",
+        "motionsites",
+        "ai website",
+        "hero",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 5552,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-free-no-code-waitlist": {
+      "id": "curated-407a61f7b65e546c",
+      "slug": "motionsites-free-no-code-waitlist",
+      "title": "No-Code Waitlist",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "waitlist",
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 6734,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-free-modern-agency": {
+      "id": "curated-f4962b6cce037660",
+      "slug": "motionsites-free-modern-agency",
+      "title": "Modern Agency",
+      "qualityScore": 4.0,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "agency",
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion",
+        "portfolio"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 10546,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-vaultshield": {
+      "id": "curated-583f5b14ebe1e380",
+      "slug": "motionsites-free-vaultshield",
+      "title": "VaultShield",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "clean product",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 4931,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-free-ai-workflow-hero": {
+      "id": "curated-bbe82c0bc588c6f3",
+      "slug": "motionsites-free-ai-workflow-hero",
+      "title": "AI Workflow Hero",
+      "qualityScore": 4.0,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "clean product",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 16777,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-neo-museum": {
+      "id": "curated-ea9ccf90db6f26d8",
+      "slug": "motionsites-free-neo-museum",
+      "title": "Neo Museum",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "website",
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 15232,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-visual-hero": {
+      "id": "curated-2328a7315706e5dc",
+      "slug": "motionsites-free-visual-hero",
+      "title": "Visual Hero",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 8472,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-free-creative-studio": {
+      "id": "curated-e33052e382d51a4f",
+      "slug": "motionsites-free-creative-studio",
+      "title": "Creative Studio",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "minimal marketing",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "agency",
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion",
+        "portfolio"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 5682,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-wanderful-hero": {
+      "id": "curated-e57ae1bf50a78d7b",
+      "slug": "motionsites-free-wanderful-hero",
+      "title": "Wanderful Hero",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "travel",
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 4423,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-free-prosthetics-hero": {
+      "id": "curated-0267abd131d34797",
+      "slug": "motionsites-free-prosthetics-hero",
+      "title": "Prosthetics Hero",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "clean product",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 3623,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-free-max-reed-portfolio": {
+      "id": "curated-ea6431cb20ba5ee4",
+      "slug": "motionsites-free-max-reed-portfolio",
+      "title": "Max Reed Portfolio",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "features",
+        "motionsites",
+        "ai website",
+        "portfolio",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 5601,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-email-landing-page": {
+      "id": "curated-ec3ee93204f16b82",
+      "slug": "motionsites-free-email-landing-page",
+      "title": "Email Landing Page",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "landing page",
+        "landing",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 19635,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-faq-cta": {
+      "id": "curated-cb2176d7827316f7",
+      "slug": "motionsites-free-faq-cta",
+      "title": "FAQ CTA",
+      "qualityScore": 4.0,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "minimal marketing",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "cta",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 9649,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-ai-image-generator-ui": {
+      "id": "curated-cfac4bcd79d2f139",
+      "slug": "motionsites-free-ai-image-generator-ui",
+      "title": "AI Image Generator UI",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "playful / tactile",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "ai",
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 4687,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-free-aurora-onboard": {
+      "id": "curated-f194868aaa02d0ce",
+      "slug": "motionsites-free-aurora-onboard",
+      "title": "Aurora Onboard",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "signup",
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 4970,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-free-cybersecurity-hero": {
+      "id": "curated-8de862dd49e679ee",
+      "slug": "motionsites-free-cybersecurity-hero",
+      "title": "Cybersecurity Hero",
+      "qualityScore": 4.0,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 12124,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-equilibrium": {
+      "id": "curated-9ff28a6b6dae4b54",
+      "slug": "motionsites-free-equilibrium",
+      "title": "Equilibrium",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 4984,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "motionsites-free-blog-showcase": {
+      "id": "curated-12deac62ed21c2fd",
+      "slug": "motionsites-free-blog-showcase",
+      "title": "Blog Showcase",
+      "qualityScore": 4.2,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "minimal marketing",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "blog",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 4350,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "motionsites-free-nexto-404": {
+      "id": "curated-6d7ba4ff77c67386",
+      "slug": "motionsites-free-nexto-404",
+      "title": "Nexto 404",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "404",
+        "hero",
+        "motionsites",
+        "ai website",
+        "motion"
+      ],
+      "sourceName": "MotionSites.ai free prompt",
+      "hasPreview": true,
+      "promptLength": 5878,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "magicui-bento-grid": {
+      "id": "curated-63441fd5189ce337",
+      "slug": "magicui-bento-grid",
+      "title": "Asymmetric product bento grid",
+      "qualityScore": 4.1,
+      "useCase": "section",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "layout",
+        "open source",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1956,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "magicui-animated-list": {
+      "id": "curated-4749872302c754aa",
+      "slug": "magicui-animated-list",
+      "title": "Auto Sorting animated list",
+      "qualityScore": 4.4,
+      "useCase": "dashboard",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "product designer"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "dashboard",
+        "open source",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1959,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "magicui-dock": {
+      "id": "curated-817d1d02a0a1b785",
+      "slug": "magicui-dock",
+      "title": "Macos-style floating dock navigation",
+      "qualityScore": 3.8,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "navigation",
+        "open source",
+        "component",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1972,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "magicui-hero-video-dialog": {
+      "id": "curated-6075c4541166d906",
+      "slug": "magicui-hero-video-dialog",
+      "title": "Video First product hero",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "hero",
+        "open source",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1949,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "magicui-orbiting-circles": {
+      "id": "curated-8723e7898070717a",
+      "slug": "magicui-orbiting-circles",
+      "title": "Orbiting integration constellation",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "open source",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1978,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "magicui-globe": {
+      "id": "curated-31b9d08d1beb5f1e",
+      "slug": "magicui-globe",
+      "title": "Global network globe hero",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "3d",
+        "open source",
+        "hero",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1935,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "magicui-icon-cloud": {
+      "id": "curated-bc813fac020a4bdc",
+      "slug": "magicui-icon-cloud",
+      "title": "Floating integration icon cloud",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "open source",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1966,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "magicui-marquee": {
+      "id": "curated-d6b9ff07495cce4e",
+      "slug": "magicui-marquee",
+      "title": "Proof Logo kinetic marquee",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "motion",
+        "open source"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1947,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "magicui-animated-beam": {
+      "id": "curated-bca279915bbcde0e",
+      "slug": "magicui-animated-beam",
+      "title": "Workflow beam connector",
+      "qualityScore": 4.4,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "open source",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1953,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "magicui-border-beam": {
+      "id": "curated-0ea73e7986de5a47",
+      "slug": "magicui-border-beam",
+      "title": "Premium beam border cards",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "cards",
+        "open source",
+        "component",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1947,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "magicui-shine-border": {
+      "id": "curated-569b530cd87062d4",
+      "slug": "magicui-shine-border",
+      "title": "Shiny border feature grid",
+      "qualityScore": 4.4,
+      "useCase": "section",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "cards",
+        "open source",
+        "component",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1948,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "magicui-magic-card": {
+      "id": "curated-31e251d069189176",
+      "slug": "magicui-magic-card",
+      "title": "Spotlight magic cards",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "cards",
+        "open source",
+        "component",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1938,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "magicui-glare-hover": {
+      "id": "curated-604b0a3ac0e5e358",
+      "slug": "magicui-glare-hover",
+      "title": "Glare hover product cards",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "cards",
+        "open source",
+        "component",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1947,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "magicui-meteors": {
+      "id": "curated-5492618ca3375a36",
+      "slug": "magicui-meteors",
+      "title": "Meteor shower launch hero",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "background",
+        "open source",
+        "hero",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1953,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "magicui-particles": {
+      "id": "curated-4e3520c50a985019",
+      "slug": "magicui-particles",
+      "title": "Particle field backdrop",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "background",
+        "open source",
+        "motion",
+        "3d"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1951,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "magicui-animated-grid-pattern": {
+      "id": "curated-b93a1d7c2fbb09ba",
+      "slug": "magicui-animated-grid-pattern",
+      "title": "Animated grid background",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "background",
+        "open source",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1965,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "magicui-flickering-grid": {
+      "id": "curated-e9c5f4aa3d1b3507",
+      "slug": "magicui-flickering-grid",
+      "title": "Flickering grid terminal backdrop",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "background",
+        "open source",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1977,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "magicui-warp-background": {
+      "id": "curated-9367b545815b0194",
+      "slug": "magicui-warp-background",
+      "title": "Warped mesh hero background",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "background",
+        "open source",
+        "hero",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1965,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "magicui-backlight": {
+      "id": "curated-b4ba127519d63319",
+      "slug": "magicui-backlight",
+      "title": "Backlit product panel",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "background",
+        "open source",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1947,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "magicui-text-reveal": {
+      "id": "curated-e6212737432f6ed0",
+      "slug": "magicui-text-reveal",
+      "title": "Scroll text reveal story",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "typography",
+        "open source",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1955,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "magicui-typing-animation": {
+      "id": "curated-18ad1fc022fbdf44",
+      "slug": "magicui-typing-animation",
+      "title": "Typewriter command input",
+      "qualityScore": 3.8,
+      "useCase": "dashboard",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "product designer"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "typography",
+        "open source",
+        "dashboard",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1960,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "magicui-number-ticker": {
+      "id": "curated-ab98dea9c8484555",
+      "slug": "magicui-number-ticker",
+      "title": "Animated kpi counters",
+      "qualityScore": 4.4,
+      "useCase": "dashboard",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "product designer"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "dashboard",
+        "open source",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1949,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "magicui-morphing-text": {
+      "id": "curated-933cca17aabfa3f8",
+      "slug": "magicui-morphing-text",
+      "title": "Morphing headline loop",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "typography",
+        "open source",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1953,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "magicui-video-text": {
+      "id": "curated-ab82b70d78813a4e",
+      "slug": "magicui-video-text",
+      "title": "Video masked display type",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "typography",
+        "open source",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1956,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "magicui-scroll-based-velocity": {
+      "id": "curated-2cb95ad23beaba57",
+      "slug": "magicui-scroll-based-velocity",
+      "title": "Scroll velocity marquee",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "open source",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1961,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "magicui-safari": {
+      "id": "curated-b3c44d487095b205",
+      "slug": "magicui-safari",
+      "title": "Browser mockup hero",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "mockup",
+        "open source",
+        "hero",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1932,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "magicui-iphone": {
+      "id": "curated-6dc30e10e8e4e90f",
+      "slug": "magicui-iphone",
+      "title": "Mobile app preview hero",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "mockup",
+        "open source",
+        "hero",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1940,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "magicui-dotted-map": {
+      "id": "curated-eb461afc933b5c45",
+      "slug": "magicui-dotted-map",
+      "title": "Dotted map traction section",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "map",
+        "open source",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1946,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "magicui-file-tree": {
+      "id": "curated-ce515fb9ac4dfd6a",
+      "slug": "magicui-file-tree",
+      "title": "Developer docs file tree",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "devtool",
+        "open source",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1947,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "magicui-code-comparison": {
+      "id": "curated-cfe4d28693cab452",
+      "slug": "magicui-code-comparison",
+      "title": "Before After code comparison",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "magic ui",
+        "animation",
+        "devtool",
+        "open source",
+        "motion"
+      ],
+      "sourceName": "Magic UI components",
+      "hasPreview": true,
+      "promptLength": 1961,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-animated-beam": {
+      "id": "curated-cd3170b0af45d613",
+      "slug": "animata-animated-beam",
+      "title": "Animated beam onboarding flow",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "background",
+        "open source"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1920,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-blurry-blob": {
+      "id": "curated-e7ec088016ea94a1",
+      "slug": "animata-blurry-blob",
+      "title": "Soft blob gradient background",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "background",
+        "open source"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1920,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-interactive-grid": {
+      "id": "curated-171d3326534a899f",
+      "slug": "animata-interactive-grid",
+      "title": "Cursor reactive grid",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "background",
+        "open source"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1902,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-moving-gradient": {
+      "id": "curated-8e2ec9d94f0250be",
+      "slug": "animata-moving-gradient",
+      "title": "Moving gradient hero shell",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "background",
+        "open source",
+        "hero"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1914,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "animata-ai-button": {
+      "id": "curated-1a75f402c6709136",
+      "slug": "animata-ai-button",
+      "title": "Ai action button with thinking state",
+      "qualityScore": 3.8,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "button",
+        "open source",
+        "component"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1926,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-animated-follow-button": {
+      "id": "curated-9cca55e05aafa2a9",
+      "slug": "animata-animated-follow-button",
+      "title": "Social follow microinteraction",
+      "qualityScore": 3.8,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "button",
+        "open source",
+        "component"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1914,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-ripple-button": {
+      "id": "curated-34a85dc1ab989905",
+      "slug": "animata-ripple-button",
+      "title": "Directional ripple button",
+      "qualityScore": 3.8,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "button",
+        "open source",
+        "component"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1904,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-status-button": {
+      "id": "curated-2a943c4ab2ab55b2",
+      "slug": "animata-status-button",
+      "title": "Loading Success state button",
+      "qualityScore": 3.8,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "button",
+        "open source",
+        "component"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1910,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-swipe-button": {
+      "id": "curated-1a69fdef4956acb2",
+      "slug": "animata-swipe-button",
+      "title": "Swipe To Confirm control",
+      "qualityScore": 3.8,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "button",
+        "open source",
+        "component"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1902,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-blur-stack-card": {
+      "id": "curated-b8d1d77072750bde",
+      "slug": "animata-blur-stack-card",
+      "title": "Stacked blur cards",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "cards",
+        "open source",
+        "component"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1888,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-card-spread": {
+      "id": "curated-0dc92a5da48ba892",
+      "slug": "animata-card-spread",
+      "title": "Spreadable card deck",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "cards",
+        "open source",
+        "component"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1892,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-case-study-card": {
+      "id": "curated-dd4f08fc60ce5900",
+      "slug": "animata-case-study-card",
+      "title": "Case study preview card",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "cards",
+        "open source",
+        "component"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1898,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-email-feature-card": {
+      "id": "curated-a170b91af50d90b7",
+      "slug": "animata-email-feature-card",
+      "title": "Email product feature card",
+      "qualityScore": 4.4,
+      "useCase": "section",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "cards",
+        "open source",
+        "component"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1904,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "animata-expandable-card": {
+      "id": "curated-c42895b34a413cc4",
+      "slug": "animata-expandable-card",
+      "title": "Expandable details card",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "cards",
+        "open source",
+        "component"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1898,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-feature-card": {
+      "id": "curated-1e67158924eb1a51",
+      "slug": "animata-feature-card",
+      "title": "Feature card with scan line",
+      "qualityScore": 4.4,
+      "useCase": "section",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "cards",
+        "open source",
+        "component"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1906,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "animata-sparkles-card": {
+      "id": "curated-2fb347e6068ba2fc",
+      "slug": "animata-sparkles-card",
+      "title": "Sparkles accent card",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "cards",
+        "open source",
+        "component"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1892,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-drag-cards": {
+      "id": "curated-eefd51e987343827",
+      "slug": "animata-drag-cards",
+      "title": "Drag To Organize card board",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "interaction",
+        "open source",
+        "component"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1918,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-dock": {
+      "id": "curated-4f752c11ccf76f24",
+      "slug": "animata-dock",
+      "title": "Compact animated app dock",
+      "qualityScore": 3.8,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "navigation",
+        "open source",
+        "component"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1912,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-floating-navbar": {
+      "id": "curated-a959134a2092ab43",
+      "slug": "animata-floating-navbar",
+      "title": "Floating navbar with active state",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "navigation",
+        "open source"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1928,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-steps": {
+      "id": "curated-95194d4e8557e6db",
+      "slug": "animata-steps",
+      "title": "Animated setup steps",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "onboarding",
+        "open source"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1902,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-multi-step-loader": {
+      "id": "curated-472bdeca530055e7",
+      "slug": "animata-multi-step-loader",
+      "title": "Multi Step loader timeline",
+      "qualityScore": 3.8,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "loader",
+        "open source",
+        "component"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1906,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-terminal": {
+      "id": "curated-c5d5759b8053c47d",
+      "slug": "animata-terminal",
+      "title": "Animated terminal walkthrough",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "devtool",
+        "open source"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1914,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-text-scramble": {
+      "id": "curated-b0182bdfe7cbaddc",
+      "slug": "animata-text-scramble",
+      "title": "Text scramble headline",
+      "qualityScore": 3.8,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "typography",
+        "open source"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1906,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-typewriter": {
+      "id": "curated-bab1f78f44d98fc1",
+      "slug": "animata-typewriter",
+      "title": "Typewriter product copy",
+      "qualityScore": 3.8,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "typography",
+        "open source"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1908,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-word-fade-in": {
+      "id": "curated-c1b9cd5f7e0979c9",
+      "slug": "animata-word-fade-in",
+      "title": "Word By Word intro reveal",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "typography",
+        "open source"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1912,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-scroll-progress": {
+      "id": "curated-0ea1733ce376fdda",
+      "slug": "animata-scroll-progress",
+      "title": "Scroll progress story rail",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "scroll",
+        "open source"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1906,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-image-trail": {
+      "id": "curated-871b1870ef7b9d07",
+      "slug": "animata-image-trail",
+      "title": "Cursor image trail gallery",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "gallery",
+        "open source"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1908,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "animata-carousel": {
+      "id": "curated-7ea6c1ce5da568be",
+      "slug": "animata-carousel",
+      "title": "Spring carousel gallery",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animata",
+        "motion",
+        "gallery",
+        "open source",
+        "component"
+      ],
+      "sourceName": "Animata animated components",
+      "hasPreview": true,
+      "promptLength": 1902,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "cultui-dynamic-island": {
+      "id": "curated-bb666dfcdf1d9d9d",
+      "slug": "cultui-dynamic-island",
+      "title": "Dynamic island command status",
+      "qualityScore": 4.1,
+      "useCase": "dashboard",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "product designer"
+      ],
+      "normalizedTags": [
+        "cult ui",
+        "component",
+        "navigation",
+        "open source",
+        "dashboard"
+      ],
+      "sourceName": "Cult UI components",
+      "hasPreview": true,
+      "promptLength": 1965,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "cultui-distorted-glass": {
+      "id": "curated-5b76dc2e6aebc0aa",
+      "slug": "cultui-distorted-glass",
+      "title": "Distorted glass surface",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "cult ui",
+        "component",
+        "glass",
+        "open source"
+      ],
+      "sourceName": "Cult UI components",
+      "hasPreview": true,
+      "promptLength": 1944,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "cultui-hero-liquid-metal": {
+      "id": "curated-9afbb166c905971c",
+      "slug": "cultui-hero-liquid-metal",
+      "title": "Liquid metal hero",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "glass / luminous",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "cult ui",
+        "component",
+        "hero",
+        "open source"
+      ],
+      "sourceName": "Cult UI components",
+      "hasPreview": true,
+      "promptLength": 1932,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "cultui-hero-dithering": {
+      "id": "curated-8626c2110735e0a3",
+      "slug": "cultui-hero-dithering",
+      "title": "Dithered retro hero",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "cult ui",
+        "component",
+        "hero",
+        "open source"
+      ],
+      "sourceName": "Cult UI components",
+      "hasPreview": true,
+      "promptLength": 1933,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "cultui-hero-heatmap": {
+      "id": "curated-b107ade164c243ae",
+      "slug": "cultui-hero-heatmap",
+      "title": "Heatmap product hero",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "cult ui",
+        "component",
+        "hero",
+        "open source"
+      ],
+      "sourceName": "Cult UI components",
+      "hasPreview": true,
+      "promptLength": 1933,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "cultui-texture-card": {
+      "id": "curated-17957fc29e3721f8",
+      "slug": "cultui-texture-card",
+      "title": "Tactile texture cards",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "cult ui",
+        "component",
+        "cards",
+        "open source"
+      ],
+      "sourceName": "Cult UI components",
+      "hasPreview": true,
+      "promptLength": 1937,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "cultui-texture-button": {
+      "id": "curated-b89c6392ee057d31",
+      "slug": "cultui-texture-button",
+      "title": "Tactile texture button",
+      "qualityScore": 3.8,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "cult ui",
+        "component",
+        "button",
+        "open source"
+      ],
+      "sourceName": "Cult UI components",
+      "hasPreview": true,
+      "promptLength": 1943,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "cultui-shift-card": {
+      "id": "curated-c825a696262c258b",
+      "slug": "cultui-shift-card",
+      "title": "Shift Hover editorial card",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "editorial / luxury",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "cult ui",
+        "component",
+        "cards",
+        "open source"
+      ],
+      "sourceName": "Cult UI components",
+      "hasPreview": true,
+      "promptLength": 1945,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "cultui-side-panel": {
+      "id": "curated-8a5903a1c068f1a8",
+      "slug": "cultui-side-panel",
+      "title": "Slide Over details panel",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "cult ui",
+        "component",
+        "interaction",
+        "open source"
+      ],
+      "sourceName": "Cult UI components",
+      "hasPreview": true,
+      "promptLength": 1953,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "cultui-sortable-list": {
+      "id": "curated-2e9351df80fb0097",
+      "slug": "cultui-sortable-list",
+      "title": "Sortable priority list",
+      "qualityScore": 4.4,
+      "useCase": "dashboard",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "product designer"
+      ],
+      "normalizedTags": [
+        "cult ui",
+        "component",
+        "dashboard",
+        "open source"
+      ],
+      "sourceName": "Cult UI components",
+      "hasPreview": true,
+      "promptLength": 1948,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "cultui-floating-panel": {
+      "id": "curated-36365dbadaaba1fd",
+      "slug": "cultui-floating-panel",
+      "title": "Floating inspector panel",
+      "qualityScore": 4.4,
+      "useCase": "dashboard",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "product designer"
+      ],
+      "normalizedTags": [
+        "cult ui",
+        "component",
+        "dashboard",
+        "open source"
+      ],
+      "sourceName": "Cult UI components",
+      "hasPreview": true,
+      "promptLength": 1953,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "cultui-prompt-library": {
+      "id": "curated-66a72147b4cc5f34",
+      "slug": "cultui-prompt-library",
+      "title": "Prompt library browser",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "cult ui",
+        "component",
+        "library",
+        "open source"
+      ],
+      "sourceName": "Cult UI components",
+      "hasPreview": true,
+      "promptLength": 1945,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "cultui-terminal-animation": {
+      "id": "curated-0289b2e333d8d798",
+      "slug": "cultui-terminal-animation",
+      "title": "Terminal command animation",
+      "qualityScore": 4.1,
+      "useCase": "dashboard",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "product designer"
+      ],
+      "normalizedTags": [
+        "cult ui",
+        "component",
+        "devtool",
+        "open source",
+        "dashboard",
+        "motion"
+      ],
+      "sourceName": "Cult UI components",
+      "hasPreview": true,
+      "promptLength": 1957,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "cultui-text-gif": {
+      "id": "curated-78d71675389506c1",
+      "slug": "cultui-text-gif",
+      "title": "Animated gif text mask",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "cult ui",
+        "component",
+        "typography",
+        "open source"
+      ],
+      "sourceName": "Cult UI components",
+      "hasPreview": true,
+      "promptLength": 1945,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "cultui-pixel-heading-word": {
+      "id": "curated-551cabf64d0e62fe",
+      "slug": "cultui-pixel-heading-word",
+      "title": "Pixelated word heading",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "cult ui",
+        "component",
+        "typography",
+        "open source"
+      ],
+      "sourceName": "Cult UI components",
+      "hasPreview": true,
+      "promptLength": 1955,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "cultui-logo-carousel": {
+      "id": "curated-a032ab613b388bf5",
+      "slug": "cultui-logo-carousel",
+      "title": "Logo carousel trust row",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "cult ui",
+        "component",
+        "marquee",
+        "open source"
+      ],
+      "sourceName": "Cult UI components",
+      "hasPreview": true,
+      "promptLength": 1946,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "cultui-feature-carousel": {
+      "id": "curated-e06589de31cce53b",
+      "slug": "cultui-feature-carousel",
+      "title": "Feature carousel explainer",
+      "qualityScore": 4.4,
+      "useCase": "section",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "cult ui",
+        "component",
+        "carousel",
+        "open source"
+      ],
+      "sourceName": "Cult UI components",
+      "hasPreview": true,
+      "promptLength": 1957,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "cultui-choice-poll": {
+      "id": "curated-0d25d65ffd74e03c",
+      "slug": "cultui-choice-poll",
+      "title": "Interactive choice poll",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "cult ui",
+        "component",
+        "form",
+        "open source"
+      ],
+      "sourceName": "Cult UI components",
+      "hasPreview": true,
+      "promptLength": 1938,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "cultui-popover-form": {
+      "id": "curated-c2484429353aa588",
+      "slug": "cultui-popover-form",
+      "title": "Popover form workflow",
+      "qualityScore": 4.2,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "cult ui",
+        "component",
+        "form",
+        "open source"
+      ],
+      "sourceName": "Cult UI components",
+      "hasPreview": true,
+      "promptLength": 1935,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "cultui-onboarding": {
+      "id": "curated-c7f3854fd5ea40d4",
+      "slug": "cultui-onboarding",
+      "title": "Onboarding checklist flow",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "cult ui",
+        "component",
+        "onboarding",
+        "open source"
+      ],
+      "sourceName": "Cult UI components",
+      "hasPreview": true,
+      "promptLength": 1953,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "cultui-lightboard": {
+      "id": "curated-b709db40acdd8a5f",
+      "slug": "cultui-lightboard",
+      "title": "Lightboard idea wall",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "cult ui",
+        "component",
+        "gallery",
+        "open source"
+      ],
+      "sourceName": "Cult UI components",
+      "hasPreview": true,
+      "promptLength": 1937,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "cultui-morph-surface": {
+      "id": "curated-25f4db2396b047e5",
+      "slug": "cultui-morph-surface",
+      "title": "Morphing surface card",
+      "qualityScore": 4.1,
+      "useCase": "component",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "cult ui",
+        "component",
+        "motion",
+        "open source"
+      ],
+      "sourceName": "Cult UI components",
+      "hasPreview": true,
+      "promptLength": 1940,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    },
+    "tailark-hero-split-product": {
+      "id": "curated-5e5e731bb3ac4962",
+      "slug": "tailark-hero-split-product",
+      "title": "Split product landing hero",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "tailark",
+        "marketing",
+        "hero",
+        "open source"
+      ],
+      "sourceName": "Tailark marketing blocks",
+      "hasPreview": true,
+      "promptLength": 1885,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "tailark-logo-cloud-marquee": {
+      "id": "curated-c83393356f46ccc2",
+      "slug": "tailark-logo-cloud-marquee",
+      "title": "Clean logo cloud marquee",
+      "qualityScore": 4.1,
+      "useCase": "section",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "tailark",
+        "marketing",
+        "social proof",
+        "open source"
+      ],
+      "sourceName": "Tailark marketing blocks",
+      "hasPreview": true,
+      "promptLength": 1897,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "tailark-feature-bento-grid": {
+      "id": "curated-88e74dceadebd728",
+      "slug": "tailark-feature-bento-grid",
+      "title": "Marketing feature bento grid",
+      "qualityScore": 4.4,
+      "useCase": "section",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "tailark",
+        "marketing",
+        "features",
+        "open source"
+      ],
+      "sourceName": "Tailark marketing blocks",
+      "hasPreview": true,
+      "promptLength": 1897,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "tailark-integrations-cloud": {
+      "id": "curated-8b6ce2b2405b2aae",
+      "slug": "tailark-integrations-cloud",
+      "title": "Integrations cloud section",
+      "qualityScore": 4.1,
+      "useCase": "section",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "tailark",
+        "marketing",
+        "integrations",
+        "open source"
+      ],
+      "sourceName": "Tailark marketing blocks",
+      "hasPreview": true,
+      "promptLength": 1901,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "tailark-stats-proof-band": {
+      "id": "curated-37c9aba79d479c4f",
+      "slug": "tailark-stats-proof-band",
+      "title": "Stats proof band",
+      "qualityScore": 4.1,
+      "useCase": "section",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "tailark",
+        "marketing",
+        "metrics",
+        "open source"
+      ],
+      "sourceName": "Tailark marketing blocks",
+      "hasPreview": true,
+      "promptLength": 1871,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "tailark-team-grid-editorial": {
+      "id": "curated-aabf2120a72d90ae",
+      "slug": "tailark-team-grid-editorial",
+      "title": "Editorial team grid",
+      "qualityScore": 4.1,
+      "useCase": "section",
+      "siteType": "ai product",
+      "aesthetic": "editorial / luxury",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "tailark",
+        "marketing",
+        "team",
+        "open source"
+      ],
+      "sourceName": "Tailark marketing blocks",
+      "hasPreview": true,
+      "promptLength": 1871,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "tailark-testimonial-wall": {
+      "id": "curated-1f725d8cde089bfd",
+      "slug": "tailark-testimonial-wall",
+      "title": "Testimonial wall",
+      "qualityScore": 4.1,
+      "useCase": "section",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "tailark",
+        "marketing",
+        "social proof",
+        "open source"
+      ],
+      "sourceName": "Tailark marketing blocks",
+      "hasPreview": true,
+      "promptLength": 1881,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "tailark-pricing-comparison": {
+      "id": "curated-cfc6302bb556449c",
+      "slug": "tailark-pricing-comparison",
+      "title": "Pricing comparison page",
+      "qualityScore": 4.4,
+      "useCase": "section",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "tailark",
+        "marketing",
+        "pricing",
+        "open source",
+        "saas"
+      ],
+      "sourceName": "Tailark marketing blocks",
+      "hasPreview": true,
+      "promptLength": 1885,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "tailark-faq-accordion-section": {
+      "id": "curated-412640821a410aae",
+      "slug": "tailark-faq-accordion-section",
+      "title": "Faq accordion section",
+      "qualityScore": 4.1,
+      "useCase": "section",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "tailark",
+        "marketing",
+        "faq",
+        "open source"
+      ],
+      "sourceName": "Tailark marketing blocks",
+      "hasPreview": true,
+      "promptLength": 1873,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "tailark-final-cta-footer": {
+      "id": "curated-fd692f2574f7b885",
+      "slug": "tailark-final-cta-footer",
+      "title": "Final cta and footer system",
+      "qualityScore": 4.1,
+      "useCase": "section",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "tailark",
+        "marketing",
+        "cta",
+        "open source"
+      ],
+      "sourceName": "Tailark marketing blocks",
+      "hasPreview": true,
+      "promptLength": 1885,
+      "tier": "archive",
+      "canonical": false,
+      "archived": true
+    },
+    "template-shadcnstore-analytics-command-center": {
+      "id": "curated-0b7bd7768791fc72",
+      "slug": "template-shadcnstore-analytics-command-center",
+      "title": "Admin analytics command center",
+      "qualityScore": 4.4,
+      "useCase": "dashboard",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "product designer"
+      ],
+      "normalizedTags": [
+        "template",
+        "dashboard",
+        "open source"
+      ],
+      "sourceName": "Open-source template pattern",
+      "hasPreview": true,
+      "promptLength": 1939,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "template-shadcnstore-mail-task-dashboard": {
+      "id": "curated-69218df593e21f5d",
+      "slug": "template-shadcnstore-mail-task-dashboard",
+      "title": "Mail and task workspace dashboard",
+      "qualityScore": 4.4,
+      "useCase": "dashboard",
+      "siteType": "ai product",
+      "aesthetic": "cinematic 3d",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "product designer"
+      ],
+      "normalizedTags": [
+        "template",
+        "dashboard",
+        "open source",
+        "3d"
+      ],
+      "sourceName": "Open-source template pattern",
+      "hasPreview": true,
+      "promptLength": 1945,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "template-shadcnstore-calendar-ops-dashboard": {
+      "id": "curated-ecf3ec763c0fe2a9",
+      "slug": "template-shadcnstore-calendar-ops-dashboard",
+      "title": "Calendar operations dashboard",
+      "qualityScore": 4.4,
+      "useCase": "dashboard",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "product designer"
+      ],
+      "normalizedTags": [
+        "template",
+        "dashboard",
+        "open source"
+      ],
+      "sourceName": "Open-source template pattern",
+      "hasPreview": true,
+      "promptLength": 1937,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "template-shadcnstore-chat-support-console": {
+      "id": "curated-182576697b11cafa",
+      "slug": "template-shadcnstore-chat-support-console",
+      "title": "Chat support console",
+      "qualityScore": 4.4,
+      "useCase": "dashboard",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "product designer"
+      ],
+      "normalizedTags": [
+        "template",
+        "dashboard",
+        "open source"
+      ],
+      "sourceName": "Open-source template pattern",
+      "hasPreview": true,
+      "promptLength": 1919,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "template-ixartz-devtool-landing-page": {
+      "id": "curated-abf7beda85b88cde",
+      "slug": "template-ixartz-devtool-landing-page",
+      "title": "Developer First landing starter",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "template",
+        "landing page",
+        "open source"
+      ],
+      "sourceName": "Open-source template pattern",
+      "hasPreview": true,
+      "promptLength": 1949,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "template-ixartz-docs-first-saas-home": {
+      "id": "curated-d78f16a992df376e",
+      "slug": "template-ixartz-docs-first-saas-home",
+      "title": "Docs-first saas homepage",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "template",
+        "landing page",
+        "open source",
+        "saas"
+      ],
+      "sourceName": "Open-source template pattern",
+      "hasPreview": true,
+      "promptLength": 1935,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "template-karthik-dark-saas-launch": {
+      "id": "curated-2cfc986cce1b6316",
+      "slug": "template-karthik-dark-saas-launch",
+      "title": "Dark animated saas launch page",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "template",
+        "landing page",
+        "open source",
+        "saas"
+      ],
+      "sourceName": "Open-source template pattern",
+      "hasPreview": true,
+      "promptLength": 1945,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "template-karthik-framer-motion-feature-flow": {
+      "id": "curated-061b5ac00f0b90a0",
+      "slug": "template-karthik-framer-motion-feature-flow",
+      "title": "Framer motion feature flow",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "template",
+        "landing page",
+        "open source",
+        "motion"
+      ],
+      "sourceName": "Open-source template pattern",
+      "hasPreview": true,
+      "promptLength": 1937,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "template-ui-layouts-creative-scroll-home": {
+      "id": "curated-1f294d36d22338d8",
+      "slug": "template-ui-layouts-creative-scroll-home",
+      "title": "Creative scroll landing system",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "template",
+        "landing page",
+        "open source",
+        "motion"
+      ],
+      "sourceName": "Open-source template pattern",
+      "hasPreview": true,
+      "promptLength": 1923,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "template-ui-layouts-interactive-gallery": {
+      "id": "curated-7839b512bb2ca6cd",
+      "slug": "template-ui-layouts-interactive-gallery",
+      "title": "Interactive layout gallery",
+      "qualityScore": 4.4,
+      "useCase": "hero",
+      "siteType": "ai product",
+      "aesthetic": "technical / command",
+      "complexity": "advanced",
+      "motionLevel": "medium",
+      "bestFor": [
+        "AI agent",
+        "person"
+      ],
+      "normalizedTags": [
+        "template",
+        "landing page",
+        "gallery",
+        "open source"
+      ],
+      "sourceName": "Open-source template pattern",
+      "hasPreview": true,
+      "promptLength": 1905,
+      "tier": "canon",
+      "canonical": true,
+      "archived": false
+    },
+    "spring-roller-blind-reveal": {
+      "id": "local-spring-roller-blind-reveal",
+      "slug": "spring-roller-blind-reveal",
+      "title": "Spring Roller Blind Reveal",
+      "qualityScore": 3.3,
+      "useCase": "component",
+      "siteType": "saas",
+      "aesthetic": "glass / luminous",
+      "complexity": "medium",
+      "motionLevel": "heavy",
+      "bestFor": [
+        "AI agent remix",
+        "visual inspiration"
+      ],
+      "normalizedTags": [
+        "animation",
+        "motion",
+        "component",
+        "tactile",
+        "reveal",
+        "interaction",
+        "pull gesture",
+        "tactile pull-cord reveal component"
+      ],
+      "sourceName": "Framewell local",
+      "hasPreview": false,
+      "promptLength": 6252,
+      "tier": "pantry",
+      "canonical": false,
+      "archived": false
+    }
+  },
+  "bundles": [
+    {
+      "id": "saas-landing-kit",
+      "title": "SaaS Landing Page Kit",
+      "subtitle": "Product proof, feature bento, pricing, FAQ, and final CTA.",
+      "tone": "clean product marketing with strong proof and restrained visual drama",
+      "sections": [
+        "hero",
+        "proof band",
+        "feature bento",
+        "workflow/product preview",
+        "pricing",
+        "FAQ",
+        "final CTA"
+      ],
+      "promptSlugs": [
+        "motionsites-motionz-premium",
+        "opencodesign-field-notes-landing-page",
+        "opencodesign-product-launch-page",
+        "opencodesign-open-source-project-homepage",
+        "opencodesign-ai-notebook-waitlist",
+        "opencodesign-ai-writing-assistant-hero",
+        "opencodesign-saas-revenue-dashboard",
+        "opencodesign-creator-analytics-dashboard",
+        "motionsites-free-glow-features",
+        "motionsites-free-securify-data-security",
+        "motionsites-free-codenest-coding-platform",
+        "motionsites-free-mindloop-landing"
+      ],
+      "heroSlug": "motionsites-motionz-premium",
+      "count": 12,
+      "briefTemplate": "Build a premium website using the SaaS Landing Page Kit. Tone: clean product marketing with strong proof and restrained visual drama. Structure: hero, proof band, feature bento, workflow/product preview, pricing, FAQ, final CTA. Combine the selected Framewell references, but do not copy them literally. Produce a cohesive responsive site with real hierarchy, accessible contrast, restrained motion, and production-ready code."
+    },
+    {
+      "id": "ai-product-launch-kit",
+      "title": "AI Product Launch Kit",
+      "subtitle": "Hero, workflow visual, trust layer, and waitlist/launch copy.",
+      "tone": "credible AI product, not generic purple-gradient slop",
+      "sections": [
+        "clear promise hero",
+        "workflow visual",
+        "model/process explanation",
+        "trust/security",
+        "use cases",
+        "CTA"
+      ],
+      "promptSlugs": [
+        "motionsites-space-voyage",
+        "motionsites-portfolio-cosmic",
+        "motionsites-motionz-premium",
+        "opencodesign-field-notes-landing-page",
+        "opencodesign-ai-notebook-waitlist",
+        "opencodesign-ai-writing-assistant-hero",
+        "opencodesign-ai-ops-command-center",
+        "motionsites-free-digital-epoch",
+        "motionsites-free-rivr",
+        "motionsites-free-glow-features",
+        "motionsites-free-securify-data-security",
+        "motionsites-free-codenest-coding-platform"
+      ],
+      "heroSlug": "motionsites-space-voyage",
+      "count": 12,
+      "briefTemplate": "Build a premium website using the AI Product Launch Kit. Tone: credible AI product, not generic purple-gradient slop. Structure: clear promise hero, workflow visual, model/process explanation, trust/security, use cases, CTA. Combine the selected Framewell references, but do not copy them literally. Produce a cohesive responsive site with real hierarchy, accessible contrast, restrained motion, and production-ready code."
+    },
+    {
+      "id": "portfolio-studio-kit",
+      "title": "Portfolio / Studio Kit",
+      "subtitle": "Editorial hero, selected work, case studies, services, and contact.",
+      "tone": "tasteful editorial studio with confident spacing and memorable motion",
+      "sections": [
+        "editorial hero",
+        "selected work",
+        "case-study cards",
+        "services",
+        "about",
+        "contact CTA"
+      ],
+      "promptSlugs": [
+        "motionsites-portfolio-cosmic",
+        "x-render-and-co-3d-animation-studio",
+        "opencodesign-field-notes-landing-page",
+        "opencodesign-boutique-agency-homepage",
+        "motionsites-free-prisma-creative-studio",
+        "motionsites-free-portfolio-cosmic",
+        "template-ui-layouts-creative-scroll-home",
+        "motionsites-framelix-3d-studios",
+        "motionsites-liquid-glass-agency",
+        "motionsites-buzzentic-agency",
+        "motionsites-ai-designer-agency",
+        "motionsites-free-velorah"
+      ],
+      "heroSlug": "motionsites-portfolio-cosmic",
+      "count": 12,
+      "briefTemplate": "Build a premium website using the Portfolio / Studio Kit. Tone: tasteful editorial studio with confident spacing and memorable motion. Structure: editorial hero, selected work, case-study cards, services, about, contact CTA. Combine the selected Framewell references, but do not copy them literally. Produce a cohesive responsive site with real hierarchy, accessible contrast, restrained motion, and production-ready code."
+    },
+    {
+      "id": "dashboard-product-kit",
+      "title": "Dashboard Product Kit",
+      "subtitle": "Command center, analytics panels, app states, and workflow surfaces.",
+      "tone": "dense but calm product interface that feels real and operable",
+      "sections": [
+        "dashboard hero",
+        "live metrics preview",
+        "workflow panels",
+        "alerts/states",
+        "integrations",
+        "security/trust"
+      ],
+      "promptSlugs": [
+        "opencodesign-particle-field-data-hero",
+        "opencodesign-saas-revenue-dashboard",
+        "opencodesign-finance-ops-dashboard",
+        "opencodesign-observability-dashboard",
+        "opencodesign-creator-analytics-dashboard",
+        "opencodesign-ecommerce-inventory-dashboard",
+        "opencodesign-ai-ops-command-center",
+        "opencodesign-design-token-inspector",
+        "motionsites-free-securify-data-security",
+        "magicui-animated-list",
+        "magicui-number-ticker",
+        "cultui-sortable-list"
+      ],
+      "heroSlug": "opencodesign-particle-field-data-hero",
+      "count": 12,
+      "briefTemplate": "Build a premium website using the Dashboard Product Kit. Tone: dense but calm product interface that feels real and operable. Structure: dashboard hero, live metrics preview, workflow panels, alerts/states, integrations, security/trust. Combine the selected Framewell references, but do not copy them literally. Produce a cohesive responsive site with real hierarchy, accessible contrast, restrained motion, and production-ready code."
+    },
+    {
+      "id": "motion-first-hero-kit",
+      "title": "Motion-First Hero Kit",
+      "subtitle": "3D, video, particle, kinetic type, and scroll-driven hero ideas.",
+      "tone": "one memorable above-the-fold idea with motion that explains the product",
+      "sections": [
+        "motion concept",
+        "headline system",
+        "visual proof object",
+        "CTA pair",
+        "scroll handoff"
+      ],
+      "promptSlugs": [
+        "motionsites-space-voyage",
+        "motionsites-portfolio-cosmic",
+        "motionsites-motionz-premium",
+        "x-render-and-co-3d-animation-studio",
+        "opencodesign-particle-field-data-hero",
+        "motionsites-free-digital-epoch",
+        "motionsites-free-rivr",
+        "motionsites-free-glow-features",
+        "motionsites-free-securify-data-security",
+        "motionsites-free-codenest-coding-platform",
+        "motionsites-free-bloom-ai",
+        "motionsites-free-mindloop-landing"
+      ],
+      "heroSlug": "motionsites-space-voyage",
+      "count": 12,
+      "briefTemplate": "Build a premium website using the Motion-First Hero Kit. Tone: one memorable above-the-fold idea with motion that explains the product. Structure: motion concept, headline system, visual proof object, CTA pair, scroll handoff. Combine the selected Framewell references, but do not copy them literally. Produce a cohesive responsive site with real hierarchy, accessible contrast, restrained motion, and production-ready code."
+    },
+    {
+      "id": "luxury-editorial-kit",
+      "title": "Luxury / Editorial Kit",
+      "subtitle": "Refined typography, slow reveals, product atmosphere, and gallery rhythm.",
+      "tone": "quiet premium editorial, image-led and typography-led",
+      "sections": [
+        "editorial hero",
+        "image rhythm",
+        "story/provenance",
+        "collection grid",
+        "soft CTA"
+      ],
+      "promptSlugs": [
+        "motionsites-portfolio-cosmic",
+        "x-render-and-co-3d-animation-studio",
+        "opencodesign-field-notes-landing-page",
+        "opencodesign-boutique-agency-homepage",
+        "opencodesign-ai-notebook-waitlist",
+        "motionsites-free-prisma-creative-studio",
+        "motionsites-free-portfolio-cosmic",
+        "motionsites-free-wanderful-hero",
+        "motionsites-framelix-3d-studios",
+        "motionsites-liquid-glass-agency",
+        "motionsites-new-era-automotive-hero",
+        "motionsites-buzzentic-agency"
+      ],
+      "heroSlug": "motionsites-portfolio-cosmic",
+      "count": 12,
+      "briefTemplate": "Build a premium website using the Luxury / Editorial Kit. Tone: quiet premium editorial, image-led and typography-led. Structure: editorial hero, image rhythm, story/provenance, collection grid, soft CTA. Combine the selected Framewell references, but do not copy them literally. Produce a cohesive responsive site with real hierarchy, accessible contrast, restrained motion, and production-ready code."
+    },
+    {
+      "id": "devtool-open-source-kit",
+      "title": "Open Source / Devtool Kit",
+      "subtitle": "Docs-first product pages, terminal demos, GitHub proof, and API sections.",
+      "tone": "technical, legible, trustworthy; useful before flashy",
+      "sections": [
+        "devtool hero",
+        "terminal/API demo",
+        "feature grid",
+        "docs preview",
+        "community proof",
+        "CTA"
+      ],
+      "promptSlugs": [
+        "opencodesign-field-notes-landing-page",
+        "opencodesign-product-launch-page",
+        "opencodesign-boutique-agency-homepage",
+        "opencodesign-open-source-project-homepage",
+        "opencodesign-ai-notebook-waitlist",
+        "opencodesign-ai-writing-assistant-hero",
+        "opencodesign-particle-field-data-hero",
+        "opencodesign-saas-revenue-dashboard",
+        "opencodesign-finance-ops-dashboard",
+        "opencodesign-observability-dashboard",
+        "opencodesign-creator-analytics-dashboard",
+        "opencodesign-ecommerce-inventory-dashboard"
+      ],
+      "heroSlug": "opencodesign-field-notes-landing-page",
+      "count": 12,
+      "briefTemplate": "Build a premium website using the Open Source / Devtool Kit. Tone: technical, legible, trustworthy; useful before flashy. Structure: devtool hero, terminal/API demo, feature grid, docs preview, community proof, CTA. Combine the selected Framewell references, but do not copy them literally. Produce a cohesive responsive site with real hierarchy, accessible contrast, restrained motion, and production-ready code."
+    },
+    {
+      "id": "component-pantry",
+      "title": "Component Pantry",
+      "subtitle": "Buttons, loaders, beams, cards, docks, and other accents to remix into pages.",
+      "tone": "small reusable interaction patterns, not standalone websites",
+      "sections": [
+        "accent motion",
+        "microinteraction",
+        "supporting component",
+        "implementation note"
+      ],
+      "promptSlugs": [
+        "magicui-animated-beam",
+        "cultui-popover-form",
+        "magicui-globe",
+        "cultui-hero-heatmap",
+        "magicui-marquee",
+        "magicui-border-beam",
+        "magicui-magic-card",
+        "magicui-glare-hover",
+        "magicui-animated-grid-pattern",
+        "magicui-flickering-grid",
+        "magicui-scroll-based-velocity",
+        "magicui-dotted-map"
+      ],
+      "heroSlug": "magicui-animated-beam",
+      "count": 12,
+      "briefTemplate": "Build a premium website using the Component Pantry. Tone: small reusable interaction patterns, not standalone websites. Structure: accent motion, microinteraction, supporting component, implementation note. Combine the selected Framewell references, but do not copy them literally. Produce a cohesive responsive site with real hierarchy, accessible contrast, restrained motion, and production-ready code."
+    }
+  ]
+}

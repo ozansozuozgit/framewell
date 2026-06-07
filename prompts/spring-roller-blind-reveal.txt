@@ -1,0 +1,93 @@
+Build a tactile single-page reveal interaction called Spring Roller Blind Reveal. Use React with Vite, TypeScript, Tailwind CSS, and Framer Motion. The result should feel like a real pull-cord window blind: the user drags a hanging cord down, tension builds in the fabric, and when released past a threshold the curtain snaps upward with an elastic spring to reveal the page underneath.
+
+Overall structure:
+- Render a full-viewport demo with the revealed content already present underneath the curtain.
+- Underlying content should feel like a bright window/studio scene: soft daylight background, a framed content card or product panel, subtle grain, and calm typography.
+- On top, render a curtain/blind layer that initially covers the whole viewport.
+- The blind has a slightly textured fabric surface, horizontal roller-blind bands, a bottom weighted rail, and a small cord centered near the bottom edge.
+- The interaction should work with mouse, touch, and keyboard.
+
+Core states:
+1. `closed`: blind covers the viewport. The content behind is visible only as a dim/blurred glow around edges.
+2. `pulling`: user is dragging the cord down. The cord stretches directly with the pointer. The blind follows with weight and lag, moving only about 30–40 percent of the pull distance. The bottom edge bows downward to show tension.
+3. `releasedBack`: if the user releases under the threshold, the cord and blind snap back closed with a small rebound.
+4. `revealed`: if the user releases past the threshold, the blind shoots upward past the top of the viewport, overshoots, bounces once, then settles hidden as a slim rolled cylinder at the top.
+5. Optional reset: a tiny top pull tab lets the user drop the blind back down.
+
+Physics and thresholds:
+- Maintain `pullY` as the drag distance clamped from 0 to 180.
+- Reveal threshold: 92px or 55 percent of the max pull distance.
+- While dragging, the curtain translateY should be `pullY * 0.35`.
+- The cord handle follows the drag exactly, but the cord line visually stretches.
+- On successful release, animate the curtain to `y: '-112%'` with a spring-like transition: high stiffness, medium damping, slight overshoot.
+- On failed release, animate both curtain and cord back to 0 with a playful rebound.
+- Use Framer Motion spring transitions, not a linear CSS transition.
+
+Recommended Framer Motion setup:
+- Use `motion.div` for the curtain panel, bottom rail, cord line, and bead handle.
+- Use `drag="y"` on the bead handle with `dragConstraints={{ top: 0, bottom: 180 }}` and `dragElastic={0.08}`.
+- Use `onDrag` to update live pull progress and `onDragEnd` to choose reveal vs snap-back.
+- Use `useMotionValue`, `useTransform`, and `useSpring` for smooth dependent values:
+  - `curtainY = spring(transform(pullY, [0, 180], [0, 64]))`
+  - `edgeBow = transform(pullY, [0, 180], [0, 34])`
+  - `contentBlur = transform(revealProgress, [0, 1], ['8px', '0px'])`
+  - `contentBrightness = transform(pullY, [0, 180], [0.72, 1])`
+
+Important visual detail: deform the curtain bottom edge.
+Use one of these approaches:
+- Preferred: an SVG overlay at the bottom of the curtain whose path changes with pull tension. The path should look like a shallow sagging arc: `M 0 0 Q 50 tension 100 0 L 100 60 L 0 60 Z` using `viewBox="0 0 100 60"` and `preserveAspectRatio="none"`.
+- Simpler fallback: a pseudo bottom-edge element with border-radius and scaleY driven by pull progress.
+The bottom edge should never look like a flat rectangle while pulling.
+
+Curtain visual language:
+- Fabric color: warm ivory, mushroom, or muted linen; avoid generic purple gradients.
+- Add a fine noise texture with CSS radial gradients or a pseudo-element.
+- Add 10–14 subtle horizontal bands using repeating-linear-gradient.
+- Bottom rail: rounded capsule, slightly darker, with a soft shadow below it.
+- Top roller: when revealed, leave a 24–36px cylindrical roll at top with curved shadow so the blind feels physically stored.
+
+Cord visual language:
+- Thin vertical cord, 1.5–2px wide, dark warm gray.
+- Small bead/weight at the end, not a generic circle: use a pill or teardrop shape with a highlight.
+- During pull, show tension by increasing line opacity and stretching the bead slightly in the drag direction.
+- Add a tiny label near the bead: “pull to reveal” while closed; fade it out once pulling starts.
+
+Reveal choreography:
+- As the pull progress increases, the content underneath should brighten, sharpen, and subtly scale from 0.985 to 1.
+- On successful reveal, trigger a quick light sweep from top to bottom across the revealed window/content.
+- Add one small shake/rattle on the bottom rail right before it shoots upward.
+- Avoid over-animating every piece; the memorable moment is the physical snap upward.
+
+Accessibility:
+- The cord handle must be a button or focusable element with `aria-label="Pull blind to reveal content"`.
+- Space/Enter should trigger the reveal without drag.
+- Escape or the reset tab should close the blind again.
+- Respect `prefers-reduced-motion`: replace the spring snap with a short opacity/clip reveal and no bounce.
+- Keep text contrast accessible.
+
+Responsive behavior:
+- On mobile, keep the cord bead large enough to drag comfortably: at least 44x44 hit target.
+- Reduce max pull from 180 to 140 on short screens.
+- Keep the revealed content centered and scrollable after the blind opens.
+- The curtain should cover the full viewport even if the page content underneath is taller.
+
+Suggested component API:
+```tsx
+type SpringBlindRevealProps = {
+  children: React.ReactNode;
+  defaultOpen?: boolean;
+  onReveal?: () => void;
+  resettable?: boolean;
+};
+```
+
+Deliverables:
+- `SpringBlindReveal.tsx` component.
+- A demo `App.tsx` showing the component around a polished landing-page/window scene.
+- Tailwind/CSS utilities for fabric texture, rail, cord, top roller, and reduced-motion fallback.
+- No external assets are required; create texture and light with CSS.
+
+Quality bar:
+- The drag should feel heavy and tactile, not like a normal drawer.
+- The threshold should be discoverable: users can pull a little, see tension, and understand that a larger pull will release it.
+- The final reveal should feel like a spring-loaded blind snapping upward, overshooting, then settling into a roll.

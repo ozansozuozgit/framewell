@@ -5075,5 +5075,30 @@
     "mimeType": "image/svg+xml",
     "promptOnly": true,
     "license": "MIT"
+  },
+  {
+    "id": "local-spring-roller-blind-reveal",
+    "title": "Spring Roller Blind Reveal",
+    "sectionType": "Tactile pull-cord reveal component",
+    "slug": "spring-roller-blind-reveal",
+    "plan": "local",
+    "author": "Ozan + Hermes",
+    "aiTools": [
+      "React",
+      "Framer Motion",
+      "Tailwind CSS"
+    ],
+    "tags": [
+      "animation",
+      "motion",
+      "component",
+      "framer motion",
+      "tactile",
+      "reveal",
+      "interaction",
+      "pull gesture"
+    ],
+    "sourceName": "Framewell local",
+    "previewGenerated": true
   }
 ]
