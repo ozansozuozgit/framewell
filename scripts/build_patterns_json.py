@@ -134,6 +134,32 @@ PATTERNS = [
 
 ]
 
+PREMIUM_PATTERN_IDS = {
+    "radial-command-wheel",
+    "search-bar-morph-results",
+    "ai-agent-path-trace",
+    "data-lineage-river",
+    "audit-evidence-peek",
+    "dashboard-row-scroll-reveal",
+    "security-radar-sweep",
+    "kanban-physics-lift",
+    "glass-torus-pricing",
+    "aave-glass-slider-refraction",
+    "dock-with-liquid-focus",
+    "horizontal-case-filmstrip",
+    "sticky-comparison-wipe",
+    "responsive-device-morph",
+    "notebook-annotation-rail",
+    "docs-code-stepper",
+    "onboarding-constellation",
+    "kinetic-statements",
+    "shader-noise-navigation",
+    "commerce-size-magnet",
+    "elastic-cursor-work-index",
+    "timeline-camera-scrubber",
+    "glassmorphic-audio-reactor",
+}
+
 BASE_CSS = r'''
 :root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max-width:620px){.frame{padding:10px}.specimen{border-radius:22px}.stage{padding:16px}.label{font-size:9px}}
 '''
@@ -536,10 +562,23 @@ def unique_template(p):
     return common + css, body, js
 
 def build_index(p):
-    key = p[6]
-    obj = {"slug":p[0],"title":p[1],"behavior":p[2],"context":p[3],"description":p[4],"tags":p[5],"template":key}
-    css, body, js = TEMPLATES[key](obj) if key in TEMPLATES else unique_template(obj)
-    return f"""<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>{esc(p[1])} — Framewell live effect</title><style>{BASE_CSS}\n{css}</style></head><body><div class=\"frame\"><main class=\"specimen\" aria-label=\"{esc(p[1])}\"><div class=\"bar\"><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"dot\"></span><span class=\"label\">{esc(p[2])} · {esc(p[3])}</span></div><section class=\"stage\">{body}</section></main></div>{('<script>'+js+'</script>') if js else ''}</body></html>"""
+    slug,title,behavior,context,desc,tags,template_key,source = p
+    meta = {"id":slug,"slug":slug,"title":title,"behavior":behavior,"context":context,"description":desc,"tags":tags,"template":template_key,"sourcePromptIds":[source]}
+    payload = json.dumps(meta).replace("</", "<\\/")
+    return f"""<!doctype html>
+<html lang=\"en\">
+<head>
+  <meta charset=\"utf-8\">
+  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">
+  <title>{esc(title)} — Framewell React specimen</title>
+  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">
+</head>
+<body>
+  <div id=\"root\"></div>
+  <script>window.__FRAMEWELL_PATTERN_META__ = {payload};</script>
+  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>
+</body>
+</html>"""
 
 def prompt_for(title, desc, behavior, context, tags):
     return f"Adapt the Framewell pattern '{title}' into my existing {context} without replacing my product structure. Use it only as a focused {behavior} layer. {desc} Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: {', '.join(tags)}."
@@ -555,13 +594,7 @@ def main():
     seen=set()
     for i,p in enumerate(PATTERNS):
         slug,title,behavior,context,desc,tags,template_key,source = p
-        DROP_GENERIC = {
-            "faq-elastic-drawer", "team-spotlight-grid", "footer-gravity-links", "logo-cloud-depth-marquee",
-            "stats-countup-proof-band", "mask-reveal-testimonials", "infinite-marquee-cards", "audio-wave-loader",
-            "morphing-section-divider", "task-completion-confetti-minimal", "scroll-shadow-document",
-            "form-field-living-label", "copy-button-success-sweep", "empty-state-suggestion-orbit"
-        }
-        if slug in DROP_GENERIC:
+        if slug not in PREMIUM_PATTERN_IDS:
             continue
         if slug in seen: raise SystemExit(f"duplicate slug: {slug}")
         seen.add(slug)

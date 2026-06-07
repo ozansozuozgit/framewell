@@ -4,7 +4,17 @@
   "private": true,
   "description": "Preview-first motion prompt library for websites, dashboards, animations, and component ideas.",
   "scripts": {
+    "build:specimens": "vite build --config specimens/vite.config.js",
     "start": "python3 -m http.server 4173",
-    "validate": "node --check app.js && python3 scripts/build_prompts_json.py && python3 scripts/build_curation_json.py && python3 scripts/build_composition_json.py && python3 scripts/validate_composition_json.py && python3 scripts/build_patterns_json.py"
+    "validate": "node --check app.js && npm run build:specimens && python3 scripts/build_prompts_json.py && python3 scripts/build_curation_json.py && python3 scripts/build_composition_json.py && python3 scripts/validate_composition_json.py && python3 scripts/build_patterns_json.py"
+  },
+  "dependencies": {
+    "lucide-react": "^1.17.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.2",
+    "vite": "^8.0.16"
   }
 }

@@ -1,1 +1,0 @@
-Adapt the Framewell pattern 'Privacy vault door' into my existing Security without replacing my product structure. Use it only as a focused Security hero layer. Panels lock together like a vault door around the CTA. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: security, vault, hero, motion.

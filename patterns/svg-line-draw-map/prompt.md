@@ -1,1 +1,0 @@
-Adapt the Framewell pattern 'SVG line-draw map' into my existing Geo app without replacing my product structure. Use it only as a focused Map path layer. Routes draw in with labels and pulsing handoff points. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: svg, map, line-draw, geo.
