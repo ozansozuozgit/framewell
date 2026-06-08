@@ -21313,9 +21313,9 @@ var nm = class {
 };
 function Um() {
 	if (!Bm) return /* @__PURE__ */ (0, $.jsx)(Wm, {});
-	let e = Bm || zm, t = Hm[e.id] || Hm[e.slug] || e.template || "dashboard", n = Eh[t] || rh;
+	let e = Bm || zm, t = Hm[e.id] || Hm[e.slug] || e.template || "dashboard", n = `${t} ${e.behavior || ""} ${(e.tags || []).join(" ")}`.toLowerCase(), r = /scroll|scrolltrigger|sticky|camera/.test(n) || t === "three-product" || t === "gsap-cascade", i = Dh[t] || ih;
 	return /* @__PURE__ */ (0, $.jsx)("main", {
-		className: `fw-root ${t.includes("scroll") || t === "three-product" || t === "gsap-cascade" ? "scroll-specimen-root" : ""}`,
+		className: `fw-root ${r ? "scroll-specimen-root" : ""}`,
 		children: /* @__PURE__ */ (0, $.jsxs)("section", {
 			className: "specimen-shell",
 			children: [/* @__PURE__ */ (0, $.jsxs)("div", {
@@ -21333,12 +21333,12 @@ function Um() {
 						children: [/* @__PURE__ */ (0, $.jsx)("span", { children: e.behavior }), /* @__PURE__ */ (0, $.jsx)("span", { children: e.context })]
 					})
 				]
-			}), /* @__PURE__ */ (0, $.jsx)(n, { meta: e })]
+			}), /* @__PURE__ */ (0, $.jsx)(i, { meta: e })]
 		})
 	});
 }
 function Wm() {
-	let [e, t] = (0, _.useState)([]), [n, r] = (0, _.useState)(""), [i, a] = (0, _.useState)(""), [o, s] = (0, _.useState)("Stage"), [c, l] = (0, _.useState)(0), [u, d] = (0, _.useState)(!1), f = (0, _.useRef)(null);
+	let [e, t] = (0, _.useState)([]), [n, r] = (0, _.useState)(""), [i, a] = (0, _.useState)(""), [o, s] = (0, _.useState)("Stage"), c = (0, _.useRef)(null);
 	(0, _.useEffect)(() => {
 		let e = !0;
 		return fetch("data/patterns.json").then((e) => e.json()).then((n) => {
@@ -21349,7 +21349,7 @@ function Wm() {
 			e = !1;
 		};
 	}, []);
-	let p = (0, _.useMemo)(() => {
+	let l = (0, _.useMemo)(() => {
 		let t = i.trim().toLowerCase();
 		return t ? e.filter((e) => [
 			e.title,
@@ -21358,30 +21358,14 @@ function Wm() {
 			e.description,
 			...e.tags || []
 		].join(" ").toLowerCase().includes(t)) : e;
-	}, [e, i]), m = e.find((e) => e.id === n) || p[0] || e[0], h = m && (Hm[m.id] || m.template) || "", g = m?.tags || [], v = /scroll|gsap|three-product|scroll-mask/.test(`${h} ${m?.behavior || ""} ${g.join(" ")}`.toLowerCase()), y = v || u, b = (e) => {
-		let t = Vm(e);
-		l(t);
-		let n = f.current?.contentWindow;
-		if (n) try {
-			if (typeof n.__FRAMEWELL_SET_PROGRESS__ == "function") n.__FRAMEWELL_SET_PROGRESS__(t);
-			else {
-				let e = n.document.documentElement.scrollHeight - n.innerHeight;
-				n.scrollTo({
-					top: e * t,
-					behavior: "auto"
-				});
-			}
-		} catch {}
-	};
+	}, [e, i]), u = e.find((e) => e.id === n) || l[0] || e[0], d = u && (Hm[u.id] || u.template) || "", f = u?.tags || [], p = /scroll|gsap|three-product|scroll-mask/.test(`${d} ${u?.behavior || ""} ${f.join(" ")}`.toLowerCase());
 	return (0, _.useEffect)(() => {
-		l(0), d(!1), requestAnimationFrame(() => b(0));
-	}, [m?.id]), (0, _.useEffect)(() => {
-		p.some((e) => e.id === n) || r(p[0]?.id || e[0]?.id || "");
+		l.some((e) => e.id === n) || r(l[0]?.id || e[0]?.id || "");
 	}, [
-		p,
+		l,
 		n,
 		e
-	]), m ? /* @__PURE__ */ (0, $.jsxs)("main", {
+	]), u ? /* @__PURE__ */ (0, $.jsxs)("main", {
 		className: "motion-lab",
 		children: [
 			/* @__PURE__ */ (0, $.jsxs)("aside", {
@@ -21401,13 +21385,13 @@ function Wm() {
 					}),
 					/* @__PURE__ */ (0, $.jsxs)("div", {
 						className: "motion-count",
-						children: [p.length, " working examples"]
+						children: [l.length, " working examples"]
 					}),
 					/* @__PURE__ */ (0, $.jsx)("nav", {
 						className: "motion-list",
 						"aria-label": "Live motion examples",
-						children: p.map((e, t) => /* @__PURE__ */ (0, $.jsxs)("button", {
-							className: e.id === m.id ? "active" : "",
+						children: l.map((e, t) => /* @__PURE__ */ (0, $.jsxs)("button", {
+							className: e.id === u.id ? "active" : "",
 							onClick: () => r(e.id),
 							children: [/* @__PURE__ */ (0, $.jsxs)("small", { children: [
 								String(t + 1).padStart(2, "0"),
@@ -21425,11 +21409,11 @@ function Wm() {
 					children: [/* @__PURE__ */ (0, $.jsxs)("div", { children: [/* @__PURE__ */ (0, $.jsxs)("div", {
 						className: "eyebrow",
 						children: [
-							m.behavior,
+							u.behavior,
 							" · ",
-							m.context
+							u.context
 						]
-					}), /* @__PURE__ */ (0, $.jsx)("h1", { children: m.title })] }), /* @__PURE__ */ (0, $.jsx)("div", {
+					}), /* @__PURE__ */ (0, $.jsx)("h1", { children: u.title })] }), /* @__PURE__ */ (0, $.jsx)("div", {
 						className: "tabs",
 						children: [
 							"Stage",
@@ -21441,50 +21425,23 @@ function Wm() {
 							children: e
 						}, e))
 					})]
-				}), o === "Stage" ? /* @__PURE__ */ (0, $.jsxs)("div", {
-					className: `motion-stage-live ${y ? "is-scroll-example" : ""}`,
-					onWheel: (e) => {
-						y && b(c + e.deltaY / 1800);
-					},
-					children: [y && /* @__PURE__ */ (0, $.jsxs)("div", {
-						className: `stage-scroll-controls ${v ? "scroll-mode" : ""}`,
-						children: [
-							/* @__PURE__ */ (0, $.jsx)("span", { children: v ? "Scroll the stage" : "Effect driver" }),
-							v ? /* @__PURE__ */ (0, $.jsx)("div", {
-								className: "stage-progress-rail",
-								"aria-label": `${m.title} scroll progress`,
-								children: /* @__PURE__ */ (0, $.jsx)("b", { style: { width: `${Math.round(c * 100)}%` } })
-							}) : /* @__PURE__ */ (0, $.jsx)("input", {
-								type: "range",
-								min: "0",
-								max: "100",
-								value: Math.round(c * 100),
-								onChange: (e) => b(Number(e.target.value) / 100),
-								"aria-label": `Scrub ${m.title}`
-							}),
-							/* @__PURE__ */ (0, $.jsxs)("b", { children: [Math.round(c * 100), "%"] })
-						]
-					}), /* @__PURE__ */ (0, $.jsx)("iframe", {
-						ref: f,
+				}), o === "Stage" ? /* @__PURE__ */ (0, $.jsx)("div", {
+					className: `motion-stage-live ${p ? "is-scroll-example" : ""}`,
+					children: /* @__PURE__ */ (0, $.jsx)("iframe", {
+						ref: c,
 						className: "motion-stage-frame",
-						src: m.previewUrl,
-						title: `${m.title} live preview`,
+						src: u.previewUrl,
+						title: `${u.title} live preview`,
 						onLoad: () => {
-							let e = () => {
-								try {
-									d(typeof f.current?.contentWindow?.__FRAMEWELL_SET_PROGRESS__ == "function");
-								} catch {}
-							};
 							try {
-								let t = f.current?.contentDocument;
-								v && t?.documentElement.classList.add("framewell-stage-embedded"), e(), setTimeout(e, 80);
+								let e = c.current?.contentDocument;
+								p && e?.documentElement.classList.add("framewell-stage-embedded");
 							} catch {}
-							b(0);
 						}
-					})]
+					})
 				}) : /* @__PURE__ */ (0, $.jsx)("pre", {
 					className: "motion-readable",
-					children: o === "Prompt" ? m.prompt : m.code
+					children: o === "Prompt" ? u.prompt : u.code
 				})]
 			}),
 			/* @__PURE__ */ (0, $.jsxs)("aside", {
@@ -21495,7 +21452,7 @@ function Wm() {
 						children: [/* @__PURE__ */ (0, $.jsx)("div", {
 							className: "eyebrow",
 							children: "Why it matters"
-						}), /* @__PURE__ */ (0, $.jsx)("p", { children: m.description })]
+						}), /* @__PURE__ */ (0, $.jsx)("p", { children: u.description })]
 					}),
 					/* @__PURE__ */ (0, $.jsxs)("div", {
 						className: "panel",
@@ -21504,7 +21461,7 @@ function Wm() {
 							children: "Stack / behavior"
 						}), /* @__PURE__ */ (0, $.jsx)("div", {
 							className: "tag-cloud",
-							children: (m.tags || []).map((e) => /* @__PURE__ */ (0, $.jsx)("span", { children: e }, e))
+							children: (u.tags || []).map((e) => /* @__PURE__ */ (0, $.jsx)("span", { children: e }, e))
 						})]
 					}),
 					/* @__PURE__ */ (0, $.jsxs)("div", {
@@ -21537,12 +21494,29 @@ function Gm({ meta: e, icon: t = Nm, action: n }) {
 function Km(e, t = []) {
 	(0, _.useEffect)(() => {
 		let t = (t) => e(Vm(t));
-		return window.__FRAMEWELL_SET_PROGRESS__ = t, () => {
-			window.__FRAMEWELL_SET_PROGRESS__ === t && delete window.__FRAMEWELL_SET_PROGRESS__;
+		window.__FRAMEWELL_SET_PROGRESS__ = t;
+		let n = 0, r = performance.now(), i = (e) => {
+			t((Math.sin((e - r) / 1350) + 1) / 2), n = requestAnimationFrame(i);
+		};
+		return n = requestAnimationFrame(i), () => {
+			cancelAnimationFrame(n), window.__FRAMEWELL_SET_PROGRESS__ === t && delete window.__FRAMEWELL_SET_PROGRESS__;
 		};
 	}, t);
 }
-function qm({ meta: e }) {
+function qm(e) {
+	let [t, n] = (0, _.useState)(0);
+	return (0, _.useEffect)(() => {
+		if (!e) return;
+		let t = () => {
+			let e = document.documentElement.scrollHeight - window.innerHeight;
+			n(e > 0 ? Vm(window.scrollY / e) : 0);
+		};
+		return t(), window.addEventListener("scroll", t, { passive: !0 }), window.addEventListener("resize", t), () => {
+			window.removeEventListener("scroll", t), window.removeEventListener("resize", t);
+		};
+	}, [e]), t;
+}
+function Jm({ meta: e }) {
 	let [t, n] = (0, _.useState)("Build");
 	return /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface dark noise",
@@ -21680,7 +21654,7 @@ function qm({ meta: e }) {
 		})]
 	});
 }
-function Jm({ meta: e }) {
+function Ym({ meta: e }) {
 	let [t, n] = (0, _.useState)("glass"), r = [
 		"Glass switch lens",
 		"Pricing pressure card",
@@ -21747,7 +21721,7 @@ function Jm({ meta: e }) {
 		})]
 	});
 }
-function Ym({ meta: e }) {
+function Xm({ meta: e }) {
 	let t = (0, _.useRef)(null), [n, r] = (0, _.useState)(0);
 	return (0, _.useEffect)(() => {
 		let e = t.current;
@@ -21837,7 +21811,7 @@ function Ym({ meta: e }) {
 		}), /* @__PURE__ */ (0, $.jsx)("div", { className: "scroll-spacer" })]
 	});
 }
-function Xm({ meta: e }) {
+function Zm({ meta: e }) {
 	let t = (0, _.useRef)(null);
 	return (0, _.useEffect)(() => {
 		let e = t.current;
@@ -21891,7 +21865,7 @@ function Xm({ meta: e }) {
 		}), /* @__PURE__ */ (0, $.jsx)("div", { className: "scroll-spacer" })]
 	});
 }
-function Zm({ meta: e }) {
+function Qm({ meta: e }) {
 	let [t, n] = (0, _.useState)(2);
 	return Km((e) => n(Math.min(4, Math.floor(e * 5))), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface ink",
@@ -21920,7 +21894,7 @@ function Zm({ meta: e }) {
 		})]
 	});
 }
-function Qm({ meta: e }) {
+function $m({ meta: e }) {
 	let [t, n] = (0, _.useState)({
 		x: 58,
 		y: 52
@@ -21955,7 +21929,7 @@ function Qm({ meta: e }) {
 		})]
 	});
 }
-function $m({ meta: e }) {
+function eh({ meta: e }) {
 	let [t, n] = (0, _.useState)(55);
 	return (0, _.useEffect)(() => {
 		let e = (e) => n(Math.round(12 + Math.max(0, Math.min(1, Number(e) || 0)) * 80));
@@ -21987,7 +21961,7 @@ function $m({ meta: e }) {
 		})]
 	});
 }
-function eh({ meta: e }) {
+function th({ meta: e }) {
 	let t = (0, _.useRef)(null);
 	return (0, _.useEffect)(() => {
 		let e = t.current;
@@ -22028,7 +22002,7 @@ function eh({ meta: e }) {
 		})]
 	});
 }
-function th({ meta: e }) {
+function nh({ meta: e }) {
 	let [t, n] = (0, _.useState)("Priority");
 	Km((e) => n(e > .5 ? "Timeline" : "Priority"), []);
 	let r = t === "Priority" ? [
@@ -22068,7 +22042,7 @@ function th({ meta: e }) {
 		})]
 	});
 }
-function nh({ meta: e }) {
+function rh({ meta: e }) {
 	let [t, n] = (0, _.useState)("Stagger");
 	return Km((e) => n(e < .34 ? "Stagger" : e < .67 ? "Blur" : "Invert"), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface ink",
@@ -22096,7 +22070,7 @@ function nh({ meta: e }) {
 		})]
 	});
 }
-function rh({ meta: e }) {
+function ih({ meta: e }) {
 	let [t, n] = (0, _.useState)(62);
 	return Km((e) => n(Math.round(20 + e * 74)), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface blue",
@@ -22174,7 +22148,7 @@ function rh({ meta: e }) {
 		]
 	});
 }
-function ih({ meta: e }) {
+function ah({ meta: e }) {
 	let [t, n] = (0, _.useState)("Studio");
 	return Km((e) => n([
 		"Starter",
@@ -22245,7 +22219,7 @@ function ih({ meta: e }) {
 		})]
 	});
 }
-function ah({ meta: e, mode: t = "switch" }) {
+function oh({ meta: e, mode: t = "switch" }) {
 	let [n, r] = (0, _.useState)(58), [i, a] = (0, _.useState)("Flow");
 	return Km((e) => {
 		r(Math.round(12 + e * 70)), a([
@@ -22335,7 +22309,7 @@ function ah({ meta: e, mode: t = "switch" }) {
 		})]
 	});
 }
-function oh({ meta: e }) {
+function sh({ meta: e }) {
 	let [t, n] = (0, _.useState)(2);
 	return Km((e) => n(Math.min(4, Math.floor(e * 5))), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface ink",
@@ -22390,7 +22364,7 @@ function oh({ meta: e }) {
 		})]
 	});
 }
-function sh({ meta: e }) {
+function ch({ meta: e }) {
 	let [t, n] = (0, _.useState)(1);
 	Km((e) => n(Math.min(3, Math.floor(e * 4))), []);
 	let r = [
@@ -22471,7 +22445,7 @@ function sh({ meta: e }) {
 		})]
 	});
 }
-function ch({ meta: e }) {
+function lh({ meta: e }) {
 	let [t, n] = (0, _.useState)(2);
 	Km((e) => n(Math.min(4, Math.floor(e * 5))), []);
 	let r = [
@@ -22543,7 +22517,7 @@ function ch({ meta: e }) {
 		})]
 	});
 }
-function lh({ meta: e }) {
+function uh({ meta: e }) {
 	let [t, n] = (0, _.useState)("Desktop");
 	Km((e) => n(e < .34 ? "Desktop" : e < .67 ? "Tablet" : "Mobile"), []);
 	let r = {
@@ -22605,7 +22579,7 @@ function lh({ meta: e }) {
 		})]
 	});
 }
-function uh({ meta: e }) {
+function dh({ meta: e }) {
 	let [t, n] = (0, _.useState)(1);
 	return Km((e) => n(Math.min(3, Math.floor(e * 4))), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface dark",
@@ -22662,7 +22636,7 @@ function uh({ meta: e }) {
 		})]
 	});
 }
-function dh({ meta: e }) {
+function fh({ meta: e }) {
 	let [t, n] = (0, _.useState)("Focus");
 	Km((e) => n(e > .5 ? "Audit" : "Focus"), []);
 	let r = (t === "Focus" ? "Build real components" : "Inspect every state").split(" ");
@@ -22711,7 +22685,7 @@ function dh({ meta: e }) {
 		})]
 	});
 }
-function fh({ meta: e }) {
+function ph({ meta: e }) {
 	let [t, n] = (0, _.useState)(54);
 	return Km((e) => n(Math.round(12 + e * 76)), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface clean",
@@ -22771,7 +22745,7 @@ function fh({ meta: e }) {
 		})]
 	});
 }
-function ph({ meta: e }) {
+function mh({ meta: e }) {
 	let [t, n] = (0, _.useState)(72);
 	return Km((e) => n(Math.round(42 + e * 58)), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface dark",
@@ -22836,7 +22810,7 @@ function ph({ meta: e }) {
 		})]
 	});
 }
-function mh({ meta: e }) {
+function hh({ meta: e }) {
 	let [t, n] = (0, _.useState)("Build"), [r, i] = (0, _.useState)({
 		col: 1,
 		card: 1,
@@ -22930,7 +22904,7 @@ function mh({ meta: e }) {
 		]
 	});
 }
-function hh({ meta: e }) {
+function gh({ meta: e }) {
 	let [t, n] = (0, _.useState)(2);
 	return Km((e) => n(Math.min(4, Math.floor(e * 5))), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface clean",
@@ -22993,7 +22967,7 @@ function hh({ meta: e }) {
 		})]
 	});
 }
-function gh({ meta: e }) {
+function _h({ meta: e }) {
 	let [t, n] = (0, _.useState)(0);
 	return Km((e) => n(Math.min(3, Math.floor(e * 4))), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface clean",
@@ -23052,7 +23026,7 @@ function gh({ meta: e }) {
 		})]
 	});
 }
-function _h({ meta: e }) {
+function vh({ meta: e }) {
 	let [t, n] = (0, _.useState)("Work");
 	return Km((e) => n([
 		"Studio",
@@ -23100,7 +23074,7 @@ function _h({ meta: e }) {
 		})]
 	});
 }
-function vh({ meta: e }) {
+function yh({ meta: e }) {
 	let [t, n] = (0, _.useState)("M");
 	return Km((e) => n([
 		"XS",
@@ -23157,7 +23131,7 @@ function vh({ meta: e }) {
 		})]
 	});
 }
-function yh({ meta: e }) {
+function bh({ meta: e }) {
 	let [t, n] = (0, _.useState)(1);
 	return Km((e) => n(Math.min(3, Math.floor(e * 4))), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface ink",
@@ -23206,7 +23180,7 @@ function yh({ meta: e }) {
 		})]
 	});
 }
-function bh({ meta: e }) {
+function xh({ meta: e }) {
 	let [t, n] = (0, _.useState)(2);
 	return Km((e) => n(Math.min(3, Math.floor(e * 4))), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface dark",
@@ -23281,7 +23255,7 @@ function bh({ meta: e }) {
 		})]
 	});
 }
-function xh({ meta: e }) {
+function Sh({ meta: e }) {
 	let [t, n] = (0, _.useState)(60);
 	return Km((e) => n(Math.round(18 + e * 74)), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface dark",
@@ -23328,7 +23302,7 @@ function xh({ meta: e }) {
 		})]
 	});
 }
-function Sh({ meta: e }) {
+function Ch({ meta: e }) {
 	let [t, n] = (0, _.useState)(1);
 	return Km((e) => n(Math.min(3, Math.floor(e * 4))), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface dark",
@@ -23378,7 +23352,7 @@ function Sh({ meta: e }) {
 		})]
 	});
 }
-function Ch({ meta: e }) {
+function wh({ meta: e }) {
 	let [t, n] = (0, _.useState)([
 		!0,
 		!1,
@@ -23429,7 +23403,7 @@ function Ch({ meta: e }) {
 		})]
 	});
 }
-function wh({ meta: e }) {
+function Th({ meta: e }) {
 	let [t, n] = (0, _.useState)(1);
 	return Km((e) => n(Math.min(2, Math.floor(e * 3))), []), /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface clean",
@@ -23481,24 +23455,20 @@ function wh({ meta: e }) {
 		})]
 	});
 }
-function Th({ meta: e }) {
-	let [t, n] = (0, _.useState)(.48);
-	Km(n, []);
-	let r = Vm(t), i = Math.min(4, Math.floor(r * 5)), a = e.template, o = e.title, s = (t) => /* @__PURE__ */ (0, $.jsx)(Gm, {
+function Eh({ meta: e }) {
+	let [t, n] = (0, _.useState)(.48), r = /scroll|scrolltrigger|sticky|camera/.test(`${e.behavior || ""} ${(e.tags || []).join(" ")}`.toLowerCase()), i = qm(r);
+	Km(n, [e.id]);
+	let a = r ? i : Vm(t), o = Math.min(4, Math.floor(a * 5)), s = e.template, c = e.title, l = (t) => /* @__PURE__ */ (0, $.jsx)(Gm, {
 		meta: e,
-		icon: t || Nm,
-		action: /* @__PURE__ */ (0, $.jsxs)("span", {
-			className: "specimen-hint",
-			children: [/* @__PURE__ */ (0, $.jsx)(Nm, { size: 15 }), " scrub effect"]
-		})
+		icon: t || Nm
 	});
-	return a === "radial-command" ? /* @__PURE__ */ (0, $.jsxs)("div", {
+	return s === "radial-command" ? /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface dark premium-radial",
-		children: [s(bm), /* @__PURE__ */ (0, $.jsxs)("div", {
+		children: [l(bm), /* @__PURE__ */ (0, $.jsxs)("div", {
 			className: "radial-stage",
 			children: [/* @__PURE__ */ (0, $.jsx)("div", {
 				className: "radial-core",
-				style: { transform: `scale(${1 + r * .16}) rotate(${r * 90}deg)` },
+				style: { transform: `scale(${1 + a * .16}) rotate(${a * 90}deg)` },
 				children: "⌘K"
 			}), [
 				"Ask",
@@ -23508,16 +23478,16 @@ function Th({ meta: e }) {
 				"Share",
 				"Undo"
 			].map((e, t) => /* @__PURE__ */ (0, $.jsx)("button", {
-				className: t === i ? "active" : "",
-				style: { "--angle": `${t * 60 + r * 24}deg` },
+				className: t === o ? "active" : "",
+				style: { "--angle": `${t * 60 + a * 24}deg` },
 				children: /* @__PURE__ */ (0, $.jsx)("span", { children: e })
 			}, e))]
 		})]
-	}) : a === "motion" ? /* @__PURE__ */ (0, $.jsxs)("div", {
+	}) : s === "motion" ? /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface dark premium-cinema",
-		children: [s(Sm), /* @__PURE__ */ (0, $.jsxs)("div", {
+		children: [l(Sm), /* @__PURE__ */ (0, $.jsxs)("div", {
 			className: "cinema-depth",
-			style: { "--p": r },
+			style: { "--p": a },
 			children: [[
 				0,
 				1,
@@ -23527,38 +23497,38 @@ function Th({ meta: e }) {
 				className: "cinema-plane",
 				style: { "--i": e },
 				children: /* @__PURE__ */ (0, $.jsx)("b", { children: String(e + 1).padStart(2, "0") })
-			}, e)), /* @__PURE__ */ (0, $.jsx)("h1", { children: o })]
+			}, e)), /* @__PURE__ */ (0, $.jsx)("h1", { children: c })]
 		})]
-	}) : a === "type-dissolve" ? /* @__PURE__ */ (0, $.jsxs)("div", {
+	}) : s === "type-dissolve" ? /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface ink premium-type-dissolve",
-		children: [s(Nm), /* @__PURE__ */ (0, $.jsx)("div", {
+		children: [l(Nm), /* @__PURE__ */ (0, $.jsx)("div", {
 			className: "dissolve-word",
 			children: "DISSOLVE".split("").map((e, t) => /* @__PURE__ */ (0, $.jsx)("span", {
 				style: {
 					"--i": t,
-					"--p": r
+					"--p": a
 				},
 				children: e
 			}, t))
 		})]
-	}) : a === "ripple-grid" ? /* @__PURE__ */ (0, $.jsxs)("div", {
+	}) : s === "ripple-grid" ? /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface ink premium-ripple",
-		children: [s(Cm), /* @__PURE__ */ (0, $.jsx)("div", {
+		children: [l(Cm), /* @__PURE__ */ (0, $.jsx)("div", {
 			className: "ripple-grid",
-			style: { "--p": r },
+			style: { "--p": a },
 			children: Array.from({ length: 9 }, (e, t) => /* @__PURE__ */ (0, $.jsx)("button", {
-				className: t === i + 2 ? "active" : "",
+				className: t === o + 2 ? "active" : "",
 				children: /* @__PURE__ */ (0, $.jsxs)("span", { children: ["Case ", t + 1] })
 			}, t))
 		})]
-	}) : a === "orbit-stage" || a === "constellation" || a === "empty-orbit" ? /* @__PURE__ */ (0, $.jsxs)("div", {
+	}) : s === "orbit-stage" || s === "constellation" || s === "empty-orbit" ? /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface dark premium-orbit",
 		children: [
-			s(a === "orbit-stage" ? hm : Nm),
+			l(s === "orbit-stage" ? hm : Nm),
 			/* @__PURE__ */ (0, $.jsx)("div", {
 				className: "orbit-core",
-				style: { "--p": r },
-				children: /* @__PURE__ */ (0, $.jsx)("span", { children: a === "orbit-stage" ? "3D" : "AI" })
+				style: { "--p": a },
+				children: /* @__PURE__ */ (0, $.jsx)("span", { children: s === "orbit-stage" ? "3D" : "AI" })
 			}),
 			[
 				"Intent",
@@ -23570,36 +23540,36 @@ function Th({ meta: e }) {
 				className: "orbit-chip",
 				style: {
 					"--i": t,
-					"--p": r
+					"--p": a
 				},
 				children: e
 			}, e))
 		]
-	}) : a === "slice-poster" || a === "roller-blind" ? /* @__PURE__ */ (0, $.jsxs)("div", {
+	}) : s === "slice-poster" || s === "roller-blind" ? /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface clean premium-slices",
-		children: [s(Sm), /* @__PURE__ */ (0, $.jsxs)("div", {
+		children: [l(Sm), /* @__PURE__ */ (0, $.jsxs)("div", {
 			className: "slice-wall",
-			style: { "--p": r },
-			children: [Array.from({ length: 8 }, (e, t) => /* @__PURE__ */ (0, $.jsx)("span", { style: { "--i": t } }, t)), /* @__PURE__ */ (0, $.jsx)("h1", { children: a === "slice-poster" ? "Poster splits reveal product proof" : "Spring blind reveals the hero" })]
+			style: { "--p": a },
+			children: [Array.from({ length: 8 }, (e, t) => /* @__PURE__ */ (0, $.jsx)("span", { style: { "--i": t } }, t)), /* @__PURE__ */ (0, $.jsx)("h1", { children: s === "slice-poster" ? "Poster splits reveal product proof" : "Spring blind reveals the hero" })]
 		})]
-	}) : a === "liquid-cta" ? /* @__PURE__ */ (0, $.jsxs)("div", {
+	}) : s === "liquid-cta" ? /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface dark premium-liquid-cta",
-		children: [s(Lm), /* @__PURE__ */ (0, $.jsx)("button", {
+		children: [l(Lm), /* @__PURE__ */ (0, $.jsx)("button", {
 			className: "liquid-button",
-			style: { "--p": r },
+			style: { "--p": a },
 			children: /* @__PURE__ */ (0, $.jsx)("span", { children: "Start the motion system" })
 		})]
-	}) : a === "magnetic-menu" || a === "spotlight-menu" || a === "noise-nav" ? /* @__PURE__ */ (0, $.jsxs)("div", {
+	}) : s === "magnetic-menu" || s === "spotlight-menu" || s === "noise-nav" ? /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface ink premium-menu",
-		children: [s(Dm), /* @__PURE__ */ (0, $.jsx)("nav", {
-			style: { "--p": r },
+		children: [l(Dm), /* @__PURE__ */ (0, $.jsx)("nav", {
+			style: { "--p": a },
 			children: [
 				"Studio",
 				"Work",
 				"Systems",
 				"Contact"
 			].map((e, t) => /* @__PURE__ */ (0, $.jsxs)("button", {
-				className: t === Math.min(3, Math.floor(r * 4)) ? "active" : "",
+				className: t === Math.min(3, Math.floor(a * 4)) ? "active" : "",
 				children: [
 					String(t + 1).padStart(2, "0"),
 					" ",
@@ -23607,30 +23577,30 @@ function Th({ meta: e }) {
 				]
 			}, e))
 		})]
-	}) : a === "split-transition" || a === "water-transition" ? /* @__PURE__ */ (0, $.jsxs)("div", {
+	}) : s === "split-transition" || s === "water-transition" ? /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface dark premium-transition",
-		children: [s(Om), /* @__PURE__ */ (0, $.jsxs)("div", {
+		children: [l(Om), /* @__PURE__ */ (0, $.jsxs)("div", {
 			className: "transition-panels",
-			style: { "--p": r },
+			style: { "--p": a },
 			children: [
 				/* @__PURE__ */ (0, $.jsx)("span", {}),
 				/* @__PURE__ */ (0, $.jsx)("span", {}),
-				/* @__PURE__ */ (0, $.jsx)("h1", { children: a === "water-transition" ? "Liquid page handoff" : "Split route handoff" })
+				/* @__PURE__ */ (0, $.jsx)("h1", { children: s === "water-transition" ? "Liquid page handoff" : "Split route handoff" })
 			]
 		})]
-	}) : a === "calendar-brush" ? /* @__PURE__ */ (0, $.jsxs)("div", {
+	}) : s === "calendar-brush" ? /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface clean premium-calendar",
-		children: [s(gm), /* @__PURE__ */ (0, $.jsx)("div", {
+		children: [l(gm), /* @__PURE__ */ (0, $.jsx)("div", {
 			className: "calendar-grid",
-			style: { "--p": r },
+			style: { "--p": a },
 			children: Array.from({ length: 35 }, (e, t) => /* @__PURE__ */ (0, $.jsx)("button", {
-				className: t <= r * 34 && t % 3 != 1 ? "active" : "",
+				className: t <= a * 34 && t % 3 != 1 ? "active" : "",
 				children: t % 7 == 0 ? "9a" : ""
 			}, t))
 		})]
-	}) : a === "metric-scrub" || a === "micro-charts" ? /* @__PURE__ */ (0, $.jsxs)("div", {
+	}) : s === "metric-scrub" || s === "micro-charts" ? /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface blue premium-metrics",
-		children: [s(gm), /* @__PURE__ */ (0, $.jsx)("div", {
+		children: [l(gm), /* @__PURE__ */ (0, $.jsx)("div", {
 			className: "grid-3",
 			children: [
 				"Revenue",
@@ -23640,21 +23610,21 @@ function Th({ meta: e }) {
 				className: "metric",
 				children: [
 					/* @__PURE__ */ (0, $.jsx)("span", { children: e }),
-					/* @__PURE__ */ (0, $.jsx)("b", { children: Math.round((r + .2) * [
+					/* @__PURE__ */ (0, $.jsx)("b", { children: Math.round((a + .2) * [
 						180,
 						74,
 						112
 					][t]) }),
 					/* @__PURE__ */ (0, $.jsx)("svg", {
 						viewBox: "0 0 160 70",
-						children: /* @__PURE__ */ (0, $.jsx)("path", { d: `M5 58 C40 ${52 - r * 34} 74 ${18 + t * 12} 112 ${48 - r * 28} S140 ${22 + r * 18} 155 ${16 + t * 8}` })
+						children: /* @__PURE__ */ (0, $.jsx)("path", { d: `M5 58 C40 ${52 - a * 34} 74 ${18 + t * 12} 112 ${48 - a * 28} S140 ${22 + a * 18} 155 ${16 + t * 8}` })
 					})
 				]
 			}, e))
 		})]
-	}) : a === "ai-stream" ? /* @__PURE__ */ (0, $.jsxs)("div", {
+	}) : s === "ai-stream" ? /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface dark premium-stream",
-		children: [s(bm), /* @__PURE__ */ (0, $.jsx)("div", {
+		children: [l(bm), /* @__PURE__ */ (0, $.jsx)("div", {
 			className: "stream-lines",
 			children: [
 				"Reading source set",
@@ -23662,19 +23632,19 @@ function Th({ meta: e }) {
 				"Attaching citations",
 				"Ready to adapt"
 			].map((e, t) => /* @__PURE__ */ (0, $.jsxs)("div", {
-				className: t <= i ? "visible" : "",
+				className: t <= o ? "visible" : "",
 				children: [/* @__PURE__ */ (0, $.jsx)("span", { children: e }), /* @__PURE__ */ (0, $.jsxs)("b", { children: [82 + t * 4, "%"] })]
 			}, e))
 		})]
-	}) : a === "shelf-pulse" ? /* @__PURE__ */ (0, $.jsxs)("div", {
+	}) : s === "shelf-pulse" ? /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface clean premium-shelves",
-		children: [s(xm), Array.from({ length: 5 }, (e, t) => /* @__PURE__ */ (0, $.jsx)("div", {
+		children: [l(xm), Array.from({ length: 5 }, (e, t) => /* @__PURE__ */ (0, $.jsx)("div", {
 			className: "shelf-row",
-			children: Array.from({ length: 10 }, (e, n) => /* @__PURE__ */ (0, $.jsx)("span", { className: (n + t + i) % 7 == 0 ? "hot" : "" }, n))
+			children: Array.from({ length: 10 }, (e, n) => /* @__PURE__ */ (0, $.jsx)("span", { className: (n + t + o) % 7 == 0 ? "hot" : "" }, n))
 		}, t))]
-	}) : a === "stacked-cards" || a === "mask-proof" ? /* @__PURE__ */ (0, $.jsxs)("div", {
+	}) : s === "stacked-cards" || s === "mask-proof" ? /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface clean premium-stack",
-		children: [s(Em), [
+		children: [l(Em), [
 			0,
 			1,
 			2,
@@ -23683,45 +23653,45 @@ function Th({ meta: e }) {
 		].map((e) => /* @__PURE__ */ (0, $.jsxs)("article", {
 			style: {
 				"--i": e,
-				"--p": r
+				"--p": a
 			},
-			children: [/* @__PURE__ */ (0, $.jsxs)("span", { children: ["0", e + 1] }), /* @__PURE__ */ (0, $.jsx)("h2", { children: a === "mask-proof" ? "Masked proof quote" : "Pinned dossier card" })]
+			children: [/* @__PURE__ */ (0, $.jsxs)("span", { children: ["0", e + 1] }), /* @__PURE__ */ (0, $.jsx)("h2", { children: s === "mask-proof" ? "Masked proof quote" : "Pinned dossier card" })]
 		}, e))]
-	}) : a === "depth-marquee" ? /* @__PURE__ */ (0, $.jsxs)("div", {
+	}) : s === "depth-marquee" ? /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface dark premium-marquee",
-		children: [s(mm), [0, 1].map((e) => /* @__PURE__ */ (0, $.jsx)("div", {
+		children: [l(mm), [0, 1].map((e) => /* @__PURE__ */ (0, $.jsx)("div", {
 			className: "marquee-track",
 			style: {
-				"--p": r,
+				"--p": a,
 				"--dir": e ? 1 : -1
 			},
 			children: Array.from({ length: 8 }, (e, t) => /* @__PURE__ */ (0, $.jsxs)("span", { children: ["Partner ", t + 1] }, t))
 		}, e))]
-	}) : a === "elastic-faq" ? /* @__PURE__ */ (0, $.jsxs)("div", {
+	}) : s === "elastic-faq" ? /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface clean premium-faq",
-		children: [s(vm), [
+		children: [l(vm), [
 			0,
 			1,
 			2,
 			3,
 			4
 		].map((e) => /* @__PURE__ */ (0, $.jsxs)("section", {
-			className: e === i ? "open" : "",
+			className: e === o ? "open" : "",
 			children: [/* @__PURE__ */ (0, $.jsx)("b", { children: "How does this motion help?" }), /* @__PURE__ */ (0, $.jsx)("p", { children: "It exposes state, hierarchy, and timing without asking the viewer to guess." })]
 		}, e))]
-	}) : a === "team-spotlight" ? /* @__PURE__ */ (0, $.jsxs)("div", {
+	}) : s === "team-spotlight" ? /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface ink premium-team",
-		children: [s(Dm), /* @__PURE__ */ (0, $.jsx)("div", {
+		children: [l(Dm), /* @__PURE__ */ (0, $.jsx)("div", {
 			className: "team-grid",
-			style: { "--p": r },
+			style: { "--p": a },
 			children: Array.from({ length: 12 }, (e, t) => /* @__PURE__ */ (0, $.jsx)("button", {
-				className: t === i + 3 ? "active" : "",
+				className: t === o + 3 ? "active" : "",
 				children: /* @__PURE__ */ (0, $.jsxs)("span", { children: ["Role ", t + 1] })
 			}, t))
 		})]
-	}) : a === "stats-band" ? /* @__PURE__ */ (0, $.jsxs)("div", {
+	}) : s === "stats-band" ? /* @__PURE__ */ (0, $.jsxs)("div", {
 		className: "surface clean premium-stats",
-		children: [s(wm), [
+		children: [l(wm), [
 			"42",
 			"87",
 			"12"
@@ -23729,95 +23699,95 @@ function Th({ meta: e }) {
 			className: "stat-card",
 			style: {
 				"--i": t,
-				"--p": r
+				"--p": a
 			},
-			children: [/* @__PURE__ */ (0, $.jsx)("b", { children: Math.round(Number(e) * (.45 + r)) }), /* @__PURE__ */ (0, $.jsx)("span", { children: "proof metric" })]
+			children: [/* @__PURE__ */ (0, $.jsx)("b", { children: Math.round(Number(e) * (.45 + a)) }), /* @__PURE__ */ (0, $.jsx)("span", { children: "proof metric" })]
 		}, e))]
-	}) : /* @__PURE__ */ (0, $.jsx)(wh, { meta: e });
+	}) : /* @__PURE__ */ (0, $.jsx)(Th, { meta: e });
 }
-var Eh = {
-	"three-product": Ym,
-	"gsap-cascade": Xm,
-	"shader-gallery": Zm,
-	"fluid-cursor": Qm,
-	"scroll-mask": $m,
-	"particle-field": eh,
-	"flip-board": th,
-	"split-text": nh,
-	motion: Th,
-	"type-dissolve": Th,
-	"ripple-grid": Th,
-	"orbit-stage": Th,
-	constellation: Th,
-	"slice-poster": Th,
-	"liquid-cta": Th,
-	"magnetic-menu": Th,
-	"radial-command": Th,
-	"split-transition": Th,
-	"spotlight-menu": Th,
-	"calendar-brush": Th,
-	"metric-scrub": Th,
-	"ai-stream": Th,
-	"shelf-pulse": Th,
-	"stacked-cards": Th,
-	"mask-proof": Th,
-	"depth-marquee": Th,
-	"elastic-faq": Th,
-	"team-spotlight": Th,
-	"stats-band": Th,
-	"command-room": qm,
-	search: Jm,
-	"alert-lens": qm,
-	"thought-map": ch,
-	"agent-trace": ch,
-	lineage: Sh,
-	evidence: sh,
-	dashboard: rh,
-	metrics: rh,
-	calendar: rh,
-	inventory: rh,
-	"table-xray": rh,
-	security: ph,
-	kanban: mh,
-	pricing: ih,
-	"glass-switch": (e) => /* @__PURE__ */ (0, $.jsx)(ah, {
+var Dh = {
+	"three-product": Xm,
+	"gsap-cascade": Zm,
+	"shader-gallery": Qm,
+	"fluid-cursor": $m,
+	"scroll-mask": eh,
+	"particle-field": th,
+	"flip-board": nh,
+	"split-text": rh,
+	motion: Eh,
+	"type-dissolve": Eh,
+	"ripple-grid": Eh,
+	"orbit-stage": Eh,
+	constellation: Eh,
+	"slice-poster": Eh,
+	"liquid-cta": Eh,
+	"magnetic-menu": Eh,
+	"radial-command": Eh,
+	"split-transition": Eh,
+	"spotlight-menu": Eh,
+	"calendar-brush": Eh,
+	"metric-scrub": Eh,
+	"ai-stream": Eh,
+	"shelf-pulse": Eh,
+	"stacked-cards": Eh,
+	"mask-proof": Eh,
+	"depth-marquee": Eh,
+	"elastic-faq": Eh,
+	"team-spotlight": Eh,
+	"stats-band": Eh,
+	"command-room": Jm,
+	search: Ym,
+	"alert-lens": Jm,
+	"thought-map": lh,
+	"agent-trace": lh,
+	lineage: Ch,
+	evidence: ch,
+	dashboard: ih,
+	metrics: ih,
+	calendar: ih,
+	inventory: ih,
+	"table-xray": ih,
+	security: mh,
+	kanban: hh,
+	pricing: ah,
+	"glass-switch": (e) => /* @__PURE__ */ (0, $.jsx)(oh, {
 		...e,
 		mode: "switch"
 	}),
-	"glass-slider": (e) => /* @__PURE__ */ (0, $.jsx)(ah, {
+	"glass-slider": (e) => /* @__PURE__ */ (0, $.jsx)(oh, {
 		...e,
 		mode: "slider"
 	}),
-	"glass-toggle": (e) => /* @__PURE__ */ (0, $.jsx)(ah, {
+	"glass-toggle": (e) => /* @__PURE__ */ (0, $.jsx)(oh, {
 		...e,
 		mode: "toggle"
 	}),
-	"video-controls": (e) => /* @__PURE__ */ (0, $.jsx)(ah, {
+	"video-controls": (e) => /* @__PURE__ */ (0, $.jsx)(oh, {
 		...e,
 		mode: "video"
 	}),
-	dock: hh,
-	gallery: oh,
-	masonry: oh,
-	carousel: oh,
-	"clip-gallery": oh,
-	compare: fh,
-	device: lh,
-	annotation: gh,
-	"code-stepper": uh,
-	onboarding: Ch,
-	"type-hero": dh,
-	"shader-nav": _h,
-	roller: wh,
-	"size-magnet": vh,
-	"cursor-index": yh,
-	timeline: bh,
-	"video-card": oh,
-	audio: xh,
-	map: Sh,
-	"case-flip": oh,
-	world: oh,
-	"video-grid": oh
+	dock: gh,
+	gallery: sh,
+	masonry: sh,
+	carousel: sh,
+	"clip-gallery": sh,
+	compare: ph,
+	device: uh,
+	annotation: _h,
+	"code-stepper": dh,
+	onboarding: wh,
+	"type-hero": fh,
+	"shader-nav": vh,
+	roller: Th,
+	"size-magnet": yh,
+	"cursor-index": bh,
+	timeline: xh,
+	"video-card": sh,
+	audio: Sh,
+	map: Ch,
+	"case-flip": sh,
+	world: sh,
+	"video-grid": sh
 };
 (0, v.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, $.jsx)(Um, {}));
 //#endregion

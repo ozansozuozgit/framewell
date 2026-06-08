@@ -109,9 +109,11 @@ function App(){
   if(!routeMeta) return <AtlasApp />;
   const meta = routeMeta || fallbackMeta;
   const kind = specimenKindById[meta.id] || specimenKindById[meta.slug] || meta.template || 'dashboard';
+  const routeText = `${kind} ${meta.behavior || ''} ${(meta.tags || []).join(' ')}`.toLowerCase();
+  const isScrollRoute = /scroll|scrolltrigger|sticky|camera/.test(routeText) || kind === 'three-product' || kind === 'gsap-cascade';
   const Specimen = components[kind] || DashboardSurface;
   return (
-    <main className={`fw-root ${kind.includes('scroll') || kind === 'three-product' || kind === 'gsap-cascade' ? 'scroll-specimen-root' : ''}`}>
+    <main className={`fw-root ${isScrollRoute ? 'scroll-specimen-root' : ''}`}>
       <section className="specimen-shell">
         <div className="shell-bar">
           <span className="traffic" />
@@ -131,8 +133,6 @@ function AtlasApp(){
   const [activeId, setActiveId] = useState('');
   const [query, setQuery] = useState('');
   const [view, setView] = useState('Stage');
-  const [stageProgress, setStageProgress] = useState(0);
-  const [stageCanDrive, setStageCanDrive] = useState(false);
   const iframeRef = useRef(null);
   useEffect(() => {
     let alive = true;
@@ -156,26 +156,6 @@ function AtlasApp(){
   const activeKind = active ? (specimenKindById[active.id] || active.template || '') : '';
   const activeTags = active?.tags || [];
   const isScrollExample = /scroll|gsap|three-product|scroll-mask/.test(`${activeKind} ${active?.behavior || ''} ${activeTags.join(' ')}`.toLowerCase());
-  const hasStageDriver = isScrollExample || stageCanDrive;
-  const driveStageProgress = next => {
-    const progress = clampProgress(next);
-    setStageProgress(progress);
-    const win = iframeRef.current?.contentWindow;
-    if(!win) return;
-    try {
-      if(typeof win.__FRAMEWELL_SET_PROGRESS__ === 'function'){
-        win.__FRAMEWELL_SET_PROGRESS__(progress);
-      } else {
-        const max = win.document.documentElement.scrollHeight - win.innerHeight;
-        win.scrollTo({ top: max * progress, behavior: 'auto' });
-      }
-    } catch(_) {}
-  };
-  useEffect(() => {
-    setStageProgress(0);
-    setStageCanDrive(false);
-    requestAnimationFrame(() => driveStageProgress(0));
-  }, [active?.id]);
   useEffect(() => {
     if(!filtered.some(item => item.id === activeId)) setActiveId(filtered[0]?.id || items[0]?.id || '');
   }, [filtered, activeId, items]);
@@ -212,49 +192,17 @@ function AtlasApp(){
           </div>
         </div>
         {view === 'Stage' ? (
-          <div
-            className={`motion-stage-live ${hasStageDriver ? 'is-scroll-example' : ''}`}
-            onWheel={event => {
-              if(!hasStageDriver) return;
-              driveStageProgress(stageProgress + event.deltaY / 1800);
-            }}
-          >
-            {hasStageDriver && (
-              <div className={`stage-scroll-controls ${isScrollExample ? 'scroll-mode' : ''}`}>
-                <span>{isScrollExample ? 'Scroll the stage' : 'Effect driver'}</span>
-                {isScrollExample ? (
-                  <div className="stage-progress-rail" aria-label={`${active.title} scroll progress`}><b style={{width:`${Math.round(stageProgress * 100)}%`}} /></div>
-                ) : (
-                  <input
-                    type="range"
-                    min="0"
-                    max="100"
-                    value={Math.round(stageProgress * 100)}
-                    onChange={event => driveStageProgress(Number(event.target.value) / 100)}
-                    aria-label={`Scrub ${active.title}`}
-                  />
-                )}
-                <b>{Math.round(stageProgress * 100)}%</b>
-              </div>
-            )}
+          <div className={`motion-stage-live ${isScrollExample ? 'is-scroll-example' : ''}`}>
             <iframe
               ref={iframeRef}
               className="motion-stage-frame"
               src={active.previewUrl}
               title={`${active.title} live preview`}
               onLoad={() => {
-                const detectDriver = () => {
-                  try {
-                    setStageCanDrive(typeof iframeRef.current?.contentWindow?.__FRAMEWELL_SET_PROGRESS__ === 'function');
-                  } catch(_) {}
-                };
                 try {
                   const doc = iframeRef.current?.contentDocument;
                   if(isScrollExample) doc?.documentElement.classList.add('framewell-stage-embedded');
-                  detectDriver();
-                  setTimeout(detectDriver, 80);
                 } catch(_) {}
-                driveStageProgress(0);
               }}
             />
           </div>
@@ -296,10 +244,38 @@ function useFramewellDriver(apply, deps = []){
   useEffect(() => {
     const driver = raw => apply(clampProgress(raw));
     window.__FRAMEWELL_SET_PROGRESS__ = driver;
+    let frame = 0;
+    const startedAt = performance.now();
+    const tick = now => {
+      const p = (Math.sin((now - startedAt) / 1350) + 1) / 2;
+      driver(p);
+      frame = requestAnimationFrame(tick);
+    };
+    frame = requestAnimationFrame(tick);
     return () => {
+      cancelAnimationFrame(frame);
       if(window.__FRAMEWELL_SET_PROGRESS__ === driver) delete window.__FRAMEWELL_SET_PROGRESS__;
     };
   }, deps);
+}
+
+function useRouteScrollProgress(enabled){
+  const [progress, setProgress] = useState(0);
+  useEffect(() => {
+    if(!enabled) return undefined;
+    const update = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      setProgress(max > 0 ? clampProgress(window.scrollY / max) : 0);
+    };
+    update();
+    window.addEventListener('scroll', update, { passive:true });
+    window.addEventListener('resize', update);
+    return () => {
+      window.removeEventListener('scroll', update);
+      window.removeEventListener('resize', update);
+    };
+  }, [enabled]);
+  return progress;
 }
 
 function CommandRoom({ meta }){
@@ -1069,12 +1045,14 @@ function SimpleWorkbench({ meta }){
 
 function PremiumEffectSurface({ meta }){
   const [progress, setProgress] = useState(.48);
-  useFramewellDriver(setProgress, []);
-  const p = clampProgress(progress);
+  const isScrollDriven = /scroll|scrolltrigger|sticky|camera/.test(`${meta.behavior || ''} ${(meta.tags || []).join(' ')}`.toLowerCase());
+  const scrollProgress = useRouteScrollProgress(isScrollDriven);
+  useFramewellDriver(setProgress, [meta.id]);
+  const p = isScrollDriven ? scrollProgress : clampProgress(progress);
   const step = Math.min(4, Math.floor(p * 5));
   const template = meta.template;
   const sceneTitle = meta.title;
-  const header = icon => <Header meta={meta} icon={icon || Sparkles} action={<span className="specimen-hint"><Sparkles size={15}/> scrub effect</span>} />;
+  const header = icon => <Header meta={meta} icon={icon || Sparkles} />;
 
   if(template === 'radial-command'){
     const commands = ['Ask','Patch','Trace','Ship','Share','Undo'];
