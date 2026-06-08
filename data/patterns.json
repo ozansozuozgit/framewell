@@ -1,8 +1,8 @@
 {
   "summary": {
-    "count": 51,
+    "count": 36,
     "featured": 36,
-    "specimens": 15,
+    "specimens": 0,
     "archiveMode": "hidden; live effects are primary"
   },
   "patterns": [
@@ -35,30 +35,169 @@
       "dependencies": []
     },
     {
-      "id": "gsap-scroll-cascade-stack",
-      "title": "GSAP scroll cascade stack",
-      "behavior": "GSAP scroll",
+      "id": "cinematic-scroll-camera",
+      "title": "Cinematic scroll camera pass",
+      "behavior": "Scroll cinema",
       "context": "Portfolio",
-      "description": "Cards collapse, stack, and cascade with a scrubbed GSAP timeline instead of a loop.",
+      "description": "A product scene appears to move past camera planes as the page scrolls.",
       "tags": [
         "gsap",
-        "scroll",
-        "stack",
+        "scrolltrigger",
+        "camera",
         "portfolio",
-        "cards"
+        "cinematic"
+      ],
+      "sourcePromptIds": [
+        "motionsites-space-voyage"
+      ],
+      "template": "motion",
+      "quality": "featured",
+      "mixRoles": [
+        "signature moment"
+      ],
+      "slug": "cinematic-scroll-camera",
+      "previewUrl": "patterns/cinematic-scroll-camera/index.html",
+      "prompt": "Adapt the Framewell pattern 'Cinematic scroll camera pass' into my existing Portfolio without replacing my product structure. Use it only as a focused Scroll cinema layer. A product scene appears to move past camera planes as the page scrolls. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: gsap, scrolltrigger, camera, portfolio, cinematic.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Cinematic scroll camera pass \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"cinematic-scroll-camera\", \"slug\": \"cinematic-scroll-camera\", \"title\": \"Cinematic scroll camera pass\", \"behavior\": \"Scroll cinema\", \"context\": \"Portfolio\", \"description\": \"A product scene appears to move past camera planes as the page scrolls.\", \"tags\": [\"gsap\", \"scrolltrigger\", \"camera\", \"portfolio\", \"cinematic\"], \"template\": \"motion\", \"sourcePromptIds\": [\"motionsites-space-voyage\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "advanced",
+      "dependencies": []
+    },
+    {
+      "id": "scroll-synced-model-exploder",
+      "title": "Scroll-synced model exploder",
+      "behavior": "3D product",
+      "context": "SaaS hero",
+      "description": "A product model explodes into labeled layers as the page scrolls.",
+      "tags": [
+        "three-js",
+        "product",
+        "exploded-view",
+        "scroll",
+        "saas"
       ],
       "sourcePromptIds": [
         "gsap-scrolltrigger-product-demo"
       ],
-      "template": "gsap-cascade",
+      "template": "model-exploder",
       "quality": "featured",
       "mixRoles": [
-        "supporting effect"
+        "signature moment"
       ],
-      "slug": "gsap-scroll-cascade-stack",
-      "previewUrl": "patterns/gsap-scroll-cascade-stack/index.html",
-      "prompt": "Adapt the Framewell pattern 'GSAP scroll cascade stack' into my existing Portfolio without replacing my product structure. Use it only as a focused GSAP scroll layer. Cards collapse, stack, and cascade with a scrubbed GSAP timeline instead of a loop. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: gsap, scroll, stack, portfolio, cards.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>GSAP scroll cascade stack \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"gsap-scroll-cascade-stack\", \"slug\": \"gsap-scroll-cascade-stack\", \"title\": \"GSAP scroll cascade stack\", \"behavior\": \"GSAP scroll\", \"context\": \"Portfolio\", \"description\": \"Cards collapse, stack, and cascade with a scrubbed GSAP timeline instead of a loop.\", \"tags\": [\"gsap\", \"scroll\", \"stack\", \"portfolio\", \"cards\"], \"template\": \"gsap-cascade\", \"sourcePromptIds\": [\"gsap-scrolltrigger-product-demo\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "slug": "scroll-synced-model-exploder",
+      "previewUrl": "patterns/scroll-synced-model-exploder/index.html",
+      "prompt": "Adapt the Framewell pattern 'Scroll-synced model exploder' into my existing SaaS hero without replacing my product structure. Use it only as a focused 3D product layer. A product model explodes into labeled layers as the page scrolls. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: three-js, product, exploded-view, scroll, saas.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Scroll-synced model exploder \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"scroll-synced-model-exploder\", \"slug\": \"scroll-synced-model-exploder\", \"title\": \"Scroll-synced model exploder\", \"behavior\": \"3D product\", \"context\": \"SaaS hero\", \"description\": \"A product model explodes into labeled layers as the page scrolls.\", \"tags\": [\"three-js\", \"product\", \"exploded-view\", \"scroll\", \"saas\"], \"template\": \"model-exploder\", \"sourcePromptIds\": [\"gsap-scrolltrigger-product-demo\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "advanced",
+      "dependencies": []
+    },
+    {
+      "id": "infinite-3d-corridor-scroll",
+      "title": "Infinite 3D corridor scroll",
+      "behavior": "Scroll cinema",
+      "context": "Portfolio",
+      "description": "Cards form a depth corridor with a physics-feeling scroll/drag path.",
+      "tags": [
+        "three-js",
+        "corridor",
+        "scroll",
+        "drag",
+        "portfolio"
+      ],
+      "sourcePromptIds": [
+        "x-itom-portfolio-3d-corridor"
+      ],
+      "template": "corridor-scroll",
+      "quality": "featured",
+      "mixRoles": [
+        "signature moment"
+      ],
+      "slug": "infinite-3d-corridor-scroll",
+      "previewUrl": "patterns/infinite-3d-corridor-scroll/index.html",
+      "prompt": "Adapt the Framewell pattern 'Infinite 3D corridor scroll' into my existing Portfolio without replacing my product structure. Use it only as a focused Scroll cinema layer. Cards form a depth corridor with a physics-feeling scroll/drag path. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: three-js, corridor, scroll, drag, portfolio.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Infinite 3D corridor scroll \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"infinite-3d-corridor-scroll\", \"slug\": \"infinite-3d-corridor-scroll\", \"title\": \"Infinite 3D corridor scroll\", \"behavior\": \"Scroll cinema\", \"context\": \"Portfolio\", \"description\": \"Cards form a depth corridor with a physics-feeling scroll/drag path.\", \"tags\": [\"three-js\", \"corridor\", \"scroll\", \"drag\", \"portfolio\"], \"template\": \"corridor-scroll\", \"sourcePromptIds\": [\"x-itom-portfolio-3d-corridor\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "advanced",
+      "dependencies": []
+    },
+    {
+      "id": "scroll-driven-3d-room",
+      "title": "Scroll-driven 3D room",
+      "behavior": "3D scene",
+      "context": "Portfolio",
+      "description": "A room-scale scene changes camera angle and focal object as sections advance.",
+      "tags": [
+        "three-js",
+        "camera",
+        "scrolltrigger",
+        "environment",
+        "portfolio"
+      ],
+      "sourcePromptIds": [
+        "x-joseph-santamaria-scroll-3d"
+      ],
+      "template": "scene-room",
+      "quality": "featured",
+      "mixRoles": [
+        "signature moment"
+      ],
+      "slug": "scroll-driven-3d-room",
+      "previewUrl": "patterns/scroll-driven-3d-room/index.html",
+      "prompt": "Adapt the Framewell pattern 'Scroll-driven 3D room' into my existing Portfolio without replacing my product structure. Use it only as a focused 3D scene layer. A room-scale scene changes camera angle and focal object as sections advance. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: three-js, camera, scrolltrigger, environment, portfolio.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Scroll-driven 3D room \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"scroll-driven-3d-room\", \"slug\": \"scroll-driven-3d-room\", \"title\": \"Scroll-driven 3D room\", \"behavior\": \"3D scene\", \"context\": \"Portfolio\", \"description\": \"A room-scale scene changes camera angle and focal object as sections advance.\", \"tags\": [\"three-js\", \"camera\", \"scrolltrigger\", \"environment\", \"portfolio\"], \"template\": \"scene-room\", \"sourcePromptIds\": [\"x-joseph-santamaria-scroll-3d\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "advanced",
+      "dependencies": []
+    },
+    {
+      "id": "immersive-case-study-portal",
+      "title": "Immersive case-study portal",
+      "behavior": "3D portal",
+      "context": "Portfolio",
+      "description": "A portal frame refracts the next case study and gives the transition a destination.",
+      "tags": [
+        "portal",
+        "three-js",
+        "case-study",
+        "transition"
+      ],
+      "sourcePromptIds": [
+        "x-corentin-liard-immersive-3d"
+      ],
+      "template": "portal-case",
+      "quality": "featured",
+      "mixRoles": [
+        "signature moment"
+      ],
+      "slug": "immersive-case-study-portal",
+      "previewUrl": "patterns/immersive-case-study-portal/index.html",
+      "prompt": "Adapt the Framewell pattern 'Immersive case-study portal' into my existing Portfolio without replacing my product structure. Use it only as a focused 3D portal layer. A portal frame refracts the next case study and gives the transition a destination. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: portal, three-js, case-study, transition.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Immersive case-study portal \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"immersive-case-study-portal\", \"slug\": \"immersive-case-study-portal\", \"title\": \"Immersive case-study portal\", \"behavior\": \"3D portal\", \"context\": \"Portfolio\", \"description\": \"A portal frame refracts the next case study and gives the transition a destination.\", \"tags\": [\"portal\", \"three-js\", \"case-study\", \"transition\"], \"template\": \"portal-case\", \"sourcePromptIds\": [\"x-corentin-liard-immersive-3d\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "advanced",
+      "dependencies": []
+    },
+    {
+      "id": "video-texture-cube-grid",
+      "title": "Video texture cube grid",
+      "behavior": "WebGL grid",
+      "context": "Portfolio",
+      "description": "Video frames map onto rotating cube tiles with mask-driven hover states.",
+      "tags": [
+        "three-js",
+        "video-texture",
+        "cube-grid",
+        "webgl",
+        "hover"
+      ],
+      "sourcePromptIds": [
+        "codrops-threejs-video-cube-grid"
+      ],
+      "template": "video-cube-grid",
+      "quality": "featured",
+      "mixRoles": [
+        "signature moment"
+      ],
+      "slug": "video-texture-cube-grid",
+      "previewUrl": "patterns/video-texture-cube-grid/index.html",
+      "prompt": "Adapt the Framewell pattern 'Video texture cube grid' into my existing Portfolio without replacing my product structure. Use it only as a focused WebGL grid layer. Video frames map onto rotating cube tiles with mask-driven hover states. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: three-js, video-texture, cube-grid, webgl, hover.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Video texture cube grid \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"video-texture-cube-grid\", \"slug\": \"video-texture-cube-grid\", \"title\": \"Video texture cube grid\", \"behavior\": \"WebGL grid\", \"context\": \"Portfolio\", \"description\": \"Video frames map onto rotating cube tiles with mask-driven hover states.\", \"tags\": [\"three-js\", \"video-texture\", \"cube-grid\", \"webgl\", \"hover\"], \"template\": \"video-cube-grid\", \"sourcePromptIds\": [\"codrops-threejs-video-cube-grid\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
       "complexity": "advanced",
       "dependencies": []
     },
@@ -90,166 +229,30 @@
       "dependencies": []
     },
     {
-      "id": "fluid-cursor-lens-index",
-      "title": "Fluid cursor lens index",
-      "behavior": "Cursor lens",
+      "id": "brush-shader-project-reveal",
+      "title": "Brush shader project reveal",
+      "behavior": "Shader hover",
       "context": "Portfolio",
-      "description": "The pointer becomes a soft glass lens over an oversized project index.",
+      "description": "Project thumbnails reveal through a painted shader mask that feels hand-directed.",
       "tags": [
-        "cursor",
-        "glass",
-        "portfolio",
-        "hover"
+        "shader",
+        "brush",
+        "webgl",
+        "hover",
+        "portfolio"
       ],
       "sourcePromptIds": [
-        "brandon-bartram-custom-cursor"
+        "x-itom-portfolio-brush-shader"
       ],
-      "template": "fluid-cursor",
-      "quality": "featured",
-      "mixRoles": [
-        "navigation/control"
-      ],
-      "slug": "fluid-cursor-lens-index",
-      "previewUrl": "patterns/fluid-cursor-lens-index/index.html",
-      "prompt": "Adapt the Framewell pattern 'Fluid cursor lens index' into my existing Portfolio without replacing my product structure. Use it only as a focused Cursor lens layer. The pointer becomes a soft glass lens over an oversized project index. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: cursor, glass, portfolio, hover.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Fluid cursor lens index \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"fluid-cursor-lens-index\", \"slug\": \"fluid-cursor-lens-index\", \"title\": \"Fluid cursor lens index\", \"behavior\": \"Cursor lens\", \"context\": \"Portfolio\", \"description\": \"The pointer becomes a soft glass lens over an oversized project index.\", \"tags\": [\"cursor\", \"glass\", \"portfolio\", \"hover\"], \"template\": \"fluid-cursor\", \"sourcePromptIds\": [\"brandon-bartram-custom-cursor\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "scroll-mask-story-panels",
-      "title": "Scroll mask story panels",
-      "behavior": "Scroll mask",
-      "context": "Marketing",
-      "description": "A before/after mask makes a product transformation visible and controllable.",
-      "tags": [
-        "gsap",
-        "mask",
-        "scroll",
-        "story"
-      ],
-      "sourcePromptIds": [
-        "x-luxury-tea-scrollytelling-gsap"
-      ],
-      "template": "scroll-mask",
-      "quality": "featured",
-      "mixRoles": [
-        "supporting effect"
-      ],
-      "slug": "scroll-mask-story-panels",
-      "previewUrl": "patterns/scroll-mask-story-panels/index.html",
-      "prompt": "Adapt the Framewell pattern 'Scroll mask story panels' into my existing Marketing without replacing my product structure. Use it only as a focused Scroll mask layer. A before/after mask makes a product transformation visible and controllable. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: gsap, mask, scroll, story.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Scroll mask story panels \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"scroll-mask-story-panels\", \"slug\": \"scroll-mask-story-panels\", \"title\": \"Scroll mask story panels\", \"behavior\": \"Scroll mask\", \"context\": \"Marketing\", \"description\": \"A before/after mask makes a product transformation visible and controllable.\", \"tags\": [\"gsap\", \"mask\", \"scroll\", \"story\"], \"template\": \"scroll-mask\", \"sourcePromptIds\": [\"x-luxury-tea-scrollytelling-gsap\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "advanced",
-      "dependencies": []
-    },
-    {
-      "id": "three-particle-command-field",
-      "title": "Three.js particle command field",
-      "behavior": "Three.js particles",
-      "context": "AI app",
-      "description": "A live Three.js particle field supports command UI without becoming decorative noise.",
-      "tags": [
-        "three-js",
-        "particles",
-        "ai",
-        "command"
-      ],
-      "sourcePromptIds": [
-        "webgl-webgpu-showcase"
-      ],
-      "template": "particle-field",
-      "quality": "featured",
-      "mixRoles": [
-        "signature moment",
-        "navigation/control"
-      ],
-      "slug": "three-particle-command-field",
-      "previewUrl": "patterns/three-particle-command-field/index.html",
-      "prompt": "Adapt the Framewell pattern 'Three.js particle command field' into my existing AI app without replacing my product structure. Use it only as a focused Three.js particles layer. A live Three.js particle field supports command UI without becoming decorative noise. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: three-js, particles, ai, command.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Three.js particle command field \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"three-particle-command-field\", \"slug\": \"three-particle-command-field\", \"title\": \"Three.js particle command field\", \"behavior\": \"Three.js particles\", \"context\": \"AI app\", \"description\": \"A live Three.js particle field supports command UI without becoming decorative noise.\", \"tags\": [\"three-js\", \"particles\", \"ai\", \"command\"], \"template\": \"particle-field\", \"sourcePromptIds\": [\"webgl-webgpu-showcase\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "advanced",
-      "dependencies": []
-    },
-    {
-      "id": "gsap-flip-board-recompose",
-      "title": "GSAP board recompose",
-      "behavior": "GSAP FLIP",
-      "context": "Internal tool",
-      "description": "A board switches modes with continuity so cards feel physically rearranged.",
-      "tags": [
-        "gsap",
-        "flip",
-        "board",
-        "dashboard"
-      ],
-      "sourcePromptIds": [
-        "codrops-gsap-flip-scrolltrigger"
-      ],
-      "template": "flip-board",
-      "quality": "featured",
-      "mixRoles": [
-        "product surface"
-      ],
-      "slug": "gsap-flip-board-recompose",
-      "previewUrl": "patterns/gsap-flip-board-recompose/index.html",
-      "prompt": "Adapt the Framewell pattern 'GSAP board recompose' into my existing Internal tool without replacing my product structure. Use it only as a focused GSAP FLIP layer. A board switches modes with continuity so cards feel physically rearranged. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: gsap, flip, board, dashboard.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>GSAP board recompose \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"gsap-flip-board-recompose\", \"slug\": \"gsap-flip-board-recompose\", \"title\": \"GSAP board recompose\", \"behavior\": \"GSAP FLIP\", \"context\": \"Internal tool\", \"description\": \"A board switches modes with continuity so cards feel physically rearranged.\", \"tags\": [\"gsap\", \"flip\", \"board\", \"dashboard\"], \"template\": \"flip-board\", \"sourcePromptIds\": [\"codrops-gsap-flip-scrolltrigger\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "advanced",
-      "dependencies": []
-    },
-    {
-      "id": "split-text-control-deck",
-      "title": "Split text control deck",
-      "behavior": "Split text",
-      "context": "Landing page",
-      "description": "Type reveals are controlled by state so the user can compare premium motion styles.",
-      "tags": [
-        "gsap",
-        "split-text",
-        "typography",
-        "hero"
-      ],
-      "sourcePromptIds": [
-        "gsapien-animated-text"
-      ],
-      "template": "split-text",
+      "template": "brush-shader",
       "quality": "featured",
       "mixRoles": [
         "signature moment"
       ],
-      "slug": "split-text-control-deck",
-      "previewUrl": "patterns/split-text-control-deck/index.html",
-      "prompt": "Adapt the Framewell pattern 'Split text control deck' into my existing Landing page without replacing my product structure. Use it only as a focused Split text layer. Type reveals are controlled by state so the user can compare premium motion styles. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: gsap, split-text, typography, hero.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Split text control deck \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"split-text-control-deck\", \"slug\": \"split-text-control-deck\", \"title\": \"Split text control deck\", \"behavior\": \"Split text\", \"context\": \"Landing page\", \"description\": \"Type reveals are controlled by state so the user can compare premium motion styles.\", \"tags\": [\"gsap\", \"split-text\", \"typography\", \"hero\"], \"template\": \"split-text\", \"sourcePromptIds\": [\"gsapien-animated-text\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "advanced",
-      "dependencies": []
-    },
-    {
-      "id": "cinematic-scroll-camera",
-      "title": "Cinematic scroll camera pass",
-      "behavior": "Scroll cinema",
-      "context": "Portfolio",
-      "description": "A product scene appears to move past camera planes as the page scrolls.",
-      "tags": [
-        "gsap",
-        "scrolltrigger",
-        "camera",
-        "portfolio",
-        "cinematic"
-      ],
-      "sourcePromptIds": [
-        "motionsites-space-voyage"
-      ],
-      "template": "motion",
-      "quality": "featured",
-      "mixRoles": [
-        "signature moment"
-      ],
-      "slug": "cinematic-scroll-camera",
-      "previewUrl": "patterns/cinematic-scroll-camera/index.html",
-      "prompt": "Adapt the Framewell pattern 'Cinematic scroll camera pass' into my existing Portfolio without replacing my product structure. Use it only as a focused Scroll cinema layer. A product scene appears to move past camera planes as the page scrolls. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: gsap, scrolltrigger, camera, portfolio, cinematic.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Cinematic scroll camera pass \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"cinematic-scroll-camera\", \"slug\": \"cinematic-scroll-camera\", \"title\": \"Cinematic scroll camera pass\", \"behavior\": \"Scroll cinema\", \"context\": \"Portfolio\", \"description\": \"A product scene appears to move past camera planes as the page scrolls.\", \"tags\": [\"gsap\", \"scrolltrigger\", \"camera\", \"portfolio\", \"cinematic\"], \"template\": \"motion\", \"sourcePromptIds\": [\"motionsites-space-voyage\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "slug": "brush-shader-project-reveal",
+      "previewUrl": "patterns/brush-shader-project-reveal/index.html",
+      "prompt": "Adapt the Framewell pattern 'Brush shader project reveal' into my existing Portfolio without replacing my product structure. Use it only as a focused Shader hover layer. Project thumbnails reveal through a painted shader mask that feels hand-directed. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: shader, brush, webgl, hover, portfolio.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Brush shader project reveal \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"brush-shader-project-reveal\", \"slug\": \"brush-shader-project-reveal\", \"title\": \"Brush shader project reveal\", \"behavior\": \"Shader hover\", \"context\": \"Portfolio\", \"description\": \"Project thumbnails reveal through a painted shader mask that feels hand-directed.\", \"tags\": [\"shader\", \"brush\", \"webgl\", \"hover\", \"portfolio\"], \"template\": \"brush-shader\", \"sourcePromptIds\": [\"x-itom-portfolio-brush-shader\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
       "complexity": "advanced",
       "dependencies": []
     },
@@ -310,196 +313,252 @@
       "dependencies": []
     },
     {
-      "id": "orbital-product-stage",
-      "title": "Orbital product stage",
-      "behavior": "3D orbit",
-      "context": "SaaS hero",
-      "description": "Cards and chips orbit a central object with depth and parallax.",
-      "tags": [
-        "three-js",
-        "orbit",
-        "product",
-        "hero",
-        "depth"
-      ],
-      "sourcePromptIds": [
-        "opencodesign-product-launch-page"
-      ],
-      "template": "orbit-stage",
-      "quality": "featured",
-      "mixRoles": [
-        "signature moment"
-      ],
-      "slug": "orbital-product-stage",
-      "previewUrl": "patterns/orbital-product-stage/index.html",
-      "prompt": "Adapt the Framewell pattern 'Orbital product stage' into my existing SaaS hero without replacing my product structure. Use it only as a focused 3D orbit layer. Cards and chips orbit a central object with depth and parallax. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: three-js, orbit, product, hero, depth.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Orbital product stage \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"orbital-product-stage\", \"slug\": \"orbital-product-stage\", \"title\": \"Orbital product stage\", \"behavior\": \"3D orbit\", \"context\": \"SaaS hero\", \"description\": \"Cards and chips orbit a central object with depth and parallax.\", \"tags\": [\"three-js\", \"orbit\", \"product\", \"hero\", \"depth\"], \"template\": \"orbit-stage\", \"sourcePromptIds\": [\"opencodesign-product-launch-page\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "advanced",
-      "dependencies": []
-    },
-    {
-      "id": "glass-torus-pricing",
-      "title": "Glass torus pricing focus",
-      "behavior": "Refraction",
-      "context": "Pricing",
-      "description": "A refractive ring highlights the recommended pricing card without clutter.",
-      "tags": [
-        "glass",
-        "refraction",
-        "pricing",
-        "premium"
-      ],
-      "sourcePromptIds": [
-        "tailark-pricing-comparison"
-      ],
-      "template": "refractive-pricing",
-      "quality": "featured",
-      "mixRoles": [
-        "conversion/proof"
-      ],
-      "slug": "glass-torus-pricing",
-      "previewUrl": "patterns/glass-torus-pricing/index.html",
-      "prompt": "Adapt the Framewell pattern 'Glass torus pricing focus' into my existing Pricing without replacing my product structure. Use it only as a focused Refraction layer. A refractive ring highlights the recommended pricing card without clutter. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: glass, refraction, pricing, premium.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Glass torus pricing focus \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"glass-torus-pricing\", \"slug\": \"glass-torus-pricing\", \"title\": \"Glass torus pricing focus\", \"behavior\": \"Refraction\", \"context\": \"Pricing\", \"description\": \"A refractive ring highlights the recommended pricing card without clutter.\", \"tags\": [\"glass\", \"refraction\", \"pricing\", \"premium\"], \"template\": \"refractive-pricing\", \"sourcePromptIds\": [\"tailark-pricing-comparison\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "particle-cursor-constellation",
-      "title": "Particle cursor constellation",
-      "behavior": "Cursor field",
+      "id": "water-shader-page-transition",
+      "title": "Water shader page transition",
+      "behavior": "Transition",
       "context": "Portfolio",
-      "description": "Pointer movement pulls a constellation field behind the content.",
+      "description": "Route changes ripple like water before resolving into the next case study.",
       "tags": [
-        "particles",
-        "cursor",
-        "ambient",
-        "webgl-feel"
+        "shader",
+        "water",
+        "page-transition",
+        "gsap"
       ],
       "sourcePromptIds": [
-        "opencodesign-particle-field-data-hero"
+        "x-roman-jean-elie-shaders"
       ],
-      "template": "constellation",
-      "quality": "featured",
-      "mixRoles": [
-        "signature moment",
-        "navigation/control"
-      ],
-      "slug": "particle-cursor-constellation",
-      "previewUrl": "patterns/particle-cursor-constellation/index.html",
-      "prompt": "Adapt the Framewell pattern 'Particle cursor constellation' into my existing Portfolio without replacing my product structure. Use it only as a focused Cursor field layer. Pointer movement pulls a constellation field behind the content. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: particles, cursor, ambient, webgl-feel.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Particle cursor constellation \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"particle-cursor-constellation\", \"slug\": \"particle-cursor-constellation\", \"title\": \"Particle cursor constellation\", \"behavior\": \"Cursor field\", \"context\": \"Portfolio\", \"description\": \"Pointer movement pulls a constellation field behind the content.\", \"tags\": [\"particles\", \"cursor\", \"ambient\", \"webgl-feel\"], \"template\": \"constellation\", \"sourcePromptIds\": [\"opencodesign-particle-field-data-hero\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "scroll-sliced-hero",
-      "title": "Scroll-sliced hero poster",
-      "behavior": "Scroll reveal",
-      "context": "Landing page",
-      "description": "Poster slices separate and reveal the product promise underneath.",
-      "tags": [
-        "scroll",
-        "mask",
-        "poster",
-        "gsap",
-        "hero"
-      ],
-      "sourcePromptIds": [
-        "motionsites-free-visual-hero"
-      ],
-      "template": "slice-poster",
+      "template": "water-transition",
       "quality": "featured",
       "mixRoles": [
         "signature moment"
       ],
-      "slug": "scroll-sliced-hero",
-      "previewUrl": "patterns/scroll-sliced-hero/index.html",
-      "prompt": "Adapt the Framewell pattern 'Scroll-sliced hero poster' into my existing Landing page without replacing my product structure. Use it only as a focused Scroll reveal layer. Poster slices separate and reveal the product promise underneath. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: scroll, mask, poster, gsap, hero.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Scroll-sliced hero poster \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"scroll-sliced-hero\", \"slug\": \"scroll-sliced-hero\", \"title\": \"Scroll-sliced hero poster\", \"behavior\": \"Scroll reveal\", \"context\": \"Landing page\", \"description\": \"Poster slices separate and reveal the product promise underneath.\", \"tags\": [\"scroll\", \"mask\", \"poster\", \"gsap\", \"hero\"], \"template\": \"slice-poster\", \"sourcePromptIds\": [\"motionsites-free-visual-hero\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "slug": "water-shader-page-transition",
+      "previewUrl": "patterns/water-shader-page-transition/index.html",
+      "prompt": "Adapt the Framewell pattern 'Water shader page transition' into my existing Portfolio without replacing my product structure. Use it only as a focused Transition layer. Route changes ripple like water before resolving into the next case study. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: shader, water, page-transition, gsap.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Water shader page transition \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"water-shader-page-transition\", \"slug\": \"water-shader-page-transition\", \"title\": \"Water shader page transition\", \"behavior\": \"Transition\", \"context\": \"Portfolio\", \"description\": \"Route changes ripple like water before resolving into the next case study.\", \"tags\": [\"shader\", \"water\", \"page-transition\", \"gsap\"], \"template\": \"water-transition\", \"sourcePromptIds\": [\"x-roman-jean-elie-shaders\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
       "complexity": "advanced",
       "dependencies": []
     },
     {
-      "id": "liquid-metal-cta",
-      "title": "Liquid metal CTA",
-      "behavior": "Microinteraction",
-      "context": "Landing page",
-      "description": "A call-to-action surface flows like mercury on hover.",
+      "id": "procedural-svg-preloader",
+      "title": "Procedural SVG preloader",
+      "behavior": "Loader",
+      "context": "Portfolio",
+      "description": "A generative logo/path loader becomes the first layout element instead of disappearing.",
       "tags": [
-        "button",
-        "liquid",
-        "premium",
-        "hover"
+        "svg",
+        "preloader",
+        "procedural",
+        "gsap",
+        "brand"
       ],
       "sourcePromptIds": [
-        "motionsites-liquid-glass-agency"
+        "x-itom-portfolio-preloader"
       ],
-      "template": "liquid-cta",
+      "template": "procedural-loader",
       "quality": "featured",
       "mixRoles": [
         "microinteraction"
       ],
-      "slug": "liquid-metal-cta",
-      "previewUrl": "patterns/liquid-metal-cta/index.html",
-      "prompt": "Adapt the Framewell pattern 'Liquid metal CTA' into my existing Landing page without replacing my product structure. Use it only as a focused Microinteraction layer. A call-to-action surface flows like mercury on hover. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: button, liquid, premium, hover.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Liquid metal CTA \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"liquid-metal-cta\", \"slug\": \"liquid-metal-cta\", \"title\": \"Liquid metal CTA\", \"behavior\": \"Microinteraction\", \"context\": \"Landing page\", \"description\": \"A call-to-action surface flows like mercury on hover.\", \"tags\": [\"button\", \"liquid\", \"premium\", \"hover\"], \"template\": \"liquid-cta\", \"sourcePromptIds\": [\"motionsites-liquid-glass-agency\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "slug": "procedural-svg-preloader",
+      "previewUrl": "patterns/procedural-svg-preloader/index.html",
+      "prompt": "Adapt the Framewell pattern 'Procedural SVG preloader' into my existing Portfolio without replacing my product structure. Use it only as a focused Loader layer. A generative logo/path loader becomes the first layout element instead of disappearing. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: svg, preloader, procedural, gsap, brand.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Procedural SVG preloader \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"procedural-svg-preloader\", \"slug\": \"procedural-svg-preloader\", \"title\": \"Procedural SVG preloader\", \"behavior\": \"Loader\", \"context\": \"Portfolio\", \"description\": \"A generative logo/path loader becomes the first layout element instead of disappearing.\", \"tags\": [\"svg\", \"preloader\", \"procedural\", \"gsap\", \"brand\"], \"template\": \"procedural-loader\", \"sourcePromptIds\": [\"x-itom-portfolio-preloader\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "advanced",
+      "dependencies": []
+    },
+    {
+      "id": "dom-to-canvas-handoff",
+      "title": "DOM to canvas handoff",
+      "behavior": "Transition",
+      "context": "Portfolio",
+      "description": "A DOM card detaches into a canvas-feeling object for a seamless case-study open.",
+      "tags": [
+        "canvas",
+        "handoff",
+        "transition",
+        "portfolio",
+        "webgl-feel"
+      ],
+      "sourcePromptIds": [
+        "x-itom-dom-canvas-transition"
+      ],
+      "template": "canvas-handoff",
+      "quality": "featured",
+      "mixRoles": [
+        "signature moment"
+      ],
+      "slug": "dom-to-canvas-handoff",
+      "previewUrl": "patterns/dom-to-canvas-handoff/index.html",
+      "prompt": "Adapt the Framewell pattern 'DOM to canvas handoff' into my existing Portfolio without replacing my product structure. Use it only as a focused Transition layer. A DOM card detaches into a canvas-feeling object for a seamless case-study open. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: canvas, handoff, transition, portfolio, webgl-feel.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>DOM to canvas handoff \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"dom-to-canvas-handoff\", \"slug\": \"dom-to-canvas-handoff\", \"title\": \"DOM to canvas handoff\", \"behavior\": \"Transition\", \"context\": \"Portfolio\", \"description\": \"A DOM card detaches into a canvas-feeling object for a seamless case-study open.\", \"tags\": [\"canvas\", \"handoff\", \"transition\", \"portfolio\", \"webgl-feel\"], \"template\": \"canvas-handoff\", \"sourcePromptIds\": [\"x-itom-dom-canvas-transition\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
       "complexity": "medium",
       "dependencies": []
     },
     {
-      "id": "magnetic-work-menu",
-      "title": "Magnetic work menu",
-      "behavior": "Menu",
-      "context": "Portfolio",
-      "description": "Project links stretch toward the pointer with oversized typography.",
+      "id": "webgpu-particle-logo-field",
+      "title": "WebGPU particle logo field",
+      "behavior": "Particle logo",
+      "context": "Hero",
+      "description": "A logo dissolves into a controlled particle field and reforms into product UI.",
       "tags": [
-        "menu",
-        "magnetic",
-        "portfolio",
-        "typography"
+        "particles",
+        "webgpu",
+        "logo",
+        "hero",
+        "brand"
       ],
       "sourcePromptIds": [
-        "motionsites-portfolio-cosmic"
+        "webgl-webgpu-showcase"
       ],
-      "template": "magnetic-menu",
+      "template": "particle-logo",
+      "quality": "featured",
+      "mixRoles": [
+        "signature moment",
+        "conversion/proof"
+      ],
+      "slug": "webgpu-particle-logo-field",
+      "previewUrl": "patterns/webgpu-particle-logo-field/index.html",
+      "prompt": "Adapt the Framewell pattern 'WebGPU particle logo field' into my existing Hero without replacing my product structure. Use it only as a focused Particle logo layer. A logo dissolves into a controlled particle field and reforms into product UI. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: particles, webgpu, logo, hero, brand.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>WebGPU particle logo field \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"webgpu-particle-logo-field\", \"slug\": \"webgpu-particle-logo-field\", \"title\": \"WebGPU particle logo field\", \"behavior\": \"Particle logo\", \"context\": \"Hero\", \"description\": \"A logo dissolves into a controlled particle field and reforms into product UI.\", \"tags\": [\"particles\", \"webgpu\", \"logo\", \"hero\", \"brand\"], \"template\": \"particle-logo\", \"sourcePromptIds\": [\"webgl-webgpu-showcase\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "medium",
+      "dependencies": []
+    },
+    {
+      "id": "three-particle-command-field",
+      "title": "Three.js particle command field",
+      "behavior": "Three.js particles",
+      "context": "AI app",
+      "description": "A live Three.js particle field supports command UI without becoming decorative noise.",
+      "tags": [
+        "three-js",
+        "particles",
+        "ai",
+        "command"
+      ],
+      "sourcePromptIds": [
+        "webgl-webgpu-showcase"
+      ],
+      "template": "particle-field",
       "quality": "featured",
       "mixRoles": [
         "signature moment",
         "navigation/control"
       ],
-      "slug": "magnetic-work-menu",
-      "previewUrl": "patterns/magnetic-work-menu/index.html",
-      "prompt": "Adapt the Framewell pattern 'Magnetic work menu' into my existing Portfolio without replacing my product structure. Use it only as a focused Menu layer. Project links stretch toward the pointer with oversized typography. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: menu, magnetic, portfolio, typography.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Magnetic work menu \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"magnetic-work-menu\", \"slug\": \"magnetic-work-menu\", \"title\": \"Magnetic work menu\", \"behavior\": \"Menu\", \"context\": \"Portfolio\", \"description\": \"Project links stretch toward the pointer with oversized typography.\", \"tags\": [\"menu\", \"magnetic\", \"portfolio\", \"typography\"], \"template\": \"magnetic-menu\", \"sourcePromptIds\": [\"motionsites-portfolio-cosmic\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "slug": "three-particle-command-field",
+      "previewUrl": "patterns/three-particle-command-field/index.html",
+      "prompt": "Adapt the Framewell pattern 'Three.js particle command field' into my existing AI app without replacing my product structure. Use it only as a focused Three.js particles layer. A live Three.js particle field supports command UI without becoming decorative noise. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: three-js, particles, ai, command.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Three.js particle command field \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"three-particle-command-field\", \"slug\": \"three-particle-command-field\", \"title\": \"Three.js particle command field\", \"behavior\": \"Three.js particles\", \"context\": \"AI app\", \"description\": \"A live Three.js particle field supports command UI without becoming decorative noise.\", \"tags\": [\"three-js\", \"particles\", \"ai\", \"command\"], \"template\": \"particle-field\", \"sourcePromptIds\": [\"webgl-webgpu-showcase\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "advanced",
+      "dependencies": []
+    },
+    {
+      "id": "gsap-scroll-cascade-stack",
+      "title": "GSAP scroll cascade stack",
+      "behavior": "GSAP scroll",
+      "context": "Portfolio",
+      "description": "Cards collapse, stack, and cascade with a scrubbed GSAP timeline instead of a loop.",
+      "tags": [
+        "gsap",
+        "scroll",
+        "stack",
+        "portfolio",
+        "cards"
+      ],
+      "sourcePromptIds": [
+        "gsap-scrolltrigger-product-demo"
+      ],
+      "template": "gsap-cascade",
+      "quality": "featured",
+      "mixRoles": [
+        "supporting effect"
+      ],
+      "slug": "gsap-scroll-cascade-stack",
+      "previewUrl": "patterns/gsap-scroll-cascade-stack/index.html",
+      "prompt": "Adapt the Framewell pattern 'GSAP scroll cascade stack' into my existing Portfolio without replacing my product structure. Use it only as a focused GSAP scroll layer. Cards collapse, stack, and cascade with a scrubbed GSAP timeline instead of a loop. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: gsap, scroll, stack, portfolio, cards.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>GSAP scroll cascade stack \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"gsap-scroll-cascade-stack\", \"slug\": \"gsap-scroll-cascade-stack\", \"title\": \"GSAP scroll cascade stack\", \"behavior\": \"GSAP scroll\", \"context\": \"Portfolio\", \"description\": \"Cards collapse, stack, and cascade with a scrubbed GSAP timeline instead of a loop.\", \"tags\": [\"gsap\", \"scroll\", \"stack\", \"portfolio\", \"cards\"], \"template\": \"gsap-cascade\", \"sourcePromptIds\": [\"gsap-scrolltrigger-product-demo\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "advanced",
+      "dependencies": []
+    },
+    {
+      "id": "scroll-mask-story-panels",
+      "title": "Scroll mask story panels",
+      "behavior": "Scroll mask",
+      "context": "Marketing",
+      "description": "A before/after mask makes a product transformation visible and controllable.",
+      "tags": [
+        "gsap",
+        "mask",
+        "scroll",
+        "story"
+      ],
+      "sourcePromptIds": [
+        "x-luxury-tea-scrollytelling-gsap"
+      ],
+      "template": "scroll-mask",
+      "quality": "featured",
+      "mixRoles": [
+        "supporting effect"
+      ],
+      "slug": "scroll-mask-story-panels",
+      "previewUrl": "patterns/scroll-mask-story-panels/index.html",
+      "prompt": "Adapt the Framewell pattern 'Scroll mask story panels' into my existing Marketing without replacing my product structure. Use it only as a focused Scroll mask layer. A before/after mask makes a product transformation visible and controllable. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: gsap, mask, scroll, story.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Scroll mask story panels \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"scroll-mask-story-panels\", \"slug\": \"scroll-mask-story-panels\", \"title\": \"Scroll mask story panels\", \"behavior\": \"Scroll mask\", \"context\": \"Marketing\", \"description\": \"A before/after mask makes a product transformation visible and controllable.\", \"tags\": [\"gsap\", \"mask\", \"scroll\", \"story\"], \"template\": \"scroll-mask\", \"sourcePromptIds\": [\"x-luxury-tea-scrollytelling-gsap\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "advanced",
+      "dependencies": []
+    },
+    {
+      "id": "sticky-comparison-wipe",
+      "title": "Sticky comparison wipe",
+      "behavior": "Compare",
+      "context": "Marketing",
+      "description": "A sticky before/after wipe makes a product claim tangible.",
+      "tags": [
+        "compare",
+        "wipe",
+        "sticky",
+        "before-after"
+      ],
+      "sourcePromptIds": [
+        "opencodesign-open-source-project-homepage"
+      ],
+      "template": "comparison-wipe",
+      "quality": "featured",
+      "mixRoles": [
+        "supporting effect"
+      ],
+      "slug": "sticky-comparison-wipe",
+      "previewUrl": "patterns/sticky-comparison-wipe/index.html",
+      "prompt": "Adapt the Framewell pattern 'Sticky comparison wipe' into my existing Marketing without replacing my product structure. Use it only as a focused Compare layer. A sticky before/after wipe makes a product claim tangible. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: compare, wipe, sticky, before-after.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Sticky comparison wipe \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"sticky-comparison-wipe\", \"slug\": \"sticky-comparison-wipe\", \"title\": \"Sticky comparison wipe\", \"behavior\": \"Compare\", \"context\": \"Marketing\", \"description\": \"A sticky before/after wipe makes a product claim tangible.\", \"tags\": [\"compare\", \"wipe\", \"sticky\", \"before-after\"], \"template\": \"comparison-wipe\", \"sourcePromptIds\": [\"opencodesign-open-source-project-homepage\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
       "complexity": "medium",
       "dependencies": []
     },
     {
-      "id": "dock-with-liquid-focus",
-      "title": "Liquid focus dock",
-      "behavior": "Navigation",
-      "context": "App shell",
-      "description": "A dock bubble slides between icons and previews the destination.",
+      "id": "gsap-flip-board-recompose",
+      "title": "GSAP board recompose",
+      "behavior": "GSAP FLIP",
+      "context": "Internal tool",
+      "description": "A board switches modes with continuity so cards feel physically rearranged.",
       "tags": [
-        "dock",
-        "navigation",
-        "liquid",
-        "app"
+        "gsap",
+        "flip",
+        "board",
+        "dashboard"
       ],
       "sourcePromptIds": [
-        "template-shadcnstore-chat-support-console"
+        "codrops-gsap-flip-scrolltrigger"
       ],
-      "template": "liquid-dock",
+      "template": "flip-board",
       "quality": "featured",
       "mixRoles": [
-        "navigation/control"
+        "product surface"
       ],
-      "slug": "dock-with-liquid-focus",
-      "previewUrl": "patterns/dock-with-liquid-focus/index.html",
-      "prompt": "Adapt the Framewell pattern 'Liquid focus dock' into my existing App shell without replacing my product structure. Use it only as a focused Navigation layer. A dock bubble slides between icons and previews the destination. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: dock, navigation, liquid, app.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Liquid focus dock \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"dock-with-liquid-focus\", \"slug\": \"dock-with-liquid-focus\", \"title\": \"Liquid focus dock\", \"behavior\": \"Navigation\", \"context\": \"App shell\", \"description\": \"A dock bubble slides between icons and previews the destination.\", \"tags\": [\"dock\", \"navigation\", \"liquid\", \"app\"], \"template\": \"liquid-dock\", \"sourcePromptIds\": [\"template-shadcnstore-chat-support-console\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
+      "slug": "gsap-flip-board-recompose",
+      "previewUrl": "patterns/gsap-flip-board-recompose/index.html",
+      "prompt": "Adapt the Framewell pattern 'GSAP board recompose' into my existing Internal tool without replacing my product structure. Use it only as a focused GSAP FLIP layer. A board switches modes with continuity so cards feel physically rearranged. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: gsap, flip, board, dashboard.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>GSAP board recompose \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"gsap-flip-board-recompose\", \"slug\": \"gsap-flip-board-recompose\", \"title\": \"GSAP board recompose\", \"behavior\": \"GSAP FLIP\", \"context\": \"Internal tool\", \"description\": \"A board switches modes with continuity so cards feel physically rearranged.\", \"tags\": [\"gsap\", \"flip\", \"board\", \"dashboard\"], \"template\": \"flip-board\", \"sourcePromptIds\": [\"codrops-gsap-flip-scrolltrigger\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "advanced",
       "dependencies": []
     },
     {
@@ -530,218 +589,86 @@
       "dependencies": []
     },
     {
-      "id": "split-panel-route-transition",
-      "title": "Split-panel route transition",
-      "behavior": "Transition",
-      "context": "Web app",
-      "description": "Two panels wipe in opposing directions for page transitions.",
+      "id": "spatial-command-room",
+      "title": "Spatial command room",
+      "behavior": "Command",
+      "context": "AI app",
+      "description": "Commands live on walls of a compact 3D room instead of a flat palette.",
       "tags": [
-        "page-transition",
-        "wipe",
-        "panels",
-        "route"
+        "command",
+        "spatial",
+        "3d",
+        "keyboard",
+        "ai"
       ],
       "sourcePromptIds": [
-        "template-karthik-dark-saas-launch"
+        "creative-command-palette-3d"
       ],
-      "template": "split-transition",
+      "template": "command-room",
       "quality": "featured",
       "mixRoles": [
-        "signature moment"
-      ],
-      "slug": "split-panel-route-transition",
-      "previewUrl": "patterns/split-panel-route-transition/index.html",
-      "prompt": "Adapt the Framewell pattern 'Split-panel route transition' into my existing Web app without replacing my product structure. Use it only as a focused Transition layer. Two panels wipe in opposing directions for page transitions. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: page-transition, wipe, panels, route.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Split-panel route transition \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"split-panel-route-transition\", \"slug\": \"split-panel-route-transition\", \"title\": \"Split-panel route transition\", \"behavior\": \"Transition\", \"context\": \"Web app\", \"description\": \"Two panels wipe in opposing directions for page transitions.\", \"tags\": [\"page-transition\", \"wipe\", \"panels\", \"route\"], \"template\": \"split-transition\", \"sourcePromptIds\": [\"template-karthik-dark-saas-launch\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "cursor-reveal-mega-menu",
-      "title": "Cursor reveal mega menu",
-      "behavior": "Menu",
-      "context": "Marketing",
-      "description": "Menu panels reveal images only under the cursor spotlight.",
-      "tags": [
-        "mega-menu",
-        "spotlight",
-        "cursor",
-        "navigation"
-      ],
-      "sourcePromptIds": [
-        "tailark-integrations-cloud"
-      ],
-      "template": "spotlight-menu",
-      "quality": "featured",
-      "mixRoles": [
+        "signature moment",
         "navigation/control"
       ],
-      "slug": "cursor-reveal-mega-menu",
-      "previewUrl": "patterns/cursor-reveal-mega-menu/index.html",
-      "prompt": "Adapt the Framewell pattern 'Cursor reveal mega menu' into my existing Marketing without replacing my product structure. Use it only as a focused Menu layer. Menu panels reveal images only under the cursor spotlight. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: mega-menu, spotlight, cursor, navigation.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Cursor reveal mega menu \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"cursor-reveal-mega-menu\", \"slug\": \"cursor-reveal-mega-menu\", \"title\": \"Cursor reveal mega menu\", \"behavior\": \"Menu\", \"context\": \"Marketing\", \"description\": \"Menu panels reveal images only under the cursor spotlight.\", \"tags\": [\"mega-menu\", \"spotlight\", \"cursor\", \"navigation\"], \"template\": \"spotlight-menu\", \"sourcePromptIds\": [\"tailark-integrations-cloud\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "slug": "spatial-command-room",
+      "previewUrl": "patterns/spatial-command-room/index.html",
+      "prompt": "Adapt the Framewell pattern 'Spatial command room' into my existing AI app without replacing my product structure. Use it only as a focused Command layer. Commands live on walls of a compact 3D room instead of a flat palette. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: command, spatial, 3d, keyboard, ai.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Spatial command room \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"spatial-command-room\", \"slug\": \"spatial-command-room\", \"title\": \"Spatial command room\", \"behavior\": \"Command\", \"context\": \"AI app\", \"description\": \"Commands live on walls of a compact 3D room instead of a flat palette.\", \"tags\": [\"command\", \"spatial\", \"3d\", \"keyboard\", \"ai\"], \"template\": \"command-room\", \"sourcePromptIds\": [\"creative-command-palette-3d\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
       "complexity": "medium",
       "dependencies": []
     },
     {
-      "id": "dashboard-row-scroll-reveal",
-      "title": "Dashboard row scroll reveal",
-      "behavior": "Dashboard motion",
-      "context": "Dashboard",
-      "description": "Dense rows lift, lock, and show confidence metadata as they enter.",
+      "id": "ai-map-of-thought",
+      "title": "AI map-of-thought",
+      "behavior": "Agent viz",
+      "context": "AI app",
+      "description": "An AI answer appears as a map of claims, sources, uncertainty, and next actions.",
       "tags": [
-        "dashboard",
-        "scroll",
-        "rows",
-        "confidence"
+        "ai",
+        "agent",
+        "map",
+        "sources",
+        "reasoning"
+      ],
+      "sourcePromptIds": [
+        "ai-product-agent-map"
+      ],
+      "template": "thought-map",
+      "quality": "featured",
+      "mixRoles": [
+        "product surface"
+      ],
+      "slug": "ai-map-of-thought",
+      "previewUrl": "patterns/ai-map-of-thought/index.html",
+      "prompt": "Adapt the Framewell pattern 'AI map-of-thought' into my existing AI app without replacing my product structure. Use it only as a focused Agent viz layer. An AI answer appears as a map of claims, sources, uncertainty, and next actions. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: ai, agent, map, sources, reasoning.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>AI map-of-thought \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"ai-map-of-thought\", \"slug\": \"ai-map-of-thought\", \"title\": \"AI map-of-thought\", \"behavior\": \"Agent viz\", \"context\": \"AI app\", \"description\": \"An AI answer appears as a map of claims, sources, uncertainty, and next actions.\", \"tags\": [\"ai\", \"agent\", \"map\", \"sources\", \"reasoning\"], \"template\": \"thought-map\", \"sourcePromptIds\": [\"ai-product-agent-map\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "medium",
+      "dependencies": []
+    },
+    {
+      "id": "ai-agent-path-trace",
+      "title": "AI agent path trace",
+      "behavior": "Agent viz",
+      "context": "AI app",
+      "description": "An agent plan draws paths between tools, files, and decisions.",
+      "tags": [
+        "ai-agent",
+        "path",
+        "trace",
+        "workflow"
       ],
       "sourcePromptIds": [
         "opencodesign-ai-ops-command-center"
       ],
-      "template": "dashboard-rows",
+      "template": "agent-trace",
       "quality": "featured",
       "mixRoles": [
         "product surface"
       ],
-      "slug": "dashboard-row-scroll-reveal",
-      "previewUrl": "patterns/dashboard-row-scroll-reveal/index.html",
-      "prompt": "Adapt the Framewell pattern 'Dashboard row scroll reveal' into my existing Dashboard without replacing my product structure. Use it only as a focused Dashboard motion layer. Dense rows lift, lock, and show confidence metadata as they enter. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: dashboard, scroll, rows, confidence.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Dashboard row scroll reveal \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"dashboard-row-scroll-reveal\", \"slug\": \"dashboard-row-scroll-reveal\", \"title\": \"Dashboard row scroll reveal\", \"behavior\": \"Dashboard motion\", \"context\": \"Dashboard\", \"description\": \"Dense rows lift, lock, and show confidence metadata as they enter.\", \"tags\": [\"dashboard\", \"scroll\", \"rows\", \"confidence\"], \"template\": \"dashboard-rows\", \"sourcePromptIds\": [\"opencodesign-ai-ops-command-center\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "metric-cards-live-scrub",
-      "title": "Metric cards live scrub",
-      "behavior": "Data interaction",
-      "context": "Dashboard",
-      "description": "Dragging a timeline updates cards, sparklines, and alert tone together.",
-      "tags": [
-        "metrics",
-        "scrub",
-        "sparklines",
-        "dashboard"
-      ],
-      "sourcePromptIds": [
-        "opencodesign-saas-revenue-dashboard"
-      ],
-      "template": "metric-scrub",
-      "quality": "featured",
-      "mixRoles": [
-        "product surface"
-      ],
-      "slug": "metric-cards-live-scrub",
-      "previewUrl": "patterns/metric-cards-live-scrub/index.html",
-      "prompt": "Adapt the Framewell pattern 'Metric cards live scrub' into my existing Dashboard without replacing my product structure. Use it only as a focused Data interaction layer. Dragging a timeline updates cards, sparklines, and alert tone together. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: metrics, scrub, sparklines, dashboard.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Metric cards live scrub \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"metric-cards-live-scrub\", \"slug\": \"metric-cards-live-scrub\", \"title\": \"Metric cards live scrub\", \"behavior\": \"Data interaction\", \"context\": \"Dashboard\", \"description\": \"Dragging a timeline updates cards, sparklines, and alert tone together.\", \"tags\": [\"metrics\", \"scrub\", \"sparklines\", \"dashboard\"], \"template\": \"metric-scrub\", \"sourcePromptIds\": [\"opencodesign-saas-revenue-dashboard\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "audit-evidence-peek",
-      "title": "Audit evidence peek",
-      "behavior": "Disclosure",
-      "context": "Dashboard",
-      "description": "Evidence opens inline with source chips instead of a modal detour.",
-      "tags": [
-        "audit",
-        "evidence",
-        "disclosure",
-        "table"
-      ],
-      "sourcePromptIds": [
-        "opencodesign-observability-dashboard"
-      ],
-      "template": "evidence-peek",
-      "quality": "featured",
-      "mixRoles": [
-        "product surface"
-      ],
-      "slug": "audit-evidence-peek",
-      "previewUrl": "patterns/audit-evidence-peek/index.html",
-      "prompt": "Adapt the Framewell pattern 'Audit evidence peek' into my existing Dashboard without replacing my product structure. Use it only as a focused Disclosure layer. Evidence opens inline with source chips instead of a modal detour. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: audit, evidence, disclosure, table.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Audit evidence peek \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"audit-evidence-peek\", \"slug\": \"audit-evidence-peek\", \"title\": \"Audit evidence peek\", \"behavior\": \"Disclosure\", \"context\": \"Dashboard\", \"description\": \"Evidence opens inline with source chips instead of a modal detour.\", \"tags\": [\"audit\", \"evidence\", \"disclosure\", \"table\"], \"template\": \"evidence-peek\", \"sourcePromptIds\": [\"opencodesign-observability-dashboard\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "ai-stream-with-sources",
-      "title": "AI stream with source chips",
-      "behavior": "AI response",
-      "context": "AI app",
-      "description": "Message lines stream in with attached citations and confidence states.",
-      "tags": [
-        "ai",
-        "chat",
-        "streaming",
-        "sources"
-      ],
-      "sourcePromptIds": [
-        "template-shadcnstore-chat-support-console"
-      ],
-      "template": "ai-stream",
-      "quality": "featured",
-      "mixRoles": [
-        "supporting effect"
-      ],
-      "slug": "ai-stream-with-sources",
-      "previewUrl": "patterns/ai-stream-with-sources/index.html",
-      "prompt": "Adapt the Framewell pattern 'AI stream with source chips' into my existing AI app without replacing my product structure. Use it only as a focused AI response layer. Message lines stream in with attached citations and confidence states. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: ai, chat, streaming, sources.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>AI stream with source chips \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"ai-stream-with-sources\", \"slug\": \"ai-stream-with-sources\", \"title\": \"AI stream with source chips\", \"behavior\": \"AI response\", \"context\": \"AI app\", \"description\": \"Message lines stream in with attached citations and confidence states.\", \"tags\": [\"ai\", \"chat\", \"streaming\", \"sources\"], \"template\": \"ai-stream\", \"sourcePromptIds\": [\"template-shadcnstore-chat-support-console\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "kanban-physics-lift",
-      "title": "Kanban physics lift",
-      "behavior": "Drag affordance",
-      "context": "Internal tool",
-      "description": "Cards tilt, cast shadows, and snap into lanes before a drag starts.",
-      "tags": [
-        "kanban",
-        "drag",
-        "physics",
-        "board"
-      ],
-      "sourcePromptIds": [
-        "template-shadcnstore-mail-task-dashboard"
-      ],
-      "template": "kanban-physics",
-      "quality": "featured",
-      "mixRoles": [
-        "supporting effect"
-      ],
-      "slug": "kanban-physics-lift",
-      "previewUrl": "patterns/kanban-physics-lift/index.html",
-      "prompt": "Adapt the Framewell pattern 'Kanban physics lift' into my existing Internal tool without replacing my product structure. Use it only as a focused Drag affordance layer. Cards tilt, cast shadows, and snap into lanes before a drag starts. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: kanban, drag, physics, board.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Kanban physics lift \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"kanban-physics-lift\", \"slug\": \"kanban-physics-lift\", \"title\": \"Kanban physics lift\", \"behavior\": \"Drag affordance\", \"context\": \"Internal tool\", \"description\": \"Cards tilt, cast shadows, and snap into lanes before a drag starts.\", \"tags\": [\"kanban\", \"drag\", \"physics\", \"board\"], \"template\": \"kanban-physics\", \"sourcePromptIds\": [\"template-shadcnstore-mail-task-dashboard\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "calendar-density-brush",
-      "title": "Calendar density brush",
-      "behavior": "Calendar interaction",
-      "context": "Calendar",
-      "description": "Dragging across a dense calendar reveals heat and available gaps.",
-      "tags": [
-        "calendar",
-        "density",
-        "brush",
-        "schedule"
-      ],
-      "sourcePromptIds": [
-        "template-shadcnstore-calendar-ops-dashboard"
-      ],
-      "template": "calendar-brush",
-      "quality": "featured",
-      "mixRoles": [
-        "supporting effect"
-      ],
-      "slug": "calendar-density-brush",
-      "previewUrl": "patterns/calendar-density-brush/index.html",
-      "prompt": "Adapt the Framewell pattern 'Calendar density brush' into my existing Calendar without replacing my product structure. Use it only as a focused Calendar interaction layer. Dragging across a dense calendar reveals heat and available gaps. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: calendar, density, brush, schedule.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Calendar density brush \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"calendar-density-brush\", \"slug\": \"calendar-density-brush\", \"title\": \"Calendar density brush\", \"behavior\": \"Calendar interaction\", \"context\": \"Calendar\", \"description\": \"Dragging across a dense calendar reveals heat and available gaps.\", \"tags\": [\"calendar\", \"density\", \"brush\", \"schedule\"], \"template\": \"calendar-brush\", \"sourcePromptIds\": [\"template-shadcnstore-calendar-ops-dashboard\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "slug": "ai-agent-path-trace",
+      "previewUrl": "patterns/ai-agent-path-trace/index.html",
+      "prompt": "Adapt the Framewell pattern 'AI agent path trace' into my existing AI app without replacing my product structure. Use it only as a focused Agent viz layer. An agent plan draws paths between tools, files, and decisions. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: ai-agent, path, trace, workflow.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>AI agent path trace \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"ai-agent-path-trace\", \"slug\": \"ai-agent-path-trace\", \"title\": \"AI agent path trace\", \"behavior\": \"Agent viz\", \"context\": \"AI app\", \"description\": \"An agent plan draws paths between tools, files, and decisions.\", \"tags\": [\"ai-agent\", \"path\", \"trace\", \"workflow\"], \"template\": \"agent-trace\", \"sourcePromptIds\": [\"opencodesign-ai-ops-command-center\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
       "complexity": "medium",
       "dependencies": []
     },
@@ -773,6 +700,115 @@
       "dependencies": []
     },
     {
+      "id": "dashboard-row-scroll-reveal",
+      "title": "Dashboard row scroll reveal",
+      "behavior": "Dashboard motion",
+      "context": "Dashboard",
+      "description": "Dense rows lift, lock, and show confidence metadata as they enter.",
+      "tags": [
+        "dashboard",
+        "scroll",
+        "rows",
+        "confidence"
+      ],
+      "sourcePromptIds": [
+        "opencodesign-ai-ops-command-center"
+      ],
+      "template": "dashboard-rows",
+      "quality": "featured",
+      "mixRoles": [
+        "product surface"
+      ],
+      "slug": "dashboard-row-scroll-reveal",
+      "previewUrl": "patterns/dashboard-row-scroll-reveal/index.html",
+      "prompt": "Adapt the Framewell pattern 'Dashboard row scroll reveal' into my existing Dashboard without replacing my product structure. Use it only as a focused Dashboard motion layer. Dense rows lift, lock, and show confidence metadata as they enter. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: dashboard, scroll, rows, confidence.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Dashboard row scroll reveal \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"dashboard-row-scroll-reveal\", \"slug\": \"dashboard-row-scroll-reveal\", \"title\": \"Dashboard row scroll reveal\", \"behavior\": \"Dashboard motion\", \"context\": \"Dashboard\", \"description\": \"Dense rows lift, lock, and show confidence metadata as they enter.\", \"tags\": [\"dashboard\", \"scroll\", \"rows\", \"confidence\"], \"template\": \"dashboard-rows\", \"sourcePromptIds\": [\"opencodesign-ai-ops-command-center\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "medium",
+      "dependencies": []
+    },
+    {
+      "id": "liquid-drag-dashboard",
+      "title": "Liquid drag dashboard",
+      "behavior": "Dashboard motion",
+      "context": "Dashboard",
+      "description": "Widgets stretch and reflow like liquid while preserving dashboard clarity.",
+      "tags": [
+        "dashboard",
+        "drag",
+        "liquid",
+        "layout",
+        "motion"
+      ],
+      "sourcePromptIds": [
+        "dashboard-motion-inspiration"
+      ],
+      "template": "liquid-dashboard",
+      "quality": "featured",
+      "mixRoles": [
+        "product surface"
+      ],
+      "slug": "liquid-drag-dashboard",
+      "previewUrl": "patterns/liquid-drag-dashboard/index.html",
+      "prompt": "Adapt the Framewell pattern 'Liquid drag dashboard' into my existing Dashboard without replacing my product structure. Use it only as a focused Dashboard motion layer. Widgets stretch and reflow like liquid while preserving dashboard clarity. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: dashboard, drag, liquid, layout, motion.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Liquid drag dashboard \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"liquid-drag-dashboard\", \"slug\": \"liquid-drag-dashboard\", \"title\": \"Liquid drag dashboard\", \"behavior\": \"Dashboard motion\", \"context\": \"Dashboard\", \"description\": \"Widgets stretch and reflow like liquid while preserving dashboard clarity.\", \"tags\": [\"dashboard\", \"drag\", \"liquid\", \"layout\", \"motion\"], \"template\": \"liquid-dashboard\", \"sourcePromptIds\": [\"dashboard-motion-inspiration\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "medium",
+      "dependencies": []
+    },
+    {
+      "id": "audit-evidence-peek",
+      "title": "Audit evidence peek",
+      "behavior": "Disclosure",
+      "context": "Dashboard",
+      "description": "Evidence opens inline with source chips instead of a modal detour.",
+      "tags": [
+        "audit",
+        "evidence",
+        "disclosure",
+        "table"
+      ],
+      "sourcePromptIds": [
+        "opencodesign-observability-dashboard"
+      ],
+      "template": "evidence-peek",
+      "quality": "featured",
+      "mixRoles": [
+        "product surface"
+      ],
+      "slug": "audit-evidence-peek",
+      "previewUrl": "patterns/audit-evidence-peek/index.html",
+      "prompt": "Adapt the Framewell pattern 'Audit evidence peek' into my existing Dashboard without replacing my product structure. Use it only as a focused Disclosure layer. Evidence opens inline with source chips instead of a modal detour. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: audit, evidence, disclosure, table.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Audit evidence peek \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"audit-evidence-peek\", \"slug\": \"audit-evidence-peek\", \"title\": \"Audit evidence peek\", \"behavior\": \"Disclosure\", \"context\": \"Dashboard\", \"description\": \"Evidence opens inline with source chips instead of a modal detour.\", \"tags\": [\"audit\", \"evidence\", \"disclosure\", \"table\"], \"template\": \"evidence-peek\", \"sourcePromptIds\": [\"opencodesign-observability-dashboard\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "medium",
+      "dependencies": []
+    },
+    {
+      "id": "kanban-physics-lift",
+      "title": "Kanban physics lift",
+      "behavior": "Drag affordance",
+      "context": "Internal tool",
+      "description": "Cards tilt, cast shadows, and snap into lanes before a drag starts.",
+      "tags": [
+        "kanban",
+        "drag",
+        "physics",
+        "board"
+      ],
+      "sourcePromptIds": [
+        "template-shadcnstore-mail-task-dashboard"
+      ],
+      "template": "kanban-physics",
+      "quality": "featured",
+      "mixRoles": [
+        "supporting effect"
+      ],
+      "slug": "kanban-physics-lift",
+      "previewUrl": "patterns/kanban-physics-lift/index.html",
+      "prompt": "Adapt the Framewell pattern 'Kanban physics lift' into my existing Internal tool without replacing my product structure. Use it only as a focused Drag affordance layer. Cards tilt, cast shadows, and snap into lanes before a drag starts. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: kanban, drag, physics, board.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Kanban physics lift \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"kanban-physics-lift\", \"slug\": \"kanban-physics-lift\", \"title\": \"Kanban physics lift\", \"behavior\": \"Drag affordance\", \"context\": \"Internal tool\", \"description\": \"Cards tilt, cast shadows, and snap into lanes before a drag starts.\", \"tags\": [\"kanban\", \"drag\", \"physics\", \"board\"], \"template\": \"kanban-physics\", \"sourcePromptIds\": [\"template-shadcnstore-mail-task-dashboard\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "medium",
+      "dependencies": []
+    },
+    {
       "id": "security-radar-sweep",
       "title": "Security radar sweep",
       "behavior": "Status visual",
@@ -800,518 +836,30 @@
       "dependencies": []
     },
     {
-      "id": "inventory-shelf-pulse",
-      "title": "Inventory shelf pulse",
-      "behavior": "Commerce alert",
-      "context": "Commerce",
-      "description": "Inventory rows compress into shelf lanes and pulse at risk points.",
-      "tags": [
-        "commerce",
-        "inventory",
-        "alerts",
-        "table"
-      ],
-      "sourcePromptIds": [
-        "opencodesign-ecommerce-inventory-dashboard"
-      ],
-      "template": "shelf-pulse",
-      "quality": "featured",
-      "mixRoles": [
-        "product surface"
-      ],
-      "slug": "inventory-shelf-pulse",
-      "previewUrl": "patterns/inventory-shelf-pulse/index.html",
-      "prompt": "Adapt the Framewell pattern 'Inventory shelf pulse' into my existing Commerce without replacing my product structure. Use it only as a focused Commerce alert layer. Inventory rows compress into shelf lanes and pulse at risk points. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: commerce, inventory, alerts, table.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Inventory shelf pulse \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"inventory-shelf-pulse\", \"slug\": \"inventory-shelf-pulse\", \"title\": \"Inventory shelf pulse\", \"behavior\": \"Commerce alert\", \"context\": \"Commerce\", \"description\": \"Inventory rows compress into shelf lanes and pulse at risk points.\", \"tags\": [\"commerce\", \"inventory\", \"alerts\", \"table\"], \"template\": \"shelf-pulse\", \"sourcePromptIds\": [\"opencodesign-ecommerce-inventory-dashboard\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "horizontal-case-filmstrip",
-      "title": "Horizontal case filmstrip",
-      "behavior": "Project browse",
-      "context": "Portfolio",
-      "description": "Case studies move as a cinematic horizontal reel with active captions.",
-      "tags": [
-        "horizontal-scroll",
-        "portfolio",
-        "filmstrip",
-        "cases"
-      ],
-      "sourcePromptIds": [
-        "opencodesign-boutique-agency-homepage"
-      ],
-      "template": "filmstrip",
-      "quality": "featured",
-      "mixRoles": [
-        "supporting effect"
-      ],
-      "slug": "horizontal-case-filmstrip",
-      "previewUrl": "patterns/horizontal-case-filmstrip/index.html",
-      "prompt": "Adapt the Framewell pattern 'Horizontal case filmstrip' into my existing Portfolio without replacing my product structure. Use it only as a focused Project browse layer. Case studies move as a cinematic horizontal reel with active captions. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: horizontal-scroll, portfolio, filmstrip, cases.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Horizontal case filmstrip \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"horizontal-case-filmstrip\", \"slug\": \"horizontal-case-filmstrip\", \"title\": \"Horizontal case filmstrip\", \"behavior\": \"Project browse\", \"context\": \"Portfolio\", \"description\": \"Case studies move as a cinematic horizontal reel with active captions.\", \"tags\": [\"horizontal-scroll\", \"portfolio\", \"filmstrip\", \"cases\"], \"template\": \"filmstrip\", \"sourcePromptIds\": [\"opencodesign-boutique-agency-homepage\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "stacked-editorial-cards",
-      "title": "Stacked editorial cards",
-      "behavior": "Scroll stack",
-      "context": "Article",
-      "description": "Editorial cards pin and stack like a physical dossier.",
-      "tags": [
-        "scroll",
-        "stack",
-        "editorial",
-        "cards"
-      ],
-      "sourcePromptIds": [
-        "opencodesign-field-notes-landing-page"
-      ],
-      "template": "stacked-cards",
-      "quality": "featured",
-      "mixRoles": [
-        "supporting effect"
-      ],
-      "slug": "stacked-editorial-cards",
-      "previewUrl": "patterns/stacked-editorial-cards/index.html",
-      "prompt": "Adapt the Framewell pattern 'Stacked editorial cards' into my existing Article without replacing my product structure. Use it only as a focused Scroll stack layer. Editorial cards pin and stack like a physical dossier. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: scroll, stack, editorial, cards.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Stacked editorial cards \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"stacked-editorial-cards\", \"slug\": \"stacked-editorial-cards\", \"title\": \"Stacked editorial cards\", \"behavior\": \"Scroll stack\", \"context\": \"Article\", \"description\": \"Editorial cards pin and stack like a physical dossier.\", \"tags\": [\"scroll\", \"stack\", \"editorial\", \"cards\"], \"template\": \"stacked-cards\", \"sourcePromptIds\": [\"opencodesign-field-notes-landing-page\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "mask-reveal-testimonials",
-      "title": "Mask reveal testimonials",
-      "behavior": "Proof",
-      "context": "Marketing",
-      "description": "Quotes reveal through animated masks, keeping the wall premium and calm.",
-      "tags": [
-        "testimonials",
-        "mask",
-        "proof",
-        "animation"
-      ],
-      "sourcePromptIds": [
-        "tailark-testimonial-wall"
-      ],
-      "template": "mask-proof",
-      "quality": "featured",
-      "mixRoles": [
-        "conversion/proof"
-      ],
-      "slug": "mask-reveal-testimonials",
-      "previewUrl": "patterns/mask-reveal-testimonials/index.html",
-      "prompt": "Adapt the Framewell pattern 'Mask reveal testimonials' into my existing Marketing without replacing my product structure. Use it only as a focused Proof layer. Quotes reveal through animated masks, keeping the wall premium and calm. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: testimonials, mask, proof, animation.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Mask reveal testimonials \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"mask-reveal-testimonials\", \"slug\": \"mask-reveal-testimonials\", \"title\": \"Mask reveal testimonials\", \"behavior\": \"Proof\", \"context\": \"Marketing\", \"description\": \"Quotes reveal through animated masks, keeping the wall premium and calm.\", \"tags\": [\"testimonials\", \"mask\", \"proof\", \"animation\"], \"template\": \"mask-proof\", \"sourcePromptIds\": [\"tailark-testimonial-wall\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "logo-cloud-depth-marquee",
-      "title": "Depth logo marquee",
-      "behavior": "Proof",
-      "context": "Marketing",
-      "description": "Logo strips move at different depths with soft mask edges.",
-      "tags": [
-        "marquee",
-        "logos",
-        "depth",
-        "proof"
-      ],
-      "sourcePromptIds": [
-        "tailark-logo-cloud-marquee"
-      ],
-      "template": "depth-marquee",
-      "quality": "featured",
-      "mixRoles": [
-        "conversion/proof"
-      ],
-      "slug": "logo-cloud-depth-marquee",
-      "previewUrl": "patterns/logo-cloud-depth-marquee/index.html",
-      "prompt": "Adapt the Framewell pattern 'Depth logo marquee' into my existing Marketing without replacing my product structure. Use it only as a focused Proof layer. Logo strips move at different depths with soft mask edges. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: marquee, logos, depth, proof.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Depth logo marquee \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"logo-cloud-depth-marquee\", \"slug\": \"logo-cloud-depth-marquee\", \"title\": \"Depth logo marquee\", \"behavior\": \"Proof\", \"context\": \"Marketing\", \"description\": \"Logo strips move at different depths with soft mask edges.\", \"tags\": [\"marquee\", \"logos\", \"depth\", \"proof\"], \"template\": \"depth-marquee\", \"sourcePromptIds\": [\"tailark-logo-cloud-marquee\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "faq-elastic-drawer",
-      "title": "FAQ elastic drawer",
-      "behavior": "Accordion",
-      "context": "Marketing",
-      "description": "Questions open with springy drawers, icon twist, and content shadows.",
-      "tags": [
-        "faq",
-        "accordion",
-        "spring",
-        "drawer"
-      ],
-      "sourcePromptIds": [
-        "tailark-faq-accordion-section"
-      ],
-      "template": "elastic-faq",
-      "quality": "specimen",
-      "mixRoles": [
-        "supporting effect"
-      ],
-      "slug": "faq-elastic-drawer",
-      "previewUrl": "patterns/faq-elastic-drawer/index.html",
-      "prompt": "Adapt the Framewell pattern 'FAQ elastic drawer' into my existing Marketing without replacing my product structure. Use it only as a focused Accordion layer. Questions open with springy drawers, icon twist, and content shadows. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: faq, accordion, spring, drawer.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>FAQ elastic drawer \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"faq-elastic-drawer\", \"slug\": \"faq-elastic-drawer\", \"title\": \"FAQ elastic drawer\", \"behavior\": \"Accordion\", \"context\": \"Marketing\", \"description\": \"Questions open with springy drawers, icon twist, and content shadows.\", \"tags\": [\"faq\", \"accordion\", \"spring\", \"drawer\"], \"template\": \"elastic-faq\", \"sourcePromptIds\": [\"tailark-faq-accordion-section\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "team-spotlight-grid",
-      "title": "Team spotlight grid",
-      "behavior": "People grid",
-      "context": "Marketing",
-      "description": "A cursor spotlight reveals portraits, roles, and one-line principles.",
-      "tags": [
-        "team",
-        "spotlight",
-        "grid",
-        "people"
-      ],
-      "sourcePromptIds": [
-        "tailark-team-grid-editorial"
-      ],
-      "template": "team-spotlight",
-      "quality": "specimen",
-      "mixRoles": [
-        "supporting effect"
-      ],
-      "slug": "team-spotlight-grid",
-      "previewUrl": "patterns/team-spotlight-grid/index.html",
-      "prompt": "Adapt the Framewell pattern 'Team spotlight grid' into my existing Marketing without replacing my product structure. Use it only as a focused People grid layer. A cursor spotlight reveals portraits, roles, and one-line principles. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: team, spotlight, grid, people.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Team spotlight grid \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"team-spotlight-grid\", \"slug\": \"team-spotlight-grid\", \"title\": \"Team spotlight grid\", \"behavior\": \"People grid\", \"context\": \"Marketing\", \"description\": \"A cursor spotlight reveals portraits, roles, and one-line principles.\", \"tags\": [\"team\", \"spotlight\", \"grid\", \"people\"], \"template\": \"team-spotlight\", \"sourcePromptIds\": [\"tailark-team-grid-editorial\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "stats-countup-proof-band",
-      "title": "Count-up proof band",
-      "behavior": "Proof",
-      "context": "Marketing",
-      "description": "Proof numbers count once, then leave tactile confidence marks.",
-      "tags": [
-        "stats",
-        "count-up",
-        "proof",
-        "scroll"
-      ],
-      "sourcePromptIds": [
-        "tailark-stats-proof-band"
-      ],
-      "template": "stats-band",
-      "quality": "specimen",
-      "mixRoles": [
-        "conversion/proof"
-      ],
-      "slug": "stats-countup-proof-band",
-      "previewUrl": "patterns/stats-countup-proof-band/index.html",
-      "prompt": "Adapt the Framewell pattern 'Count-up proof band' into my existing Marketing without replacing my product structure. Use it only as a focused Proof layer. Proof numbers count once, then leave tactile confidence marks. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: stats, count-up, proof, scroll.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Count-up proof band \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"stats-countup-proof-band\", \"slug\": \"stats-countup-proof-band\", \"title\": \"Count-up proof band\", \"behavior\": \"Proof\", \"context\": \"Marketing\", \"description\": \"Proof numbers count once, then leave tactile confidence marks.\", \"tags\": [\"stats\", \"count-up\", \"proof\", \"scroll\"], \"template\": \"stats-band\", \"sourcePromptIds\": [\"tailark-stats-proof-band\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "search-bar-morph-results",
-      "title": "Search bar morph results",
-      "behavior": "Search",
+      "id": "aave-glass-slider-refraction",
+      "title": "Aave glass slider refraction",
+      "behavior": "Glass control",
       "context": "Web app",
-      "description": "Search expands into a command surface with grouped live results.",
+      "description": "A slider handle bends only the fill region with a conservative high-performance lens.",
       "tags": [
-        "search",
-        "command",
-        "results",
-        "morph"
+        "aave-glass",
+        "slider",
+        "refraction",
+        "performance",
+        "glass"
       ],
       "sourcePromptIds": [
-        "template-ui-layouts-interactive-gallery"
+        "aave-building-glass-for-the-web"
       ],
-      "template": "search-morph",
-      "quality": "specimen",
-      "mixRoles": [
-        "navigation/control"
-      ],
-      "slug": "search-bar-morph-results",
-      "previewUrl": "patterns/search-bar-morph-results/index.html",
-      "prompt": "Adapt the Framewell pattern 'Search bar morph results' into my existing Web app without replacing my product structure. Use it only as a focused Search layer. Search expands into a command surface with grouped live results. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: search, command, results, morph.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Search bar morph results \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"search-bar-morph-results\", \"slug\": \"search-bar-morph-results\", \"title\": \"Search bar morph results\", \"behavior\": \"Search\", \"context\": \"Web app\", \"description\": \"Search expands into a command surface with grouped live results.\", \"tags\": [\"search\", \"command\", \"results\", \"morph\"], \"template\": \"search-morph\", \"sourcePromptIds\": [\"template-ui-layouts-interactive-gallery\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "onboarding-constellation",
-      "title": "Onboarding constellation picker",
-      "behavior": "Onboarding",
-      "context": "AI app",
-      "description": "Choices become a constellation map that explains the setup path.",
-      "tags": [
-        "onboarding",
-        "constellation",
-        "choices",
-        "ai"
-      ],
-      "sourcePromptIds": [
-        "opencodesign-ai-notebook-waitlist"
-      ],
-      "template": "onboard-stars",
-      "quality": "specimen",
-      "mixRoles": [
-        "supporting effect"
-      ],
-      "slug": "onboarding-constellation",
-      "previewUrl": "patterns/onboarding-constellation/index.html",
-      "prompt": "Adapt the Framewell pattern 'Onboarding constellation picker' into my existing AI app without replacing my product structure. Use it only as a focused Onboarding layer. Choices become a constellation map that explains the setup path. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: onboarding, constellation, choices, ai.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Onboarding constellation picker \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"onboarding-constellation\", \"slug\": \"onboarding-constellation\", \"title\": \"Onboarding constellation picker\", \"behavior\": \"Onboarding\", \"context\": \"AI app\", \"description\": \"Choices become a constellation map that explains the setup path.\", \"tags\": [\"onboarding\", \"constellation\", \"choices\", \"ai\"], \"template\": \"onboard-stars\", \"sourcePromptIds\": [\"opencodesign-ai-notebook-waitlist\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "sticky-comparison-wipe",
-      "title": "Sticky comparison wipe",
-      "behavior": "Compare",
-      "context": "Marketing",
-      "description": "A sticky before/after wipe makes a product claim tangible.",
-      "tags": [
-        "compare",
-        "wipe",
-        "sticky",
-        "before-after"
-      ],
-      "sourcePromptIds": [
-        "opencodesign-open-source-project-homepage"
-      ],
-      "template": "comparison-wipe",
-      "quality": "specimen",
-      "mixRoles": [
-        "supporting effect"
-      ],
-      "slug": "sticky-comparison-wipe",
-      "previewUrl": "patterns/sticky-comparison-wipe/index.html",
-      "prompt": "Adapt the Framewell pattern 'Sticky comparison wipe' into my existing Marketing without replacing my product structure. Use it only as a focused Compare layer. A sticky before/after wipe makes a product claim tangible. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: compare, wipe, sticky, before-after.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Sticky comparison wipe \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"sticky-comparison-wipe\", \"slug\": \"sticky-comparison-wipe\", \"title\": \"Sticky comparison wipe\", \"behavior\": \"Compare\", \"context\": \"Marketing\", \"description\": \"A sticky before/after wipe makes a product claim tangible.\", \"tags\": [\"compare\", \"wipe\", \"sticky\", \"before-after\"], \"template\": \"comparison-wipe\", \"sourcePromptIds\": [\"opencodesign-open-source-project-homepage\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "notebook-annotation-rail",
-      "title": "Notebook annotation rail",
-      "behavior": "Editor",
-      "context": "AI notebook",
-      "description": "Side notes magnetize to selected paragraphs and source chips.",
-      "tags": [
-        "editor",
-        "annotations",
-        "notebook",
-        "ai"
-      ],
-      "sourcePromptIds": [
-        "opencodesign-ai-writing-assistant-hero"
-      ],
-      "template": "annotation-rail",
-      "quality": "specimen",
-      "mixRoles": [
-        "supporting effect"
-      ],
-      "slug": "notebook-annotation-rail",
-      "previewUrl": "patterns/notebook-annotation-rail/index.html",
-      "prompt": "Adapt the Framewell pattern 'Notebook annotation rail' into my existing AI notebook without replacing my product structure. Use it only as a focused Editor layer. Side notes magnetize to selected paragraphs and source chips. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: editor, annotations, notebook, ai.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Notebook annotation rail \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"notebook-annotation-rail\", \"slug\": \"notebook-annotation-rail\", \"title\": \"Notebook annotation rail\", \"behavior\": \"Editor\", \"context\": \"AI notebook\", \"description\": \"Side notes magnetize to selected paragraphs and source chips.\", \"tags\": [\"editor\", \"annotations\", \"notebook\", \"ai\"], \"template\": \"annotation-rail\", \"sourcePromptIds\": [\"opencodesign-ai-writing-assistant-hero\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "responsive-device-morph",
-      "title": "Device morph preview",
-      "behavior": "Responsive",
-      "context": "Landing page",
-      "description": "A desktop mockup morphs into tablet/mobile frames to prove adaptability.",
-      "tags": [
-        "responsive",
-        "device",
-        "morph",
-        "preview"
-      ],
-      "sourcePromptIds": [
-        "template-ixartz-devtool-landing-page"
-      ],
-      "template": "device-morph",
-      "quality": "specimen",
-      "mixRoles": [
-        "supporting effect"
-      ],
-      "slug": "responsive-device-morph",
-      "previewUrl": "patterns/responsive-device-morph/index.html",
-      "prompt": "Adapt the Framewell pattern 'Device morph preview' into my existing Landing page without replacing my product structure. Use it only as a focused Responsive layer. A desktop mockup morphs into tablet/mobile frames to prove adaptability. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: responsive, device, morph, preview.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Device morph preview \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"responsive-device-morph\", \"slug\": \"responsive-device-morph\", \"title\": \"Device morph preview\", \"behavior\": \"Responsive\", \"context\": \"Landing page\", \"description\": \"A desktop mockup morphs into tablet/mobile frames to prove adaptability.\", \"tags\": [\"responsive\", \"device\", \"morph\", \"preview\"], \"template\": \"device-morph\", \"sourcePromptIds\": [\"template-ixartz-devtool-landing-page\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "commerce-size-magnet",
-      "title": "Size selector magnet",
-      "behavior": "Commerce",
-      "context": "E-commerce",
-      "description": "Size chips magnetize to selection and show inventory pressure.",
-      "tags": [
-        "commerce",
-        "selector",
-        "magnetic",
-        "inventory"
-      ],
-      "sourcePromptIds": [
-        "opencodesign-ecommerce-inventory-dashboard"
-      ],
-      "template": "size-magnet",
-      "quality": "specimen",
-      "mixRoles": [
-        "supporting effect"
-      ],
-      "slug": "commerce-size-magnet",
-      "previewUrl": "patterns/commerce-size-magnet/index.html",
-      "prompt": "Adapt the Framewell pattern 'Size selector magnet' into my existing E-commerce without replacing my product structure. Use it only as a focused Commerce layer. Size chips magnetize to selection and show inventory pressure. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: commerce, selector, magnetic, inventory.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Size selector magnet \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"commerce-size-magnet\", \"slug\": \"commerce-size-magnet\", \"title\": \"Size selector magnet\", \"behavior\": \"Commerce\", \"context\": \"E-commerce\", \"description\": \"Size chips magnetize to selection and show inventory pressure.\", \"tags\": [\"commerce\", \"selector\", \"magnetic\", \"inventory\"], \"template\": \"size-magnet\", \"sourcePromptIds\": [\"opencodesign-ecommerce-inventory-dashboard\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "docs-code-stepper",
-      "title": "Docs code stepper",
-      "behavior": "Docs",
-      "context": "Developer docs",
-      "description": "Code blocks advance step-by-step with synchronized explanation cards.",
-      "tags": [
-        "docs",
-        "code",
-        "stepper",
-        "developer"
-      ],
-      "sourcePromptIds": [
-        "template-ixartz-docs-first-saas-home"
-      ],
-      "template": "code-stepper",
-      "quality": "specimen",
-      "mixRoles": [
-        "supporting effect"
-      ],
-      "slug": "docs-code-stepper",
-      "previewUrl": "patterns/docs-code-stepper/index.html",
-      "prompt": "Adapt the Framewell pattern 'Docs code stepper' into my existing Developer docs without replacing my product structure. Use it only as a focused Docs layer. Code blocks advance step-by-step with synchronized explanation cards. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: docs, code, stepper, developer.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Docs code stepper \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"docs-code-stepper\", \"slug\": \"docs-code-stepper\", \"title\": \"Docs code stepper\", \"behavior\": \"Docs\", \"context\": \"Developer docs\", \"description\": \"Code blocks advance step-by-step with synchronized explanation cards.\", \"tags\": [\"docs\", \"code\", \"stepper\", \"developer\"], \"template\": \"code-stepper\", \"sourcePromptIds\": [\"template-ixartz-docs-first-saas-home\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "ai-agent-path-trace",
-      "title": "AI agent path trace",
-      "behavior": "Agent viz",
-      "context": "AI app",
-      "description": "An agent plan draws paths between tools, files, and decisions.",
-      "tags": [
-        "ai-agent",
-        "path",
-        "trace",
-        "workflow"
-      ],
-      "sourcePromptIds": [
-        "opencodesign-ai-ops-command-center"
-      ],
-      "template": "agent-trace",
-      "quality": "specimen",
-      "mixRoles": [
-        "product surface"
-      ],
-      "slug": "ai-agent-path-trace",
-      "previewUrl": "patterns/ai-agent-path-trace/index.html",
-      "prompt": "Adapt the Framewell pattern 'AI agent path trace' into my existing AI app without replacing my product structure. Use it only as a focused Agent viz layer. An agent plan draws paths between tools, files, and decisions. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: ai-agent, path, trace, workflow.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>AI agent path trace \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"ai-agent-path-trace\", \"slug\": \"ai-agent-path-trace\", \"title\": \"AI agent path trace\", \"behavior\": \"Agent viz\", \"context\": \"AI app\", \"description\": \"An agent plan draws paths between tools, files, and decisions.\", \"tags\": [\"ai-agent\", \"path\", \"trace\", \"workflow\"], \"template\": \"agent-trace\", \"sourcePromptIds\": [\"opencodesign-ai-ops-command-center\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "kinetic-statements",
-      "title": "Kinetic statements",
-      "behavior": "Text motion",
-      "context": "Landing page",
-      "description": "Brand statements slide, snap, and invert as a concise hero system.",
-      "tags": [
-        "typography",
-        "kinetic",
-        "brand",
-        "hero"
-      ],
-      "sourcePromptIds": [
-        "motionsites-free-power-ai"
-      ],
-      "template": "kinetic-text",
-      "quality": "specimen",
-      "mixRoles": [
-        "signature moment"
-      ],
-      "slug": "kinetic-statements",
-      "previewUrl": "patterns/kinetic-statements/index.html",
-      "prompt": "Adapt the Framewell pattern 'Kinetic statements' into my existing Landing page without replacing my product structure. Use it only as a focused Text motion layer. Brand statements slide, snap, and invert as a concise hero system. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: typography, kinetic, brand, hero.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Kinetic statements \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"kinetic-statements\", \"slug\": \"kinetic-statements\", \"title\": \"Kinetic statements\", \"behavior\": \"Text motion\", \"context\": \"Landing page\", \"description\": \"Brand statements slide, snap, and invert as a concise hero system.\", \"tags\": [\"typography\", \"kinetic\", \"brand\", \"hero\"], \"template\": \"kinetic-text\", \"sourcePromptIds\": [\"motionsites-free-power-ai\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "medium",
-      "dependencies": []
-    },
-    {
-      "id": "shader-noise-navigation",
-      "title": "Shader noise navigation",
-      "behavior": "Menu",
-      "context": "Portfolio",
-      "description": "Navigation labels distort through a controlled noise field on hover.",
-      "tags": [
-        "shader",
-        "noise",
-        "navigation",
-        "hover",
-        "typography"
-      ],
-      "sourcePromptIds": [
-        "x-greensock-creative-nav"
-      ],
-      "template": "noise-nav",
+      "template": "aave-slider",
       "quality": "featured",
       "mixRoles": [
-        "signature moment",
-        "navigation/control"
+        "microinteraction"
       ],
-      "slug": "shader-noise-navigation",
-      "previewUrl": "patterns/shader-noise-navigation/index.html",
-      "prompt": "Adapt the Framewell pattern 'Shader noise navigation' into my existing Portfolio without replacing my product structure. Use it only as a focused Menu layer. Navigation labels distort through a controlled noise field on hover. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: shader, noise, navigation, hover, typography.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Shader noise navigation \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"shader-noise-navigation\", \"slug\": \"shader-noise-navigation\", \"title\": \"Shader noise navigation\", \"behavior\": \"Menu\", \"context\": \"Portfolio\", \"description\": \"Navigation labels distort through a controlled noise field on hover.\", \"tags\": [\"shader\", \"noise\", \"navigation\", \"hover\", \"typography\"], \"template\": \"noise-nav\", \"sourcePromptIds\": [\"x-greensock-creative-nav\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
-      "complexity": "advanced",
-      "dependencies": []
-    },
-    {
-      "id": "elastic-cursor-work-index",
-      "title": "Elastic cursor work index",
-      "behavior": "Cursor",
-      "context": "Portfolio",
-      "description": "The cursor becomes a preview lens, action label, and magnetic selector in one.",
-      "tags": [
-        "cursor",
-        "preview",
-        "magnetic",
-        "portfolio",
-        "index"
-      ],
-      "sourcePromptIds": [
-        "brandon-bartram-custom-cursor"
-      ],
-      "template": "cursor-index",
-      "quality": "specimen",
-      "mixRoles": [
-        "navigation/control"
-      ],
-      "slug": "elastic-cursor-work-index",
-      "previewUrl": "patterns/elastic-cursor-work-index/index.html",
-      "prompt": "Adapt the Framewell pattern 'Elastic cursor work index' into my existing Portfolio without replacing my product structure. Use it only as a focused Cursor layer. The cursor becomes a preview lens, action label, and magnetic selector in one. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: cursor, preview, magnetic, portfolio, index.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Elastic cursor work index \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"elastic-cursor-work-index\", \"slug\": \"elastic-cursor-work-index\", \"title\": \"Elastic cursor work index\", \"behavior\": \"Cursor\", \"context\": \"Portfolio\", \"description\": \"The cursor becomes a preview lens, action label, and magnetic selector in one.\", \"tags\": [\"cursor\", \"preview\", \"magnetic\", \"portfolio\", \"index\"], \"template\": \"cursor-index\", \"sourcePromptIds\": [\"brandon-bartram-custom-cursor\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "slug": "aave-glass-slider-refraction",
+      "previewUrl": "patterns/aave-glass-slider-refraction/index.html",
+      "prompt": "Adapt the Framewell pattern 'Aave glass slider refraction' into my existing Web app without replacing my product structure. Use it only as a focused Glass control layer. A slider handle bends only the fill region with a conservative high-performance lens. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: aave-glass, slider, refraction, performance, glass.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Aave glass slider refraction \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"aave-glass-slider-refraction\", \"slug\": \"aave-glass-slider-refraction\", \"title\": \"Aave glass slider refraction\", \"behavior\": \"Glass control\", \"context\": \"Web app\", \"description\": \"A slider handle bends only the fill region with a conservative high-performance lens.\", \"tags\": [\"aave-glass\", \"slider\", \"refraction\", \"performance\", \"glass\"], \"template\": \"aave-slider\", \"sourcePromptIds\": [\"aave-building-glass-for-the-web\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
       "complexity": "medium",
       "dependencies": []
     },
@@ -1361,7 +909,7 @@
         "creative-audio-visualizer"
       ],
       "template": "audio-reactor",
-      "quality": "specimen",
+      "quality": "featured",
       "mixRoles": [
         "microinteraction"
       ],
@@ -1373,30 +921,83 @@
       "dependencies": []
     },
     {
-      "id": "aave-glass-slider-refraction",
-      "title": "Aave glass slider refraction",
-      "behavior": "Glass control",
-      "context": "Web app",
-      "description": "A slider handle bends only the fill region with a conservative high-performance lens.",
+      "id": "commerce-size-magnet",
+      "title": "Size selector magnet",
+      "behavior": "Commerce",
+      "context": "E-commerce",
+      "description": "Size chips magnetize to selection and show inventory pressure.",
       "tags": [
-        "aave-glass",
-        "slider",
-        "refraction",
-        "performance",
-        "glass"
+        "commerce",
+        "selector",
+        "magnetic",
+        "inventory"
       ],
       "sourcePromptIds": [
-        "aave-building-glass-for-the-web"
+        "opencodesign-ecommerce-inventory-dashboard"
       ],
-      "template": "aave-slider",
-      "quality": "specimen",
+      "template": "size-magnet",
+      "quality": "featured",
       "mixRoles": [
-        "microinteraction"
+        "supporting effect"
       ],
-      "slug": "aave-glass-slider-refraction",
-      "previewUrl": "patterns/aave-glass-slider-refraction/index.html",
-      "prompt": "Adapt the Framewell pattern 'Aave glass slider refraction' into my existing Web app without replacing my product structure. Use it only as a focused Glass control layer. A slider handle bends only the fill region with a conservative high-performance lens. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: aave-glass, slider, refraction, performance, glass.",
-      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Aave glass slider refraction \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"aave-glass-slider-refraction\", \"slug\": \"aave-glass-slider-refraction\", \"title\": \"Aave glass slider refraction\", \"behavior\": \"Glass control\", \"context\": \"Web app\", \"description\": \"A slider handle bends only the fill region with a conservative high-performance lens.\", \"tags\": [\"aave-glass\", \"slider\", \"refraction\", \"performance\", \"glass\"], \"template\": \"aave-slider\", \"sourcePromptIds\": [\"aave-building-glass-for-the-web\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "slug": "commerce-size-magnet",
+      "previewUrl": "patterns/commerce-size-magnet/index.html",
+      "prompt": "Adapt the Framewell pattern 'Size selector magnet' into my existing E-commerce without replacing my product structure. Use it only as a focused Commerce layer. Size chips magnetize to selection and show inventory pressure. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: commerce, selector, magnetic, inventory.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Size selector magnet \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"commerce-size-magnet\", \"slug\": \"commerce-size-magnet\", \"title\": \"Size selector magnet\", \"behavior\": \"Commerce\", \"context\": \"E-commerce\", \"description\": \"Size chips magnetize to selection and show inventory pressure.\", \"tags\": [\"commerce\", \"selector\", \"magnetic\", \"inventory\"], \"template\": \"size-magnet\", \"sourcePromptIds\": [\"opencodesign-ecommerce-inventory-dashboard\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "medium",
+      "dependencies": []
+    },
+    {
+      "id": "notebook-annotation-rail",
+      "title": "Notebook annotation rail",
+      "behavior": "Editor",
+      "context": "AI notebook",
+      "description": "Side notes magnetize to selected paragraphs and source chips.",
+      "tags": [
+        "editor",
+        "annotations",
+        "notebook",
+        "ai"
+      ],
+      "sourcePromptIds": [
+        "opencodesign-ai-writing-assistant-hero"
+      ],
+      "template": "annotation-rail",
+      "quality": "featured",
+      "mixRoles": [
+        "supporting effect"
+      ],
+      "slug": "notebook-annotation-rail",
+      "previewUrl": "patterns/notebook-annotation-rail/index.html",
+      "prompt": "Adapt the Framewell pattern 'Notebook annotation rail' into my existing AI notebook without replacing my product structure. Use it only as a focused Editor layer. Side notes magnetize to selected paragraphs and source chips. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: editor, annotations, notebook, ai.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Notebook annotation rail \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"notebook-annotation-rail\", \"slug\": \"notebook-annotation-rail\", \"title\": \"Notebook annotation rail\", \"behavior\": \"Editor\", \"context\": \"AI notebook\", \"description\": \"Side notes magnetize to selected paragraphs and source chips.\", \"tags\": [\"editor\", \"annotations\", \"notebook\", \"ai\"], \"template\": \"annotation-rail\", \"sourcePromptIds\": [\"opencodesign-ai-writing-assistant-hero\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
+      "complexity": "medium",
+      "dependencies": []
+    },
+    {
+      "id": "docs-code-stepper",
+      "title": "Docs code stepper",
+      "behavior": "Docs",
+      "context": "Developer docs",
+      "description": "Code blocks advance step-by-step with synchronized explanation cards.",
+      "tags": [
+        "docs",
+        "code",
+        "stepper",
+        "developer"
+      ],
+      "sourcePromptIds": [
+        "template-ixartz-docs-first-saas-home"
+      ],
+      "template": "code-stepper",
+      "quality": "featured",
+      "mixRoles": [
+        "supporting effect"
+      ],
+      "slug": "docs-code-stepper",
+      "previewUrl": "patterns/docs-code-stepper/index.html",
+      "prompt": "Adapt the Framewell pattern 'Docs code stepper' into my existing Developer docs without replacing my product structure. Use it only as a focused Docs layer. Code blocks advance step-by-step with synchronized explanation cards. Preserve my design tokens, data model, accessibility, keyboard behavior, reduced-motion preferences, and component architecture. Tags: docs, code, stepper, developer.",
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Docs code stepper \u2014 Framewell React specimen</title>\n  <link rel=\"stylesheet\" href=\"../../assets/specimens/style.css\">\n</head>\n<body>\n  <div id=\"root\"></div>\n  <script>window.__FRAMEWELL_PATTERN_META__ = {\"id\": \"docs-code-stepper\", \"slug\": \"docs-code-stepper\", \"title\": \"Docs code stepper\", \"behavior\": \"Docs\", \"context\": \"Developer docs\", \"description\": \"Code blocks advance step-by-step with synchronized explanation cards.\", \"tags\": [\"docs\", \"code\", \"stepper\", \"developer\"], \"template\": \"code-stepper\", \"sourcePromptIds\": [\"template-ixartz-docs-first-saas-home\"]};</script>\n  <script type=\"module\" src=\"../../assets/specimens/framewell-specimens.js\"></script>\n</body>\n</html>",
       "complexity": "medium",
       "dependencies": []
     }

@@ -143,59 +143,45 @@ PATTERNS = [
 
 ]
 
-PREMIUM_PATTERN_IDS = {
+CURATED_PATTERN_IDS = [
     "three-scroll-product-stage",
-    "gsap-scroll-cascade-stack",
-    "webgl-shader-gallery-wall",
-    "fluid-cursor-lens-index",
-    "scroll-mask-story-panels",
-    "three-particle-command-field",
-    "gsap-flip-board-recompose",
-    "split-text-control-deck",
     "cinematic-scroll-camera",
+    "scroll-synced-model-exploder",
+    "infinite-3d-corridor-scroll",
+    "scroll-driven-3d-room",
+    "immersive-case-study-portal",
+    "video-texture-cube-grid",
+    "webgl-shader-gallery-wall",
+    "brush-shader-project-reveal",
     "shader-type-dissolve",
     "webgl-image-ripple-grid",
-    "orbital-product-stage",
-    "particle-cursor-constellation",
-    "scroll-sliced-hero",
-    "liquid-metal-cta",
-    "magnetic-work-menu",
-    "split-panel-route-transition",
-    "cursor-reveal-mega-menu",
+    "water-shader-page-transition",
+    "procedural-svg-preloader",
+    "dom-to-canvas-handoff",
+    "webgpu-particle-logo-field",
+    "three-particle-command-field",
+    "gsap-scroll-cascade-stack",
+    "scroll-mask-story-panels",
+    "sticky-comparison-wipe",
+    "gsap-flip-board-recompose",
     "radial-command-wheel",
-    "metric-cards-live-scrub",
-    "ai-stream-with-sources",
-    "search-bar-morph-results",
+    "spatial-command-room",
+    "ai-map-of-thought",
     "ai-agent-path-trace",
     "data-lineage-river",
-    "audit-evidence-peek",
     "dashboard-row-scroll-reveal",
-    "security-radar-sweep",
+    "liquid-drag-dashboard",
+    "audit-evidence-peek",
     "kanban-physics-lift",
-    "calendar-density-brush",
-    "inventory-shelf-pulse",
-    "stacked-editorial-cards",
-    "mask-reveal-testimonials",
-    "logo-cloud-depth-marquee",
-    "faq-elastic-drawer",
-    "team-spotlight-grid",
-    "stats-countup-proof-band",
-    "glass-torus-pricing",
+    "security-radar-sweep",
     "aave-glass-slider-refraction",
-    "dock-with-liquid-focus",
-    "horizontal-case-filmstrip",
-    "sticky-comparison-wipe",
-    "responsive-device-morph",
-    "notebook-annotation-rail",
-    "docs-code-stepper",
-    "onboarding-constellation",
-    "kinetic-statements",
-    "shader-noise-navigation",
-    "commerce-size-magnet",
-    "elastic-cursor-work-index",
     "timeline-camera-scrubber",
     "glassmorphic-audio-reactor",
-}
+    "commerce-size-magnet",
+    "notebook-annotation-rail",
+    "docs-code-stepper",
+]
+PREMIUM_PATTERN_IDS = set(CURATED_PATTERN_IDS)
 
 BASE_CSS = r'''
 :root{color-scheme:dark;--bg:#07080b;--ink:#fff8ea;--muted:#aab0bd;--line:rgba(255,255,255,.14);--a:#8fffe0;--b:#ffcf5a;--c:#ff6a88;--d:#8aa8ff;--panel:rgba(255,255,255,.065)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#07080b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow:hidden}.frame{min-height:100vh;padding:18px;display:grid;place-items:center;background:radial-gradient(circle at 20% 18%,rgba(143,255,224,.16),transparent 28%),radial-gradient(circle at 86% 74%,rgba(255,106,136,.14),transparent 28%),linear-gradient(135deg,#07080b,#111521 58%,#120d08)}.specimen{width:min(780px,100%);height:min(460px,calc(100vh - 36px));border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:0 34px 90px rgba(0,0,0,.45);overflow:hidden;position:relative}.bar{height:48px;display:flex;gap:8px;align-items:center;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}.dot{width:9px;height:9px;border-radius:50%;background:#5f6878}.dot:nth-child(1){background:var(--c)}.dot:nth-child(2){background:var(--b)}.dot:nth-child(3){background:var(--a)}.label{margin-left:auto;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stage{position:absolute;inset:48px 0 0;padding:24px}.chip{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;color:var(--muted)}h1,h2,h3,p{margin:0}.muted{color:var(--muted)}button{font:inherit;color:inherit;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:9px 13px}.grain:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}@media(max-width:620px){.frame{padding:10px}.specimen{border-radius:22px}.stage{padding:16px}.label{font-size:9px}}
@@ -627,12 +613,32 @@ def main():
         if child.is_dir() and (child / "meta.json").exists():
             for f in child.iterdir(): f.unlink()
             child.rmdir()
+    patterns_by_slug = {p[0]: p for p in PATTERNS}
+    missing = [slug for slug in CURATED_PATTERN_IDS if slug not in patterns_by_slug]
+    if missing:
+        raise SystemExit(f"curated pattern id missing from PATTERNS: {', '.join(missing)}")
+    renderer_by_template = {}
+    for slug in CURATED_PATTERN_IDS:
+        template_key = patterns_by_slug[slug][6]
+        renderer_by_template.setdefault(template_key, []).append(slug)
+    accidental_duplicates = {
+        template: slugs for template, slugs in renderer_by_template.items()
+        if len(slugs) > 1 and template not in {
+            "motion",
+            "water-transition",
+            "agent-trace",
+            "aave-slider",
+        }
+    }
+    if accidental_duplicates:
+        detail = "; ".join(f"{template}: {', '.join(slugs)}" for template, slugs in accidental_duplicates.items())
+        raise SystemExit(f"multiple curated entries share a renderer without an explicit variant allowance: {detail}")
+
     out=[]
     seen=set()
-    for i,p in enumerate(PATTERNS):
+    for i,slug in enumerate(CURATED_PATTERN_IDS):
+        p = patterns_by_slug[slug]
         slug,title,behavior,context,desc,tags,template_key,source = p
-        if slug not in PREMIUM_PATTERN_IDS:
-            continue
         if slug in seen: raise SystemExit(f"duplicate slug: {slug}")
         seen.add(slug)
         folder=PATTERN_DIR/slug; folder.mkdir(parents=True, exist_ok=True)

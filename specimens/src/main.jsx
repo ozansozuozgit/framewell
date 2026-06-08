@@ -99,10 +99,19 @@ const specimenKindById = {
   'project-card-video-scrub': 'video-card',
   'glassmorphic-audio-reactor': 'audio',
   'svg-line-draw-map': 'map',
+  'infinite-3d-corridor-scroll': 'corridor-scroll',
+  'scroll-driven-3d-room': 'scene-room',
+  'water-shader-page-transition': 'water-transition',
+  'procedural-svg-preloader': 'procedural-loader',
+  'dom-to-canvas-handoff': 'canvas-handoff',
+  'immersive-case-study-portal': 'portal-case',
+  'webgpu-particle-logo-field': 'particle-logo',
+  'scroll-synced-model-exploder': 'model-exploder',
+  'liquid-drag-dashboard': 'liquid-dashboard',
+  'video-texture-cube-grid': 'video-grid',
   'codrops-webgl-scroll-gallery': 'gallery',
   'gsap-flip-detail-expander': 'case-flip',
   'scroll-driven-3d-world-chapters': 'world',
-  'video-texture-cube-grid': 'video-grid',
 };
 
 function App(){
@@ -999,6 +1008,200 @@ function AudioMixer({ meta }){
   );
 }
 
+function CorridorScroll({ meta }){
+  const p = useRouteScrollProgress(true);
+  return (
+    <div className="surface dark corridor-surface">
+      <Header meta={meta} icon={Film} />
+      <div className="corridor-scene" style={{'--p':p}}>
+        <div className="corridor-rails" />
+        {Array.from({length:9},(_,i)=>(
+          <article key={i} className="corridor-card" style={{'--i':i}}>
+            <span>{String(i+1).padStart(2,'0')}</span>
+            <b>{['Brief','Map','Model','Scene','Shader','Portal','Proof','Ship','Live'][i]}</b>
+          </article>
+        ))}
+        <div className="corridor-caption">
+          <h1>Scroll moves through a depth corridor.</h1>
+          <p>Cards approach camera, split to the sides, and preserve readable stops.</p>
+        </div>
+      </div>
+      <div className="scroll-spacer" />
+    </div>
+  );
+}
+
+function SceneRoom({ meta }){
+  const p = useRouteScrollProgress(true);
+  return (
+    <div className="surface dark room-surface">
+      <Header meta={meta} icon={Box} />
+      <div className="room-scene" style={{'--p':p}}>
+        <div className="room-floor" />
+        <div className="room-wall wall-left" />
+        <div className="room-wall wall-right" />
+        {['Hero','Case','System','Proof'].map((label,i)=>(
+          <div className="room-object" key={label} style={{'--i':i,'--row':i % 2}}><span>{label}</span></div>
+        ))}
+        <div className="room-copy">
+          <h1>Scroll-driven room chapters</h1>
+          <p>The camera pans across authored objects instead of cycling cards.</p>
+        </div>
+      </div>
+      <div className="scroll-spacer" />
+    </div>
+  );
+}
+
+function PortalCase({ meta }){
+  const [open,setOpen]=useState(.35);
+  useFramewellDriver(p => setOpen(p), [meta.id]);
+  return (
+    <div className="surface ink portal-surface">
+      <Header meta={meta} icon={Sparkles} />
+      <div className="portal-scene" style={{'--p':open}}>
+        <div className="portal-ring" />
+        <div className="portal-world">
+          {Array.from({length:5},(_,i)=><span key={i} style={{'--i':i,'--row':i % 3}} />)}
+        </div>
+        <div className="portal-copy">
+          <h1>Case study portal</h1>
+          <p>The next project is visible before the transition commits.</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ModelExploder({ meta }){
+  const p = useRouteScrollProgress(true);
+  const parts = ['Shell','Data','Logic','Motion','Proof'];
+  return (
+    <div className="surface dark model-surface">
+      <Header meta={meta} icon={Box} />
+      <div className="model-scene" style={{'--p':p}}>
+        {parts.map((part,i)=>(
+          <div className="model-layer" key={part} style={{'--i':i}}>
+            <span>{part}</span>
+          </div>
+        ))}
+        <div className="model-label">
+          <h1>Scroll explodes the product model.</h1>
+          <p>Layers separate, label themselves, then lock back into the final object.</p>
+        </div>
+      </div>
+      <div className="scroll-spacer" />
+    </div>
+  );
+}
+
+function VideoCubeGrid({ meta }){
+  const [phase,setPhase]=useState(.4);
+  useFramewellDriver(p => setPhase(p), [meta.id]);
+  return (
+    <div className="surface dark video-grid-surface">
+      <Header meta={meta} icon={GalleryHorizontalEnd} />
+      <div className="video-cube-grid" style={{'--p':phase}}>
+        {Array.from({length:16},(_,i)=>(
+          <button key={i} style={{'--i':i,'--col':i % 4,'--row':Math.floor(i / 4)}}>
+            <span>{String(i+1).padStart(2,'0')}</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function ProceduralLoader({ meta }){
+  const [p,setP]=useState(.2);
+  useFramewellDriver(setP, [meta.id]);
+  return (
+    <div className="surface ink loader-surface">
+      <Header meta={meta} icon={Sparkles} />
+      <div className="loader-scene" style={{'--p':p}}>
+        <svg viewBox="0 0 720 360" aria-label="Procedural logo path">
+          <path d="M70 250 C110 80 210 70 260 180 S410 320 470 152 S610 56 660 238" />
+          <path d="M100 102 C220 250 340 58 470 216 S620 112 690 154" />
+        </svg>
+        <div className="loader-mark">FRAMEWELL</div>
+      </div>
+    </div>
+  );
+}
+
+function CanvasHandoff({ meta }){
+  const [p,setP]=useState(.3);
+  useFramewellDriver(setP, [meta.id]);
+  return (
+    <div className="surface clean handoff-surface">
+      <Header meta={meta} icon={PanelTop} />
+      <div className="handoff-scene" style={{'--p':p}}>
+        <article className="handoff-card"><span>DOM card</span><h2>Case preview</h2></article>
+        <div className="handoff-canvas">
+          {Array.from({length:36},(_,i)=><i key={i} style={{'--i':i,'--col':i % 6,'--row':Math.floor(i / 6)}} />)}
+        </div>
+        <div className="handoff-caption">DOM detaches into a canvas-feeling transition object.</div>
+      </div>
+    </div>
+  );
+}
+
+function ParticleLogo({ meta }){
+  const [p,setP]=useState(.5);
+  useFramewellDriver(setP, [meta.id]);
+  return (
+    <div className="surface dark particle-logo-surface">
+      <Header meta={meta} icon={Sparkles} />
+      <div className="particle-logo-scene" style={{'--p':p}}>
+        <h1>FRAME</h1>
+        {Array.from({length:96},(_,i)=><i key={i} style={{'--i':i,'--col':i % 16,'--row':Math.floor(i / 16)}} />)}
+      </div>
+    </div>
+  );
+}
+
+function LiquidDashboard({ meta }){
+  const [active,setActive]=useState(1);
+  useFramewellDriver(p => setActive(Math.min(5, Math.floor(p * 6))), [meta.id]);
+  return (
+    <div className="surface blue liquid-dashboard-surface">
+      <Header meta={meta} icon={BarChart3} />
+      <div className="liquid-dashboard-grid">
+        {['Revenue','Risk','Queue','Sources','Velocity','Deploy'].map((name,i)=>(
+          <section key={name} className={i===active?'active':''}>
+            <span>{name}</span>
+            <b>{i===1 ? 'Low' : `${Math.round(34 + i * 8 + active * 3)}%`}</b>
+          </section>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function ThoughtMap({ meta }){
+  const [active,setActive]=useState(2);
+  useFramewellDriver(p => setActive(Math.min(5, Math.floor(p * 6))), [meta.id]);
+  const nodes = ['Claim','Source','Counter','Risk','Action','Confidence'];
+  return (
+    <div className="surface dark thought-map-surface">
+      <Header meta={meta} icon={GitBranch} />
+      <div className="thought-map">
+        <svg viewBox="0 0 760 360">
+          <path d="M120 180 C230 70 350 112 470 82 S610 120 680 220" />
+          <path d="M120 180 C260 260 360 250 520 284 S630 260 680 220" />
+          <path d="M120 180 C260 160 390 190 680 220" />
+        </svg>
+        {nodes.map((node,i)=>(
+          <button key={node} className={i===active?'active':''} style={{'--i':i,'--col':i % 3,'--row':Math.floor(i / 3)}} onClick={()=>setActive(i)}>
+            <small>{String(i+1).padStart(2,'0')}</small>
+            <b>{node}</b>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function MapSurface({ meta }){
   const [pin,setPin]=useState(1);
   useFramewellDriver(p => setPin(Math.min(3, Math.floor(p * 4))), []);
@@ -1303,6 +1506,16 @@ const components = {
   'glass-slider': props => <GlassControls {...props} mode="slider" />,
   'glass-toggle': props => <GlassControls {...props} mode="toggle" />,
   'video-controls': props => <GlassControls {...props} mode="video" />,
+  'corridor-scroll': CorridorScroll,
+  'scene-room': SceneRoom,
+  'portal-case': PortalCase,
+  'model-exploder': ModelExploder,
+  'video-grid': VideoCubeGrid,
+  'procedural-loader': ProceduralLoader,
+  'canvas-handoff': CanvasHandoff,
+  'particle-logo': ParticleLogo,
+  'liquid-dashboard': LiquidDashboard,
+  'thought-map': ThoughtMap,
   dock: DockSurface,
   gallery: GallerySurface,
   masonry: GallerySurface,
@@ -1324,7 +1537,6 @@ const components = {
   map: MapSurface,
   'case-flip': GallerySurface,
   world: GallerySurface,
-  'video-grid': GallerySurface,
 };
 
 createRoot(document.getElementById('root')).render(<App />);

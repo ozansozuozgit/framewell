@@ -1,0 +1,23 @@
+{
+  "id": "spatial-command-room",
+  "title": "Spatial command room",
+  "behavior": "Command",
+  "context": "AI app",
+  "description": "Commands live on walls of a compact 3D room instead of a flat palette.",
+  "tags": [
+    "command",
+    "spatial",
+    "3d",
+    "keyboard",
+    "ai"
+  ],
+  "sourcePromptIds": [
+    "creative-command-palette-3d"
+  ],
+  "template": "command-room",
+  "quality": "featured",
+  "mixRoles": [
+    "signature moment",
+    "navigation/control"
+  ]
+}
